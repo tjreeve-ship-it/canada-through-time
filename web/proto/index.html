@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Canada Through Time — Atlas (design prototype)</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="../theme.css">
+<link rel="stylesheet" href="proto.css">
+</head>
+<body>
+<div id="app">
+  <div id="map" aria-label="3D map of Canada"></div>
+  <div id="vignette"></div>
+
+  <aside id="rail">
+    <div id="brand">Canada Through Time<small>An atlas of measured change, 1971 to today</small></div>
+    <nav id="layers" aria-label="Map layers"></nav>
+    <div id="start"></div>
+  </aside>
+
+  <section id="reading" aria-live="polite">
+    <div id="r-group"></div>
+    <h1 id="r-title"></h1>
+    <p id="r-q"></p>
+    <div id="r-meta"></div>
+    <div id="legend"></div>
+  </section>
+  <button id="layer-btn" class="mobile-only" aria-haspopup="true">Layers</button>
+  <div id="layer-sheet" class="mobile-only" role="dialog" aria-label="Map layers"></div>
+
+  <div id="mapctl" role="toolbar" aria-label="Map controls">
+    <button data-act="zin" aria-label="Zoom in">+</button>
+    <button data-act="zout" aria-label="Zoom out">−</button>
+    <button data-act="tilt" class="t3" aria-label="Toggle flat or tilted view">3D</button>
+    <button data-act="reset" aria-label="Reset view">⌂</button>
+  </div>
+
+  <aside id="sheet" aria-label="Place details">
+    <div id="grip" class="mobile-only" aria-label="Drag to resize"></div>
+    <div id="mtl" class="mobile-only"><button id="mplay" aria-label="Play">▶</button><div id="myear-l"></div><input id="myear" type="range" aria-label="Year"></div>
+    <div id="mev" class="mobile-only"></div>
+    <div id="sheet-body"></div>
+  </aside>
+
+  <footer id="timeline">
+    <div id="tl-head">
+      <button id="play" aria-label="Play">▶</button>
+      <div id="tl-year"></div>
+      <div id="tl-ctx"></div>
+      <div id="tl-speed" aria-label="Speed"><button data-s="1.6">Slow</button><button data-s="0.8" class="on">Normal</button><button data-s="0.35">Fast</button></div>
+    </div>
+    <div id="tl-rail">
+      <div id="tl-era"></div>
+      <div id="tl-ev"></div>
+      <input id="year" type="range" aria-label="Year">
+      <div id="tl-ticks"></div>
+    </div>
+  </footer>
+
+  <div id="tooltip" role="tooltip"></div>
+  <dialog id="drawer"><div id="drawer-body"></div><form method="dialog"><button id="drawer-close">Close</button></form></dialog>
+</div>
+<script src="../vendor/deck.min.js"></script>
+<script type="module" src="proto.js"></script>
+</body>
+</html>
