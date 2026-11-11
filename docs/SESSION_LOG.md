@@ -18,6 +18,14 @@
 **Notes**
 - Statistics Canada isn't reachable from the build server's shell, so data is fetched through the user's desktop browser and verified by SHA-256. Automated source monitoring will need either a desktop-side job or a widened network allowlist.
 
+**Rendered**
+- 16:9 1920×1080, 9:16 1080×1920 and 1:1 1080×1080 at 30 fps, 34 s each, about 19 min per render on 2 CPUs (software WebGL).
+
+**Known issues for session 2**
+- Annotation cards stay on screen too long (about 6 years of playback). Cut to about 2.5 s and add short pauses at key events.
+- Atlantic labels (NB/PE/NS) crowd each other. Needs leader lines or an inset.
+- The vertical layout's Canada total slightly overlaps the map's top-left edge.
+
 **Next**
 1. Components of growth (17-10-0008 annual; 17-10-0040 international; 17-10-0020/0045 interprovincial), shown as animated flow arcs. Second story: "Where Canada's growth came from".
 2. PostgreSQL/PostGIS store, plus a `make` target that runs every pipeline and test.
