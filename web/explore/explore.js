@@ -49,6 +49,12 @@ const [pop, comp, flows, area, politics, evData, provinces, ntnu, countries, lak
 await Promise.all(['600 16px "IBM Plex Sans"', '400 16px "IBM Plex Sans"', '600 16px "Source Serif 4"', '700 16px "Source Serif 4"'].map(f => document.fonts.load(f)));
 
 const S = pop.series, D = pop.dates;
+// Preliminary cut-offs, from the source tables' notes (shown on every value they touch):
+//  17-10-0009 note 3: population estimates are preliminary from July 1, 2026.
+//  17-10-0008 notes 4–14: every component is preliminary for 2025/2026 (period ending July 1, 2026).
+const PRELIM = { pop: (() => { const n = (pop.notes || []).find(x => /preliminary postcensal from/i.test(x)); const m = n && n.match(/from ([A-Z][a-z]+) (\d+), (\d{4})/);
+  return m ? `${m[3]}-${String(['January','February','March','April','May','June','July','August','September','October','November','December'].indexOf(m[1]) + 1).padStart(2, '0')}-${m[2].padStart(2, '0')}` : null; })(), compPeriodStart: 2025 };
+const isPrelim = (m, y) => (m.comp || m.kind === 'arcs') ? y - 1 >= PRELIM.compPeriodStart : m.kind === 'party' ? false : !!PRELIM.pop && `${y}-07-01` >= PRELIM.pop;
 const YMIN = 1971, YMAX = +D.at(-1).slice(0, 4);
 const julIdx = y => D.indexOf(`${y}-07-01`);
 const popAt = (g, y) => { const i = julIdx(y); return i < 0 ? null : S[g]?.[i] ?? null; };
@@ -143,8 +149,17 @@ const compWhen = y => `July 1, ${y - 1} → June 30, ${y} · Statistics Canada e
 
 // ---------------------------------------------------------------- state
 const state = { m: 'pop', y: YMAX, p: null, playing: false, speed: 0.8 };
-(() => { const h = new URLSearchParams(location.hash.slice(1)); if (M[h.get('m')]) state.m = h.get('m'); const y = +h.get('y'); if (y >= YMIN && y <= YMAX) state.y = y; if (NAMES[h.get('p')]) state.p = h.get('p'); })();
-const writeHash = () => history.replaceState(null, '', `#m=${state.m}&y=${state.y}${state.p ? '&p=' + state.p : ''}`);
+// Share links use a plain hash (letters, digits, hyphens) so they survive artifact URLs: #pop-2026 or #flow-2023-ab
+const enc = g => g === 'NT+NU' ? 'ntnu' : g.toLowerCase(), dec = t => t === 'ntnu' ? 'NT+NU' : (t || '').toUpperCase();
+function readHash() {
+  const h = location.hash.slice(1);
+  if (h.includes('=')) { const q = new URLSearchParams(h); return { m: q.get('m'), y: +q.get('y'), p: q.get('p') }; } // old links
+  const [m, y, p] = h.split('-'); return { m, y: +y, p: p ? dec(p) : null };
+}
+function applyHash() { const h = readHash(); if (M[h.m]) state.m = h.m; if (h.y >= YMIN && h.y <= YMAX) state.y = h.y; state.p = NAMES[h.p] && h.p !== 'CAN' ? h.p : null; }
+applyHash();
+const writeHash = () => { const t = `#${state.m}-${state.y}${state.p ? '-' + enc(state.p) : ''}`; if (location.hash !== t) history.replaceState(null, '', t); };
+addEventListener('hashchange', () => { applyHash(); update(); });
 const clampYear = (m, y) => Math.max(m.years[0], Math.min(m.years[1], y));
 
 // ---------------------------------------------------------------- deck
@@ -223,6 +238,13 @@ function layers() {
   L.push(...eventPins(y));
   return L;
 }
+const isPhone = () => innerWidth < 860;
+function labelText(d, val, m, sel) {
+  const ab = d.k === 'NT+NU' ? 'NT+NU' : d.k, v = val[d.k];
+  const show = !isPhone() || d.k === sel;            // phones: values only on the selected place
+  if (m.kind === 'party') return show && v ? `${ab}\n${partyShort(v[0])} ${v[1]}` : ab;
+  return show ? `${ab}\n${v == null ? '—' : m.fmt(v)}` : ab;
+}
 function labels(pts, pos, val, m, sel) {
   const ink = C('ink-1'), halo = [...C('ground'), 255];
   const call = pts.filter(d => CALLOUT[d.k]);
@@ -231,10 +253,10 @@ function labels(pts, pos, val, m, sel) {
       getSourcePosition: pos, getTargetPosition: d => [...CALLOUT[d.k], 0], getColor: C('ink-3'), getWidth: 1.2, widthUnits: 'pixels',
       updateTriggers: { getSourcePosition: [state.m, state.y] } }),
     new TextLayer({ id: 'labels', data: pts, coordinateSystem: CART, parameters: { depthTest: false },
-    getPosition: at, getText: d => `${d.k === 'NT+NU' ? 'NT+NU' : d.k}\n${val[d.k] == null ? '—' : m.fmt(val[d.k])}`,
-    getSize: d => d.k === sel ? 16 : 13, getPixelOffset: d => CALLOUT[d.k] ? [0, 0] : [0, -18], fontFamily: 'IBM Plex Sans', fontWeight: 600, lineHeight: 1.15,
+    getPosition: at, getText: d => labelText(d, val, m, sel),
+    getSize: d => d.k === sel ? (isPhone() ? 14 : 16) : (isPhone() ? 11 : 13), getPixelOffset: d => CALLOUT[d.k] ? [0, 0] : [0, -18], fontFamily: 'IBM Plex Sans', fontWeight: 600, lineHeight: 1.15,
     getColor: d => d.k === sel ? C('accent') : ink, outlineWidth: 6, outlineColor: halo, characterSet: 'auto', fontSettings: { sdf: true, fontSize: 64, buffer: 8 },
-    updateTriggers: { getPosition: [state.m, state.y], getText: [state.m, state.y], getSize: [sel], getColor: [sel] }, transitions: { getPosition: 500 } })];
+    updateTriggers: { getPosition: [state.m, state.y], getText: [state.m, state.y, sel, innerWidth < 860], getSize: [sel, innerWidth < 860], getColor: [sel] }, transitions: { getPosition: 500 } })];
 }
 function arcs(y, sel) {
   const rows = flows.data[String(y - 1)] || [];
@@ -256,7 +278,7 @@ function eventPins(y) {
   return [
     new ScatterplotLayer({ id: 'pins', data, coordinateSystem: CART, pickable: true, getPosition: e => [...e.xy, 2], radiusUnits: 'pixels', getRadius: 7,
       stroked: true, filled: true, getFillColor: [...C('ground'), 255], getLineColor: C('accent'), lineWidthUnits: 'pixels', getLineWidth: 3, parameters: { depthTest: false } }),
-    new TextLayer({ id: 'pin-labels', data, coordinateSystem: CART, pickable: true, parameters: { depthTest: false }, getPosition: e => [...e.xy, 2],
+    new TextLayer({ id: 'pin-labels', data: isPhone() ? [] : data, coordinateSystem: CART, pickable: true, parameters: { depthTest: false }, getPosition: e => [...e.xy, 2],
       getText: e => e.label.length > 46 ? e.label.slice(0, 44) + '…' : e.label, getPixelOffset: [-14, 0], getTextAnchor: 'end', getAlignmentBaseline: 'center',
       getSize: 12.5, fontFamily: 'IBM Plex Sans', fontWeight: 600, getColor: C('accent'), outlineWidth: 6, outlineColor: [...C('ground'), 255],
       characterSet: 'auto', fontSettings: { sdf: true, fontSize: 64, buffer: 8 } }),
@@ -278,7 +300,10 @@ const span = YMAX - YMIN;
 const xPct = date => { const [y, m] = date.split('-').map(Number); return Math.max(0, Math.min(100, (y + (m - 1) / 12 - YMIN) / span * 100)); };
 document.getElementById('tl-gov').innerHTML = politics.ministries.filter(m => !m.end || m.end >= '1971-01-01').map(m => {
   const a = xPct(m.start < '1971-01-01' ? '1971-01-01' : m.start), b = xPct(m.end || `${YMAX}-12-31`);
-  return `<span title="${m.pm} · ${partyShort(m.party)} · ${m.start} to ${m.end || 'present'}" style="width:${b - a}%;background:${cssc(partyCol(m.party))}">${m.pm.split(' ').at(-1)}</span>`; }).join('');
+  // Neutral alternating tones: party colours are reserved for the election layer. Party is named in text.
+  const i = politics.ministries.indexOf(m), tone = i % 2 ? 'var(--raised)' : 'var(--hairline)';
+  const ab = { 'Liberal Party of Canada': 'Lib', 'Conservative Party of Canada': 'Con', 'Progressive Conservative Party': 'PC' }[m.party] || partyShort(m.party);
+  return `<span title="${m.pm} · ${partyShort(m.party)} · ${m.start} to ${m.end || 'present'}" style="width:${b - a}%;background:${tone};color:var(--ink-2)">${m.pm.split(' ').at(-1)} · ${ab}</span>`; }).join('');
 document.getElementById('tl-marks').innerHTML = events.map(e => `<i class="${e.kind === 'election' ? 'el' : ''}" style="left:${xPct(e.date)}%" title="${e.title}"></i>`).join('');
 document.getElementById('tl-ticks').innerHTML = [1971, 1980, 1990, 2000, 2010, 2020, YMAX].map(y => `<span style="left:${(y - YMIN) / span * 100}%">${y}</span>`).join('');
 yr.min = YMIN; yr.max = YMAX;
@@ -299,7 +324,7 @@ document.getElementById('mapctl').addEventListener('click', e => { const a = e.t
   if (a === 'tilt') v.rotationX = v.rotationX > 10 ? 0 : 45; if (a === 'reset') Object.assign(v, fitView());
   view = { ...v, transitionDuration: 500, transitionInterpolator: new deck.LinearInterpolator(['target', 'zoom', 'rotationX', 'rotationOrbit']) };
   theDeck.setProps({ viewState: view }); });
-addEventListener('resize', () => { view = { ...view, ...(({ minZoom, maxZoom }) => ({ minZoom, maxZoom }))(fitView()) }; theDeck.setProps({ viewState: view }); });
+addEventListener('resize', () => { theDeck.setProps({ layers: layers() }); view = { ...view, ...(({ minZoom, maxZoom }) => ({ minZoom, maxZoom }))(fitView()) }; theDeck.setProps({ viewState: view }); });
 addEventListener('keydown', e => { if (e.target.tagName === 'INPUT' && e.target.type !== 'range') return;
   if (e.key === 'ArrowRight') { state.y = clampYear(M[state.m], state.y + 1); stop(); update(); }
   if (e.key === 'ArrowLeft') { state.y = clampYear(M[state.m], state.y - 1); stop(); update(); }
@@ -331,7 +356,7 @@ function legend(m) {
 function headline(m) {
   document.getElementById('h-measure').textContent = m.label;
   const when = m.comp || m.kind === 'arcs' ? compWhen(state.y) : m.when(state.y);
-  document.getElementById('h-year').textContent = when;
+  document.getElementById('h-year').innerHTML = when + (isPrelim(m, state.y) ? ' · <span class="prelim" title="Statistics Canada will revise these figures">preliminary</span>' : '');
   const notes = [];
   if (!m.split(state.y)) notes.push('Northwest Territories and Nunavut are combined: no separate figures exist for this date.');
   if (m.kind === 'arcs' && state.y <= 1976) notes.push('Before July 1976, moves are estimated from Family Allowance records (different method).');
@@ -367,7 +392,7 @@ function glance(g, y) {
   const rows = ['pop', 'chg', 'rate', 'dens', 'share', 'nat', 'imm', 'npr', 'emi', 'ipm'].map(id => { const m = M[id]; let gg = g;
     if (gg === 'NT' || gg === 'NU') { if (!m.split(y)) gg = 'NT+NU'; }
     const v = y >= m.years[0] && y <= m.years[1] ? m.value(gg, y) : null;
-    return `<tr class="click ${id === state.m ? 'cur' : ''}" data-m="${id}"><td>${m.label}</td><td>${v == null ? '—' : m.fmt(v)}</td></tr>`; }).join('');
+    return `<tr class="click ${id === state.m ? 'cur' : ''}" data-m="${id}"><td>${m.label}</td><td>${v == null ? '—' : m.fmt(v) + (isPrelim(m, y) ? ' p' : '')}</td></tr>`; }).join('');
   return `<table>${rows}</table>`;
 }
 function seatsBlock(g, y) {
@@ -401,12 +426,13 @@ function renderPanel() {
   const mi = ministryAt(`${y}-07-01`);
   panel.innerHTML = `${state.p ? '<button class="back" data-act="canada">← Canada</button>' : ''}
     <h2>${NAMES[g]}</h2><div class="sub">${m.comp || m.kind === 'arcs' ? compWhen(y) : m.when ? m.when(y) : y}</div>
-    <div class="big">${big}</div><div class="bigsub">${m.label} · ${bigsub}</div>
+    <div class="big">${big}${isPrelim(m, y) && v != null ? '<sup class="p" title="Preliminary">p</sup>' : ''}</div><div class="bigsub">${m.label} · ${bigsub}</div>
+    ${isPrelim(m, y) ? '<div class="prelim-note">Preliminary estimate. Statistics Canada revises these as final data arrive, so changes can be large.</div>' : ''}
     ${m.kind === 'party' ? '' : chartSVG(g, m)}
     <button class="srcbtn" data-act="src">Source and method: ${m.src.map(s => registry[s].table_id || registry[s].publisher).join(', ')} · <span class="etag" style="margin:0">${m.tag}</span></button>
     ${m.kind === 'arcs' && g !== 'CAN' ? flowsBlock(g, y) : ''}
     ${seatsBlock(g, y)}
-    <div class="sec"><h3>At a glance, ${y}</h3>${glance(g, y)}<div class="src">Tap a row to map it. — = not available for this place or year.</div></div>
+    <div class="sec"><h3>At a glance, ${y}</h3>${glance(g, y)}<div class="src">Tap a row to map it. — = not available for this place or year. p = preliminary.</div></div>
     ${eventsBlock(g, y)}
     <div class="sec"><h3>Federal government</h3><div class="sub" style="color:var(--ink-2)">${mi ? `${mi.pm}, ${partyShort(mi.party)} (${mi.ministry}th Ministry, from ${fmtDate(mi.start)})` : ''}</div>
     <div class="src">Shown for context only. This explorer does not attribute outcomes to governments.</div></div>`;

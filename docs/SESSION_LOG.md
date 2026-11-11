@@ -65,3 +65,17 @@ Review doc (critique, identity, flow, trust, roadmap): https://claude.ai/artifac
 - Provincial premiers and provincial election results (provincial legislature sources), then a provincial politics layer.
 - Researched event library (policies, economic events) with evidence tags; a "chain of events" story mode.
 - City scale (CMA/CSD boundaries), housing (CMHC), jobs (LFS).
+
+## Session 4: 2026-11-11 (launch plan and audit fixes)
+
+Launch plan doc (audit, evidence ladder, workflow, 15-story slate, staged plan): https://claude.ai/artifact/LoisT1jrcTZ6iX2yapcHBV
+
+**Fixes (explorer, republished as version 1794434688-53aa)**
+- Preliminary values are flagged, using StatCan's notes: population from July 1, 2026 (17-10-0009 note 3); components for 2025/26 (17-10-0008 notes 4–14). Shown as a "p" mark, a panel note and in the headline.
+- Phones: map labels show only province codes, with values on the selected place; no event-pin text.
+- Share links use a plain hash (`#flow-2023-ab`) that survives artifact URLs; old `#m=…` links still work.
+- The government timeline band is party-neutral (party colours stay on election layers only).
+
+**Open blockers:** the hosted page is not yet verified live by a person; v1 videos are retired pending v2 in all formats; the 2025 ParlInfo record has 341 of 343 seats (reconcile with Elections Canada before any election story).
+
+**Next:** claims ledger and checker; story 1 end to end through it.
