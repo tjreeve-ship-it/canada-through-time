@@ -1,0 +1,85 @@
+{
+  "source": "Library of Parliament, ParlInfo — Prime Ministers of Canada",
+  "url": "https://lop.parl.ca/sites/ParlInfo/default/en_CA/People/primeMinisters",
+  "retrieved": "2026-11-11",
+  "note": "Transcribed from the rendered ParlInfo table (name, party, term dates, ministry number). Ministries since 1968 only.",
+  "ministries": [
+    {
+      "ministry": 20,
+      "pm": "Pierre Elliott Trudeau",
+      "party": "Liberal Party of Canada",
+      "start": "1968-04-20",
+      "end": "1979-06-03"
+    },
+    {
+      "ministry": 21,
+      "pm": "Joe Clark",
+      "party": "Progressive Conservative Party",
+      "start": "1979-06-04",
+      "end": "1980-03-02"
+    },
+    {
+      "ministry": 22,
+      "pm": "Pierre Elliott Trudeau",
+      "party": "Liberal Party of Canada",
+      "start": "1980-03-03",
+      "end": "1984-06-29"
+    },
+    {
+      "ministry": 23,
+      "pm": "John Turner",
+      "party": "Liberal Party of Canada",
+      "start": "1984-06-30",
+      "end": "1984-09-16"
+    },
+    {
+      "ministry": 24,
+      "pm": "Brian Mulroney",
+      "party": "Progressive Conservative Party",
+      "start": "1984-09-17",
+      "end": "1993-06-24"
+    },
+    {
+      "ministry": 25,
+      "pm": "Kim Campbell",
+      "party": "Progressive Conservative Party",
+      "start": "1993-06-25",
+      "end": "1993-11-03"
+    },
+    {
+      "ministry": 26,
+      "pm": "Jean Chrétien",
+      "party": "Liberal Party of Canada",
+      "start": "1993-11-04",
+      "end": "2003-12-11"
+    },
+    {
+      "ministry": 27,
+      "pm": "Paul Martin",
+      "party": "Liberal Party of Canada",
+      "start": "2003-12-12",
+      "end": "2006-02-05"
+    },
+    {
+      "ministry": 28,
+      "pm": "Stephen Harper",
+      "party": "Conservative Party of Canada",
+      "start": "2006-02-06",
+      "end": "2015-11-03"
+    },
+    {
+      "ministry": 29,
+      "pm": "Justin Trudeau",
+      "party": "Liberal Party of Canada",
+      "start": "2015-11-04",
+      "end": "2025-03-13"
+    },
+    {
+      "ministry": 30,
+      "pm": "Mark Carney",
+      "party": "Liberal Party of Canada",
+      "start": "2025-03-14",
+      "end": null
+    }
+  ]
+}

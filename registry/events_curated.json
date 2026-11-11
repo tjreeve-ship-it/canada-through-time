@@ -1,0 +1,20 @@
+{
+  "note": "Curated events. Every entry needs a date, a location (lon/lat), an evidence tag and a source. Tags: historical_fact, data_note, official_statistic, derived, research, contested, evidence_of_effect.",
+  "events": [
+    {"date": "1999-04-01", "title": "Nunavut becomes a territory", "body": "The Nunavut Act came into force, creating Nunavut from the eastern Northwest Territories.",
+     "tag": "historical_fact", "places": ["NU", "NT"], "lon": -68.517, "lat": 63.7467, "where": "Iqaluit",
+     "source": "Nunavut Act, S.C. 1993, c. 28", "source_url": "https://laws-lois.justice.gc.ca/eng/acts/n-28.6/"},
+    {"date": "1991-07-01", "title": "N.W.T. and Nunavut reported separately", "body": "Statistics Canada population and migration estimates split the two territories from this date, on today's boundaries.",
+     "tag": "data_note", "places": ["NT", "NU"], "lon": -114.3718, "lat": 62.454, "where": "Yellowknife",
+     "source": "Statistics Canada Table 17-10-0009-01, notes 4–5", "source_url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710000901"},
+    {"date": "1976-07-01", "title": "Interprovincial migration switches to tax data", "body": "Estimates of moves between provinces are based on Family Allowance records until June 1976 and on CRA tax data after. Compare flows across this date with care.",
+     "tag": "data_note", "places": [], "lon": -75.6972, "lat": 45.4215, "where": "Ottawa",
+     "source": "Statistics Canada Table 17-10-0045-01, note 3", "source_url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710004501"},
+    {"date": "2011-07-01", "title": "Migration estimates add Canada child benefit data", "body": "From July 2011 quarterly interprovincial in- and out-migrant estimates use Canada child benefit microdata and are not fully comparable with earlier years.",
+     "tag": "data_note", "places": [], "lon": -75.6972, "lat": 45.4215, "where": "Ottawa",
+     "source": "Statistics Canada Table 17-10-0045-01, note 9", "source_url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710004501"},
+    {"date": "2016-07-01", "title": "Emigration method revised", "body": "Short-term emigrants are counted in the emigration components from July 2016 with a different method; net temporary emigration is no longer calculated.",
+     "tag": "data_note", "places": [], "lon": -75.6972, "lat": 45.4215, "where": "Ottawa",
+     "source": "Statistics Canada Table 17-10-0008-01, note 22", "source_url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710000801"}
+  ]
+}

@@ -47,3 +47,113 @@ sources:
     quality_class: established_research
     limitations:
       - "Generalized cartographic boundaries (1:10m), current boundaries only. Suitable for national and provincial display, not for analysis or municipal scale. StatCan cartographic boundary files will replace these when municipal layers are added."
+
+  statcan_17100008:
+    title: "Estimates of the components of demographic growth, annual"
+    publisher: "Statistics Canada"
+    table_id: "17-10-0008-01"
+    doi: "https://doi.org/10.25318/1710000801-eng"
+    landing_url: "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710000801"
+    download_url: "https://www150.statcan.gc.ca/n1/tbl/csv/17100008-eng.zip"
+    raw_file: "data/raw/statcan/17100008-eng.zip"
+    sha256: "85a3b6a331d4eecdc4d2bc3b2aa8a564a7ad0324dc3de23a832e23ad321e98e9"
+    retrieved: "2026-11-11"
+    reporting_period: "Annual, July 1 to June 30 (1971/1972 to 2025/2026)"
+    geographic_coverage: "Canada, provinces and territories"
+    units: "Persons"
+    licence: "Statistics Canada Open Licence"
+    licence_url: "https://www.statcan.gc.ca/en/reference/licence"
+    attribution: "Source: Statistics Canada. Table 17-10-0008-01 Estimates of the components of demographic growth, annual."
+    quality_class: official_statistics
+    methodology_notes:
+      - "NT and NU are separate from 1991/1992; before that only the combined figure exists (notes 2–3)."
+      - "Births and deaths final to 2023/2024, updated 2024/2025, preliminary 2025/2026; other components have their own final/preliminary cut-offs (notes 4–14)."
+      - "Net emigration = emigrants − returning emigrants; 1991 to June 2016 it also includes net temporary emigration. Emigration estimates were revised back to July 2016 with a different method (notes 21–22)."
+      - "Non-permanent residents (work/study permit holders, asylum claimants and family) are StatCan estimates and differ from IRCC counts (notes 10, 19)."
+      - "Residual deviation distributes the census error of closure across the intercensal period (note 12)."
+    limitations:
+      - "Components for the most recent years are preliminary and will be revised."
+
+  statcan_17100045:
+    title: "Estimates of interprovincial migrants by province or territory of origin and destination, quarterly"
+    publisher: "Statistics Canada"
+    table_id: "17-10-0045-01"
+    doi: "https://doi.org/10.25318/1710004501-eng"
+    landing_url: "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710004501"
+    download_url: "https://www150.statcan.gc.ca/n1/en/tbl/csv/17100045-eng.zip"
+    raw_file: "data/raw/statcan/17100045-eng.zip"
+    sha256: "38058dbf758082ef8c99b8af0dd6cd1dea62fbaa1b4432e90f02b1ef38f042ca"
+    retrieved: "2026-11-11"
+    reporting_period: "Quarterly, July 1971 to April 2026; summed here to July–June periods"
+    geographic_coverage: "Province or territory of origin × destination"
+    units: "Persons"
+    licence: "Statistics Canada Open Licence"
+    licence_url: "https://www.statcan.gc.ca/en/reference/licence"
+    attribution: "Source: Statistics Canada. Table 17-10-0045-01 Estimates of interprovincial migrants by province or territory of origin and destination, quarterly."
+    quality_class: official_statistics
+    methodology_notes:
+      - "Data source changes: Family Allowance (July 1971–June 1976), CRA tax data (July 1976–June 2025), Canada child benefit data (from July 2025) (note 3)."
+      - "Quarterly in- and out-migrant counts before 2011 are not fully comparable with later ones; summed quarterly gross flows can exceed annual counts because people who move more than once in a year are counted each time. Net migration is additive (note 9)."
+      - "Before July 1991 only NT and NU combined are available; 1976–1991 totals exclude moves between NT and NU (notes 5–6)."
+      - "Final to June 2025, updated July 2025 to March 2026, preliminary from April 2026 (note 7)."
+    limitations:
+      - "Gross flows are sums of quarterly moves (a 'moves recorded' measure), not unique people per year."
+
+  statcan_98100001:
+    title: "Population and dwelling counts: Canada, provinces and territories (2021 Census)"
+    publisher: "Statistics Canada"
+    table_id: "98-10-0001-01"
+    doi: "https://doi.org/10.25318/9810000101-eng"
+    landing_url: "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=9810000101"
+    download_url: "https://www150.statcan.gc.ca/n1/tbl/csv/98100001-eng.zip"
+    raw_file: "data/raw/statcan/98100001-eng.zip"
+    sha256: "7f75c9eb0e8b73ba8fcf0de2726a9eaf0cfb16ad56d57aa1cf49684bf0be806e"
+    retrieved: "2026-11-11"
+    reporting_period: "Census 2021"
+    geographic_coverage: "Canada, provinces and territories"
+    units: "km² (land area)"
+    licence: "Statistics Canada Open Licence"
+    licence_url: "https://www.statcan.gc.ca/en/reference/licence"
+    attribution: "Source: Statistics Canada. Table 98-10-0001-01 Population and dwelling counts."
+    quality_class: official_statistics
+    methodology_notes:
+      - "Density here = quarterly population estimate ÷ 2021 Census land area. Land area is held constant across years (a derived measure)."
+    limitations:
+      - "Land area changes little but is not constant across censuses; densities for early years use 2021 area."
+
+  parlinfo_elected:
+    title: "Elections and Elected Candidates (ParlInfo web service)"
+    publisher: "Library of Parliament"
+    landing_url: "https://lop.parl.ca/sites/ParlInfo/default/en_CA/ElectionsRidings/electionsElectedCandidates"
+    download_url: "https://lop.parl.ca/ParlinfoWebApi/Parliament/GetElectedCandidates"
+    raw_file: "data/raw/parlinfo/elected_candidates.xml"
+    sha256: "4ceeaa20033047ca4bcf1d7c596e5c2be93ad89a5e472e994a0ca6f94a9596b5"
+    retrieved: "2026-11-11"
+    reporting_period: "Federal general elections (this platform uses 1972–2025)"
+    geographic_coverage: "Electoral districts, aggregated to province or territory"
+    units: "Seats won (elected candidates)"
+    licence: "Library of Parliament terms of use; attribution required"
+    attribution: "Source: Library of Parliament, ParlInfo, Elections and Elected Candidates."
+    quality_class: official_statistics
+    methodology_notes:
+      - "Seats = count of candidates recorded as elected in each general election, by province and party, on election night (later floor crossings and by-elections are not reflected)."
+      - "ParlInfo records 341 elected candidates for 2025-04-28 against 343 seats; the difference is shown, not filled."
+    limitations:
+      - "Seats are not votes; popular vote shares are a separate dataset (Elections Canada) still to be added."
+
+  parlinfo_prime_ministers:
+    title: "Prime Ministers of Canada"
+    publisher: "Library of Parliament"
+    landing_url: "https://lop.parl.ca/sites/ParlInfo/default/en_CA/People/primeMinisters"
+    raw_file: "data/raw/parlinfo/prime_ministers_since_1968.json"
+    sha256: "32aed8e313d3120bc65cbabb357762ce7df3aa824e38f5500c3e965f2e2010c0"
+    retrieved: "2026-11-11"
+    reporting_period: "Ministries 20–30 (1968–present)"
+    units: "Dates of ministries"
+    licence: "Library of Parliament terms of use; attribution required"
+    attribution: "Source: Library of Parliament, ParlInfo, Prime Ministers of Canada."
+    quality_class: official_statistics
+    methodology_notes:
+      - "Transcribed from the ParlInfo table on 2026-11-11 (no machine-readable export found); the file is kept as the raw record."
+    limitations:
+      - "Provincial premiers are not in ParlInfo; they need provincial legislature sources (planned)."

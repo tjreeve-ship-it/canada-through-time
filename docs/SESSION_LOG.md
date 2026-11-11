@@ -45,3 +45,23 @@ Review doc (critique, identity, flow, trust, roadmap): https://claude.ai/artifac
 - A 4K test frame (2160×3840) rendered correctly; no full 4K render.
 
 **Waiting on approval:** spikes instead of extruded provinces, palette, type, 9:16 layout. Then: full v2 9:16 render and the 5-viewer check.
+
+## Session 3: 2026-11-11 (Explorer v0.1)
+
+**Explorer** (`web/explore/`; published privately at https://claude.ai/artifact/CZheZU7u2wtcgkGNiDSSk9)
+- Full-screen 3D map: drag to pan, scroll or pinch to zoom, ↺ ↻ to rotate, 2D/3D tilt, reset. Earth palette.
+- Year slider 1971–2026 with play and speed control. A government band (PM by party) and event diamonds run on the timeline.
+- 12 layers: people, change since 1971, growth in the past year, density, share; natural increase, immigrants, non-permanent residents, emigration, net interprovincial moves, migration flow arcs; federal election seats.
+- Place panel: value and rank, clickable history chart with series-break marker, an "at a glance" table, flow breakdown, seats, the year's events, and the PM for context.
+- Source drawer: publisher, table, DOI, retrieval date, licence, file SHA-256, method notes, limitations, and the formula for derived measures.
+- Event pins sit at real locations (Ottawa, Iqaluit, Yellowknife), each with an evidence tag and a source.
+
+**New data** (all hash-verified and registered)
+- StatCan 17-10-0008 (components of growth), 17-10-0045 (interprovincial origin→destination), 98-10-0001 (land area).
+- ParlInfo elected candidates (17 general elections, 1972–2025) and prime ministers (ministries 20–30).
+- Tests: components reconcile exactly with population change (largest gap 0); flow nets match component nets; election completeness. 13 tests pass.
+
+**Next**
+- Provincial premiers and provincial election results (provincial legislature sources), then a provincial politics layer.
+- Researched event library (policies, economic events) with evidence tags; a "chain of events" story mode.
+- City scale (CMA/CSD boundaries), housing (CMHC), jobs (LFS).
