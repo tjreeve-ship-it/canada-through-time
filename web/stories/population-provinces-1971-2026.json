@@ -7,31 +7,200 @@
   "start": "1971-07-01",
   "end": "2026-07-01",
   "fps": 30,
-  "seconds": { "intro": 2.0, "play": 28.0, "outro": 4.0 },
-  "milestones": [25000000, 30000000, 35000000, 40000000],
+  "seconds": {
+    "intro": 2.0,
+    "play": 28.0,
+    "outro": 4.0
+  },
+  "milestones": [
+    25000000,
+    30000000,
+    35000000,
+    40000000
+  ],
   "annotations": [
     {
       "date": "1991-07-01",
       "text": "Statistics Canada begins reporting the Northwest Territories and Nunavut separately (on today's boundaries)",
       "source": "StatCan Table 17-10-0009-01, notes 4–5",
-      "kind": "data_note"
+      "kind": "data_note",
+      "short": "N.W.T. and Nunavut reported separately from here on"
     },
     {
       "date": "1999-04-01",
       "text": "Nunavut becomes a territory",
       "source": "Nunavut Act, S.C. 1993, c. 28 — in force April 1, 1999",
       "source_url": "https://laws-lois.justice.gc.ca/eng/acts/n-28.6/",
-      "kind": "historical_fact"
+      "kind": "historical_fact",
+      "short": "Nunavut becomes a territory"
     }
   ],
   "camera": [
-    { "t": 0.0, "target": [6150, 2350, 0], "zoomOffset": 0.0, "rotationX": 38, "rotationOrbit": -12 },
-    { "t": 0.5, "target": [6200, 2280, 0], "zoomOffset": 0.05, "rotationX": 48, "rotationOrbit": 0 },
-    { "t": 1.0, "target": [6250, 2220, 0], "zoomOffset": 0.1, "rotationX": 50, "rotationOrbit": 8 }
+    {
+      "t": 0.0,
+      "target": [
+        6150,
+        2350,
+        0
+      ],
+      "zoomOffset": 0.0,
+      "rotationX": 38,
+      "rotationOrbit": -12
+    },
+    {
+      "t": 0.5,
+      "target": [
+        6200,
+        2280,
+        0
+      ],
+      "zoomOffset": 0.05,
+      "rotationX": 48,
+      "rotationOrbit": 0
+    },
+    {
+      "t": 1.0,
+      "target": [
+        6250,
+        2220,
+        0
+      ],
+      "zoomOffset": 0.1,
+      "rotationX": 50,
+      "rotationOrbit": 8
+    }
   ],
   "formats": {
-    "16x9": { "width": 1920, "height": 1080 },
-    "9x16": { "width": 1080, "height": 1920 },
-    "1x1": { "width": 1080, "height": 1080 }
+    "16x9": {
+      "width": 1920,
+      "height": 1080
+    },
+    "9x16": {
+      "width": 1080,
+      "height": 1920
+    },
+    "1x1": {
+      "width": 1080,
+      "height": 1080
+    }
+  },
+  "v2": {
+    "headline": "Canada nearly doubled. Alberta and B.C. led the provinces.",
+    "kicker": "Population · provinces and territories",
+    "seconds": {
+      "intro": 2.0,
+      "play": 22.0,
+      "dwell": 0.9,
+      "card": 2.6,
+      "outro": 5.0
+    },
+    "regions": [
+      {
+        "key": "atl",
+        "label": "Atlantic",
+        "members": [
+          "NL",
+          "PE",
+          "NS",
+          "NB"
+        ],
+        "short": "Atlantic"
+      },
+      {
+        "key": "qc",
+        "label": "Quebec",
+        "members": [
+          "QC"
+        ],
+        "short": "QC"
+      },
+      {
+        "key": "on",
+        "label": "Ontario",
+        "members": [
+          "ON"
+        ],
+        "short": "ON"
+      },
+      {
+        "key": "pr",
+        "label": "MB + SK",
+        "members": [
+          "MB",
+          "SK"
+        ],
+        "short": "MB·SK"
+      },
+      {
+        "key": "ab",
+        "label": "Alberta",
+        "members": [
+          "AB"
+        ],
+        "short": "AB"
+      },
+      {
+        "key": "bc",
+        "label": "B.C.",
+        "members": [
+          "BC"
+        ],
+        "short": "BC"
+      },
+      {
+        "key": "no",
+        "label": "North",
+        "members": [
+          "YT",
+          "NT",
+          "NU",
+          "NT+NU"
+        ],
+        "short": "North"
+      }
+    ],
+    "takeaways": "computed",
+    "camera": [
+      {
+        "t": 0.0,
+        "target": [
+          6380,
+          2120,
+          0
+        ],
+        "zoomOffset": 0.17,
+        "rotationX": 30,
+        "rotationOrbit": -3
+      },
+      {
+        "t": 1.0,
+        "target": [
+          6380,
+          2020,
+          0
+        ],
+        "zoomOffset": 0.22,
+        "rotationX": 50,
+        "rotationOrbit": 3
+      }
+    ],
+    "callouts": {
+      "NB": [
+        7560,
+        1430
+      ],
+      "NS": [
+        8330,
+        1130
+      ],
+      "PE": [
+        8380,
+        2050
+      ],
+      "NL": [
+        8760,
+        2700
+      ]
+    }
   }
 }

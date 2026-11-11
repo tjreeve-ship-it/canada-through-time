@@ -49,6 +49,9 @@ def main() -> None:
     ap.add_argument("--stills", default=None, help="comma-separated frame numbers to save as PNG instead of video")
     ap.add_argument("--crf", type=int, default=18)
     ap.add_argument("--port", type=int, default=8765)
+    ap.add_argument("--page", default="index.html", help="e.g. v2/index.html")
+    ap.add_argument("--extra", default="", help="extra query string, e.g. safe=1")
+    ap.add_argument("--tag", default="")
     a = ap.parse_args()
 
     story = json.loads((WEB / "stories" / f"{a.story}.json").read_text())
@@ -58,7 +61,7 @@ def main() -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
 
     httpd = serve(a.port)
-    url = f"http://127.0.0.1:{a.port}/index.html?render=1&story={a.story}&fmt={a.fmt}&scale={a.scale}"
+    url = f"http://127.0.0.1:{a.port}/{a.page}?render=1&story={a.story}&fmt={a.fmt}&scale={a.scale}&{a.extra}"
     with sync_playwright() as p:
         browser = p.chromium.launch(executable_path="/usr/bin/google-chrome", args=CHROME_ARGS)
         page = browser.new_page(viewport={"width": w, "height": h}, device_scale_factor=1)
@@ -75,13 +78,13 @@ def main() -> None:
         if a.stills:
             for fr in [int(x) for x in a.stills.split(",")]:
                 page.evaluate(f"CTT.renderFrame({fr})")
-                path = out_dir / f"still_{a.fmt}_{fr:05d}.png"
+                path = out_dir / f"still{a.tag}_{a.fmt}_{fr:05d}.png"
                 page.screenshot(path=str(path))
                 print(path.relative_to(ROOT))
             browser.close()
             return
 
-        out = Path(a.out) if a.out else out_dir / f"{a.story}_{a.fmt}_{h if a.fmt != '16x9' else h}p.mp4"
+        out = Path(a.out) if a.out else out_dir / f"{a.story}{a.tag}_{a.fmt}_{h}p.mp4"
         tmp = out.with_suffix(".partial.mp4")
         ff = subprocess.Popen([
             "ffmpeg", "-y", "-loglevel", "error", "-f", "image2pipe", "-framerate", str(fps), "-c:v", "png", "-i", "-",

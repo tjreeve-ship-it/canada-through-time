@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Canada Through Time — v2 prototype</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="../theme.css">
+<link rel="stylesheet" href="v2.css">
+</head>
+<body class="theme-night">
+<div id="stage" class="fmt-9x16">
+  <div id="map"></div>
+
+  <header id="head">
+    <div id="kicker"></div>
+    <h1 id="headline"></h1>
+  </header>
+
+  <section id="now">
+    <div id="year">1971</div>
+    <div id="now-side">
+      <div class="lbl">Canada</div>
+      <div id="total"></div>
+      <div id="total-chg"></div>
+    </div>
+  </section>
+  <div id="asof"></div>
+
+  <aside id="card" class="off">
+    <div id="card-tag"></div>
+    <div id="card-date"></div>
+    <div id="card-text"></div>
+    <div id="card-src"></div>
+  </aside>
+
+  <section id="legend">
+    <div class="leg-row"><span class="spike-key"><i></i></span><span id="leg-height"></span></div>
+    <div class="leg-row"><span id="leg-ramp"></span></div>
+  </section>
+
+  <section id="share">
+    <div class="lbl" id="share-title">Share of Canada's population</div>
+    <div class="bar-row"><span class="yr" id="share-y0"></span><div class="bar" id="bar0"></div></div>
+    <div class="bar-row"><span class="yr" id="share-y1"></span><div class="bar" id="bar1"></div></div>
+    <div id="share-labels"></div>
+  </section>
+
+  <section id="end" class="off">
+    <div class="lbl">What changed, July 1971 → July 2026</div>
+    <div id="end-items"></div>
+    <div id="end-next"></div>
+  </section>
+
+  <div id="timeline"><div id="tl-track"></div><div id="tl-fill"></div><div id="tl-marks"></div></div>
+  <footer id="source"></footer>
+  <div id="safe" class="hidden"></div>
+</div>
+<script src="../vendor/deck.min.js"></script>
+<script type="module" src="v2.js"></script>
+</body>
+</html>

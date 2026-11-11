@@ -31,3 +31,17 @@
 2. PostgreSQL/PostGIS store, plus a `make` target that runs every pipeline and test.
 3. Statistics Canada census-division and CMA boundaries for city-scale stories.
 4. A story catalogue page and a batch-render queue.
+
+## Session 2: 2026-11-11 (design direction)
+
+Review doc (critique, identity, flow, trust, roadmap): https://claude.ai/artifact/2LEwix1R1QuNxe673Yad1h
+
+**Built on branch `design/field-atlas-prototype` (main untouched; v1 still renders as before)**
+- `web/theme.css`: Field Atlas tokens (Night and Paper) and bundled OFL fonts.
+- `web/v2/`: 9:16 prototype with spikes on a neutral map, offshore Atlantic callouts, steady time with 0.9 s event pauses, 2.6 s evidence-tagged cards, a share bar, a computed end card and a safe-zone overlay (`?safe=1`). Preliminary status is read from the StatCan table note.
+- `render/render.py`: `--page`, `--tag`, `--extra` options.
+- `tests/test_story_claims.py`: causal-language check and headline-claim check (9 tests pass).
+- `docs/DESIGN_SYSTEM.md`, `docs/prototype/` (storyboard, safe zones, v1 audit sheet).
+- A 4K test frame (2160×3840) rendered correctly; no full 4K render.
+
+**Waiting on approval:** spikes instead of extruded provinces, palette, type, 9:16 layout. Then: full v2 9:16 render and the 5-viewer check.
