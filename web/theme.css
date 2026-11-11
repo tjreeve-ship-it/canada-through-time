@@ -41,3 +41,21 @@
   --accent: #6A4FD8;
   --uncertain: #75756F;
 }
+
+/* "Quiet" variant under review: growth in slate blue-grey (lightness carries the amount), decline stays ochre so it still stands out. */
+.palette-quiet {
+  --grow-1: #5C6E73; --grow-2: #7F959A; --grow-3: #A9BBBE; --grow-4: #DDE6E7;
+  --neutral: #4A5058;
+  --decline-1: #8A6A3E; --decline-2: #B3874A; --decline-3: #D2A867;
+  --accent: #E8DCC0;
+}
+
+/* "Earth" variant under review: lighter earth-toned land so data marks stand out; slate-blue growth, ochre decline, dark neutral. */
+.palette-earth {
+  --ground: #111315; --surface: #181B1E; --raised: #202428; --hairline: #2E3236;
+  --water: #141C22; --land: #5E5848; --land-neighbour: #2A2824; --boundary: #9A917C; --coast: #3B3831;
+  --grow-1: #8AA6BA; --grow-2: #ADC4D3; --grow-3: #D0E0E9; --grow-4: #F0F6F9;
+  --neutral: #2E2B25;
+  --decline-1: #C98A45; --decline-2: #E0A65E; --decline-3: #F0C88E;
+  --accent: #E8DCC0;
+}

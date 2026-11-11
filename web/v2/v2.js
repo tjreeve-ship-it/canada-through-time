@@ -15,6 +15,7 @@ const PROV = ['NL', 'PE', 'NS', 'NB', 'QC', 'ON', 'MB', 'SK', 'AB', 'BC', 'YT', 
 const KM_PER_MILLION = 70, SPIKE_RADIUS = 58;
 
 // ---------- tokens from theme.css (single source of truth) ----------
+if (params.get('palette')) document.body.classList.add('palette-' + params.get('palette'));
 const css = getComputedStyle(document.body);
 const tok = n => css.getPropertyValue('--' + n).trim();
 const rgb = h => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16));
@@ -196,18 +197,18 @@ function render(frame) {
       material: { ambient: 0.55, diffuse: 0.5, shininess: 16, specularColor: [40, 40, 40] }, updateTriggers: { getElevation: frame, getFillColor: lo } }),
     new TextLayer({ id: 'abbr', data: plain, coordinateSystem: CART, parameters: { depthTest: false }, getPosition: d => [d.p[0], d.p[1], top(d.k)],
       getText: d => d.k === 'NT+NU' ? 'NT+NU' : d.k, getPixelOffset: [0, -40 * U], getSize: 26 * U, fontFamily: 'IBM Plex Sans', fontWeight: 600,
-      getColor: T['ink-1'], characterSet: 'auto', fontSettings: { sdf: true, fontSize: 64, buffer: 8 }, outlineWidth: 4, outlineColor: [...T.ground, 255],
+      getColor: T['ink-1'], characterSet: 'auto', fontSettings: { sdf: true, fontSize: 64, buffer: 8 }, outlineWidth: 7, outlineColor: [...T.ground, 255],
       updateTriggers: { getPosition: frame } }),
     new TextLayer({ id: 'val', data: plain, coordinateSystem: CART, parameters: { depthTest: false }, getPosition: d => [d.p[0], d.p[1], top(d.k)],
       getText: d => sig3(shown[d.k]), getPixelOffset: [0, -14 * U], getSize: 23 * U, fontFamily: 'IBM Plex Sans', fontWeight: 400,
-      getColor: T['ink-2'], characterSet: 'auto', fontSettings: { sdf: true, fontSize: 64, buffer: 8 }, outlineWidth: 4, outlineColor: [...T.ground, 255],
+      getColor: T['ink-2'], characterSet: 'auto', fontSettings: { sdf: true, fontSize: 64, buffer: 8 }, outlineWidth: 7, outlineColor: [...T.ground, 255],
       updateTriggers: { getPosition: frame, getText: lo } }),
     new LineLayer({ id: 'leaders', data: call, coordinateSystem: CART, getSourcePosition: d => [d.p[0], d.p[1], top(d.k)],
       getTargetPosition: d => [CALLOUT[d.k][0], CALLOUT[d.k][1], 20], parameters: { depthTest: false }, getColor: T['ink-3'], getWidth: 1.5 * U, updateTriggers: { getSourcePosition: frame } }),
     new TextLayer({ id: 'callouts', data: call, coordinateSystem: CART, getPosition: d => [CALLOUT[d.k][0], CALLOUT[d.k][1], 20], parameters: { depthTest: false },
       getText: d => `${d.k} ${sig3(shown[d.k])}`, getPixelOffset: [0, 0],
       getTextAnchor: 'middle', getAlignmentBaseline: 'center', getSize: 22 * U, background: true, getBackgroundColor: [...T.ground, 235], backgroundPadding: [8 * U, 4 * U], fontFamily: 'IBM Plex Sans', fontWeight: 600,
-      getColor: T['ink-1'], characterSet: 'auto', fontSettings: { sdf: true, fontSize: 64, buffer: 8 }, outlineWidth: 4, outlineColor: [...T.ground, 255],
+      getColor: T['ink-1'], characterSet: 'auto', fontSettings: { sdf: true, fontSize: 64, buffer: 8 }, outlineWidth: 7, outlineColor: [...T.ground, 255],
       updateTriggers: { getPosition: frame, getText: lo } }),
   ];
   theDeck.setProps({ layers, viewState: cam(Math.min(1, Math.max(0, (t - sec.intro) / (playEnd - sec.intro)))) });
