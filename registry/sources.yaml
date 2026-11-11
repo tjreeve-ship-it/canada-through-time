@@ -1,0 +1,49 @@
+# Source registry — every dataset the platform displays must have an entry here.
+# Raw files are stored unmodified under data/raw/ and verified by SHA-256 on every pipeline run.
+# quality_class: official_statistics | established_research | reconstructed_estimate | unverified
+
+sources:
+  statcan_17100009:
+    title: "Population estimates, quarterly"
+    publisher: "Statistics Canada"
+    table_id: "17-10-0009-01"
+    doi: "https://doi.org/10.25318/1710000901-eng"
+    landing_url: "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710000901"
+    download_url: "https://www150.statcan.gc.ca/n1/tbl/csv/17100009-eng.zip"
+    survey: "Quarterly Demographic Estimates (survey 3601)"
+    raw_file: "data/raw/statcan/17100009-eng.zip"
+    sha256: "b50bf05150e42edf3771ceb1d6868581fb6747b5886e0d1450b8b3437958bd0b"
+    retrieved: "2026-11-11"
+    release_in_file: "Files dated 2026-09-23; covers 1946-01-01 to 2026-07-01"
+    reporting_period: "Quarterly (Jan 1, Apr 1, Jul 1, Oct 1)"
+    geographic_coverage: "Canada, 10 provinces, 3 territories"
+    units: "Persons"
+    licence: "Statistics Canada Open Licence"
+    licence_url: "https://www.statcan.gc.ca/en/reference/licence"
+    attribution: "Source: Statistics Canada. Table 17-10-0009-01 Population estimates, quarterly."
+    quality_class: official_statistics
+    methodology_notes:
+      - "Estimates are final intercensal from July 1, 1971 to April 1, 2021; final postcensal July 1, 2021 to July 1, 2023; updated postcensal Oct 1, 2023 to Apr 1, 2026; preliminary postcensal from July 1, 2026 (StatCan table note 3)."
+      - "Before July 1, 1971 estimates are unadjusted for census net undercoverage and rounded to the thousand. This platform starts population series at 1971-07-01 to avoid that methodological break."
+      - "Northwest Territories and Nunavut are presented separately from July 1, 1991, on current boundaries, although Nunavut was legally created April 1, 1999 (table notes 4 and 5). Before July 1991 only the combined figure exists; the map shows the two territories as one combined region for those dates."
+      - "Quarterly estimates reflect components of change from the preceding quarter (table note 2)."
+    limitations:
+      - "Estimates are revised as new census and component data arrive; preliminary values may change."
+
+  naturalearth_admin1:
+    title: "Admin 1 – States, Provinces (1:10m), plus lakes, countries, rivers (1:50m)"
+    publisher: "Natural Earth"
+    landing_url: "https://www.naturalearthdata.com/"
+    download_url: "https://github.com/nvkelso/natural-earth-vector/tree/master/geojson"
+    raw_files:
+      - data/raw/naturalearth/ne_10m_admin_1_states_provinces.geojson
+      - data/raw/naturalearth/ne_50m_admin_0_countries.geojson
+      - data/raw/naturalearth/ne_50m_lakes.geojson
+      - data/raw/naturalearth/ne_50m_rivers_lake_centerlines.geojson
+    version: "5.2.0-pre (repository master)"
+    retrieved: "2026-11-11"
+    licence: "Public domain"
+    attribution: "Boundaries: Natural Earth (public domain)."
+    quality_class: established_research
+    limitations:
+      - "Generalized cartographic boundaries (1:10m), current boundaries only. Suitable for national and provincial display, not for analysis or municipal scale. StatCan cartographic boundary files will replace these when municipal layers are added."

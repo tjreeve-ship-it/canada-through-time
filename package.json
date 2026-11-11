@@ -1,0 +1,19 @@
+{
+  "name": "canada-through-time",
+  "version": "1.0.0",
+  "description": "Interactive 3D historical map of Canada with exportable timelapses",
+  "scripts": {
+    "build:data": "python3 pipeline/ingest_population.py && bash pipeline/build_geography.sh",
+    "test": "python3 -m pytest -q tests",
+    "serve": "python3 -m http.server -d web 8000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "deck.gl": "^9.4.1",
+    "esbuild": "^0.28.2",
+    "mapshaper": "^0.7.101"
+  },
+  "private": true
+}

@@ -1,0 +1,3016 @@
+ref_date,geo_code,geo_abbr,geo_name,value,status,vector,source_id
+1971-07-01,01,CAN,Canada,21962032,,v1,statcan_17100009
+1971-07-01,10,NL,Newfoundland and Labrador,530854,,v2,statcan_17100009
+1971-07-01,11,PE,Prince Edward Island,112591,,v8,statcan_17100009
+1971-07-01,12,NS,Nova Scotia,797294,,v9,statcan_17100009
+1971-07-01,13,NB,New Brunswick,642471,,v10,statcan_17100009
+1971-07-01,24,QC,Quebec,6137305,,v11,statcan_17100009
+1971-07-01,35,ON,Ontario,7849027,,v12,statcan_17100009
+1971-07-01,46,MB,Manitoba,998876,,v13,statcan_17100009
+1971-07-01,47,SK,Saskatchewan,932038,,v14,statcan_17100009
+1971-07-01,48,AB,Alberta,1665717,,v15,statcan_17100009
+1971-07-01,59,BC,British Columbia,2240470,,v3,statcan_17100009
+1971-07-01,60,YT,Yukon,18991,,v4,statcan_17100009
+1971-07-01,61+62,NT+NU,Northwest Territories including Nunavut,36398,,v5,statcan_17100009
+1971-10-01,01,CAN,Canada,22039243,,v1,statcan_17100009
+1971-10-01,10,NL,Newfoundland and Labrador,534471,,v2,statcan_17100009
+1971-10-01,11,PE,Prince Edward Island,112874,,v8,statcan_17100009
+1971-10-01,12,NS,Nova Scotia,798804,,v9,statcan_17100009
+1971-10-01,13,NB,New Brunswick,644717,,v10,statcan_17100009
+1971-10-01,24,QC,Quebec,6148121,,v11,statcan_17100009
+1971-10-01,35,ON,Ontario,7882241,,v12,statcan_17100009
+1971-10-01,46,MB,Manitoba,998957,,v13,statcan_17100009
+1971-10-01,47,SK,Saskatchewan,928061,,v14,statcan_17100009
+1971-10-01,48,AB,Alberta,1675638,,v15,statcan_17100009
+1971-10-01,59,BC,British Columbia,2258651,,v3,statcan_17100009
+1971-10-01,60,YT,Yukon,19462,,v4,statcan_17100009
+1971-10-01,61+62,NT+NU,Northwest Territories including Nunavut,37246,,v5,statcan_17100009
+1972-01-01,01,CAN,Canada,22092498,,v1,statcan_17100009
+1972-01-01,10,NL,Newfoundland and Labrador,535736,,v2,statcan_17100009
+1972-01-01,11,PE,Prince Edward Island,112964,,v8,statcan_17100009
+1972-01-01,12,NS,Nova Scotia,800513,,v9,statcan_17100009
+1972-01-01,13,NB,New Brunswick,646337,,v10,statcan_17100009
+1972-01-01,24,QC,Quebec,6152950,,v11,statcan_17100009
+1972-01-01,35,ON,Ontario,7906337,,v12,statcan_17100009
+1972-01-01,46,MB,Manitoba,998910,,v13,statcan_17100009
+1972-01-01,47,SK,Saskatchewan,923123,,v14,statcan_17100009
+1972-01-01,48,AB,Alberta,1679985,,v15,statcan_17100009
+1972-01-01,59,BC,British Columbia,2278085,,v3,statcan_17100009
+1972-01-01,60,YT,Yukon,19723,,v4,statcan_17100009
+1972-01-01,61+62,NT+NU,Northwest Territories including Nunavut,37835,,v5,statcan_17100009
+1972-04-01,01,CAN,Canada,22148919,,v1,statcan_17100009
+1972-04-01,10,NL,Newfoundland and Labrador,537368,,v2,statcan_17100009
+1972-04-01,11,PE,Prince Edward Island,113314,,v8,statcan_17100009
+1972-04-01,12,NS,Nova Scotia,800542,,v9,statcan_17100009
+1972-04-01,13,NB,New Brunswick,648056,,v10,statcan_17100009
+1972-04-01,24,QC,Quebec,6165470,,v11,statcan_17100009
+1972-04-01,35,ON,Ontario,7927220,,v12,statcan_17100009
+1972-04-01,46,MB,Manitoba,1000104,,v13,statcan_17100009
+1972-04-01,47,SK,Saskatchewan,921306,,v14,statcan_17100009
+1972-04-01,48,AB,Alberta,1686758,,v15,statcan_17100009
+1972-04-01,59,BC,British Columbia,2290667,,v3,statcan_17100009
+1972-04-01,60,YT,Yukon,19859,,v4,statcan_17100009
+1972-04-01,61+62,NT+NU,Northwest Territories including Nunavut,38255,,v5,statcan_17100009
+1972-07-01,01,CAN,Canada,22218463,,v1,statcan_17100009
+1972-07-01,10,NL,Newfoundland and Labrador,539124,,v2,statcan_17100009
+1972-07-01,11,PE,Prince Edward Island,113460,,v8,statcan_17100009
+1972-07-01,12,NS,Nova Scotia,802255,,v9,statcan_17100009
+1972-07-01,13,NB,New Brunswick,648769,,v10,statcan_17100009
+1972-07-01,24,QC,Quebec,6174216,,v11,statcan_17100009
+1972-07-01,35,ON,Ontario,7963117,,v12,statcan_17100009
+1972-07-01,46,MB,Manitoba,1001652,,v13,statcan_17100009
+1972-07-01,47,SK,Saskatchewan,920780,,v14,statcan_17100009
+1972-07-01,48,AB,Alberta,1694090,,v15,statcan_17100009
+1972-07-01,59,BC,British Columbia,2302086,,v3,statcan_17100009
+1972-07-01,60,YT,Yukon,20143,,v4,statcan_17100009
+1972-07-01,61+62,NT+NU,Northwest Territories including Nunavut,38771,,v5,statcan_17100009
+1972-10-01,01,CAN,Canada,22288499,,v1,statcan_17100009
+1972-10-01,10,NL,Newfoundland and Labrador,541472,,v2,statcan_17100009
+1972-10-01,11,PE,Prince Edward Island,113960,,v8,statcan_17100009
+1972-10-01,12,NS,Nova Scotia,805317,,v9,statcan_17100009
+1972-10-01,13,NB,New Brunswick,651182,,v10,statcan_17100009
+1972-10-01,24,QC,Quebec,6182065,,v11,statcan_17100009
+1972-10-01,35,ON,Ontario,7992037,,v12,statcan_17100009
+1972-10-01,46,MB,Manitoba,1001682,,v13,statcan_17100009
+1972-10-01,47,SK,Saskatchewan,916659,,v14,statcan_17100009
+1972-10-01,48,AB,Alberta,1705519,,v15,statcan_17100009
+1972-10-01,59,BC,British Columbia,2318552,,v3,statcan_17100009
+1972-10-01,60,YT,Yukon,20570,,v4,statcan_17100009
+1972-10-01,61+62,NT+NU,Northwest Territories including Nunavut,39484,,v5,statcan_17100009
+1973-01-01,01,CAN,Canada,22347459,,v1,statcan_17100009
+1973-01-01,10,NL,Newfoundland and Labrador,542983,,v2,statcan_17100009
+1973-01-01,11,PE,Prince Edward Island,114276,,v8,statcan_17100009
+1973-01-01,12,NS,Nova Scotia,808614,,v9,statcan_17100009
+1973-01-01,13,NB,New Brunswick,652497,,v10,statcan_17100009
+1973-01-01,24,QC,Quebec,6189678,,v11,statcan_17100009
+1973-01-01,35,ON,Ontario,8013391,,v12,statcan_17100009
+1973-01-01,46,MB,Manitoba,1002589,,v13,statcan_17100009
+1973-01-01,47,SK,Saskatchewan,913591,,v14,statcan_17100009
+1973-01-01,48,AB,Alberta,1710866,,v15,statcan_17100009
+1973-01-01,59,BC,British Columbia,2338148,,v3,statcan_17100009
+1973-01-01,60,YT,Yukon,20813,,v4,statcan_17100009
+1973-01-01,61+62,NT+NU,Northwest Territories including Nunavut,40013,,v5,statcan_17100009
+1973-04-01,01,CAN,Canada,22405392,,v1,statcan_17100009
+1973-04-01,10,NL,Newfoundland and Labrador,544026,,v2,statcan_17100009
+1973-04-01,11,PE,Prince Edward Island,114437,,v8,statcan_17100009
+1973-04-01,12,NS,Nova Scotia,809697,,v9,statcan_17100009
+1973-04-01,13,NB,New Brunswick,655725,,v10,statcan_17100009
+1973-04-01,24,QC,Quebec,6199080,,v11,statcan_17100009
+1973-04-01,35,ON,Ontario,8035129,,v12,statcan_17100009
+1973-04-01,46,MB,Manitoba,1005005,,v13,statcan_17100009
+1973-04-01,47,SK,Saskatchewan,912191,,v14,statcan_17100009
+1973-04-01,48,AB,Alberta,1717910,,v15,statcan_17100009
+1973-04-01,59,BC,British Columbia,2350837,,v3,statcan_17100009
+1973-04-01,60,YT,Yukon,20968,,v4,statcan_17100009
+1973-04-01,61+62,NT+NU,Northwest Territories including Nunavut,40387,,v5,statcan_17100009
+1973-07-01,01,CAN,Canada,22491777,,v1,statcan_17100009
+1973-07-01,10,NL,Newfoundland and Labrador,545561,,v2,statcan_17100009
+1973-07-01,11,PE,Prince Edward Island,114620,,v8,statcan_17100009
+1973-07-01,12,NS,Nova Scotia,812386,,v9,statcan_17100009
+1973-07-01,13,NB,New Brunswick,656720,,v10,statcan_17100009
+1973-07-01,24,QC,Quebec,6213149,,v11,statcan_17100009
+1973-07-01,35,ON,Ontario,8075547,,v12,statcan_17100009
+1973-07-01,46,MB,Manitoba,1007358,,v13,statcan_17100009
+1973-07-01,47,SK,Saskatchewan,911937,,v14,statcan_17100009
+1973-07-01,48,AB,Alberta,1725327,,v15,statcan_17100009
+1973-07-01,59,BC,British Columbia,2367271,,v3,statcan_17100009
+1973-07-01,60,YT,Yukon,21148,,v4,statcan_17100009
+1973-07-01,61+62,NT+NU,Northwest Territories including Nunavut,40753,,v5,statcan_17100009
+1973-10-01,01,CAN,Canada,22570338,,v1,statcan_17100009
+1973-10-01,10,NL,Newfoundland and Labrador,546717,,v2,statcan_17100009
+1973-10-01,11,PE,Prince Edward Island,114944,,v8,statcan_17100009
+1973-10-01,12,NS,Nova Scotia,814351,,v9,statcan_17100009
+1973-10-01,13,NB,New Brunswick,658693,,v10,statcan_17100009
+1973-10-01,24,QC,Quebec,6227045,,v11,statcan_17100009
+1973-10-01,35,ON,Ontario,8107108,,v12,statcan_17100009
+1973-10-01,46,MB,Manitoba,1008908,,v13,statcan_17100009
+1973-10-01,47,SK,Saskatchewan,908856,,v14,statcan_17100009
+1973-10-01,48,AB,Alberta,1735396,,v15,statcan_17100009
+1973-10-01,59,BC,British Columbia,2386932,,v3,statcan_17100009
+1973-10-01,60,YT,Yukon,20874,,v4,statcan_17100009
+1973-10-01,61+62,NT+NU,Northwest Territories including Nunavut,40514,,v5,statcan_17100009
+1974-01-01,01,CAN,Canada,22649538,,v1,statcan_17100009
+1974-01-01,10,NL,Newfoundland and Labrador,547107,,v2,statcan_17100009
+1974-01-01,11,PE,Prince Edward Island,115189,,v8,statcan_17100009
+1974-01-01,12,NS,Nova Scotia,816353,,v9,statcan_17100009
+1974-01-01,13,NB,New Brunswick,661016,,v10,statcan_17100009
+1974-01-01,24,QC,Quebec,6238468,,v11,statcan_17100009
+1974-01-01,35,ON,Ontario,8139808,,v12,statcan_17100009
+1974-01-01,46,MB,Manitoba,1012378,,v13,statcan_17100009
+1974-01-01,47,SK,Saskatchewan,907546,,v14,statcan_17100009
+1974-01-01,48,AB,Alberta,1739942,,v15,statcan_17100009
+1974-01-01,59,BC,British Columbia,2409913,,v3,statcan_17100009
+1974-01-01,60,YT,Yukon,20973,,v4,statcan_17100009
+1974-01-01,61+62,NT+NU,Northwest Territories including Nunavut,40845,,v5,statcan_17100009
+1974-04-01,01,CAN,Canada,22723274,,v1,statcan_17100009
+1974-04-01,10,NL,Newfoundland and Labrador,547385,,v2,statcan_17100009
+1974-04-01,11,PE,Prince Edward Island,115566,,v8,statcan_17100009
+1974-04-01,12,NS,Nova Scotia,816688,,v9,statcan_17100009
+1974-04-01,13,NB,New Brunswick,662560,,v10,statcan_17100009
+1974-04-01,24,QC,Quebec,6251741,,v11,statcan_17100009
+1974-04-01,35,ON,Ontario,8172562,,v12,statcan_17100009
+1974-04-01,46,MB,Manitoba,1015368,,v13,statcan_17100009
+1974-04-01,47,SK,Saskatchewan,907748,,v14,statcan_17100009
+1974-04-01,48,AB,Alberta,1746975,,v15,statcan_17100009
+1974-04-01,59,BC,British Columbia,2424995,,v3,statcan_17100009
+1974-04-01,60,YT,Yukon,20895,,v4,statcan_17100009
+1974-04-01,61+62,NT+NU,Northwest Territories including Nunavut,40791,,v5,statcan_17100009
+1974-07-01,01,CAN,Canada,22807969,,v1,statcan_17100009
+1974-07-01,10,NL,Newfoundland and Labrador,549604,,v2,statcan_17100009
+1974-07-01,11,PE,Prince Edward Island,115962,,v8,statcan_17100009
+1974-07-01,12,NS,Nova Scotia,818751,,v9,statcan_17100009
+1974-07-01,13,NB,New Brunswick,664744,,v10,statcan_17100009
+1974-07-01,24,QC,Quebec,6268571,,v11,statcan_17100009
+1974-07-01,35,ON,Ontario,8204275,,v12,statcan_17100009
+1974-07-01,46,MB,Manitoba,1018206,,v13,statcan_17100009
+1974-07-01,47,SK,Saskatchewan,908457,,v14,statcan_17100009
+1974-07-01,48,AB,Alberta,1754621,,v15,statcan_17100009
+1974-07-01,59,BC,British Columbia,2442578,,v3,statcan_17100009
+1974-07-01,60,YT,Yukon,21069,,v4,statcan_17100009
+1974-07-01,61+62,NT+NU,Northwest Territories including Nunavut,41131,,v5,statcan_17100009
+1974-10-01,01,CAN,Canada,22907390,,v1,statcan_17100009
+1974-10-01,10,NL,Newfoundland and Labrador,551508,,v2,statcan_17100009
+1974-10-01,11,PE,Prince Edward Island,116401,,v8,statcan_17100009
+1974-10-01,12,NS,Nova Scotia,821251,,v9,statcan_17100009
+1974-10-01,13,NB,New Brunswick,669506,,v10,statcan_17100009
+1974-10-01,24,QC,Quebec,6286708,,v11,statcan_17100009
+1974-10-01,35,ON,Ontario,8240114,,v12,statcan_17100009
+1974-10-01,46,MB,Manitoba,1018954,,v13,statcan_17100009
+1974-10-01,47,SK,Saskatchewan,908714,,v14,statcan_17100009
+1974-10-01,48,AB,Alberta,1769880,,v15,statcan_17100009
+1974-10-01,59,BC,British Columbia,2461396,,v3,statcan_17100009
+1974-10-01,60,YT,Yukon,21335,,v4,statcan_17100009
+1974-10-01,61+62,NT+NU,Northwest Territories including Nunavut,41623,,v5,statcan_17100009
+1975-01-01,01,CAN,Canada,22979190,,v1,statcan_17100009
+1975-01-01,10,NL,Newfoundland and Labrador,552812,,v2,statcan_17100009
+1975-01-01,11,PE,Prince Edward Island,117031,,v8,statcan_17100009
+1975-01-01,12,NS,Nova Scotia,823084,,v9,statcan_17100009
+1975-01-01,13,NB,New Brunswick,671135,,v10,statcan_17100009
+1975-01-01,24,QC,Quebec,6299783,,v11,statcan_17100009
+1975-01-01,35,ON,Ontario,8260161,,v12,statcan_17100009
+1975-01-01,46,MB,Manitoba,1019529,,v13,statcan_17100009
+1975-01-01,47,SK,Saskatchewan,910276,,v14,statcan_17100009
+1975-01-01,48,AB,Alberta,1782575,,v15,statcan_17100009
+1975-01-01,59,BC,British Columbia,2479085,,v3,statcan_17100009
+1975-01-01,60,YT,Yukon,21580,,v4,statcan_17100009
+1975-01-01,61+62,NT+NU,Northwest Territories including Nunavut,42139,,v5,statcan_17100009
+1975-04-01,01,CAN,Canada,23048990,,v1,statcan_17100009
+1975-04-01,10,NL,Newfoundland and Labrador,554166,,v2,statcan_17100009
+1975-04-01,11,PE,Prince Edward Island,117316,,v8,statcan_17100009
+1975-04-01,12,NS,Nova Scotia,824791,,v9,statcan_17100009
+1975-04-01,13,NB,New Brunswick,673918,,v10,statcan_17100009
+1975-04-01,24,QC,Quebec,6310999,,v11,statcan_17100009
+1975-04-01,35,ON,Ontario,8284503,,v12,statcan_17100009
+1975-04-01,46,MB,Manitoba,1021824,,v13,statcan_17100009
+1975-04-01,47,SK,Saskatchewan,913118,,v14,statcan_17100009
+1975-04-01,48,AB,Alberta,1795097,,v15,statcan_17100009
+1975-04-01,59,BC,British Columbia,2489116,,v3,statcan_17100009
+1975-04-01,60,YT,Yukon,21692,,v4,statcan_17100009
+1975-04-01,61+62,NT+NU,Northwest Territories including Nunavut,42450,,v5,statcan_17100009
+1975-07-01,01,CAN,Canada,23143275,,v1,statcan_17100009
+1975-07-01,10,NL,Newfoundland and Labrador,556496,,v2,statcan_17100009
+1975-07-01,11,PE,Prince Edward Island,117724,,v8,statcan_17100009
+1975-07-01,12,NS,Nova Scotia,826549,,v9,statcan_17100009
+1975-07-01,13,NB,New Brunswick,677008,,v10,statcan_17100009
+1975-07-01,24,QC,Quebec,6330303,,v11,statcan_17100009
+1975-07-01,35,ON,Ontario,8319795,,v12,statcan_17100009
+1975-07-01,46,MB,Manitoba,1024975,,v13,statcan_17100009
+1975-07-01,47,SK,Saskatchewan,917415,,v14,statcan_17100009
+1975-07-01,48,AB,Alberta,1808689,,v15,statcan_17100009
+1975-07-01,59,BC,British Columbia,2499564,,v3,statcan_17100009
+1975-07-01,60,YT,Yukon,21908,,v4,statcan_17100009
+1975-07-01,61+62,NT+NU,Northwest Territories including Nunavut,42849,,v5,statcan_17100009
+1975-10-01,01,CAN,Canada,23240585,,v1,statcan_17100009
+1975-10-01,10,NL,Newfoundland and Labrador,558900,,v2,statcan_17100009
+1975-10-01,11,PE,Prince Edward Island,118009,,v8,statcan_17100009
+1975-10-01,12,NS,Nova Scotia,830351,,v9,statcan_17100009
+1975-10-01,13,NB,New Brunswick,682086,,v10,statcan_17100009
+1975-10-01,24,QC,Quebec,6348244,,v11,statcan_17100009
+1975-10-01,35,ON,Ontario,8352911,,v12,statcan_17100009
+1975-10-01,46,MB,Manitoba,1026093,,v13,statcan_17100009
+1975-10-01,47,SK,Saskatchewan,922468,,v14,statcan_17100009
+1975-10-01,48,AB,Alberta,1825051,,v15,statcan_17100009
+1975-10-01,59,BC,British Columbia,2510751,,v3,statcan_17100009
+1975-10-01,60,YT,Yukon,22214,,v4,statcan_17100009
+1975-10-01,61+62,NT+NU,Northwest Territories including Nunavut,43507,,v5,statcan_17100009
+1976-01-01,01,CAN,Canada,23304197,,v1,statcan_17100009
+1976-01-01,10,NL,Newfoundland and Labrador,560024,,v2,statcan_17100009
+1976-01-01,11,PE,Prince Edward Island,118264,,v8,statcan_17100009
+1976-01-01,12,NS,Nova Scotia,832765,,v9,statcan_17100009
+1976-01-01,13,NB,New Brunswick,685155,,v10,statcan_17100009
+1976-01-01,24,QC,Quebec,6362125,,v11,statcan_17100009
+1976-01-01,35,ON,Ontario,8366498,,v12,statcan_17100009
+1976-01-01,46,MB,Manitoba,1028134,,v13,statcan_17100009
+1976-01-01,47,SK,Saskatchewan,925570,,v14,statcan_17100009
+1976-01-01,48,AB,Alberta,1839191,,v15,statcan_17100009
+1976-01-01,59,BC,British Columbia,2520425,,v3,statcan_17100009
+1976-01-01,60,YT,Yukon,22259,,v4,statcan_17100009
+1976-01-01,61+62,NT+NU,Northwest Territories including Nunavut,43787,,v5,statcan_17100009
+1976-04-01,01,CAN,Canada,23369845,,v1,statcan_17100009
+1976-04-01,10,NL,Newfoundland and Labrador,560856,,v2,statcan_17100009
+1976-04-01,11,PE,Prince Edward Island,118298,,v8,statcan_17100009
+1976-04-01,12,NS,Nova Scotia,833741,,v9,statcan_17100009
+1976-04-01,13,NB,New Brunswick,687521,,v10,statcan_17100009
+1976-04-01,24,QC,Quebec,6377976,,v11,statcan_17100009
+1976-04-01,35,ON,Ontario,8387985,,v12,statcan_17100009
+1976-04-01,46,MB,Manitoba,1030093,,v13,statcan_17100009
+1976-04-01,47,SK,Saskatchewan,928697,,v14,statcan_17100009
+1976-04-01,48,AB,Alberta,1852651,,v15,statcan_17100009
+1976-04-01,59,BC,British Columbia,2525812,,v3,statcan_17100009
+1976-04-01,60,YT,Yukon,22263,,v4,statcan_17100009
+1976-04-01,61+62,NT+NU,Northwest Territories including Nunavut,43952,,v5,statcan_17100009
+1976-07-01,01,CAN,Canada,23449808,,v1,statcan_17100009
+1976-07-01,10,NL,Newfoundland and Labrador,562639,,v2,statcan_17100009
+1976-07-01,11,PE,Prince Edward Island,118648,,v8,statcan_17100009
+1976-07-01,12,NS,Nova Scotia,835166,,v9,statcan_17100009
+1976-07-01,13,NB,New Brunswick,689494,,v10,statcan_17100009
+1976-07-01,24,QC,Quebec,6396761,,v11,statcan_17100009
+1976-07-01,35,ON,Ontario,8413779,,v12,statcan_17100009
+1976-07-01,46,MB,Manitoba,1031758,,v13,statcan_17100009
+1976-07-01,47,SK,Saskatchewan,931612,,v14,statcan_17100009
+1976-07-01,48,AB,Alberta,1869287,,v15,statcan_17100009
+1976-07-01,59,BC,British Columbia,2533899,,v3,statcan_17100009
+1976-07-01,60,YT,Yukon,22441,,v4,statcan_17100009
+1976-07-01,61+62,NT+NU,Northwest Territories including Nunavut,44324,,v5,statcan_17100009
+1976-10-01,01,CAN,Canada,23533565,,v1,statcan_17100009
+1976-10-01,10,NL,Newfoundland and Labrador,563591,,v2,statcan_17100009
+1976-10-01,11,PE,Prince Edward Island,118925,,v8,statcan_17100009
+1976-10-01,12,NS,Nova Scotia,837578,,v9,statcan_17100009
+1976-10-01,13,NB,New Brunswick,690936,,v10,statcan_17100009
+1976-10-01,24,QC,Quebec,6404158,,v11,statcan_17100009
+1976-10-01,35,ON,Ontario,8438765,,v12,statcan_17100009
+1976-10-01,46,MB,Manitoba,1033171,,v13,statcan_17100009
+1976-10-01,47,SK,Saskatchewan,936235,,v14,statcan_17100009
+1976-10-01,48,AB,Alberta,1896466,,v15,statcan_17100009
+1976-10-01,59,BC,British Columbia,2546813,,v3,statcan_17100009
+1976-10-01,60,YT,Yukon,22509,,v4,statcan_17100009
+1976-10-01,61+62,NT+NU,Northwest Territories including Nunavut,44418,,v5,statcan_17100009
+1977-01-01,01,CAN,Canada,23591713,,v1,statcan_17100009
+1977-01-01,10,NL,Newfoundland and Labrador,563387,,v2,statcan_17100009
+1977-01-01,11,PE,Prince Edward Island,119121,,v8,statcan_17100009
+1977-01-01,12,NS,Nova Scotia,838385,,v9,statcan_17100009
+1977-01-01,13,NB,New Brunswick,691810,,v10,statcan_17100009
+1977-01-01,24,QC,Quebec,6412575,,v11,statcan_17100009
+1977-01-01,35,ON,Ontario,8458617,,v12,statcan_17100009
+1977-01-01,46,MB,Manitoba,1034113,,v13,statcan_17100009
+1977-01-01,47,SK,Saskatchewan,938455,,v14,statcan_17100009
+1977-01-01,48,AB,Alberta,1914570,,v15,statcan_17100009
+1977-01-01,59,BC,British Columbia,2554051,,v3,statcan_17100009
+1977-01-01,60,YT,Yukon,22262,,v4,statcan_17100009
+1977-01-01,61+62,NT+NU,Northwest Territories including Nunavut,44367,,v5,statcan_17100009
+1977-04-01,01,CAN,Canada,23656739,,v1,statcan_17100009
+1977-04-01,10,NL,Newfoundland and Labrador,564217,,v2,statcan_17100009
+1977-04-01,11,PE,Prince Edward Island,119297,,v8,statcan_17100009
+1977-04-01,12,NS,Nova Scotia,839315,,v9,statcan_17100009
+1977-04-01,13,NB,New Brunswick,693580,,v10,statcan_17100009
+1977-04-01,24,QC,Quebec,6423152,,v11,statcan_17100009
+1977-04-01,35,ON,Ontario,8481322,,v12,statcan_17100009
+1977-04-01,46,MB,Manitoba,1035920,,v13,statcan_17100009
+1977-04-01,47,SK,Saskatchewan,941297,,v14,statcan_17100009
+1977-04-01,48,AB,Alberta,1931214,,v15,statcan_17100009
+1977-04-01,59,BC,British Columbia,2560711,,v3,statcan_17100009
+1977-04-01,60,YT,Yukon,22308,,v4,statcan_17100009
+1977-04-01,61+62,NT+NU,Northwest Territories including Nunavut,44406,,v5,statcan_17100009
+1977-07-01,01,CAN,Canada,23725843,,v1,statcan_17100009
+1977-07-01,10,NL,Newfoundland and Labrador,565348,,v2,statcan_17100009
+1977-07-01,11,PE,Prince Edward Island,119902,,v8,statcan_17100009
+1977-07-01,12,NS,Nova Scotia,840028,,v9,statcan_17100009
+1977-07-01,13,NB,New Brunswick,695843,,v10,statcan_17100009
+1977-07-01,24,QC,Quebec,6433133,,v11,statcan_17100009
+1977-07-01,35,ON,Ontario,8504080,,v12,statcan_17100009
+1977-07-01,46,MB,Manitoba,1037369,,v13,statcan_17100009
+1977-07-01,47,SK,Saskatchewan,944621,,v14,statcan_17100009
+1977-07-01,48,AB,Alberta,1948263,,v15,statcan_17100009
+1977-07-01,59,BC,British Columbia,2570315,,v3,statcan_17100009
+1977-07-01,60,YT,Yukon,22462,,v4,statcan_17100009
+1977-07-01,61+62,NT+NU,Northwest Territories including Nunavut,44479,,v5,statcan_17100009
+1977-10-01,01,CAN,Canada,23801445,,v1,statcan_17100009
+1977-10-01,10,NL,Newfoundland and Labrador,566116,,v2,statcan_17100009
+1977-10-01,11,PE,Prince Edward Island,120459,,v8,statcan_17100009
+1977-10-01,12,NS,Nova Scotia,842051,,v9,statcan_17100009
+1977-10-01,13,NB,New Brunswick,696378,,v10,statcan_17100009
+1977-10-01,24,QC,Quebec,6431509,,v11,statcan_17100009
+1977-10-01,35,ON,Ontario,8530102,,v12,statcan_17100009
+1977-10-01,46,MB,Manitoba,1038470,,v13,statcan_17100009
+1977-10-01,47,SK,Saskatchewan,947400,,v14,statcan_17100009
+1977-10-01,48,AB,Alberta,1974721,,v15,statcan_17100009
+1977-10-01,59,BC,British Columbia,2586668,,v3,statcan_17100009
+1977-10-01,60,YT,Yukon,22747,,v4,statcan_17100009
+1977-10-01,61+62,NT+NU,Northwest Territories including Nunavut,44824,,v5,statcan_17100009
+1978-01-01,01,CAN,Canada,23849503,,v1,statcan_17100009
+1978-01-01,10,NL,Newfoundland and Labrador,565981,,v2,statcan_17100009
+1978-01-01,11,PE,Prince Edward Island,120764,,v8,statcan_17100009
+1978-01-01,12,NS,Nova Scotia,842961,,v9,statcan_17100009
+1978-01-01,13,NB,New Brunswick,696872,,v10,statcan_17100009
+1978-01-01,24,QC,Quebec,6432019,,v11,statcan_17100009
+1978-01-01,35,ON,Ontario,8548453,,v12,statcan_17100009
+1978-01-01,46,MB,Manitoba,1038859,,v13,statcan_17100009
+1978-01-01,47,SK,Saskatchewan,948753,,v14,statcan_17100009
+1978-01-01,48,AB,Alberta,1991454,,v15,statcan_17100009
+1978-01-01,59,BC,British Columbia,2595858,,v3,statcan_17100009
+1978-01-01,60,YT,Yukon,22668,,v4,statcan_17100009
+1978-01-01,61+62,NT+NU,Northwest Territories including Nunavut,44861,,v5,statcan_17100009
+1978-04-01,01,CAN,Canada,23903687,,v1,statcan_17100009
+1978-04-01,10,NL,Newfoundland and Labrador,566671,,v2,statcan_17100009
+1978-04-01,11,PE,Prince Edward Island,121014,,v8,statcan_17100009
+1978-04-01,12,NS,Nova Scotia,843663,,v9,statcan_17100009
+1978-04-01,13,NB,New Brunswick,697851,,v10,statcan_17100009
+1978-04-01,24,QC,Quebec,6436705,,v11,statcan_17100009
+1978-04-01,35,ON,Ontario,8569298,,v12,statcan_17100009
+1978-04-01,46,MB,Manitoba,1040028,,v13,statcan_17100009
+1978-04-01,47,SK,Saskatchewan,950365,,v14,statcan_17100009
+1978-04-01,48,AB,Alberta,2006745,,v15,statcan_17100009
+1978-04-01,59,BC,British Columbia,2603502,,v3,statcan_17100009
+1978-04-01,60,YT,Yukon,22834,,v4,statcan_17100009
+1978-04-01,61+62,NT+NU,Northwest Territories including Nunavut,45011,,v5,statcan_17100009
+1978-07-01,01,CAN,Canada,23963203,,v1,statcan_17100009
+1978-07-01,10,NL,Newfoundland and Labrador,567639,,v2,statcan_17100009
+1978-07-01,11,PE,Prince Edward Island,121684,,v8,statcan_17100009
+1978-07-01,12,NS,Nova Scotia,844628,,v9,statcan_17100009
+1978-07-01,13,NB,New Brunswick,699514,,v10,statcan_17100009
+1978-07-01,24,QC,Quebec,6440459,,v11,statcan_17100009
+1978-07-01,35,ON,Ontario,8590144,,v12,statcan_17100009
+1978-07-01,46,MB,Manitoba,1040881,,v13,statcan_17100009
+1978-07-01,47,SK,Saskatchewan,952430,,v14,statcan_17100009
+1978-07-01,48,AB,Alberta,2022241,,v15,statcan_17100009
+1978-07-01,59,BC,British Columbia,2615162,,v3,statcan_17100009
+1978-07-01,60,YT,Yukon,23157,,v4,statcan_17100009
+1978-07-01,61+62,NT+NU,Northwest Territories including Nunavut,45264,,v5,statcan_17100009
+1978-10-01,01,CAN,Canada,24025447,,v1,statcan_17100009
+1978-10-01,10,NL,Newfoundland and Labrador,568417,,v2,statcan_17100009
+1978-10-01,11,PE,Prince Edward Island,121952,,v8,statcan_17100009
+1978-10-01,12,NS,Nova Scotia,846612,,v9,statcan_17100009
+1978-10-01,13,NB,New Brunswick,699937,,v10,statcan_17100009
+1978-10-01,24,QC,Quebec,6442774,,v11,statcan_17100009
+1978-10-01,35,ON,Ontario,8604263,,v12,statcan_17100009
+1978-10-01,46,MB,Manitoba,1038528,,v13,statcan_17100009
+1978-10-01,47,SK,Saskatchewan,954473,,v14,statcan_17100009
+1978-10-01,48,AB,Alberta,2047919,,v15,statcan_17100009
+1978-10-01,59,BC,British Columbia,2632020,,v3,statcan_17100009
+1978-10-01,60,YT,Yukon,23120,,v4,statcan_17100009
+1978-10-01,61+62,NT+NU,Northwest Territories including Nunavut,45432,,v5,statcan_17100009
+1979-01-01,01,CAN,Canada,24071889,,v1,statcan_17100009
+1979-01-01,10,NL,Newfoundland and Labrador,568329,,v2,statcan_17100009
+1979-01-01,11,PE,Prince Edward Island,122104,,v8,statcan_17100009
+1979-01-01,12,NS,Nova Scotia,847511,,v9,statcan_17100009
+1979-01-01,13,NB,New Brunswick,700237,,v10,statcan_17100009
+1979-01-01,24,QC,Quebec,6446529,,v11,statcan_17100009
+1979-01-01,35,ON,Ontario,8619239,,v12,statcan_17100009
+1979-01-01,46,MB,Manitoba,1037449,,v13,statcan_17100009
+1979-01-01,47,SK,Saskatchewan,955552,,v14,statcan_17100009
+1979-01-01,48,AB,Alberta,2064776,,v15,statcan_17100009
+1979-01-01,59,BC,British Columbia,2641872,,v3,statcan_17100009
+1979-01-01,60,YT,Yukon,22845,,v4,statcan_17100009
+1979-01-01,61+62,NT+NU,Northwest Territories including Nunavut,45446,,v5,statcan_17100009
+1979-04-01,01,CAN,Canada,24128180,,v1,statcan_17100009
+1979-04-01,10,NL,Newfoundland and Labrador,569012,,v2,statcan_17100009
+1979-04-01,11,PE,Prince Edward Island,122277,,v8,statcan_17100009
+1979-04-01,12,NS,Nova Scotia,848272,,v9,statcan_17100009
+1979-04-01,13,NB,New Brunswick,701261,,v10,statcan_17100009
+1979-04-01,24,QC,Quebec,6455295,,v11,statcan_17100009
+1979-04-01,35,ON,Ontario,8638099,,v12,statcan_17100009
+1979-04-01,46,MB,Manitoba,1037417,,v13,statcan_17100009
+1979-04-01,47,SK,Saskatchewan,957375,,v14,statcan_17100009
+1979-04-01,48,AB,Alberta,2079840,,v15,statcan_17100009
+1979-04-01,59,BC,British Columbia,2650940,,v3,statcan_17100009
+1979-04-01,60,YT,Yukon,22845,,v4,statcan_17100009
+1979-04-01,61+62,NT+NU,Northwest Territories including Nunavut,45547,,v5,statcan_17100009
+1979-07-01,01,CAN,Canada,24201544,,v1,statcan_17100009
+1979-07-01,10,NL,Newfoundland and Labrador,570075,,v2,statcan_17100009
+1979-07-01,11,PE,Prince Edward Island,122885,,v8,statcan_17100009
+1979-07-01,12,NS,Nova Scotia,849396,,v9,statcan_17100009
+1979-07-01,13,NB,New Brunswick,703158,,v10,statcan_17100009
+1979-07-01,24,QC,Quebec,6465996,,v11,statcan_17100009
+1979-07-01,35,ON,Ontario,8662088,,v12,statcan_17100009
+1979-07-01,46,MB,Manitoba,1037272,,v13,statcan_17100009
+1979-07-01,47,SK,Saskatchewan,959735,,v14,statcan_17100009
+1979-07-01,48,AB,Alberta,2096966,,v15,statcan_17100009
+1979-07-01,59,BC,British Columbia,2665238,,v3,statcan_17100009
+1979-07-01,60,YT,Yukon,22972,,v4,statcan_17100009
+1979-07-01,61+62,NT+NU,Northwest Territories including Nunavut,45763,,v5,statcan_17100009
+1979-10-01,01,CAN,Canada,24279044,,v1,statcan_17100009
+1979-10-01,10,NL,Newfoundland and Labrador,570976,,v2,statcan_17100009
+1979-10-01,11,PE,Prince Edward Island,123002,,v8,statcan_17100009
+1979-10-01,12,NS,Nova Scotia,850336,,v9,statcan_17100009
+1979-10-01,13,NB,New Brunswick,703038,,v10,statcan_17100009
+1979-10-01,24,QC,Quebec,6472095,,v11,statcan_17100009
+1979-10-01,35,ON,Ontario,8674941,,v12,statcan_17100009
+1979-10-01,46,MB,Manitoba,1034189,,v13,statcan_17100009
+1979-10-01,47,SK,Saskatchewan,961723,,v14,statcan_17100009
+1979-10-01,48,AB,Alberta,2128647,,v15,statcan_17100009
+1979-10-01,59,BC,British Columbia,2691121,,v3,statcan_17100009
+1979-10-01,60,YT,Yukon,23036,,v4,statcan_17100009
+1979-10-01,61+62,NT+NU,Northwest Territories including Nunavut,45940,,v5,statcan_17100009
+1980-01-01,01,CAN,Canada,24345365,,v1,statcan_17100009
+1980-01-01,10,NL,Newfoundland and Labrador,570899,,v2,statcan_17100009
+1980-01-01,11,PE,Prince Edward Island,123109,,v8,statcan_17100009
+1980-01-01,12,NS,Nova Scotia,850915,,v9,statcan_17100009
+1980-01-01,13,NB,New Brunswick,703538,,v10,statcan_17100009
+1980-01-01,24,QC,Quebec,6480428,,v11,statcan_17100009
+1980-01-01,35,ON,Ontario,8693157,,v12,statcan_17100009
+1980-01-01,46,MB,Manitoba,1033557,,v13,statcan_17100009
+1980-01-01,47,SK,Saskatchewan,963231,,v14,statcan_17100009
+1980-01-01,48,AB,Alberta,2149996,,v15,statcan_17100009
+1980-01-01,59,BC,British Columbia,2707690,,v3,statcan_17100009
+1980-01-01,60,YT,Yukon,22834,,v4,statcan_17100009
+1980-01-01,61+62,NT+NU,Northwest Territories including Nunavut,46011,,v5,statcan_17100009
+1980-04-01,01,CAN,Canada,24418295,,v1,statcan_17100009
+1980-04-01,10,NL,Newfoundland and Labrador,571554,,v2,statcan_17100009
+1980-04-01,11,PE,Prince Edward Island,123275,,v8,statcan_17100009
+1980-04-01,12,NS,Nova Scotia,851541,,v9,statcan_17100009
+1980-04-01,13,NB,New Brunswick,704475,,v10,statcan_17100009
+1980-04-01,24,QC,Quebec,6492192,,v11,statcan_17100009
+1980-04-01,35,ON,Ontario,8715218,,v12,statcan_17100009
+1980-04-01,46,MB,Manitoba,1033985,,v13,statcan_17100009
+1980-04-01,47,SK,Saskatchewan,965215,,v14,statcan_17100009
+1980-04-01,48,AB,Alberta,2168863,,v15,statcan_17100009
+1980-04-01,59,BC,British Columbia,2722921,,v3,statcan_17100009
+1980-04-01,60,YT,Yukon,22876,,v4,statcan_17100009
+1980-04-01,61+62,NT+NU,Northwest Territories including Nunavut,46180,,v5,statcan_17100009
+1980-07-01,01,CAN,Canada,24515667,,v1,statcan_17100009
+1980-07-01,10,NL,Newfoundland and Labrador,572759,,v2,statcan_17100009
+1980-07-01,11,PE,Prince Edward Island,123735,,v8,statcan_17100009
+1980-07-01,12,NS,Nova Scotia,852659,,v9,statcan_17100009
+1980-07-01,13,NB,New Brunswick,706219,,v10,statcan_17100009
+1980-07-01,24,QC,Quebec,6505997,,v11,statcan_17100009
+1980-07-01,35,ON,Ontario,8746013,,v12,statcan_17100009
+1980-07-01,46,MB,Manitoba,1034435,,v13,statcan_17100009
+1980-07-01,47,SK,Saskatchewan,967548,,v14,statcan_17100009
+1980-07-01,48,AB,Alberta,2191029,,v15,statcan_17100009
+1980-07-01,59,BC,British Columbia,2745861,,v3,statcan_17100009
+1980-07-01,60,YT,Yukon,23019,,v4,statcan_17100009
+1980-07-01,61+62,NT+NU,Northwest Territories including Nunavut,46393,,v5,statcan_17100009
+1980-10-01,01,CAN,Canada,24603534,,v1,statcan_17100009
+1980-10-01,10,NL,Newfoundland and Labrador,573582,,v2,statcan_17100009
+1980-10-01,11,PE,Prince Edward Island,123445,,v8,statcan_17100009
+1980-10-01,12,NS,Nova Scotia,853389,,v9,statcan_17100009
+1980-10-01,13,NB,New Brunswick,705237,,v10,statcan_17100009
+1980-10-01,24,QC,Quebec,6515323,,v11,statcan_17100009
+1980-10-01,35,ON,Ontario,8757388,,v12,statcan_17100009
+1980-10-01,46,MB,Manitoba,1034017,,v13,statcan_17100009
+1980-10-01,47,SK,Saskatchewan,970183,,v14,statcan_17100009
+1980-10-01,48,AB,Alberta,2227159,,v15,statcan_17100009
+1980-10-01,59,BC,British Columbia,2773680,,v3,statcan_17100009
+1980-10-01,60,YT,Yukon,23380,,v4,statcan_17100009
+1980-10-01,61+62,NT+NU,Northwest Territories including Nunavut,46751,,v5,statcan_17100009
+1981-01-01,01,CAN,Canada,24665355,,v1,statcan_17100009
+1981-01-01,10,NL,Newfoundland and Labrador,573420,,v2,statcan_17100009
+1981-01-01,11,PE,Prince Edward Island,123315,,v8,statcan_17100009
+1981-01-01,12,NS,Nova Scotia,853673,,v9,statcan_17100009
+1981-01-01,13,NB,New Brunswick,704763,,v10,statcan_17100009
+1981-01-01,24,QC,Quebec,6523258,,v11,statcan_17100009
+1981-01-01,35,ON,Ontario,8770591,,v12,statcan_17100009
+1981-01-01,46,MB,Manitoba,1033968,,v13,statcan_17100009
+1981-01-01,47,SK,Saskatchewan,971544,,v14,statcan_17100009
+1981-01-01,48,AB,Alberta,2249907,,v15,statcan_17100009
+1981-01-01,59,BC,British Columbia,2790754,,v3,statcan_17100009
+1981-01-01,60,YT,Yukon,23311,,v4,statcan_17100009
+1981-01-01,61+62,NT+NU,Northwest Territories including Nunavut,46851,,v5,statcan_17100009
+1981-04-01,01,CAN,Canada,24732826,,v1,statcan_17100009
+1981-04-01,10,NL,Newfoundland and Labrador,574199,,v2,statcan_17100009
+1981-04-01,11,PE,Prince Edward Island,123285,,v8,statcan_17100009
+1981-04-01,12,NS,Nova Scotia,854024,,v9,statcan_17100009
+1981-04-01,13,NB,New Brunswick,705241,,v10,statcan_17100009
+1981-04-01,24,QC,Quebec,6534508,,v11,statcan_17100009
+1981-04-01,35,ON,Ontario,8787156,,v12,statcan_17100009
+1981-04-01,46,MB,Manitoba,1034805,,v13,statcan_17100009
+1981-04-01,47,SK,Saskatchewan,973372,,v14,statcan_17100009
+1981-04-01,48,AB,Alberta,2270227,,v15,statcan_17100009
+1981-04-01,59,BC,British Columbia,2805394,,v3,statcan_17100009
+1981-04-01,60,YT,Yukon,23517,,v4,statcan_17100009
+1981-04-01,61+62,NT+NU,Northwest Territories including Nunavut,47098,,v5,statcan_17100009
+1981-07-01,01,CAN,Canada,24819915,,v1,statcan_17100009
+1981-07-01,10,NL,Newfoundland and Labrador,575302,,v2,statcan_17100009
+1981-07-01,11,PE,Prince Edward Island,123551,,v8,statcan_17100009
+1981-07-01,12,NS,Nova Scotia,854871,,v9,statcan_17100009
+1981-07-01,13,NB,New Brunswick,706438,,v10,statcan_17100009
+1981-07-01,24,QC,Quebec,6547207,,v11,statcan_17100009
+1981-07-01,35,ON,Ontario,8812286,,v12,statcan_17100009
+1981-07-01,46,MB,Manitoba,1035545,,v13,statcan_17100009
+1981-07-01,47,SK,Saskatchewan,975759,,v14,statcan_17100009
+1981-07-01,48,AB,Alberta,2291104,,v15,statcan_17100009
+1981-07-01,59,BC,British Columbia,2826558,,v3,statcan_17100009
+1981-07-01,60,YT,Yukon,23880,,v4,statcan_17100009
+1981-07-01,61+62,NT+NU,Northwest Territories including Nunavut,47414,,v5,statcan_17100009
+1981-10-01,01,CAN,Canada,24920120,,v1,statcan_17100009
+1981-10-01,10,NL,Newfoundland and Labrador,575276,,v2,statcan_17100009
+1981-10-01,11,PE,Prince Edward Island,123496,,v8,statcan_17100009
+1981-10-01,12,NS,Nova Scotia,857038,,v9,statcan_17100009
+1981-10-01,13,NB,New Brunswick,706008,,v10,statcan_17100009
+1981-10-01,24,QC,Quebec,6558545,,v11,statcan_17100009
+1981-10-01,35,ON,Ontario,8846005,,v12,statcan_17100009
+1981-10-01,46,MB,Manitoba,1037183,,v13,statcan_17100009
+1981-10-01,47,SK,Saskatchewan,979469,,v14,statcan_17100009
+1981-10-01,48,AB,Alberta,2319715,,v15,statcan_17100009
+1981-10-01,59,BC,British Columbia,2845212,,v3,statcan_17100009
+1981-10-01,60,YT,Yukon,24120,,v4,statcan_17100009
+1981-10-01,61+62,NT+NU,Northwest Territories including Nunavut,48053,,v5,statcan_17100009
+1982-01-01,01,CAN,Canada,24979229,,v1,statcan_17100009
+1982-01-01,10,NL,Newfoundland and Labrador,573343,,v2,statcan_17100009
+1982-01-01,11,PE,Prince Edward Island,123335,,v8,statcan_17100009
+1982-01-01,12,NS,Nova Scotia,857469,,v9,statcan_17100009
+1982-01-01,13,NB,New Brunswick,705608,,v10,statcan_17100009
+1982-01-01,24,QC,Quebec,6565745,,v11,statcan_17100009
+1982-01-01,35,ON,Ontario,8865774,,v12,statcan_17100009
+1982-01-01,46,MB,Manitoba,1039300,,v13,statcan_17100009
+1982-01-01,47,SK,Saskatchewan,981559,,v14,statcan_17100009
+1982-01-01,48,AB,Alberta,2337458,,v15,statcan_17100009
+1982-01-01,59,BC,British Columbia,2857268,,v3,statcan_17100009
+1982-01-01,60,YT,Yukon,24302,,v4,statcan_17100009
+1982-01-01,61+62,NT+NU,Northwest Territories including Nunavut,48068,,v5,statcan_17100009
+1982-04-01,01,CAN,Canada,25042069,,v1,statcan_17100009
+1982-04-01,10,NL,Newfoundland and Labrador,573292,,v2,statcan_17100009
+1982-04-01,11,PE,Prince Edward Island,123225,,v8,statcan_17100009
+1982-04-01,12,NS,Nova Scotia,857592,,v9,statcan_17100009
+1982-04-01,13,NB,New Brunswick,706179,,v10,statcan_17100009
+1982-04-01,24,QC,Quebec,6572316,,v11,statcan_17100009
+1982-04-01,35,ON,Ontario,8892646,,v12,statcan_17100009
+1982-04-01,46,MB,Manitoba,1042251,,v13,statcan_17100009
+1982-04-01,47,SK,Saskatchewan,983744,,v14,statcan_17100009
+1982-04-01,48,AB,Alberta,2352042,,v15,statcan_17100009
+1982-04-01,59,BC,British Columbia,2865557,,v3,statcan_17100009
+1982-04-01,60,YT,Yukon,24571,,v4,statcan_17100009
+1982-04-01,61+62,NT+NU,Northwest Territories including Nunavut,48654,,v5,statcan_17100009
+1982-07-01,01,CAN,Canada,25116942,,v1,statcan_17100009
+1982-07-01,10,NL,Newfoundland and Labrador,573795,,v2,statcan_17100009
+1982-07-01,11,PE,Prince Edward Island,123588,,v8,statcan_17100009
+1982-07-01,12,NS,Nova Scotia,859038,,v9,statcan_17100009
+1982-07-01,13,NB,New Brunswick,707457,,v10,statcan_17100009
+1982-07-01,24,QC,Quebec,6580631,,v11,statcan_17100009
+1982-07-01,35,ON,Ontario,8920288,,v12,statcan_17100009
+1982-07-01,46,MB,Manitoba,1045224,,v13,statcan_17100009
+1982-07-01,47,SK,Saskatchewan,986582,,v14,statcan_17100009
+1982-07-01,48,AB,Alberta,2369827,,v15,statcan_17100009
+1982-07-01,59,BC,British Columbia,2876513,,v3,statcan_17100009
+1982-07-01,60,YT,Yukon,24668,,v4,statcan_17100009
+1982-07-01,61+62,NT+NU,Northwest Territories including Nunavut,49331,,v5,statcan_17100009
+1982-10-01,01,CAN,Canada,25193538,,v1,statcan_17100009
+1982-10-01,10,NL,Newfoundland and Labrador,575898,,v2,statcan_17100009
+1982-10-01,11,PE,Prince Edward Island,123919,,v8,statcan_17100009
+1982-10-01,12,NS,Nova Scotia,862255,,v9,statcan_17100009
+1982-10-01,13,NB,New Brunswick,709894,,v10,statcan_17100009
+1982-10-01,24,QC,Quebec,6584666,,v11,statcan_17100009
+1982-10-01,35,ON,Ontario,8957042,,v12,statcan_17100009
+1982-10-01,46,MB,Manitoba,1049816,,v13,statcan_17100009
+1982-10-01,47,SK,Saskatchewan,991621,,v14,statcan_17100009
+1982-10-01,48,AB,Alberta,2378405,,v15,statcan_17100009
+1982-10-01,59,BC,British Columbia,2885875,,v3,statcan_17100009
+1982-10-01,60,YT,Yukon,24320,,v4,statcan_17100009
+1982-10-01,61+62,NT+NU,Northwest Territories including Nunavut,49827,,v5,statcan_17100009
+1983-01-01,01,CAN,Canada,25242830,,v1,statcan_17100009
+1983-01-01,10,NL,Newfoundland and Labrador,576813,,v2,statcan_17100009
+1983-01-01,11,PE,Prince Edward Island,124181,,v8,statcan_17100009
+1983-01-01,12,NS,Nova Scotia,864117,,v9,statcan_17100009
+1983-01-01,13,NB,New Brunswick,711021,,v10,statcan_17100009
+1983-01-01,24,QC,Quebec,6588636,,v11,statcan_17100009
+1983-01-01,35,ON,Ontario,8982933,,v12,statcan_17100009
+1983-01-01,46,MB,Manitoba,1052538,,v13,statcan_17100009
+1983-01-01,47,SK,Saskatchewan,993810,,v14,statcan_17100009
+1983-01-01,48,AB,Alberta,2383354,,v15,statcan_17100009
+1983-01-01,59,BC,British Columbia,2891441,,v3,statcan_17100009
+1983-01-01,60,YT,Yukon,23838,,v4,statcan_17100009
+1983-01-01,61+62,NT+NU,Northwest Territories including Nunavut,50148,,v5,statcan_17100009
+1983-04-01,01,CAN,Canada,25300372,,v1,statcan_17100009
+1983-04-01,10,NL,Newfoundland and Labrador,577523,,v2,statcan_17100009
+1983-04-01,11,PE,Prince Edward Island,124479,,v8,statcan_17100009
+1983-04-01,12,NS,Nova Scotia,865796,,v9,statcan_17100009
+1983-04-01,13,NB,New Brunswick,712338,,v10,statcan_17100009
+1983-04-01,24,QC,Quebec,6595846,,v11,statcan_17100009
+1983-04-01,35,ON,Ontario,9010994,,v12,statcan_17100009
+1983-04-01,46,MB,Manitoba,1055586,,v13,statcan_17100009
+1983-04-01,47,SK,Saskatchewan,997100,,v14,statcan_17100009
+1983-04-01,48,AB,Alberta,2388090,,v15,statcan_17100009
+1983-04-01,59,BC,British Columbia,2898574,,v3,statcan_17100009
+1983-04-01,60,YT,Yukon,23702,,v4,statcan_17100009
+1983-04-01,61+62,NT+NU,Northwest Territories including Nunavut,50344,,v5,statcan_17100009
+1983-07-01,01,CAN,Canada,25366451,,v1,statcan_17100009
+1983-07-01,10,NL,Newfoundland and Labrador,579164,,v2,statcan_17100009
+1983-07-01,11,PE,Prince Edward Island,125102,,v8,statcan_17100009
+1983-07-01,12,NS,Nova Scotia,868289,,v9,statcan_17100009
+1983-07-01,13,NB,New Brunswick,714842,,v10,statcan_17100009
+1983-07-01,24,QC,Quebec,6602976,,v11,statcan_17100009
+1983-07-01,35,ON,Ontario,9039564,,v12,statcan_17100009
+1983-07-01,46,MB,Manitoba,1059752,,v13,statcan_17100009
+1983-07-01,47,SK,Saskatchewan,1001249,,v14,statcan_17100009
+1983-07-01,48,AB,Alberta,2393587,,v15,statcan_17100009
+1983-07-01,59,BC,British Columbia,2907502,,v3,statcan_17100009
+1983-07-01,60,YT,Yukon,23664,,v4,statcan_17100009
+1983-07-01,61+62,NT+NU,Northwest Territories including Nunavut,50760,,v5,statcan_17100009
+1983-10-01,01,CAN,Canada,25434150,,v1,statcan_17100009
+1983-10-01,10,NL,Newfoundland and Labrador,579603,,v2,statcan_17100009
+1983-10-01,11,PE,Prince Edward Island,125634,,v8,statcan_17100009
+1983-10-01,12,NS,Nova Scotia,872143,,v9,statcan_17100009
+1983-10-01,13,NB,New Brunswick,716531,,v10,statcan_17100009
+1983-10-01,24,QC,Quebec,6608417,,v11,statcan_17100009
+1983-10-01,35,ON,Ontario,9074145,,v12,statcan_17100009
+1983-10-01,46,MB,Manitoba,1063952,,v13,statcan_17100009
+1983-10-01,47,SK,Saskatchewan,1005175,,v14,statcan_17100009
+1983-10-01,48,AB,Alberta,2394239,,v15,statcan_17100009
+1983-10-01,59,BC,British Columbia,2919166,,v3,statcan_17100009
+1983-10-01,60,YT,Yukon,23760,,v4,statcan_17100009
+1983-10-01,61+62,NT+NU,Northwest Territories including Nunavut,51385,,v5,statcan_17100009
+1984-01-01,01,CAN,Canada,25482358,,v1,statcan_17100009
+1984-01-01,10,NL,Newfoundland and Labrador,579558,,v2,statcan_17100009
+1984-01-01,11,PE,Prince Edward Island,125906,,v8,statcan_17100009
+1984-01-01,12,NS,Nova Scotia,874076,,v9,statcan_17100009
+1984-01-01,13,NB,New Brunswick,717434,,v10,statcan_17100009
+1984-01-01,24,QC,Quebec,6613628,,v11,statcan_17100009
+1984-01-01,35,ON,Ontario,9100590,,v12,statcan_17100009
+1984-01-01,46,MB,Manitoba,1066222,,v13,statcan_17100009
+1984-01-01,47,SK,Saskatchewan,1007484,,v14,statcan_17100009
+1984-01-01,48,AB,Alberta,2394892,,v15,statcan_17100009
+1984-01-01,59,BC,British Columbia,2927258,,v3,statcan_17100009
+1984-01-01,60,YT,Yukon,23544,,v4,statcan_17100009
+1984-01-01,61+62,NT+NU,Northwest Territories including Nunavut,51766,,v5,statcan_17100009
+1984-04-01,01,CAN,Canada,25539861,,v1,statcan_17100009
+1984-04-01,10,NL,Newfoundland and Labrador,579810,,v2,statcan_17100009
+1984-04-01,11,PE,Prince Edward Island,126184,,v8,statcan_17100009
+1984-04-01,12,NS,Nova Scotia,875922,,v9,statcan_17100009
+1984-04-01,13,NB,New Brunswick,718627,,v10,statcan_17100009
+1984-04-01,24,QC,Quebec,6621748,,v11,statcan_17100009
+1984-04-01,35,ON,Ontario,9129833,,v12,statcan_17100009
+1984-04-01,46,MB,Manitoba,1069201,,v13,statcan_17100009
+1984-04-01,47,SK,Saskatchewan,1010840,,v14,statcan_17100009
+1984-04-01,48,AB,Alberta,2396706,,v15,statcan_17100009
+1984-04-01,59,BC,British Columbia,2935384,,v3,statcan_17100009
+1984-04-01,60,YT,Yukon,23603,,v4,statcan_17100009
+1984-04-01,61+62,NT+NU,Northwest Territories including Nunavut,52003,,v5,statcan_17100009
+1984-07-01,01,CAN,Canada,25607053,,v1,statcan_17100009
+1984-07-01,10,NL,Newfoundland and Labrador,580065,,v2,statcan_17100009
+1984-07-01,11,PE,Prince Edward Island,126563,,v8,statcan_17100009
+1984-07-01,12,NS,Nova Scotia,877471,,v9,statcan_17100009
+1984-07-01,13,NB,New Brunswick,720488,,v10,statcan_17100009
+1984-07-01,24,QC,Quebec,6631220,,v11,statcan_17100009
+1984-07-01,35,ON,Ontario,9167484,,v12,statcan_17100009
+1984-07-01,46,MB,Manitoba,1071810,,v13,statcan_17100009
+1984-07-01,47,SK,Saskatchewan,1014615,,v14,statcan_17100009
+1984-07-01,48,AB,Alberta,2393907,,v15,statcan_17100009
+1984-07-01,59,BC,British Columbia,2947181,,v3,statcan_17100009
+1984-07-01,60,YT,Yukon,23921,,v4,statcan_17100009
+1984-07-01,61+62,NT+NU,Northwest Territories including Nunavut,52328,,v5,statcan_17100009
+1984-10-01,01,CAN,Canada,25677668,,v1,statcan_17100009
+1984-10-01,10,NL,Newfoundland and Labrador,579356,,v2,statcan_17100009
+1984-10-01,11,PE,Prince Edward Island,126877,,v8,statcan_17100009
+1984-10-01,12,NS,Nova Scotia,881323,,v9,statcan_17100009
+1984-10-01,13,NB,New Brunswick,721509,,v10,statcan_17100009
+1984-10-01,24,QC,Quebec,6640276,,v11,statcan_17100009
+1984-10-01,35,ON,Ontario,9210346,,v12,statcan_17100009
+1984-10-01,46,MB,Manitoba,1075088,,v13,statcan_17100009
+1984-10-01,47,SK,Saskatchewan,1018785,,v14,statcan_17100009
+1984-10-01,48,AB,Alberta,2390913,,v15,statcan_17100009
+1984-10-01,59,BC,British Columbia,2956332,,v3,statcan_17100009
+1984-10-01,60,YT,Yukon,24168,,v4,statcan_17100009
+1984-10-01,61+62,NT+NU,Northwest Territories including Nunavut,52695,,v5,statcan_17100009
+1985-01-01,01,CAN,Canada,25721170,,v1,statcan_17100009
+1985-01-01,10,NL,Newfoundland and Labrador,579043,,v2,statcan_17100009
+1985-01-01,11,PE,Prince Edward Island,127330,,v8,statcan_17100009
+1985-01-01,12,NS,Nova Scotia,883012,,v9,statcan_17100009
+1985-01-01,13,NB,New Brunswick,721932,,v10,statcan_17100009
+1985-01-01,24,QC,Quebec,6645778,,v11,statcan_17100009
+1985-01-01,35,ON,Ontario,9230294,,v12,statcan_17100009
+1985-01-01,46,MB,Manitoba,1078327,,v13,statcan_17100009
+1985-01-01,47,SK,Saskatchewan,1020040,,v14,statcan_17100009
+1985-01-01,48,AB,Alberta,2395813,,v15,statcan_17100009
+1985-01-01,59,BC,British Columbia,2962108,,v3,statcan_17100009
+1985-01-01,60,YT,Yukon,24156,,v4,statcan_17100009
+1985-01-01,61+62,NT+NU,Northwest Territories including Nunavut,53337,,v5,statcan_17100009
+1985-04-01,01,CAN,Canada,25774717,,v1,statcan_17100009
+1985-04-01,10,NL,Newfoundland and Labrador,579320,,v2,statcan_17100009
+1985-04-01,11,PE,Prince Edward Island,127486,,v8,statcan_17100009
+1985-04-01,12,NS,Nova Scotia,884525,,v9,statcan_17100009
+1985-04-01,13,NB,New Brunswick,722406,,v10,statcan_17100009
+1985-04-01,24,QC,Quebec,6654729,,v11,statcan_17100009
+1985-04-01,35,ON,Ontario,9256175,,v12,statcan_17100009
+1985-04-01,46,MB,Manitoba,1081013,,v13,statcan_17100009
+1985-04-01,47,SK,Saskatchewan,1021914,,v14,statcan_17100009
+1985-04-01,48,AB,Alberta,2401499,,v15,statcan_17100009
+1985-04-01,59,BC,British Columbia,2967584,,v3,statcan_17100009
+1985-04-01,60,YT,Yukon,24245,,v4,statcan_17100009
+1985-04-01,61+62,NT+NU,Northwest Territories including Nunavut,53821,,v5,statcan_17100009
+1985-07-01,01,CAN,Canada,25842116,,v1,statcan_17100009
+1985-07-01,10,NL,Newfoundland and Labrador,579275,,v2,statcan_17100009
+1985-07-01,11,PE,Prince Edward Island,127619,,v8,statcan_17100009
+1985-07-01,12,NS,Nova Scotia,885848,,v9,statcan_17100009
+1985-07-01,13,NB,New Brunswick,723287,,v10,statcan_17100009
+1985-07-01,24,QC,Quebec,6665802,,v11,statcan_17100009
+1985-07-01,35,ON,Ontario,9294657,,v12,statcan_17100009
+1985-07-01,46,MB,Manitoba,1082495,,v13,statcan_17100009
+1985-07-01,47,SK,Saskatchewan,1024928,,v14,statcan_17100009
+1985-07-01,48,AB,Alberta,2404490,,v15,statcan_17100009
+1985-07-01,59,BC,British Columbia,2975131,,v3,statcan_17100009
+1985-07-01,60,YT,Yukon,24375,,v4,statcan_17100009
+1985-07-01,61+62,NT+NU,Northwest Territories including Nunavut,54209,,v5,statcan_17100009
+1985-10-01,01,CAN,Canada,25914797,,v1,statcan_17100009
+1985-10-01,10,NL,Newfoundland and Labrador,577784,,v2,statcan_17100009
+1985-10-01,11,PE,Prince Edward Island,127864,,v8,statcan_17100009
+1985-10-01,12,NS,Nova Scotia,887408,,v9,statcan_17100009
+1985-10-01,13,NB,New Brunswick,723955,,v10,statcan_17100009
+1985-10-01,24,QC,Quebec,6676959,,v11,statcan_17100009
+1985-10-01,35,ON,Ontario,9338435,,v12,statcan_17100009
+1985-10-01,46,MB,Manitoba,1085016,,v13,statcan_17100009
+1985-10-01,47,SK,Saskatchewan,1027418,,v14,statcan_17100009
+1985-10-01,48,AB,Alberta,2407001,,v15,statcan_17100009
+1985-10-01,59,BC,British Columbia,2984237,,v3,statcan_17100009
+1985-10-01,60,YT,Yukon,24458,,v4,statcan_17100009
+1985-10-01,61+62,NT+NU,Northwest Territories including Nunavut,54262,,v5,statcan_17100009
+1986-01-01,01,CAN,Canada,25962414,,v1,statcan_17100009
+1986-01-01,10,NL,Newfoundland and Labrador,577248,,v2,statcan_17100009
+1986-01-01,11,PE,Prince Edward Island,128256,,v8,statcan_17100009
+1986-01-01,12,NS,Nova Scotia,887435,,v9,statcan_17100009
+1986-01-01,13,NB,New Brunswick,724277,,v10,statcan_17100009
+1986-01-01,24,QC,Quebec,6684699,,v11,statcan_17100009
+1986-01-01,35,ON,Ontario,9362036,,v12,statcan_17100009
+1986-01-01,46,MB,Manitoba,1087851,,v13,statcan_17100009
+1986-01-01,47,SK,Saskatchewan,1027137,,v14,statcan_17100009
+1986-01-01,48,AB,Alberta,2415590,,v15,statcan_17100009
+1986-01-01,59,BC,British Columbia,2988964,,v3,statcan_17100009
+1986-01-01,60,YT,Yukon,24359,,v4,statcan_17100009
+1986-01-01,61+62,NT+NU,Northwest Territories including Nunavut,54562,,v5,statcan_17100009
+1986-04-01,01,CAN,Canada,26019615,,v1,statcan_17100009
+1986-04-01,10,NL,Newfoundland and Labrador,577105,,v2,statcan_17100009
+1986-04-01,11,PE,Prince Edward Island,128403,,v8,statcan_17100009
+1986-04-01,12,NS,Nova Scotia,888157,,v9,statcan_17100009
+1986-04-01,13,NB,New Brunswick,724432,,v10,statcan_17100009
+1986-04-01,24,QC,Quebec,6693133,,v11,statcan_17100009
+1986-04-01,35,ON,Ontario,9391784,,v12,statcan_17100009
+1986-04-01,46,MB,Manitoba,1090433,,v13,statcan_17100009
+1986-04-01,47,SK,Saskatchewan,1027812,,v14,statcan_17100009
+1986-04-01,48,AB,Alberta,2424950,,v15,statcan_17100009
+1986-04-01,59,BC,British Columbia,2994267,,v3,statcan_17100009
+1986-04-01,60,YT,Yukon,24364,,v4,statcan_17100009
+1986-04-01,61+62,NT+NU,Northwest Territories including Nunavut,54775,,v5,statcan_17100009
+1986-07-01,01,CAN,Canada,26100278,,v1,statcan_17100009
+1986-07-01,10,NL,Newfoundland and Labrador,576306,,v2,statcan_17100009
+1986-07-01,11,PE,Prince Edward Island,128436,,v8,statcan_17100009
+1986-07-01,12,NS,Nova Scotia,889087,,v9,statcan_17100009
+1986-07-01,13,NB,New Brunswick,725019,,v10,statcan_17100009
+1986-07-01,24,QC,Quebec,6708170,,v11,statcan_17100009
+1986-07-01,35,ON,Ontario,9437359,,v12,statcan_17100009
+1986-07-01,46,MB,Manitoba,1091552,,v13,statcan_17100009
+1986-07-01,47,SK,Saskatchewan,1028717,,v14,statcan_17100009
+1986-07-01,48,AB,Alberta,2432930,,v15,statcan_17100009
+1986-07-01,59,BC,British Columbia,3003621,,v3,statcan_17100009
+1986-07-01,60,YT,Yukon,24430,,v4,statcan_17100009
+1986-07-01,61+62,NT+NU,Northwest Territories including Nunavut,54651,,v5,statcan_17100009
+1986-10-01,01,CAN,Canada,26187639,,v1,statcan_17100009
+1986-10-01,10,NL,Newfoundland and Labrador,575396,,v2,statcan_17100009
+1986-10-01,11,PE,Prince Edward Island,128281,,v8,statcan_17100009
+1986-10-01,12,NS,Nova Scotia,891078,,v9,statcan_17100009
+1986-10-01,13,NB,New Brunswick,725304,,v10,statcan_17100009
+1986-10-01,24,QC,Quebec,6727250,,v11,statcan_17100009
+1986-10-01,35,ON,Ontario,9493289,,v12,statcan_17100009
+1986-10-01,46,MB,Manitoba,1092636,,v13,statcan_17100009
+1986-10-01,47,SK,Saskatchewan,1029554,,v14,statcan_17100009
+1986-10-01,48,AB,Alberta,2429949,,v15,statcan_17100009
+1986-10-01,59,BC,British Columbia,3015876,,v3,statcan_17100009
+1986-10-01,60,YT,Yukon,24782,,v4,statcan_17100009
+1986-10-01,61+62,NT+NU,Northwest Territories including Nunavut,54244,,v5,statcan_17100009
+1987-01-01,01,CAN,Canada,26256140,,v1,statcan_17100009
+1987-01-01,10,NL,Newfoundland and Labrador,575586,,v2,statcan_17100009
+1987-01-01,11,PE,Prince Edward Island,128429,,v8,statcan_17100009
+1987-01-01,12,NS,Nova Scotia,891424,,v9,statcan_17100009
+1987-01-01,13,NB,New Brunswick,725368,,v10,statcan_17100009
+1987-01-01,24,QC,Quebec,6745101,,v11,statcan_17100009
+1987-01-01,35,ON,Ontario,9531478,,v12,statcan_17100009
+1987-01-01,46,MB,Manitoba,1094659,,v13,statcan_17100009
+1987-01-01,47,SK,Saskatchewan,1029639,,v14,statcan_17100009
+1987-01-01,48,AB,Alberta,2432958,,v15,statcan_17100009
+1987-01-01,59,BC,British Columbia,3021900,,v3,statcan_17100009
+1987-01-01,60,YT,Yukon,25125,,v4,statcan_17100009
+1987-01-01,61+62,NT+NU,Northwest Territories including Nunavut,54473,,v5,statcan_17100009
+1987-04-01,01,CAN,Canada,26346370,,v1,statcan_17100009
+1987-04-01,10,NL,Newfoundland and Labrador,575802,,v2,statcan_17100009
+1987-04-01,11,PE,Prince Edward Island,128645,,v8,statcan_17100009
+1987-04-01,12,NS,Nova Scotia,891908,,v9,statcan_17100009
+1987-04-01,13,NB,New Brunswick,726566,,v10,statcan_17100009
+1987-04-01,24,QC,Quebec,6765059,,v11,statcan_17100009
+1987-04-01,35,ON,Ontario,9577947,,v12,statcan_17100009
+1987-04-01,46,MB,Manitoba,1097076,,v13,statcan_17100009
+1987-04-01,47,SK,Saskatchewan,1031336,,v14,statcan_17100009
+1987-04-01,48,AB,Alberta,2439074,,v15,statcan_17100009
+1987-04-01,59,BC,British Columbia,3032807,,v3,statcan_17100009
+1987-04-01,60,YT,Yukon,25386,,v4,statcan_17100009
+1987-04-01,61+62,NT+NU,Northwest Territories including Nunavut,54764,,v5,statcan_17100009
+1987-07-01,01,CAN,Canada,26446601,,v1,statcan_17100009
+1987-07-01,10,NL,Newfoundland and Labrador,575242,,v2,statcan_17100009
+1987-07-01,11,PE,Prince Edward Island,128641,,v8,statcan_17100009
+1987-07-01,12,NS,Nova Scotia,893606,,v9,statcan_17100009
+1987-07-01,13,NB,New Brunswick,727768,,v10,statcan_17100009
+1987-07-01,24,QC,Quebec,6781984,,v11,statcan_17100009
+1987-07-01,35,ON,Ontario,9637945,,v12,statcan_17100009
+1987-07-01,46,MB,Manitoba,1098373,,v13,statcan_17100009
+1987-07-01,47,SK,Saskatchewan,1032799,,v14,statcan_17100009
+1987-07-01,48,AB,Alberta,2440877,,v15,statcan_17100009
+1987-07-01,59,BC,British Columbia,3048651,,v3,statcan_17100009
+1987-07-01,60,YT,Yukon,25706,,v4,statcan_17100009
+1987-07-01,61+62,NT+NU,Northwest Territories including Nunavut,55009,,v5,statcan_17100009
+1987-10-01,01,CAN,Canada,26542370,,v1,statcan_17100009
+1987-10-01,10,NL,Newfoundland and Labrador,574094,,v2,statcan_17100009
+1987-10-01,11,PE,Prince Edward Island,128758,,v8,statcan_17100009
+1987-10-01,12,NS,Nova Scotia,894585,,v9,statcan_17100009
+1987-10-01,13,NB,New Brunswick,728100,,v10,statcan_17100009
+1987-10-01,24,QC,Quebec,6796640,,v11,statcan_17100009
+1987-10-01,35,ON,Ontario,9702789,,v12,statcan_17100009
+1987-10-01,46,MB,Manitoba,1098195,,v13,statcan_17100009
+1987-10-01,47,SK,Saskatchewan,1031995,,v14,statcan_17100009
+1987-10-01,48,AB,Alberta,2437537,,v15,statcan_17100009
+1987-10-01,59,BC,British Columbia,3068995,,v3,statcan_17100009
+1987-10-01,60,YT,Yukon,25808,,v4,statcan_17100009
+1987-10-01,61+62,NT+NU,Northwest Territories including Nunavut,54874,,v5,statcan_17100009
+1988-01-01,01,CAN,Canada,26602328,,v1,statcan_17100009
+1988-01-01,10,NL,Newfoundland and Labrador,574543,,v2,statcan_17100009
+1988-01-01,11,PE,Prince Edward Island,129152,,v8,statcan_17100009
+1988-01-01,12,NS,Nova Scotia,894600,,v9,statcan_17100009
+1988-01-01,13,NB,New Brunswick,728401,,v10,statcan_17100009
+1988-01-01,24,QC,Quebec,6805203,,v11,statcan_17100009
+1988-01-01,35,ON,Ontario,9735171,,v12,statcan_17100009
+1988-01-01,46,MB,Manitoba,1099782,,v13,statcan_17100009
+1988-01-01,47,SK,Saskatchewan,1029527,,v14,statcan_17100009
+1988-01-01,48,AB,Alberta,2443396,,v15,statcan_17100009
+1988-01-01,59,BC,British Columbia,3081368,,v3,statcan_17100009
+1988-01-01,60,YT,Yukon,25902,,v4,statcan_17100009
+1988-01-01,61+62,NT+NU,Northwest Territories including Nunavut,55283,,v5,statcan_17100009
+1988-04-01,01,CAN,Canada,26679165,,v1,statcan_17100009
+1988-04-01,10,NL,Newfoundland and Labrador,574912,,v2,statcan_17100009
+1988-04-01,11,PE,Prince Edward Island,129242,,v8,statcan_17100009
+1988-04-01,12,NS,Nova Scotia,895638,,v9,statcan_17100009
+1988-04-01,13,NB,New Brunswick,729079,,v10,statcan_17100009
+1988-04-01,24,QC,Quebec,6818248,,v11,statcan_17100009
+1988-04-01,35,ON,Ontario,9774964,,v12,statcan_17100009
+1988-04-01,46,MB,Manitoba,1101404,,v13,statcan_17100009
+1988-04-01,47,SK,Saskatchewan,1028590,,v14,statcan_17100009
+1988-04-01,48,AB,Alberta,2450646,,v15,statcan_17100009
+1988-04-01,59,BC,British Columbia,3094274,,v3,statcan_17100009
+1988-04-01,60,YT,Yukon,26335,,v4,statcan_17100009
+1988-04-01,61+62,NT+NU,Northwest Territories including Nunavut,55833,,v5,statcan_17100009
+1988-07-01,01,CAN,Canada,26791747,,v1,statcan_17100009
+1988-07-01,10,NL,Newfoundland and Labrador,574982,,v2,statcan_17100009
+1988-07-01,11,PE,Prince Edward Island,129289,,v8,statcan_17100009
+1988-07-01,12,NS,Nova Scotia,897216,,v9,statcan_17100009
+1988-07-01,13,NB,New Brunswick,730349,,v10,statcan_17100009
+1988-07-01,24,QC,Quebec,6837077,,v11,statcan_17100009
+1988-07-01,35,ON,Ontario,9838620,,v12,statcan_17100009
+1988-07-01,46,MB,Manitoba,1102152,,v13,statcan_17100009
+1988-07-01,47,SK,Saskatchewan,1028225,,v14,statcan_17100009
+1988-07-01,48,AB,Alberta,2456614,,v15,statcan_17100009
+1988-07-01,59,BC,British Columbia,3114761,,v3,statcan_17100009
+1988-07-01,60,YT,Yukon,26653,,v4,statcan_17100009
+1988-07-01,61+62,NT+NU,Northwest Territories including Nunavut,55809,,v5,statcan_17100009
+1988-10-01,01,CAN,Canada,26932655,,v1,statcan_17100009
+1988-10-01,10,NL,Newfoundland and Labrador,574645,,v2,statcan_17100009
+1988-10-01,11,PE,Prince Edward Island,129327,,v8,statcan_17100009
+1988-10-01,12,NS,Nova Scotia,899462,,v9,statcan_17100009
+1988-10-01,13,NB,New Brunswick,731671,,v10,statcan_17100009
+1988-10-01,24,QC,Quebec,6864044,,v11,statcan_17100009
+1988-10-01,35,ON,Ontario,9917210,,v12,statcan_17100009
+1988-10-01,46,MB,Manitoba,1101074,,v13,statcan_17100009
+1988-10-01,47,SK,Saskatchewan,1025453,,v14,statcan_17100009
+1988-10-01,48,AB,Alberta,2465242,,v15,statcan_17100009
+1988-10-01,59,BC,British Columbia,3141854,,v3,statcan_17100009
+1988-10-01,60,YT,Yukon,26582,,v4,statcan_17100009
+1988-10-01,61+62,NT+NU,Northwest Territories including Nunavut,56091,,v5,statcan_17100009
+1989-01-01,01,CAN,Canada,27032356,,v1,statcan_17100009
+1989-01-01,10,NL,Newfoundland and Labrador,575626,,v2,statcan_17100009
+1989-01-01,11,PE,Prince Edward Island,129984,,v8,statcan_17100009
+1989-01-01,12,NS,Nova Scotia,900270,,v9,statcan_17100009
+1989-01-01,13,NB,New Brunswick,732462,,v10,statcan_17100009
+1989-01-01,24,QC,Quebec,6882602,,v11,statcan_17100009
+1989-01-01,35,ON,Ontario,9969308,,v12,statcan_17100009
+1989-01-01,46,MB,Manitoba,1101544,,v13,statcan_17100009
+1989-01-01,47,SK,Saskatchewan,1021497,,v14,statcan_17100009
+1989-01-01,48,AB,Alberta,2477533,,v15,statcan_17100009
+1989-01-01,59,BC,British Columbia,3158092,,v3,statcan_17100009
+1989-01-01,60,YT,Yukon,26898,,v4,statcan_17100009
+1989-01-01,61+62,NT+NU,Northwest Territories including Nunavut,56540,,v5,statcan_17100009
+1989-04-01,01,CAN,Canada,27147776,,v1,statcan_17100009
+1989-04-01,10,NL,Newfoundland and Labrador,576458,,v2,statcan_17100009
+1989-04-01,11,PE,Prince Edward Island,130192,,v8,statcan_17100009
+1989-04-01,12,NS,Nova Scotia,901341,,v9,statcan_17100009
+1989-04-01,13,NB,New Brunswick,733872,,v10,statcan_17100009
+1989-04-01,24,QC,Quebec,6903228,,v11,statcan_17100009
+1989-04-01,35,ON,Ontario,10031922,,v12,statcan_17100009
+1989-04-01,46,MB,Manitoba,1102669,,v13,statcan_17100009
+1989-04-01,47,SK,Saskatchewan,1020302,,v14,statcan_17100009
+1989-04-01,48,AB,Alberta,2489032,,v15,statcan_17100009
+1989-04-01,59,BC,British Columbia,3174623,,v3,statcan_17100009
+1989-04-01,60,YT,Yukon,27053,,v4,statcan_17100009
+1989-04-01,61+62,NT+NU,Northwest Territories including Nunavut,57084,,v5,statcan_17100009
+1989-07-01,01,CAN,Canada,27276781,,v1,statcan_17100009
+1989-07-01,10,NL,Newfoundland and Labrador,576551,,v2,statcan_17100009
+1989-07-01,11,PE,Prince Edward Island,130153,,v8,statcan_17100009
+1989-07-01,12,NS,Nova Scotia,903841,,v9,statcan_17100009
+1989-07-01,13,NB,New Brunswick,735129,,v10,statcan_17100009
+1989-07-01,24,QC,Quebec,6925128,,v11,statcan_17100009
+1989-07-01,35,ON,Ontario,10103305,,v12,statcan_17100009
+1989-07-01,46,MB,Manitoba,1103792,,v13,statcan_17100009
+1989-07-01,47,SK,Saskatchewan,1019439,,v14,statcan_17100009
+1989-07-01,48,AB,Alberta,2498325,,v15,statcan_17100009
+1989-07-01,59,BC,British Columbia,3196725,,v3,statcan_17100009
+1989-07-01,60,YT,Yukon,27167,,v4,statcan_17100009
+1989-07-01,61+62,NT+NU,Northwest Territories including Nunavut,57226,,v5,statcan_17100009
+1989-10-01,01,CAN,Canada,27402695,,v1,statcan_17100009
+1989-10-01,10,NL,Newfoundland and Labrador,575594,,v2,statcan_17100009
+1989-10-01,11,PE,Prince Edward Island,129900,,v8,statcan_17100009
+1989-10-01,12,NS,Nova Scotia,906644,,v9,statcan_17100009
+1989-10-01,13,NB,New Brunswick,736352,,v10,statcan_17100009
+1989-10-01,24,QC,Quebec,6946945,,v11,statcan_17100009
+1989-10-01,35,ON,Ontario,10167642,,v12,statcan_17100009
+1989-10-01,46,MB,Manitoba,1102522,,v13,statcan_17100009
+1989-10-01,47,SK,Saskatchewan,1016043,,v14,statcan_17100009
+1989-10-01,48,AB,Alberta,2507203,,v15,statcan_17100009
+1989-10-01,59,BC,British Columbia,3229220,,v3,statcan_17100009
+1989-10-01,60,YT,Yukon,27197,,v4,statcan_17100009
+1989-10-01,61+62,NT+NU,Northwest Territories including Nunavut,57433,,v5,statcan_17100009
+1990-01-01,01,CAN,Canada,27463550,,v1,statcan_17100009
+1990-01-01,10,NL,Newfoundland and Labrador,576278,,v2,statcan_17100009
+1990-01-01,11,PE,Prince Edward Island,130336,,v8,statcan_17100009
+1990-01-01,12,NS,Nova Scotia,907394,,v9,statcan_17100009
+1990-01-01,13,NB,New Brunswick,737307,,v10,statcan_17100009
+1990-01-01,24,QC,Quebec,6955119,,v11,statcan_17100009
+1990-01-01,35,ON,Ontario,10189985,,v12,statcan_17100009
+1990-01-01,46,MB,Manitoba,1102752,,v13,statcan_17100009
+1990-01-01,47,SK,Saskatchewan,1011429,,v14,statcan_17100009
+1990-01-01,48,AB,Alberta,2520056,,v15,statcan_17100009
+1990-01-01,59,BC,British Columbia,3247419,,v3,statcan_17100009
+1990-01-01,60,YT,Yukon,27605,,v4,statcan_17100009
+1990-01-01,61+62,NT+NU,Northwest Territories including Nunavut,57870,,v5,statcan_17100009
+1990-04-01,01,CAN,Canada,27567161,,v1,statcan_17100009
+1990-04-01,10,NL,Newfoundland and Labrador,577167,,v2,statcan_17100009
+1990-04-01,11,PE,Prince Edward Island,130468,,v8,statcan_17100009
+1990-04-01,12,NS,Nova Scotia,908444,,v9,statcan_17100009
+1990-04-01,13,NB,New Brunswick,738744,,v10,statcan_17100009
+1990-04-01,24,QC,Quebec,6973762,,v11,statcan_17100009
+1990-04-01,35,ON,Ontario,10238884,,v12,statcan_17100009
+1990-04-01,46,MB,Manitoba,1103935,,v13,statcan_17100009
+1990-04-01,47,SK,Saskatchewan,1009952,,v14,statcan_17100009
+1990-04-01,48,AB,Alberta,2532621,,v15,statcan_17100009
+1990-04-01,59,BC,British Columbia,3266888,,v3,statcan_17100009
+1990-04-01,60,YT,Yukon,27824,,v4,statcan_17100009
+1990-04-01,61+62,NT+NU,Northwest Territories including Nunavut,58472,,v5,statcan_17100009
+1990-07-01,01,CAN,Canada,27691138,,v1,statcan_17100009
+1990-07-01,10,NL,Newfoundland and Labrador,577368,,v2,statcan_17100009
+1990-07-01,11,PE,Prince Edward Island,130404,,v8,statcan_17100009
+1990-07-01,12,NS,Nova Scotia,910451,,v9,statcan_17100009
+1990-07-01,13,NB,New Brunswick,740156,,v10,statcan_17100009
+1990-07-01,24,QC,Quebec,6996986,,v11,statcan_17100009
+1990-07-01,35,ON,Ontario,10295832,,v12,statcan_17100009
+1990-07-01,46,MB,Manitoba,1105421,,v13,statcan_17100009
+1990-07-01,47,SK,Saskatchewan,1007727,,v14,statcan_17100009
+1990-07-01,48,AB,Alberta,2547788,,v15,statcan_17100009
+1990-07-01,59,BC,British Columbia,3292111,,v3,statcan_17100009
+1990-07-01,60,YT,Yukon,27957,,v4,statcan_17100009
+1990-07-01,61+62,NT+NU,Northwest Territories including Nunavut,58937,,v5,statcan_17100009
+1990-10-01,01,CAN,Canada,27807591,,v1,statcan_17100009
+1990-10-01,10,NL,Newfoundland and Labrador,577113,,v2,statcan_17100009
+1990-10-01,11,PE,Prince Edward Island,130367,,v8,statcan_17100009
+1990-10-01,12,NS,Nova Scotia,911749,,v9,statcan_17100009
+1990-10-01,13,NB,New Brunswick,741981,,v10,statcan_17100009
+1990-10-01,24,QC,Quebec,7019039,,v11,statcan_17100009
+1990-10-01,35,ON,Ontario,10344678,,v12,statcan_17100009
+1990-10-01,46,MB,Manitoba,1105098,,v13,statcan_17100009
+1990-10-01,47,SK,Saskatchewan,1004214,,v14,statcan_17100009
+1990-10-01,48,AB,Alberta,2563142,,v15,statcan_17100009
+1990-10-01,59,BC,British Columbia,3322896,,v3,statcan_17100009
+1990-10-01,60,YT,Yukon,28023,,v4,statcan_17100009
+1990-10-01,61+62,NT+NU,Northwest Territories including Nunavut,59291,,v5,statcan_17100009
+1991-01-01,01,CAN,Canada,27854861,,v1,statcan_17100009
+1991-01-01,10,NL,Newfoundland and Labrador,577377,,v2,statcan_17100009
+1991-01-01,11,PE,Prince Edward Island,130477,,v8,statcan_17100009
+1991-01-01,12,NS,Nova Scotia,912792,,v9,statcan_17100009
+1991-01-01,13,NB,New Brunswick,743210,,v10,statcan_17100009
+1991-01-01,24,QC,Quebec,7026241,,v11,statcan_17100009
+1991-01-01,35,ON,Ontario,10355101,,v12,statcan_17100009
+1991-01-01,46,MB,Manitoba,1106196,,v13,statcan_17100009
+1991-01-01,47,SK,Saskatchewan,1002651,,v14,statcan_17100009
+1991-01-01,48,AB,Alberta,2572947,,v15,statcan_17100009
+1991-01-01,59,BC,British Columbia,3339935,,v3,statcan_17100009
+1991-01-01,60,YT,Yukon,28223,,v4,statcan_17100009
+1991-01-01,61+62,NT+NU,Northwest Territories including Nunavut,59711,,v5,statcan_17100009
+1991-04-01,01,CAN,Canada,27928837,,v1,statcan_17100009
+1991-04-01,10,NL,Newfoundland and Labrador,578397,,v2,statcan_17100009
+1991-04-01,11,PE,Prince Edward Island,130453,,v8,statcan_17100009
+1991-04-01,12,NS,Nova Scotia,912889,,v9,statcan_17100009
+1991-04-01,13,NB,New Brunswick,744203,,v10,statcan_17100009
+1991-04-01,24,QC,Quebec,7044395,,v11,statcan_17100009
+1991-04-01,35,ON,Ontario,10385937,,v12,statcan_17100009
+1991-04-01,46,MB,Manitoba,1107757,,v13,statcan_17100009
+1991-04-01,47,SK,Saskatchewan,1002876,,v14,statcan_17100009
+1991-04-01,48,AB,Alberta,2580625,,v15,statcan_17100009
+1991-04-01,59,BC,British Columbia,3352585,,v3,statcan_17100009
+1991-04-01,60,YT,Yukon,28494,,v4,statcan_17100009
+1991-04-01,61+62,NT+NU,Northwest Territories including Nunavut,60226,,v5,statcan_17100009
+1991-07-01,01,CAN,Canada,28037420,,v1,statcan_17100009
+1991-07-01,10,NL,Newfoundland and Labrador,579644,,v2,statcan_17100009
+1991-07-01,11,PE,Prince Edward Island,130369,,v8,statcan_17100009
+1991-07-01,12,NS,Nova Scotia,914969,,v9,statcan_17100009
+1991-07-01,13,NB,New Brunswick,745567,,v10,statcan_17100009
+1991-07-01,24,QC,Quebec,7067396,,v11,statcan_17100009
+1991-07-01,35,ON,Ontario,10431316,,v12,statcan_17100009
+1991-07-01,46,MB,Manitoba,1109604,,v13,statcan_17100009
+1991-07-01,47,SK,Saskatchewan,1002713,,v14,statcan_17100009
+1991-07-01,48,AB,Alberta,2592306,,v15,statcan_17100009
+1991-07-01,59,BC,British Columbia,3373787,,v3,statcan_17100009
+1991-07-01,60,YT,Yukon,28871,,v4,statcan_17100009
+1991-07-01,61+62,NT+NU,Northwest Territories including Nunavut,60878,,v5,statcan_17100009
+1991-07-01,61,NT,Northwest Territories,38724,,v6,statcan_17100009
+1991-07-01,62,NU,Nunavut,22154,,v7,statcan_17100009
+1991-10-01,01,CAN,Canada,28127327,,v1,statcan_17100009
+1991-10-01,10,NL,Newfoundland and Labrador,579549,,v2,statcan_17100009
+1991-10-01,11,PE,Prince Edward Island,130360,,v8,statcan_17100009
+1991-10-01,12,NS,Nova Scotia,916896,,v9,statcan_17100009
+1991-10-01,13,NB,New Brunswick,745886,,v10,statcan_17100009
+1991-10-01,24,QC,Quebec,7080336,,v11,statcan_17100009
+1991-10-01,35,ON,Ontario,10465562,,v12,statcan_17100009
+1991-10-01,46,MB,Manitoba,1109400,,v13,statcan_17100009
+1991-10-01,47,SK,Saskatchewan,1000942,,v14,statcan_17100009
+1991-10-01,48,AB,Alberta,2604031,,v15,statcan_17100009
+1991-10-01,59,BC,British Columbia,3404049,,v3,statcan_17100009
+1991-10-01,60,YT,Yukon,29142,,v4,statcan_17100009
+1991-10-01,61,NT,Northwest Territories,38854,,v6,statcan_17100009
+1991-10-01,62,NU,Nunavut,22320,,v7,statcan_17100009
+1992-01-01,01,CAN,Canada,28181477,,v1,statcan_17100009
+1992-01-01,10,NL,Newfoundland and Labrador,579425,,v2,statcan_17100009
+1992-01-01,11,PE,Prince Edward Island,130604,,v8,statcan_17100009
+1992-01-01,12,NS,Nova Scotia,917302,,v9,statcan_17100009
+1992-01-01,13,NB,New Brunswick,746571,,v10,statcan_17100009
+1992-01-01,24,QC,Quebec,7082645,,v11,statcan_17100009
+1992-01-01,35,ON,Ontario,10488022,,v12,statcan_17100009
+1992-01-01,46,MB,Manitoba,1109978,,v13,statcan_17100009
+1992-01-01,47,SK,Saskatchewan,1001136,,v14,statcan_17100009
+1992-01-01,48,AB,Alberta,2611786,,v15,statcan_17100009
+1992-01-01,59,BC,British Columbia,3423217,,v3,statcan_17100009
+1992-01-01,60,YT,Yukon,29239,,v4,statcan_17100009
+1992-01-01,61,NT,Northwest Territories,39055,,v6,statcan_17100009
+1992-01-01,62,NU,Nunavut,22497,,v7,statcan_17100009
+1992-04-01,01,CAN,Canada,28269699,,v1,statcan_17100009
+1992-04-01,10,NL,Newfoundland and Labrador,579761,,v2,statcan_17100009
+1992-04-01,11,PE,Prince Edward Island,130812,,v8,statcan_17100009
+1992-04-01,12,NS,Nova Scotia,917555,,v9,statcan_17100009
+1992-04-01,13,NB,New Brunswick,747232,,v10,statcan_17100009
+1992-04-01,24,QC,Quebec,7096705,,v11,statcan_17100009
+1992-04-01,35,ON,Ontario,10528346,,v12,statcan_17100009
+1992-04-01,46,MB,Manitoba,1111050,,v13,statcan_17100009
+1992-04-01,47,SK,Saskatchewan,1002831,,v14,statcan_17100009
+1992-04-01,48,AB,Alberta,2620771,,v15,statcan_17100009
+1992-04-01,59,BC,British Columbia,3443237,,v3,statcan_17100009
+1992-04-01,60,YT,Yukon,29510,,v4,statcan_17100009
+1992-04-01,61,NT,Northwest Territories,39230,,v6,statcan_17100009
+1992-04-01,62,NU,Nunavut,22659,,v7,statcan_17100009
+1992-07-01,01,CAN,Canada,28371264,,v1,statcan_17100009
+1992-07-01,10,NL,Newfoundland and Labrador,580109,,v2,statcan_17100009
+1992-07-01,11,PE,Prince Edward Island,130827,,v8,statcan_17100009
+1992-07-01,12,NS,Nova Scotia,919451,,v9,statcan_17100009
+1992-07-01,13,NB,New Brunswick,748121,,v10,statcan_17100009
+1992-07-01,24,QC,Quebec,7110010,,v11,statcan_17100009
+1992-07-01,35,ON,Ontario,10572205,,v12,statcan_17100009
+1992-07-01,46,MB,Manitoba,1112689,,v13,statcan_17100009
+1992-07-01,47,SK,Saskatchewan,1003995,,v14,statcan_17100009
+1992-07-01,48,AB,Alberta,2632672,,v15,statcan_17100009
+1992-07-01,59,BC,British Columbia,3468802,,v3,statcan_17100009
+1992-07-01,60,YT,Yukon,30084,,v4,statcan_17100009
+1992-07-01,61,NT,Northwest Territories,39416,,v6,statcan_17100009
+1992-07-01,62,NU,Nunavut,22883,,v7,statcan_17100009
+1992-10-01,01,CAN,Canada,28474177,,v1,statcan_17100009
+1992-10-01,10,NL,Newfoundland and Labrador,579624,,v2,statcan_17100009
+1992-10-01,11,PE,Prince Edward Island,131201,,v8,statcan_17100009
+1992-10-01,12,NS,Nova Scotia,921619,,v9,statcan_17100009
+1992-10-01,13,NB,New Brunswick,747746,,v10,statcan_17100009
+1992-10-01,24,QC,Quebec,7129062,,v11,statcan_17100009
+1992-10-01,35,ON,Ontario,10610665,,v12,statcan_17100009
+1992-10-01,46,MB,Manitoba,1113209,,v13,statcan_17100009
+1992-10-01,47,SK,Saskatchewan,1002960,,v14,statcan_17100009
+1992-10-01,48,AB,Alberta,2643421,,v15,statcan_17100009
+1992-10-01,59,BC,British Columbia,3502209,,v3,statcan_17100009
+1992-10-01,60,YT,Yukon,30034,,v4,statcan_17100009
+1992-10-01,61,NT,Northwest Territories,39422,,v6,statcan_17100009
+1992-10-01,62,NU,Nunavut,23005,,v7,statcan_17100009
+1993-01-01,01,CAN,Canada,28533602,,v1,statcan_17100009
+1993-01-01,10,NL,Newfoundland and Labrador,580819,,v2,statcan_17100009
+1993-01-01,11,PE,Prince Edward Island,131564,,v8,statcan_17100009
+1993-01-01,12,NS,Nova Scotia,922128,,v9,statcan_17100009
+1993-01-01,13,NB,New Brunswick,747892,,v10,statcan_17100009
+1993-01-01,24,QC,Quebec,7137514,,v11,statcan_17100009
+1993-01-01,35,ON,Ontario,10629994,,v12,statcan_17100009
+1993-01-01,46,MB,Manitoba,1114180,,v13,statcan_17100009
+1993-01-01,47,SK,Saskatchewan,1003443,,v14,statcan_17100009
+1993-01-01,48,AB,Alberta,2650886,,v15,statcan_17100009
+1993-01-01,59,BC,British Columbia,3522509,,v3,statcan_17100009
+1993-01-01,60,YT,Yukon,29964,,v4,statcan_17100009
+1993-01-01,61,NT,Northwest Territories,39538,,v6,statcan_17100009
+1993-01-01,62,NU,Nunavut,23171,,v7,statcan_17100009
+1993-04-01,01,CAN,Canada,28600864,,v1,statcan_17100009
+1993-04-01,10,NL,Newfoundland and Labrador,580369,,v2,statcan_17100009
+1993-04-01,11,PE,Prince Edward Island,131833,,v8,statcan_17100009
+1993-04-01,12,NS,Nova Scotia,922469,,v9,statcan_17100009
+1993-04-01,13,NB,New Brunswick,748320,,v10,statcan_17100009
+1993-04-01,24,QC,Quebec,7147047,,v11,statcan_17100009
+1993-04-01,35,ON,Ontario,10656924,,v12,statcan_17100009
+1993-04-01,46,MB,Manitoba,1115554,,v13,statcan_17100009
+1993-04-01,47,SK,Saskatchewan,1005037,,v14,statcan_17100009
+1993-04-01,48,AB,Alberta,2658293,,v15,statcan_17100009
+1993-04-01,59,BC,British Columbia,3541936,,v3,statcan_17100009
+1993-04-01,60,YT,Yukon,30112,,v4,statcan_17100009
+1993-04-01,61,NT,Northwest Territories,39649,,v6,statcan_17100009
+1993-04-01,62,NU,Nunavut,23321,,v7,statcan_17100009
+1993-07-01,01,CAN,Canada,28684764,,v1,statcan_17100009
+1993-07-01,10,NL,Newfoundland and Labrador,579977,,v2,statcan_17100009
+1993-07-01,11,PE,Prince Edward Island,132177,,v8,statcan_17100009
+1993-07-01,12,NS,Nova Scotia,923925,,v9,statcan_17100009
+1993-07-01,13,NB,New Brunswick,748812,,v10,statcan_17100009
+1993-07-01,24,QC,Quebec,7156537,,v11,statcan_17100009
+1993-07-01,35,ON,Ontario,10690038,,v12,statcan_17100009
+1993-07-01,46,MB,Manitoba,1117618,,v13,statcan_17100009
+1993-07-01,47,SK,Saskatchewan,1006900,,v14,statcan_17100009
+1993-07-01,48,AB,Alberta,2667292,,v15,statcan_17100009
+1993-07-01,59,BC,British Columbia,3567772,,v3,statcan_17100009
+1993-07-01,60,YT,Yukon,30337,,v4,statcan_17100009
+1993-07-01,61,NT,Northwest Territories,39820,,v6,statcan_17100009
+1993-07-01,62,NU,Nunavut,23559,,v7,statcan_17100009
+1993-10-01,01,CAN,Canada,28786619,,v1,statcan_17100009
+1993-10-01,10,NL,Newfoundland and Labrador,578194,,v2,statcan_17100009
+1993-10-01,11,PE,Prince Edward Island,132467,,v8,statcan_17100009
+1993-10-01,12,NS,Nova Scotia,925851,,v9,statcan_17100009
+1993-10-01,13,NB,New Brunswick,749454,,v10,statcan_17100009
+1993-10-01,24,QC,Quebec,7172016,,v11,statcan_17100009
+1993-10-01,35,ON,Ontario,10728737,,v12,statcan_17100009
+1993-10-01,46,MB,Manitoba,1118603,,v13,statcan_17100009
+1993-10-01,47,SK,Saskatchewan,1007016,,v14,statcan_17100009
+1993-10-01,48,AB,Alberta,2678623,,v15,statcan_17100009
+1993-10-01,59,BC,British Columbia,3601746,,v3,statcan_17100009
+1993-10-01,60,YT,Yukon,30016,,v4,statcan_17100009
+1993-10-01,61,NT,Northwest Territories,40095,,v6,statcan_17100009
+1993-10-01,62,NU,Nunavut,23801,,v7,statcan_17100009
+1994-01-01,01,CAN,Canada,28835772,,v1,statcan_17100009
+1994-01-01,10,NL,Newfoundland and Labrador,577128,,v2,statcan_17100009
+1994-01-01,11,PE,Prince Edward Island,132752,,v8,statcan_17100009
+1994-01-01,12,NS,Nova Scotia,925852,,v9,statcan_17100009
+1994-01-01,13,NB,New Brunswick,749531,,v10,statcan_17100009
+1994-01-01,24,QC,Quebec,7177923,,v11,statcan_17100009
+1994-01-01,35,ON,Ontario,10744762,,v12,statcan_17100009
+1994-01-01,46,MB,Manitoba,1119284,,v13,statcan_17100009
+1994-01-01,47,SK,Saskatchewan,1007554,,v14,statcan_17100009
+1994-01-01,48,AB,Alberta,2683346,,v15,statcan_17100009
+1994-01-01,59,BC,British Columbia,3623717,,v3,statcan_17100009
+1994-01-01,60,YT,Yukon,29670,,v4,statcan_17100009
+1994-01-01,61,NT,Northwest Territories,40273,,v6,statcan_17100009
+1994-01-01,62,NU,Nunavut,23980,,v7,statcan_17100009
+1994-04-01,01,CAN,Canada,28907448,,v1,statcan_17100009
+1994-04-01,10,NL,Newfoundland and Labrador,575670,,v2,statcan_17100009
+1994-04-01,11,PE,Prince Edward Island,133030,,v8,statcan_17100009
+1994-04-01,12,NS,Nova Scotia,926109,,v9,statcan_17100009
+1994-04-01,13,NB,New Brunswick,749473,,v10,statcan_17100009
+1994-04-01,24,QC,Quebec,7184599,,v11,statcan_17100009
+1994-04-01,35,ON,Ontario,10776819,,v12,statcan_17100009
+1994-04-01,46,MB,Manitoba,1120863,,v13,statcan_17100009
+1994-04-01,47,SK,Saskatchewan,1008540,,v14,statcan_17100009
+1994-04-01,48,AB,Alberta,2691443,,v15,statcan_17100009
+1994-04-01,59,BC,British Columbia,3646632,,v3,statcan_17100009
+1994-04-01,60,YT,Yukon,29682,,v4,statcan_17100009
+1994-04-01,61,NT,Northwest Territories,40383,,v6,statcan_17100009
+1994-04-01,62,NU,Nunavut,24205,,v7,statcan_17100009
+1994-07-01,01,CAN,Canada,29000663,,v1,statcan_17100009
+1994-07-01,10,NL,Newfoundland and Labrador,574466,,v2,statcan_17100009
+1994-07-01,11,PE,Prince Edward Island,133437,,v8,statcan_17100009
+1994-07-01,12,NS,Nova Scotia,926871,,v9,statcan_17100009
+1994-07-01,13,NB,New Brunswick,750185,,v10,statcan_17100009
+1994-07-01,24,QC,Quebec,7192403,,v11,statcan_17100009
+1994-07-01,35,ON,Ontario,10819146,,v12,statcan_17100009
+1994-07-01,46,MB,Manitoba,1123230,,v13,statcan_17100009
+1994-07-01,47,SK,Saskatchewan,1009575,,v14,statcan_17100009
+1994-07-01,48,AB,Alberta,2700606,,v15,statcan_17100009
+1994-07-01,59,BC,British Columbia,3676075,,v3,statcan_17100009
+1994-07-01,60,YT,Yukon,29684,,v4,statcan_17100009
+1994-07-01,61,NT,Northwest Territories,40578,,v6,statcan_17100009
+1994-07-01,62,NU,Nunavut,24407,,v7,statcan_17100009
+1994-10-01,01,CAN,Canada,29096372,,v1,statcan_17100009
+1994-10-01,10,NL,Newfoundland and Labrador,572068,,v2,statcan_17100009
+1994-10-01,11,PE,Prince Edward Island,133800,,v8,statcan_17100009
+1994-10-01,12,NS,Nova Scotia,927778,,v9,statcan_17100009
+1994-10-01,13,NB,New Brunswick,750670,,v10,statcan_17100009
+1994-10-01,24,QC,Quebec,7201106,,v11,statcan_17100009
+1994-10-01,35,ON,Ontario,10860406,,v12,statcan_17100009
+1994-10-01,46,MB,Manitoba,1124263,,v13,statcan_17100009
+1994-10-01,47,SK,Saskatchewan,1010784,,v14,statcan_17100009
+1994-10-01,48,AB,Alberta,2709011,,v15,statcan_17100009
+1994-10-01,59,BC,British Columbia,3711468,,v3,statcan_17100009
+1994-10-01,60,YT,Yukon,29606,,v4,statcan_17100009
+1994-10-01,61,NT,Northwest Territories,40875,,v6,statcan_17100009
+1994-10-01,62,NU,Nunavut,24537,,v7,statcan_17100009
+1995-01-01,01,CAN,Canada,29141902,,v1,statcan_17100009
+1995-01-01,10,NL,Newfoundland and Labrador,570563,,v2,statcan_17100009
+1995-01-01,11,PE,Prince Edward Island,134060,,v8,statcan_17100009
+1995-01-01,12,NS,Nova Scotia,927395,,v9,statcan_17100009
+1995-01-01,13,NB,New Brunswick,750819,,v10,statcan_17100009
+1995-01-01,24,QC,Quebec,7205074,,v11,statcan_17100009
+1995-01-01,35,ON,Ontario,10875308,,v12,statcan_17100009
+1995-01-01,46,MB,Manitoba,1124947,,v13,statcan_17100009
+1995-01-01,47,SK,Saskatchewan,1011784,,v14,statcan_17100009
+1995-01-01,48,AB,Alberta,2715701,,v15,statcan_17100009
+1995-01-01,59,BC,British Columbia,3730564,,v3,statcan_17100009
+1995-01-01,60,YT,Yukon,29882,,v4,statcan_17100009
+1995-01-01,61,NT,Northwest Territories,41114,,v6,statcan_17100009
+1995-01-01,62,NU,Nunavut,24691,,v7,statcan_17100009
+1995-04-01,01,CAN,Canada,29211541,,v1,statcan_17100009
+1995-04-01,10,NL,Newfoundland and Labrador,569068,,v2,statcan_17100009
+1995-04-01,11,PE,Prince Edward Island,134175,,v8,statcan_17100009
+1995-04-01,12,NS,Nova Scotia,927641,,v9,statcan_17100009
+1995-04-01,13,NB,New Brunswick,750692,,v10,statcan_17100009
+1995-04-01,24,QC,Quebec,7210305,,v11,statcan_17100009
+1995-04-01,35,ON,Ontario,10906895,,v12,statcan_17100009
+1995-04-01,46,MB,Manitoba,1127234,,v13,statcan_17100009
+1995-04-01,47,SK,Saskatchewan,1012795,,v14,statcan_17100009
+1995-04-01,48,AB,Alberta,2724946,,v15,statcan_17100009
+1995-04-01,59,BC,British Columbia,3751377,,v3,statcan_17100009
+1995-04-01,60,YT,Yukon,30143,,v4,statcan_17100009
+1995-04-01,61,NT,Northwest Territories,41407,,v6,statcan_17100009
+1995-04-01,62,NU,Nunavut,24863,,v7,statcan_17100009
+1995-07-01,01,CAN,Canada,29302311,,v1,statcan_17100009
+1995-07-01,10,NL,Newfoundland and Labrador,567397,,v2,statcan_17100009
+1995-07-01,11,PE,Prince Edward Island,134415,,v8,statcan_17100009
+1995-07-01,12,NS,Nova Scotia,928120,,v9,statcan_17100009
+1995-07-01,13,NB,New Brunswick,750943,,v10,statcan_17100009
+1995-07-01,24,QC,Quebec,7219219,,v11,statcan_17100009
+1995-07-01,35,ON,Ontario,10950119,,v12,statcan_17100009
+1995-07-01,46,MB,Manitoba,1129150,,v13,statcan_17100009
+1995-07-01,47,SK,Saskatchewan,1014187,,v14,statcan_17100009
+1995-07-01,48,AB,Alberta,2734519,,v15,statcan_17100009
+1995-07-01,59,BC,British Columbia,3777390,,v3,statcan_17100009
+1995-07-01,60,YT,Yukon,30442,,v4,statcan_17100009
+1995-07-01,61,NT,Northwest Territories,41432,,v6,statcan_17100009
+1995-07-01,62,NU,Nunavut,24978,,v7,statcan_17100009
+1995-10-01,01,CAN,Canada,29396274,,v1,statcan_17100009
+1995-10-01,10,NL,Newfoundland and Labrador,565008,,v2,statcan_17100009
+1995-10-01,11,PE,Prince Edward Island,134971,,v8,statcan_17100009
+1995-10-01,12,NS,Nova Scotia,930028,,v9,statcan_17100009
+1995-10-01,13,NB,New Brunswick,751174,,v10,statcan_17100009
+1995-10-01,24,QC,Quebec,7228600,,v11,statcan_17100009
+1995-10-01,35,ON,Ontario,10993416,,v12,statcan_17100009
+1995-10-01,46,MB,Manitoba,1129547,,v13,statcan_17100009
+1995-10-01,47,SK,Saskatchewan,1015349,,v14,statcan_17100009
+1995-10-01,48,AB,Alberta,2745255,,v15,statcan_17100009
+1995-10-01,59,BC,British Columbia,3805461,,v3,statcan_17100009
+1995-10-01,60,YT,Yukon,30875,,v4,statcan_17100009
+1995-10-01,61,NT,Northwest Territories,41470,,v6,statcan_17100009
+1995-10-01,62,NU,Nunavut,25120,,v7,statcan_17100009
+1996-01-01,01,CAN,Canada,29446857,,v1,statcan_17100009
+1996-01-01,10,NL,Newfoundland and Labrador,563679,,v2,statcan_17100009
+1996-01-01,11,PE,Prince Edward Island,135119,,v8,statcan_17100009
+1996-01-01,12,NS,Nova Scotia,929782,,v9,statcan_17100009
+1996-01-01,13,NB,New Brunswick,751581,,v10,statcan_17100009
+1996-01-01,24,QC,Quebec,7232952,,v11,statcan_17100009
+1996-01-01,35,ON,Ontario,11009307,,v12,statcan_17100009
+1996-01-01,46,MB,Manitoba,1130288,,v13,statcan_17100009
+1996-01-01,47,SK,Saskatchewan,1016198,,v14,statcan_17100009
+1996-01-01,48,AB,Alberta,2753463,,v15,statcan_17100009
+1996-01-01,59,BC,British Columbia,3826739,,v3,statcan_17100009
+1996-01-01,60,YT,Yukon,30963,,v4,statcan_17100009
+1996-01-01,61,NT,Northwest Territories,41495,,v6,statcan_17100009
+1996-01-01,62,NU,Nunavut,25291,,v7,statcan_17100009
+1996-04-01,01,CAN,Canada,29514217,,v1,statcan_17100009
+1996-04-01,10,NL,Newfoundland and Labrador,561646,,v2,statcan_17100009
+1996-04-01,11,PE,Prince Edward Island,135311,,v8,statcan_17100009
+1996-04-01,12,NS,Nova Scotia,929921,,v9,statcan_17100009
+1996-04-01,13,NB,New Brunswick,751872,,v10,statcan_17100009
+1996-04-01,24,QC,Quebec,7237307,,v11,statcan_17100009
+1996-04-01,35,ON,Ontario,11037392,,v12,statcan_17100009
+1996-04-01,46,MB,Manitoba,1132025,,v13,statcan_17100009
+1996-04-01,47,SK,Saskatchewan,1017872,,v14,statcan_17100009
+1996-04-01,48,AB,Alberta,2762903,,v15,statcan_17100009
+1996-04-01,59,BC,British Columbia,3849847,,v3,statcan_17100009
+1996-04-01,60,YT,Yukon,31142,,v4,statcan_17100009
+1996-04-01,61,NT,Northwest Territories,41516,,v6,statcan_17100009
+1996-04-01,62,NU,Nunavut,25463,,v7,statcan_17100009
+1996-07-01,01,CAN,Canada,29610218,,v1,statcan_17100009
+1996-07-01,10,NL,Newfoundland and Labrador,559698,,v2,statcan_17100009
+1996-07-01,11,PE,Prince Edward Island,135737,,v8,statcan_17100009
+1996-07-01,12,NS,Nova Scotia,931327,,v9,statcan_17100009
+1996-07-01,13,NB,New Brunswick,752268,,v10,statcan_17100009
+1996-07-01,24,QC,Quebec,7246897,,v11,statcan_17100009
+1996-07-01,35,ON,Ontario,11082903,,v12,statcan_17100009
+1996-07-01,46,MB,Manitoba,1134196,,v13,statcan_17100009
+1996-07-01,47,SK,Saskatchewan,1018945,,v14,statcan_17100009
+1996-07-01,48,AB,Alberta,2775133,,v15,statcan_17100009
+1996-07-01,59,BC,British Columbia,3874317,,v3,statcan_17100009
+1996-07-01,60,YT,Yukon,31387,,v4,statcan_17100009
+1996-07-01,61,NT,Northwest Territories,41741,,v6,statcan_17100009
+1996-07-01,62,NU,Nunavut,25669,,v7,statcan_17100009
+1996-10-01,01,CAN,Canada,29708206,,v1,statcan_17100009
+1996-10-01,10,NL,Newfoundland and Labrador,557281,,v2,statcan_17100009
+1996-10-01,11,PE,Prince Edward Island,136004,,v8,statcan_17100009
+1996-10-01,12,NS,Nova Scotia,932276,,v9,statcan_17100009
+1996-10-01,13,NB,New Brunswick,752526,,v10,statcan_17100009
+1996-10-01,24,QC,Quebec,7257616,,v11,statcan_17100009
+1996-10-01,35,ON,Ontario,11130574,,v12,statcan_17100009
+1996-10-01,46,MB,Manitoba,1134619,,v13,statcan_17100009
+1996-10-01,47,SK,Saskatchewan,1019408,,v14,statcan_17100009
+1996-10-01,48,AB,Alberta,2789691,,v15,statcan_17100009
+1996-10-01,59,BC,British Columbia,3899256,,v3,statcan_17100009
+1996-10-01,60,YT,Yukon,31596,,v4,statcan_17100009
+1996-10-01,61,NT,Northwest Territories,41611,,v6,statcan_17100009
+1996-10-01,62,NU,Nunavut,25748,,v7,statcan_17100009
+1997-01-01,01,CAN,Canada,29751536,,v1,statcan_17100009
+1997-01-01,10,NL,Newfoundland and Labrador,555432,,v2,statcan_17100009
+1997-01-01,11,PE,Prince Edward Island,135935,,v8,statcan_17100009
+1997-01-01,12,NS,Nova Scotia,932349,,v9,statcan_17100009
+1997-01-01,13,NB,New Brunswick,752334,,v10,statcan_17100009
+1997-01-01,24,QC,Quebec,7262945,,v11,statcan_17100009
+1997-01-01,35,ON,Ontario,11146270,,v12,statcan_17100009
+1997-01-01,46,MB,Manitoba,1134997,,v13,statcan_17100009
+1997-01-01,47,SK,Saskatchewan,1018326,,v14,statcan_17100009
+1997-01-01,48,AB,Alberta,2799561,,v15,statcan_17100009
+1997-01-01,59,BC,British Columbia,3914490,,v3,statcan_17100009
+1997-01-01,60,YT,Yukon,31633,,v4,statcan_17100009
+1997-01-01,61,NT,Northwest Territories,41528,,v6,statcan_17100009
+1997-01-01,62,NU,Nunavut,25736,,v7,statcan_17100009
+1997-04-01,01,CAN,Canada,29818012,,v1,statcan_17100009
+1997-04-01,10,NL,Newfoundland and Labrador,553115,,v2,statcan_17100009
+1997-04-01,11,PE,Prince Edward Island,135931,,v8,statcan_17100009
+1997-04-01,12,NS,Nova Scotia,931832,,v9,statcan_17100009
+1997-04-01,13,NB,New Brunswick,752447,,v10,statcan_17100009
+1997-04-01,24,QC,Quebec,7267820,,v11,statcan_17100009
+1997-04-01,35,ON,Ontario,11179959,,v12,statcan_17100009
+1997-04-01,46,MB,Manitoba,1135846,,v13,statcan_17100009
+1997-04-01,47,SK,Saskatchewan,1017683,,v14,statcan_17100009
+1997-04-01,48,AB,Alberta,2813157,,v15,statcan_17100009
+1997-04-01,59,BC,British Columbia,3931056,,v3,statcan_17100009
+1997-04-01,60,YT,Yukon,31659,,v4,statcan_17100009
+1997-04-01,61,NT,Northwest Territories,41668,,v6,statcan_17100009
+1997-04-01,62,NU,Nunavut,25839,,v7,statcan_17100009
+1997-07-01,01,CAN,Canada,29905948,,v1,statcan_17100009
+1997-07-01,10,NL,Newfoundland and Labrador,550911,,v2,statcan_17100009
+1997-07-01,11,PE,Prince Edward Island,136095,,v8,statcan_17100009
+1997-07-01,12,NS,Nova Scotia,932402,,v9,statcan_17100009
+1997-07-01,13,NB,New Brunswick,752511,,v10,statcan_17100009
+1997-07-01,24,QC,Quebec,7274611,,v11,statcan_17100009
+1997-07-01,35,ON,Ontario,11227651,,v12,statcan_17100009
+1997-07-01,46,MB,Manitoba,1136128,,v13,statcan_17100009
+1997-07-01,47,SK,Saskatchewan,1017902,,v14,statcan_17100009
+1997-07-01,48,AB,Alberta,2829848,,v15,statcan_17100009
+1997-07-01,59,BC,British Columbia,3948583,,v3,statcan_17100009
+1997-07-01,60,YT,Yukon,31797,,v4,statcan_17100009
+1997-07-01,61,NT,Northwest Territories,41625,,v6,statcan_17100009
+1997-07-01,62,NU,Nunavut,25884,,v7,statcan_17100009
+1997-10-01,01,CAN,Canada,29994790,,v1,statcan_17100009
+1997-10-01,10,NL,Newfoundland and Labrador,547639,,v2,statcan_17100009
+1997-10-01,11,PE,Prince Edward Island,136165,,v8,statcan_17100009
+1997-10-01,12,NS,Nova Scotia,932735,,v9,statcan_17100009
+1997-10-01,13,NB,New Brunswick,752248,,v10,statcan_17100009
+1997-10-01,24,QC,Quebec,7282871,,v11,statcan_17100009
+1997-10-01,35,ON,Ontario,11278893,,v12,statcan_17100009
+1997-10-01,46,MB,Manitoba,1135649,,v13,statcan_17100009
+1997-10-01,47,SK,Saskatchewan,1017426,,v14,statcan_17100009
+1997-10-01,48,AB,Alberta,2847526,,v15,statcan_17100009
+1997-10-01,59,BC,British Columbia,3964677,,v3,statcan_17100009
+1997-10-01,60,YT,Yukon,31556,,v4,statcan_17100009
+1997-10-01,61,NT,Northwest Territories,41411,,v6,statcan_17100009
+1997-10-01,62,NU,Nunavut,25994,,v7,statcan_17100009
+1998-01-01,01,CAN,Canada,30028506,,v1,statcan_17100009
+1998-01-01,10,NL,Newfoundland and Labrador,545769,,v2,statcan_17100009
+1998-01-01,11,PE,Prince Edward Island,135938,,v8,statcan_17100009
+1998-01-01,12,NS,Nova Scotia,932549,,v9,statcan_17100009
+1998-01-01,13,NB,New Brunswick,751969,,v10,statcan_17100009
+1998-01-01,24,QC,Quebec,7286008,,v11,statcan_17100009
+1998-01-01,35,ON,Ontario,11292059,,v12,statcan_17100009
+1998-01-01,46,MB,Manitoba,1135770,,v13,statcan_17100009
+1998-01-01,47,SK,Saskatchewan,1017504,,v14,statcan_17100009
+1998-01-01,48,AB,Alberta,2859305,,v15,statcan_17100009
+1998-01-01,59,BC,British Columbia,3972821,,v3,statcan_17100009
+1998-01-01,60,YT,Yukon,31510,,v4,statcan_17100009
+1998-01-01,61,NT,Northwest Territories,41222,,v6,statcan_17100009
+1998-01-01,62,NU,Nunavut,26082,,v7,statcan_17100009
+1998-04-01,01,CAN,Canada,30080180,,v1,statcan_17100009
+1998-04-01,10,NL,Newfoundland and Labrador,542479,,v2,statcan_17100009
+1998-04-01,11,PE,Prince Edward Island,135635,,v8,statcan_17100009
+1998-04-01,12,NS,Nova Scotia,932033,,v9,statcan_17100009
+1998-04-01,13,NB,New Brunswick,751080,,v10,statcan_17100009
+1998-04-01,24,QC,Quebec,7290497,,v11,statcan_17100009
+1998-04-01,35,ON,Ontario,11322038,,v12,statcan_17100009
+1998-04-01,46,MB,Manitoba,1136177,,v13,statcan_17100009
+1998-04-01,47,SK,Saskatchewan,1017105,,v14,statcan_17100009
+1998-04-01,48,AB,Alberta,2876753,,v15,statcan_17100009
+1998-04-01,59,BC,British Columbia,3977912,,v3,statcan_17100009
+1998-04-01,60,YT,Yukon,31320,,v4,statcan_17100009
+1998-04-01,61,NT,Northwest Territories,40968,,v6,statcan_17100009
+1998-04-01,62,NU,Nunavut,26183,,v7,statcan_17100009
+1998-07-01,01,CAN,Canada,30155173,,v1,statcan_17100009
+1998-07-01,10,NL,Newfoundland and Labrador,539843,,v2,statcan_17100009
+1998-07-01,11,PE,Prince Edward Island,135804,,v8,statcan_17100009
+1998-07-01,12,NS,Nova Scotia,931836,,v9,statcan_17100009
+1998-07-01,13,NB,New Brunswick,750530,,v10,statcan_17100009
+1998-07-01,24,QC,Quebec,7295935,,v11,statcan_17100009
+1998-07-01,35,ON,Ontario,11365901,,v12,statcan_17100009
+1998-07-01,46,MB,Manitoba,1137489,,v13,statcan_17100009
+1998-07-01,47,SK,Saskatchewan,1017332,,v14,statcan_17100009
+1998-07-01,48,AB,Alberta,2899066,,v15,statcan_17100009
+1998-07-01,59,BC,British Columbia,3983113,,v3,statcan_17100009
+1998-07-01,60,YT,Yukon,31149,,v4,statcan_17100009
+1998-07-01,61,NT,Northwest Territories,40802,,v6,statcan_17100009
+1998-07-01,62,NU,Nunavut,26373,,v7,statcan_17100009
+1998-10-01,01,CAN,Canada,30231639,,v1,statcan_17100009
+1998-10-01,10,NL,Newfoundland and Labrador,537908,,v2,statcan_17100009
+1998-10-01,11,PE,Prince Edward Island,135908,,v8,statcan_17100009
+1998-10-01,12,NS,Nova Scotia,932740,,v9,statcan_17100009
+1998-10-01,13,NB,New Brunswick,750708,,v10,statcan_17100009
+1998-10-01,24,QC,Quebec,7305302,,v11,statcan_17100009
+1998-10-01,35,ON,Ontario,11408804,,v12,statcan_17100009
+1998-10-01,46,MB,Manitoba,1138328,,v13,statcan_17100009
+1998-10-01,47,SK,Saskatchewan,1017748,,v14,statcan_17100009
+1998-10-01,48,AB,Alberta,2915781,,v15,statcan_17100009
+1998-10-01,59,BC,British Columbia,3990451,,v3,statcan_17100009
+1998-10-01,60,YT,Yukon,30877,,v4,statcan_17100009
+1998-10-01,61,NT,Northwest Territories,40635,,v6,statcan_17100009
+1998-10-01,62,NU,Nunavut,26449,,v7,statcan_17100009
+1999-01-01,01,CAN,Canada,30260117,,v1,statcan_17100009
+1999-01-01,10,NL,Newfoundland and Labrador,536515,,v2,statcan_17100009
+1999-01-01,11,PE,Prince Edward Island,135994,,v8,statcan_17100009
+1999-01-01,12,NS,Nova Scotia,932145,,v9,statcan_17100009
+1999-01-01,13,NB,New Brunswick,750127,,v10,statcan_17100009
+1999-01-01,24,QC,Quebec,7310238,,v11,statcan_17100009
+1999-01-01,35,ON,Ontario,11419589,,v12,statcan_17100009
+1999-01-01,46,MB,Manitoba,1138946,,v13,statcan_17100009
+1999-01-01,47,SK,Saskatchewan,1016883,,v14,statcan_17100009
+1999-01-01,48,AB,Alberta,2926079,,v15,statcan_17100009
+1999-01-01,59,BC,British Columbia,3995643,,v3,statcan_17100009
+1999-01-01,60,YT,Yukon,30748,,v4,statcan_17100009
+1999-01-01,61,NT,Northwest Territories,40635,,v6,statcan_17100009
+1999-01-01,62,NU,Nunavut,26575,,v7,statcan_17100009
+1999-04-01,01,CAN,Canada,30314696,,v1,statcan_17100009
+1999-04-01,10,NL,Newfoundland and Labrador,534498,,v2,statcan_17100009
+1999-04-01,11,PE,Prince Edward Island,136025,,v8,statcan_17100009
+1999-04-01,12,NS,Nova Scotia,932116,,v9,statcan_17100009
+1999-04-01,13,NB,New Brunswick,750075,,v10,statcan_17100009
+1999-04-01,24,QC,Quebec,7315053,,v11,statcan_17100009
+1999-04-01,35,ON,Ontario,11452857,,v12,statcan_17100009
+1999-04-01,46,MB,Manitoba,1140502,,v13,statcan_17100009
+1999-04-01,47,SK,Saskatchewan,1015716,,v14,statcan_17100009
+1999-04-01,48,AB,Alberta,2937393,,v15,statcan_17100009
+1999-04-01,59,BC,British Columbia,4002433,,v3,statcan_17100009
+1999-04-01,60,YT,Yukon,30602,,v4,statcan_17100009
+1999-04-01,61,NT,Northwest Territories,40705,,v6,statcan_17100009
+1999-04-01,62,NU,Nunavut,26721,,v7,statcan_17100009
+1999-07-01,01,CAN,Canada,30401286,,v1,statcan_17100009
+1999-07-01,10,NL,Newfoundland and Labrador,533329,,v2,statcan_17100009
+1999-07-01,11,PE,Prince Edward Island,136281,,v8,statcan_17100009
+1999-07-01,12,NS,Nova Scotia,933784,,v9,statcan_17100009
+1999-07-01,13,NB,New Brunswick,750601,,v10,statcan_17100009
+1999-07-01,24,QC,Quebec,7323250,,v11,statcan_17100009
+1999-07-01,35,ON,Ontario,11504759,,v12,statcan_17100009
+1999-07-01,46,MB,Manitoba,1142448,,v13,statcan_17100009
+1999-07-01,47,SK,Saskatchewan,1014524,,v14,statcan_17100009
+1999-07-01,48,AB,Alberta,2952692,,v15,statcan_17100009
+1999-07-01,59,BC,British Columbia,4011375,,v3,statcan_17100009
+1999-07-01,60,YT,Yukon,30785,,v4,statcan_17100009
+1999-07-01,61,NT,Northwest Territories,40638,,v6,statcan_17100009
+1999-07-01,62,NU,Nunavut,26820,,v7,statcan_17100009
+1999-10-01,01,CAN,Canada,30492106,,v1,statcan_17100009
+1999-10-01,10,NL,Newfoundland and Labrador,532246,,v2,statcan_17100009
+1999-10-01,11,PE,Prince Edward Island,136424,,v8,statcan_17100009
+1999-10-01,12,NS,Nova Scotia,935941,,v9,statcan_17100009
+1999-10-01,13,NB,New Brunswick,750643,,v10,statcan_17100009
+1999-10-01,24,QC,Quebec,7334722,,v11,statcan_17100009
+1999-10-01,35,ON,Ontario,11559464,,v12,statcan_17100009
+1999-10-01,46,MB,Manitoba,1143618,,v13,statcan_17100009
+1999-10-01,47,SK,Saskatchewan,1012582,,v14,statcan_17100009
+1999-10-01,48,AB,Alberta,2966682,,v15,statcan_17100009
+1999-10-01,59,BC,British Columbia,4021600,,v3,statcan_17100009
+1999-10-01,60,YT,Yukon,30608,,v4,statcan_17100009
+1999-10-01,61,NT,Northwest Territories,40579,,v6,statcan_17100009
+1999-10-01,62,NU,Nunavut,26997,,v7,statcan_17100009
+2000-01-01,01,CAN,Canada,30525872,,v1,statcan_17100009
+2000-01-01,10,NL,Newfoundland and Labrador,531774,,v2,statcan_17100009
+2000-01-01,11,PE,Prince Edward Island,136442,,v8,statcan_17100009
+2000-01-01,12,NS,Nova Scotia,934594,,v9,statcan_17100009
+2000-01-01,13,NB,New Brunswick,750786,,v10,statcan_17100009
+2000-01-01,24,QC,Quebec,7340269,,v11,statcan_17100009
+2000-01-01,35,ON,Ontario,11576994,,v12,statcan_17100009
+2000-01-01,46,MB,Manitoba,1144428,,v13,statcan_17100009
+2000-01-01,47,SK,Saskatchewan,1011141,,v14,statcan_17100009
+2000-01-01,48,AB,Alberta,2974517,,v15,statcan_17100009
+2000-01-01,59,BC,British Columbia,4026664,,v3,statcan_17100009
+2000-01-01,60,YT,Yukon,30495,,v4,statcan_17100009
+2000-01-01,61,NT,Northwest Territories,40623,,v6,statcan_17100009
+2000-01-01,62,NU,Nunavut,27145,,v7,statcan_17100009
+2000-04-01,01,CAN,Canada,30594030,,v1,statcan_17100009
+2000-04-01,10,NL,Newfoundland and Labrador,529574,,v2,statcan_17100009
+2000-04-01,11,PE,Prince Edward Island,136289,,v8,statcan_17100009
+2000-04-01,12,NS,Nova Scotia,934291,,v9,statcan_17100009
+2000-04-01,13,NB,New Brunswick,750543,,v10,statcan_17100009
+2000-04-01,24,QC,Quebec,7347179,,v11,statcan_17100009
+2000-04-01,35,ON,Ontario,11621255,,v12,statcan_17100009
+2000-04-01,46,MB,Manitoba,1145873,,v13,statcan_17100009
+2000-04-01,47,SK,Saskatchewan,1009177,,v14,statcan_17100009
+2000-04-01,48,AB,Alberta,2988465,,v15,statcan_17100009
+2000-04-01,59,BC,British Columbia,4033319,,v3,statcan_17100009
+2000-04-01,60,YT,Yukon,30382,,v4,statcan_17100009
+2000-04-01,61,NT,Northwest Territories,40455,,v6,statcan_17100009
+2000-04-01,62,NU,Nunavut,27228,,v7,statcan_17100009
+2000-07-01,01,CAN,Canada,30685730,,v1,statcan_17100009
+2000-07-01,10,NL,Newfoundland and Labrador,527966,,v2,statcan_17100009
+2000-07-01,11,PE,Prince Edward Island,136470,,v8,statcan_17100009
+2000-07-01,12,NS,Nova Scotia,933821,,v9,statcan_17100009
+2000-07-01,13,NB,New Brunswick,750517,,v10,statcan_17100009
+2000-07-01,24,QC,Quebec,7356951,,v11,statcan_17100009
+2000-07-01,35,ON,Ontario,11683290,,v12,statcan_17100009
+2000-07-01,46,MB,Manitoba,1147313,,v13,statcan_17100009
+2000-07-01,47,SK,Saskatchewan,1007565,,v14,statcan_17100009
+2000-07-01,48,AB,Alberta,3004198,,v15,statcan_17100009
+2000-07-01,59,BC,British Columbia,4039230,,v3,statcan_17100009
+2000-07-01,60,YT,Yukon,30431,,v4,statcan_17100009
+2000-07-01,61,NT,Northwest Territories,40480,,v6,statcan_17100009
+2000-07-01,62,NU,Nunavut,27498,,v7,statcan_17100009
+2000-10-01,01,CAN,Canada,30783969,,v1,statcan_17100009
+2000-10-01,10,NL,Newfoundland and Labrador,526732,,v2,statcan_17100009
+2000-10-01,11,PE,Prince Edward Island,136400,,v8,statcan_17100009
+2000-10-01,12,NS,Nova Scotia,934459,,v9,statcan_17100009
+2000-10-01,13,NB,New Brunswick,750252,,v10,statcan_17100009
+2000-10-01,24,QC,Quebec,7368772,,v11,statcan_17100009
+2000-10-01,35,ON,Ontario,11748348,,v12,statcan_17100009
+2000-10-01,46,MB,Manitoba,1148183,,v13,statcan_17100009
+2000-10-01,47,SK,Saskatchewan,1006027,,v14,statcan_17100009
+2000-10-01,48,AB,Alberta,3016947,,v15,statcan_17100009
+2000-10-01,59,BC,British Columbia,4049297,,v3,statcan_17100009
+2000-10-01,60,YT,Yukon,30294,,v4,statcan_17100009
+2000-10-01,61,NT,Northwest Territories,40575,,v6,statcan_17100009
+2000-10-01,62,NU,Nunavut,27683,,v7,statcan_17100009
+2001-01-01,01,CAN,Canada,30824441,,v1,statcan_17100009
+2001-01-01,10,NL,Newfoundland and Labrador,525299,,v2,statcan_17100009
+2001-01-01,11,PE,Prince Edward Island,136377,,v8,statcan_17100009
+2001-01-01,12,NS,Nova Scotia,933463,,v9,statcan_17100009
+2001-01-01,13,NB,New Brunswick,749715,,v10,statcan_17100009
+2001-01-01,24,QC,Quebec,7373978,,v11,statcan_17100009
+2001-01-01,35,ON,Ontario,11771945,,v12,statcan_17100009
+2001-01-01,46,MB,Manitoba,1148456,,v13,statcan_17100009
+2001-01-01,47,SK,Saskatchewan,1003469,,v14,statcan_17100009
+2001-01-01,48,AB,Alberta,3027941,,v15,statcan_17100009
+2001-01-01,59,BC,British Columbia,4055229,,v3,statcan_17100009
+2001-01-01,60,YT,Yukon,30147,,v4,statcan_17100009
+2001-01-01,61,NT,Northwest Territories,40624,,v6,statcan_17100009
+2001-01-01,62,NU,Nunavut,27798,,v7,statcan_17100009
+2001-04-01,01,CAN,Canada,30910996,,v1,statcan_17100009
+2001-04-01,10,NL,Newfoundland and Labrador,523235,,v2,statcan_17100009
+2001-04-01,11,PE,Prince Edward Island,136499,,v8,statcan_17100009
+2001-04-01,12,NS,Nova Scotia,932909,,v9,statcan_17100009
+2001-04-01,13,NB,New Brunswick,749789,,v10,statcan_17100009
+2001-04-01,24,QC,Quebec,7383844,,v11,statcan_17100009
+2001-04-01,35,ON,Ontario,11827345,,v12,statcan_17100009
+2001-04-01,46,MB,Manitoba,1149684,,v13,statcan_17100009
+2001-04-01,47,SK,Saskatchewan,1001643,,v14,statcan_17100009
+2001-04-01,48,AB,Alberta,3041238,,v15,statcan_17100009
+2001-04-01,59,BC,British Columbia,4066132,,v3,statcan_17100009
+2001-04-01,60,YT,Yukon,30124,,v4,statcan_17100009
+2001-04-01,61,NT,Northwest Territories,40625,,v6,statcan_17100009
+2001-04-01,62,NU,Nunavut,27929,,v7,statcan_17100009
+2001-07-01,01,CAN,Canada,31020855,,v1,statcan_17100009
+2001-07-01,10,NL,Newfoundland and Labrador,522043,,v2,statcan_17100009
+2001-07-01,11,PE,Prince Edward Island,136667,,v8,statcan_17100009
+2001-07-01,12,NS,Nova Scotia,932483,,v9,statcan_17100009
+2001-07-01,13,NB,New Brunswick,749823,,v10,statcan_17100009
+2001-07-01,24,QC,Quebec,7396014,,v11,statcan_17100009
+2001-07-01,35,ON,Ontario,11897473,,v12,statcan_17100009
+2001-07-01,46,MB,Manitoba,1151451,,v13,statcan_17100009
+2001-07-01,47,SK,Saskatchewan,1000307,,v14,statcan_17100009
+2001-07-01,48,AB,Alberta,3058554,,v15,statcan_17100009
+2001-07-01,59,BC,British Columbia,4076896,,v3,statcan_17100009
+2001-07-01,60,YT,Yukon,30160,,v4,statcan_17100009
+2001-07-01,61,NT,Northwest Territories,40850,,v6,statcan_17100009
+2001-07-01,62,NU,Nunavut,28134,,v7,statcan_17100009
+2001-10-01,01,CAN,Canada,31128873,,v1,statcan_17100009
+2001-10-01,10,NL,Newfoundland and Labrador,521583,,v2,statcan_17100009
+2001-10-01,11,PE,Prince Edward Island,136876,,v8,statcan_17100009
+2001-10-01,12,NS,Nova Scotia,933318,,v9,statcan_17100009
+2001-10-01,13,NB,New Brunswick,749298,,v10,statcan_17100009
+2001-10-01,24,QC,Quebec,7411084,,v11,statcan_17100009
+2001-10-01,35,ON,Ontario,11961546,,v12,statcan_17100009
+2001-10-01,46,MB,Manitoba,1152144,,v13,statcan_17100009
+2001-10-01,47,SK,Saskatchewan,999241,,v14,statcan_17100009
+2001-10-01,48,AB,Alberta,3078756,,v15,statcan_17100009
+2001-10-01,59,BC,British Columbia,4085595,,v3,statcan_17100009
+2001-10-01,60,YT,Yukon,30079,,v4,statcan_17100009
+2001-10-01,61,NT,Northwest Territories,41175,,v6,statcan_17100009
+2001-10-01,62,NU,Nunavut,28178,,v7,statcan_17100009
+2002-01-01,01,CAN,Canada,31168896,,v1,statcan_17100009
+2002-01-01,10,NL,Newfoundland and Labrador,521414,,v2,statcan_17100009
+2002-01-01,11,PE,Prince Edward Island,136858,,v8,statcan_17100009
+2002-01-01,12,NS,Nova Scotia,933757,,v9,statcan_17100009
+2002-01-01,13,NB,New Brunswick,748639,,v10,statcan_17100009
+2002-01-01,24,QC,Quebec,7417456,,v11,statcan_17100009
+2002-01-01,35,ON,Ontario,11979906,,v12,statcan_17100009
+2002-01-01,46,MB,Manitoba,1152828,,v13,statcan_17100009
+2002-01-01,47,SK,Saskatchewan,998742,,v14,statcan_17100009
+2002-01-01,48,AB,Alberta,3092506,,v15,statcan_17100009
+2002-01-01,59,BC,British Columbia,4087124,,v3,statcan_17100009
+2002-01-01,60,YT,Yukon,30156,,v4,statcan_17100009
+2002-01-01,61,NT,Northwest Territories,41176,,v6,statcan_17100009
+2002-01-01,62,NU,Nunavut,28334,,v7,statcan_17100009
+2002-04-01,01,CAN,Canada,31252682,,v1,statcan_17100009
+2002-04-01,10,NL,Newfoundland and Labrador,520176,,v2,statcan_17100009
+2002-04-01,11,PE,Prince Edward Island,136893,,v8,statcan_17100009
+2002-04-01,12,NS,Nova Scotia,934165,,v9,statcan_17100009
+2002-04-01,13,NB,New Brunswick,748778,,v10,statcan_17100009
+2002-04-01,24,QC,Quebec,7427639,,v11,statcan_17100009
+2002-04-01,35,ON,Ontario,12029818,,v12,statcan_17100009
+2002-04-01,46,MB,Manitoba,1154728,,v13,statcan_17100009
+2002-04-01,47,SK,Saskatchewan,997792,,v14,statcan_17100009
+2002-04-01,48,AB,Alberta,3108716,,v15,statcan_17100009
+2002-04-01,59,BC,British Columbia,4094170,,v3,statcan_17100009
+2002-04-01,60,YT,Yukon,30144,,v4,statcan_17100009
+2002-04-01,61,NT,Northwest Territories,41280,,v6,statcan_17100009
+2002-04-01,62,NU,Nunavut,28383,,v7,statcan_17100009
+2002-07-01,01,CAN,Canada,31359199,,v1,statcan_17100009
+2002-07-01,10,NL,Newfoundland and Labrador,519411,,v2,statcan_17100009
+2002-07-01,11,PE,Prince Edward Island,136882,,v8,statcan_17100009
+2002-07-01,12,NS,Nova Scotia,935172,,v9,statcan_17100009
+2002-07-01,13,NB,New Brunswick,749375,,v10,statcan_17100009
+2002-07-01,24,QC,Quebec,7441305,,v11,statcan_17100009
+2002-07-01,35,ON,Ontario,12093412,,v12,statcan_17100009
+2002-07-01,46,MB,Manitoba,1156673,,v13,statcan_17100009
+2002-07-01,47,SK,Saskatchewan,996854,,v14,statcan_17100009
+2002-07-01,48,AB,Alberta,3128757,,v15,statcan_17100009
+2002-07-01,59,BC,British Columbia,4100504,,v3,statcan_17100009
+2002-07-01,60,YT,Yukon,30339,,v4,statcan_17100009
+2002-07-01,61,NT,Northwest Territories,41698,,v6,statcan_17100009
+2002-07-01,62,NU,Nunavut,28817,,v7,statcan_17100009
+2002-10-01,01,CAN,Canada,31450677,,v1,statcan_17100009
+2002-10-01,10,NL,Newfoundland and Labrador,519387,,v2,statcan_17100009
+2002-10-01,11,PE,Prince Edward Island,137082,,v8,statcan_17100009
+2002-10-01,12,NS,Nova Scotia,935959,,v9,statcan_17100009
+2002-10-01,13,NB,New Brunswick,749416,,v10,statcan_17100009
+2002-10-01,24,QC,Quebec,7455548,,v11,statcan_17100009
+2002-10-01,35,ON,Ontario,12145100,,v12,statcan_17100009
+2002-10-01,46,MB,Manitoba,1157289,,v13,statcan_17100009
+2002-10-01,47,SK,Saskatchewan,996324,,v14,statcan_17100009
+2002-10-01,48,AB,Alberta,3145227,,v15,statcan_17100009
+2002-10-01,59,BC,British Columbia,4108351,,v3,statcan_17100009
+2002-10-01,60,YT,Yukon,30268,,v4,statcan_17100009
+2002-10-01,61,NT,Northwest Territories,41874,,v6,statcan_17100009
+2002-10-01,62,NU,Nunavut,28852,,v7,statcan_17100009
+2003-01-01,01,CAN,Canada,31479415,,v1,statcan_17100009
+2003-01-01,10,NL,Newfoundland and Labrador,519140,,v2,statcan_17100009
+2003-01-01,11,PE,Prince Edward Island,137079,,v8,statcan_17100009
+2003-01-01,12,NS,Nova Scotia,935495,,v9,statcan_17100009
+2003-01-01,13,NB,New Brunswick,749243,,v10,statcan_17100009
+2003-01-01,24,QC,Quebec,7461162,,v11,statcan_17100009
+2003-01-01,35,ON,Ontario,12155691,,v12,statcan_17100009
+2003-01-01,46,MB,Manitoba,1158358,,v13,statcan_17100009
+2003-01-01,47,SK,Saskatchewan,996286,,v14,statcan_17100009
+2003-01-01,48,AB,Alberta,3155370,,v15,statcan_17100009
+2003-01-01,59,BC,British Columbia,4110197,,v3,statcan_17100009
+2003-01-01,60,YT,Yukon,30424,,v4,statcan_17100009
+2003-01-01,61,NT,Northwest Territories,42007,,v6,statcan_17100009
+2003-01-01,62,NU,Nunavut,28963,,v7,statcan_17100009
+2003-04-01,01,CAN,Canada,31549344,,v1,statcan_17100009
+2003-04-01,10,NL,Newfoundland and Labrador,518735,,v2,statcan_17100009
+2003-04-01,11,PE,Prince Edward Island,137124,,v8,statcan_17100009
+2003-04-01,12,NS,Nova Scotia,935775,,v9,statcan_17100009
+2003-04-01,13,NB,New Brunswick,749269,,v10,statcan_17100009
+2003-04-01,24,QC,Quebec,7471463,,v11,statcan_17100009
+2003-04-01,35,ON,Ontario,12194269,,v12,statcan_17100009
+2003-04-01,46,MB,Manitoba,1160853,,v13,statcan_17100009
+2003-04-01,47,SK,Saskatchewan,995785,,v14,statcan_17100009
+2003-04-01,48,AB,Alberta,3169295,,v15,statcan_17100009
+2003-04-01,59,BC,British Columbia,4114884,,v3,statcan_17100009
+2003-04-01,60,YT,Yukon,30575,,v4,statcan_17100009
+2003-04-01,61,NT,Northwest Territories,42218,,v6,statcan_17100009
+2003-04-01,62,NU,Nunavut,29099,,v7,statcan_17100009
+2003-07-01,01,CAN,Canada,31642461,,v1,statcan_17100009
+2003-07-01,10,NL,Newfoundland and Labrador,518389,,v2,statcan_17100009
+2003-07-01,11,PE,Prince Edward Island,137231,,v8,statcan_17100009
+2003-07-01,12,NS,Nova Scotia,937681,,v9,statcan_17100009
+2003-07-01,13,NB,New Brunswick,749444,,v10,statcan_17100009
+2003-07-01,24,QC,Quebec,7485488,,v11,statcan_17100009
+2003-07-01,35,ON,Ontario,12243641,,v12,statcan_17100009
+2003-07-01,46,MB,Manitoba,1163585,,v13,statcan_17100009
+2003-07-01,47,SK,Saskatchewan,996422,,v14,statcan_17100009
+2003-07-01,48,AB,Alberta,3183291,,v15,statcan_17100009
+2003-07-01,59,BC,British Columbia,4124447,,v3,statcan_17100009
+2003-07-01,60,YT,Yukon,30943,,v4,statcan_17100009
+2003-07-01,61,NT,Northwest Territories,42598,,v6,statcan_17100009
+2003-07-01,62,NU,Nunavut,29301,,v7,statcan_17100009
+2003-10-01,01,CAN,Canada,31736141,,v1,statcan_17100009
+2003-10-01,10,NL,Newfoundland and Labrador,518718,,v2,statcan_17100009
+2003-10-01,11,PE,Prince Edward Island,137430,,v8,statcan_17100009
+2003-10-01,12,NS,Nova Scotia,938744,,v9,statcan_17100009
+2003-10-01,13,NB,New Brunswick,749467,,v10,statcan_17100009
+2003-10-01,24,QC,Quebec,7503483,,v11,statcan_17100009
+2003-10-01,35,ON,Ontario,12290116,,v12,statcan_17100009
+2003-10-01,46,MB,Manitoba,1165518,,v13,statcan_17100009
+2003-10-01,47,SK,Saskatchewan,996585,,v14,statcan_17100009
+2003-10-01,48,AB,Alberta,3198059,,v15,statcan_17100009
+2003-10-01,59,BC,British Columbia,4134598,,v3,statcan_17100009
+2003-10-01,60,YT,Yukon,31219,,v4,statcan_17100009
+2003-10-01,61,NT,Northwest Territories,42855,,v6,statcan_17100009
+2003-10-01,62,NU,Nunavut,29349,,v7,statcan_17100009
+2004-01-01,01,CAN,Canada,31775723,,v1,statcan_17100009
+2004-01-01,10,NL,Newfoundland and Labrador,518677,,v2,statcan_17100009
+2004-01-01,11,PE,Prince Edward Island,137512,,v8,statcan_17100009
+2004-01-01,12,NS,Nova Scotia,938946,,v9,statcan_17100009
+2004-01-01,13,NB,New Brunswick,749192,,v10,statcan_17100009
+2004-01-01,24,QC,Quebec,7510218,,v11,statcan_17100009
+2004-01-01,35,ON,Ontario,12303516,,v12,statcan_17100009
+2004-01-01,46,MB,Manitoba,1167643,,v13,statcan_17100009
+2004-01-01,47,SK,Saskatchewan,996586,,v14,statcan_17100009
+2004-01-01,48,AB,Alberta,3209557,,v15,statcan_17100009
+2004-01-01,59,BC,British Columbia,4139895,,v3,statcan_17100009
+2004-01-01,60,YT,Yukon,31320,,v4,statcan_17100009
+2004-01-01,61,NT,Northwest Territories,43166,,v6,statcan_17100009
+2004-01-01,62,NU,Nunavut,29495,,v7,statcan_17100009
+2004-04-01,01,CAN,Canada,31844704,,v1,statcan_17100009
+2004-04-01,10,NL,Newfoundland and Labrador,517888,,v2,statcan_17100009
+2004-04-01,11,PE,Prince Edward Island,137631,,v8,statcan_17100009
+2004-04-01,12,NS,Nova Scotia,938738,,v9,statcan_17100009
+2004-04-01,13,NB,New Brunswick,749340,,v10,statcan_17100009
+2004-04-01,24,QC,Quebec,7520109,,v11,statcan_17100009
+2004-04-01,35,ON,Ontario,12339813,,v12,statcan_17100009
+2004-04-01,46,MB,Manitoba,1170336,,v13,statcan_17100009
+2004-04-01,47,SK,Saskatchewan,997106,,v14,statcan_17100009
+2004-04-01,48,AB,Alberta,3223659,,v15,statcan_17100009
+2004-04-01,59,BC,British Columbia,4145916,,v3,statcan_17100009
+2004-04-01,60,YT,Yukon,31400,,v4,statcan_17100009
+2004-04-01,61,NT,Northwest Territories,43208,,v6,statcan_17100009
+2004-04-01,62,NU,Nunavut,29560,,v7,statcan_17100009
+2004-07-01,01,CAN,Canada,31938807,,v1,statcan_17100009
+2004-07-01,10,NL,Newfoundland and Labrador,517375,,v2,statcan_17100009
+2004-07-01,11,PE,Prince Edward Island,137682,,v8,statcan_17100009
+2004-07-01,12,NS,Nova Scotia,939625,,v9,statcan_17100009
+2004-07-01,13,NB,New Brunswick,749424,,v10,statcan_17100009
+2004-07-01,24,QC,Quebec,7535483,,v11,statcan_17100009
+2004-07-01,35,ON,Ontario,12389641,,v12,statcan_17100009
+2004-07-01,46,MB,Manitoba,1173228,,v13,statcan_17100009
+2004-07-01,47,SK,Saskatchewan,997305,,v14,statcan_17100009
+2004-07-01,48,AB,Alberta,3238817,,v15,statcan_17100009
+2004-07-01,59,BC,British Columbia,4155630,,v3,statcan_17100009
+2004-07-01,60,YT,Yukon,31455,,v4,statcan_17100009
+2004-07-01,61,NT,Northwest Territories,43306,,v6,statcan_17100009
+2004-07-01,62,NU,Nunavut,29836,,v7,statcan_17100009
+2004-10-01,01,CAN,Canada,32038207,,v1,statcan_17100009
+2004-10-01,10,NL,Newfoundland and Labrador,516863,,v2,statcan_17100009
+2004-10-01,11,PE,Prince Edward Island,137697,,v8,statcan_17100009
+2004-10-01,12,NS,Nova Scotia,939855,,v9,statcan_17100009
+2004-10-01,13,NB,New Brunswick,749249,,v10,statcan_17100009
+2004-10-01,24,QC,Quebec,7553578,,v11,statcan_17100009
+2004-10-01,35,ON,Ontario,12435931,,v12,statcan_17100009
+2004-10-01,46,MB,Manitoba,1174667,,v13,statcan_17100009
+2004-10-01,47,SK,Saskatchewan,997010,,v14,statcan_17100009
+2004-10-01,48,AB,Alberta,3260721,,v15,statcan_17100009
+2004-10-01,59,BC,British Columbia,4167802,,v3,statcan_17100009
+2004-10-01,60,YT,Yukon,31688,,v4,statcan_17100009
+2004-10-01,61,NT,Northwest Territories,43354,,v6,statcan_17100009
+2004-10-01,62,NU,Nunavut,29792,,v7,statcan_17100009
+2005-01-01,01,CAN,Canada,32075011,,v1,statcan_17100009
+2005-01-01,10,NL,Newfoundland and Labrador,516750,,v2,statcan_17100009
+2005-01-01,11,PE,Prince Edward Island,137691,,v8,statcan_17100009
+2005-01-01,12,NS,Nova Scotia,939202,,v9,statcan_17100009
+2005-01-01,13,NB,New Brunswick,749005,,v10,statcan_17100009
+2005-01-01,24,QC,Quebec,7559576,,v11,statcan_17100009
+2005-01-01,35,ON,Ontario,12444755,,v12,statcan_17100009
+2005-01-01,46,MB,Manitoba,1176047,,v13,statcan_17100009
+2005-01-01,47,SK,Saskatchewan,995914,,v14,statcan_17100009
+2005-01-01,48,AB,Alberta,3276908,,v15,statcan_17100009
+2005-01-01,59,BC,British Columbia,4174017,,v3,statcan_17100009
+2005-01-01,60,YT,Yukon,31770,,v4,statcan_17100009
+2005-01-01,61,NT,Northwest Territories,43440,,v6,statcan_17100009
+2005-01-01,62,NU,Nunavut,29936,,v7,statcan_17100009
+2005-04-01,01,CAN,Canada,32140569,,v1,statcan_17100009
+2005-04-01,10,NL,Newfoundland and Labrador,515324,,v2,statcan_17100009
+2005-04-01,11,PE,Prince Edward Island,137790,,v8,statcan_17100009
+2005-04-01,12,NS,Nova Scotia,937989,,v9,statcan_17100009
+2005-04-01,13,NB,New Brunswick,748696,,v10,statcan_17100009
+2005-04-01,24,QC,Quebec,7567277,,v11,statcan_17100009
+2005-04-01,35,ON,Ontario,12476560,,v12,statcan_17100009
+2005-04-01,46,MB,Manitoba,1177285,,v13,statcan_17100009
+2005-04-01,47,SK,Saskatchewan,994902,,v14,statcan_17100009
+2005-04-01,48,AB,Alberta,3296359,,v15,statcan_17100009
+2005-04-01,59,BC,British Columbia,4182971,,v3,statcan_17100009
+2005-04-01,60,YT,Yukon,31861,,v4,statcan_17100009
+2005-04-01,61,NT,Northwest Territories,43456,,v6,statcan_17100009
+2005-04-01,62,NU,Nunavut,30099,,v7,statcan_17100009
+2005-07-01,01,CAN,Canada,32242732,,v1,statcan_17100009
+2005-07-01,10,NL,Newfoundland and Labrador,514310,,v2,statcan_17100009
+2005-07-01,11,PE,Prince Edward Island,138067,,v8,statcan_17100009
+2005-07-01,12,NS,Nova Scotia,937931,,v9,statcan_17100009
+2005-07-01,13,NB,New Brunswick,748061,,v10,statcan_17100009
+2005-07-01,24,QC,Quebec,7581467,,v11,statcan_17100009
+2005-07-01,35,ON,Ontario,12527581,,v12,statcan_17100009
+2005-07-01,46,MB,Manitoba,1178262,,v13,statcan_17100009
+2005-07-01,47,SK,Saskatchewan,993510,,v14,statcan_17100009
+2005-07-01,48,AB,Alberta,3321839,,v15,statcan_17100009
+2005-07-01,59,BC,British Columbia,4196076,,v3,statcan_17100009
+2005-07-01,60,YT,Yukon,31901,,v4,statcan_17100009
+2005-07-01,61,NT,Northwest Territories,43399,,v6,statcan_17100009
+2005-07-01,62,NU,Nunavut,30328,,v7,statcan_17100009
+2005-10-01,01,CAN,Canada,32353311,,v1,statcan_17100009
+2005-10-01,10,NL,Newfoundland and Labrador,513725,,v2,statcan_17100009
+2005-10-01,11,PE,Prince Edward Island,138133,,v8,statcan_17100009
+2005-10-01,12,NS,Nova Scotia,938755,,v9,statcan_17100009
+2005-10-01,13,NB,New Brunswick,747674,,v10,statcan_17100009
+2005-10-01,24,QC,Quebec,7598880,,v11,statcan_17100009
+2005-10-01,35,ON,Ontario,12578240,,v12,statcan_17100009
+2005-10-01,46,MB,Manitoba,1179082,,v13,statcan_17100009
+2005-10-01,47,SK,Saskatchewan,993299,,v14,statcan_17100009
+2005-10-01,48,AB,Alberta,3346802,,v15,statcan_17100009
+2005-10-01,59,BC,British Columbia,4212674,,v3,statcan_17100009
+2005-10-01,60,YT,Yukon,32127,,v4,statcan_17100009
+2005-10-01,61,NT,Northwest Territories,43523,,v6,statcan_17100009
+2005-10-01,62,NU,Nunavut,30397,,v7,statcan_17100009
+2006-01-01,01,CAN,Canada,32394909,,v1,statcan_17100009
+2006-01-01,10,NL,Newfoundland and Labrador,512554,,v2,statcan_17100009
+2006-01-01,11,PE,Prince Edward Island,137908,,v8,statcan_17100009
+2006-01-01,12,NS,Nova Scotia,938120,,v9,statcan_17100009
+2006-01-01,13,NB,New Brunswick,746985,,v10,statcan_17100009
+2006-01-01,24,QC,Quebec,7604228,,v11,statcan_17100009
+2006-01-01,35,ON,Ontario,12587149,,v12,statcan_17100009
+2006-01-01,46,MB,Manitoba,1179916,,v13,statcan_17100009
+2006-01-01,47,SK,Saskatchewan,992246,,v14,statcan_17100009
+2006-01-01,48,AB,Alberta,3371851,,v15,statcan_17100009
+2006-01-01,59,BC,British Columbia,4217956,,v3,statcan_17100009
+2006-01-01,60,YT,Yukon,32112,,v4,statcan_17100009
+2006-01-01,61,NT,Northwest Territories,43315,,v6,statcan_17100009
+2006-01-01,62,NU,Nunavut,30569,,v7,statcan_17100009
+2006-04-01,01,CAN,Canada,32470171,,v1,statcan_17100009
+2006-04-01,10,NL,Newfoundland and Labrador,510959,,v2,statcan_17100009
+2006-04-01,11,PE,Prince Edward Island,137847,,v8,statcan_17100009
+2006-04-01,12,NS,Nova Scotia,937665,,v9,statcan_17100009
+2006-04-01,13,NB,New Brunswick,746337,,v10,statcan_17100009
+2006-04-01,24,QC,Quebec,7615496,,v11,statcan_17100009
+2006-04-01,35,ON,Ontario,12618321,,v12,statcan_17100009
+2006-04-01,46,MB,Manitoba,1181632,,v13,statcan_17100009
+2006-04-01,47,SK,Saskatchewan,991231,,v14,statcan_17100009
+2006-04-01,48,AB,Alberta,3396809,,v15,statcan_17100009
+2006-04-01,59,BC,British Columbia,4227980,,v3,statcan_17100009
+2006-04-01,60,YT,Yukon,32152,,v4,statcan_17100009
+2006-04-01,61,NT,Northwest Territories,43101,,v6,statcan_17100009
+2006-04-01,62,NU,Nunavut,30641,,v7,statcan_17100009
+2006-07-01,01,CAN,Canada,32571193,,v1,statcan_17100009
+2006-07-01,10,NL,Newfoundland and Labrador,510593,,v2,statcan_17100009
+2006-07-01,11,PE,Prince Edward Island,137869,,v8,statcan_17100009
+2006-07-01,12,NS,Nova Scotia,937880,,v9,statcan_17100009
+2006-07-01,13,NB,New Brunswick,745621,,v10,statcan_17100009
+2006-07-01,24,QC,Quebec,7631901,,v11,statcan_17100009
+2006-07-01,35,ON,Ontario,12661953,,v12,statcan_17100009
+2006-07-01,46,MB,Manitoba,1183560,,v13,statcan_17100009
+2006-07-01,47,SK,Saskatchewan,992313,,v14,statcan_17100009
+2006-07-01,48,AB,Alberta,3421435,,v15,statcan_17100009
+2006-07-01,59,BC,British Columbia,4241793,,v3,statcan_17100009
+2006-07-01,60,YT,Yukon,32272,,v4,statcan_17100009
+2006-07-01,61,NT,Northwest Territories,43185,,v6,statcan_17100009
+2006-07-01,62,NU,Nunavut,30818,,v7,statcan_17100009
+2006-10-01,01,CAN,Canada,32680839,,v1,statcan_17100009
+2006-10-01,10,NL,Newfoundland and Labrador,510325,,v2,statcan_17100009
+2006-10-01,11,PE,Prince Edward Island,137898,,v8,statcan_17100009
+2006-10-01,12,NS,Nova Scotia,937060,,v9,statcan_17100009
+2006-10-01,13,NB,New Brunswick,744973,,v10,statcan_17100009
+2006-10-01,24,QC,Quebec,7652881,,v11,statcan_17100009
+2006-10-01,35,ON,Ontario,12701324,,v12,statcan_17100009
+2006-10-01,46,MB,Manitoba,1183975,,v13,statcan_17100009
+2006-10-01,47,SK,Saskatchewan,993359,,v14,statcan_17100009
+2006-10-01,48,AB,Alberta,3453945,,v15,statcan_17100009
+2006-10-01,59,BC,British Columbia,4258653,,v3,statcan_17100009
+2006-10-01,60,YT,Yukon,32361,,v4,statcan_17100009
+2006-10-01,61,NT,Northwest Territories,43205,,v6,statcan_17100009
+2006-10-01,62,NU,Nunavut,30880,,v7,statcan_17100009
+2007-01-01,01,CAN,Canada,32717848,,v1,statcan_17100009
+2007-01-01,10,NL,Newfoundland and Labrador,510329,,v2,statcan_17100009
+2007-01-01,11,PE,Prince Edward Island,137777,,v8,statcan_17100009
+2007-01-01,12,NS,Nova Scotia,936232,,v9,statcan_17100009
+2007-01-01,13,NB,New Brunswick,744849,,v10,statcan_17100009
+2007-01-01,24,QC,Quebec,7661201,,v11,statcan_17100009
+2007-01-01,35,ON,Ontario,12703327,,v12,statcan_17100009
+2007-01-01,46,MB,Manitoba,1184495,,v13,statcan_17100009
+2007-01-01,47,SK,Saskatchewan,995170,,v14,statcan_17100009
+2007-01-01,48,AB,Alberta,3472779,,v15,statcan_17100009
+2007-01-01,59,BC,British Columbia,4265328,,v3,statcan_17100009
+2007-01-01,60,YT,Yukon,32316,,v4,statcan_17100009
+2007-01-01,61,NT,Northwest Territories,43088,,v6,statcan_17100009
+2007-01-01,62,NU,Nunavut,30957,,v7,statcan_17100009
+2007-04-01,01,CAN,Canada,32785964,,v1,statcan_17100009
+2007-04-01,10,NL,Newfoundland and Labrador,509126,,v2,statcan_17100009
+2007-04-01,11,PE,Prince Edward Island,137707,,v8,statcan_17100009
+2007-04-01,12,NS,Nova Scotia,935028,,v9,statcan_17100009
+2007-04-01,13,NB,New Brunswick,744934,,v10,statcan_17100009
+2007-04-01,24,QC,Quebec,7673938,,v11,statcan_17100009
+2007-04-01,35,ON,Ontario,12727090,,v12,statcan_17100009
+2007-04-01,46,MB,Manitoba,1186421,,v13,statcan_17100009
+2007-04-01,47,SK,Saskatchewan,997541,,v14,statcan_17100009
+2007-04-01,48,AB,Alberta,3490849,,v15,statcan_17100009
+2007-04-01,59,BC,British Columbia,4276745,,v3,statcan_17100009
+2007-04-01,60,YT,Yukon,32274,,v4,statcan_17100009
+2007-04-01,61,NT,Northwest Territories,43127,,v6,statcan_17100009
+2007-04-01,62,NU,Nunavut,31184,,v7,statcan_17100009
+2007-07-01,01,CAN,Canada,32888886,,v1,statcan_17100009
+2007-07-01,10,NL,Newfoundland and Labrador,509047,,v2,statcan_17100009
+2007-07-01,11,PE,Prince Edward Island,137709,,v8,statcan_17100009
+2007-07-01,12,NS,Nova Scotia,935164,,v9,statcan_17100009
+2007-07-01,13,NB,New Brunswick,745430,,v10,statcan_17100009
+2007-07-01,24,QC,Quebec,7692400,,v11,statcan_17100009
+2007-07-01,35,ON,Ontario,12765133,,v12,statcan_17100009
+2007-07-01,46,MB,Manitoba,1189446,,v13,statcan_17100009
+2007-07-01,47,SK,Saskatchewan,1002074,,v14,statcan_17100009
+2007-07-01,48,AB,Alberta,3514151,,v15,statcan_17100009
+2007-07-01,59,BC,British Columbia,4290987,,v3,statcan_17100009
+2007-07-01,60,YT,Yukon,32555,,v4,statcan_17100009
+2007-07-01,61,NT,Northwest Territories,43396,,v6,statcan_17100009
+2007-07-01,62,NU,Nunavut,31394,,v7,statcan_17100009
+2007-10-01,01,CAN,Canada,33001918,,v1,statcan_17100009
+2007-10-01,10,NL,Newfoundland and Labrador,510256,,v2,statcan_17100009
+2007-10-01,11,PE,Prince Edward Island,138020,,v8,statcan_17100009
+2007-10-01,12,NS,Nova Scotia,935433,,v9,statcan_17100009
+2007-10-01,13,NB,New Brunswick,746136,,v10,statcan_17100009
+2007-10-01,24,QC,Quebec,7712616,,v11,statcan_17100009
+2007-10-01,35,ON,Ontario,12807497,,v12,statcan_17100009
+2007-10-01,46,MB,Manitoba,1191684,,v13,statcan_17100009
+2007-10-01,47,SK,Saskatchewan,1007305,,v14,statcan_17100009
+2007-10-01,48,AB,Alberta,3533414,,v15,statcan_17100009
+2007-10-01,59,BC,British Columbia,4312048,,v3,statcan_17100009
+2007-10-01,60,YT,Yukon,32663,,v4,statcan_17100009
+2007-10-01,61,NT,Northwest Territories,43286,,v6,statcan_17100009
+2007-10-01,62,NU,Nunavut,31560,,v7,statcan_17100009
+2008-01-01,01,CAN,Canada,33050262,,v1,statcan_17100009
+2008-01-01,10,NL,Newfoundland and Labrador,510989,,v2,statcan_17100009
+2008-01-01,11,PE,Prince Edward Island,137990,,v8,statcan_17100009
+2008-01-01,12,NS,Nova Scotia,935540,,v9,statcan_17100009
+2008-01-01,13,NB,New Brunswick,746284,,v10,statcan_17100009
+2008-01-01,24,QC,Quebec,7724885,,v11,statcan_17100009
+2008-01-01,35,ON,Ontario,12814686,,v12,statcan_17100009
+2008-01-01,46,MB,Manitoba,1193396,,v13,statcan_17100009
+2008-01-01,47,SK,Saskatchewan,1010279,,v14,statcan_17100009
+2008-01-01,48,AB,Alberta,3548804,,v15,statcan_17100009
+2008-01-01,59,BC,British Columbia,4319657,,v3,statcan_17100009
+2008-01-01,60,YT,Yukon,32752,,v4,statcan_17100009
+2008-01-01,61,NT,Northwest Territories,43384,,v6,statcan_17100009
+2008-01-01,62,NU,Nunavut,31616,,v7,statcan_17100009
+2008-04-01,01,CAN,Canada,33127394,,v1,statcan_17100009
+2008-04-01,10,NL,Newfoundland and Labrador,511239,,v2,statcan_17100009
+2008-04-01,11,PE,Prince Edward Island,138175,,v8,statcan_17100009
+2008-04-01,12,NS,Nova Scotia,935704,,v9,statcan_17100009
+2008-04-01,13,NB,New Brunswick,746529,,v10,statcan_17100009
+2008-04-01,24,QC,Quebec,7739956,,v11,statcan_17100009
+2008-04-01,35,ON,Ontario,12840482,,v12,statcan_17100009
+2008-04-01,46,MB,Manitoba,1194653,,v13,statcan_17100009
+2008-04-01,47,SK,Saskatchewan,1013449,,v14,statcan_17100009
+2008-04-01,48,AB,Alberta,3567475,,v15,statcan_17100009
+2008-04-01,59,BC,British Columbia,4331706,,v3,statcan_17100009
+2008-04-01,60,YT,Yukon,32955,,v4,statcan_17100009
+2008-04-01,61,NT,Northwest Territories,43388,,v6,statcan_17100009
+2008-04-01,62,NU,Nunavut,31683,,v7,statcan_17100009
+2008-07-01,01,CAN,Canada,33247298,,v1,statcan_17100009
+2008-07-01,10,NL,Newfoundland and Labrador,511569,,v2,statcan_17100009
+2008-07-01,11,PE,Prince Edward Island,138736,,v8,statcan_17100009
+2008-07-01,12,NS,Nova Scotia,935965,,v9,statcan_17100009
+2008-07-01,13,NB,New Brunswick,746875,,v10,statcan_17100009
+2008-07-01,24,QC,Quebec,7761614,,v11,statcan_17100009
+2008-07-01,35,ON,Ontario,12883824,,v12,statcan_17100009
+2008-07-01,46,MB,Manitoba,1197767,,v13,statcan_17100009
+2008-07-01,47,SK,Saskatchewan,1017368,,v14,statcan_17100009
+2008-07-01,48,AB,Alberta,3595875,,v15,statcan_17100009
+2008-07-01,59,BC,British Columbia,4349338,,v3,statcan_17100009
+2008-07-01,60,YT,Yukon,33084,,v4,statcan_17100009
+2008-07-01,61,NT,Northwest Territories,43385,,v6,statcan_17100009
+2008-07-01,62,NU,Nunavut,31898,,v7,statcan_17100009
+2008-10-01,01,CAN,Canada,33372978,,v1,statcan_17100009
+2008-10-01,10,NL,Newfoundland and Labrador,513425,,v2,statcan_17100009
+2008-10-01,11,PE,Prince Edward Island,139448,,v8,statcan_17100009
+2008-10-01,12,NS,Nova Scotia,937108,,v9,statcan_17100009
+2008-10-01,13,NB,New Brunswick,747767,,v10,statcan_17100009
+2008-10-01,24,QC,Quebec,7786609,,v11,statcan_17100009
+2008-10-01,35,ON,Ontario,12927520,,v12,statcan_17100009
+2008-10-01,46,MB,Manitoba,1199551,,v13,statcan_17100009
+2008-10-01,47,SK,Saskatchewan,1022511,,v14,statcan_17100009
+2008-10-01,48,AB,Alberta,3619319,,v15,statcan_17100009
+2008-10-01,59,BC,British Columbia,4371128,,v3,statcan_17100009
+2008-10-01,60,YT,Yukon,33307,,v4,statcan_17100009
+2008-10-01,61,NT,Northwest Territories,43315,,v6,statcan_17100009
+2008-10-01,62,NU,Nunavut,31970,,v7,statcan_17100009
+2009-01-01,01,CAN,Canada,33427754,,v1,statcan_17100009
+2009-01-01,10,NL,Newfoundland and Labrador,514210,,v2,statcan_17100009
+2009-01-01,11,PE,Prince Edward Island,139114,,v8,statcan_17100009
+2009-01-01,12,NS,Nova Scotia,937445,,v9,statcan_17100009
+2009-01-01,13,NB,New Brunswick,748375,,v10,statcan_17100009
+2009-01-01,24,QC,Quebec,7799271,,v11,statcan_17100009
+2009-01-01,35,ON,Ontario,12932742,,v12,statcan_17100009
+2009-01-01,46,MB,Manitoba,1201705,,v13,statcan_17100009
+2009-01-01,47,SK,Saskatchewan,1025946,,v14,statcan_17100009
+2009-01-01,48,AB,Alberta,3638505,,v15,statcan_17100009
+2009-01-01,59,BC,British Columbia,4381832,,v3,statcan_17100009
+2009-01-01,60,YT,Yukon,33405,,v4,statcan_17100009
+2009-01-01,61,NT,Northwest Territories,43136,,v6,statcan_17100009
+2009-01-01,62,NU,Nunavut,32068,,v7,statcan_17100009
+2009-04-01,01,CAN,Canada,33512305,,v1,statcan_17100009
+2009-04-01,10,NL,Newfoundland and Labrador,514707,,v2,statcan_17100009
+2009-04-01,11,PE,Prince Edward Island,139190,,v8,statcan_17100009
+2009-04-01,12,NS,Nova Scotia,937489,,v9,statcan_17100009
+2009-04-01,13,NB,New Brunswick,749165,,v10,statcan_17100009
+2009-04-01,24,QC,Quebec,7817425,,v11,statcan_17100009
+2009-04-01,35,ON,Ontario,12956924,,v12,statcan_17100009
+2009-04-01,46,MB,Manitoba,1204013,,v13,statcan_17100009
+2009-04-01,47,SK,Saskatchewan,1029862,,v14,statcan_17100009
+2009-04-01,48,AB,Alberta,3659235,,v15,statcan_17100009
+2009-04-01,59,BC,British Columbia,4395197,,v3,statcan_17100009
+2009-04-01,60,YT,Yukon,33583,,v4,statcan_17100009
+2009-04-01,61,NT,Northwest Territories,43122,,v6,statcan_17100009
+2009-04-01,62,NU,Nunavut,32393,,v7,statcan_17100009
+2009-07-01,01,CAN,Canada,33630069,,v1,statcan_17100009
+2009-07-01,10,NL,Newfoundland and Labrador,516741,,v2,statcan_17100009
+2009-07-01,11,PE,Prince Edward Island,139873,,v8,statcan_17100009
+2009-07-01,12,NS,Nova Scotia,938266,,v9,statcan_17100009
+2009-07-01,13,NB,New Brunswick,749956,,v10,statcan_17100009
+2009-07-01,24,QC,Quebec,7843915,,v11,statcan_17100009
+2009-07-01,35,ON,Ontario,12998941,,v12,statcan_17100009
+2009-07-01,46,MB,Manitoba,1208555,,v13,statcan_17100009
+2009-07-01,47,SK,Saskatchewan,1034791,,v14,statcan_17100009
+2009-07-01,48,AB,Alberta,3679010,,v15,statcan_17100009
+2009-07-01,59,BC,British Columbia,4410513,,v3,statcan_17100009
+2009-07-01,60,YT,Yukon,33733,,v4,statcan_17100009
+2009-07-01,61,NT,Northwest Territories,43171,,v6,statcan_17100009
+2009-07-01,62,NU,Nunavut,32604,,v7,statcan_17100009
+2009-10-01,01,CAN,Canada,33758581,,v1,statcan_17100009
+2009-10-01,10,NL,Newfoundland and Labrador,518975,,v2,statcan_17100009
+2009-10-01,11,PE,Prince Edward Island,140596,,v8,statcan_17100009
+2009-10-01,12,NS,Nova Scotia,940558,,v9,statcan_17100009
+2009-10-01,13,NB,New Brunswick,751066,,v10,statcan_17100009
+2009-10-01,24,QC,Quebec,7871847,,v11,statcan_17100009
+2009-10-01,35,ON,Ontario,13048442,,v12,statcan_17100009
+2009-10-01,46,MB,Manitoba,1211881,,v13,statcan_17100009
+2009-10-01,47,SK,Saskatchewan,1039530,,v14,statcan_17100009
+2009-10-01,48,AB,Alberta,3694318,,v15,statcan_17100009
+2009-10-01,59,BC,British Columbia,4431587,,v3,statcan_17100009
+2009-10-01,60,YT,Yukon,34027,,v4,statcan_17100009
+2009-10-01,61,NT,Northwest Territories,42938,,v6,statcan_17100009
+2009-10-01,62,NU,Nunavut,32816,,v7,statcan_17100009
+2010-01-01,01,CAN,Canada,33809016,,v1,statcan_17100009
+2010-01-01,10,NL,Newfoundland and Labrador,520276,,v2,statcan_17100009
+2010-01-01,11,PE,Prince Edward Island,140598,,v8,statcan_17100009
+2010-01-01,12,NS,Nova Scotia,940879,,v9,statcan_17100009
+2010-01-01,13,NB,New Brunswick,751282,,v10,statcan_17100009
+2010-01-01,24,QC,Quebec,7886127,,v11,statcan_17100009
+2010-01-01,35,ON,Ontario,13059426,,v12,statcan_17100009
+2010-01-01,46,MB,Manitoba,1213941,,v13,statcan_17100009
+2010-01-01,47,SK,Saskatchewan,1042936,,v14,statcan_17100009
+2010-01-01,48,AB,Alberta,3702290,,v15,statcan_17100009
+2010-01-01,59,BC,British Columbia,4441345,,v3,statcan_17100009
+2010-01-01,60,YT,Yukon,34009,,v4,statcan_17100009
+2010-01-01,61,NT,Northwest Territories,42981,,v6,statcan_17100009
+2010-01-01,62,NU,Nunavut,32926,,v7,statcan_17100009
+2010-04-01,01,CAN,Canada,33890461,,v1,statcan_17100009
+2010-04-01,10,NL,Newfoundland and Labrador,521197,,v2,statcan_17100009
+2010-04-01,11,PE,Prince Edward Island,140978,,v8,statcan_17100009
+2010-04-01,12,NS,Nova Scotia,940967,,v9,statcan_17100009
+2010-04-01,13,NB,New Brunswick,752020,,v10,statcan_17100009
+2010-04-01,24,QC,Quebec,7903676,,v11,statcan_17100009
+2010-04-01,35,ON,Ontario,13088924,,v12,statcan_17100009
+2010-04-01,46,MB,Manitoba,1216618,,v13,statcan_17100009
+2010-04-01,47,SK,Saskatchewan,1046779,,v14,statcan_17100009
+2010-04-01,48,AB,Alberta,3714999,,v15,statcan_17100009
+2010-04-01,59,BC,British Columbia,4453756,,v3,statcan_17100009
+2010-04-01,60,YT,Yukon,34243,,v4,statcan_17100009
+2010-04-01,61,NT,Northwest Territories,43161,,v6,statcan_17100009
+2010-04-01,62,NU,Nunavut,33143,,v7,statcan_17100009
+2010-07-01,01,CAN,Canada,34005902,,v1,statcan_17100009
+2010-07-01,10,NL,Newfoundland and Labrador,522002,,v2,statcan_17100009
+2010-07-01,11,PE,Prince Edward Island,141644,,v8,statcan_17100009
+2010-07-01,12,NS,Nova Scotia,942144,,v9,statcan_17100009
+2010-07-01,13,NB,New Brunswick,753034,,v10,statcan_17100009
+2010-07-01,24,QC,Quebec,7929479,,v11,statcan_17100009
+2010-07-01,35,ON,Ontario,13136481,,v12,statcan_17100009
+2010-07-01,46,MB,Manitoba,1220782,,v13,statcan_17100009
+2010-07-01,47,SK,Saskatchewan,1051426,,v14,statcan_17100009
+2010-07-01,48,AB,Alberta,3732104,,v15,statcan_17100009
+2010-07-01,59,BC,British Columbia,4465557,,v3,statcan_17100009
+2010-07-01,60,YT,Yukon,34598,,v4,statcan_17100009
+2010-07-01,61,NT,Northwest Territories,43292,,v6,statcan_17100009
+2010-07-01,62,NU,Nunavut,33359,,v7,statcan_17100009
+2010-10-01,01,CAN,Canada,34132531,,v1,statcan_17100009
+2010-10-01,10,NL,Newfoundland and Labrador,522861,,v2,statcan_17100009
+2010-10-01,11,PE,Prince Edward Island,142725,,v8,statcan_17100009
+2010-10-01,12,NS,Nova Scotia,944201,,v9,statcan_17100009
+2010-10-01,13,NB,New Brunswick,754287,,v10,statcan_17100009
+2010-10-01,24,QC,Quebec,7955183,,v11,statcan_17100009
+2010-10-01,35,ON,Ontario,13189987,,v12,statcan_17100009
+2010-10-01,46,MB,Manitoba,1224663,,v13,statcan_17100009
+2010-10-01,47,SK,Saskatchewan,1056102,,v14,statcan_17100009
+2010-10-01,48,AB,Alberta,3747235,,v15,statcan_17100009
+2010-10-01,59,BC,British Columbia,4483613,,v3,statcan_17100009
+2010-10-01,60,YT,Yukon,34790,,v4,statcan_17100009
+2010-10-01,61,NT,Northwest Territories,43307,,v6,statcan_17100009
+2010-10-01,62,NU,Nunavut,33577,,v7,statcan_17100009
+2011-01-01,01,CAN,Canada,34166633,,v1,statcan_17100009
+2011-01-01,10,NL,Newfoundland and Labrador,523723,,v2,statcan_17100009
+2011-01-01,11,PE,Prince Edward Island,143016,,v8,statcan_17100009
+2011-01-01,12,NS,Nova Scotia,944082,,v9,statcan_17100009
+2011-01-01,13,NB,New Brunswick,754795,,v10,statcan_17100009
+2011-01-01,24,QC,Quebec,7967270,,v11,statcan_17100009
+2011-01-01,35,ON,Ontario,13199081,,v12,statcan_17100009
+2011-01-01,46,MB,Manitoba,1227210,,v13,statcan_17100009
+2011-01-01,47,SK,Saskatchewan,1058969,,v14,statcan_17100009
+2011-01-01,48,AB,Alberta,3754422,,v15,statcan_17100009
+2011-01-01,59,BC,British Columbia,4482262,,v3,statcan_17100009
+2011-01-01,60,YT,Yukon,34802,,v4,statcan_17100009
+2011-01-01,61,NT,Northwest Territories,43265,,v6,statcan_17100009
+2011-01-01,62,NU,Nunavut,33736,,v7,statcan_17100009
+2011-04-01,01,CAN,Canada,34230555,,v1,statcan_17100009
+2011-04-01,10,NL,Newfoundland and Labrador,524238,,v2,statcan_17100009
+2011-04-01,11,PE,Prince Edward Island,143265,,v8,statcan_17100009
+2011-04-01,12,NS,Nova Scotia,943921,,v9,statcan_17100009
+2011-04-01,13,NB,New Brunswick,754843,,v10,statcan_17100009
+2011-04-01,24,QC,Quebec,7982145,,v11,statcan_17100009
+2011-04-01,35,ON,Ontario,13222146,,v12,statcan_17100009
+2011-04-01,46,MB,Manitoba,1229058,,v13,statcan_17100009
+2011-04-01,47,SK,Saskatchewan,1061484,,v14,statcan_17100009
+2011-04-01,48,AB,Alberta,3768774,,v15,statcan_17100009
+2011-04-01,59,BC,British Columbia,4488509,,v3,statcan_17100009
+2011-04-01,60,YT,Yukon,34984,,v4,statcan_17100009
+2011-04-01,61,NT,Northwest Territories,43263,,v6,statcan_17100009
+2011-04-01,62,NU,Nunavut,33925,,v7,statcan_17100009
+2011-07-01,01,CAN,Canada,34339221,,v1,statcan_17100009
+2011-07-01,10,NL,Newfoundland and Labrador,524955,,v2,statcan_17100009
+2011-07-01,11,PE,Prince Edward Island,143918,,v8,statcan_17100009
+2011-07-01,12,NS,Nova Scotia,944095,,v9,statcan_17100009
+2011-07-01,13,NB,New Brunswick,755590,,v10,statcan_17100009
+2011-07-01,24,QC,Quebec,8004736,,v11,statcan_17100009
+2011-07-01,35,ON,Ontario,13262345,,v12,statcan_17100009
+2011-07-01,46,MB,Manitoba,1233353,,v13,statcan_17100009
+2011-07-01,47,SK,Saskatchewan,1065661,,v14,statcan_17100009
+2011-07-01,48,AB,Alberta,3787705,,v15,statcan_17100009
+2011-07-01,59,BC,British Columbia,4503819,,v3,statcan_17100009
+2011-07-01,60,YT,Yukon,35366,,v4,statcan_17100009
+2011-07-01,61,NT,Northwest Territories,43493,,v6,statcan_17100009
+2011-07-01,62,NU,Nunavut,34185,,v7,statcan_17100009
+2011-10-01,01,CAN,Canada,34457713,,v1,statcan_17100009
+2011-10-01,10,NL,Newfoundland and Labrador,525845,,v2,statcan_17100009
+2011-10-01,11,PE,Prince Edward Island,144283,,v8,statcan_17100009
+2011-10-01,12,NS,Nova Scotia,944645,,v9,statcan_17100009
+2011-10-01,13,NB,New Brunswick,756187,,v10,statcan_17100009
+2011-10-01,24,QC,Quebec,8021063,,v11,statcan_17100009
+2011-10-01,35,ON,Ontario,13310604,,v12,statcan_17100009
+2011-10-01,46,MB,Manitoba,1237390,,v13,statcan_17100009
+2011-10-01,47,SK,Saskatchewan,1069950,,v14,statcan_17100009
+2011-10-01,48,AB,Alberta,3805071,,v15,statcan_17100009
+2011-10-01,59,BC,British Columbia,4529186,,v3,statcan_17100009
+2011-10-01,60,YT,Yukon,35578,,v4,statcan_17100009
+2011-10-01,61,NT,Northwest Territories,43576,,v6,statcan_17100009
+2011-10-01,62,NU,Nunavut,34335,,v7,statcan_17100009
+2012-01-01,01,CAN,Canada,34516032,,v1,statcan_17100009
+2012-01-01,10,NL,Newfoundland and Labrador,526115,,v2,statcan_17100009
+2012-01-01,11,PE,Prince Edward Island,144208,,v8,statcan_17100009
+2012-01-01,12,NS,Nova Scotia,943907,,v9,statcan_17100009
+2012-01-01,13,NB,New Brunswick,757039,,v10,statcan_17100009
+2012-01-01,24,QC,Quebec,8028516,,v11,statcan_17100009
+2012-01-01,35,ON,Ontario,13325337,,v12,statcan_17100009
+2012-01-01,46,MB,Manitoba,1241417,,v13,statcan_17100009
+2012-01-01,47,SK,Saskatchewan,1073565,,v14,statcan_17100009
+2012-01-01,48,AB,Alberta,3822425,,v15,statcan_17100009
+2012-01-01,59,BC,British Columbia,4539775,,v3,statcan_17100009
+2012-01-01,60,YT,Yukon,35695,,v4,statcan_17100009
+2012-01-01,61,NT,Northwest Territories,43630,,v6,statcan_17100009
+2012-01-01,62,NU,Nunavut,34403,,v7,statcan_17100009
+2012-04-01,01,CAN,Canada,34592192,,v1,statcan_17100009
+2012-04-01,10,NL,Newfoundland and Labrador,525550,,v2,statcan_17100009
+2012-04-01,11,PE,Prince Edward Island,144365,,v8,statcan_17100009
+2012-04-01,12,NS,Nova Scotia,943317,,v9,statcan_17100009
+2012-04-01,13,NB,New Brunswick,757024,,v10,statcan_17100009
+2012-04-01,24,QC,Quebec,8038332,,v11,statcan_17100009
+2012-04-01,35,ON,Ontario,13350123,,v12,statcan_17100009
+2012-04-01,46,MB,Manitoba,1244884,,v13,statcan_17100009
+2012-04-01,47,SK,Saskatchewan,1077170,,v14,statcan_17100009
+2012-04-01,48,AB,Alberta,3845093,,v15,statcan_17100009
+2012-04-01,59,BC,British Columbia,4552320,,v3,statcan_17100009
+2012-04-01,60,YT,Yukon,35757,,v4,statcan_17100009
+2012-04-01,61,NT,Northwest Territories,43678,,v6,statcan_17100009
+2012-04-01,62,NU,Nunavut,34579,,v7,statcan_17100009
+2012-07-01,01,CAN,Canada,34713395,,v1,statcan_17100009
+2012-07-01,10,NL,Newfoundland and Labrador,526235,,v2,statcan_17100009
+2012-07-01,11,PE,Prince Edward Island,144415,,v8,statcan_17100009
+2012-07-01,12,NS,Nova Scotia,943163,,v9,statcan_17100009
+2012-07-01,13,NB,New Brunswick,758121,,v10,statcan_17100009
+2012-07-01,24,QC,Quebec,8059752,,v11,statcan_17100009
+2012-07-01,35,ON,Ontario,13392364,,v12,statcan_17100009
+2012-07-01,46,MB,Manitoba,1249094,,v13,statcan_17100009
+2012-07-01,47,SK,Saskatchewan,1083005,,v14,statcan_17100009
+2012-07-01,48,AB,Alberta,3871947,,v15,statcan_17100009
+2012-07-01,59,BC,British Columbia,4570866,,v3,statcan_17100009
+2012-07-01,60,YT,Yukon,36151,,v4,statcan_17100009
+2012-07-01,61,NT,Northwest Territories,43624,,v6,statcan_17100009
+2012-07-01,62,NU,Nunavut,34658,,v7,statcan_17100009
+2012-10-01,01,CAN,Canada,34834973,,v1,statcan_17100009
+2012-10-01,10,NL,Newfoundland and Labrador,527065,,v2,statcan_17100009
+2012-10-01,11,PE,Prince Edward Island,144396,,v8,statcan_17100009
+2012-10-01,12,NS,Nova Scotia,942829,,v9,statcan_17100009
+2012-10-01,13,NB,New Brunswick,758408,,v10,statcan_17100009
+2012-10-01,24,QC,Quebec,8076838,,v11,statcan_17100009
+2012-10-01,35,ON,Ontario,13436625,,v12,statcan_17100009
+2012-10-01,46,MB,Manitoba,1253210,,v13,statcan_17100009
+2012-10-01,47,SK,Saskatchewan,1088177,,v14,statcan_17100009
+2012-10-01,48,AB,Alberta,3897746,,v15,statcan_17100009
+2012-10-01,59,BC,British Columbia,4594846,,v3,statcan_17100009
+2012-10-01,60,YT,Yukon,36347,,v4,statcan_17100009
+2012-10-01,61,NT,Northwest Territories,43656,,v6,statcan_17100009
+2012-10-01,62,NU,Nunavut,34830,,v7,statcan_17100009
+2013-01-01,01,CAN,Canada,34881794,,v1,statcan_17100009
+2013-01-01,10,NL,Newfoundland and Labrador,527129,,v2,statcan_17100009
+2013-01-01,11,PE,Prince Edward Island,144041,,v8,statcan_17100009
+2013-01-01,12,NS,Nova Scotia,942045,,v9,statcan_17100009
+2013-01-01,13,NB,New Brunswick,758026,,v10,statcan_17100009
+2013-01-01,24,QC,Quebec,8081006,,v11,statcan_17100009
+2013-01-01,35,ON,Ontario,13446276,,v12,statcan_17100009
+2013-01-01,46,MB,Manitoba,1256879,,v13,statcan_17100009
+2013-01-01,47,SK,Saskatchewan,1090738,,v14,statcan_17100009
+2013-01-01,48,AB,Alberta,3917941,,v15,statcan_17100009
+2013-01-01,59,BC,British Columbia,4602742,,v3,statcan_17100009
+2013-01-01,60,YT,Yukon,36299,,v4,statcan_17100009
+2013-01-01,61,NT,Northwest Territories,43709,,v6,statcan_17100009
+2013-01-01,62,NU,Nunavut,34963,,v7,statcan_17100009
+2013-04-01,01,CAN,Canada,34956567,,v1,statcan_17100009
+2013-04-01,10,NL,Newfoundland and Labrador,527177,,v2,statcan_17100009
+2013-04-01,11,PE,Prince Edward Island,143807,,v8,statcan_17100009
+2013-04-01,12,NS,Nova Scotia,940647,,v9,statcan_17100009
+2013-04-01,13,NB,New Brunswick,757854,,v10,statcan_17100009
+2013-04-01,24,QC,Quebec,8089004,,v11,statcan_17100009
+2013-04-01,35,ON,Ontario,13469151,,v12,statcan_17100009
+2013-04-01,46,MB,Manitoba,1259693,,v13,statcan_17100009
+2013-04-01,47,SK,Saskatchewan,1093549,,v14,statcan_17100009
+2013-04-01,48,AB,Alberta,3944281,,v15,statcan_17100009
+2013-04-01,59,BC,British Columbia,4616335,,v3,statcan_17100009
+2013-04-01,60,YT,Yukon,36242,,v4,statcan_17100009
+2013-04-01,61,NT,Northwest Territories,43840,,v6,statcan_17100009
+2013-04-01,62,NU,Nunavut,34987,,v7,statcan_17100009
+2013-07-01,01,CAN,Canada,35080992,,v1,statcan_17100009
+2013-07-01,10,NL,Newfoundland and Labrador,526960,,v2,statcan_17100009
+2013-07-01,11,PE,Prince Edward Island,143942,,v8,statcan_17100009
+2013-07-01,12,NS,Nova Scotia,939808,,v9,statcan_17100009
+2013-07-01,13,NB,New Brunswick,758261,,v10,statcan_17100009
+2013-07-01,24,QC,Quebec,8108825,,v11,statcan_17100009
+2013-07-01,35,ON,Ontario,13511902,,v12,statcan_17100009
+2013-07-01,46,MB,Manitoba,1263393,,v13,statcan_17100009
+2013-07-01,47,SK,Saskatchewan,1098868,,v14,statcan_17100009
+2013-07-01,48,AB,Alberta,3978532,,v15,statcan_17100009
+2013-07-01,59,BC,British Columbia,4634943,,v3,statcan_17100009
+2013-07-01,60,YT,Yukon,36454,,v4,statcan_17100009
+2013-07-01,61,NT,Northwest Territories,43774,,v6,statcan_17100009
+2013-07-01,62,NU,Nunavut,35330,,v7,statcan_17100009
+2013-10-01,01,CAN,Canada,35209597,,v1,statcan_17100009
+2013-10-01,10,NL,Newfoundland and Labrador,527948,,v2,statcan_17100009
+2013-10-01,11,PE,Prince Edward Island,143943,,v8,statcan_17100009
+2013-10-01,12,NS,Nova Scotia,939442,,v9,statcan_17100009
+2013-10-01,13,NB,New Brunswick,758379,,v10,statcan_17100009
+2013-10-01,24,QC,Quebec,8122462,,v11,statcan_17100009
+2013-10-01,35,ON,Ontario,13559499,,v12,statcan_17100009
+2013-10-01,46,MB,Manitoba,1267105,,v13,statcan_17100009
+2013-10-01,47,SK,Saskatchewan,1102832,,v14,statcan_17100009
+2013-10-01,48,AB,Alberta,4008421,,v15,statcan_17100009
+2013-10-01,59,BC,British Columbia,4663919,,v3,statcan_17100009
+2013-10-01,60,YT,Yukon,36384,,v4,statcan_17100009
+2013-10-01,61,NT,Northwest Territories,43727,,v6,statcan_17100009
+2013-10-01,62,NU,Nunavut,35536,,v7,statcan_17100009
+2014-01-01,01,CAN,Canada,35247023,,v1,statcan_17100009
+2014-01-01,10,NL,Newfoundland and Labrador,528065,,v2,statcan_17100009
+2014-01-01,11,PE,Prince Edward Island,143828,,v8,statcan_17100009
+2014-01-01,12,NS,Nova Scotia,939166,,v9,statcan_17100009
+2014-01-01,13,NB,New Brunswick,758713,,v10,statcan_17100009
+2014-01-01,24,QC,Quebec,8123138,,v11,statcan_17100009
+2014-01-01,35,ON,Ontario,13563311,,v12,statcan_17100009
+2014-01-01,46,MB,Manitoba,1270153,,v13,statcan_17100009
+2014-01-01,47,SK,Saskatchewan,1105444,,v14,statcan_17100009
+2014-01-01,48,AB,Alberta,4027497,,v15,statcan_17100009
+2014-01-01,59,BC,British Columbia,4672025,,v3,statcan_17100009
+2014-01-01,60,YT,Yukon,36333,,v4,statcan_17100009
+2014-01-01,61,NT,Northwest Territories,43767,,v6,statcan_17100009
+2014-01-01,62,NU,Nunavut,35583,,v7,statcan_17100009
+2014-04-01,01,CAN,Canada,35320540,,v1,statcan_17100009
+2014-04-01,10,NL,Newfoundland and Labrador,527314,,v2,statcan_17100009
+2014-04-01,11,PE,Prince Edward Island,143810,,v8,statcan_17100009
+2014-04-01,12,NS,Nova Scotia,938175,,v9,statcan_17100009
+2014-04-01,13,NB,New Brunswick,758570,,v10,statcan_17100009
+2014-04-01,24,QC,Quebec,8129926,,v11,statcan_17100009
+2014-04-01,35,ON,Ontario,13583220,,v12,statcan_17100009
+2014-04-01,46,MB,Manitoba,1272914,,v13,statcan_17100009
+2014-04-01,47,SK,Saskatchewan,1108674,,v14,statcan_17100009
+2014-04-01,48,AB,Alberta,4051858,,v15,statcan_17100009
+2014-04-01,59,BC,British Columbia,4689892,,v3,statcan_17100009
+2014-04-01,60,YT,Yukon,36626,,v4,statcan_17100009
+2014-04-01,61,NT,Northwest Territories,43760,,v6,statcan_17100009
+2014-04-01,62,NU,Nunavut,35801,,v7,statcan_17100009
+2014-07-01,01,CAN,Canada,35434066,,v1,statcan_17100009
+2014-07-01,10,NL,Newfoundland and Labrador,527970,,v2,statcan_17100009
+2014-07-01,11,PE,Prince Edward Island,144095,,v8,statcan_17100009
+2014-07-01,12,NS,Nova Scotia,937768,,v9,statcan_17100009
+2014-07-01,13,NB,New Brunswick,758657,,v10,statcan_17100009
+2014-07-01,24,QC,Quebec,8147535,,v11,statcan_17100009
+2014-07-01,35,ON,Ontario,13617763,,v12,statcan_17100009
+2014-07-01,46,MB,Manitoba,1277425,,v13,statcan_17100009
+2014-07-01,47,SK,Saskatchewan,1111989,,v14,statcan_17100009
+2014-07-01,48,AB,Alberta,4081271,,v15,statcan_17100009
+2014-07-01,59,BC,British Columbia,4712691,,v3,statcan_17100009
+2014-07-01,60,YT,Yukon,37085,,v4,statcan_17100009
+2014-07-01,61,NT,Northwest Territories,43851,,v6,statcan_17100009
+2014-07-01,62,NU,Nunavut,35966,,v7,statcan_17100009
+2014-10-01,01,CAN,Canada,35555305,,v1,statcan_17100009
+2014-10-01,10,NL,Newfoundland and Labrador,528266,,v2,statcan_17100009
+2014-10-01,11,PE,Prince Edward Island,144342,,v8,statcan_17100009
+2014-10-01,12,NS,Nova Scotia,938157,,v9,statcan_17100009
+2014-10-01,13,NB,New Brunswick,759192,,v10,statcan_17100009
+2014-10-01,24,QC,Quebec,8162631,,v11,statcan_17100009
+2014-10-01,35,ON,Ontario,13661282,,v12,statcan_17100009
+2014-10-01,46,MB,Manitoba,1281690,,v13,statcan_17100009
+2014-10-01,47,SK,Saskatchewan,1115184,,v14,statcan_17100009
+2014-10-01,48,AB,Alberta,4103702,,v15,statcan_17100009
+2014-10-01,59,BC,British Columbia,4743505,,v3,statcan_17100009
+2014-10-01,60,YT,Yukon,37223,,v4,statcan_17100009
+2014-10-01,61,NT,Northwest Territories,44031,,v6,statcan_17100009
+2014-10-01,62,NU,Nunavut,36100,,v7,statcan_17100009
+2015-01-01,01,CAN,Canada,35571043,,v1,statcan_17100009
+2015-01-01,10,NL,Newfoundland and Labrador,528161,,v2,statcan_17100009
+2015-01-01,11,PE,Prince Edward Island,144162,,v8,statcan_17100009
+2015-01-01,12,NS,Nova Scotia,937442,,v9,statcan_17100009
+2015-01-01,13,NB,New Brunswick,759270,,v10,statcan_17100009
+2015-01-01,24,QC,Quebec,8160176,,v11,statcan_17100009
+2015-01-01,35,ON,Ontario,13657423,,v12,statcan_17100009
+2015-01-01,46,MB,Manitoba,1284693,,v13,statcan_17100009
+2015-01-01,47,SK,Saskatchewan,1117137,,v14,statcan_17100009
+2015-01-01,48,AB,Alberta,4113697,,v15,statcan_17100009
+2015-01-01,59,BC,British Columbia,4751439,,v3,statcan_17100009
+2015-01-01,60,YT,Yukon,37123,,v4,statcan_17100009
+2015-01-01,61,NT,Northwest Territories,44106,,v6,statcan_17100009
+2015-01-01,62,NU,Nunavut,36214,,v7,statcan_17100009
+2015-04-01,01,CAN,Canada,35606734,,v1,statcan_17100009
+2015-04-01,10,NL,Newfoundland and Labrador,527859,,v2,statcan_17100009
+2015-04-01,11,PE,Prince Edward Island,144046,,v8,statcan_17100009
+2015-04-01,12,NS,Nova Scotia,935380,,v9,statcan_17100009
+2015-04-01,13,NB,New Brunswick,758579,,v10,statcan_17100009
+2015-04-01,24,QC,Quebec,8159968,,v11,statcan_17100009
+2015-04-01,35,ON,Ontario,13669290,,v12,statcan_17100009
+2015-04-01,46,MB,Manitoba,1286250,,v13,statcan_17100009
+2015-04-01,47,SK,Saskatchewan,1117736,,v14,statcan_17100009
+2015-04-01,48,AB,Alberta,4125943,,v15,statcan_17100009
+2015-04-01,59,BC,British Columbia,4763917,,v3,statcan_17100009
+2015-04-01,60,YT,Yukon,37330,,v4,statcan_17100009
+2015-04-01,61,NT,Northwest Territories,44159,,v6,statcan_17100009
+2015-04-01,62,NU,Nunavut,36277,,v7,statcan_17100009
+2015-07-01,01,CAN,Canada,35704498,,v1,statcan_17100009
+2015-07-01,10,NL,Newfoundland and Labrador,528348,,v2,statcan_17100009
+2015-07-01,11,PE,Prince Edward Island,144636,,v8,statcan_17100009
+2015-07-01,12,NS,Nova Scotia,937419,,v9,statcan_17100009
+2015-07-01,13,NB,New Brunswick,759226,,v10,statcan_17100009
+2015-07-01,24,QC,Quebec,8175743,,v11,statcan_17100009
+2015-07-01,35,ON,Ontario,13709293,,v12,statcan_17100009
+2015-07-01,46,MB,Manitoba,1293598,,v13,statcan_17100009
+2015-07-01,47,SK,Saskatchewan,1122210,,v14,statcan_17100009
+2015-07-01,48,AB,Alberta,4150147,,v15,statcan_17100009
+2015-07-01,59,BC,British Columbia,4765472,,v3,statcan_17100009
+2015-07-01,60,YT,Yukon,37669,,v4,statcan_17100009
+2015-07-01,61,NT,Northwest Territories,44247,,v6,statcan_17100009
+2015-07-01,62,NU,Nunavut,36490,,v7,statcan_17100009
+2015-10-01,01,CAN,Canada,35823591,,v1,statcan_17100009
+2015-10-01,10,NL,Newfoundland and Labrador,528843,,v2,statcan_17100009
+2015-10-01,11,PE,Prince Edward Island,144949,,v8,statcan_17100009
+2015-10-01,12,NS,Nova Scotia,938914,,v9,statcan_17100009
+2015-10-01,13,NB,New Brunswick,759971,,v10,statcan_17100009
+2015-10-01,24,QC,Quebec,8190074,,v11,statcan_17100009
+2015-10-01,35,ON,Ontario,13759762,,v12,statcan_17100009
+2015-10-01,46,MB,Manitoba,1298120,,v13,statcan_17100009
+2015-10-01,47,SK,Saskatchewan,1125588,,v14,statcan_17100009
+2015-10-01,48,AB,Alberta,4163048,,v15,statcan_17100009
+2015-10-01,59,BC,British Columbia,4795547,,v3,statcan_17100009
+2015-10-01,60,YT,Yukon,37730,,v4,statcan_17100009
+2015-10-01,61,NT,Northwest Territories,44443,,v6,statcan_17100009
+2015-10-01,62,NU,Nunavut,36602,,v7,statcan_17100009
+2016-01-01,01,CAN,Canada,35871484,,v1,statcan_17100009
+2016-01-01,10,NL,Newfoundland and Labrador,528903,,v2,statcan_17100009
+2016-01-01,11,PE,Prince Edward Island,145238,,v8,statcan_17100009
+2016-01-01,12,NS,Nova Scotia,938973,,v9,statcan_17100009
+2016-01-01,13,NB,New Brunswick,760679,,v10,statcan_17100009
+2016-01-01,24,QC,Quebec,8193831,,v11,statcan_17100009
+2016-01-01,35,ON,Ontario,13774364,,v12,statcan_17100009
+2016-01-01,46,MB,Manitoba,1302938,,v13,statcan_17100009
+2016-01-01,47,SK,Saskatchewan,1128160,,v14,statcan_17100009
+2016-01-01,48,AB,Alberta,4171847,,v15,statcan_17100009
+2016-01-01,59,BC,British Columbia,4807562,,v3,statcan_17100009
+2016-01-01,60,YT,Yukon,37756,,v4,statcan_17100009
+2016-01-01,61,NT,Northwest Territories,44515,,v6,statcan_17100009
+2016-01-01,62,NU,Nunavut,36718,,v7,statcan_17100009
+2016-04-01,01,CAN,Canada,35970407,,v1,statcan_17100009
+2016-04-01,10,NL,Newfoundland and Labrador,529083,,v2,statcan_17100009
+2016-04-01,11,PE,Prince Edward Island,145792,,v8,statcan_17100009
+2016-04-01,12,NS,Nova Scotia,940471,,v9,statcan_17100009
+2016-04-01,13,NB,New Brunswick,762317,,v10,statcan_17100009
+2016-04-01,24,QC,Quebec,8204229,,v11,statcan_17100009
+2016-04-01,35,ON,Ontario,13816652,,v12,statcan_17100009
+2016-04-01,46,MB,Manitoba,1307797,,v13,statcan_17100009
+2016-04-01,47,SK,Saskatchewan,1131285,,v14,statcan_17100009
+2016-04-01,48,AB,Alberta,4182353,,v15,statcan_17100009
+2016-04-01,59,BC,British Columbia,4831042,,v3,statcan_17100009
+2016-04-01,60,YT,Yukon,38025,,v4,statcan_17100009
+2016-04-01,61,NT,Northwest Territories,44595,,v6,statcan_17100009
+2016-04-01,62,NU,Nunavut,36766,,v7,statcan_17100009
+2016-07-01,01,CAN,Canada,36110803,,v1,statcan_17100009
+2016-07-01,10,NL,Newfoundland and Labrador,529586,,v2,statcan_17100009
+2016-07-01,11,PE,Prince Edward Island,146891,,v8,statcan_17100009
+2016-07-01,12,NS,Nova Scotia,942984,,v9,statcan_17100009
+2016-07-01,13,NB,New Brunswick,763322,,v10,statcan_17100009
+2016-07-01,24,QC,Quebec,8225036,,v11,statcan_17100009
+2016-07-01,35,ON,Ontario,13876500,,v12,statcan_17100009
+2016-07-01,46,MB,Manitoba,1314140,,v13,statcan_17100009
+2016-07-01,47,SK,Saskatchewan,1135496,,v14,statcan_17100009
+2016-07-01,48,AB,Alberta,4195427,,v15,statcan_17100009
+2016-07-01,59,BC,British Columbia,4861269,,v3,statcan_17100009
+2016-07-01,60,YT,Yukon,38549,,v4,statcan_17100009
+2016-07-01,61,NT,Northwest Territories,44624,,v6,statcan_17100009
+2016-07-01,62,NU,Nunavut,36979,,v7,statcan_17100009
+2016-10-01,01,CAN,Canada,36257421,,v1,statcan_17100009
+2016-10-01,10,NL,Newfoundland and Labrador,530368,,v2,statcan_17100009
+2016-10-01,11,PE,Prince Edward Island,147699,,v8,statcan_17100009
+2016-10-01,12,NS,Nova Scotia,946623,,v9,statcan_17100009
+2016-10-01,13,NB,New Brunswick,764820,,v10,statcan_17100009
+2016-10-01,24,QC,Quebec,8246383,,v11,statcan_17100009
+2016-10-01,35,ON,Ontario,13948180,,v12,statcan_17100009
+2016-10-01,46,MB,Manitoba,1319800,,v13,statcan_17100009
+2016-10-01,47,SK,Saskatchewan,1139492,,v14,statcan_17100009
+2016-10-01,48,AB,Alberta,4207139,,v15,statcan_17100009
+2016-10-01,59,BC,British Columbia,4886638,,v3,statcan_17100009
+2016-10-01,60,YT,Yukon,38724,,v4,statcan_17100009
+2016-10-01,61,NT,Northwest Territories,44471,,v6,statcan_17100009
+2016-10-01,62,NU,Nunavut,37084,,v7,statcan_17100009
+2017-01-01,01,CAN,Canada,36313068,,v1,statcan_17100009
+2017-01-01,10,NL,Newfoundland and Labrador,530175,,v2,statcan_17100009
+2017-01-01,11,PE,Prince Edward Island,147811,,v8,statcan_17100009
+2017-01-01,12,NS,Nova Scotia,947023,,v9,statcan_17100009
+2017-01-01,13,NB,New Brunswick,764612,,v10,statcan_17100009
+2017-01-01,24,QC,Quebec,8252179,,v11,statcan_17100009
+2017-01-01,35,ON,Ontario,13975516,,v12,statcan_17100009
+2017-01-01,46,MB,Manitoba,1324044,,v13,statcan_17100009
+2017-01-01,47,SK,Saskatchewan,1141537,,v14,statcan_17100009
+2017-01-01,48,AB,Alberta,4215506,,v15,statcan_17100009
+2017-01-01,59,BC,British Columbia,4894147,,v3,statcan_17100009
+2017-01-01,60,YT,Yukon,38801,,v4,statcan_17100009
+2017-01-01,61,NT,Northwest Territories,44471,,v6,statcan_17100009
+2017-01-01,62,NU,Nunavut,37246,,v7,statcan_17100009
+2017-04-01,01,CAN,Canada,36397141,,v1,statcan_17100009
+2017-04-01,10,NL,Newfoundland and Labrador,529700,,v2,statcan_17100009
+2017-04-01,11,PE,Prince Edward Island,148354,,v8,statcan_17100009
+2017-04-01,12,NS,Nova Scotia,948945,,v9,statcan_17100009
+2017-04-01,13,NB,New Brunswick,764859,,v10,statcan_17100009
+2017-04-01,24,QC,Quebec,8265839,,v11,statcan_17100009
+2017-04-01,35,ON,Ontario,14012209,,v12,statcan_17100009
+2017-04-01,46,MB,Manitoba,1328337,,v13,statcan_17100009
+2017-04-01,47,SK,Saskatchewan,1143829,,v14,statcan_17100009
+2017-04-01,48,AB,Alberta,4224933,,v15,statcan_17100009
+2017-04-01,59,BC,British Columbia,4908971,,v3,statcan_17100009
+2017-04-01,60,YT,Yukon,39108,,v4,statcan_17100009
+2017-04-01,61,NT,Northwest Territories,44626,,v6,statcan_17100009
+2017-04-01,62,NU,Nunavut,37431,,v7,statcan_17100009
+2017-07-01,01,CAN,Canada,36545075,,v1,statcan_17100009
+2017-07-01,10,NL,Newfoundland and Labrador,529742,,v2,statcan_17100009
+2017-07-01,11,PE,Prince Edward Island,149740,,v8,statcan_17100009
+2017-07-01,12,NS,Nova Scotia,952159,,v9,statcan_17100009
+2017-07-01,13,NB,New Brunswick,766697,,v10,statcan_17100009
+2017-07-01,24,QC,Quebec,8292832,,v11,statcan_17100009
+2017-07-01,35,ON,Ontario,14078499,,v12,statcan_17100009
+2017-07-01,46,MB,Manitoba,1334734,,v13,statcan_17100009
+2017-07-01,47,SK,Saskatchewan,1147315,,v14,statcan_17100009
+2017-07-01,48,AB,Alberta,4237310,,v15,statcan_17100009
+2017-07-01,59,BC,British Columbia,4934202,,v3,statcan_17100009
+2017-07-01,60,YT,Yukon,39533,,v4,statcan_17100009
+2017-07-01,61,NT,Northwest Territories,44656,,v6,statcan_17100009
+2017-07-01,62,NU,Nunavut,37656,,v7,statcan_17100009
+2017-10-01,01,CAN,Canada,36722075,,v1,statcan_17100009
+2017-10-01,10,NL,Newfoundland and Labrador,530153,,v2,statcan_17100009
+2017-10-01,11,PE,Prince Edward Island,150595,,v8,statcan_17100009
+2017-10-01,12,NS,Nova Scotia,956074,,v9,statcan_17100009
+2017-10-01,13,NB,New Brunswick,768029,,v10,statcan_17100009
+2017-10-01,24,QC,Quebec,8326075,,v11,statcan_17100009
+2017-10-01,35,ON,Ontario,14161084,,v12,statcan_17100009
+2017-10-01,46,MB,Manitoba,1340426,,v13,statcan_17100009
+2017-10-01,47,SK,Saskatchewan,1151044,,v14,statcan_17100009
+2017-10-01,48,AB,Alberta,4253530,,v15,statcan_17100009
+2017-10-01,59,BC,British Columbia,4962706,,v3,statcan_17100009
+2017-10-01,60,YT,Yukon,39705,,v4,statcan_17100009
+2017-10-01,61,NT,Northwest Territories,44825,,v6,statcan_17100009
+2017-10-01,62,NU,Nunavut,37829,,v7,statcan_17100009
+2018-01-01,01,CAN,Canada,36801579,,v1,statcan_17100009
+2018-01-01,10,NL,Newfoundland and Labrador,529743,,v2,statcan_17100009
+2018-01-01,11,PE,Prince Edward Island,150619,,v8,statcan_17100009
+2018-01-01,12,NS,Nova Scotia,956711,,v9,statcan_17100009
+2018-01-01,13,NB,New Brunswick,768146,,v10,statcan_17100009
+2018-01-01,24,QC,Quebec,8338883,,v11,statcan_17100009
+2018-01-01,35,ON,Ontario,14199811,,v12,statcan_17100009
+2018-01-01,46,MB,Manitoba,1344198,,v13,statcan_17100009
+2018-01-01,47,SK,Saskatchewan,1152366,,v14,statcan_17100009
+2018-01-01,48,AB,Alberta,4263957,,v15,statcan_17100009
+2018-01-01,59,BC,British Columbia,4974712,,v3,statcan_17100009
+2018-01-01,60,YT,Yukon,39873,,v4,statcan_17100009
+2018-01-01,61,NT,Northwest Territories,44730,,v6,statcan_17100009
+2018-01-01,62,NU,Nunavut,37830,,v7,statcan_17100009
+2018-04-01,01,CAN,Canada,36903671,,v1,statcan_17100009
+2018-04-01,10,NL,Newfoundland and Labrador,528924,,v2,statcan_17100009
+2018-04-01,11,PE,Prince Edward Island,151008,,v8,statcan_17100009
+2018-04-01,12,NS,Nova Scotia,957883,,v9,statcan_17100009
+2018-04-01,13,NB,New Brunswick,768707,,v10,statcan_17100009
+2018-04-01,24,QC,Quebec,8354460,,v11,statcan_17100009
+2018-04-01,35,ON,Ontario,14251136,,v12,statcan_17100009
+2018-04-01,46,MB,Manitoba,1346916,,v13,statcan_17100009
+2018-04-01,47,SK,Saskatchewan,1153530,,v14,statcan_17100009
+2018-04-01,48,AB,Alberta,4276444,,v15,statcan_17100009
+2018-04-01,59,BC,British Columbia,4991716,,v3,statcan_17100009
+2018-04-01,60,YT,Yukon,40037,,v4,statcan_17100009
+2018-04-01,61,NT,Northwest Territories,44934,,v6,statcan_17100009
+2018-04-01,62,NU,Nunavut,37976,,v7,statcan_17100009
+2018-07-01,01,CAN,Canada,37072620,,v1,statcan_17100009
+2018-07-01,10,NL,Newfoundland and Labrador,528402,,v2,statcan_17100009
+2018-07-01,11,PE,Prince Edward Island,152259,,v8,statcan_17100009
+2018-07-01,12,NS,Nova Scotia,962072,,v9,statcan_17100009
+2018-07-01,13,NB,New Brunswick,770497,,v10,statcan_17100009
+2018-07-01,24,QC,Quebec,8386951,,v11,statcan_17100009
+2018-07-01,35,ON,Ontario,14326746,,v12,statcan_17100009
+2018-07-01,46,MB,Manitoba,1352687,,v13,statcan_17100009
+2018-07-01,47,SK,Saskatchewan,1156210,,v14,statcan_17100009
+2018-07-01,48,AB,Alberta,4292556,,v15,statcan_17100009
+2018-07-01,59,BC,British Columbia,5020979,,v3,statcan_17100009
+2018-07-01,60,YT,Yukon,40403,,v4,statcan_17100009
+2018-07-01,61,NT,Northwest Territories,44536,,v6,statcan_17100009
+2018-07-01,62,NU,Nunavut,38322,,v7,statcan_17100009
+2018-10-01,01,CAN,Canada,37259485,,v1,statcan_17100009
+2018-10-01,10,NL,Newfoundland and Labrador,528926,,v2,statcan_17100009
+2018-10-01,11,PE,Prince Edward Island,153906,,v8,statcan_17100009
+2018-10-01,12,NS,Nova Scotia,967578,,v9,statcan_17100009
+2018-10-01,13,NB,New Brunswick,772793,,v10,statcan_17100009
+2018-10-01,24,QC,Quebec,8418646,,v11,statcan_17100009
+2018-10-01,35,ON,Ontario,14413055,,v12,statcan_17100009
+2018-10-01,46,MB,Manitoba,1357856,,v13,statcan_17100009
+2018-10-01,47,SK,Saskatchewan,1159648,,v14,statcan_17100009
+2018-10-01,48,AB,Alberta,4311439,,v15,statcan_17100009
+2018-10-01,59,BC,British Columbia,5052131,,v3,statcan_17100009
+2018-10-01,60,YT,Yukon,40533,,v4,statcan_17100009
+2018-10-01,61,NT,Northwest Territories,44487,,v6,statcan_17100009
+2018-10-01,62,NU,Nunavut,38487,,v7,statcan_17100009
+2019-01-01,01,CAN,Canada,37336956,,v1,statcan_17100009
+2019-01-01,10,NL,Newfoundland and Labrador,528326,,v2,statcan_17100009
+2019-01-01,11,PE,Prince Edward Island,153881,,v8,statcan_17100009
+2019-01-01,12,NS,Nova Scotia,968724,,v9,statcan_17100009
+2019-01-01,13,NB,New Brunswick,773059,,v10,statcan_17100009
+2019-01-01,24,QC,Quebec,8430363,,v11,statcan_17100009
+2019-01-01,35,ON,Ontario,14449986,,v12,statcan_17100009
+2019-01-01,46,MB,Manitoba,1361737,,v13,statcan_17100009
+2019-01-01,47,SK,Saskatchewan,1161529,,v14,statcan_17100009
+2019-01-01,48,AB,Alberta,4324254,,v15,statcan_17100009
+2019-01-01,59,BC,British Columbia,5061132,,v3,statcan_17100009
+2019-01-01,60,YT,Yukon,40716,,v4,statcan_17100009
+2019-01-01,61,NT,Northwest Territories,44675,,v6,statcan_17100009
+2019-01-01,62,NU,Nunavut,38574,,v7,statcan_17100009
+2019-04-01,01,CAN,Canada,37437243,,v1,statcan_17100009
+2019-04-01,10,NL,Newfoundland and Labrador,527993,,v2,statcan_17100009
+2019-04-01,11,PE,Prince Edward Island,154409,,v8,statcan_17100009
+2019-04-01,12,NS,Nova Scotia,970680,,v9,statcan_17100009
+2019-04-01,13,NB,New Brunswick,774277,,v10,statcan_17100009
+2019-04-01,24,QC,Quebec,8447632,,v11,statcan_17100009
+2019-04-01,35,ON,Ontario,14493612,,v12,statcan_17100009
+2019-04-01,46,MB,Manitoba,1364666,,v13,statcan_17100009
+2019-04-01,47,SK,Saskatchewan,1161787,,v14,statcan_17100009
+2019-04-01,48,AB,Alberta,4337569,,v15,statcan_17100009
+2019-04-01,59,BC,British Columbia,5080515,,v3,statcan_17100009
+2019-04-01,60,YT,Yukon,40779,,v4,statcan_17100009
+2019-04-01,61,NT,Northwest Territories,44560,,v6,statcan_17100009
+2019-04-01,62,NU,Nunavut,38764,,v7,statcan_17100009
+2019-07-01,01,CAN,Canada,37618495,,v1,statcan_17100009
+2019-07-01,10,NL,Newfoundland and Labrador,527643,,v2,statcan_17100009
+2019-07-01,11,PE,Prince Edward Island,155792,,v8,statcan_17100009
+2019-07-01,12,NS,Nova Scotia,975799,,v9,statcan_17100009
+2019-07-01,13,NB,New Brunswick,777387,,v10,statcan_17100009
+2019-07-01,24,QC,Quebec,8483186,,v11,statcan_17100009
+2019-07-01,35,ON,Ontario,14573565,,v12,statcan_17100009
+2019-07-01,46,MB,Manitoba,1370033,,v13,statcan_17100009
+2019-07-01,47,SK,Saskatchewan,1164223,,v14,statcan_17100009
+2019-07-01,48,AB,Alberta,4355377,,v15,statcan_17100009
+2019-07-01,59,BC,British Columbia,5111022,,v3,statcan_17100009
+2019-07-01,60,YT,Yukon,41187,,v4,statcan_17100009
+2019-07-01,61,NT,Northwest Territories,44442,,v6,statcan_17100009
+2019-07-01,62,NU,Nunavut,38839,,v7,statcan_17100009
+2019-10-01,01,CAN,Canada,37828162,,v1,statcan_17100009
+2019-10-01,10,NL,Newfoundland and Labrador,528442,,v2,statcan_17100009
+2019-10-01,11,PE,Prince Edward Island,157025,,v8,statcan_17100009
+2019-10-01,12,NS,Nova Scotia,982592,,v9,statcan_17100009
+2019-10-01,13,NB,New Brunswick,780907,,v10,statcan_17100009
+2019-10-01,24,QC,Quebec,8521542,,v11,statcan_17100009
+2019-10-01,35,ON,Ontario,14666727,,v12,statcan_17100009
+2019-10-01,46,MB,Manitoba,1373884,,v13,statcan_17100009
+2019-10-01,47,SK,Saskatchewan,1167271,,v14,statcan_17100009
+2019-10-01,48,AB,Alberta,4376860,,v15,statcan_17100009
+2019-10-01,59,BC,British Columbia,5148047,,v3,statcan_17100009
+2019-10-01,60,YT,Yukon,41460,,v4,statcan_17100009
+2019-10-01,61,NT,Northwest Territories,44512,,v6,statcan_17100009
+2019-10-01,62,NU,Nunavut,38893,,v7,statcan_17100009
+2020-01-01,01,CAN,Canada,37928208,,v1,statcan_17100009
+2020-01-01,10,NL,Newfoundland and Labrador,528231,,v2,statcan_17100009
+2020-01-01,11,PE,Prince Edward Island,157494,,v8,statcan_17100009
+2020-01-01,12,NS,Nova Scotia,984130,,v9,statcan_17100009
+2020-01-01,13,NB,New Brunswick,781054,,v10,statcan_17100009
+2020-01-01,24,QC,Quebec,8537376,,v11,statcan_17100009
+2020-01-01,35,ON,Ontario,14718155,,v12,statcan_17100009
+2020-01-01,46,MB,Manitoba,1377283,,v13,statcan_17100009
+2020-01-01,47,SK,Saskatchewan,1169426,,v14,statcan_17100009
+2020-01-01,48,AB,Alberta,4392958,,v15,statcan_17100009
+2020-01-01,59,BC,British Columbia,5157053,,v3,statcan_17100009
+2020-01-01,60,YT,Yukon,41505,,v4,statcan_17100009
+2020-01-01,61,NT,Northwest Territories,44533,,v6,statcan_17100009
+2020-01-01,62,NU,Nunavut,39010,,v7,statcan_17100009
+2020-04-01,01,CAN,Canada,38006941,,v1,statcan_17100009
+2020-04-01,10,NL,Newfoundland and Labrador,527733,,v2,statcan_17100009
+2020-04-01,11,PE,Prince Edward Island,158401,,v8,statcan_17100009
+2020-04-01,12,NS,Nova Scotia,986204,,v9,statcan_17100009
+2020-04-01,13,NB,New Brunswick,782512,,v10,statcan_17100009
+2020-04-01,24,QC,Quebec,8550900,,v11,statcan_17100009
+2020-04-01,35,ON,Ontario,14752374,,v12,statcan_17100009
+2020-04-01,46,MB,Manitoba,1379280,,v13,statcan_17100009
+2020-04-01,47,SK,Saskatchewan,1169038,,v14,statcan_17100009
+2020-04-01,48,AB,Alberta,4405455,,v15,statcan_17100009
+2020-04-01,59,BC,British Columbia,5169535,,v3,statcan_17100009
+2020-04-01,60,YT,Yukon,41807,,v4,statcan_17100009
+2020-04-01,61,NT,Northwest Territories,44565,,v6,statcan_17100009
+2020-04-01,62,NU,Nunavut,39137,,v7,statcan_17100009
+2020-07-01,01,CAN,Canada,38028638,,v1,statcan_17100009
+2020-07-01,10,NL,Newfoundland and Labrador,526884,,v2,statcan_17100009
+2020-07-01,11,PE,Prince Edward Island,159193,,v8,statcan_17100009
+2020-07-01,12,NS,Nova Scotia,989168,,v9,statcan_17100009
+2020-07-01,13,NB,New Brunswick,783432,,v10,statcan_17100009
+2020-07-01,24,QC,Quebec,8551095,,v11,statcan_17100009
+2020-07-01,35,ON,Ontario,14761811,,v12,statcan_17100009
+2020-07-01,46,MB,Manitoba,1380132,,v13,statcan_17100009
+2020-07-01,47,SK,Saskatchewan,1167386,,v14,statcan_17100009
+2020-07-01,48,AB,Alberta,4407495,,v15,statcan_17100009
+2020-07-01,59,BC,British Columbia,5176101,,v3,statcan_17100009
+2020-07-01,60,YT,Yukon,41958,,v4,statcan_17100009
+2020-07-01,61,NT,Northwest Territories,44504,,v6,statcan_17100009
+2020-07-01,62,NU,Nunavut,39479,,v7,statcan_17100009
+2020-10-01,01,CAN,Canada,38027406,,v1,statcan_17100009
+2020-10-01,10,NL,Newfoundland and Labrador,526046,,v2,statcan_17100009
+2020-10-01,11,PE,Prince Edward Island,159179,,v8,statcan_17100009
+2020-10-01,12,NS,Nova Scotia,989154,,v9,statcan_17100009
+2020-10-01,13,NB,New Brunswick,783814,,v10,statcan_17100009
+2020-10-01,24,QC,Quebec,8551865,,v11,statcan_17100009
+2020-10-01,35,ON,Ontario,14757582,,v12,statcan_17100009
+2020-10-01,46,MB,Manitoba,1381809,,v13,statcan_17100009
+2020-10-01,47,SK,Saskatchewan,1165963,,v14,statcan_17100009
+2020-10-01,48,AB,Alberta,4412013,,v15,statcan_17100009
+2020-10-01,59,BC,British Columbia,5173896,,v3,statcan_17100009
+2020-10-01,60,YT,Yukon,42109,,v4,statcan_17100009
+2020-10-01,61,NT,Northwest Territories,44395,,v6,statcan_17100009
+2020-10-01,62,NU,Nunavut,39581,,v7,statcan_17100009
+2021-01-01,01,CAN,Canada,38058291,,v1,statcan_17100009
+2021-01-01,10,NL,Newfoundland and Labrador,525895,,v2,statcan_17100009
+2021-01-01,11,PE,Prince Edward Island,159240,,v8,statcan_17100009
+2021-01-01,12,NS,Nova Scotia,990025,,v9,statcan_17100009
+2021-01-01,13,NB,New Brunswick,784950,,v10,statcan_17100009
+2021-01-01,24,QC,Quebec,8550561,,v11,statcan_17100009
+2021-01-01,35,ON,Ontario,14772726,,v12,statcan_17100009
+2021-01-01,46,MB,Manitoba,1383854,,v13,statcan_17100009
+2021-01-01,47,SK,Saskatchewan,1166348,,v14,statcan_17100009
+2021-01-01,48,AB,Alberta,4418338,,v15,statcan_17100009
+2021-01-01,59,BC,British Columbia,5180015,,v3,statcan_17100009
+2021-01-01,60,YT,Yukon,42157,,v4,statcan_17100009
+2021-01-01,61,NT,Northwest Territories,44432,,v6,statcan_17100009
+2021-01-01,62,NU,Nunavut,39750,,v7,statcan_17100009
+2021-04-01,01,CAN,Canada,38140918,,v1,statcan_17100009
+2021-04-01,10,NL,Newfoundland and Labrador,526195,,v2,statcan_17100009
+2021-04-01,11,PE,Prince Edward Island,160334,,v8,statcan_17100009
+2021-04-01,12,NS,Nova Scotia,993946,,v9,statcan_17100009
+2021-04-01,13,NB,New Brunswick,787002,,v10,statcan_17100009
+2021-04-01,24,QC,Quebec,8556015,,v11,statcan_17100009
+2021-04-01,35,ON,Ontario,14808093,,v12,statcan_17100009
+2021-04-01,46,MB,Manitoba,1388611,,v13,statcan_17100009
+2021-04-01,47,SK,Saskatchewan,1167711,,v14,statcan_17100009
+2021-04-01,48,AB,Alberta,4425617,,v15,statcan_17100009
+2021-04-01,59,BC,British Columbia,5200393,,v3,statcan_17100009
+2021-04-01,60,YT,Yukon,42443,,v4,statcan_17100009
+2021-04-01,61,NT,Northwest Territories,44679,,v6,statcan_17100009
+2021-04-01,62,NU,Nunavut,39879,,v7,statcan_17100009
+2021-07-01,01,CAN,Canada,38239864,,v1,statcan_17100009
+2021-07-01,10,NL,Newfoundland and Labrador,527056,,v2,statcan_17100009
+2021-07-01,11,PE,Prince Edward Island,162133,,v8,statcan_17100009
+2021-07-01,12,NS,Nova Scotia,999908,,v9,statcan_17100009
+2021-07-01,13,NB,New Brunswick,790802,,v10,statcan_17100009
+2021-07-01,24,QC,Quebec,8572020,,v11,statcan_17100009
+2021-07-01,35,ON,Ontario,14842488,,v12,statcan_17100009
+2021-07-01,46,MB,Manitoba,1391924,,v13,statcan_17100009
+2021-07-01,47,SK,Saskatchewan,1167711,,v14,statcan_17100009
+2021-07-01,48,AB,Alberta,4431531,,v15,statcan_17100009
+2021-07-01,59,BC,British Columbia,5226665,,v3,statcan_17100009
+2021-07-01,60,YT,Yukon,42961,,v4,statcan_17100009
+2021-07-01,61,NT,Northwest Territories,44579,,v6,statcan_17100009
+2021-07-01,62,NU,Nunavut,40086,,v7,statcan_17100009
+2021-10-01,01,CAN,Canada,38462457,,v1,statcan_17100009
+2021-10-01,10,NL,Newfoundland and Labrador,528356,,v2,statcan_17100009
+2021-10-01,11,PE,Prince Edward Island,163690,,v8,statcan_17100009
+2021-10-01,12,NS,Nova Scotia,1006740,,v9,statcan_17100009
+2021-10-01,13,NB,New Brunswick,795754,,v10,statcan_17100009
+2021-10-01,24,QC,Quebec,8605817,,v11,statcan_17100009
+2021-10-01,35,ON,Ontario,14947557,,v12,statcan_17100009
+2021-10-01,46,MB,Manitoba,1396406,,v13,statcan_17100009
+2021-10-01,47,SK,Saskatchewan,1168966,,v14,statcan_17100009
+2021-10-01,48,AB,Alberta,4451077,,v15,statcan_17100009
+2021-10-01,59,BC,British Columbia,5270096,,v3,statcan_17100009
+2021-10-01,60,YT,Yukon,43155,,v4,statcan_17100009
+2021-10-01,61,NT,Northwest Territories,44587,,v6,statcan_17100009
+2021-10-01,62,NU,Nunavut,40256,,v7,statcan_17100009
+2022-01-01,01,CAN,Canada,38559788,,v1,statcan_17100009
+2022-01-01,10,NL,Newfoundland and Labrador,528888,,v2,statcan_17100009
+2022-01-01,11,PE,Prince Edward Island,164203,,v8,statcan_17100009
+2022-01-01,12,NS,Nova Scotia,1009517,,v9,statcan_17100009
+2022-01-01,13,NB,New Brunswick,798399,,v10,statcan_17100009
+2022-01-01,24,QC,Quebec,8611897,,v11,statcan_17100009
+2022-01-01,35,ON,Ontario,14996160,,v12,statcan_17100009
+2022-01-01,46,MB,Manitoba,1399737,,v13,statcan_17100009
+2022-01-01,47,SK,Saskatchewan,1171110,,v14,statcan_17100009
+2022-01-01,48,AB,Alberta,4465845,,v15,statcan_17100009
+2022-01-01,59,BC,British Columbia,5285835,,v3,statcan_17100009
+2022-01-01,60,YT,Yukon,43086,,v4,statcan_17100009
+2022-01-01,61,NT,Northwest Territories,44754,,v6,statcan_17100009
+2022-01-01,62,NU,Nunavut,40357,,v7,statcan_17100009
+2022-04-01,01,CAN,Canada,38678014,,v1,statcan_17100009
+2022-04-01,10,NL,Newfoundland and Labrador,528919,,v2,statcan_17100009
+2022-04-01,11,PE,Prince Edward Island,165481,,v8,statcan_17100009
+2022-04-01,12,NS,Nova Scotia,1013284,,v9,statcan_17100009
+2022-04-01,13,NB,New Brunswick,801175,,v10,statcan_17100009
+2022-04-01,24,QC,Quebec,8625141,,v11,statcan_17100009
+2022-04-01,35,ON,Ontario,15046020,,v12,statcan_17100009
+2022-04-01,46,MB,Manitoba,1404046,,v13,statcan_17100009
+2022-04-01,47,SK,Saskatchewan,1173416,,v14,statcan_17100009
+2022-04-01,48,AB,Alberta,4481521,,v15,statcan_17100009
+2022-04-01,59,BC,British Columbia,5310232,,v3,statcan_17100009
+2022-04-01,60,YT,Yukon,43430,,v4,statcan_17100009
+2022-04-01,61,NT,Northwest Territories,44764,,v6,statcan_17100009
+2022-04-01,62,NU,Nunavut,40585,,v7,statcan_17100009
+2022-07-01,01,CAN,Canada,38945628,,v1,statcan_17100009
+2022-07-01,10,NL,Newfoundland and Labrador,531061,,v2,statcan_17100009
+2022-07-01,11,PE,Prince Edward Island,167147,,v8,statcan_17100009
+2022-07-01,12,NS,Nova Scotia,1024306,,v9,statcan_17100009
+2022-07-01,13,NB,New Brunswick,808587,,v10,statcan_17100009
+2022-07-01,24,QC,Quebec,8667648,,v11,statcan_17100009
+2022-07-01,35,ON,Ontario,15155192,,v12,statcan_17100009
+2022-07-01,46,MB,Manitoba,1413346,,v13,statcan_17100009
+2022-07-01,47,SK,Saskatchewan,1178761,,v14,statcan_17100009
+2022-07-01,48,AB,Alberta,4513589,,v15,statcan_17100009
+2022-07-01,59,BC,British Columbia,5356870,,v3,statcan_17100009
+2022-07-01,60,YT,Yukon,43891,,v4,statcan_17100009
+2022-07-01,61,NT,Northwest Territories,44626,,v6,statcan_17100009
+2022-07-01,62,NU,Nunavut,40604,,v7,statcan_17100009
+2022-10-01,01,CAN,Canada,39278574,,v1,statcan_17100009
+2022-10-01,10,NL,Newfoundland and Labrador,533006,,v2,statcan_17100009
+2022-10-01,11,PE,Prince Edward Island,168882,,v8,statcan_17100009
+2022-10-01,12,NS,Nova Scotia,1033481,,v9,statcan_17100009
+2022-10-01,13,NB,New Brunswick,816074,,v10,statcan_17100009
+2022-10-01,24,QC,Quebec,8719641,,v11,statcan_17100009
+2022-10-01,35,ON,Ontario,15301418,,v12,statcan_17100009
+2022-10-01,46,MB,Manitoba,1423845,,v13,statcan_17100009
+2022-10-01,47,SK,Saskatchewan,1188150,,v14,statcan_17100009
+2022-10-01,48,AB,Alberta,4560790,,v15,statcan_17100009
+2022-10-01,59,BC,British Columbia,5403857,,v3,statcan_17100009
+2022-10-01,60,YT,Yukon,44208,,v4,statcan_17100009
+2022-10-01,61,NT,Northwest Territories,44541,,v6,statcan_17100009
+2022-10-01,62,NU,Nunavut,40681,,v7,statcan_17100009
+2023-01-01,01,CAN,Canada,39477134,,v1,statcan_17100009
+2023-01-01,10,NL,Newfoundland and Labrador,534474,,v2,statcan_17100009
+2023-01-01,11,PE,Prince Edward Island,169731,,v8,statcan_17100009
+2023-01-01,12,NS,Nova Scotia,1036706,,v9,statcan_17100009
+2023-01-01,13,NB,New Brunswick,818845,,v10,statcan_17100009
+2023-01-01,24,QC,Quebec,8741980,,v11,statcan_17100009
+2023-01-01,35,ON,Ontario,15394843,,v12,statcan_17100009
+2023-01-01,46,MB,Manitoba,1431771,,v13,statcan_17100009
+2023-01-01,47,SK,Saskatchewan,1195268,,v14,statcan_17100009
+2023-01-01,48,AB,Alberta,4596048,,v15,statcan_17100009
+2023-01-01,59,BC,British Columbia,5427786,,v3,statcan_17100009
+2023-01-01,60,YT,Yukon,44482,,v4,statcan_17100009
+2023-01-01,61,NT,Northwest Territories,44391,,v6,statcan_17100009
+2023-01-01,62,NU,Nunavut,40809,,v7,statcan_17100009
+2023-04-01,01,CAN,Canada,39684191,,v1,statcan_17100009
+2023-04-01,10,NL,Newfoundland and Labrador,535814,,v2,statcan_17100009
+2023-04-01,11,PE,Prince Edward Island,171399,,v8,statcan_17100009
+2023-04-01,12,NS,Nova Scotia,1042847,,v9,statcan_17100009
+2023-04-01,13,NB,New Brunswick,823226,,v10,statcan_17100009
+2023-04-01,24,QC,Quebec,8768409,,v11,statcan_17100009
+2023-04-01,35,ON,Ontario,15472222,,v12,statcan_17100009
+2023-04-01,46,MB,Manitoba,1441680,,v13,statcan_17100009
+2023-04-01,47,SK,Saskatchewan,1200708,,v14,statcan_17100009
+2023-04-01,48,AB,Alberta,4639471,,v15,statcan_17100009
+2023-04-01,59,BC,British Columbia,5458417,,v3,statcan_17100009
+2023-04-01,60,YT,Yukon,44823,,v4,statcan_17100009
+2023-04-01,61,NT,Northwest Territories,44379,,v6,statcan_17100009
+2023-04-01,62,NU,Nunavut,40796,,v7,statcan_17100009
+2023-07-01,01,CAN,Canada,40022704,,v1,statcan_17100009
+2023-07-01,10,NL,Newfoundland and Labrador,538041,,v2,statcan_17100009
+2023-07-01,11,PE,Prince Edward Island,173270,,v8,statcan_17100009
+2023-07-01,12,NS,Nova Scotia,1052601,,v9,statcan_17100009
+2023-07-01,13,NB,New Brunswick,829937,,v10,statcan_17100009
+2023-07-01,24,QC,Quebec,8818050,,v11,statcan_17100009
+2023-07-01,35,ON,Ontario,15618269,,v12,statcan_17100009
+2023-07-01,46,MB,Manitoba,1452054,,v13,statcan_17100009
+2023-07-01,47,SK,Saskatchewan,1209273,,v14,statcan_17100009
+2023-07-01,48,AB,Alberta,4688032,,v15,statcan_17100009
+2023-07-01,59,BC,British Columbia,5512217,,v3,statcan_17100009
+2023-07-01,60,YT,Yukon,45410,,v4,statcan_17100009
+2023-07-01,61,NT,Northwest Territories,44611,,v6,statcan_17100009
+2023-07-01,62,NU,Nunavut,40939,,v7,statcan_17100009
+2023-10-01,01,CAN,Canada,40439108,,v1,statcan_17100009
+2023-10-01,10,NL,Newfoundland and Labrador,540408,,v2,statcan_17100009
+2023-10-01,11,PE,Prince Edward Island,175675,,v8,statcan_17100009
+2023-10-01,12,NS,Nova Scotia,1062411,,v9,statcan_17100009
+2023-10-01,13,NB,New Brunswick,839183,,v10,statcan_17100009
+2023-10-01,24,QC,Quebec,8881058,,v11,statcan_17100009
+2023-10-01,35,ON,Ontario,15806578,,v12,statcan_17100009
+2023-10-01,46,MB,Manitoba,1460624,,v13,statcan_17100009
+2023-10-01,47,SK,Saskatchewan,1220864,,v14,statcan_17100009
+2023-10-01,48,AB,Alberta,4750739,,v15,statcan_17100009
+2023-10-01,59,BC,British Columbia,5569929,,v3,statcan_17100009
+2023-10-01,60,YT,Yukon,45938,,v4,statcan_17100009
+2023-10-01,61,NT,Northwest Territories,44588,,v6,statcan_17100009
+2023-10-01,62,NU,Nunavut,41113,,v7,statcan_17100009
+2024-01-01,01,CAN,Canada,40670178,,v1,statcan_17100009
+2024-01-01,10,NL,Newfoundland and Labrador,541114,,v2,statcan_17100009
+2024-01-01,11,PE,Prince Edward Island,176134,,v8,statcan_17100009
+2024-01-01,12,NS,Nova Scotia,1066827,,v9,statcan_17100009
+2024-01-01,13,NB,New Brunswick,843651,,v10,statcan_17100009
+2024-01-01,24,QC,Quebec,8904100,,v11,statcan_17100009
+2024-01-01,35,ON,Ontario,15916758,,v12,statcan_17100009
+2024-01-01,46,MB,Manitoba,1468946,,v13,statcan_17100009
+2024-01-01,47,SK,Saskatchewan,1228473,,v14,statcan_17100009
+2024-01-01,48,AB,Alberta,4797611,,v15,statcan_17100009
+2024-01-01,59,BC,British Columbia,5594479,,v3,statcan_17100009
+2024-01-01,60,YT,Yukon,46296,,v4,statcan_17100009
+2024-01-01,61,NT,Northwest Territories,44707,,v6,statcan_17100009
+2024-01-01,62,NU,Nunavut,41082,,v7,statcan_17100009
+2024-04-01,01,CAN,Canada,40912561,,v1,statcan_17100009
+2024-04-01,10,NL,Newfoundland and Labrador,542705,,v2,statcan_17100009
+2024-04-01,11,PE,Prince Edward Island,177269,,v8,statcan_17100009
+2024-04-01,12,NS,Nova Scotia,1072232,,v9,statcan_17100009
+2024-04-01,13,NB,New Brunswick,849819,,v10,statcan_17100009
+2024-04-01,24,QC,Quebec,8937098,,v11,statcan_17100009
+2024-04-01,35,ON,Ontario,16003875,,v12,statcan_17100009
+2024-04-01,46,MB,Manitoba,1479792,,v13,statcan_17100009
+2024-04-01,47,SK,Saskatchewan,1236277,,v14,statcan_17100009
+2024-04-01,48,AB,Alberta,4852191,,v15,statcan_17100009
+2024-04-01,59,BC,British Columbia,5628073,,v3,statcan_17100009
+2024-04-01,60,YT,Yukon,47010,,v4,statcan_17100009
+2024-04-01,61,NT,Northwest Territories,45050,,v6,statcan_17100009
+2024-04-01,62,NU,Nunavut,41170,,v7,statcan_17100009
+2024-07-01,01,CAN,Canada,41162593,,v1,statcan_17100009
+2024-07-01,10,NL,Newfoundland and Labrador,545080,,v2,statcan_17100009
+2024-07-01,11,PE,Prince Edward Island,178869,,v8,statcan_17100009
+2024-07-01,12,NS,Nova Scotia,1080310,,v9,statcan_17100009
+2024-07-01,13,NB,New Brunswick,857114,,v10,statcan_17100009
+2024-07-01,24,QC,Quebec,8982312,,v11,statcan_17100009
+2024-07-01,35,ON,Ontario,16090358,,v12,statcan_17100009
+2024-07-01,46,MB,Manitoba,1487953,,v13,statcan_17100009
+2024-07-01,47,SK,Saskatchewan,1245196,,v14,statcan_17100009
+2024-07-01,48,AB,Alberta,4901795,,v15,statcan_17100009
+2024-07-01,59,BC,British Columbia,5659205,,v3,statcan_17100009
+2024-07-01,60,YT,Yukon,47683,,v4,statcan_17100009
+2024-07-01,61,NT,Northwest Territories,45274,,v6,statcan_17100009
+2024-07-01,62,NU,Nunavut,41444,,v7,statcan_17100009
+2024-10-01,01,CAN,Canada,41373096,,v1,statcan_17100009
+2024-10-01,10,NL,Newfoundland and Labrador,546785,,v2,statcan_17100009
+2024-10-01,11,PE,Prince Edward Island,179997,,v8,statcan_17100009
+2024-10-01,12,NS,Nova Scotia,1086377,,v9,statcan_17100009
+2024-10-01,13,NB,New Brunswick,863674,,v10,statcan_17100009
+2024-10-01,24,QC,Quebec,9026416,,v11,statcan_17100009
+2024-10-01,35,ON,Ontario,16154989,,v12,statcan_17100009
+2024-10-01,46,MB,Manitoba,1495180,,v13,statcan_17100009
+2024-10-01,47,SK,Saskatchewan,1253962,,v14,statcan_17100009
+2024-10-01,48,AB,Alberta,4945710,,v15,statcan_17100009
+2024-10-01,59,BC,British Columbia,5684774,,v3,statcan_17100009
+2024-10-01,60,YT,Yukon,48089,,v4,statcan_17100009
+2024-10-01,61,NT,Northwest Territories,45526,,v6,statcan_17100009
+2024-10-01,62,NU,Nunavut,41617,,v7,statcan_17100009
+2025-01-01,01,CAN,Canada,41435888,,v1,statcan_17100009
+2025-01-01,10,NL,Newfoundland and Labrador,547237,,v2,statcan_17100009
+2025-01-01,11,PE,Prince Edward Island,179816,,v8,statcan_17100009
+2025-01-01,12,NS,Nova Scotia,1087432,,v9,statcan_17100009
+2025-01-01,13,NB,New Brunswick,866560,,v10,statcan_17100009
+2025-01-01,24,QC,Quebec,9029220,,v11,statcan_17100009
+2025-01-01,35,ON,Ontario,16173041,,v12,statcan_17100009
+2025-01-01,46,MB,Manitoba,1499649,,v13,statcan_17100009
+2025-01-01,47,SK,Saskatchewan,1258722,,v14,statcan_17100009
+2025-01-01,48,AB,Alberta,4973853,,v15,statcan_17100009
+2025-01-01,59,BC,British Columbia,5684439,,v3,statcan_17100009
+2025-01-01,60,YT,Yukon,48425,,v4,statcan_17100009
+2025-01-01,61,NT,Northwest Territories,45700,,v6,statcan_17100009
+2025-01-01,62,NU,Nunavut,41794,,v7,statcan_17100009
+2025-04-01,01,CAN,Canada,41495432,,v1,statcan_17100009
+2025-04-01,10,NL,Newfoundland and Labrador,548205,,v2,statcan_17100009
+2025-04-01,11,PE,Prince Edward Island,180457,,v8,statcan_17100009
+2025-04-01,12,NS,Nova Scotia,1090485,,v9,statcan_17100009
+2025-04-01,13,NB,New Brunswick,869777,,v10,statcan_17100009
+2025-04-01,24,QC,Quebec,9028682,,v11,statcan_17100009
+2025-04-01,35,ON,Ontario,16189877,,v12,statcan_17100009
+2025-04-01,46,MB,Manitoba,1503773,,v13,statcan_17100009
+2025-04-01,47,SK,Saskatchewan,1263752,,v14,statcan_17100009
+2025-04-01,48,AB,Alberta,4996457,,v15,statcan_17100009
+2025-04-01,59,BC,British Columbia,5687504,,v3,statcan_17100009
+2025-04-01,60,YT,Yukon,48584,,v4,statcan_17100009
+2025-04-01,61,NT,Northwest Territories,45892,,v6,statcan_17100009
+2025-04-01,62,NU,Nunavut,41987,,v7,statcan_17100009
+2025-07-01,01,CAN,Canada,41608982,,v1,statcan_17100009
+2025-07-01,10,NL,Newfoundland and Labrador,550202,,v2,statcan_17100009
+2025-07-01,11,PE,Prince Edward Island,181594,,v8,statcan_17100009
+2025-07-01,12,NS,Nova Scotia,1095157,,v9,statcan_17100009
+2025-07-01,13,NB,New Brunswick,874711,,v10,statcan_17100009
+2025-07-01,24,QC,Quebec,9051022,,v11,statcan_17100009
+2025-07-01,35,ON,Ontario,16216961,,v12,statcan_17100009
+2025-07-01,46,MB,Manitoba,1508582,,v13,statcan_17100009
+2025-07-01,47,SK,Saskatchewan,1266289,,v14,statcan_17100009
+2025-07-01,48,AB,Alberta,5024631,,v15,statcan_17100009
+2025-07-01,59,BC,British Columbia,5702544,,v3,statcan_17100009
+2025-07-01,60,YT,Yukon,49150,,v4,statcan_17100009
+2025-07-01,61,NT,Northwest Territories,46031,,v6,statcan_17100009
+2025-07-01,62,NU,Nunavut,42108,,v7,statcan_17100009
+2025-10-01,01,CAN,Canada,41723923,,v1,statcan_17100009
+2025-10-01,10,NL,Newfoundland and Labrador,551526,,v2,statcan_17100009
+2025-10-01,11,PE,Prince Edward Island,182588,,v8,statcan_17100009
+2025-10-01,12,NS,Nova Scotia,1098342,,v9,statcan_17100009
+2025-10-01,13,NB,New Brunswick,877969,,v10,statcan_17100009
+2025-10-01,24,QC,Quebec,9071310,,v11,statcan_17100009
+2025-10-01,35,ON,Ontario,16253023,,v12,statcan_17100009
+2025-10-01,46,MB,Manitoba,1512567,,v13,statcan_17100009
+2025-10-01,47,SK,Saskatchewan,1269970,,v14,statcan_17100009
+2025-10-01,48,AB,Alberta,5052333,,v15,statcan_17100009
+2025-10-01,59,BC,British Columbia,5716602,,v3,statcan_17100009
+2025-10-01,60,YT,Yukon,49422,,v4,statcan_17100009
+2025-10-01,61,NT,Northwest Territories,46038,,v6,statcan_17100009
+2025-10-01,62,NU,Nunavut,42233,,v7,statcan_17100009
+2026-01-01,01,CAN,Canada,41716698,,v1,statcan_17100009
+2026-01-01,10,NL,Newfoundland and Labrador,551564,,v2,statcan_17100009
+2026-01-01,11,PE,Prince Edward Island,182576,,v8,statcan_17100009
+2026-01-01,12,NS,Nova Scotia,1098558,,v9,statcan_17100009
+2026-01-01,13,NB,New Brunswick,878596,,v10,statcan_17100009
+2026-01-01,24,QC,Quebec,9057967,,v11,statcan_17100009
+2026-01-01,35,ON,Ontario,16249344,,v12,statcan_17100009
+2026-01-01,46,MB,Manitoba,1514362,,v13,statcan_17100009
+2026-01-01,47,SK,Saskatchewan,1271629,,v14,statcan_17100009
+2026-01-01,48,AB,Alberta,5067862,,v15,statcan_17100009
+2026-01-01,59,BC,British Columbia,5706331,,v3,statcan_17100009
+2026-01-01,60,YT,Yukon,49546,,v4,statcan_17100009
+2026-01-01,61,NT,Northwest Territories,46046,,v6,statcan_17100009
+2026-01-01,62,NU,Nunavut,42317,,v7,statcan_17100009
+2026-04-01,01,CAN,Canada,41718064,,v1,statcan_17100009
+2026-04-01,10,NL,Newfoundland and Labrador,550881,,v2,statcan_17100009
+2026-04-01,11,PE,Prince Edward Island,182700,,v8,statcan_17100009
+2026-04-01,12,NS,Nova Scotia,1099399,,v9,statcan_17100009
+2026-04-01,13,NB,New Brunswick,878549,,v10,statcan_17100009
+2026-04-01,24,QC,Quebec,9053814,,v11,statcan_17100009
+2026-04-01,35,ON,Ontario,16244194,,v12,statcan_17100009
+2026-04-01,46,MB,Manitoba,1514157,,v13,statcan_17100009
+2026-04-01,47,SK,Saskatchewan,1272936,,v14,statcan_17100009
+2026-04-01,48,AB,Alberta,5079176,,v15,statcan_17100009
+2026-04-01,59,BC,British Columbia,5703683,,v3,statcan_17100009
+2026-04-01,60,YT,Yukon,49862,,v4,statcan_17100009
+2026-04-01,61,NT,Northwest Territories,46071,,v6,statcan_17100009
+2026-04-01,62,NU,Nunavut,42642,,v7,statcan_17100009
+2026-07-01,01,CAN,Canada,41798407,,v1,statcan_17100009
+2026-07-01,10,NL,Newfoundland and Labrador,552462,,v2,statcan_17100009
+2026-07-01,11,PE,Prince Edward Island,182989,,v8,statcan_17100009
+2026-07-01,12,NS,Nova Scotia,1103419,,v9,statcan_17100009
+2026-07-01,13,NB,New Brunswick,883522,,v10,statcan_17100009
+2026-07-01,24,QC,Quebec,9067114,,v11,statcan_17100009
+2026-07-01,35,ON,Ontario,16262121,,v12,statcan_17100009
+2026-07-01,46,MB,Manitoba,1517379,,v13,statcan_17100009
+2026-07-01,47,SK,Saskatchewan,1278402,,v14,statcan_17100009
+2026-07-01,48,AB,Alberta,5101050,,v15,statcan_17100009
+2026-07-01,59,BC,British Columbia,5710598,,v3,statcan_17100009
+2026-07-01,60,YT,Yukon,50356,,v4,statcan_17100009
+2026-07-01,61,NT,Northwest Territories,45904,,v6,statcan_17100009
+2026-07-01,62,NU,Nunavut,43091,,v7,statcan_17100009

@@ -1,0 +1,37 @@
+{
+  "id": "population-provinces-1971-2026",
+  "category": "Population and migration",
+  "title": "Where Canadians live, 1971–2026",
+  "subtitle": "Population of each province and territory. Height = people; colour = change since July 1971.",
+  "layer": "population",
+  "start": "1971-07-01",
+  "end": "2026-07-01",
+  "fps": 30,
+  "seconds": { "intro": 2.0, "play": 28.0, "outro": 4.0 },
+  "milestones": [25000000, 30000000, 35000000, 40000000],
+  "annotations": [
+    {
+      "date": "1991-07-01",
+      "text": "Statistics Canada begins reporting the Northwest Territories and Nunavut separately (on today's boundaries)",
+      "source": "StatCan Table 17-10-0009-01, notes 4–5",
+      "kind": "data_note"
+    },
+    {
+      "date": "1999-04-01",
+      "text": "Nunavut becomes a territory",
+      "source": "Nunavut Act, S.C. 1993, c. 28 — in force April 1, 1999",
+      "source_url": "https://laws-lois.justice.gc.ca/eng/acts/n-28.6/",
+      "kind": "historical_fact"
+    }
+  ],
+  "camera": [
+    { "t": 0.0, "target": [6150, 2350, 0], "zoomOffset": 0.0, "rotationX": 38, "rotationOrbit": -12 },
+    { "t": 0.5, "target": [6200, 2280, 0], "zoomOffset": 0.05, "rotationX": 48, "rotationOrbit": 0 },
+    { "t": 1.0, "target": [6250, 2220, 0], "zoomOffset": 0.1, "rotationX": 50, "rotationOrbit": 8 }
+  ],
+  "formats": {
+    "16x9": { "width": 1920, "height": 1080 },
+    "9x16": { "width": 1080, "height": 1920 },
+    "1x1": { "width": 1080, "height": 1080 }
+  }
+}

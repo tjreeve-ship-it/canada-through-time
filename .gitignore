@@ -1,0 +1,5 @@
+node_modules/
+exports/
+__pycache__/
+.pytest_cache/
+*.partial.mp4

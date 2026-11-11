@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Canada Through Time</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="stage" class="fmt-16x9">
+  <div id="map"></div>
+
+  <header id="titleblock">
+    <div class="kicker">CANADA THROUGH TIME</div>
+    <h1 id="title"></h1>
+    <p id="subtitle"></p>
+  </header>
+
+  <section id="clock">
+    <div id="year">—</div>
+    <div id="asof"></div>
+    <div id="total-label">Canada</div>
+    <div id="total">—</div>
+    <div id="total-change"></div>
+  </section>
+
+  <section id="ranking" aria-label="Population by province and territory"></section>
+
+  <section id="legend">
+    <div class="legend-title">Change since <span id="legend-base"></span></div>
+    <div id="legend-bar"></div>
+    <div id="legend-ticks"></div>
+    <div class="legend-note">Prism height ∝ population</div>
+  </section>
+
+  <aside id="annotation" class="hidden">
+    <div id="ann-date"></div>
+    <div id="ann-text"></div>
+    <div id="ann-source"></div>
+  </aside>
+
+  <footer id="credits"></footer>
+  <div id="timeline"><div id="timeline-fill"></div><div id="timeline-ticks"></div></div>
+</div>
+
+<div id="controls" class="hidden">
+  <button id="play" aria-label="Play or pause">Play</button>
+  <input id="scrub" type="range" min="0" max="1000" value="0" aria-label="Time">
+  <select id="fmt" aria-label="Frame format">
+    <option value="16x9">16:9</option><option value="9x16">9:16</option><option value="1x1">1:1</option>
+  </select>
+  <label><input type="checkbox" id="orbit"> free camera</label>
+</div>
+
+<script src="vendor/deck.min.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>
