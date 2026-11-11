@@ -1,0 +1,366 @@
+# Claims ledger — Story 1: "Where Canadians live, 1971–2026"
+#
+# The single source of truth for every claim, number, caveat and approved wording in this story.
+# Every output (videos, social post, sources package, explorer links) is generated from this file,
+# and `python3 pipeline/check_ledger.py stories/population-provinces-1971-2026` verifies it.
+#
+# Evidence levels (docs/DESIGN_SYSTEM.md):
+#   observation     — a measured value or change, as published or computed directly from it
+#   association     — two measures moving together (needs comparison context; not used in this story)
+#   possible_reason — a documented mechanism from research (not used in this story)
+#   proven_effect   — causal evidence from a study design (not used in this story)
+# This story shows WHERE population changed. It makes no claims about WHY.
+
+story:
+  id: population-provinces-1971-2026
+  title: "Where Canadians live, 1971–2026"
+  kicker: "Population · provinces and territories"
+  headline: "Canada nearly doubled. Alberta and B.C. led the provinces."
+  headline_claims: [canada_growth, fastest_provinces]
+  headline_rules:
+    - "'nearly doubled' requires Canada's growth to be at least +80% and below +100%"
+    - "'led the provinces' requires Alberta and British Columbia to be the two fastest-growing provinces (territories excluded and stated separately)"
+  scope_statement: "This story shows where Canada's population changed. It does not show why."
+  period: { start: "1971-07-01", end: "2026-07-01" }
+  geography: "Canada, 10 provinces and 3 territories (current boundaries; NT and NU combined before July 1991)"
+  version: 1
+  ledger_date: "2026-11-11"
+
+sources:
+  # Each id must exist in registry/sources.yaml; the checker copies publisher, URL, vintage and licence from there.
+  - statcan_17100009
+  - naturalearth_admin1
+  - external_nunavut_act
+
+external_sources:
+  external_nunavut_act:
+    title: "Nunavut Act, S.C. 1993, c. 28"
+    publisher: "Government of Canada, Justice Laws Website"
+    url: "https://laws-lois.justice.gc.ca/eng/acts/n-28.6/"
+    retrieved: "2026-11-11"
+    licence: "Crown copyright; reproduction of federal law permitted (Reproduction of Federal Law Order)"
+    note: "Date of coming into force (April 1, 1999) is a historical fact; not verifiable from this project's data. Human review."
+
+# Revision status of each estimate, from Statistics Canada's own table note 3 (copied into registry/sources.yaml).
+# The checker confirms each boundary date appears in that note and labels every value it recomputes.
+revision_status:
+  source: statcan_17100009
+  classes:
+    - { from: "1971-07-01", to: "2021-04-01", label: "final intercensal" }
+    - { from: "2021-07-01", to: "2023-07-01", label: "final postcensal" }
+    - { from: "2023-10-01", to: "2026-04-01", label: "updated postcensal (may be revised)" }
+    - { from: "2026-07-01", to: null, label: "preliminary postcensal (will be revised)" }
+  needs_caveat: preliminary   # any value dated in a class whose label contains "preliminary" requires this caveat
+
+caveats:
+  - id: preliminary
+    text: "July 2026 estimates are preliminary and will be revised."
+    match: "preliminary"
+    applies_when: "any claim whose period ends on or after 2026-07-01"
+    required_in: [video_16x9, video_9x16, x_post, package]
+  - id: ntnu_split
+    text: "Northwest Territories and Nunavut were reported as one figure before July 1991; their change is measured from July 1991."
+    match: "1991"
+    required_in: [video_16x9, video_9x16, package]
+  - id: rounding
+    text: "Values on the map and share bar are rounded to 3 significant figures."
+    match: "rounded to 3 significant figures"
+    required_in: [video_16x9, video_9x16, package]
+  - id: spike_placement
+    text: "Spikes sit inside each province, not at its population centre."
+    match: "not at its population centre"
+    required_in: [video_16x9, video_9x16, package]
+  - id: not_why
+    text: "This shows where population changed, not why."
+    match: "not why"
+    required_in: [video_16x9, video_9x16, package]
+  - id: method_break_1971
+    text: "Estimates before July 1971 use a different method (not adjusted for census undercoverage), so the series starts in July 1971."
+    match: "July 1971"
+    required_in: [package]
+  - id: boundaries
+    text: "Boundaries are generalized (Natural Earth, 1:10m), current boundaries, in Statistics Canada's Lambert projection."
+    match: "Natural Earth"
+    required_in: [package]
+
+claims:
+  - id: canada_growth
+    level: observation
+    text: "Canada's population grew from 21,962,032 on July 1, 1971 to 41,798,407 on July 1, 2026, an increase of 19.8 million people (+90%)."
+    geography: CAN
+    period: { start: "1971-07-01", end: "2026-07-01" }
+    unit: persons
+    sources: [statcan_17100009]
+    values:
+      - { id: start, compute: { fn: pop, geo: CAN, date: "1971-07-01" }, expected: 21962032, display: "21,962,032", format: int }
+      - { id: end, compute: { fn: pop, geo: CAN, date: "2026-07-01" }, expected: 41798407, display: "41,798,407", format: int }
+      - { id: change, compute: { fn: abs_change, geo: CAN, from: "1971-07-01", to: "2026-07-01" }, expected: 19836375, display: "19.8 million", format: millions1 }
+      - { id: pct, compute: { fn: pct_change, geo: CAN, from: "1971-07-01", to: "2026-07-01" }, expected: 0.903212, display: "+90%", format: pct0 }
+      - { id: start_m, compute: { fn: pop, geo: CAN, date: "1971-07-01" }, expected: 21962032, display: "22.0 million", format: millions1 }
+      - { id: end_m, compute: { fn: pop, geo: CAN, date: "2026-07-01" }, expected: 41798407, display: "41.8 million", format: millions1 }
+    method: "Population on July 1 of each year from Table 17-10-0009-01; change = end − start; percent = end ÷ start − 1."
+    caveats: [preliminary, method_break_1971]
+    wording:
+      video: "**Canada** grew from 22.0 million to 41.8 million people."
+      short: "Canada: 22.0 million in 1971, 41.8 million in 2026 (+90%)."
+      x: "Canada grew 90%, to 41.8 million people."
+      package: "Canada: 21,962,032 (July 1, 1971) → 41,798,407 (July 1, 2026, preliminary), +90% (+19.8 million)."
+
+  - id: fastest_provinces
+    level: observation
+    text: "Among the provinces, Alberta grew fastest (+206%), followed by British Columbia (+155%)."
+    geography: [AB, BC]
+    period: { start: "1971-07-01", end: "2026-07-01" }
+    unit: percent change
+    sources: [statcan_17100009]
+    values:
+      - { id: first, compute: { fn: rank_pct_change, geos: [NL, PE, NS, NB, QC, ON, MB, SK, AB, BC], from: "1971-07-01", to: "2026-07-01", rank: 1 }, expected: AB, display: "Alberta", format: name }
+      - { id: second, compute: { fn: rank_pct_change, geos: [NL, PE, NS, NB, QC, ON, MB, SK, AB, BC], from: "1971-07-01", to: "2026-07-01", rank: 2 }, expected: BC, display: "B.C.", format: name }
+      - { id: ab_pct, compute: { fn: pct_change, geo: AB, from: "1971-07-01", to: "2026-07-01" }, expected: 2.062375, display: "+206%", format: pct0 }
+      - { id: bc_pct, compute: { fn: pct_change, geo: BC, from: "1971-07-01", to: "2026-07-01" }, expected: 1.548839, display: "+155%", format: pct0 }
+    method: "Percent change July 1971 → July 2026 for each of the 10 provinces, ranked. Territories are excluded from the ranking and reported separately."
+    caveats: [preliminary]
+    wording:
+      video: "**Alberta** grew fastest of the provinces, then B.C. (+155%)."
+      short: "Fastest-growing provinces: Alberta +206%, B.C. +155%."
+      x: "Alberta (+206%) and B.C. (+155%) grew fastest of the provinces."
+      package: "Fastest-growing provinces since 1971: Alberta +206%, British Columbia +155%."
+
+  - id: yukon_growth
+    level: observation
+    text: "Yukon's population grew 165% (18,991 to 50,356), faster than every province except Alberta."
+    geography: YT
+    period: { start: "1971-07-01", end: "2026-07-01" }
+    unit: percent change
+    sources: [statcan_17100009]
+    values:
+      - { id: pct, compute: { fn: pct_change, geo: YT, from: "1971-07-01", to: "2026-07-01" }, expected: 1.651572, display: "+165%", format: pct0 }
+      - { id: start, compute: { fn: pop, geo: YT, date: "1971-07-01" }, expected: 18991, display: "18,991", format: int }
+      - { id: end, compute: { fn: pop, geo: YT, date: "2026-07-01" }, expected: 50356, display: "50,356", format: int }
+    method: "Percent change July 1971 → July 2026."
+    caveats: [preliminary]
+    wording:
+      video: "Yukon: +165%."
+      package: "Yukon grew +165% (18,991 → 50,356)."
+
+  - id: slowest_province
+    level: observation
+    text: "Newfoundland and Labrador grew least of the provinces: +4% (530,854 to 552,462)."
+    geography: NL
+    period: { start: "1971-07-01", end: "2026-07-01" }
+    unit: percent change
+    sources: [statcan_17100009]
+    values:
+      - { id: last, compute: { fn: rank_pct_change, geos: [NL, PE, NS, NB, QC, ON, MB, SK, AB, BC], from: "1971-07-01", to: "2026-07-01", rank: 10 }, expected: NL, display: "Newfoundland and Labrador", format: name }
+      - { id: pct, compute: { fn: pct_change, geo: NL, from: "1971-07-01", to: "2026-07-01" }, expected: 0.040704, display: "+4%", format: pct0 }
+      - { id: start, compute: { fn: pop, geo: NL, date: "1971-07-01" }, expected: 530854, display: "530,854", format: int }
+      - { id: end, compute: { fn: pop, geo: NL, date: "2026-07-01" }, expected: 552462, display: "552,462", format: int }
+    method: "Lowest percent change among the 10 provinces, July 1971 → July 2026."
+    caveats: [preliminary]
+    wording:
+      video: "Newfoundland and Labrador grew least (+4%)."
+      package: "Slowest-growing province: Newfoundland and Labrador +4% (530,854 → 552,462)."
+
+  - id: ontario_gain
+    level: observation
+    text: "Ontario added the most people of any province (+8.4 million) and its share of Canadians rose from 35.7% to 38.9%."
+    geography: ON
+    period: { start: "1971-07-01", end: "2026-07-01" }
+    unit: persons; percent of Canada
+    sources: [statcan_17100009]
+    values:
+      - { id: abs, compute: { fn: abs_change, geo: ON, from: "1971-07-01", to: "2026-07-01" }, expected: 8413094, display: "8.4 million", format: millions1 }
+      - { id: rank_abs, compute: { fn: rank_abs_change, geos: [NL, PE, NS, NB, QC, ON, MB, SK, AB, BC], from: "1971-07-01", to: "2026-07-01", rank: 1 }, expected: ON, display: "Ontario", format: name }
+      - { id: share_start, compute: { fn: share, geos: [ON], date: "1971-07-01" }, expected: 0.357391, display: "35.7%", format: pct1 }
+      - { id: share_end, compute: { fn: share, geos: [ON], date: "2026-07-01" }, expected: 0.389061, display: "38.9%", format: pct1 }
+    method: "Absolute change and share of Canada's population (province ÷ Canada, same date)."
+    caveats: [preliminary]
+    wording:
+      package: "Largest absolute gain: Ontario, +8.4 million. Ontario's share of Canadians: 35.7% → 38.9%."
+
+  - id: atlantic_share
+    level: observation
+    text: "Atlantic Canada's share of the population fell from 9.5% to 6.5%."
+    geography: [NL, PE, NS, NB]
+    period: { start: "1971-07-01", end: "2026-07-01" }
+    unit: percent of Canada
+    sources: [statcan_17100009]
+    values:
+      - { id: start, compute: { fn: share, geos: [NL, PE, NS, NB], date: "1971-07-01" }, expected: 0.094855, display: "9.5%", format: pct1 }
+      - { id: end, compute: { fn: share, geos: [NL, PE, NS, NB], date: "2026-07-01" }, expected: 0.065131, display: "6.5%", format: pct1 }
+    method: "Sum of NL, PE, NS and NB ÷ Canada, same date. A share can fall while the population still grows: all four grew in number."
+    caveats: [preliminary]
+    wording:
+      video: "**Atlantic Canada's share** of the population fell."
+      short: "Atlantic Canada's share of Canadians: 9.5% → 6.5%."
+      x: "Atlantic Canada's share fell from 9.5% to 6.5%."
+      package: "Atlantic provinces' share of Canadians: 9.5% → 6.5% (all four grew in number)."
+
+  - id: west_share
+    level: observation
+    text: "The western provinces (Manitoba, Saskatchewan, Alberta, B.C.) went from 26.6% to 32.6% of Canadians."
+    geography: [MB, SK, AB, BC]
+    period: { start: "1971-07-01", end: "2026-07-01" }
+    unit: percent of Canada
+    sources: [statcan_17100009]
+    values:
+      - { id: start, compute: { fn: share, geos: [MB, SK, AB, BC], date: "1971-07-01" }, expected: 0.265781, display: "26.6%", format: pct1 }
+      - { id: end, compute: { fn: share, geos: [MB, SK, AB, BC], date: "2026-07-01" }, expected: 0.325549, display: "32.6%", format: pct1 }
+    method: "Sum of MB, SK, AB and BC ÷ Canada, same date. 'Western provinces' here includes Manitoba."
+    caveats: [preliminary]
+    wording:
+      package: "Western provinces (MB, SK, AB, BC): 26.6% → 32.6% of Canadians."
+
+  - id: nunavut_growth
+    level: observation
+    text: "Nunavut's population grew from 22,154 (July 1991, first separate estimate) to 43,091 (+95%)."
+    geography: NU
+    period: { start: "1991-07-01", end: "2026-07-01" }
+    unit: persons
+    sources: [statcan_17100009]
+    values:
+      - { id: start, compute: { fn: pop, geo: NU, date: "1991-07-01" }, expected: 22154, display: "22,154", format: int }
+      - { id: end, compute: { fn: pop, geo: NU, date: "2026-07-01" }, expected: 43091, display: "43,091", format: int }
+      - { id: pct, compute: { fn: pct_change, geo: NU, from: "1991-07-01", to: "2026-07-01" }, expected: 0.945066, display: "+95%", format: pct0 }
+    method: "Measured from July 1991, the first date Statistics Canada reports Nunavut separately."
+    caveats: [preliminary, ntnu_split]
+    wording:
+      package: "Nunavut (separate estimates from July 1991): 22,154 → 43,091, +95%."
+
+  - id: ntnu_split_date
+    level: observation
+    text: "Statistics Canada reports the Northwest Territories and Nunavut separately from July 1, 1991, on today's boundaries."
+    geography: [NT, NU]
+    period: { start: "1991-07-01", end: "1991-07-01" }
+    unit: date
+    sources: [statcan_17100009]
+    values:
+      - { id: first_nt, compute: { fn: first_date_nonnull, geo: NT }, expected: "1991-07-01", display: "July 1991", format: month_year }
+    method: "First date with a non-empty Northwest Territories value in Table 17-10-0009-01 (table notes 4–5)."
+    caveats: [ntnu_split]
+    event: { date: "1991-07-01", tag: "Data note", source_line: "StatCan Table 17-10-0009-01, notes 4–5" }
+    wording:
+      short: "N.W.T. and Nunavut reported separately from here on"
+      package: "From July 1991, Statistics Canada reports the Northwest Territories and Nunavut separately (on today's boundaries); before that, only a combined figure exists."
+
+  - id: nunavut_created
+    level: observation
+    text: "Nunavut became a territory on April 1, 1999, when the Nunavut Act came into force."
+    geography: NU
+    period: { start: "1999-04-01", end: "1999-04-01" }
+    unit: date
+    sources: [external_nunavut_act]
+    values:
+      - { id: date, compute: { fn: external }, expected: "1999-04-01", display: "April 1999", format: month_year }
+    method: "Historical fact from the statute; not computable from project data."
+    human_review: "Confirm the in-force date against the Justice Laws page before each release."
+    event: { date: "1999-04-01", tag: "Historical fact", source_line: "Nunavut Act, S.C. 1993, c. 28 (in force April 1, 1999)" }
+    wording:
+      short: "Nunavut becomes a territory"
+      package: "Nunavut became a territory on April 1, 1999 (Nunavut Act)."
+
+  - id: milestone_25m
+    level: observation
+    text: "Canada's first quarterly population estimate at or above 25 million was 25,042,069 on April 1, 1982."
+    geography: CAN
+    period: { start: "1982-04-01", end: "1982-04-01" }
+    unit: persons
+    sources: [statcan_17100009]
+    values:
+      - { id: date, compute: { fn: first_date_at_or_above, geo: CAN, threshold: 25000000, from: "1971-07-01" }, expected: "1982-04-01", display: "April 1982", format: month_year }
+      - { id: value, compute: { fn: pop, geo: CAN, date: "1982-04-01" }, expected: 25042069, display: "25,042,069", format: int }
+    method: "Derived: earliest quarterly estimate ≥ 25,000,000 from July 1971 on. Quarterly estimates only: the true crossing date falls within the preceding quarter."
+    event: { date: "1982-04-01", tag: "Derived from the data", source_line: "First quarterly estimate ≥ 25,000,000: 25,042,069" }
+    wording:
+      short: "Canada passes 25 million people"
+      package: "Canada's first quarterly estimate above 25 million: April 1, 1982 (25,042,069)."
+
+  - id: milestone_30m
+    level: observation
+    text: "Canada's first quarterly population estimate at or above 30 million was 30,028,506 on January 1, 1998."
+    geography: CAN
+    period: { start: "1998-01-01", end: "1998-01-01" }
+    unit: persons
+    sources: [statcan_17100009]
+    values:
+      - { id: date, compute: { fn: first_date_at_or_above, geo: CAN, threshold: 30000000, from: "1971-07-01" }, expected: "1998-01-01", display: "January 1998", format: month_year }
+      - { id: value, compute: { fn: pop, geo: CAN, date: "1998-01-01" }, expected: 30028506, display: "30,028,506", format: int }
+    method: "Derived: earliest quarterly estimate ≥ 30,000,000."
+    event: { date: "1998-01-01", tag: "Derived from the data", source_line: "First quarterly estimate ≥ 30,000,000: 30,028,506" }
+    wording:
+      short: "Canada passes 30 million people"
+      package: "Canada's first quarterly estimate above 30 million: January 1, 1998 (30,028,506)."
+
+  - id: milestone_35m
+    level: observation
+    text: "Canada's first quarterly population estimate at or above 35 million was 35,080,992 on July 1, 2013."
+    geography: CAN
+    period: { start: "2013-07-01", end: "2013-07-01" }
+    unit: persons
+    sources: [statcan_17100009]
+    values:
+      - { id: date, compute: { fn: first_date_at_or_above, geo: CAN, threshold: 35000000, from: "1971-07-01" }, expected: "2013-07-01", display: "July 2013", format: month_year }
+      - { id: value, compute: { fn: pop, geo: CAN, date: "2013-07-01" }, expected: 35080992, display: "35,080,992", format: int }
+    method: "Derived: earliest quarterly estimate ≥ 35,000,000."
+    event: { date: "2013-07-01", tag: "Derived from the data", source_line: "First quarterly estimate ≥ 35,000,000: 35,080,992" }
+    wording:
+      short: "Canada passes 35 million people"
+      package: "Canada's first quarterly estimate above 35 million: July 1, 2013 (35,080,992)."
+
+  - id: milestone_40m
+    level: observation
+    text: "Canada's first quarterly population estimate at or above 40 million was 40,022,704 on July 1, 2023."
+    geography: CAN
+    period: { start: "2023-07-01", end: "2023-07-01" }
+    unit: persons
+    sources: [statcan_17100009]
+    values:
+      - { id: date, compute: { fn: first_date_at_or_above, geo: CAN, threshold: 40000000, from: "1971-07-01" }, expected: "2023-07-01", display: "July 2023", format: month_year }
+      - { id: value, compute: { fn: pop, geo: CAN, date: "2023-07-01" }, expected: 40022704, display: "40,022,704", format: int }
+    method: "Derived: earliest quarterly estimate ≥ 40,000,000."
+    event: { date: "2023-07-01", tag: "Derived from the data", source_line: "First quarterly estimate ≥ 40,000,000: 40,022,704" }
+    wording:
+      short: "Canada passes 40 million people"
+      package: "Canada's first quarterly estimate above 40 million: July 1, 2023 (40,022,704)."
+
+# Text blocks shown in each output. Every number in them must trace to a claim above.
+outputs:
+  video:
+    end_card:
+      title: "What changed, July 1971 → July 2026"
+      items:
+        - { big: { claim: canada_growth, value: pct }, text: { claim: canada_growth, wording: video } }
+        - { big: { claim: fastest_provinces, value: ab_pct }, text: { claim: fastest_provinces, wording: video }, extra: { claim: yukon_growth, wording: video } }
+        - { big_pair: { claim: atlantic_share, from: start, to: end }, text: { claim: atlantic_share, wording: video }, extra: { claim: slowest_province, wording: video } }
+      footer: "This shows where population changed, not why. Next story: births, deaths, immigration and moves between provinces."
+    legend:
+      height: "Height = people"
+      ramp_title: "Change since 1971"
+      ramp_sub: "NT, NU since 1991"
+      # colour-scale reference points (not claims): value → label
+      ramp: [[-0.10, "−10%"], [0, "±2%"], [0.5, "+50%"], [1.0, "+100%"], [2.0, "+200%"]]
+      ramp_labels: ["−10%", "±2%", "+50%", "+100%", "+200%"]
+      share_title: "Share of Canadians · brighter = share rose since 1971"
+    card_seconds: { show: 3.0, minimum: 2.6 }
+    source_note: >-
+      StatCan Table 17-10-0009-01; July 2026 preliminary. Rounded to 3 significant figures.
+      Spikes sit inside each province, not at its population centre. NT and NU combined before July 1991.
+      Shows where population changed, not why.
+  x_post:
+    claims: [canada_growth, fastest_provinces, atlantic_share]
+    template: |
+      Where Canadians live, 1971–2026
+
+      {canada_growth.x} {fastest_provinces.x} {atlantic_share.x}
+
+      July 2026 figures are preliminary. Data: StatCan Table 17-10-0009-01.
+      {explorer.overview}
+  explorer_links:
+    base: "https://claude.ai/artifact/CZheZU7u2wtcgkGNiDSSk9"
+    links:
+      - { id: overview, hash: "pop-2026", label: "Population, July 2026" }
+      - { id: change, hash: "chg-2026", label: "Change since 1971, by province" }
+      - { id: share, hash: "share-2026", label: "Share of Canadians, 2026" }
+      - { id: alberta, hash: "pop-2026-ab", label: "Alberta's population since 1971" }
+      - { id: atlantic, hash: "share-2026-nl", label: "Newfoundland and Labrador's share" }
+      - { id: start, hash: "pop-1971", label: "Population, July 1971" }

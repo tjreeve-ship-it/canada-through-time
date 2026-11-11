@@ -1,4 +1,7 @@
-/* v2 prototype — "Field Atlas" social frame (9:16).
+/* v2 — "Field Atlas" story frame, 9:16 and 16:9 (?fmt=).
+ * All words on screen come from web/stories/<id>.ledger.json, generated from the claims ledger
+ * (stories/<id>/ledger.yaml). Numbers that change with time come from the data and are re-verified by
+ * pipeline/check_ledger.py against the frame log that renderFrame() returns.
  * Spikes = population (height) and change since baseline (colour). The map itself is a calm, neutral base.
  * Everything visible is a pure function of the frame number (same contract as v1: window.CTT).
  */
@@ -10,6 +13,7 @@ const STORY_ID = params.get('story') || 'population-provinces-1971-2026';
 const RENDER = params.get('render') === '1';
 const SCALE = parseFloat(params.get('scale') || '1');
 const SHOW_SAFE = params.get('safe') === '1';
+const FMT = ['16x9', '9x16'].includes(params.get('fmt')) ? params.get('fmt') : '9x16';
 const NTNU_SPLIT = '1991-07-01';
 const PROV = ['NL', 'PE', 'NS', 'NB', 'QC', 'ON', 'MB', 'SK', 'AB', 'BC', 'YT', 'NT', 'NU'];
 const KM_PER_MILLION = 70, SPIKE_RADIUS = 58;
@@ -55,21 +59,19 @@ const lerp = (a, b, t) => a + (b - a) * t;
 const J = u => fetch(u).then(r => { if (!r.ok) throw new Error(u); return r.json(); });
 const toKm = fc => { const c = x => typeof x[0] === 'number' ? [x[0] / 1e3, x[1] / 1e3] : x.map(c);
   fc.features.forEach(f => { f.geometry.coordinates = c(f.geometry.coordinates); if (f.properties.lx != null) { f.properties.lx /= 1e3; f.properties.ly /= 1e3; } }); return fc; };
-const [story, pop, provinces, ntnu, countries, lakes] = await Promise.all([
-  J(`../stories/${STORY_ID}.json`), J('../data/population.json'), J('../data/provinces.geojson').then(toKm),
+const [story, TX, pop, provinces, ntnu, countries, lakes] = await Promise.all([
+  J(`../stories/${STORY_ID}.json`), J(`../stories/${STORY_ID}.ledger.json`), J('../data/population.json'), J('../data/provinces.geojson').then(toKm),
   J('../data/ntnu_combined.geojson').then(toKm), J('../data/context_countries.geojson').then(toKm), J('../data/lakes.geojson').then(toKm)]);
 await Promise.all(['600 32px "IBM Plex Sans"', '400 32px "IBM Plex Sans"', '700 32px "Source Serif 4"', '600 32px "Source Serif 4"', '400 20px "IBM Plex Mono"'].map(f => document.fonts.load(f)));
 
 const V = story.v2, S = pop.series, dates = pop.dates;
-function V_CALLOUTS() { return story.v2.callouts; }
-const i0 = dates.indexOf(story.start), i1 = dates.indexOf(story.end);
+function V_CALLOUTS() { return story.v2['callouts_' + FMT] || story.v2.callouts; }
+const i0 = dates.indexOf(TX.start), i1 = dates.indexOf(TX.end);
 const base = {};
 for (const k of [...PROV, 'NT+NU', 'CAN']) for (let i = i0; i <= i1; i++) if (S[k][i] != null) { base[k] = { v: S[k][i], d: dates[i] }; break; }
 
-// preliminary status read from Statistics Canada's own table note, not hard-coded
-const prelimFrom = (() => { const n = pop.notes.find(x => /preliminary postcensal from/i.test(x)); if (!n) return null;
-  const m = n.match(/preliminary postcensal from ([A-Z][a-z]+) (\d+), (\d{4})/); if (!m) return null;
-  return `${m[3]}-${String(MONTHS.indexOf(m[1]) + 1).padStart(2, '0')}-${m[2].padStart(2, '0')}`; })();
+// preliminary status: ledger revision classes (checked against Statistics Canada's table note 3)
+const prelimFrom = TX.prelim_from;
 
 // anchors: label points of each region (inside the province, not its population centre — stated on screen)
 const anchor = {};
@@ -79,19 +81,21 @@ anchor['NT+NU'] = [ntnu.features[0].properties.lx, ntnu.features[0].properties.l
 const CALLOUT = V_CALLOUTS();
 
 // ---------- events (annotations + derived milestones) ----------
-const events = [
-  ...story.annotations.map(a => ({ ...a, tag: a.kind === 'data_note' ? 'Data note' : 'Historical fact' })),
-  ...(story.milestones || []).map(m => { const i = dates.findIndex((d, j) => j >= i0 && S.CAN[j] >= m);
-    return i < 0 ? null : { date: dates[i], tag: 'Derived from the data', text: `Canada passes ${m / 1e6} million people`,
-      source: `First quarterly estimate ≥ ${fmtInt(m)}: ${fmtInt(S.CAN[i])}` }; }).filter(Boolean),
-].map(e => ({ ...e, idx: dates.findIndex(d => d >= e.date) })).filter(e => e.idx >= i0 && e.idx <= i1).sort((a, b) => a.idx - b.idx);
+// ---------- events: every card's tag, date, words and source line come from the ledger ----------
+const events = TX.events.map(e => ({ ...e, idx: dates.findIndex(d => d >= e.date) }))
+  .filter(e => e.idx >= i0 && e.idx <= i1).sort((a, b) => a.idx - b.idx);
 
 // ---------- time model: steady playback that pauses briefly at each event ----------
 const sec = V.seconds, fps = story.fps;
 const rate = (i1 - i0) / sec.play; // quarters per second while playing
+// Each card stays up at least card_seconds.minimum: if the next event (or the end) comes sooner, playback holds longer.
+const CARD = TX.card_seconds;
 const segs = []; { let t = sec.intro, p = i0;
-  for (const e of events) { const dt = (e.idx - p) / rate; segs.push({ t0: t, t1: t + dt, p0: p, p1: e.idx }); t += dt; e.t = t; segs.push({ t0: t, t1: t + sec.dwell, p0: e.idx, p1: e.idx }); t += sec.dwell; p = e.idx; }
+  events.forEach((e, j) => { const dt = (e.idx - p) / rate; segs.push({ t0: t, t1: t + dt, p0: p, p1: e.idx }); t += dt; e.t = t;
+    const travelNext = ((events[j + 1]?.idx ?? i1) - e.idx) / rate, hold = Math.max(sec.dwell, CARD.minimum - travelNext);
+    segs.push({ t0: t, t1: t + hold, p0: e.idx, p1: e.idx }); t += hold; p = e.idx; });
   segs.push({ t0: t, t1: t + (i1 - p) / rate, p0: p, p1: i1 }); }
+events.forEach((e, j) => { e.tEnd = Math.min(e.t + CARD.show, events[j + 1]?.t ?? Infinity); });
 const playEnd = segs.at(-1).t1, total = playEnd + sec.outro;
 const frameCount = Math.round(total * fps);
 function posAt(t) {
@@ -102,21 +106,22 @@ function posAt(t) {
 
 // ---------- layout ----------
 const stage = document.getElementById('stage');
-const fmt = story.formats['9x16'], W = fmt.width * SCALE, H = fmt.height * SCALE, U = SCALE;
+const fmt = story.formats[FMT], W = fmt.width * SCALE, H = fmt.height * SCALE, U = SCALE;
+stage.className = 'fmt-' + FMT;
 stage.style.width = W + 'px'; stage.style.height = H + 'px'; stage.style.setProperty('--u', U + 'px');
 if (!RENDER) { const s = Math.min(innerWidth / W, innerHeight / H); stage.style.transform = `translate(${(innerWidth - W * s) / 2}px,0) scale(${s})`; }
 
 // static text
-document.getElementById('kicker').textContent = V.kicker;
-document.getElementById('headline').textContent = V.headline;
-document.getElementById('leg-height').textContent = 'Height = people';
-document.getElementById('leg-ramp').innerHTML = `<span class="t">Change since ${story.start.slice(0, 4)}<br><span style="color:var(--ink-3)">NT, NU since 1991</span></span>` +
-  [[-0.1, '−10%'], [0, '±2%'], [0.5, '+50%'], [1, '+100%'], [2, '+200%']].map(([v, l]) =>
+const LEG = TX.legend;
+const md = s => s.replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
+document.getElementById('kicker').textContent = TX.kicker;
+document.getElementById('headline').textContent = TX.headline;
+document.getElementById('leg-height').textContent = LEG.height;
+document.getElementById('leg-ramp').innerHTML = `<span class="t">${LEG.ramp_title}<br><span style="color:var(--ink-3)">${LEG.ramp_sub}</span></span>` +
+  LEG.ramp.map(([v, l]) =>
     `<span style="display:flex;flex-direction:column;align-items:center;gap:6px"><span class="sw" style="background:${cssc(colorFor(v))}"></span><span style="font-size:${18 * U}px;color:var(--ink-3)">${l}</span></span>`).join('');
-document.getElementById('source').innerHTML =
-  `Statistics Canada, Table 17-10-0009-01, quarterly estimates${prelimFrom ? `; ${fmtMY(prelimFrom)} preliminary` : ''}.<br>` +
-  `Rounded to 3 significant figures. Spikes sit inside each province, not at its population centre. YT, NT, NU (under 0.5% of Canadians) omitted from the share bar.`;
-document.getElementById('share-y0').textContent = story.start.slice(0, 4);
+document.getElementById('source').textContent = TX.source_note;
+document.getElementById('share-y0').textContent = TX.start.slice(0, 4);
 
 // share bars
 const regions = V.regions;
@@ -131,28 +136,25 @@ sl.innerHTML = regions.map(r => `<div data-k="${r.key}"><b>${r.short}</b><span><
 // timeline marks
 const tlMarks = document.getElementById('tl-marks');
 tlMarks.innerHTML = events.map(e => `<i style="left:${((e.idx - i0) / (i1 - i0)) * 100}%"></i>`).join('') +
-  `<span style="left:0;transform:none">${story.start.slice(0, 4)}</span><span style="left:auto;right:0;transform:none">${story.end.slice(0, 4)}</span>`;
+  `<span style="left:0;transform:none">${TX.start.slice(0, 4)}</span><span style="left:auto;right:0;transform:none">${TX.end.slice(0, 4)}</span>`;
 
-// end card (computed, never typed)
-{ const e = i1, g = k => S[k][e] / base[k].v - 1;
-  const provs = ['NL', 'PE', 'NS', 'NB', 'QC', 'ON', 'MB', 'SK', 'AB', 'BC'].sort((a, b) => g(b) - g(a));
-  const nm = { AB: 'Alberta', BC: 'B.C.', ON: 'Ontario', QC: 'Quebec', NL: 'Newfoundland and Labrador', SK: 'Saskatchewan', MB: 'Manitoba', NS: 'Nova Scotia', NB: 'New Brunswick', PE: 'P.E.I.' };
-  const sh1 = shareAt(i1), atl = regions.findIndex(r => r.key === 'atl');
-  document.getElementById('end-items').innerHTML = [
-    [fmtPct(g('CAN')), `<b>Canada</b> grew from ${(base.CAN.v / 1e6).toFixed(1)} million to ${(S.CAN[e] / 1e6).toFixed(1)} million people.`],
-    [fmtPct(g(provs[0])), `<b>${nm[provs[0]]}</b> grew fastest of the provinces, then ${nm[provs[1]]} (${fmtPct(g(provs[1]))}). Yukon: ${fmtPct(g('YT'))}.`],
-    [`${(sh0[atl] * 100).toFixed(1)}→${(sh1[atl] * 100).toFixed(1)}%`, `<b>Atlantic Canada's share</b> of the population. ${nm[provs.at(-1)]} grew least (${fmtPct(g(provs.at(-1)))}).`],
-  ].map(([b, t]) => `<div class="end-item"><div class="big">${b}</div><div class="txt">${t}</div></div>`).join('');
-  document.getElementById('end-next').innerHTML = `These totals show <b>where</b> Canada grew, not why. Next story: births, deaths, immigration and moves between provinces.`; }
+// end card: ledger wording; big numbers are ledger displays (recomputed by the checker)
+document.querySelector('#end .lbl').textContent = TX.end_card.title;
+document.getElementById('end-items').innerHTML = TX.end_card.items.map(it =>
+  `<div class="end-item"><div class="big">${it.big}</div><div class="txt">${md(it.text)}</div></div>`).join('');
+document.getElementById('end-next').textContent = TX.end_card.footer;
 
 // safe-zone overlay for review (?safe=1)
+const SAFE = FMT === '9x16'
+  ? [[0, 0, 1080, 150, 'platform UI: top 150'], [0, 1580, 1080, 340, 'platform UI: bottom 340 (captions, buttons)'], [940, 1000, 140, 580, 'actions']]
+  : [[0, 0, 1920, 54, 'title-safe 5%'], [0, 1026, 1920, 54, 'title-safe 5% / player controls'], [0, 0, 96, 1080, ''], [1824, 0, 96, 1080, '']];
 if (SHOW_SAFE) { const z = document.getElementById('safe'); z.classList.remove('hidden');
-  z.innerHTML = [[0, 0, 1080, 150, 'platform UI: top 150'], [0, 1580, 1080, 340, 'platform UI: bottom 340 (captions, buttons)'], [940, 1000, 140, 580, 'actions']]
+  z.innerHTML = SAFE
     .map(([x, y, w, h, l]) => `<div class="z" style="left:${x * U}px;top:${y * U}px;width:${w * U}px;height:${h * U}px"><span>${l}</span></div>`).join(''); }
 
 // ---------- deck ----------
 const mapEl = document.getElementById('map');
-const MW = W, MH = 760 * U;
+const MW = (FMT === '16x9' ? 1240 : 1080) * U, MH = (FMT === '16x9' ? 860 : 760) * U;
 const theDeck = new Deck({
   parent: mapEl, width: MW, height: MH, views: new OrbitView({ orbitAxis: 'Z', fovy: 28 }), controller: false, useDevicePixels: 1,
   glOptions: { preserveDrawingBuffer: true }, parameters: { clearColor: [0, 0, 0, 0] },
@@ -164,7 +166,7 @@ const theDeck = new Deck({
 });
 const fitZoom = Math.log2(Math.min(MW / 5500, MH / 4100));
 function cam(p) {
-  const [a, b] = V.camera; const t = p * p * (3 - 2 * p);
+  const [a, b] = V['camera_' + FMT] || V.camera; const t = p * p * (3 - 2 * p);
   return { target: a.target.map((v, i) => lerp(v, b.target[i], t)), zoom: fitZoom + lerp(a.zoomOffset, b.zoomOffset, t),
     rotationX: lerp(a.rotationX, b.rotationX, t), rotationOrbit: lerp(a.rotationOrbit, b.rotationOrbit, t) };
 }
@@ -218,12 +220,12 @@ function render(frame) {
   document.getElementById('asof').textContent = `Statistics Canada estimate, ${fmtDate(obs)}${prelimFrom && obs >= prelimFrom ? ' (preliminary)' : ''}`;
   document.getElementById('total').textContent = fmtInt(S.CAN[lo]);
   const dc = S.CAN[lo] - base.CAN.v;
-  document.getElementById('total-chg').textContent = lo === i0 ? 'people' : `${dc >= 0 ? '+' : '−'}${(Math.abs(dc) / 1e6).toFixed(1)} million since ${story.start.slice(0, 4)} (${fmtPct(S.CAN[lo] / base.CAN.v - 1)})`;
+  document.getElementById('total-chg').textContent = lo === i0 ? 'people' : `${dc >= 0 ? '+' : '−'}${(Math.abs(dc) / 1e6).toFixed(1)} million since ${TX.start.slice(0, 4)} (${fmtPct(S.CAN[lo] / base.CAN.v - 1)})`;
 
   // share bar + labels
   const sh = shareAt(lo);
   document.getElementById('share-y1').textContent = obs.slice(0, 4);
-  let acc = 0; const widthPx = (876 - 84) * U;
+  let acc = 0; const widthPx = bar1.offsetWidth;
   regions.forEach((r, j) => {
     const span = bar1.querySelector(`[data-k="${r.key}"]`); span.style.width = sh[j] * 100 + '%';
     span.className = sh[j] > sh0[j] + 0.005 ? 'hi' : '';
@@ -233,21 +235,33 @@ function render(frame) {
     lab.querySelector('span').textContent = (sh[j] * 100).toFixed(1) + '%';
   });
   const north = regions.findIndex(r => r.key === 'no');
-  document.getElementById('share-title').textContent = `Share of Canadians · brighter = share rose since ${story.start.slice(0, 4)}`;
+  document.getElementById('share-title').textContent = LEG.share_title;
 
-  // event card: shown for sec.card seconds after its event, or until the next event
+  // event card: from its event until card_seconds.show later or the next event (never less than card_seconds.minimum)
   const box = document.getElementById('card');
-  const live = !outro && events.filter(e => t >= e.t && t < e.t + sec.card).pop();
+  const live = !outro && events.find(e => t >= e.t && t < e.tEnd);
   if (live) { box.classList.remove('off');
     document.getElementById('card-tag').textContent = live.tag;
-    document.getElementById('card-date').textContent = fmtMY(live.date);
-    document.getElementById('card-text').textContent = live.short || live.text;
+    document.getElementById('card-date').textContent = live.display_date;
+    document.getElementById('card-text').textContent = live.text;
     document.getElementById('card-src').textContent = live.source;
   } else box.classList.add('off');
   document.getElementById('end').classList.toggle('off', !outro);
   document.getElementById('tl-fill').style.width = prog * 100 + '%';
   tlMarks.querySelectorAll('i').forEach((el, j) => el.classList.toggle('past', pos >= events.at(j).idx));
-  return { frame, obs, t: +t.toFixed(3), event: live ? live.text : null };
+  // frame log for pipeline/check_ledger.py: every visible text element, plus map labels and share values
+  const dom = {};
+  for (const el of stage.querySelectorAll('[id]')) {
+    if (el.id === 'safe' || el.closest('.off') || el.closest('.hidden') || ['map', 'stage'].includes(el.id)) continue;
+    if (el.querySelector('[id]')) continue; // leaf text containers only (the end card is read as a whole below)
+    const txt = el.innerText.replace(/\s+/g, ' ').trim(); if (txt) dom[el.id] = txt; }
+  if (outro) dom.end = document.getElementById('end').innerText.replace(/\s+/g, ' ').trim();
+  const spikes = {}, callouts = {};
+  for (const d of plain) spikes[d.k] = `${d.k} ${sig3(shown[d.k])}`;
+  for (const d of call) callouts[d.k] = `${d.k} ${sig3(shown[d.k])}`;
+  const share = Object.fromEntries(regions.map((r, j) => [r.key, [r.members, sh[j] < 0.03 ? null : (sh[j] * 100).toFixed(1) + '%']]));
+  return { frame, obs, t: +t.toFixed(3), dom, spikes, callouts, share, end: outro,
+    card: live ? { tag: live.tag, date: live.display_date, text: live.text, src: live.source } : null };
 }
 
 // ---------- frame-exact contract ----------

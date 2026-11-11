@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "failures": [],
+  "human_review": [
+    "nunavut_created.date: 'April 1999' comes from external_nunavut_act and cannot be recomputed from project data. Confirm the in-force date against the Justice Laws page before each release.",
+    "headline wording and emphasis: “Canada nearly doubled. Alberta and B.C. led the provinces.” (arithmetic verified; framing is a human call)",
+    "scope statement: “This story shows where Canada's population changed. It does not show why.”"
+  ],
+  "notes": [
+    "video 16x9: no frame log yet (render first)",
+    "video 9x16: no frame log yet (render first)"
+  ],
+  "passed": 447
+}

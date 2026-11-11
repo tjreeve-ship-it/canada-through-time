@@ -7,6 +7,7 @@ produced by the same render(frame) function the interactive explorer uses.
   python3 render/render.py --story population-provinces-1971-2026 --fmt 16x9
   python3 render/render.py --story ... --fmt 9x16 --scale 2        # 4K-class output
   python3 render/render.py --story ... --stills 0,600,1019         # PNG checks only
+  python3 render/render.py --story ... --log-only                   # on-screen text log for check_ledger.py, no video
 """
 from __future__ import annotations
 
@@ -52,6 +53,7 @@ def main() -> None:
     ap.add_argument("--page", default="index.html", help="e.g. v2/index.html")
     ap.add_argument("--extra", default="", help="extra query string, e.g. safe=1")
     ap.add_argument("--tag", default="")
+    ap.add_argument("--log-only", action="store_true", help="evaluate every frame and write the .frames.json text log, no video (fast pre-check)")
     a = ap.parse_args()
 
     story = json.loads((WEB / "stories" / f"{a.story}.json").read_text())
@@ -85,6 +87,12 @@ def main() -> None:
             return
 
         out = Path(a.out) if a.out else out_dir / f"{a.story}{a.tag}_{a.fmt}_{h}p.mp4"
+        if a.log_only:
+            log = [page.evaluate(f"CTT.renderFrame({fr})") for fr in range(n)]
+            out.with_suffix(".frames.json").write_text(json.dumps(log))
+            print(f"wrote {out.with_suffix('.frames.json').relative_to(ROOT)} ({n} frames, log only)")
+            browser.close()
+            return
         tmp = out.with_suffix(".partial.mp4")
         ff = subprocess.Popen([
             "ffmpeg", "-y", "-loglevel", "error", "-f", "image2pipe", "-framerate", str(fps), "-c:v", "png", "-i", "-",

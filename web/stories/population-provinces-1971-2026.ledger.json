@@ -1,0 +1,116 @@
+{
+ "_generated_from": "stories/population-provinces-1971-2026/ledger.yaml (do not edit; run pipeline/build_story.py)",
+ "kicker": "Population · provinces and territories",
+ "headline": "Canada nearly doubled. Alberta and B.C. led the provinces.",
+ "start": "1971-07-01",
+ "end": "2026-07-01",
+ "events": [
+  {
+   "claim": "milestone_25m",
+   "date": "1982-04-01",
+   "tag": "Derived from the data",
+   "text": "Canada passes 25 million people",
+   "source": "First quarterly estimate ≥ 25,000,000: 25,042,069",
+   "display_date": "April 1982"
+  },
+  {
+   "claim": "ntnu_split_date",
+   "date": "1991-07-01",
+   "tag": "Data note",
+   "text": "N.W.T. and Nunavut reported separately from here on",
+   "source": "StatCan Table 17-10-0009-01, notes 4–5",
+   "display_date": "July 1991"
+  },
+  {
+   "claim": "milestone_30m",
+   "date": "1998-01-01",
+   "tag": "Derived from the data",
+   "text": "Canada passes 30 million people",
+   "source": "First quarterly estimate ≥ 30,000,000: 30,028,506",
+   "display_date": "January 1998"
+  },
+  {
+   "claim": "nunavut_created",
+   "date": "1999-04-01",
+   "tag": "Historical fact",
+   "text": "Nunavut becomes a territory",
+   "source": "Nunavut Act, S.C. 1993, c. 28 (in force April 1, 1999)",
+   "display_date": "April 1999"
+  },
+  {
+   "claim": "milestone_35m",
+   "date": "2013-07-01",
+   "tag": "Derived from the data",
+   "text": "Canada passes 35 million people",
+   "source": "First quarterly estimate ≥ 35,000,000: 35,080,992",
+   "display_date": "July 2013"
+  },
+  {
+   "claim": "milestone_40m",
+   "date": "2023-07-01",
+   "tag": "Derived from the data",
+   "text": "Canada passes 40 million people",
+   "source": "First quarterly estimate ≥ 40,000,000: 40,022,704",
+   "display_date": "July 2023"
+  }
+ ],
+ "end_card": {
+  "title": "What changed, July 1971 → July 2026",
+  "items": [
+   {
+    "big": "+90%",
+    "text": "**Canada** grew from 22.0 million to 41.8 million people."
+   },
+   {
+    "big": "+206%",
+    "text": "**Alberta** grew fastest of the provinces, then B.C. (+155%). Yukon: +165%."
+   },
+   {
+    "big": "9.5→6.5%",
+    "text": "**Atlantic Canada's share** of the population fell. Newfoundland and Labrador grew least (+4%)."
+   }
+  ],
+  "footer": "This shows where population changed, not why. Next story: births, deaths, immigration and moves between provinces."
+ },
+ "legend": {
+  "height": "Height = people",
+  "ramp_title": "Change since 1971",
+  "ramp_sub": "NT, NU since 1991",
+  "ramp": [
+   [
+    -0.1,
+    "−10%"
+   ],
+   [
+    0,
+    "±2%"
+   ],
+   [
+    0.5,
+    "+50%"
+   ],
+   [
+    1.0,
+    "+100%"
+   ],
+   [
+    2.0,
+    "+200%"
+   ]
+  ],
+  "ramp_labels": [
+   "−10%",
+   "±2%",
+   "+50%",
+   "+100%",
+   "+200%"
+  ],
+  "share_title": "Share of Canadians · brighter = share rose since 1971"
+ },
+ "card_seconds": {
+  "show": 3.0,
+  "minimum": 2.6
+ },
+ "source_note": "StatCan Table 17-10-0009-01; July 2026 preliminary. Rounded to 3 significant figures. Spikes sit inside each province, not at its population centre. NT and NU combined before July 1991. Shows where population changed, not why.",
+ "prelim_from": "2026-07-01"
+}
