@@ -429,15 +429,20 @@ const lakeLayer = new GeoJsonLayer({ id: 'lakes', data: liftZ(lakes, PLATE + 0.5
   lineWidthUnits: 'pixels', getLineWidth: 0.6, parameters: { depthTest: false } });
 
 function layers() { const L = layers0(); return STUDIO ? L.map(l => l.clone({ transitions: {} })) : L; }   // studio frames are exact: no time-based tweens
+// Timelapse motion: TW = { ya, yb, k } places the playhead between two published years. Only mark geometry and colour
+// glide between the two published values; every printed number is the published value for the year on screen.
+let TW = null;
+const tweenOf = (fn, g, cur) => { if (!TW || typeof cur !== 'number') return cur; const a = fn(g, TW.ya), b = fn(g, TW.yb); return typeof a === 'number' && typeof b === 'number' ? a + (b - a) * TW.k : cur; };
 function layers0() {
   const m = M[state.m], y = state.y, split = m.split(y);
   const feats = split ? featsSplit : featsCombined, geos = geosFor(split);
   const val = Object.fromEntries(geos.map(g => [g, m.value(g, y)]));
+  const valG = TW ? Object.fromEntries(geos.map(g => [g, tweenOf(m.value, g, val[g])])) : val, twKey = TW ? `${TW.ya}:${TW.k.toFixed(4)}` : '';
   const sel = state.p && (geos.includes(state.p) ? state.p : (state.p === 'NT' || state.p === 'NU') && !split ? 'NT+NU' : state.p);
   const landC = C('land'), dimC = C('land-dim');
   const fillColor = f => {
     const g = f.properties.abbr, v = val[g];
-    if (m.kind === 'fill') return v == null ? dimC : m.color(v);   // no data: the dimmed plate, named in the legend
+    if (m.kind === 'fill') return v == null ? dimC : m.color(valG[g]);   // no data: the dimmed plate, named in the legend
     if (m.kind === 'party') return v ? (v[0] === 'TIE' ? NEU : lerpC(partyCol(v[0]), C('ocean'), 0.18)) : landC;
     if (m.kind === 'arcs') return state.p && g !== sel ? dimC : landC;
     return landC;
@@ -448,7 +453,7 @@ function layers0() {
       getElevation: z, getFillColor: fillColor, getLineColor: C('boundary'), lineWidthUnits: 'pixels', getLineWidth: 1,
       // TRUE_COL: lit top face = ambient 0.91 + diffuse 0.285 × 0.6 × 0.527 ≈ 1.00, so a province matches its legend swatch
       material: TRUE_COL ? { ambient: 0.91, diffuse: 0.285, shininess: 0, specularColor: [0, 0, 0] } : V === 's' ? { ambient: 0.5, diffuse: 0.75, shininess: 12, specularColor: [40, 34, 28] } : { ambient: 1, diffuse: 0.15, shininess: 0, specularColor: [0, 0, 0] },
-      updateTriggers: { getFillColor: [state.m, y, state.p] }, transitions: { getFillColor: 450 } }),
+      updateTriggers: { getFillColor: [state.m, y, state.p, twKey] }, transitions: { getFillColor: 450 } }),
     ...(TX === 'relief' && RELIEF.img ? [reliefLayer(m, z)] : []),
     lakeLayer,
     ...(m.kind === 'fill' ? [hatchLayer(feats.filter(f => val[f.properties.abbr] == null), split, z)] : []),
@@ -460,7 +465,7 @@ function layers0() {
       new PathLayer({ id: 'sel', data: sp, coordinateSystem: CART, getPath: d => d.path.map(p => [p[0], p[1], z + 1]), getColor: C('select'), widthUnits: 'pixels', getWidth: 2.6, jointRounded: true, parameters: { depthTest: false } })); }
   const pts = geos.map(g => ({ k: g, p: anchor[g] }));
   if (m.kind === 'spike') {
-    const h = g => ((m.height ? m.height(g, y) : val[g]) || 0) / 1e6 * KMPM;
+    const h = g => ((m.height ? tweenOf(m.height, g, m.height(g, y)) : valG[g]) || 0) / 1e6 * KMPM;
     const col = d => m.colorBy ? (m.color(m.colorBy(d.k, y)) || NEU) : C('spike');
     const R0 = V === 's' ? 40 : 24;
     // base ring: marks where the column stands (inside the province, not at a city) without smudging small neighbours
@@ -469,7 +474,7 @@ function layers0() {
       new ColumnLayer({ id: 'spikes', data: pts, coordinateSystem: CART, diskResolution: 32, radius: R0, extruded: true, pickable: true,
         getPosition: d => [d.p[0], d.p[1], z], getElevation: d => h(d.k), getFillColor: col,
         material: V === 's' ? { ambient: 1.0, diffuse: 0.25, shininess: 80, specularColor: [255, 230, 190] } : { ambient: 0.75, diffuse: 0.4, shininess: 0, specularColor: [0, 0, 0] },
-        updateTriggers: { getElevation: [state.m, y], getFillColor: [state.m, y] }, transitions: { getElevation: 500, getFillColor: 400 } }));
+        updateTriggers: { getElevation: [state.m, y, twKey], getFillColor: [state.m, y, twKey] }, transitions: { getElevation: 500, getFillColor: 400 } }));
     if (V === 's') L.push(new ColumnLayer({ id: 'cap', data: pts, coordinateSystem: CART, diskResolution: 32, radius: R0, extruded: false, getPosition: d => [d.p[0], d.p[1], z + h(d.k) + 0.5],
         getFillColor: [...lerpC(C('spike'), C('land'), 0.4), 255], /* lit top face so the top of each column is easy to find */ parameters: { depthTest: false }, updateTriggers: { getPosition: [state.m, y] }, transitions: { getPosition: 500 } }));
     L.push(...labels(pts, d => [d.p[0], d.p[1], z + h(d.k)], val, m, sel));
@@ -549,10 +554,10 @@ function labels(pts, pos, val, m, sel, abbrOnly = false) {
       updateTriggers: { getSourcePosition: [state.m, state.y] } }),
     new TextLayer({ id: 'abbr', data: abbrOnly && state.hideAbbr ? pts.filter(d => !state.hideAbbr.has(d.k)) : pts, ...common, getText: d => (d.k === 'NT+NU' ? 'NT + NU' : d.k) + (!abbrOnly && m.kind === 'fill' && (!showVal(d) || hideVal.has(d.k)) ? OV[over(m, val[d.k])] : ''),
       getSize: d => d.k === sel ? 13 : tablet ? 13 : phone ? 10.5 : 11.5, fontWeight: 600, getColor: d => d.k === sel ? C('select') : [...C(abbrOnly ? 'ink-3' : 'ink-2'), 255],
-      getPixelOffset: d => off(d, showVal(d) && !hideVal.has(d.k) ? -16 : -2), updateTriggers: { getPosition: [state.m, state.y], getColor: [sel], getSize: [sel, phone, tablet], getText: [state.m, state.y, hideVal.size, phone], getPixelOffset: [sel, phone, state.m, state.y, JSON.stringify(dy), hideVal.size] } }),
+      getPixelOffset: d => off(d, showVal(d) && !hideVal.has(d.k) ? -16 : -2), updateTriggers: { getPosition: [state.m, state.y, TW && TW.k, TW && TW.ya], getColor: [sel], getSize: [sel, phone, tablet], getText: [state.m, state.y, hideVal.size, phone], getPixelOffset: [sel, phone, state.m, state.y, JSON.stringify(dy), hideVal.size] } }),
     new TextLayer({ id: 'val', data: pts.filter(d => showVal(d) && !hideVal.has(d.k)), ...common, getText: valText,
       getSize: d => d.k === sel ? 17 : 14.5, fontWeight: 600, getColor: C('ink-1'), getPixelOffset: d => off(d, 0),
-      updateTriggers: { getPosition: [state.m, state.y], getText: [state.m, state.y], getSize: [sel], getPixelOffset: [state.m, state.y, JSON.stringify(dy)] } }),
+      updateTriggers: { getPosition: [state.m, state.y, TW && TW.k, TW && TW.ya], getText: [state.m, state.y], getSize: [sel], getPixelOffset: [state.m, state.y, JSON.stringify(dy)] } }),
   ];
 }
 // One status vocabulary everywhere (list, panel, map legend): each state has its own marker and words.
@@ -1261,7 +1266,7 @@ function defaultAnnotations(m, a, b) { const out = [];
   return out.sort((x, y) => x.year - y.year); }
 function studioConfig(over = {}) { const m = M[over.layer || state.m], [a, b] = m.years, place = 'place' in over ? over.place : state.p;
   return { version: 1, id: `${m.id}${place ? '-' + enc(place) : ''}-${a}-${b}`, title: m.label, subtitle: m.q, layer: m.id, place: place || null, from: a, to: b, fps: 30, intro: 2.5, perYear: 0.6, outro: 5,
-    camera: 'push', format: '16x9', theme: PAL, surface: TX, annotations: defaultAnnotations(m, a, b), credit: 'The Canadian Data Project', ...over }; }
+    camera: 'push', motion: 'smooth', format: '16x9', theme: PAL, surface: TX, annotations: defaultAnnotations(m, a, b), credit: 'The Canadian Data Project', ...over }; }
 document.addEventListener('click', e => { if (!e.target.closest('[data-studio-open]')) return; const c = studioConfig(), m = M[c.layer]; let d = document.getElementById('studiodlg');
   if (!d) { d = document.createElement('dialog'); d.id = 'studiodlg'; document.getElementById('app').appendChild(d); }
   d.innerHTML = `<form method="dialog" class="sform"><h2>Make a timelapse</h2><p class="fine">${m.label}${c.place ? ' · ' + NAMES[c.place] : ' · all of Canada'}. The preview and the exported video are drawn from the same configuration, so an export can be reproduced exactly.</p>
@@ -1269,14 +1274,15 @@ document.addEventListener('click', e => { if (!e.target.closest('[data-studio-op
     <div class="two"><label>From<input name="from" type="number" min="${m.years[0]}" max="${m.years[1]}" value="${c.from}"></label><label>To<input name="to" type="number" min="${m.years[0]}" max="${m.years[1]}" value="${c.to}"></label></div>
     <div class="two"><label>Seconds per year<select name="perYear"><option value="0.4">0.4 (fast)</option><option value="0.6" selected>0.6</option><option value="1">1.0 (slow)</option></select></label>
       <label>Camera<select name="camera"><option value="push">Slow push-in</option><option value="static">Still</option><option value="pan">Pan west to east</option><option value="orbit">Gentle turn</option></select></label></div>
+    <label>Motion between years<select name="motion"><option value="smooth">Smooth (marks glide; figures stay published values)</option><option value="stepped">Stepped (jump from year to year)</option></select></label>
     <label>Format<select name="format"><option value="16x9">Landscape 1920 × 1080 (YouTube, X)</option><option value="9x16">Vertical 1080 × 1920 (Shorts, X, Reels)</option></select></label>
     <label>Notes on screen, one per line as “year: text”<textarea name="ann" rows="5">${c.annotations.map(a => `${a.year}: ${a.text}`).join('\n')}</textarea></label>
     <p class="fine" id="studio-len"></p>
     <div class="acts"><button type="button" data-studio="preview" class="pri">Preview</button><button type="button" data-studio="save">Download configuration</button><button value="cancel">Close</button></div>
-    <p class="fine">To export the video from a saved configuration: <code>python3 render/timelapse.py &lt;configuration&gt;.json</code>. Only years with a published value are shown; nothing is interpolated between them.</p></form>`;
+    <p class="fine">To export the video from a saved configuration: <code>python3 render/timelapse.py &lt;configuration&gt;.json</code>. Every figure on screen is a published value. With “Smooth” motion, columns and colours glide between years as animation; “Stepped” jumps from year to year.</p></form>`;
   const read = () => { const f = new FormData(d.querySelector('form')), from = Math.max(m.years[0], Math.min(m.years[1], +f.get('from'))), to = Math.max(from, Math.min(m.years[1], +f.get('to')));
     const ann = String(f.get('ann')).split('\n').map(l => l.match(/^\s*(\d{4})\s*:\s*(.+)$/)).filter(Boolean).map(x => ({ year: +x[1], text: x[2].trim() })).filter(a => a.year >= from && a.year <= to);
-    return studioConfig({ layer: m.id, place: c.place, title: f.get('title'), subtitle: f.get('subtitle'), from, to, perYear: +f.get('perYear'), camera: f.get('camera'), format: f.get('format'), annotations: ann, id: `${m.id}${c.place ? '-' + enc(c.place) : ''}-${from}-${to}${f.get('format') === '9x16' ? '-vertical' : ''}` }); };
+    return studioConfig({ layer: m.id, place: c.place, title: f.get('title'), subtitle: f.get('subtitle'), from, to, perYear: +f.get('perYear'), camera: f.get('camera'), motion: f.get('motion'), format: f.get('format'), annotations: ann, id: `${m.id}${c.place ? '-' + enc(c.place) : ''}-${from}-${to}${f.get('format') === '9x16' ? '-vertical' : ''}` }); };
   const len = () => { const k = read(); let n = 0; for (let y = k.from; y <= k.to; y++) if (!m.only || m.only.includes(y)) n++; d.querySelector('#studio-len').textContent = `${n} dates · about ${Math.round(k.intro + n * k.perYear + k.outro)} seconds at 30 frames per second, ${k.format === '9x16' ? '1080 × 1920' : '1920 × 1080'}.`; };
   d.oninput = len; len();
   d.onclick = ev => { const a = ev.target.closest('[data-studio]')?.dataset.studio; if (!a) return; const k = read();
@@ -1288,9 +1294,9 @@ if (STUDIO) { const SC = b64d(STUDIO), m = M[SC.layer]; state.m = SC.layer; stat
   const fps = SC.fps || 30, nI = Math.round(SC.intro * fps), per = Math.max(1, Math.round(SC.perYear * fps)), nO = Math.round(SC.outro * fps), N = nI + years.length * per + nO;
   const stage = document.createElement('div'); stage.id = 'stage';
   const srcLine = m.src.map(x => registry[x]).map(r => `${r.publisher}${r.table_id ? ', table ' + r.table_id : ''}`).filter((x, i, a) => a.indexOf(x) === i).join(' · ');
-  stage.innerHTML = `<div id="st-sub"></div><div id="st-ann"></div><div id="st-foot"><span>Source: ${srcLine}. Annual published values; nothing is interpolated.</span><b>${SC.credit || ''}</b></div>
+  stage.innerHTML = `<div id="st-sub"></div><div id="st-ann"></div><div id="st-foot"><span>Source: ${srcLine}. ${SC.motion === 'stepped' ? 'Annual published values; nothing is interpolated.' : 'Every figure shown is a published annual value. Movement between years is animation.'}</span><b>${SC.credit || ''}</b></div>
     <div id="st-bar"><i></i>${years.filter(y => (y % 10 === 0 && years.at(-1) - y >= (VERT ? 8 : 4) && y - years[0] >= 4) || y === years[0] || y === years.at(-1)).map(y => `<span style="left:${(years.indexOf(y) + 0.5) / years.length * 100}%">${y}</span>`).join('')}</div>
-    <div id="st-out"><h3>Sources and method</h3>${m.src.map(x => registry[x]).map(r => `<p><b>${r.publisher}</b>${r.table_id ? ' · table ' + r.table_id : ''} · ${r.title}<br><small>${r.licence} · retrieved ${r.retrieved}</small></p>`).join('')}<p class="cv">${m.q}${m.cover ? ' ' + m.cover + '.' : ''} Shown as published for each year${isPrelim(m, years.at(-1)) ? `; ${years.at(-1)} is preliminary` : ''}. This video describes the data; it does not explain causes.</p></div>`;
+    <div id="st-out"><h3>Sources and method</h3>${m.src.map(x => registry[x]).map(r => `<p><b>${r.publisher}</b>${r.table_id ? ' · table ' + r.table_id : ''} · ${r.title}<br><small>${r.licence} · retrieved ${r.retrieved}</small></p>`).join('')}<p class="cv">${m.q}${m.cover ? ' ' + m.cover + '.' : ''} Every figure is the published value for its year${isPrelim(m, years.at(-1)) ? `; ${years.at(-1)} is preliminary` : ''}.${SC.motion === 'stepped' ? '' : ' Columns and colours glide between years as animation; in-between positions are not estimates.'} This video describes the data; it does not explain causes.</p></div>`;
   document.getElementById('app').appendChild(stage); document.getElementById('st-sub').textContent = SC.subtitle || '';
   const ease = t => t * t * (3 - 2 * t); let base = null, lastY = null, relY = null;
   const cam = t => { const e = ease(t), v = { ...base, target: [...base.target] };
@@ -1298,17 +1304,24 @@ if (STUDIO) { const SC = b64d(STUDIO), m = M[SC.layer]; state.m = SC.layer; stat
     else if (SC.camera === 'pan') { v.zoom = base.zoom + 0.1; v.target[0] = base.target[0] - 300 + 600 * e; }
     else if (SC.camera === 'orbit') { v.rotationOrbit = -15 + 22 * e; }
     return v; };
+  const smooth = SC.motion !== 'stepped', clamp01 = x => Math.max(0, Math.min(1, x)), FADE = 9;
+  const annWin = (SC.annotations || []).map(a => { const i = years.findIndex(y => y >= a.year); if (i < 0) return null; const hold = a.hold || Math.max(2, Math.round(2.4 / SC.perYear)); return { text: a.text, f0: nI + i * per, f1: Math.min(N - nO, nI + (i + hold) * per) }; }).filter(Boolean);
   const renderFrame = f => { f = Math.max(0, Math.min(N - 1, Math.round(f))); if (!base) base = fitView();
-    const i = f < nI ? 0 : Math.min(years.length - 1, Math.floor((f - nI) / per)), y = years[i];
+    const c = (f - nI) / per, i = f < nI ? 0 : Math.min(years.length - 1, Math.floor(c)), y = years[i], out = f >= N - nO, intro = f < nI;
+    // playhead: each year's published value sits at the middle of that year's time slot; marks glide linearly between neighbours
+    if (smooth) { const u = Math.max(0, Math.min(years.length - 1, c - 0.5)), j = Math.min(years.length - 2, Math.floor(u)); TW = years.length > 1 ? { ya: years[j], yb: years[j + 1], k: u - j } : null; }
     view = cam(N > 1 ? f / (N - 1) : 0); theDeck.setProps({ viewState: view, controller: false, useDevicePixels: +Q.get('ss') || Math.max(2, devicePixelRatio) });   // supersample the map for video
     if (y !== lastY) { state.y = y; lastY = y; state.m = SC.layer; state.p = SC.place || null; update(); document.getElementById('r-title').textContent = SC.title; }
-    if (y !== relY || f % 6 === 0) { theDeck.redraw('studio'); theDeck.setProps({ layers: layers() }); relY = y; }   // label collision layout: on each new year and every 6th frame as the camera drifts
-    theDeck.redraw('studio');
-    const a = (SC.annotations || []).filter(a => a.year <= y && y < a.year + (a.hold || Math.max(2, Math.round(2.4 / SC.perYear)))).at(-1), out = f >= N - nO, intro = f < nI;
-    document.getElementById('st-ann').textContent = a && !intro && !out ? a.text : ''; document.getElementById('st-ann').classList.toggle('on', !!a && !intro && !out);
+    theDeck.redraw('studio'); theDeck.setProps({ layers: layers() }); theDeck.redraw('studio');
+    // text fades are tied to the frame number (never to a clock), so a frame always looks the same
+    const A = annWin.filter(a => f >= a.f0 && f < a.f1).at(-1), aEl = document.getElementById('st-ann');
+    if (A) aEl.textContent = A.text; aEl.style.opacity = A ? clamp01(Math.min(f - A.f0 + 1, A.f1 - f) / FADE) : 0;
+    const kin = clamp01((f - nI + 1) / FADE), kintro = clamp01((nI - f) / FADE), kout = clamp01((f - (N - nO) + 1) / (FADE * 1.5));
+    document.getElementById('st-sub').style.opacity = kintro; document.getElementById('st-out').style.opacity = kout;
+    for (const id of ['finding', 'r-meta', 'legend']) { const el = document.getElementById(id); el.style.visibility = 'visible'; el.style.opacity = VERT ? Math.min(kin, 1 - kout) : (id === 'finding' || !VERT) ? kin : 1; }
     document.body.classList.toggle('st-intro', intro); document.body.classList.toggle('st-outro', out);
-    stage.querySelector('#st-bar i').style.width = ((i + (intro ? 0 : out ? 1 : Math.min(1, ((f - nI) % per + 1) / per))) / years.length * 100) + '%';
-    return { frame: f, year: y, phase: intro ? 'intro' : out ? 'outro' : 'run', title: SC.title, finding: document.getElementById('finding').innerText, annotation: a && !intro && !out ? a.text : '' }; };
+    stage.querySelector('#st-bar i').style.width = (clamp01((f - nI + 1) / (years.length * per)) * 100) + '%';
+    return { frame: f, year: y, phase: intro ? 'intro' : out ? 'outro' : 'run', title: SC.title, finding: intro ? '' : document.getElementById('finding').innerText, annotation: A && aEl.style.opacity > 0.5 ? A.text : '', between: smooth && TW ? [TW.ya, TW.yb, +TW.k.toFixed(3)] : null }; };
   window.CTT = { get ready() { return window.READY === true && (TX !== 'relief' || !!RELIEF.img); }, frameCount: N, fps, renderFrame, config: SC, years };
   if (Q.get('render') == null) { // preview: plays in real time, with a scrubber
     const ctl = document.createElement('div'); ctl.id = 'st-ctl'; ctl.innerHTML = `<button aria-label="Play or pause">❚❚</button><input type="range" min="0" max="${N - 1}" value="0" aria-label="Position"><span></span><em>Preview · ${Math.round(N / fps)} s${VERT ? '' : ' · export with render/timelapse.py'}</em>`;

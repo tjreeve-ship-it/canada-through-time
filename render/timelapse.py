@@ -67,7 +67,7 @@ def main() -> None:
     (out_dir / "sources.json").write_text(json.dumps({"timelapse": cfg["id"], "build": a.build, "code_revision": rev, "uncommitted_changes_in_build_or_data": dirty, "frames": n, "fps": fps, "format": cfg.get("format", "16x9"), "pixels": [ow, oh],
         "build_files": {f: sha(f"web/{a.build}/{f}") for f in ("explore.js", "explore.css", "index.html")},
         "sources": {s: {k: reg[s].get(k) for k in ("title", "publisher", "table_id", "landing_url", "licence", "retrieved", "sha256", "limitations")} for s in srcs},
-        "method": "Each frame shows the published value for one year. No values are interpolated between years. Camera movement is the only continuous motion."}, indent=1, ensure_ascii=False))
+        "method": ("Each frame shows the published value for one year. No values are interpolated between years. Camera movement is the only continuous motion." if cfg.get("motion") == "stepped" else "Every printed figure (labels, sentence, year) is the published value for the year on screen. Column heights and fill colours move linearly between consecutive published years as animation only; each published value is reached exactly at the middle of its year's time slot. In-between positions are not estimates and are never printed. The frames log records which two years each frame sits between.")}, indent=1, ensure_ascii=False))
     print("package:", out_dir.relative_to(ROOT))
 
 if __name__ == "__main__":

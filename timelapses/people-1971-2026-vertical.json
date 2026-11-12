@@ -41,5 +41,6 @@
   }
  ],
  "credit": "The Canadian Data Project",
- "format": "9x16"
+ "format": "9x16",
+ "motion": "smooth"
 }

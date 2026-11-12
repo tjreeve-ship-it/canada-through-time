@@ -570,19 +570,19 @@ body.k-party.v-s.ty-civic #yearhero { background: linear-gradient(var(--ink-2), 
 body.studio #layers, body.studio #sheet, body.studio #mapctl, body.studio #palpop, body.studio #timeline, body.studio #pathcard, body.studio #tooltip, body.studio #r-meta .chip, body.studio #layer-btn, body.studio .note:not(.keep) { display: none !important; }
 body.studio.v-s #reading { top: 56px; left: 48px; width: 400px; } body.studio.v-s #folio { display: none; }
 body.studio.v-s #r-title { font-size: 31px; } body.studio.v-s.ty-civic #yearhero { font-size: 86px; opacity: 1; padding-bottom: 10px; background-size: 44px 4px; }
-body.studio #finding { min-height: 4.5em; } body.studio.st-intro #finding { visibility: hidden; }
+body.studio #finding { min-height: 4.5em; }
 #stage { position: absolute; inset: 0; pointer-events: none; z-index: 5; }
-#st-sub { position: absolute; left: 48px; top: 232px; width: 390px; font: 400 15.5px/1.45 var(--font-ui); color: var(--ink-2); opacity: 0; } body.st-intro #st-sub { opacity: 1; }
-#st-ann { position: absolute; left: 48px; bottom: 104px; max-width: 380px; padding: 9px 13px 9px 12px; font: 500 14.5px/1.35 var(--font-ui); color: var(--ink-1); background: var(--panel); border-left: 3px solid var(--accent); border-radius: 0 6px 6px 0; box-shadow: 0 0 0 1px var(--hairline); opacity: 0; } #st-ann.on { opacity: 1; }
+#st-sub { position: absolute; left: 48px; top: 232px; width: 390px; font: 400 15.5px/1.45 var(--font-ui); color: var(--ink-2); opacity: 0; }
+#st-ann { position: absolute; left: 48px; bottom: 104px; max-width: 380px; padding: 9px 13px 9px 12px; font: 500 14.5px/1.35 var(--font-ui); color: var(--ink-1); background: var(--panel); border-left: 3px solid var(--accent); border-radius: 0 6px 6px 0; box-shadow: 0 0 0 1px var(--hairline); opacity: 0; }
 #st-foot { position: absolute; left: 48px; right: 40px; bottom: 14px; display: flex; justify-content: space-between; gap: 20px; font: 400 11.5px/1.3 var(--font-ui); color: var(--ink-3); } #st-foot b { font: 600 13px var(--font-display); color: var(--ink-2); white-space: nowrap; }
 #st-bar { position: absolute; left: 48px; right: 40px; bottom: 64px; height: 3px; background: var(--hairline); } #st-bar i { position: absolute; left: 0; top: 0; bottom: 0; background: var(--ink-1); }
 #st-bar span { position: absolute; top: 8px; transform: translateX(-50%); font: 500 11px var(--font-ui); color: var(--ink-3); font-variant-numeric: tabular-nums; }
 #st-out { position: absolute; right: 40px; top: 56px; width: 380px; padding: 16px 18px; background: var(--panel); border-radius: 8px; box-shadow: 0 0 0 1px var(--hairline), 0 10px 30px rgba(0,0,0,.12); opacity: 0; font: 13px/1.45 var(--font-ui); color: var(--ink-2); }
-body.st-outro #st-out { opacity: 1; } #st-out h3 { margin: 0 0 6px; font: 600 18px var(--font-display); color: var(--ink-1); } #st-out p { margin: 6px 0; } #st-out small { color: var(--ink-3); } #st-out .cv { border-top: 1px solid var(--hairline); padding-top: 8px; font-size: 12.5px; }
+#st-out h3 { margin: 0 0 6px; font: 600 18px var(--font-display); color: var(--ink-1); } #st-out p { margin: 6px 0; } #st-out small { color: var(--ink-3); } #st-out .cv { border-top: 1px solid var(--hairline); padding-top: 8px; font-size: 12.5px; }
 #st-ctl { position: absolute; left: 50%; transform: translateX(-50%); top: 10px; z-index: 40; display: flex; align-items: center; gap: 10px; padding: 6px 12px; background: var(--panel); border-radius: 20px; box-shadow: 0 0 0 1px var(--hairline); font: 12.5px var(--font-ui); color: var(--ink-2); }
 #st-ctl input { width: 280px; accent-color: var(--ink-1); } #st-ctl em { font-style: normal; color: var(--ink-3); } #st-ctl span { min-width: 92px; font-variant-numeric: tabular-nums; }
 
-body.studio.st-intro #r-meta, body.studio.st-intro #legend { visibility: hidden; }
+
 #st-sub { top: 236px; }
 
 /* while a story chapter is open the card carries the narrative, so the reading block keeps only title, year, date and the scale */
@@ -606,7 +606,7 @@ body.st-vert #st-bar { left: 40px; right: 110px; bottom: 366px; height: 4px; } b
 body.st-vert #st-out { left: 40px; right: 40px; top: 470px; width: auto; font-size: 17px; padding: 20px 22px; } body.st-vert #st-out h3 { font-size: 24px; } body.st-vert #st-out .cv { font-size: 15.5px; } body.st-vert #st-out small { font-size: 13.5px; }
 body.st-vert #st-ctl { top: 4px; padding: 3px 10px; } body.st-vert #st-ctl input { width: 200px; }
 body.st-vert #st-out { top: 300px; box-shadow: 0 0 0 1px var(--hairline); }
-body.studio.st-vert.st-outro #finding, body.studio.st-vert.st-outro #r-meta, body.studio.st-vert.st-outro #legend { visibility: hidden; }
+
 body.st-vert #st-bar { bottom: 384px; } body.st-vert #st-ann { bottom: 420px; } body.st-vert #st-foot { bottom: 290px; }
 /* vertical: the note sits under the source line (still above the bottom 15% that platforms cover), so it never hides the map */
 body.st-vert #st-ann { bottom: 206px; right: 110px; }
