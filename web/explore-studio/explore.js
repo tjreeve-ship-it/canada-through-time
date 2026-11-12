@@ -1306,6 +1306,7 @@ if (STUDIO) { const SC = b64d(STUDIO), m = M[SC.layer]; state.m = SC.layer; stat
     return v; };
   const smooth = SC.motion !== 'stepped', clamp01 = x => Math.max(0, Math.min(1, x)), FADE = 9;
   const annWin = (SC.annotations || []).map(a => { const i = years.findIndex(y => y >= a.year); if (i < 0) return null; const hold = a.hold || Math.max(2, Math.round(2.4 / SC.perYear)); return { text: a.text, f0: nI + i * per, f1: Math.min(N - nO, nI + (i + hold) * per) }; }).filter(Boolean);
+  annWin.forEach((a, k) => { const nx = annWin[k + 1]; if (nx && a.f1 > nx.f0) a.f1 = nx.f0; });   // a note fades out before the next one starts
   const renderFrame = f => { f = Math.max(0, Math.min(N - 1, Math.round(f))); if (!base) base = fitView();
     const c = (f - nI) / per, i = f < nI ? 0 : Math.min(years.length - 1, Math.floor(c)), y = years[i], out = f >= N - nO, intro = f < nI;
     // playhead: each year's published value sits at the middle of that year's time slot; marks glide linearly between neighbours
