@@ -3,3 +3,5 @@ exports/
 __pycache__/
 .pytest_cache/
 *.partial.mp4
+dist/
+checkpoints/*.tar.gz

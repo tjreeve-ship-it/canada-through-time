@@ -157,3 +157,214 @@ sources:
       - "Transcribed from the ParlInfo table on 2026-11-11 (no machine-readable export found); the file is kept as the raw record."
     limitations:
       - "Provincial premiers are not in ParlInfo; they need provincial legislature sources (planned)."
+
+  # ------------------------------------------------------------------ housing and cost-of-living bundle (retrieved 2026-11-11)
+  statcan_34100126:
+    title: "Canada Mortgage and Housing Corporation, housing starts, under construction and completions, all areas, annual"
+    publisher: "Canada Mortgage and Housing Corporation (CMHC), via Statistics Canada"
+    table_id: "34-10-0126-01"
+    doi: "https://doi.org/10.25318/3410012601-eng"
+    landing_url: "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3410012601"
+    download_url: "https://www150.statcan.gc.ca/n1/tbl/csv/34100126-eng.zip"
+    raw_file: "data/raw/statcan/34100126-eng.zip"
+    sha256: "3d27f9cd171b182e7372667b48c1b3a7402dafbfe9582c4de42e3ef6f3cdd1f5"
+    retrieved: "2026-11-11"
+    release_in_file: "Released 2026-01-21; covers 1955–2025"
+    reporting_period: "Annual (calendar year)"
+    coverage: "Canada and 10 provinces. No territories in this table."
+    units: "Dwelling units"
+    licence: "CMHC Licence Agreement for the Use of Data (reuse permitted with accurate reproduction and clear acknowledgement; must not imply CMHC endorsement)"
+    licence_url: "https://www.statcan.gc.ca/en/reference/agreement_CMHC"
+    attribution: "Source: CMHC, Starts and Completions Survey, via Statistics Canada Table 34-10-0126-01."
+    quality_class: official_statistics
+    methodology_notes:
+      - "Starts and Completions Survey: a start is the pouring of the footing; a completion is when 90% or more of the work is done (CMHC definitions)."
+      - "'All areas' combines centres of 10,000+ (enumerated monthly) with smaller areas (estimated quarterly by sample)."
+      - "Geographical areas are modified every 5 years to reflect census definitions, so data are not strictly comparable historically (table note)."
+    limitations:
+      - "Completions are new units only. They are not net additions to the housing stock: demolitions, conversions and units lost are not subtracted."
+      - "No territorial data in this table."
+
+  statcan_17100159:
+    title: "Estimates of the number of private households by size on July 1st"
+    publisher: "Statistics Canada"
+    table_id: "17-10-0159-01"
+    doi: "https://doi.org/10.25318/1710015901-eng"
+    landing_url: "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710015901"
+    download_url: "https://www150.statcan.gc.ca/n1/tbl/csv/17100159-eng.zip"
+    raw_file: "data/raw/statcan/17100159-eng.zip"
+    sha256: "7e537b1e105ae29ae4d5b3a891de587d6dbe27af9994015d85c127d26fdb8887"
+    retrieved: "2026-11-11"
+    release_in_file: "Released 2025-11-07; covers 2006–2025"
+    reporting_period: "Annual, July 1"
+    coverage: "Canada, provinces and territories"
+    units: "Private households"
+    licence: "Statistics Canada Open Licence"
+    licence_url: "https://www.statcan.gc.ca/en/reference/licence"
+    attribution: "Source: Statistics Canada. Table 17-10-0159-01 Estimates of the number of private households by size on July 1st."
+    quality_class: official_statistics
+    methodology_notes:
+      - "Final intercensal 2006–2020, final postcensal 2021, updated postcensal 2022–2024, preliminary postcensal 2025 (table note)."
+      - "Derived from T1 Family File tax data, census data, census net undercoverage and population estimates."
+    limitations:
+      - "Begins in 2006; no comparable annual household series for earlier years in this table."
+      - "Private households only; people in collective dwellings are excluded."
+
+  statcan_34100127:
+    title: "Canada Mortgage and Housing Corporation, vacancy rates, apartment structures of six units and over, privately initiated in census metropolitan areas"
+    publisher: "Canada Mortgage and Housing Corporation (CMHC), via Statistics Canada"
+    table_id: "34-10-0127-01"
+    doi: "https://doi.org/10.25318/3410012701-eng"
+    landing_url: "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3410012701"
+    download_url: "https://www150.statcan.gc.ca/n1/tbl/csv/34100127-eng.zip"
+    raw_file: "data/raw/statcan/34100127-eng.zip"
+    sha256: "a2fb176b5e40b44dc23317eb2d0cb9ba013ad8b499e041a788ce7708be5b93ee"
+    retrieved: "2026-11-11"
+    release_in_file: "Released 2025-12-17; covers 1971–2025"
+    reporting_period: "Annual (Rental Market Survey, October)"
+    coverage: "36 census metropolitan areas plus a CMA average; coverage of each CMA starts in different years"
+    units: "Percent of units vacant"
+    licence: "CMHC Licence Agreement for the Use of Data"
+    licence_url: "https://www.statcan.gc.ca/en/reference/agreement_CMHC"
+    attribution: "Source: CMHC, Rental Market Survey, via Statistics Canada Table 34-10-0127-01."
+    quality_class: official_statistics
+    methodology_notes:
+      - "Privately initiated apartment structures of six units and over. Excludes condominiums rented out, secondary suites and other secondary rentals."
+      - "CMA boundaries follow the census and change every 5 years (table note)."
+    limitations:
+      - "City-level only: there is no provincial vacancy rate in this table. The map shows each CMA as a point at its core city."
+
+  statcan_34100133:
+    title: "Canada Mortgage and Housing Corporation, average rents for areas with a population of 10,000 and over"
+    publisher: "Canada Mortgage and Housing Corporation (CMHC), via Statistics Canada"
+    table_id: "34-10-0133-01"
+    doi: "https://doi.org/10.25318/3410013301-eng"
+    landing_url: "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3410013301"
+    download_url: "https://www150.statcan.gc.ca/n1/tbl/csv/34100133-eng.zip"
+    raw_file: "data/raw/statcan/34100133-eng.zip"
+    sha256: "9085a5bdbcdd2f29a4235175a65d940d7b84346a09548a974ffff26fbf0523b2"
+    retrieved: "2026-11-11"
+    release_in_file: "Released 2025-12-17; covers 1987–2025"
+    reporting_period: "Annual (Rental Market Survey, October)"
+    coverage: "247 centres of 10,000+; no provincial totals"
+    units: "Current dollars per month"
+    licence: "CMHC Licence Agreement for the Use of Data"
+    licence_url: "https://www.statcan.gc.ca/en/reference/agreement_CMHC"
+    attribution: "Source: CMHC, Rental Market Survey, via Statistics Canada Table 34-10-0133-01."
+    quality_class: official_statistics
+    methodology_notes:
+      - "This platform uses two-bedroom units in row and apartment structures of three units and over."
+      - "Average rent for all surveyed units (sitting tenants and new tenants), not asking rents for vacant units."
+      - "Status F = too unreliable to be published; '..' = not available. Both are left blank, never filled."
+    limitations:
+      - "Current (nominal) dollars, not adjusted for inflation."
+      - "Average of the existing purpose-built rental stock; movers typically face higher rents than the average."
+
+  statcan_18100005:
+    title: "Consumer Price Index, annual average, not seasonally adjusted"
+    publisher: "Statistics Canada"
+    table_id: "18-10-0005-01"
+    doi: "https://doi.org/10.25318/1810000501-eng"
+    landing_url: "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1810000501"
+    download_url: "https://www150.statcan.gc.ca/n1/tbl/csv/18100005-eng.zip"
+    raw_file: "data/raw/statcan/18100005-eng.zip"
+    sha256: "9b52900a2fc26b7e11ac22d819b3164678fe9a2a5ff241c5db085816a5fe8e0a"
+    retrieved: "2026-11-11"
+    release_in_file: "Released 2026-01-19; covers 1914–2025"
+    reporting_period: "Annual average"
+    coverage: "Canada (rent from 1949), provinces from 1979; territories only as cities (Whitehorse, Yellowknife, Iqaluit)"
+    units: "Index, 2002=100"
+    licence: "Statistics Canada Open Licence"
+    licence_url: "https://www.statcan.gc.ca/en/reference/licence"
+    attribution: "Source: Statistics Canada. Table 18-10-0005-01 Consumer Price Index, annual average, not seasonally adjusted."
+    quality_class: official_statistics
+    methodology_notes:
+      - "The CPI is a fixed-basket price index, not a cost-of-living index (table note)."
+      - "The rent index measures rent paid by all tenants (new leases, renewals, mid-lease), not asking rents for vacant units."
+      - "January 2019: the rent index moved from a matched-model to a hedonic method using Labour Force Survey rents (Prices Analytical Series 62F0014M2019002). Comparisons across 2019 mix methods."
+    limitations:
+      - "An index shows change from its base, not a level: provinces cannot be compared on rent levels using the CPI."
+
+  statcan_11100190:
+    title: "Market income, government transfers, total income, income tax and after-tax income by economic family type"
+    publisher: "Statistics Canada"
+    table_id: "11-10-0190-01"
+    doi: "https://doi.org/10.25318/1110019001-eng"
+    landing_url: "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110019001"
+    download_url: "https://www150.statcan.gc.ca/n1/tbl/csv/11100190-eng.zip"
+    raw_file: "data/raw/statcan/11100190-eng.zip"
+    sha256: "03677bae1fd1cc412c6563c0b33251d2eb4cf3837712ee7c92aa87d7bec782e4"
+    retrieved: "2026-11-11"
+    release_in_file: "Released 2026-04-29; covers 1976–2024"
+    reporting_period: "Annual (calendar year income)"
+    coverage: "Canada and provinces from 1976; Yukon, Northwest Territories and Nunavut from 2018 only"
+    units: "2024 constant dollars"
+    licence: "Statistics Canada Open Licence"
+    licence_url: "https://www.statcan.gc.ca/en/reference/licence"
+    attribution: "Source: Statistics Canada. Table 11-10-0190-01 Market income, government transfers, total income, income tax and after-tax income by economic family type."
+    quality_class: official_statistics
+    methodology_notes:
+      - "This platform uses median after-tax income of economic families and persons not in an economic family, in 2024 constant dollars."
+      - "Survey of Consumer Finances 1976–1992, Survey of Labour and Income Dynamics 1993–2011, Canadian Income Survey 2012 onward (series breaks)."
+    limitations:
+      - "Covers all family units, owners and renters together; it is not renter income, so it cannot be divided into rents to make a renter affordability ratio."
+
+  naturalearth_places:
+    title: "Populated places, simple (1:10m)"
+    publisher: "Natural Earth"
+    landing_url: "https://www.naturalearthdata.com/"
+    download_url: "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_populated_places_simple.geojson"
+    raw_file: "data/raw/naturalearth/ne_10m_populated_places_simple.geojson"
+    sha256: "fd3fa867a320cbd5c5b6bb5bc550afeec2939fb2cef688e508007282a55ac42f"
+    retrieved: "2026-11-11"
+    licence: "Public domain"
+    attribution: "City points: Natural Earth (public domain)."
+    quality_class: established_research
+    limitations:
+      - "Used only to place census metropolitan areas on the map at their core city. Brantford, Guelph and St. Catharines–Niagara are not in this file and are listed, not mapped."
+
+  naturalearth_sr50m:
+    title: "Shaded Relief Basic (1:50m), version 2.0.0"
+    publisher: "Natural Earth"
+    landing_url: "https://www.naturalearthdata.com/downloads/50m-raster-data/50m-shaded-relief/"
+    download_url: "https://github.com/nvkelso/natural-earth-raster/blob/master/50m_rasters/SR_50M/SR_50M.tif"
+    raw_file: "data/raw/naturalearth/SR_50M.tif"
+    sha256: "aff6ec6905554ed489087edf46e61cbf68c810fe99f2a1d2cddda7e986a540a2"
+    retrieved: "2026-11-11"
+    licence: "Public domain"
+    attribution: "Shaded relief: Natural Earth (public domain), derived from SRTM Plus elevation."
+    quality_class: established_research
+    coverage: "World land areas; 10,800 x 5,400 pixels (2 arc-minutes, about 3.7 km at the equator). Canada is fully covered."
+    limitations:
+      - "Physical-geography context only. The relief does not represent any statistic shown on the map."
+      - "A cartographic hillshade generalised for 1:50m; Natural Earth embossed small islands by hand. Not suitable for measuring elevation."
+      - "Resampled to a 3 km grid in the map projection and clipped to the province outlines (pipeline/build_relief.py). Resampling adds no detail: the source cell is 2 arc-minutes (about 3.7 km north–south and roughly 1.3–2.4 km east–west across Canada), and it was itself downsampled and generalised by Natural Earth."
+
+  statcan_39100048:
+    title: "Population in core housing need by selected sociocultural characteristics, economic family structure and gender"
+    publisher: "Statistics Canada"
+    table_id: "39-10-0048-01"
+    doi: "https://doi.org/10.25318/3910004801-eng"
+    landing_url: "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3910004801"
+    download_url: "https://www150.statcan.gc.ca/n1/tbl/csv/39100048-eng.zip"
+    raw_file: "data/raw/statcan/39100048-eng.zip"
+    sha256: "add7aac4665b7a7a55a103f51d1a4d77a1b68cd9b8d1fddc60163718e2cddad5"
+    retrieved: "2026-11-11"
+    release_in_file: "File dated 2025-12-12; census years 2006, 2011 (NHS), 2016, 2021"
+    reporting_period: "Census years only"
+    coverage: "Canada, provinces and territories. This platform shows 2016 and 2021 only."
+    units: "Percent of persons in private households examined for core housing need"
+    licence: "Statistics Canada Open Licence"
+    licence_url: "https://www.statcan.gc.ca/en/reference/licence"
+    attribution: "Source: Statistics Canada. Table 39-10-0048-01. Census of Population 2016 and 2021."
+    quality_class: official_statistics
+    methodology_notes:
+      - "Core housing need: a household's dwelling falls below at least one of the adequacy (no major repairs), affordability (shelter costs under 30% of before-tax income) or suitability (enough bedrooms) standards, and it would have to spend 30% or more of before-tax income to rent acceptable local housing at the median rent (Census definition)."
+      - "Only private, non-farm, non-reserve households with income above zero and shelter-cost-to-income ratios under 100% are examined. Non-family student households with a maintainer aged 15 to 29 are counted as not in need."
+      - "Counts are randomly rounded; percentages are computed by Statistics Canada."
+      - "This table counts persons living in households in core housing need, not households."
+    limitations:
+      - "Census years only: no annual values exist between censuses, and none are estimated here."
+      - "2021 Census income refers to 2020, when temporary pandemic income supports lowered the share of income spent on housing; Statistics Canada attributes much of the 2016→2021 decline to these supports (The Daily, 2023-01-23)."
+      - "On-reserve households are not examined, which matters most where many people live on reserve."
+      - "2011 values come from the voluntary National Household Survey and are not shown."

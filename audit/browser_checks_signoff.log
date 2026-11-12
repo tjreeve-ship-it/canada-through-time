@@ -1,0 +1,78 @@
+PASS desktop: all 20 layers render without page errors
+PASS desktop: zooming out stops at the bound  (zoom -3.53, fitted -3.21, floor -3.53)
+PASS desktop: pan and zoom are clamped near Canada
+PASS desktop: reset returns to the fitted view  (-3.21 vs -3.21)
+PASS desktop: national flows show the 12 largest only  (12 arcs)
+PASS desktop: flows legend says the view is aggregated
+PASS desktop: province flows show every flow in and out  (24 arcs)
+PASS phone: all 20 layers render without page errors
+PASS phone: zooming out stops at the bound  (zoom -4.17, fitted -3.85, floor -4.17)
+PASS phone: pan and zoom are clamped near Canada
+PASS phone: reset returns to the fitted view  (-3.85 vs -3.85)
+PASS phone: national flows show the 12 largest only  (12 arcs)
+PASS phone: flows legend says the view is aggregated
+PASS phone: province flows show every flow in and out  (24 arcs)
+PASS territories have no starts value (missing, not zero)  ([None, None, None])
+PASS completions end in 2022 and the slider clamps to it
+PASS completions are null after 2022
+PASS core housing need snaps to census years only
+PASS rent-vs-prices layer starts after the 2019 method change
+PASS unmapped metro areas are listed in the panel
+PASS suppressed rents exist in source and are flagged, not filled
+PASS election layer still renders party fills
+PASS comparison shows both places, values and a difference
+PASS comparison with a missing value says why and shows no difference
+PASS chart hover gives an exact value for an earlier year  (July 1971 → July 1, 1978 · Alberta +21% change in population)
+PASS arrow keys on the chart move the year  (2025 -> 2024)
+PASS income chart marks the 1993 and 2012 survey changes
+PASS territory income before 2018 says why it is missing
+PASS core housing need chart is two points, no line
+PASS a starting question opens real data with limits
+PASS dense city map labels a subset without overlap and lists every city  (13 labels drawn)
+PASS city search filters the list
+PASS no published value is stippled on the map and named in the legend  (760 stipple points)
+PASS no-value panel says Not published, why, and that nothing is filled in
+PASS then-and-now refuses a difference across the 2012 income survey change
+PASS then-and-now shows a difference when both dates are comparable  (From 2015 to 2024: +$8,200 (+12%).)
+PASS then-and-now offers census years only for core housing need  (['2016 Census (income year 2015)'])
+PASS then-and-now offers only the published years for a short series (Yukon income)  (['Calendar year 2018', 'Calendar year 2019', 'Calendar year 2020', 'Calendar year 2021', 'Calendar year 2022', 'Calendar year 2023'])
+PASS then-and-now slider works from the keyboard and lands on a published year  (2007)
+PASS province value labels do not overlap on a dollar measure (desktop)  (0 overlapping pairs, 0 values hidden)
+PASS palette picker lists eight palettes and three map surfaces
+PASS interface accent is not used on the election layer  (['rgb(46, 43, 28)', '#B8472F'])
+PASS shaded relief layer is drawn below the data marks
+PASS values above the colour scale are named with exact figures in the legend  (
+$40K
+$60K
+$80K
+$90K+
+no published value
+▲ Above the colour scale (colour stops at $90,000; values are exact): Northwest Territories $116,100 · Nunavut $109,600)
+PASS over-scale provinces carry a marker on the map; others do not  (NT:$116,100 ▲ | NU:$109,600 ▲)
+PASS over-scale values are unchanged in the data
+PASS a layer with nothing beyond its scale shows no over-scale note
+PASS spike height is still proportional to population, and relief is drawn beneath the spikes  ({'ratio': 1.7935277972682377, 'pop': 1.7935277972682377, 'order': True})
+PASS flow arcs: opposite directions separated, width still follows the flow, relief beneath  ({'tilt': 18, 'wRatio': 0.9151062258864765, 'vRatio': 0.9151062258864765, 'order': True, 'n': 24})
+PASS flow legend keeps direction and the side-by-side note
+PASS national flow legend names the destination end correctly and keeps the aggregation note  (Arc width = people moving, July–June.
+Dark end = destination; the two directions between a pair are drawn side by side. )
+PASS Source & method identifies the relief as context with source, licence and limits  (r-data/50m-shaded-relief/
+Detail
+World land areas; 10,800 x 5,400 pixels (2 arc-minutes, about 3.7 km at the equator). Canada is fully covered.
+Retrieved
+2026-11-11
+Licence
+Public domain
+Limitations
+3)
+PASS city then-and-now flags current dollars as not inflation-adjusted  (. Current dollars: not adjusted for inflation.
+
+Same source and definition at both dates unless noted. A change over time is an observation, not an explanation.)
+PASS display face covers French place names; year uses tabular figures  (lining-nums tabular-nums)
+PASS tablet 820 px renders without errors
+PASS phone: the whole country fits the screen width  ([6, 384, 314, 621])
+PASS phone: with the sheet half up the selected city stays above the sheet  (city y 423, sheet top 464)
+PASS phone: people layer tilts so columns stand, and shows values  ({'rx': 50, 'n': 13})
+PASS phone: over-scale territories are marked on the map and listed in the legend  (NT ▲,NU ▲)
+
+59/59 passed

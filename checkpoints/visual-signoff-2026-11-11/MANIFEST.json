@@ -1,0 +1,344 @@
+{
+ "checkpoint": "visual-signoff-2026-11-11",
+ "frozen_at": "2026-11-11T22:45-06:00",
+ "visual_identity": {
+  "primary_theme": "Field Paper · Ember (?p=ember), shaded relief (?tx=relief)",
+  "secondary_theme": "Aurora Night (?p=aurora)",
+  "typography": "Source Serif 4 + Public Sans (ty-civic)",
+  "other_palettes": "retained in the picker as \"review only\"; not part of the first release"
+ },
+ "source_revision": {
+  "git_branch": "design/field-atlas-prototype",
+  "git_head": "18d1e5e4c284e267abceb9dd1fc43d1adfb03bca",
+  "note": "The sign-off build is NOT committed. It exists only as uncommitted files on top of this commit; this checkpoint folder and its hashes are the record of its exact content."
+ },
+ "open_instructions": "Double-click canada-through-time-explorer-signoff.html, or serve the repo web/ folder and open /explore-signoff/. To re-create the served layout from this checkpoint: build/ → web/explore-signoff/, assets/web/ → web/.",
+ "tests": {
+  "pytest": "43 passed in 2.09s",
+  "browser_checks": "59/59 passed",
+  "run_against": "web/explore-signoff at the hashes below"
+ },
+ "files": {
+  "SIGNOFF_PASS_REVIEW.md": {
+   "sha256": "abce07efe153e0261b138538fbf1070d5c588bd43fc95e25446ae1421584002e",
+   "bytes": 7475
+  },
+  "assets/web/data/context_countries.geojson": {
+   "sha256": "f2d31dcc07662a3f7685128a21534fd594546711e1b0c7c6275fdb8499d396d6",
+   "bytes": 116145
+  },
+  "assets/web/data/explorer/area.json": {
+   "sha256": "f3b90d4baa3a04a6680ae195fc0f7db60ff2e9fd9b0d761c77289e137696fda3",
+   "bytes": 276
+  },
+  "assets/web/data/explorer/components.json": {
+   "sha256": "02077c046619188ec49d8d814b3988a6d25b386ab010226ba6bb5e9e25fc0f69",
+   "bytes": 142574
+  },
+  "assets/web/data/explorer/events.json": {
+   "sha256": "02bdf4bcc96b0fe45fdace4a7ae61ec6ca9799a83024dd89da15b2cf7f0e93ed",
+   "bytes": 15197
+  },
+  "assets/web/data/explorer/flows.json": {
+   "sha256": "af3ab92716396e09ec9ecf1e6dbd3435d4f959d97924c8f703047c3e3ee9f1a1",
+   "bytes": 132290
+  },
+  "assets/web/data/explorer/politics.json": {
+   "sha256": "839100836ba8b6d20bab44316bb4e650fce7cb507fc72ce09abe9b7191c22b93",
+   "bytes": 20504
+  },
+  "assets/web/data/explorer/registry.json": {
+   "sha256": "cb4453d2d3d2c62014b867cbfdaa1ba7f69cb25d454ab120c7247fc89e25bbf1",
+   "bytes": 20997
+  },
+  "assets/web/data/housing/cities.json": {
+   "sha256": "e525cf0385cbe6b61fe26d669f1beea76d24ac5f58d4985e61a85f4e57bbb1bd",
+   "bytes": 45927
+  },
+  "assets/web/data/housing/construction.json": {
+   "sha256": "a786d2c7356ba4e0695f5e0ea33ba6fdabefb19e03b7308c9f02d8bcfc69c6d6",
+   "bytes": 212611
+  },
+  "assets/web/data/housing/core_need.json": {
+   "sha256": "f35dc95db83d80e83f34f1fdbac1137594e1d9e61b6347df823e4ae128bfc519",
+   "bytes": 2001
+  },
+  "assets/web/data/housing/cpi.json": {
+   "sha256": "9a4efd8b1e1c64a1fcbeea57c6db54d4088ac40d20d52cc2e596c9066829482c",
+   "bytes": 40414
+  },
+  "assets/web/data/housing/households.json": {
+   "sha256": "95149e0b93352c5af47675c885910276d972bc700579f60f1d00b574ca451b04",
+   "bytes": 5245
+  },
+  "assets/web/data/housing/income.json": {
+   "sha256": "1acb8abaabf916ceb3ecd91b72b5ede138c236b63825ecedd7b270c6b1808266",
+   "bytes": 9719
+  },
+  "assets/web/data/lakes.geojson": {
+   "sha256": "0bbe45743f09cbf9dc2de73efb3913991110330274b6d5b79a5064042af4764a",
+   "bytes": 151319
+  },
+  "assets/web/data/ntnu_combined.geojson": {
+   "sha256": "4e0b7d87ebfdab154ca4e6d5d9e85703b49d29bd657216c6dec901fa9bbe2377",
+   "bytes": 50031
+  },
+  "assets/web/data/population.json": {
+   "sha256": "17f90521eb4996cd31b854d9729b9c22e1a92d9a423d0cc84616812b802996f9",
+   "bytes": 37975
+  },
+  "assets/web/data/provinces.geojson": {
+   "sha256": "19c1d78311599fe4b3925db8e9e5c9646eabc829066b14be343d4cf59d34c96d",
+   "bytes": 92470
+  },
+  "assets/web/data/relief/relief_canada_3km.png": {
+   "sha256": "b02b383c481b143188a8bb005011c11f8ade79a03b6e0370ed720abb57614831",
+   "bytes": 1484456
+  },
+  "assets/web/fonts/ibm-plex-sans-latin-400-normal.woff2": {
+   "sha256": "3b646991d30055a93a4ecc499713d4347953a74a947ecab435ab72070cbdab0e",
+   "bytes": 22588
+  },
+  "assets/web/fonts/ibm-plex-sans-latin-500-normal.woff2": {
+   "sha256": "0717336fb31fcdcde4b8deb3675bb4a0f7f6d484864afcd6751ac29975962203",
+   "bytes": 24184
+  },
+  "assets/web/fonts/ibm-plex-sans-latin-600-normal.woff2": {
+   "sha256": "8960851d691c054ed38e259bdcf1a6190d157b4203ed5bb32c632a863fb8ec2f",
+   "bytes": 24252
+  },
+  "assets/web/fonts/newsreader-latin-400-italic.woff2": {
+   "sha256": "fa9b900403949d9a723106752a5c8ad2797012a0c9057427b1da2db72d552148",
+   "bytes": 24340
+  },
+  "assets/web/fonts/newsreader-latin-400-normal.woff2": {
+   "sha256": "e66067814f1c672d33a457e4f4d102c818b481420e2234cf685ebdbf2f443904",
+   "bytes": 22480
+  },
+  "assets/web/fonts/newsreader-latin-500-normal.woff2": {
+   "sha256": "5613e2fc8377392c02e8ac9d55014689fb5320a5f2a7be55e8088a314728ac2c",
+   "bytes": 23624
+  },
+  "assets/web/fonts/newsreader-latin-600-normal.woff2": {
+   "sha256": "05c91a26d19a61eafe7ce8e0b77eff3fd279ce994dc89f432f4cd06784935e84",
+   "bytes": 23876
+  },
+  "assets/web/fonts/public-sans-latin-400-normal.woff2": {
+   "sha256": "36274b5787b4f03b27e65ae971d6c808a96838ccd60c9dabaee154889b6bba82",
+   "bytes": 14632
+  },
+  "assets/web/fonts/public-sans-latin-500-normal.woff2": {
+   "sha256": "55e866a00caa197bc9fafa52c907f4dfe88e51bbb3f585c777931d03eb961e96",
+   "bytes": 14656
+  },
+  "assets/web/fonts/public-sans-latin-600-normal.woff2": {
+   "sha256": "c7842f97346df1b3b470e9d71acde90f132dd858508ec5ae6606401e5d0938f7",
+   "bytes": 14592
+  },
+  "assets/web/fonts/schibsted-grotesk-latin-500-normal.woff2": {
+   "sha256": "83c497a1c028bfc2ae231f88c49ec7da542e1e4bbdfe23ad207a6dbb91d4f15d",
+   "bytes": 25220
+  },
+  "assets/web/fonts/schibsted-grotesk-latin-600-normal.woff2": {
+   "sha256": "d00ac8735bf6b96cc4cfbfb22576c4168645547a264bd22d127c46519cab3250",
+   "bytes": 25180
+  },
+  "assets/web/fonts/schibsted-grotesk-latin-700-normal.woff2": {
+   "sha256": "d656a2dcc2bf850a9af5156f2de42f6051facfbaa8d5790cf31159de39bc2568",
+   "bytes": 25148
+  },
+  "assets/web/fonts/source-serif-4-latin-600-normal.woff2": {
+   "sha256": "f2b7e1cf1d277b7608231868135648f8ad8e2b58d8e97ca088bee15dc357bee7",
+   "bytes": 21532
+  },
+  "assets/web/fonts/source-serif-4-latin-700-normal.woff2": {
+   "sha256": "7691c51bc286a9014db0048277d2c3f2ad0a90b533dc8adfb16cb22a95390d39",
+   "bytes": 21716
+  },
+  "assets/web/vendor/deck.min.js": {
+   "sha256": "08857e84bc2e5478a62ce1dc59b9b5fae9ae0a21104c78503dece316d69a1ca6",
+   "bytes": 2078081
+  },
+  "build/explore.css": {
+   "sha256": "292caa84cf6ef14481c6142cd8ca6b9537b6d272cf0decfd5cbfeed80c32b066",
+   "bytes": 49560
+  },
+  "build/explore.js": {
+   "sha256": "4c02d6101bc26e5a897ed73e923668b20a9fb7c07257802853d2cd9173d0f752",
+   "bytes": 130906
+  },
+  "build/index.html": {
+   "sha256": "454401b537daefe9ebab1a179c5b74d78401579c2626ed2101cd69f581eebd95",
+   "bytes": 2968
+  },
+  "canada-through-time-explorer-signoff.html": {
+   "sha256": "17ced1dc684aebece3060900dae905e185d80cb01008d3f9c09b93fcab99ec6e",
+   "bytes": 5734462
+  },
+  "screenshots/aurora_night/d_chg.png": {
+   "sha256": "71ed797f6e5169e29e3d65859e17d1e62e5ab63c3d0cad0a1db5591d258eec08",
+   "bytes": 1034212
+  },
+  "screenshots/aurora_night/d_fed.png": {
+   "sha256": "cebece1f80105a8615b204ac96d81f3355cfc4622e7d4ee1bdc278a8603795c0",
+   "bytes": 1021365
+  },
+  "screenshots/aurora_night/d_flow_bc.png": {
+   "sha256": "ae07d33c43a9931f7356828b03e5e867288ed363c8099e9f478c8b4a8ce1fcd1",
+   "bytes": 1050867
+  },
+  "screenshots/aurora_night/d_inc.png": {
+   "sha256": "59f176fffaf2f32c14d0a104dbd95414c4bd5872ad36404a2963bfa6a6d3d75b",
+   "bytes": 1057697
+  },
+  "screenshots/aurora_night/d_nodata.png": {
+   "sha256": "74c848cfc3342250088a0ad582a1a8ca7023e841473bba6c1a6d93372ae9ab4f",
+   "bytes": 1032976
+  },
+  "screenshots/aurora_night/d_rent.png": {
+   "sha256": "c52c64388aa32ee2cb4fe4e11c4264e6a133d40985686c072b6c6bf6d651b913",
+   "bytes": 1046353
+  },
+  "screenshots/aurora_night/d_spikes.png": {
+   "sha256": "80af657dc438755b234aeb6b0eda1d12ee3807bd845a0a42d6d8026eda845abe",
+   "bytes": 1004432
+  },
+  "screenshots/aurora_night/p_chg.png": {
+   "sha256": "2bbd3bc9f0d7cba4c78852a01963f8b9539b6ba3b67356dcb98ea4352ad18084",
+   "bytes": 886940
+  },
+  "screenshots/aurora_night/p_fed.png": {
+   "sha256": "344f21aae57045d4dc1f13cdb358b1a44206e6ff7d83621a08b3b8c0c709fd18",
+   "bytes": 1053854
+  },
+  "screenshots/aurora_night/p_flow_bc.png": {
+   "sha256": "a26c87062ef582a36cdc3d427a3cfdba9bccb8376bae8cadca969e9167e3411f",
+   "bytes": 1045394
+  },
+  "screenshots/aurora_night/p_inc.png": {
+   "sha256": "b7e81e3d13ff4d6ed49648a914bff399174697b36e14540fa5e0fc5a84c36e49",
+   "bytes": 1087613
+  },
+  "screenshots/aurora_night/p_nodata.png": {
+   "sha256": "a292f5a72e53ab2767778026e4f74d47237b1b40d34339839df0da2371d397e4",
+   "bytes": 1051795
+  },
+  "screenshots/aurora_night/p_rent.png": {
+   "sha256": "19a100a1b42456bd06debc23b2bf0a47fd026d5824e8fc98f0b90ebee0d65286",
+   "bytes": 1030563
+  },
+  "screenshots/aurora_night/p_spikes.png": {
+   "sha256": "72d83d093e16bd3642bd5144bcf25424d3c57de954051e09757b65155f29dd3c",
+   "bytes": 960473
+  },
+  "screenshots/aurora_night/t_chg.png": {
+   "sha256": "f30e259f71db40990d5a6c9c682829f0b5a18ea7770a21b09ce256c7d6ef8e03",
+   "bytes": 831201
+  },
+  "screenshots/aurora_night/t_fed.png": {
+   "sha256": "34a6f5c4cd4be5651792e0998f44497ba6fa64e770c03d4183ed1f73fad96d7e",
+   "bytes": 827056
+  },
+  "screenshots/aurora_night/t_flow_bc.png": {
+   "sha256": "5ccad55931ce51b5fa476e9227894e1ba7b305186dcadd4cc95f874d029aeb02",
+   "bytes": 771747
+  },
+  "screenshots/aurora_night/t_inc.png": {
+   "sha256": "16263dde0da6e79656062c9aa6b60d8e45fc0a01eb20a4e93507a6b05a5c81bc",
+   "bytes": 851780
+  },
+  "screenshots/aurora_night/t_nodata.png": {
+   "sha256": "0b126fc038cad2649037cdec097c899172c628c06bd897e277c5db026ed0ff82",
+   "bytes": 822680
+  },
+  "screenshots/aurora_night/t_rent.png": {
+   "sha256": "aaf9048212b06854f7b1e246e882c0d1be0f55c77d9eb899bdce538df2f6d99e",
+   "bytes": 822680
+  },
+  "screenshots/aurora_night/t_spikes.png": {
+   "sha256": "9c8e77dcd37dc86e135ad6a7e70c7542321ad3c93f4be436e7ff1c8af33fbb0c",
+   "bytes": 727799
+  },
+  "screenshots/before_after/after_aurora_income_desktop.png": {
+   "sha256": "59f176fffaf2f32c14d0a104dbd95414c4bd5872ad36404a2963bfa6a6d3d75b",
+   "bytes": 1057697
+  },
+  "screenshots/before_after/after_aurora_spikes_desktop.png": {
+   "sha256": "80af657dc438755b234aeb6b0eda1d12ee3807bd845a0a42d6d8026eda845abe",
+   "bytes": 1004432
+  },
+  "screenshots/before_after/after_core_housing_need_over_scale.png": {
+   "sha256": "8d1985a182e4f3fceb336cf143099f74888acaaa49122e5a1529759c04326b55",
+   "bytes": 1228858
+  },
+  "screenshots/before_after/after_picker_two_proposed_themes.png": {
+   "sha256": "3cc64e9f5d055ce234055a203e805bee9bda95b969e3a4d98a208dc1fe421c25",
+   "bytes": 1079187
+  },
+  "screenshots/before_after/ba_desktop_flows_bc.png": {
+   "sha256": "8fbfa3da7865b985d03852c32ac955f019165ed5fe4f9052716a7ac3e410eeaf",
+   "bytes": 1249405
+  },
+  "screenshots/before_after/ba_desktop_flows_national.png": {
+   "sha256": "529b2c61b8b4bcdc072d2a92f8e1aacb6e77ab08cf3a9dee648dcb16c03b87b3",
+   "bytes": 1268761
+  },
+  "screenshots/before_after/ba_desktop_income_over_scale.png": {
+   "sha256": "322da372c9c35c4cdbc6eef232f2482ae03491773ab3963dd8a45e79d6c12156",
+   "bytes": 1083971
+  },
+  "screenshots/before_after/ba_desktop_selected_place.png": {
+   "sha256": "c7c8a8c776b18fc119cbf65f1e74d6da37eeecd03b51ac8bea44913b74b682ea",
+   "bytes": 1156428
+  },
+  "screenshots/before_after/ba_desktop_spikes.png": {
+   "sha256": "539f2279c1d79e64c8002c67a54f8dbe285e43e66dd9795f3ab81d2693641e04",
+   "bytes": 1201205
+  },
+  "screenshots/before_after/ba_phone_flows.png": {
+   "sha256": "034d1250d43d34b66f9dd4cf722248397745fa2267d0295d5450c73332084492",
+   "bytes": 468253
+  },
+  "screenshots/before_after/ba_phone_income_over_scale.png": {
+   "sha256": "3b257ee8db3c81ff5f85dd912854dc165e410e2bb2128f525d30a434ef7a26e9",
+   "bytes": 454081
+  },
+  "screenshots/before_after/ba_phone_selected_place.png": {
+   "sha256": "e30858802c446c39406560eb4d47d86d7e86be38a95dffc01035551dd97168a7",
+   "bytes": 311110
+  },
+  "screenshots/before_after/ba_phone_spikes.png": {
+   "sha256": "c39acc71fdf106211b0edef1f7dcb3ca65f97f6acfec86c35a1a367527c5681b",
+   "bytes": 422970
+  },
+  "screenshots/before_after/ba_tablet_flows_bc.png": {
+   "sha256": "c9644d4c05a5ebddbc1db375faf5bc9e419ff5b41e296c93c07279ecc6365b4f",
+   "bytes": 1191985
+  },
+  "screenshots/before_after/ba_tablet_income_over_scale.png": {
+   "sha256": "51c8bbd23c1b818e8fe03213196a3e0201f924213985949f02e583a34902b89b",
+   "bytes": 1203410
+  },
+  "screenshots/before_after/ba_tablet_spikes.png": {
+   "sha256": "95589521c3fb96a24b630115ba527666689dfce6540f2ef3f320d5c695f2591a",
+   "bytes": 1151544
+  },
+  "screenshots/before_after/dark_theme_candidates.png": {
+   "sha256": "5f8c23b57bfe0680213e84c6cb3b12b618822628d913f8b1953eaa72e8ffd360",
+   "bytes": 1961113
+  },
+  "tests/browser_checks_signoff.log": {
+   "sha256": "d3a88e8cd0bfda44846970bfaf26817d91f0f00568b39f256a2e11968c91442f",
+   "bytes": 5212
+  },
+  "tests/pytest_signoff.log": {
+   "sha256": "c79e324e71234f96320571f1d5056168bdae003bce243bcff2580baf3aec49c4",
+   "bytes": 19
+  },
+  "tests/ui_check_explorer.py": {
+   "sha256": "f8578ed53d40d68376bfab8131fe9c746d714ab1ad9592855b82cb2abba3f3b6",
+   "bytes": 21666
+  }
+ },
+ "build_matches_working_copy": true
+}

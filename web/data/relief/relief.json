@@ -1,0 +1,17 @@
+{
+ "source_id": "naturalearth_sr50m",
+ "bounds_km": [
+  3660.0,
+  630.0,
+  9040.0,
+  5270.0
+ ],
+ "cell_km": 3.0,
+ "size": [
+  1793,
+  1546
+ ],
+ "flat_grey": 205.1,
+ "raw_sha256": "aff6ec6905554ed489087edf46e61cbf68c810fe99f2a1d2cddda7e986a540a2",
+ "note": "Generalised shaded relief for physical-geography context. It does not represent the selected statistic. The 3 km grid adds no detail beyond the 2 arc-minute source."
+}

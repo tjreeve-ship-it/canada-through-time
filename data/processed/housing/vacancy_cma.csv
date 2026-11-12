@@ -1,0 +1,1747 @@
+year,geo,vacancy_rate_pct,status,vector
+1971,Census metropolitan areas,3.9,,v733334
+1971,"Calgary, Alberta",6.7,,v733335
+1971,"Edmonton, Alberta",5.1,,v733356
+1971,"Greater Sudbury, Ontario",0.0,,v733346
+1971,"Halifax, Nova Scotia",3.7,,v733357
+1971,"Hamilton, Ontario",2.1,,v733358
+1971,"Kitchener-Cambridge-Waterloo, Ontario",0.0,,v733359
+1971,"London, Ontario",2.5,,v733360
+1971,"Montréal excluding Saint-Jérôme, Quebec",4.4,,v733361
+1971,"Ottawa-Gatineau, Ontario/Quebec",1.8,,v733336
+1971,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",1.6,,v733337
+1971,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",4.3,,v733338
+1971,"Québec, Quebec",3.9,,v733339
+1971,"Regina, Saskatchewan",0.0,,v733340
+1971,"St. John's, Newfoundland and Labrador",0.0,,v733343
+1971,"Saint John, New Brunswick",0.0,,v733342
+1971,"Saskatoon, Saskatchewan",0.0,,v733344
+1971,"Toronto, Ontario",3.6,,v733349
+1971,"Vancouver, British Columbia",2.8,,v733351
+1971,"Victoria, British Columbia",0.0,,v733352
+1971,"Windsor, Ontario",1.9,,v733353
+1971,"Winnipeg, Manitoba",5.7,,v733354
+1972,Census metropolitan areas,2.7,,v733334
+1972,"Calgary, Alberta",6.6,,v733335
+1972,"Edmonton, Alberta",6.0,,v733356
+1972,"Greater Sudbury, Ontario",5.4,,v733346
+1972,"Halifax, Nova Scotia",1.7,,v733357
+1972,"Hamilton, Ontario",1.8,,v733358
+1972,"Kitchener-Cambridge-Waterloo, Ontario",1.6,,v733359
+1972,"London, Ontario",4.4,,v733360
+1972,"Montréal excluding Saint-Jérôme, Quebec",2.9,,v733361
+1972,"Ottawa-Gatineau, Ontario/Quebec",1.8,,v733336
+1972,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",1.6,,v733337
+1972,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",3.3,,v733338
+1972,"Québec, Quebec",4.5,,v733339
+1972,"Regina, Saskatchewan",1.0,,v733340
+1972,"St. Catharines-Niagara, Ontario",3.4,,v733341
+1972,"St. John's, Newfoundland and Labrador",0.0,,v733343
+1972,"Saguenay, Quebec",0.7,,v733348
+1972,"Saint John, New Brunswick",1.7,,v733342
+1972,"Saskatoon, Saskatchewan",0.5,,v733344
+1972,"Thunder Bay, Ontario",0.9,,v733347
+1972,"Toronto, Ontario",2.5,,v733349
+1972,"Vancouver, British Columbia",0.6,,v733351
+1972,"Victoria, British Columbia",0.8,,v733352
+1972,"Windsor, Ontario",2.6,,v733353
+1972,"Winnipeg, Manitoba",4.4,,v733354
+1973,Census metropolitan areas,2.2,,v733334
+1973,"Calgary, Alberta",7.9,,v733335
+1973,"Edmonton, Alberta",5.3,,v733356
+1973,"Greater Sudbury, Ontario",10.9,,v733346
+1973,"Halifax, Nova Scotia",2.3,,v733357
+1973,"Hamilton, Ontario",2.3,,v733358
+1973,"Kitchener-Cambridge-Waterloo, Ontario",3.8,,v733359
+1973,"London, Ontario",3.9,,v733360
+1973,"Montréal excluding Saint-Jérôme, Quebec",1.9,,v733361
+1973,"Ottawa-Gatineau, Ontario/Quebec",2.0,,v733336
+1973,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",2.0,,v733337
+1973,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",2.0,,v733338
+1973,"Québec, Quebec",2.8,,v733339
+1973,"Regina, Saskatchewan",1.0,,v733340
+1973,"St. Catharines-Niagara, Ontario",4.7,,v733341
+1973,"St. John's, Newfoundland and Labrador",0.2,,v733343
+1973,"Saguenay, Quebec",0.8,,v733348
+1973,"Saint John, New Brunswick",0.7,,v733342
+1973,"Saskatoon, Saskatchewan",0.3,,v733344
+1973,"Thunder Bay, Ontario",1.0,,v733347
+1973,"Toronto, Ontario",1.5,,v733349
+1973,"Vancouver, British Columbia",0.4,,v733351
+1973,"Victoria, British Columbia",0.3,,v733352
+1973,"Windsor, Ontario",2.0,,v733353
+1973,"Winnipeg, Manitoba",3.5,,v733354
+1974,Census metropolitan areas,1.2,,v733334
+1974,"Calgary, Alberta",1.1,,v733335
+1974,"Edmonton, Alberta",0.8,,v733356
+1974,"Greater Sudbury, Ontario",5.1,,v733346
+1974,"Halifax, Nova Scotia",2.3,,v733357
+1974,"Hamilton, Ontario",1.5,,v733358
+1974,"Kitchener-Cambridge-Waterloo, Ontario",2.5,,v733359
+1974,"London, Ontario",2.2,,v733360
+1974,"Montréal excluding Saint-Jérôme, Quebec",1.2,,v733361
+1974,"Ottawa-Gatineau, Ontario/Quebec",2.8,,v733336
+1974,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",2.9,,v733337
+1974,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",2.5,,v733338
+1974,"Québec, Quebec",1.6,,v733339
+1974,"Regina, Saskatchewan",0.1,,v733340
+1974,"St. Catharines-Niagara, Ontario",3.9,,v733341
+1974,"St. John's, Newfoundland and Labrador",0.3,,v733343
+1974,"Saguenay, Quebec",1.1,,v733348
+1974,"Saint John, New Brunswick",1.2,,v733342
+1974,"Saskatoon, Saskatchewan",0.2,,v733344
+1974,"Thunder Bay, Ontario",0.5,,v733347
+1974,"Toronto, Ontario",1.1,,v733349
+1974,"Vancouver, British Columbia",0.1,,v733351
+1974,"Victoria, British Columbia",0.1,,v733352
+1974,"Windsor, Ontario",1.7,,v733353
+1974,"Winnipeg, Manitoba",1.7,,v733354
+1975,Census metropolitan areas,1.2,,v733334
+1975,"Calgary, Alberta",0.4,,v733335
+1975,"Edmonton, Alberta",0.3,,v733356
+1975,"Greater Sudbury, Ontario",1.2,,v733346
+1975,"Halifax, Nova Scotia",1.8,,v733357
+1975,"Hamilton, Ontario",3.0,,v733358
+1975,"Kitchener-Cambridge-Waterloo, Ontario",2.3,,v733359
+1975,"London, Ontario",2.4,,v733360
+1975,"Montréal excluding Saint-Jérôme, Quebec",0.7,,v733361
+1975,"Ottawa-Gatineau, Ontario/Quebec",2.7,,v733336
+1975,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",2.3,,v733337
+1975,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",4.9,,v733338
+1975,"Québec, Quebec",1.4,,v733339
+1975,"Regina, Saskatchewan",0.0,,v733340
+1975,"St. Catharines-Niagara, Ontario",2.9,,v733341
+1975,"St. John's, Newfoundland and Labrador",3.7,,v733343
+1975,"Saguenay, Quebec",1.1,,v733348
+1975,"Saint John, New Brunswick",0.6,,v733342
+1975,"Saskatoon, Saskatchewan",0.0,,v733344
+1975,"Thunder Bay, Ontario",0.5,,v733347
+1975,"Toronto, Ontario",1.8,,v733349
+1975,"Vancouver, British Columbia",0.1,,v733351
+1975,"Victoria, British Columbia",0.1,,v733352
+1975,"Windsor, Ontario",3.6,,v733353
+1975,"Winnipeg, Manitoba",2.1,,v733354
+1976,Census metropolitan areas,1.3,,v733334
+1976,"Calgary, Alberta",0.1,,v733335
+1976,"Edmonton, Alberta",0.0,,v733356
+1976,"Greater Sudbury, Ontario",1.5,,v733346
+1976,"Halifax, Nova Scotia",1.4,,v733357
+1976,"Hamilton, Ontario",3.0,,v733358
+1976,"Kitchener-Cambridge-Waterloo, Ontario",2.4,,v733359
+1976,"London, Ontario",1.5,,v733360
+1976,"Montréal excluding Saint-Jérôme, Quebec",1.3,,v733361
+1976,"Ottawa-Gatineau, Ontario/Quebec",3.4,,v733336
+1976,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",2.2,,v733337
+1976,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",8.8,,v733338
+1976,"Québec, Quebec",0.7,,v733339
+1976,"Regina, Saskatchewan",0.1,,v733340
+1976,"St. Catharines-Niagara, Ontario",1.3,,v733341
+1976,"St. John's, Newfoundland and Labrador",2.1,,v733343
+1976,"Saguenay, Quebec",0.9,,v733348
+1976,"Saint John, New Brunswick",7.9,,v733342
+1976,"Saskatoon, Saskatchewan",0.1,,v733344
+1976,"Thunder Bay, Ontario",0.2,,v733347
+1976,"Toronto, Ontario",1.2,,v733349
+1976,"Vancouver, British Columbia",0.7,,v733351
+1976,"Victoria, British Columbia",0.6,,v733352
+1976,"Windsor, Ontario",1.8,,v733353
+1976,"Winnipeg, Manitoba",1.4,,v733354
+1977,Census metropolitan areas,2.3,,v733334
+1977,"Calgary, Alberta",0.1,,v733335
+1977,"Edmonton, Alberta",0.1,,v733356
+1977,"Greater Sudbury, Ontario",1.2,,v733346
+1977,"Halifax, Nova Scotia",1.5,,v733357
+1977,"Hamilton, Ontario",4.2,,v733358
+1977,"Kitchener-Cambridge-Waterloo, Ontario",2.6,,v733359
+1977,"London, Ontario",1.8,,v733360
+1977,"Montréal excluding Saint-Jérôme, Quebec",3.6,,v733361
+1977,"Oshawa, Ontario",2.3,,v733362
+1977,"Ottawa-Gatineau, Ontario/Quebec",2.2,,v733336
+1977,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",1.3,,v733337
+1977,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",6.7,,v733338
+1977,"Québec, Quebec",1.9,,v733339
+1977,"Regina, Saskatchewan",1.1,,v733340
+1977,"St. Catharines-Niagara, Ontario",1.1,,v733341
+1977,"St. John's, Newfoundland and Labrador",2.8,,v733343
+1977,"Saguenay, Quebec",0.3,,v733348
+1977,"Saint John, New Brunswick",8.3,,v733342
+1977,"Saskatoon, Saskatchewan",0.2,,v733344
+1977,"Thunder Bay, Ontario",0.3,,v733347
+1977,"Toronto, Ontario",1.0,,v733349
+1977,"Vancouver, British Columbia",1.6,,v733351
+1977,"Victoria, British Columbia",2.5,,v733352
+1977,"Windsor, Ontario",0.8,,v733353
+1977,"Winnipeg, Manitoba",1.9,,v733354
+1978,Census metropolitan areas,3.2,,v733334
+1978,"Calgary, Alberta",1.2,,v733335
+1978,"Edmonton, Alberta",0.8,,v733356
+1978,"Greater Sudbury, Ontario",7.0,,v733346
+1978,"Halifax, Nova Scotia",2.2,,v733357
+1978,"Hamilton, Ontario",3.5,,v733358
+1978,"Kitchener-Cambridge-Waterloo, Ontario",2.6,,v733359
+1978,"London, Ontario",2.3,,v733360
+1978,"Montréal excluding Saint-Jérôme, Quebec",5.5,,v733361
+1978,"Oshawa, Ontario",1.6,,v733362
+1978,"Ottawa-Gatineau, Ontario/Quebec",2.4,,v733336
+1978,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",1.5,,v733337
+1978,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",6.7,,v733338
+1978,"Québec, Quebec",3.6,,v733339
+1978,"Regina, Saskatchewan",2.0,,v733340
+1978,"St. Catharines-Niagara, Ontario",1.4,,v733341
+1978,"St. John's, Newfoundland and Labrador",7.7,,v733343
+1978,"Saguenay, Quebec",0.4,,v733348
+1978,"Saint John, New Brunswick",5.4,,v733342
+1978,"Saskatoon, Saskatchewan",0.8,,v733344
+1978,"Thunder Bay, Ontario",1.4,,v733347
+1978,"Toronto, Ontario",0.8,,v733349
+1978,"Vancouver, British Columbia",1.4,,v733351
+1978,"Victoria, British Columbia",1.1,,v733352
+1978,"Windsor, Ontario",1.1,,v733353
+1978,"Winnipeg, Manitoba",3.9,,v733354
+1979,Census metropolitan areas,2.9,,v733334
+1979,"Calgary, Alberta",0.4,,v733335
+1979,"Edmonton, Alberta",1.9,,v733356
+1979,"Greater Sudbury, Ontario",5.6,,v733346
+1979,"Halifax, Nova Scotia",2.4,,v733357
+1979,"Hamilton, Ontario",1.8,,v733358
+1979,"Kitchener-Cambridge-Waterloo, Ontario",1.9,,v733359
+1979,"London, Ontario",4.7,,v733360
+1979,"Montréal excluding Saint-Jérôme, Quebec",4.5,,v733361
+1979,"Oshawa, Ontario",4.1,,v733362
+1979,"Ottawa-Gatineau, Ontario/Quebec",4.1,,v733336
+1979,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",3.5,,v733337
+1979,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",7.0,,v733338
+1979,"Québec, Quebec",4.4,,v733339
+1979,"Regina, Saskatchewan",1.9,,v733340
+1979,"St. Catharines-Niagara, Ontario",1.6,,v733341
+1979,"St. John's, Newfoundland and Labrador",0.9,,v733343
+1979,"Saguenay, Quebec",2.3,,v733348
+1979,"Saint John, New Brunswick",3.7,,v733342
+1979,"Saskatoon, Saskatchewan",0.8,,v733344
+1979,"Thunder Bay, Ontario",1.7,,v733347
+1979,"Toronto, Ontario",1.2,,v733349
+1979,"Vancouver, British Columbia",0.2,,v733351
+1979,"Victoria, British Columbia",0.1,,v733352
+1979,"Windsor, Ontario",1.3,,v733353
+1979,"Winnipeg, Manitoba",5.0,,v733354
+1980,Census metropolitan areas,2.2,,v733334
+1980,"Calgary, Alberta",0.4,,v733335
+1980,"Edmonton, Alberta",1.1,,v733356
+1980,"Greater Sudbury, Ontario",1.9,,v733346
+1980,"Halifax, Nova Scotia",1.2,,v733357
+1980,"Hamilton, Ontario",1.3,,v733358
+1980,"Kitchener-Cambridge-Waterloo, Ontario",1.1,,v733359
+1980,"London, Ontario",4.1,,v733360
+1980,"Montréal excluding Saint-Jérôme, Quebec",3.4,,v733361
+1980,"Oshawa, Ontario",2.4,,v733362
+1980,"Ottawa-Gatineau, Ontario/Quebec",3.9,,v733336
+1980,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",3.5,,v733337
+1980,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",5.8,,v733338
+1980,"Québec, Quebec",2.8,,v733339
+1980,"Regina, Saskatchewan",0.7,,v733340
+1980,"St. Catharines-Niagara, Ontario",1.8,,v733341
+1980,"St. John's, Newfoundland and Labrador",0.1,,v733343
+1980,"Saguenay, Quebec",1.4,,v733348
+1980,"Saint John, New Brunswick",3.6,,v733342
+1980,"Saskatoon, Saskatchewan",0.5,,v733344
+1980,"Thunder Bay, Ontario",1.0,,v733347
+1980,"Toronto, Ontario",0.5,,v733349
+1980,"Vancouver, British Columbia",0.1,,v733351
+1980,"Victoria, British Columbia",0.1,,v733352
+1980,"Windsor, Ontario",6.1,,v733353
+1980,"Winnipeg, Manitoba",5.1,,v733354
+1981,Census metropolitan areas,1.2,,v733334
+1981,"Calgary, Alberta",0.2,,v733335
+1981,"Edmonton, Alberta",1.1,,v733356
+1981,"Greater Sudbury, Ontario",0.6,,v733346
+1981,"Halifax, Nova Scotia",0.5,,v733357
+1981,"Hamilton, Ontario",0.7,,v733358
+1981,"Kitchener-Cambridge-Waterloo, Ontario",0.7,,v733359
+1981,"London, Ontario",1.9,,v733360
+1981,"Montréal excluding Saint-Jérôme, Quebec",1.9,,v733361
+1981,"Oshawa, Ontario",0.0,,v733362
+1981,"Ottawa-Gatineau, Ontario/Quebec",0.9,,v733336
+1981,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",0.6,,v733337
+1981,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",2.3,,v733338
+1981,"Québec, Quebec",1.8,,v733339
+1981,"Regina, Saskatchewan",0.5,,v733340
+1981,"St. Catharines-Niagara, Ontario",0.8,,v733341
+1981,"St. John's, Newfoundland and Labrador",1.4,,v733343
+1981,"Saguenay, Quebec",1.3,,v733348
+1981,"Saint John, New Brunswick",3.1,,v733342
+1981,"Saskatoon, Saskatchewan",0.8,,v733344
+1981,"Thunder Bay, Ontario",1.1,,v733347
+1981,"Toronto, Ontario",0.3,,v733349
+1981,"Vancouver, British Columbia",0.1,,v733351
+1981,"Victoria, British Columbia",0.1,,v733352
+1981,"Windsor, Ontario",7.0,,v733353
+1981,"Winnipeg, Manitoba",3.5,,v733354
+1982,Census metropolitan areas,2.1,,v733334
+1982,"Calgary, Alberta",6.3,,v733335
+1982,"Edmonton, Alberta",4.6,,v733356
+1982,"Greater Sudbury, Ontario",1.5,,v733346
+1982,"Halifax, Nova Scotia",0.6,,v733357
+1982,"Hamilton, Ontario",0.6,,v733358
+1982,"Kitchener-Cambridge-Waterloo, Ontario",1.0,,v733359
+1982,"London, Ontario",3.0,,v733360
+1982,"Montréal excluding Saint-Jérôme, Quebec",2.7,,v733361
+1982,"Oshawa, Ontario",0.5,,v733362
+1982,"Ottawa-Gatineau, Ontario/Quebec",0.3,,v733336
+1982,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",0.2,,v733337
+1982,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",0.5,,v733338
+1982,"Québec, Quebec",4.8,,v733339
+1982,"Regina, Saskatchewan",0.3,,v733340
+1982,"St. Catharines-Niagara, Ontario",1.6,,v733341
+1982,"St. John's, Newfoundland and Labrador",1.1,,v733343
+1982,"Saguenay, Quebec",4.7,,v733348
+1982,"Saint John, New Brunswick",2.1,,v733342
+1982,"Saskatoon, Saskatchewan",1.1,,v733344
+1982,"Thunder Bay, Ontario",0.6,,v733347
+1982,"Toronto, Ontario",0.7,,v733349
+1982,"Trois-Rivières, Quebec",4.8,,v733350
+1982,"Vancouver, British Columbia",1.9,,v733351
+1982,"Victoria, British Columbia",1.5,,v733352
+1982,"Windsor, Ontario",3.4,,v733353
+1982,"Winnipeg, Manitoba",1.4,,v733354
+1983,Census metropolitan areas,2.7,,v733334
+1983,"Calgary, Alberta",12.3,,v733335
+1983,"Edmonton, Alberta",9.5,,v733356
+1983,"Greater Sudbury, Ontario",0.5,,v733346
+1983,"Halifax, Nova Scotia",0.9,,v733357
+1983,"Hamilton, Ontario",0.8,,v733358
+1983,"Kitchener-Cambridge-Waterloo, Ontario",0.9,,v733359
+1983,"London, Ontario",2.8,,v733360
+1983,"Montréal excluding Saint-Jérôme, Quebec",3.2,,v733361
+1983,"Oshawa, Ontario",1.5,,v733362
+1983,"Ottawa-Gatineau, Ontario/Quebec",0.3,,v733336
+1983,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",0.3,,v733337
+1983,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",0.7,,v733338
+1983,"Québec, Quebec",5.2,,v733339
+1983,"Regina, Saskatchewan",2.1,,v733340
+1983,"St. Catharines-Niagara, Ontario",1.0,,v733341
+1983,"St. John's, Newfoundland and Labrador",4.2,,v733343
+1983,"Saguenay, Quebec",2.3,,v733348
+1983,"Saint John, New Brunswick",3.9,,v733342
+1983,"Saskatoon, Saskatchewan",2.3,,v733344
+1983,"Thunder Bay, Ontario",0.4,,v733347
+1983,"Toronto, Ontario",1.0,,v733349
+1983,"Trois-Rivières, Quebec",4.4,,v733350
+1983,"Vancouver, British Columbia",1.3,,v733351
+1983,"Victoria, British Columbia",1.1,,v733352
+1983,"Windsor, Ontario",2.0,,v733353
+1983,"Winnipeg, Manitoba",0.9,,v733354
+1984,Census metropolitan areas,2.2,,v733334
+1984,"Calgary, Alberta",9.6,,v733335
+1984,"Edmonton, Alberta",9.5,,v733356
+1984,"Greater Sudbury, Ontario",0.8,,v733346
+1984,"Halifax, Nova Scotia",0.4,,v733357
+1984,"Hamilton, Ontario",0.5,,v733358
+1984,"Kitchener-Cambridge-Waterloo, Ontario",0.6,,v733359
+1984,"London, Ontario",1.0,,v733360
+1984,"Montréal excluding Saint-Jérôme, Quebec",2.5,,v733361
+1984,"Oshawa, Ontario",0.3,,v733362
+1984,"Ottawa-Gatineau, Ontario/Quebec",0.4,,v733336
+1984,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",0.3,,v733337
+1984,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",0.8,,v733338
+1984,"Québec, Quebec",1.9,,v733339
+1984,"Regina, Saskatchewan",1.8,,v733340
+1984,"St. Catharines-Niagara, Ontario",0.8,,v733341
+1984,"St. John's, Newfoundland and Labrador",1.8,,v733343
+1984,"Saguenay, Quebec",1.7,,v733348
+1984,"Saint John, New Brunswick",4.5,,v733342
+1984,"Saskatoon, Saskatchewan",1.1,,v733344
+1984,"Thunder Bay, Ontario",0.4,,v733347
+1984,"Toronto, Ontario",0.6,,v733349
+1984,"Trois-Rivières, Quebec",2.2,,v733350
+1984,"Vancouver, British Columbia",2.2,,v733351
+1984,"Victoria, British Columbia",2.2,,v733352
+1984,"Windsor, Ontario",0.7,,v733353
+1984,"Winnipeg, Manitoba",0.8,,v733354
+1985,Census metropolitan areas,1.4,,v733334
+1985,"Calgary, Alberta",2.7,,v733335
+1985,"Edmonton, Alberta",4.4,,v733356
+1985,"Greater Sudbury, Ontario",0.6,,v733346
+1985,"Halifax, Nova Scotia",0.6,,v733357
+1985,"Hamilton, Ontario",0.4,,v733358
+1985,"Kitchener-Cambridge-Waterloo, Ontario",0.4,,v733359
+1985,"London, Ontario",0.4,,v733360
+1985,"Montréal excluding Saint-Jérôme, Quebec",1.6,,v733361
+1985,"Oshawa, Ontario",0.1,,v733362
+1985,"Ottawa-Gatineau, Ontario/Quebec",1.3,,v733336
+1985,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",0.8,,v733337
+1985,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",4.3,,v733338
+1985,"Québec, Quebec",1.5,,v733339
+1985,"Regina, Saskatchewan",3.1,,v733340
+1985,"St. Catharines-Niagara, Ontario",0.3,,v733341
+1985,"St. John's, Newfoundland and Labrador",2.0,,v733343
+1985,"Saguenay, Quebec",3.2,,v733348
+1985,"Saint John, New Brunswick",3.1,,v733342
+1985,"Saskatoon, Saskatchewan",2.5,,v733344
+1985,"Sherbrooke, Quebec",1.9,,v733345
+1985,"Thunder Bay, Ontario",0.6,,v733347
+1985,"Toronto, Ontario",0.4,,v733349
+1985,"Trois-Rivières, Quebec",2.1,,v733350
+1985,"Vancouver, British Columbia",2.2,,v733351
+1985,"Victoria, British Columbia",1.9,,v733352
+1985,"Windsor, Ontario",0.7,,v733353
+1985,"Winnipeg, Manitoba",0.9,,v733354
+1986,Census metropolitan areas,1.6,,v733334
+1986,"Calgary, Alberta",3.9,,v733335
+1986,"Edmonton, Alberta",4.1,,v733356
+1986,"Greater Sudbury, Ontario",0.9,,v733346
+1986,"Halifax, Nova Scotia",2.3,,v733357
+1986,"Hamilton, Ontario",0.3,,v733358
+1986,"Kitchener-Cambridge-Waterloo, Ontario",0.2,,v733359
+1986,"London, Ontario",0.7,,v733360
+1986,"Montréal excluding Saint-Jérôme, Quebec",1.8,,v733361
+1986,"Oshawa, Ontario",0.2,,v733362
+1986,"Ottawa-Gatineau, Ontario/Quebec",3.0,,v733336
+1986,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",1.9,,v733337
+1986,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",8.2,,v733338
+1986,"Québec, Quebec",3.2,,v733339
+1986,"Regina, Saskatchewan",3.4,,v733340
+1986,"St. Catharines-Niagara, Ontario",0.8,,v733341
+1986,"St. John's, Newfoundland and Labrador",4.9,,v733343
+1986,"Saguenay, Quebec",9.0,,v733348
+1986,"Saint John, New Brunswick",4.8,,v733342
+1986,"Saskatoon, Saskatchewan",2.8,,v733344
+1986,"Sherbrooke, Quebec",2.7,,v733345
+1986,"Thunder Bay, Ontario",2.4,,v733347
+1986,"Toronto, Ontario",0.1,,v733349
+1986,"Trois-Rivières, Quebec",6.7,,v733350
+1986,"Vancouver, British Columbia",0.9,,v733351
+1986,"Victoria, British Columbia",0.6,,v733352
+1986,"Windsor, Ontario",1.0,,v733353
+1986,"Winnipeg, Manitoba",1.6,,v733354
+1987,Census metropolitan areas,2.5,,v733334
+1987,"Calgary, Alberta",4.3,,v733335
+1987,"Edmonton, Alberta",5.6,,v733356
+1987,"Greater Sudbury, Ontario",1.0,,v733346
+1987,"Halifax, Nova Scotia",4.4,,v733357
+1987,"Hamilton, Ontario",0.3,,v733358
+1987,"Kitchener-Cambridge-Waterloo, Ontario",0.2,,v733359
+1987,"London, Ontario",1.0,,v733360
+1987,"Montréal excluding Saint-Jérôme, Quebec",3.6,,v733361
+1987,"Oshawa, Ontario",0.3,,v733362
+1987,"Ottawa-Gatineau, Ontario/Quebec",3.1,,v733336
+1987,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",1.6,,v733337
+1987,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",10.7,,v733338
+1987,"Québec, Quebec",5.6,,v733339
+1987,"Regina, Saskatchewan",2.6,,v733340
+1987,"St. Catharines-Niagara, Ontario",0.5,,v733341
+1987,"St. John's, Newfoundland and Labrador",10.1,,v733343
+1987,"Saguenay, Quebec",10.5,,v733348
+1987,"Saint John, New Brunswick",4.2,,v733342
+1987,"Saskatoon, Saskatchewan",4.3,,v733344
+1987,"Sherbrooke, Quebec",6.5,,v733345
+1987,"Thunder Bay, Ontario",2.1,,v733347
+1987,"Toronto, Ontario",0.1,,v733349
+1987,"Trois-Rivières, Quebec",9.0,,v733350
+1987,"Vancouver, British Columbia",1.1,,v733351
+1987,"Victoria, British Columbia",0.4,,v733352
+1987,"Windsor, Ontario",0.7,,v733353
+1987,"Winnipeg, Manitoba",2.8,,v733354
+1988,Census metropolitan areas,2.6,,v733334
+1988,"Calgary, Alberta",2.3,,v733335
+1988,"Edmonton, Alberta",4.4,,v733356
+1988,"Greater Sudbury, Ontario",0.3,,v733346
+1988,"Halifax, Nova Scotia",4.3,,v733357
+1988,"Hamilton, Ontario",0.4,,v733358
+1988,"Kitchener-Cambridge-Waterloo, Ontario",0.4,,v733359
+1988,"London, Ontario",2.1,,v733360
+1988,"Montréal excluding Saint-Jérôme, Quebec",4.0,,v733361
+1988,"Oshawa, Ontario",0.4,,v733362
+1988,"Ottawa-Gatineau, Ontario/Quebec",2.1,,v733336
+1988,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",1.6,,v733337
+1988,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",4.5,,v733338
+1988,"Québec, Quebec",5.2,,v733339
+1988,"Regina, Saskatchewan",5.4,,v733340
+1988,"St. Catharines-Niagara, Ontario",1.0,,v733341
+1988,"St. John's, Newfoundland and Labrador",8.8,,v733343
+1988,"Saguenay, Quebec",7.7,,v733348
+1988,"Saint John, New Brunswick",3.5,,v733342
+1988,"Saskatoon, Saskatchewan",8.8,,v733344
+1988,"Sherbrooke, Quebec",8.6,,v733345
+1988,"Thunder Bay, Ontario",1.1,,v733347
+1988,"Toronto, Ontario",0.2,,v733349
+1988,"Trois-Rivières, Quebec",6.2,,v733350
+1988,"Vancouver, British Columbia",0.4,,v733351
+1988,"Victoria, British Columbia",0.3,,v733352
+1988,"Windsor, Ontario",0.8,,v733353
+1988,"Winnipeg, Manitoba",4.3,,v733354
+1989,Census metropolitan areas,2.8,,v733334
+1989,"Calgary, Alberta",1.2,,v733335
+1989,"Edmonton, Alberta",2.1,,v733356
+1989,"Greater Sudbury, Ontario",0.3,,v733346
+1989,"Halifax, Nova Scotia",3.3,,v733357
+1989,"Hamilton, Ontario",0.5,,v733358
+1989,"Kitchener-Cambridge-Waterloo, Ontario",0.6,,v733359
+1989,"London, Ontario",2.7,,v733360
+1989,"Montréal excluding Saint-Jérôme, Quebec",4.9,,v733361
+1989,"Oshawa, Ontario",0.7,,v733362
+1989,"Ottawa-Gatineau, Ontario/Quebec",1.7,,v733336
+1989,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",1.3,,v733337
+1989,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",3.2,,v733338
+1989,"Québec, Quebec",4.6,,v733339
+1989,"Regina, Saskatchewan",6.5,,v733340
+1989,"St. Catharines-Niagara, Ontario",0.9,,v733341
+1989,"St. John's, Newfoundland and Labrador",5.0,,v733343
+1989,"Saguenay, Quebec",5.1,,v733348
+1989,"Saint John, New Brunswick",3.0,,v733342
+1989,"Saskatoon, Saskatchewan",8.8,,v733344
+1989,"Sherbrooke, Quebec",9.4,,v733345
+1989,"Thunder Bay, Ontario",0.6,,v733347
+1989,"Toronto, Ontario",0.3,,v733349
+1989,"Trois-Rivières, Quebec",5.6,,v733350
+1989,"Vancouver, British Columbia",0.4,,v733351
+1989,"Victoria, British Columbia",0.2,,v733352
+1989,"Windsor, Ontario",1.0,,v733353
+1989,"Winnipeg, Manitoba",6.5,,v733354
+1990,Census metropolitan areas,3.3,,v733334
+1990,"Calgary, Alberta",2.0,,v733335
+1990,"Edmonton, Alberta",1.8,,v733356
+1990,"Greater Sudbury, Ontario",0.7,,v733346
+1990,"Halifax, Nova Scotia",3.6,,v733357
+1990,"Hamilton, Ontario",1.2,,v733358
+1990,"Kitchener-Cambridge-Waterloo, Ontario",1.3,,v733359
+1990,"London, Ontario",2.8,,v733360
+1990,"Montréal excluding Saint-Jérôme, Quebec",5.9,,v733361
+1990,"Oshawa, Ontario",1.6,,v733362
+1990,"Ottawa-Gatineau, Ontario/Quebec",1.2,,v733336
+1990,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",0.5,,v733337
+1990,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",4.2,,v733338
+1990,"Québec, Quebec",6.1,,v733339
+1990,"Regina, Saskatchewan",5.0,,v733340
+1990,"St. Catharines-Niagara, Ontario",1.9,,v733341
+1990,"St. John's, Newfoundland and Labrador",1.6,,v733343
+1990,"Saguenay, Quebec",6.2,,v733348
+1990,"Saint John, New Brunswick",3.3,,v733342
+1990,"Saskatoon, Saskatchewan",7.5,,v733344
+1990,"Sherbrooke, Quebec",10.5,,v733345
+1990,"Thunder Bay, Ontario",0.9,,v733347
+1990,"Toronto, Ontario",0.9,,v733349
+1990,"Trois-Rivières, Quebec",8.1,,v733350
+1990,"Vancouver, British Columbia",0.9,,v733351
+1990,"Victoria, British Columbia",0.3,,v733352
+1990,"Windsor, Ontario",2.2,,v733353
+1990,"Winnipeg, Manitoba",6.4,,v733354
+1991,Census metropolitan areas,4.4,,v733334
+1991,"Calgary, Alberta",3.8,,v733335
+1991,"Edmonton, Alberta",2.3,,v733356
+1991,"Greater Sudbury, Ontario",0.5,,v733346
+1991,"Halifax, Nova Scotia",5.0,,v733357
+1991,"Hamilton, Ontario",1.4,,v733358
+1991,"Kitchener-Cambridge-Waterloo, Ontario",4.4,,v733359
+1991,"London, Ontario",3.8,,v733360
+1991,"Montréal excluding Saint-Jérôme, Quebec",7.8,,v733361
+1991,"Oshawa, Ontario",3.4,,v733362
+1991,"Ottawa-Gatineau, Ontario/Quebec",1.5,,v733336
+1991,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",0.7,,v733337
+1991,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",4.9,,v733338
+1991,"Québec, Quebec",5.7,,v733339
+1991,"Regina, Saskatchewan",5.6,,v733340
+1991,"St. Catharines-Niagara, Ontario",2.7,,v733341
+1991,"St. John's, Newfoundland and Labrador",7.3,,v733343
+1991,"Saguenay, Quebec",6.9,,v733348
+1991,"Saint John, New Brunswick",4.6,,v733342
+1991,"Saskatoon, Saskatchewan",6.0,,v733344
+1991,"Sherbrooke, Quebec",10.7,,v733345
+1991,"Thunder Bay, Ontario",0.7,,v733347
+1991,"Toronto, Ontario",1.7,,v733349
+1991,"Trois-Rivières, Quebec",9.0,,v733350
+1991,"Vancouver, British Columbia",2.2,,v733351
+1991,"Victoria, British Columbia",0.8,,v733352
+1991,"Windsor, Ontario",3.0,,v733353
+1991,"Winnipeg, Manitoba",6.6,,v733354
+1992,Census metropolitan areas,4.8,,v733334
+1992,"Calgary, Alberta",5.6,,v733335
+1992,"Edmonton, Alberta",4.0,,v733356
+1992,"Greater Sudbury, Ontario",2.8,,v733346
+1992,"Halifax, Nova Scotia",5.9,,v733357
+1992,"Hamilton, Ontario",2.1,,v733358
+1992,"Kitchener-Cambridge-Waterloo, Ontario",4.4,,v733359
+1992,"London, Ontario",3.4,,v733360
+1992,"Montréal excluding Saint-Jérôme, Quebec",8.4,,v733361
+1992,"Oshawa, Ontario",6.1,,v733362
+1992,"Ottawa-Gatineau, Ontario/Quebec",1.8,,v733336
+1992,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",1.3,,v733337
+1992,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",3.8,,v733338
+1992,"Québec, Quebec",6.7,,v733339
+1992,"Regina, Saskatchewan",3.6,,v733340
+1992,"St. Catharines-Niagara, Ontario",3.4,,v733341
+1992,"St. John's, Newfoundland and Labrador",5.7,,v733343
+1992,"Saguenay, Quebec",7.5,,v733348
+1992,"Saint John, New Brunswick",6.4,,v733342
+1992,"Saskatoon, Saskatchewan",4.4,,v733344
+1992,"Sherbrooke, Quebec",10.0,,v733345
+1992,"Thunder Bay, Ontario",2.4,,v733347
+1992,"Toronto, Ontario",2.0,,v733349
+1992,"Trois-Rivières, Quebec",7.4,,v733350
+1992,"Vancouver, British Columbia",1.6,,v733351
+1992,"Victoria, British Columbia",1.5,,v733352
+1992,"Windsor, Ontario",3.0,,v733353
+1992,"Winnipeg, Manitoba",6.1,,v733354
+1993,Census metropolitan areas,4.8,,v733334
+1993,"Calgary, Alberta",5.9,,v733335
+1993,"Edmonton, Alberta",6.4,,v733356
+1993,"Greater Sudbury, Ontario",3.4,,v733346
+1993,"Halifax, Nova Scotia",6.5,,v733357
+1993,"Hamilton, Ontario",2.5,,v733358
+1993,"Kitchener-Cambridge-Waterloo, Ontario",4.4,,v733359
+1993,"London, Ontario",3.8,,v733360
+1993,"Montréal excluding Saint-Jérôme, Quebec",8.2,,v733361
+1993,"Oshawa, Ontario",4.6,,v733362
+1993,"Ottawa-Gatineau, Ontario/Quebec",2.4,,v733336
+1993,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",1.8,,v733337
+1993,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",5.1,,v733338
+1993,"Québec, Quebec",6.2,,v733339
+1993,"Regina, Saskatchewan",3.5,,v733340
+1993,"St. Catharines-Niagara, Ontario",4.9,,v733341
+1993,"St. John's, Newfoundland and Labrador",9.1,,v733343
+1993,"Saguenay, Quebec",6.9,,v733348
+1993,"Saint John, New Brunswick",6.6,,v733342
+1993,"Saskatoon, Saskatchewan",2.7,,v733344
+1993,"Sherbrooke, Quebec",8.4,,v733345
+1993,"Thunder Bay, Ontario",2.4,,v733347
+1993,"Toronto, Ontario",1.9,,v733349
+1993,"Trois-Rivières, Quebec",7.0,,v733350
+1993,"Vancouver, British Columbia",1.1,,v733351
+1993,"Victoria, British Columbia",1.8,,v733352
+1993,"Windsor, Ontario",2.3,,v733353
+1993,"Winnipeg, Manitoba",5.8,,v733354
+1994,Census metropolitan areas,4.6,,v733334
+1994,"Calgary, Alberta",5.0,,v733335
+1994,"Edmonton, Alberta",8.9,,v733356
+1994,"Greater Sudbury, Ontario",3.8,,v733346
+1994,"Halifax, Nova Scotia",7.3,,v733357
+1994,"Hamilton, Ontario",2.1,,v733358
+1994,"Kitchener-Cambridge-Waterloo, Ontario",2.8,,v733359
+1994,"London, Ontario",3.9,,v733360
+1994,"Montréal excluding Saint-Jérôme, Quebec",7.5,,v733361
+1994,"Oshawa, Ontario",3.3,,v733362
+1994,"Ottawa-Gatineau, Ontario/Quebec",3.5,,v733336
+1994,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",2.6,,v733337
+1994,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",6.9,,v733338
+1994,"Québec, Quebec",7.1,,v733339
+1994,"Regina, Saskatchewan",3.1,,v733340
+1994,"St. Catharines-Niagara, Ontario",5.4,,v733341
+1994,"St. John's, Newfoundland and Labrador",6.9,,v733343
+1994,"Saguenay, Quebec",6.9,,v733348
+1994,"Saint John, New Brunswick",7.6,,v733342
+1994,"Saskatoon, Saskatchewan",1.8,,v733344
+1994,"Sherbrooke, Quebec",8.5,,v733345
+1994,"Thunder Bay, Ontario",4.1,,v733347
+1994,"Toronto, Ontario",1.2,,v733349
+1994,"Trois-Rivières, Quebec",7.8,,v733350
+1994,"Vancouver, British Columbia",0.8,,v733351
+1994,"Victoria, British Columbia",1.9,,v733352
+1994,"Windsor, Ontario",1.5,,v733353
+1994,"Winnipeg, Manitoba",5.6,,v733354
+1995,Census metropolitan areas,4.3,,v733334
+1995,"Calgary, Alberta",3.6,,v733335
+1995,"Edmonton, Alberta",10.2,,v733356
+1995,"Greater Sudbury, Ontario",5.0,,v733346
+1995,"Halifax, Nova Scotia",7.8,,v733357
+1995,"Hamilton, Ontario",1.9,,v733358
+1995,"Kitchener-Cambridge-Waterloo, Ontario",2.2,,v733359
+1995,"London, Ontario",4.1,,v733360
+1995,"Montréal excluding Saint-Jérôme, Quebec",6.8,,v733361
+1995,"Oshawa, Ontario",2.5,,v733362
+1995,"Ottawa-Gatineau, Ontario/Quebec",4.8,,v733336
+1995,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",3.8,,v733337
+1995,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",8.7,,v733338
+1995,"Québec, Quebec",6.2,,v733339
+1995,"Regina, Saskatchewan",2.0,,v733340
+1995,"St. Catharines-Niagara, Ontario",4.8,,v733341
+1995,"St. John's, Newfoundland and Labrador",11.1,,v733343
+1995,"Saguenay, Quebec",6.9,,v733348
+1995,"Saint John, New Brunswick",8.6,,v733342
+1995,"Saskatoon, Saskatchewan",1.0,,v733344
+1995,"Sherbrooke, Quebec",6.8,,v733345
+1995,"Thunder Bay, Ontario",6.2,,v733347
+1995,"Toronto, Ontario",0.8,,v733349
+1995,"Trois-Rivières, Quebec",7.8,,v733350
+1995,"Vancouver, British Columbia",1.1,,v733351
+1995,"Victoria, British Columbia",3.5,,v733352
+1995,"Windsor, Ontario",1.6,,v733353
+1995,"Winnipeg, Manitoba",5.3,,v733354
+1996,Census metropolitan areas,4.3,,v733334
+1996,"Abbotsford-Mission, British Columbia",6.0,,v4419483
+1996,"Barrie, Ontario",2.0,,v42135248
+1996,"Brantford, Ontario",7.0,,v42135249
+1996,"Calgary, Alberta",1.5,,v733335
+1996,"Edmonton, Alberta",7.6,,v733356
+1996,"Greater Sudbury, Ontario",5.9,,v733346
+1996,"Guelph, Ontario",3.0,,v42135250
+1996,"Halifax, Nova Scotia",8.6,,v733357
+1996,"Hamilton, Ontario",2.1,,v733358
+1996,"Kelowna, British Columbia",4.0,,v42135251
+1996,"Kingston, Ontario",4.2,,v4419482
+1996,"Kitchener-Cambridge-Waterloo, Ontario",1.8,,v733359
+1996,"London, Ontario",5.8,,v733360
+1996,"Moncton, New Brunswick",5.0,,v42135252
+1996,"Montréal excluding Saint-Jérôme, Quebec",6.3,,v733361
+1996,"Oshawa, Ontario",3.7,,v733362
+1996,"Ottawa-Gatineau, Ontario/Quebec",5.4,,v733336
+1996,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",4.9,,v733337
+1996,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",7.2,,v733338
+1996,"Peterborough, Ontario",5.0,,v42135253
+1996,"Québec, Quebec",6.4,,v733339
+1996,"Regina, Saskatchewan",1.8,,v733340
+1996,"St. Catharines-Niagara, Ontario",5.1,,v733341
+1996,"St. John's, Newfoundland and Labrador",16.0,,v733343
+1996,"Saguenay, Quebec",5.7,,v733348
+1996,"Saint John, New Brunswick",10.2,,v733342
+1996,"Saskatoon, Saskatchewan",0.7,,v733344
+1996,"Sherbrooke, Quebec",7.1,,v733345
+1996,"Thunder Bay, Ontario",5.0,,v733347
+1996,"Toronto, Ontario",1.2,,v733349
+1996,"Trois-Rivières, Quebec",8.5,,v733350
+1996,"Vancouver, British Columbia",1.1,,v733351
+1996,"Victoria, British Columbia",4.3,,v733352
+1996,"Windsor, Ontario",2.7,,v733353
+1996,"Winnipeg, Manitoba",5.9,,v733354
+1997,Census metropolitan areas,4.1,,v733334
+1997,"Abbotsford-Mission, British Columbia",5.2,,v4419483
+1997,"Barrie, Ontario",1.0,,v42135248
+1997,"Brantford, Ontario",4.0,,v42135249
+1997,"Calgary, Alberta",0.5,,v733335
+1997,"Edmonton, Alberta",4.6,,v733356
+1997,"Greater Sudbury, Ontario",6.9,,v733346
+1997,"Guelph, Ontario",2.0,,v42135250
+1997,"Halifax, Nova Scotia",8.2,,v733357
+1997,"Hamilton, Ontario",3.1,,v733358
+1997,"Kelowna, British Columbia",3.0,,v42135251
+1997,"Kingston, Ontario",5.1,,v4419482
+1997,"Kitchener-Cambridge-Waterloo, Ontario",1.9,,v733359
+1997,"London, Ontario",4.9,,v733360
+1997,"Moncton, New Brunswick",5.0,,v42135252
+1997,"Montréal excluding Saint-Jérôme, Quebec",6.6,,v733361
+1997,"Oshawa, Ontario",2.3,,v733362
+1997,"Ottawa-Gatineau, Ontario/Quebec",5.0,,v733336
+1997,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",4.0,,v733337
+1997,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",8.9,,v733338
+1997,"Peterborough, Ontario",5.0,,v42135253
+1997,"Québec, Quebec",6.5,,v733339
+1997,"Regina, Saskatchewan",1.5,,v733340
+1997,"St. Catharines-Niagara, Ontario",4.8,,v733341
+1997,"St. John's, Newfoundland and Labrador",17.4,,v733343
+1997,"Saguenay, Quebec",4.6,,v733348
+1997,"Saint John, New Brunswick",8.6,,v733342
+1997,"Saskatoon, Saskatchewan",0.9,,v733344
+1997,"Sherbrooke, Quebec",8.1,,v733345
+1997,"Thunder Bay, Ontario",7.3,,v733347
+1997,"Toronto, Ontario",0.8,,v733349
+1997,"Trois-Rivières, Quebec",8.8,,v733350
+1997,"Vancouver, British Columbia",1.5,,v733351
+1997,"Victoria, British Columbia",3.5,,v733352
+1997,"Windsor, Ontario",4.5,,v733353
+1997,"Winnipeg, Manitoba",5.8,,v733354
+1998,Census metropolitan areas,3.4,,v733334
+1998,"Abbotsford-Mission, British Columbia",7.4,,v4419483
+1998,"Barrie, Ontario",1.0,,v42135248
+1998,"Brantford, Ontario",5.0,,v42135249
+1998,"Calgary, Alberta",0.5,,v733335
+1998,"Edmonton, Alberta",1.9,,v733356
+1998,"Greater Sudbury, Ontario",8.3,,v733346
+1998,"Guelph, Ontario",2.0,,v42135250
+1998,"Halifax, Nova Scotia",5.5,,v733357
+1998,"Hamilton, Ontario",3.1,,v733358
+1998,"Kelowna, British Columbia",4.0,,v42135251
+1998,"Kingston, Ontario",5.4,,v4419482
+1998,"Kitchener-Cambridge-Waterloo, Ontario",1.4,,v733359
+1998,"London, Ontario",4.4,,v733360
+1998,"Moncton, New Brunswick",6.0,,v42135252
+1998,"Montréal, Quebec",5.2,,v733355
+1998,"Oshawa, Ontario",2.0,,v733362
+1998,"Ottawa-Gatineau, Ontario/Quebec",2.8,,v733336
+1998,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",2.0,,v733337
+1998,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",5.9,,v733338
+1998,"Peterborough, Ontario",4.0,,v42135253
+1998,"Québec, Quebec",5.1,,v733339
+1998,"Regina, Saskatchewan",1.7,,v733340
+1998,"St. Catharines-Niagara, Ontario",4.5,,v733341
+1998,"St. John's, Newfoundland and Labrador",16.3,,v733343
+1998,"Saguenay, Quebec",5.3,,v733348
+1998,"Saint John, New Brunswick",8.0,,v733342
+1998,"Saskatoon, Saskatchewan",0.8,,v733344
+1998,"Sherbrooke, Quebec",8.2,,v733345
+1998,"Thunder Bay, Ontario",7.9,,v733347
+1998,"Toronto, Ontario",0.8,,v733349
+1998,"Trois-Rivières, Quebec",8.3,,v733350
+1998,"Vancouver, British Columbia",2.7,,v733351
+1998,"Victoria, British Columbia",3.8,,v733352
+1998,"Windsor, Ontario",4.0,,v733353
+1998,"Winnipeg, Manitoba",3.9,,v733354
+1999,Census metropolitan areas,2.6,,v733334
+1999,"Abbotsford-Mission, British Columbia",6.7,,v4419483
+1999,"Barrie, Ontario",1.0,,v42135248
+1999,"Brantford, Ontario",2.0,,v42135249
+1999,"Calgary, Alberta",2.8,,v733335
+1999,"Edmonton, Alberta",2.2,,v733356
+1999,"Greater Sudbury, Ontario",9.8,,v733346
+1999,"Guelph, Ontario",1.0,,v42135250
+1999,"Halifax, Nova Scotia",3.6,,v733357
+1999,"Hamilton, Ontario",1.7,,v733358
+1999,"Kelowna, British Columbia",2.0,,v42135251
+1999,"Kingston, Ontario",3.3,,v4419482
+1999,"Kitchener-Cambridge-Waterloo, Ontario",0.9,,v733359
+1999,"London, Ontario",3.2,,v733360
+1999,"Moncton, New Brunswick",4.0,,v42135252
+1999,"Montréal, Quebec",3.3,,v733355
+1999,"Oshawa, Ontario",1.7,,v733362
+1999,"Ottawa-Gatineau, Ontario/Quebec",1.2,,v733336
+1999,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",0.6,,v733337
+1999,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",3.7,,v733338
+1999,"Peterborough, Ontario",4.0,,v42135253
+1999,"Québec, Quebec",3.4,,v733339
+1999,"Regina, Saskatchewan",1.4,,v733340
+1999,"St. Catharines-Niagara, Ontario",3.0,,v733341
+1999,"St. John's, Newfoundland and Labrador",9.3,,v733343
+1999,"Saguenay, Quebec",5.4,,v733348
+1999,"Saint John, New Brunswick",5.2,,v733342
+1999,"Saskatoon, Saskatchewan",0.9,,v733344
+1999,"Sherbrooke, Quebec",8.1,,v733345
+1999,"Thunder Bay, Ontario",6.6,,v733347
+1999,"Toronto, Ontario",0.8,,v733349
+1999,"Trois-Rivières, Quebec",8.0,,v733350
+1999,"Vancouver, British Columbia",2.7,,v733351
+1999,"Victoria, British Columbia",3.6,,v733352
+1999,"Windsor, Ontario",2.3,,v733353
+1999,"Winnipeg, Manitoba",2.8,,v733354
+2000,Census metropolitan areas,1.5,,v733334
+2000,"Abbotsford-Mission, British Columbia",3.7,,v4419483
+2000,"Barrie, Ontario",0.0,,v42135248
+2000,"Brantford, Ontario",2.0,,v42135249
+2000,"Calgary, Alberta",1.2,,v733335
+2000,"Edmonton, Alberta",1.4,,v733356
+2000,"Greater Sudbury, Ontario",7.4,,v733346
+2000,"Guelph, Ontario",1.0,,v42135250
+2000,"Halifax, Nova Scotia",3.5,,v733357
+2000,"Hamilton, Ontario",1.5,,v733358
+2000,"Kelowna, British Columbia",1.0,,v42135251
+2000,"Kingston, Ontario",1.7,,v4419482
+2000,"Kitchener-Cambridge-Waterloo, Ontario",0.7,,v733359
+2000,"London, Ontario",2.1,,v733360
+2000,"Moncton, New Brunswick",2.0,,v42135252
+2000,"Montréal, Quebec",1.5,,v733355
+2000,"Oshawa, Ontario",1.6,,v733362
+2000,"Ottawa-Gatineau, Ontario/Quebec",0.4,,v733336
+2000,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",0.2,,v733337
+2000,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",1.1,,v733338
+2000,"Peterborough, Ontario",3.0,,v42135253
+2000,"Québec, Quebec",1.5,,v733339
+2000,"Regina, Saskatchewan",1.4,,v733340
+2000,"St. Catharines-Niagara, Ontario",2.3,,v733341
+2000,"St. John's, Newfoundland and Labrador",3.8,,v733343
+2000,"Saguenay, Quebec",4.8,,v733348
+2000,"Saint John, New Brunswick",3.4,,v733342
+2000,"Saskatoon, Saskatchewan",1.7,,v733344
+2000,"Sherbrooke, Quebec",4.9,,v733345
+2000,"Thunder Bay, Ontario",5.1,,v733347
+2000,"Toronto, Ontario",0.6,,v733349
+2000,"Trois-Rivières, Quebec",6.4,,v733350
+2000,"Vancouver, British Columbia",1.3,,v733351
+2000,"Victoria, British Columbia",1.8,,v733352
+2000,"Windsor, Ontario",1.6,,v733353
+2000,"Winnipeg, Manitoba",2.0,,v733354
+2001,Census metropolitan areas,1.1,,v733334
+2001,"Abbotsford-Mission, British Columbia",2.5,,v4419483
+2001,"Barrie, Ontario",1.0,,v42135248
+2001,"Brantford, Ontario",1.0,,v42135249
+2001,"Calgary, Alberta",1.1,,v733335
+2001,"Edmonton, Alberta",0.9,,v733356
+2001,"Greater Sudbury, Ontario",5.4,,v733346
+2001,"Guelph, Ontario",1.0,,v42135250
+2001,"Halifax, Nova Scotia",2.9,,v733357
+2001,"Hamilton, Ontario",1.2,,v733358
+2001,"Kelowna, British Columbia",1.0,,v42135251
+2001,"Kingston, Ontario",1.1,,v4419482
+2001,"Kitchener-Cambridge-Waterloo, Ontario",0.8,,v733359
+2001,"London, Ontario",1.4,,v733360
+2001,"Moncton, New Brunswick",2.0,,v42135252
+2001,"Montréal, Quebec",0.7,,v733355
+2001,"Oshawa, Ontario",1.3,,v733362
+2001,"Ottawa-Gatineau, Ontario/Quebec",0.7,,v733336
+2001,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",0.8,,v733337
+2001,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",0.4,,v733338
+2001,"Peterborough, Ontario",4.0,,v42135253
+2001,"Québec, Quebec",0.7,,v733339
+2001,"Regina, Saskatchewan",2.1,,v733340
+2001,"St. Catharines-Niagara, Ontario",1.5,,v733341
+2001,"St. John's, Newfoundland and Labrador",2.2,,v733343
+2001,"Saguenay, Quebec",4.5,,v733348
+2001,"Saint John, New Brunswick",5.7,,v733342
+2001,"Saskatoon, Saskatchewan",2.9,,v733344
+2001,"Sherbrooke, Quebec",2.6,,v733345
+2001,"Thunder Bay, Ontario",5.2,,v733347
+2001,"Toronto, Ontario",0.9,,v733349
+2001,"Trois-Rivières, Quebec",4.4,,v733350
+2001,"Vancouver, British Columbia",1.0,,v733351
+2001,"Victoria, British Columbia",0.5,,v733352
+2001,"Windsor, Ontario",2.5,,v733353
+2001,"Winnipeg, Manitoba",1.4,,v733354
+2002,Census metropolitan areas,1.7,,v733334
+2002,"Abbotsford-Mission, British Columbia",1.9,,v4419483
+2002,"Barrie, Ontario",1.0,,v42135248
+2002,"Brantford, Ontario",1.0,,v42135249
+2002,"Calgary, Alberta",2.8,,v733335
+2002,"Edmonton, Alberta",1.7,,v733356
+2002,"Greater Sudbury, Ontario",4.0,,v733346
+2002,"Guelph, Ontario",3.0,,v42135250
+2002,"Halifax, Nova Scotia",2.7,,v733357
+2002,"Hamilton, Ontario",1.5,,v733358
+2002,"Kelowna, British Columbia",2.0,,v42135251
+2002,"Kingston, Ontario",1.0,,v4419482
+2002,"Kitchener-Cambridge-Waterloo, Ontario",2.4,,v733359
+2002,"London, Ontario",1.8,,v733360
+2002,"Moncton, New Brunswick",2.0,,v42135252
+2002,"Montréal, Quebec",0.7,,v733355
+2002,"Oshawa, Ontario",2.3,,v733362
+2002,"Ottawa-Gatineau, Ontario/Quebec",1.6,,v733336
+2002,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",1.8,,v733337
+2002,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",0.6,,v733338
+2002,"Peterborough, Ontario",2.0,,v42135253
+2002,"Québec, Quebec",0.4,,v733339
+2002,"Regina, Saskatchewan",1.9,,v733340
+2002,"St. Catharines-Niagara, Ontario",1.8,,v733341
+2002,"St. John's, Newfoundland and Labrador",2.5,,v733343
+2002,"Saguenay, Quebec",5.6,,v733348
+2002,"Saint John, New Brunswick",6.3,,v733342
+2002,"Saskatoon, Saskatchewan",3.7,,v733344
+2002,"Sherbrooke, Quebec",1.8,,v733345
+2002,"Thunder Bay, Ontario",4.6,,v733347
+2002,"Toronto, Ontario",2.5,,v733349
+2002,"Trois-Rivières, Quebec",2.5,,v733350
+2002,"Vancouver, British Columbia",1.4,,v733351
+2002,"Victoria, British Columbia",1.5,,v733352
+2002,"Windsor, Ontario",3.4,,v733353
+2002,"Winnipeg, Manitoba",1.1,,v733354
+2003,Census metropolitan areas,2.3,,v733334
+2003,"Abbotsford-Mission, British Columbia",2.4,,v4419483
+2003,"Barrie, Ontario",3.0,,v42135248
+2003,"Brantford, Ontario",3.0,,v42135249
+2003,"Calgary, Alberta",4.3,,v733335
+2003,"Edmonton, Alberta",3.4,,v733356
+2003,"Greater Sudbury, Ontario",3.0,,v733346
+2003,"Guelph, Ontario",4.0,,v42135250
+2003,"Halifax, Nova Scotia",2.3,,v733357
+2003,"Hamilton, Ontario",2.7,,v733358
+2003,"Kelowna, British Columbia",1.0,,v42135251
+2003,"Kingston, Ontario",1.8,,v4419482
+2003,"Kitchener-Cambridge-Waterloo, Ontario",3.2,,v733359
+2003,"London, Ontario",1.8,,v733360
+2003,"Moncton, New Brunswick",3.0,,v42135252
+2003,"Montréal, Quebec",1.1,,v733355
+2003,"Oshawa, Ontario",2.9,,v733362
+2003,"Ottawa-Gatineau, Ontario/Quebec",2.4,,v733336
+2003,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",2.8,,v733337
+2003,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",1.0,,v733338
+2003,"Peterborough, Ontario",1.0,,v42135253
+2003,"Québec, Quebec",0.4,,v733339
+2003,"Regina, Saskatchewan",2.0,,v733340
+2003,"St. Catharines-Niagara, Ontario",2.0,,v733341
+2003,"St. John's, Newfoundland and Labrador",1.7,,v733343
+2003,"Saguenay, Quebec",6.2,,v733348
+2003,"Saint John, New Brunswick",4.6,,v733342
+2003,"Saskatoon, Saskatchewan",4.5,,v733344
+2003,"Sherbrooke, Quebec",0.7,,v733345
+2003,"Thunder Bay, Ontario",2.8,,v733347
+2003,"Toronto, Ontario",3.8,,v733349
+2003,"Trois-Rivières, Quebec",1.4,,v733350
+2003,"Vancouver, British Columbia",2.0,,v733351
+2003,"Victoria, British Columbia",1.1,,v733352
+2003,"Windsor, Ontario",3.8,,v733353
+2003,"Winnipeg, Manitoba",1.3,,v733354
+2004,Census metropolitan areas,2.8,,v733334
+2004,"Abbotsford-Mission, British Columbia",2.8,,v4419483
+2004,"Barrie, Ontario",3.0,,v42135248
+2004,"Brantford, Ontario",2.0,,v42135249
+2004,"Calgary, Alberta",4.1,,v733335
+2004,"Edmonton, Alberta",5.3,,v733356
+2004,"Greater Sudbury, Ontario",1.9,,v733346
+2004,"Guelph, Ontario",3.0,,v42135250
+2004,"Halifax, Nova Scotia",2.9,,v733357
+2004,"Hamilton, Ontario",3.4,,v733358
+2004,"Kelowna, British Columbia",1.0,,v42135251
+2004,"Kingston, Ontario",2.3,,v4419482
+2004,"Kitchener-Cambridge-Waterloo, Ontario",3.6,,v733359
+2004,"London, Ontario",3.7,,v733360
+2004,"Moncton, New Brunswick",5.0,,v42135252
+2004,"Montréal, Quebec",1.6,,v733355
+2004,"Oshawa, Ontario",3.4,,v733362
+2004,"Ottawa-Gatineau, Ontario/Quebec",3.5,,v733336
+2004,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",3.9,,v733337
+2004,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",2.0,,v733338
+2004,"Peterborough, Ontario",1.0,,v42135253
+2004,"Québec, Quebec",1.1,,v733339
+2004,"Regina, Saskatchewan",2.7,,v733340
+2004,"St. Catharines-Niagara, Ontario",2.2,,v733341
+2004,"St. John's, Newfoundland and Labrador",2.3,,v733343
+2004,"Saguenay, Quebec",6.0,,v733348
+2004,"Saint John, New Brunswick",5.6,,v733342
+2004,"Saskatoon, Saskatchewan",6.3,,v733344
+2004,"Sherbrooke, Quebec",1.0,,v733345
+2004,"Thunder Bay, Ontario",5.1,,v733347
+2004,"Toronto, Ontario",4.4,,v733349
+2004,"Trois-Rivières, Quebec",1.1,,v733350
+2004,"Vancouver, British Columbia",1.3,,v733351
+2004,"Victoria, British Columbia",0.6,,v733352
+2004,"Windsor, Ontario",8.1,,v733353
+2004,"Winnipeg, Manitoba",1.1,,v733354
+2005,Census metropolitan areas,2.8,,v733334
+2005,"Abbotsford-Mission, British Columbia",3.8,,v4419483
+2005,"Barrie, Ontario",2.0,,v42135248
+2005,"Brantford, Ontario",2.0,,v42135249
+2005,"Calgary, Alberta",1.4,,v733335
+2005,"Edmonton, Alberta",4.5,,v733356
+2005,"Greater Sudbury, Ontario",1.4,,v733346
+2005,"Guelph, Ontario",4.0,,v42135250
+2005,"Halifax, Nova Scotia",3.3,,v733357
+2005,"Hamilton, Ontario",4.2,,v733358
+2005,"Kelowna, British Columbia",1.0,,v42135251
+2005,"Kingston, Ontario",1.7,,v4419482
+2005,"Kitchener-Cambridge-Waterloo, Ontario",3.3,,v733359
+2005,"London, Ontario",4.3,,v733360
+2005,"Moncton, New Brunswick",5.0,,v42135252
+2005,"Montréal, Quebec",2.2,,v733355
+2005,"Oshawa, Ontario",3.3,,v733362
+2005,"Ottawa-Gatineau, Ontario/Quebec",3.3,,v733336
+2005,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",3.3,,v733337
+2005,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",3.2,,v733338
+2005,"Peterborough, Ontario",3.0,,v42135253
+2005,"Québec, Quebec",1.5,,v733339
+2005,"Regina, Saskatchewan",3.1,,v733340
+2005,"St. Catharines-Niagara, Ontario",2.2,,v733341
+2005,"St. John's, Newfoundland and Labrador",4.3,,v733343
+2005,"Saguenay, Quebec",4.8,,v733348
+2005,"Saint John, New Brunswick",6.2,,v733342
+2005,"Saskatoon, Saskatchewan",4.6,,v733344
+2005,"Sherbrooke, Quebec",1.3,,v733345
+2005,"Thunder Bay, Ontario",3.8,,v733347
+2005,"Toronto, Ontario",3.7,,v733349
+2005,"Trois-Rivières, Quebec",1.7,,v733350
+2005,"Vancouver, British Columbia",1.3,,v733351
+2005,"Victoria, British Columbia",0.5,,v733352
+2005,"Windsor, Ontario",8.8,,v733353
+2005,"Winnipeg, Manitoba",1.6,,v733354
+2006,Census metropolitan areas,2.6,,v733334
+2006,"Abbotsford-Mission, British Columbia",2.0,,v4419483
+2006,"Barrie, Ontario",3.0,,v42135248
+2006,"Brantford, Ontario",2.0,,v42135249
+2006,"Calgary, Alberta",0.5,,v733335
+2006,"Edmonton, Alberta",1.2,,v733356
+2006,"Greater Sudbury, Ontario",1.1,,v733346
+2006,"Guelph, Ontario",3.0,,v42135250
+2006,"Halifax, Nova Scotia",3.0,,v733357
+2006,"Hamilton, Ontario",4.2,,v733358
+2006,"Kelowna, British Columbia",1.0,,v42135251
+2006,"Kingston, Ontario",2.1,,v4419482
+2006,"Kitchener-Cambridge-Waterloo, Ontario",3.3,,v733359
+2006,"London, Ontario",3.6,,v733360
+2006,"Moncton, New Brunswick",5.0,,v42135252
+2006,"Montréal, Quebec",3.0,,v733355
+2006,"Oshawa, Ontario",4.2,,v733362
+2006,"Ottawa-Gatineau, Ontario/Quebec",2.6,,v733336
+2006,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",2.3,,v733337
+2006,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",3.5,,v733338
+2006,"Peterborough, Ontario",2.0,,v42135253
+2006,"Québec, Quebec",1.5,,v733339
+2006,"Regina, Saskatchewan",3.3,,v733340
+2006,"St. Catharines-Niagara, Ontario",3.6,,v733341
+2006,"St. John's, Newfoundland and Labrador",4.6,,v733343
+2006,"Saguenay, Quebec",4.8,,v733348
+2006,"Saint John, New Brunswick",7.1,,v733342
+2006,"Saskatoon, Saskatchewan",3.2,,v733344
+2006,"Sherbrooke, Quebec",1.3,,v733345
+2006,"Thunder Bay, Ontario",4.0,,v733347
+2006,"Toronto, Ontario",3.2,,v733349
+2006,"Trois-Rivières, Quebec",1.1,,v733350
+2006,"Vancouver, British Columbia",0.7,,v733351
+2006,"Victoria, British Columbia",0.5,,v733352
+2006,"Windsor, Ontario",9.2,,v733353
+2006,"Winnipeg, Manitoba",1.3,,v733354
+2007,Census metropolitan areas,2.7,,v733334
+2007,"Abbotsford-Mission, British Columbia",2.1,,v4419483
+2007,"Barrie, Ontario",3.0,,v42135248
+2007,"Brantford, Ontario",2.9,,v42135249
+2007,"Calgary, Alberta",1.5,,v733335
+2007,"Edmonton, Alberta",1.5,,v733356
+2007,"Greater Sudbury, Ontario",0.5,,v733346
+2007,"Guelph, Ontario",1.9,,v42135250
+2007,"Halifax, Nova Scotia",3.0,,v733357
+2007,"Hamilton, Ontario",3.5,,v733358
+2007,"Kelowna, British Columbia",0.0,,v42135251
+2007,"Kingston, Ontario",3.3,,v4419482
+2007,"Kitchener-Cambridge-Waterloo, Ontario",2.7,,v733359
+2007,"London, Ontario",3.3,,v733360
+2007,"Moncton, New Brunswick",4.0,,v42135252
+2007,"Montréal, Quebec",3.3,,v733355
+2007,"Oshawa, Ontario",3.6,,v733362
+2007,"Ottawa-Gatineau, Ontario/Quebec",2.4,,v733336
+2007,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",2.2,,v733337
+2007,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",3.1,,v733338
+2007,"Peterborough, Ontario",2.5,,v42135253
+2007,"Québec, Quebec",1.4,,v733339
+2007,"Regina, Saskatchewan",1.7,,v733340
+2007,"St. Catharines-Niagara, Ontario",3.3,,v733341
+2007,"St. John's, Newfoundland and Labrador",2.3,,v733343
+2007,"Saguenay, Quebec",3.3,,v733348
+2007,"Saint John, New Brunswick",4.7,,v733342
+2007,"Saskatoon, Saskatchewan",0.6,,v733344
+2007,"Sherbrooke, Quebec",2.8,,v733345
+2007,"Thunder Bay, Ontario",2.9,,v733347
+2007,"Toronto, Ontario",3.2,,v733349
+2007,"Trois-Rivières, Quebec",1.6,,v733350
+2007,"Vancouver, British Columbia",0.7,,v733351
+2007,"Victoria, British Columbia",0.5,,v733352
+2007,"Windsor, Ontario",11.9,,v733353
+2007,"Winnipeg, Manitoba",1.4,,v733354
+2008,Census metropolitan areas,2.2,,v733334
+2008,"Abbotsford-Mission, British Columbia",2.5,,v4419483
+2008,"Barrie, Ontario",3.5,,v42135248
+2008,"Brantford, Ontario",2.3,,v42135249
+2008,"Calgary, Alberta",2.1,,v733335
+2008,"Edmonton, Alberta",2.4,,v733356
+2008,"Greater Sudbury, Ontario",0.5,,v733346
+2008,"Guelph, Ontario",2.2,,v42135250
+2008,"Halifax, Nova Scotia",3.4,,v733357
+2008,"Hamilton, Ontario",3.1,,v733358
+2008,"Kelowna, British Columbia",0.2,,v42135251
+2008,"Kingston, Ontario",1.2,,v4419482
+2008,"Kitchener-Cambridge-Waterloo, Ontario",1.8,,v733359
+2008,"London, Ontario",3.8,,v733360
+2008,"Moncton, New Brunswick",2.0,,v42135252
+2008,"Montréal, Quebec",2.7,,v733355
+2008,"Oshawa, Ontario",4.0,,v733362
+2008,"Ottawa-Gatineau, Ontario/Quebec",1.5,,v733336
+2008,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",1.3,,v733337
+2008,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",2.2,,v733338
+2008,"Peterborough, Ontario",2.2,,v42135253
+2008,"Québec, Quebec",0.6,,v733339
+2008,"Regina, Saskatchewan",0.4,,v733340
+2008,"St. Catharines-Niagara, Ontario",3.9,,v733341
+2008,"St. John's, Newfoundland and Labrador",0.5,,v733343
+2008,"Saguenay, Quebec",2.0,,v733348
+2008,"Saint John, New Brunswick",2.8,,v733342
+2008,"Saskatoon, Saskatchewan",1.8,,v733344
+2008,"Sherbrooke, Quebec",3.2,,v733345
+2008,"Thunder Bay, Ontario",1.9,,v733347
+2008,"Toronto, Ontario",2.0,,v733349
+2008,"Trois-Rivières, Quebec",2.0,,v733350
+2008,"Vancouver, British Columbia",0.5,,v733351
+2008,"Victoria, British Columbia",0.5,,v733352
+2008,"Windsor, Ontario",13.9,,v733353
+2008,"Winnipeg, Manitoba",0.9,,v733354
+2009,Census metropolitan areas,2.9,,v733334
+2009,"Abbotsford-Mission, British Columbia",6.1,,v4419483
+2009,"Barrie, Ontario",3.6,,v42135248
+2009,"Brantford, Ontario",3.5,,v42135249
+2009,"Calgary, Alberta",5.4,,v733335
+2009,"Edmonton, Alberta",4.5,,v733356
+2009,"Greater Sudbury, Ontario",2.6,,v733346
+2009,"Guelph, Ontario",4.1,,v42135250
+2009,"Halifax, Nova Scotia",2.8,,v733357
+2009,"Hamilton, Ontario",4.0,,v733358
+2009,"Kelowna, British Columbia",2.9,,v42135251
+2009,"Kingston, Ontario",1.2,,v4419482
+2009,"Kitchener-Cambridge-Waterloo, Ontario",3.3,,v733359
+2009,"London, Ontario",5.1,,v733360
+2009,"Moncton, New Brunswick",3.5,,v42135252
+2009,"Montréal, Quebec",2.9,,v733355
+2009,"Oshawa, Ontario",4.1,,v733362
+2009,"Ottawa-Gatineau, Ontario/Quebec",1.5,,v733336
+2009,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",1.5,,v733337
+2009,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",1.9,,v733338
+2009,"Peterborough, Ontario",6.3,,v42135253
+2009,"Québec, Quebec",0.5,,v733339
+2009,"Regina, Saskatchewan",0.6,,v733340
+2009,"St. Catharines-Niagara, Ontario",3.9,,v733341
+2009,"St. John's, Newfoundland and Labrador",0.5,,v733343
+2009,"Saguenay, Quebec",1.9,,v733348
+2009,"Saint John, New Brunswick",3.5,,v733342
+2009,"Saskatoon, Saskatchewan",1.9,,v733344
+2009,"Sherbrooke, Quebec",4.7,,v733345
+2009,"Thunder Bay, Ontario",2.0,,v733347
+2009,"Toronto, Ontario",3.0,,v733349
+2009,"Trois-Rivières, Quebec",2.9,,v733350
+2009,"Vancouver, British Columbia",2.1,,v733351
+2009,"Victoria, British Columbia",1.4,,v733352
+2009,"Windsor, Ontario",12.2,,v733353
+2009,"Winnipeg, Manitoba",1.1,,v733354
+2010,Census metropolitan areas,2.7,,v733334
+2010,"Abbotsford-Mission, British Columbia",6.5,,v4419483
+2010,"Barrie, Ontario",3.2,,v42135248
+2010,"Brantford, Ontario",3.7,,v42135249
+2010,"Calgary, Alberta",3.4,,v733335
+2010,"Edmonton, Alberta",4.2,,v733356
+2010,"Greater Sudbury, Ontario",2.5,,v733346
+2010,"Guelph, Ontario",3.4,,v42135250
+2010,"Halifax, Nova Scotia",2.6,,v733357
+2010,"Hamilton, Ontario",3.6,,v733358
+2010,"Kelowna, British Columbia",3.4,,v42135251
+2010,"Kingston, Ontario",1.1,,v4419482
+2010,"Kitchener-Cambridge-Waterloo, Ontario",2.6,,v733359
+2010,"London, Ontario",4.9,,v733360
+2010,"Moncton, New Brunswick",3.6,,v42135252
+2010,"Montréal, Quebec",3.0,,v733355
+2010,"Oshawa, Ontario",2.8,,v733362
+2010,"Ottawa-Gatineau, Ontario/Quebec",1.7,,v733336
+2010,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",1.5,,v733337
+2010,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",2.2,,v733338
+2010,"Peterborough, Ontario",4.0,,v42135253
+2010,"Québec, Quebec",1.1,,v733339
+2010,"Regina, Saskatchewan",1.0,,v733340
+2010,"St. Catharines-Niagara, Ontario",4.3,,v733341
+2010,"St. John's, Newfoundland and Labrador",1.1,,v733343
+2010,"Saguenay, Quebec",2.3,,v733348
+2010,"Saint John, New Brunswick",4.7,,v733342
+2010,"Saskatoon, Saskatchewan",2.6,,v733344
+2010,"Sherbrooke, Quebec",5.4,,v733345
+2010,"Thunder Bay, Ontario",1.9,,v733347
+2010,"Toronto, Ontario",2.1,,v733349
+2010,"Trois-Rivières, Quebec",4.0,,v733350
+2010,"Vancouver, British Columbia",1.9,,v733351
+2010,"Victoria, British Columbia",1.5,,v733352
+2010,"Windsor, Ontario",9.7,,v733353
+2010,"Winnipeg, Manitoba",0.8,,v733354
+2011,Census metropolitan areas,2.2,,v733334
+2011,"Abbotsford-Mission, British Columbia",6.6,,v4419483
+2011,"Barrie, Ontario",1.5,,v42135248
+2011,"Brantford, Ontario",1.8,,v42135249
+2011,"Calgary, Alberta",1.8,,v733335
+2011,"Edmonton, Alberta",3.3,,v733356
+2011,"Greater Sudbury, Ontario",2.7,,v733346
+2011,"Guelph, Ontario",1.0,,v42135250
+2011,"Halifax, Nova Scotia",2.4,,v733357
+2011,"Hamilton, Ontario",3.4,,v733358
+2011,"Kelowna, British Columbia",2.9,,v42135251
+2011,"Kingston, Ontario",1.0,,v4419482
+2011,"Kitchener-Cambridge-Waterloo, Ontario",1.7,,v733359
+2011,"London, Ontario",3.5,,v733360
+2011,"Moncton, New Brunswick",4.1,,v42135252
+2011,"Montréal, Quebec",2.8,,v733355
+2011,"Oshawa, Ontario",1.7,,v733362
+2011,"Ottawa-Gatineau, Ontario/Quebec",1.5,,v733336
+2011,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",1.4,,v733337
+2011,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",2.0,,v733338
+2011,"Peterborough, Ontario",3.2,,v42135253
+2011,"Québec, Quebec",1.6,,v733339
+2011,"Regina, Saskatchewan",0.6,,v733340
+2011,"St. Catharines-Niagara, Ontario",2.9,,v733341
+2011,"St. John's, Newfoundland and Labrador",1.0,,v733343
+2011,"Saguenay, Quebec",1.7,,v733348
+2011,"Saint John, New Brunswick",5.9,,v733342
+2011,"Saskatoon, Saskatchewan",2.6,,v733344
+2011,"Sherbrooke, Quebec",5.4,,v733345
+2011,"Thunder Bay, Ontario",1.6,,v733347
+2011,"Toronto, Ontario",1.4,,v733349
+2011,"Trois-Rivières, Quebec",4.2,,v733350
+2011,"Vancouver, British Columbia",1.4,,v733351
+2011,"Victoria, British Columbia",2.1,,v733352
+2011,"Windsor, Ontario",6.9,,v733353
+2011,"Winnipeg, Manitoba",1.1,,v733354
+2012,Census metropolitan areas,2.6,,v733334
+2012,"Abbotsford-Mission, British Columbia",4.3,,v4419483
+2012,"Barrie, Ontario",1.6,,v42135248
+2012,"Brantford, Ontario",2.9,,v42135249
+2012,"Calgary, Alberta",1.3,,v733335
+2012,"Edmonton, Alberta",1.6,,v733356
+2012,"Greater Sudbury, Ontario",2.4,,v733346
+2012,"Guelph, Ontario",1.3,,v42135250
+2012,"Halifax, Nova Scotia",3.0,,v733357
+2012,"Hamilton, Ontario",3.5,,v733358
+2012,"Kelowna, British Columbia",3.9,,v42135251
+2012,"Kingston, Ontario",1.3,,v4419482
+2012,"Kitchener-Cambridge-Waterloo, Ontario",2.6,,v733359
+2012,"London, Ontario",3.8,,v733360
+2012,"Moncton, New Brunswick",6.5,,v42135252
+2012,"Montréal, Quebec",3.1,,v733355
+2012,"Oshawa, Ontario",1.9,,v733362
+2012,"Ottawa-Gatineau, Ontario/Quebec",2.6,,v733336
+2012,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",2.5,,v733337
+2012,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",3.2,,v733338
+2012,"Peterborough, Ontario",2.7,,v42135253
+2012,"Québec, Quebec",2.1,,v733339
+2012,"Regina, Saskatchewan",0.9,,v733340
+2012,"St. Catharines-Niagara, Ontario",3.9,,v733341
+2012,"St. John's, Newfoundland and Labrador",2.7,,v733343
+2012,"Saguenay, Quebec",2.4,,v733348
+2012,"Saint John, New Brunswick",9.7,,v733342
+2012,"Saskatoon, Saskatchewan",2.6,,v733344
+2012,"Sherbrooke, Quebec",5.9,,v733345
+2012,"Thunder Bay, Ontario",1.0,,v733347
+2012,"Toronto, Ontario",1.7,,v733349
+2012,"Trois-Rivières, Quebec",5.5,,v733350
+2012,"Vancouver, British Columbia",1.8,,v733351
+2012,"Victoria, British Columbia",2.8,,v733352
+2012,"Windsor, Ontario",6.6,,v733353
+2012,"Winnipeg, Manitoba",1.7,,v733354
+2013,Census metropolitan areas,2.7,,v733334
+2013,"Abbotsford-Mission, British Columbia",3.2,,v4419483
+2013,"Barrie, Ontario",2.5,,v42135248
+2013,"Brantford, Ontario",2.8,,v42135249
+2013,"Calgary, Alberta",1.0,,v733335
+2013,"Edmonton, Alberta",1.4,,v733356
+2013,"Greater Sudbury, Ontario",2.8,,v733346
+2013,"Guelph, Ontario",1.7,,v42135250
+2013,"Halifax, Nova Scotia",3.2,,v733357
+2013,"Hamilton, Ontario",3.4,,v733358
+2013,"Kelowna, British Columbia",1.7,,v42135251
+2013,"Kingston, Ontario",2.2,,v4419482
+2013,"Kitchener-Cambridge-Waterloo, Ontario",2.8,,v733359
+2013,"London, Ontario",3.2,,v733360
+2013,"Moncton, New Brunswick",9.0,,v42135252
+2013,"Montréal, Quebec",3.2,,v733355
+2013,"Oshawa, Ontario",2.0,,v733362
+2013,"Ottawa-Gatineau, Ontario/Quebec",3.3,,v733336
+2013,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",2.9,,v733337
+2013,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",4.4,,v733338
+2013,"Peterborough, Ontario",4.5,,v42135253
+2013,"Québec, Quebec",2.4,,v733339
+2013,"Regina, Saskatchewan",1.8,,v733340
+2013,"St. Catharines-Niagara, Ontario",3.6,,v733341
+2013,"St. John's, Newfoundland and Labrador",3.1,,v733343
+2013,"Saguenay, Quebec",2.9,,v733348
+2013,"Saint John, New Brunswick",11.6,,v733342
+2013,"Saskatoon, Saskatchewan",2.8,,v733344
+2013,"Sherbrooke, Quebec",6.0,,v733345
+2013,"Thunder Bay, Ontario",2.8,,v733347
+2013,"Toronto, Ontario",1.6,,v733349
+2013,"Trois-Rivières, Quebec",5.3,,v733350
+2013,"Vancouver, British Columbia",1.7,,v733351
+2013,"Victoria, British Columbia",2.8,,v733352
+2013,"Windsor, Ontario",5.3,,v733353
+2013,"Winnipeg, Manitoba",2.5,,v733354
+2014,Census metropolitan areas,2.7,,v733334
+2014,"Abbotsford-Mission, British Columbia",3.1,,v4419483
+2014,"Barrie, Ontario",1.5,,v42135248
+2014,"Brantford, Ontario",2.2,,v42135249
+2014,"Calgary, Alberta",1.4,,v733335
+2014,"Edmonton, Alberta",1.7,,v733356
+2014,"Greater Sudbury, Ontario",3.8,,v733346
+2014,"Guelph, Ontario",1.1,,v42135250
+2014,"Halifax, Nova Scotia",3.7,,v733357
+2014,"Hamilton, Ontario",2.1,,v733358
+2014,"Kelowna, British Columbia",0.9,,v42135251
+2014,"Kingston, Ontario",1.9,,v4419482
+2014,"Kitchener-Cambridge-Waterloo, Ontario",2.2,,v733359
+2014,"London, Ontario",2.7,,v733360
+2014,"Moncton, New Brunswick",8.4,,v42135252
+2014,"Montréal, Quebec",3.8,,v733355
+2014,"Oshawa, Ontario",1.8,,v733362
+2014,"Ottawa-Gatineau, Ontario/Quebec",3.3,,v733336
+2014,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",2.6,,v733337
+2014,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",6.1,,v733338
+2014,"Peterborough, Ontario",2.6,,v42135253
+2014,"Québec, Quebec",3.2,,v733339
+2014,"Regina, Saskatchewan",2.9,,v733340
+2014,"St. Catharines-Niagara, Ontario",3.3,,v733341
+2014,"St. John's, Newfoundland and Labrador",3.7,,v733343
+2014,"Saguenay, Quebec",5.8,,v733348
+2014,"Saint John, New Brunswick",8.7,,v733342
+2014,"Saskatoon, Saskatchewan",3.5,,v733344
+2014,"Sherbrooke, Quebec",6.3,,v733345
+2014,"Thunder Bay, Ontario",2.0,,v733347
+2014,"Toronto, Ontario",1.6,,v733349
+2014,"Trois-Rivières, Quebec",5.6,,v733350
+2014,"Vancouver, British Columbia",1.0,,v733351
+2014,"Victoria, British Columbia",1.5,,v733352
+2014,"Windsor, Ontario",3.6,,v733353
+2014,"Winnipeg, Manitoba",2.6,,v733354
+2015,Census metropolitan areas,3.3,,v733334
+2015,"Abbotsford-Mission, British Columbia",0.8,,v4419483
+2015,"Barrie, Ontario",1.3,,v42135248
+2015,"Brantford, Ontario",2.4,,v42135249
+2015,"Calgary, Alberta",5.3,,v733335
+2015,"Edmonton, Alberta",4.2,,v733356
+2015,"Greater Sudbury, Ontario",3.2,,v733346
+2015,"Guelph, Ontario",1.2,,v42135250
+2015,"Halifax, Nova Scotia",3.3,,v733357
+2015,"Hamilton, Ontario",3.4,,v733358
+2015,"Kelowna, British Columbia",0.7,,v42135251
+2015,"Kingston, Ontario",2.9,,v4419482
+2015,"Kitchener-Cambridge-Waterloo, Ontario",2.5,,v733359
+2015,"London, Ontario",2.7,,v733360
+2015,"Moncton, New Brunswick",7.1,,v42135252
+2015,"Montréal, Quebec",4.5,,v733355
+2015,"Oshawa, Ontario",1.7,,v733362
+2015,"Ottawa-Gatineau, Ontario/Quebec",3.9,,v733336
+2015,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",3.4,,v733337
+2015,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",5.5,,v733338
+2015,"Peterborough, Ontario",3.5,,v42135253
+2015,"Québec, Quebec",4.3,,v733339
+2015,"Regina, Saskatchewan",5.3,,v733340
+2015,"St. Catharines-Niagara, Ontario",2.7,,v733341
+2015,"St. John's, Newfoundland and Labrador",4.2,,v733343
+2015,"Saguenay, Quebec",9.2,,v733348
+2015,"Saint John, New Brunswick",7.6,,v733342
+2015,"Saskatoon, Saskatchewan",6.6,,v733344
+2015,"Sherbrooke, Quebec",6.1,,v733345
+2015,"Thunder Bay, Ontario",4.4,,v733347
+2015,"Toronto, Ontario",1.5,,v733349
+2015,"Trois-Rivières, Quebec",6.3,,v733350
+2015,"Vancouver, British Columbia",0.8,,v733351
+2015,"Victoria, British Columbia",0.6,,v733352
+2015,"Windsor, Ontario",3.3,,v733353
+2015,"Winnipeg, Manitoba",2.8,,v733354
+2016,Census metropolitan areas,3.4,,v733334
+2016,"Abbotsford-Mission, British Columbia",0.4,,v4419483
+2016,"Barrie, Ontario",2.0,,v42135248
+2016,"Brantford, Ontario",2.0,,v42135249
+2016,"Calgary, Alberta",6.9,,v733335
+2016,"Edmonton, Alberta",7.1,,v733356
+2016,"Greater Sudbury, Ontario",4.7,,v733346
+2016,"Guelph, Ontario",0.9,,v42135250
+2016,"Halifax, Nova Scotia",2.6,,v733357
+2016,"Hamilton, Ontario",3.8,,v733358
+2016,"Kelowna, British Columbia",0.6,,v42135251
+2016,"Kingston, Ontario",2.6,,v4419482
+2016,"Kitchener-Cambridge-Waterloo, Ontario",2.1,,v733359
+2016,"London, Ontario",2.0,,v733360
+2016,"Moncton, New Brunswick",5.6,,v42135252
+2016,"Montréal, Quebec",4.6,,v733355
+2016,"Oshawa, Ontario",1.7,,v733362
+2016,"Ottawa-Gatineau, Ontario/Quebec",3.4,,v733336
+2016,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",2.8,,v733337
+2016,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",5.9,,v733338
+2016,"Peterborough, Ontario",0.9,,v42135253
+2016,"Québec, Quebec",5.4,,v733339
+2016,"Regina, Saskatchewan",5.4,,v733340
+2016,"St. Catharines-Niagara, Ontario",2.0,,v733341
+2016,"St. John's, Newfoundland and Labrador",8.5,,v733343
+2016,"Saguenay, Quebec",7.9,,v733348
+2016,"Saint John, New Brunswick",7.7,,v733342
+2016,"Saskatoon, Saskatchewan",10.4,,v733344
+2016,"Sherbrooke, Quebec",6.9,,v733345
+2016,"Thunder Bay, Ontario",5.0,,v733347
+2016,"Toronto, Ontario",1.3,,v733349
+2016,"Trois-Rivières, Quebec",6.4,,v733350
+2016,"Vancouver, British Columbia",0.7,,v733351
+2016,"Victoria, British Columbia",0.5,,v733352
+2016,"Windsor, Ontario",2.2,,v733353
+2016,"Winnipeg, Manitoba",2.8,,v733354
+2017,Census metropolitan areas,2.7,,v733334
+2017,"Abbotsford-Mission, British Columbia",0.2,,v4419483
+2017,"Barrie, Ontario",2.8,,v42135248
+2017,"Brantford, Ontario",1.3,,v42135249
+2017,"Calgary, Alberta",6.2,,v733335
+2017,"Edmonton, Alberta",7.0,,v733356
+2017,"Greater Sudbury, Ontario",4.2,,v733346
+2017,"Guelph, Ontario",1.2,,v42135250
+2017,"Halifax, Nova Scotia",2.2,,v733357
+2017,"Hamilton, Ontario",2.3,,v733358
+2017,"Kelowna, British Columbia",0.2,,v42135251
+2017,"Kingston, Ontario",0.8,,v4419482
+2017,"Kitchener-Cambridge-Waterloo, Ontario",1.9,,v733359
+2017,"London, Ontario",1.6,,v733360
+2017,"Moncton, New Brunswick",4.3,,v42135252
+2017,"Montréal, Quebec",2.9,,v733355
+2017,"Oshawa, Ontario",2.2,,v733362
+2017,"Ottawa-Gatineau, Ontario/Quebec",2.2,,v733336
+2017,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",1.8,,v733337
+2017,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",3.8,,v733338
+2017,"Peterborough, Ontario",1.1,,v42135253
+2017,"Québec, Quebec",4.7,,v733339
+2017,"Regina, Saskatchewan",7.0,,v733340
+2017,"St. Catharines-Niagara, Ontario",1.3,,v733341
+2017,"St. John's, Newfoundland and Labrador",6.7,,v733343
+2017,"Saguenay, Quebec",8.0,,v733348
+2017,"Saint John, New Brunswick",4.1,,v733342
+2017,"Saskatoon, Saskatchewan",9.6,,v733344
+2017,"Sherbrooke, Quebec",5.7,,v733345
+2017,"Thunder Bay, Ontario",3.7,,v733347
+2017,"Toronto, Ontario",1.0,,v733349
+2017,"Trois-Rivières, Quebec",4.8,,v733350
+2017,"Vancouver, British Columbia",0.9,,v733351
+2017,"Victoria, British Columbia",0.7,,v733352
+2017,"Windsor, Ontario",2.2,,v733353
+2017,"Winnipeg, Manitoba",2.9,,v733354
+2018,Census metropolitan areas,2.2,,v733334
+2018,"Abbotsford-Mission, British Columbia",0.8,,v4419483
+2018,"Barrie, Ontario",2.8,,v42135248
+2018,"Brantford, Ontario",1.2,,v42135249
+2018,"Calgary, Alberta",3.9,,v733335
+2018,"Edmonton, Alberta",5.3,,v733356
+2018,"Greater Sudbury, Ontario",2.1,,v733346
+2018,"Guelph, Ontario",1.4,,v42135250
+2018,"Halifax, Nova Scotia",1.5,,v733357
+2018,"Hamilton, Ontario",3.1,,v733358
+2018,"Kelowna, British Columbia",1.9,,v42135251
+2018,"Kingston, Ontario",0.5,,v4419482
+2018,"Kitchener-Cambridge-Waterloo, Ontario",2.9,,v733359
+2018,"London, Ontario",2.0,,v733360
+2018,"Moncton, New Brunswick",2.6,,v42135252
+2018,"Montréal, Quebec",2.0,,v733355
+2018,"Oshawa, Ontario",2.6,,v733362
+2018,"Ottawa-Gatineau, Ontario/Quebec",1.5,,v733336
+2018,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",1.6,,v733337
+2018,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",1.3,,v733338
+2018,"Peterborough, Ontario",1.6,,v42135253
+2018,"Québec, Quebec",3.5,,v733339
+2018,"Regina, Saskatchewan",7.7,,v733340
+2018,"St. Catharines-Niagara, Ontario",2.2,,v733341
+2018,"St. John's, Newfoundland and Labrador",6.2,,v733343
+2018,"Saguenay, Quebec",5.0,,v733348
+2018,"Saint John, New Brunswick",3.4,,v733342
+2018,"Saskatoon, Saskatchewan",8.3,,v733344
+2018,"Sherbrooke, Quebec",3.0,,v733345
+2018,"Thunder Bay, Ontario",5.0,,v733347
+2018,"Toronto, Ontario",1.1,,v733349
+2018,"Trois-Rivières, Quebec",4.2,,v733350
+2018,"Vancouver, British Columbia",1.0,,v733351
+2018,"Victoria, British Columbia",1.1,,v733352
+2018,"Windsor, Ontario",2.5,,v733353
+2018,"Winnipeg, Manitoba",2.9,,v733354
+2019,Census metropolitan areas,2.1,,v733334
+2019,"Abbotsford-Mission, British Columbia",1.1,,v4419483
+2019,"Barrie, Ontario",3.3,,v42135248
+2019,"Brantford, Ontario",2.1,,v42135249
+2019,"Calgary, Alberta",3.7,,v733335
+2019,"Edmonton, Alberta",4.9,,v733356
+2019,"Greater Sudbury, Ontario",2.2,,v733346
+2019,"Guelph, Ontario",1.9,,v42135250
+2019,"Halifax, Nova Scotia",1.0,,v733357
+2019,"Hamilton, Ontario",3.9,,v733358
+2019,"Kelowna, British Columbia",2.7,,v42135251
+2019,"Kingston, Ontario",1.6,,v4419482
+2019,"Kitchener-Cambridge-Waterloo, Ontario",2.1,,v733359
+2019,"London, Ontario",1.7,,v733360
+2019,"Moncton, New Brunswick",1.9,,v42135252
+2019,"Montréal, Quebec",1.6,,v733355
+2019,"Oshawa, Ontario",2.3,,v733362
+2019,"Ottawa-Gatineau, Ontario/Quebec",1.8,,v733336
+2019,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",1.8,,v733337
+2019,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",1.6,,v733338
+2019,"Peterborough, Ontario",2.0,,v42135253
+2019,"Québec, Quebec",2.5,,v733339
+2019,"Regina, Saskatchewan",7.8,,v733340
+2019,"St. Catharines-Niagara, Ontario",2.1,,v733341
+2019,"St. John's, Newfoundland and Labrador",7.1,,v733343
+2019,"Saguenay, Quebec",3.3,,v733348
+2019,"Saint John, New Brunswick",3.1,,v733342
+2019,"Saskatoon, Saskatchewan",5.7,,v733344
+2019,"Sherbrooke, Quebec",2.0,,v733345
+2019,"Thunder Bay, Ontario",3.3,,v733347
+2019,"Toronto, Ontario",1.5,,v733349
+2019,"Trois-Rivières, Quebec",2.0,,v733350
+2019,"Vancouver, British Columbia",1.1,,v733351
+2019,"Victoria, British Columbia",1.0,,v733352
+2019,"Windsor, Ontario",2.6,,v733353
+2019,"Winnipeg, Manitoba",3.0,,v733354
+2020,Census metropolitan areas,3.4,,v733334
+2020,"Abbotsford-Mission, British Columbia",0.6,,v4419483
+2020,"Barrie, Ontario",1.9,,v42135248
+2020,"Brantford, Ontario",2.2,,v42135249
+2020,"Calgary, Alberta",6.5,,v733335
+2020,"Edmonton, Alberta",7.2,,v733356
+2020,"Greater Sudbury, Ontario",1.9,,v733346
+2020,"Guelph, Ontario",2.0,,v42135250
+2020,"Halifax, Nova Scotia",1.7,,v733357
+2020,"Hamilton, Ontario",3.6,,v733358
+2020,"Kelowna, British Columbia",2.1,,v42135251
+2020,"Kingston, Ontario",2.9,,v4419482
+2020,"Kitchener-Cambridge-Waterloo, Ontario",2.1,,v733359
+2020,"London, Ontario",3.2,,v733360
+2020,"Moncton, New Brunswick",2.6,,v42135252
+2020,"Montréal, Quebec",3.3,,v733355
+2020,"Oshawa, Ontario",2.2,,v733362
+2020,"Ottawa-Gatineau, Ontario/Quebec",3.4,,v733336
+2020,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",3.8,,v733337
+2020,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",2.0,,v733338
+2020,"Peterborough, Ontario",2.2,,v42135253
+2020,"Québec, Quebec",2.7,,v733339
+2020,"Regina, Saskatchewan",7.4,,v733340
+2020,"St. Catharines-Niagara, Ontario",2.3,,v733341
+2020,"St. John's, Newfoundland and Labrador",7.6,,v733343
+2020,"Saguenay, Quebec",2.9,,v733348
+2020,"Saint John, New Brunswick",2.8,,v733342
+2020,"Saskatoon, Saskatchewan",5.9,,v733344
+2020,"Sherbrooke, Quebec",1.6,,v733345
+2020,"Thunder Bay, Ontario",3.6,,v733347
+2020,"Toronto, Ontario",3.4,,v733349
+2020,"Trois-Rivières, Quebec",1.4,,v733350
+2020,"Vancouver, British Columbia",2.6,,v733351
+2020,"Victoria, British Columbia",2.2,,v733352
+2020,"Windsor, Ontario",3.2,,v733353
+2020,"Winnipeg, Manitoba",3.8,,v733354
+2021,Census metropolitan areas,3.4,,v733334
+2021,"Abbotsford-Mission, British Columbia",1.6,,v4419483
+2021,"Barrie, Ontario",1.7,,v42135248
+2021,"Brantford, Ontario",2.2,,v42135249
+2021,"Calgary, Alberta",5.1,,v733335
+2021,"Edmonton, Alberta",7.3,,v733356
+2021,"Greater Sudbury, Ontario",1.3,,v733346
+2021,"Guelph, Ontario",2.0,,v42135250
+2021,"Halifax, Nova Scotia",1.0,,v733357
+2021,"Hamilton, Ontario",2.6,,v733358
+2021,"Kelowna, British Columbia",0.6,,v42135251
+2021,"Kingston, Ontario",1.1,,v4419482
+2021,"Kitchener-Cambridge-Waterloo, Ontario",2.0,,v733359
+2021,"London, Ontario",1.7,,v733360
+2021,"Moncton, New Brunswick",1.5,,v42135252
+2021,"Montréal, Quebec",3.5,,v733355
+2021,"Oshawa, Ontario",2.0,,v733362
+2021,"Ottawa-Gatineau, Ontario/Quebec",2.8,,v733336
+2021,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",3.3,,v733337
+2021,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",1.3,,v733338
+2021,"Peterborough, Ontario",1.1,,v42135253
+2021,"Québec, Quebec",2.7,,v733339
+2021,"Regina, Saskatchewan",7.0,,v733340
+2021,"St. Catharines-Niagara, Ontario",1.8,,v733341
+2021,"St. John's, Newfoundland and Labrador",2.8,,v733343
+2021,"Saguenay, Quebec",1.7,,v733348
+2021,"Saint John, New Brunswick",1.9,,v733342
+2021,"Saskatoon, Saskatchewan",4.7,,v733344
+2021,"Sherbrooke, Quebec",0.9,,v733345
+2021,"Thunder Bay, Ontario",3.6,,v733347
+2021,"Toronto, Ontario",4.6,,v733349
+2021,"Trois-Rivières, Quebec",1.0,,v733350
+2021,"Vancouver, British Columbia",1.2,,v733351
+2021,"Victoria, British Columbia",0.9,,v733352
+2021,"Windsor, Ontario",3.2,,v733353
+2021,"Winnipeg, Manitoba",5.0,,v733354
+2022,Census metropolitan areas,1.9,,v733334
+2022,"Abbotsford-Mission, British Columbia",2.1,,v4419483
+2022,"Barrie, Ontario",2.0,,v42135248
+2022,"Brantford, Ontario",1.6,,v42135249
+2022,"Calgary, Alberta",2.7,,v733335
+2022,"Edmonton, Alberta",4.3,,v733356
+2022,"Greater Sudbury, Ontario",1.6,,v733346
+2022,"Guelph, Ontario",1.5,,v42135250
+2022,"Halifax, Nova Scotia",0.9,,v733357
+2022,"Hamilton, Ontario",1.8,,v733358
+2022,"Kelowna, British Columbia",1.2,,v42135251
+2022,"Kingston, Ontario",1.1,,v4419482
+2022,"Kitchener-Cambridge-Waterloo, Ontario",1.2,,v733359
+2022,"London, Ontario",1.6,,v733360
+2022,"Moncton, New Brunswick",1.7,,v42135252
+2022,"Montréal, Quebec",2.2,,v733355
+2022,"Oshawa, Ontario",2.6,,v733362
+2022,"Ottawa-Gatineau, Ontario/Quebec",1.9,,v733336
+2022,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",2.2,,v733337
+2022,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",0.9,,v733338
+2022,"Peterborough, Ontario",0.7,,v42135253
+2022,"Québec, Quebec",1.5,,v733339
+2022,"Regina, Saskatchewan",3.0,,v733340
+2022,"St. Catharines-Niagara, Ontario",2.2,,v733341
+2022,"St. John's, Newfoundland and Labrador",2.4,,v733343
+2022,"Saguenay, Quebec",0.6,,v733348
+2022,"Saint John, New Brunswick",1.3,,v733342
+2022,"Saskatoon, Saskatchewan",3.4,,v733344
+2022,"Sherbrooke, Quebec",0.9,,v733345
+2022,"Thunder Bay, Ontario",1.4,,v733347
+2022,"Toronto, Ontario",1.6,,v733349
+2022,"Trois-Rivières, Quebec",0.9,,v733350
+2022,"Vancouver, British Columbia",0.9,,v733351
+2022,"Victoria, British Columbia",1.5,,v733352
+2022,"Windsor, Ontario",1.9,,v733353
+2022,"Winnipeg, Manitoba",2.7,,v733354
+2023,Census metropolitan areas,1.6,,v733334
+2023,"Abbotsford-Mission, British Columbia",0.9,,v4419483
+2023,"Barrie, Ontario",2.7,,v42135248
+2023,"Brantford, Ontario",2.4,,v42135249
+2023,"Calgary, Alberta",1.4,,v733335
+2023,"Edmonton, Alberta",2.4,,v733356
+2023,"Greater Sudbury, Ontario",1.3,,v733346
+2023,"Guelph, Ontario",1.3,,v42135250
+2023,"Halifax, Nova Scotia",0.9,,v733357
+2023,"Hamilton, Ontario",2.1,,v733358
+2023,"Kelowna, British Columbia",1.3,,v42135251
+2023,"Kingston, Ontario",0.9,,v4419482
+2023,"Kitchener-Cambridge-Waterloo, Ontario",2.0,,v733359
+2023,"London, Ontario",1.6,,v733360
+2023,"Moncton, New Brunswick",1.0,,v42135252
+2023,"Montréal, Quebec",1.9,,v733355
+2023,"Oshawa, Ontario",1.6,,v733362
+2023,"Ottawa-Gatineau, Ontario/Quebec",2.0,,v733336
+2023,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",2.2,,v733337
+2023,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",1.4,,v733338
+2023,"Peterborough, Ontario",0.9,,v42135253
+2023,"Québec, Quebec",0.9,,v733339
+2023,"Regina, Saskatchewan",1.3,,v733340
+2023,"St. Catharines-Niagara, Ontario",2.7,,v733341
+2023,"St. John's, Newfoundland and Labrador",1.0,,v733343
+2023,"Saguenay, Quebec",1.0,,v733348
+2023,"Saint John, New Brunswick",2.0,,v733342
+2023,"Saskatoon, Saskatchewan",1.9,,v733344
+2023,"Sherbrooke, Quebec",1.3,,v733345
+2023,"Thunder Bay, Ontario",2.7,,v733347
+2023,"Toronto, Ontario",1.4,,v733349
+2023,"Trois-Rivières, Quebec",0.4,,v733350
+2023,"Vancouver, British Columbia",0.9,,v733351
+2023,"Victoria, British Columbia",1.6,,v733352
+2023,"Windsor, Ontario",2.0,,v733353
+2023,"Winnipeg, Manitoba",1.8,,v733354
+2024,Census metropolitan areas,2.4,,v733334
+2024,"Abbotsford-Mission, British Columbia",1.1,,v4419483
+2024,"Barrie, Ontario",2.7,,v42135248
+2024,"Brantford, Ontario",2.7,,v42135249
+2024,"Calgary, Alberta",4.8,,v733335
+2024,"Edmonton, Alberta",3.1,,v733356
+2024,"Greater Sudbury, Ontario",1.5,,v733346
+2024,"Guelph, Ontario",2.0,,v42135250
+2024,"Halifax, Nova Scotia",2.0,,v733357
+2024,"Hamilton, Ontario",2.4,,v733358
+2024,"Kelowna, British Columbia",3.8,,v42135251
+2024,"Kingston, Ontario",3.0,,v4419482
+2024,"Kitchener-Cambridge-Waterloo, Ontario",3.7,,v733359
+2024,"London, Ontario",2.7,,v733360
+2024,"Moncton, New Brunswick",1.6,,v42135252
+2024,"Montréal, Quebec",2.5,,v733355
+2024,"Oshawa, Ontario",3.7,,v733362
+2024,"Ottawa-Gatineau, Ontario/Quebec",2.5,,v733336
+2024,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",2.5,,v733337
+2024,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",2.4,,v733338
+2024,"Peterborough, Ontario",3.4,,v42135253
+2024,"Québec, Quebec",1.0,,v733339
+2024,"Regina, Saskatchewan",2.5,,v733340
+2024,"St. Catharines-Niagara, Ontario",3.6,,v733341
+2024,"St. John's, Newfoundland and Labrador",1.9,,v733343
+2024,"Saguenay, Quebec",2.3,,v733348
+2024,"Saint John, New Brunswick",3.9,,v733342
+2024,"Saskatoon, Saskatchewan",1.9,,v733344
+2024,"Sherbrooke, Quebec",1.6,,v733345
+2024,"Thunder Bay, Ontario",3.3,,v733347
+2024,"Toronto, Ontario",2.5,,v733349
+2024,"Trois-Rivières, Quebec",1.0,,v733350
+2024,"Vancouver, British Columbia",1.6,,v733351
+2024,"Victoria, British Columbia",2.7,,v733352
+2024,"Windsor, Ontario",3.1,,v733353
+2024,"Winnipeg, Manitoba",1.7,,v733354
+2025,Census metropolitan areas,3.3,,v733334
+2025,"Abbotsford-Mission, British Columbia",2.8,,v4419483
+2025,"Barrie, Ontario",4.2,,v42135248
+2025,"Brantford, Ontario",3.5,,v42135249
+2025,"Calgary, Alberta",5.0,,v733335
+2025,"Edmonton, Alberta",3.9,,v733356
+2025,"Greater Sudbury, Ontario",1.3,,v733346
+2025,"Guelph, Ontario",3.2,,v42135250
+2025,"Halifax, Nova Scotia",2.5,,v733357
+2025,"Hamilton, Ontario",3.6,,v733358
+2025,"Kelowna, British Columbia",6.3,,v42135251
+2025,"Kingston, Ontario",2.3,,v4419482
+2025,"Kitchener-Cambridge-Waterloo, Ontario",4.2,,v733359
+2025,"London, Ontario",3.9,,v733360
+2025,"Moncton, New Brunswick",3.7,,v42135252
+2025,"Montréal, Quebec",3.3,,v733355
+2025,"Oshawa, Ontario",3.7,,v733362
+2025,"Ottawa-Gatineau, Ontario/Quebec",3.4,,v733336
+2025,"Ottawa-Gatineau, Ontario part, Ontario/Quebec",3.1,,v733337
+2025,"Ottawa-Gatineau, Quebec part, Ontario/Quebec",4.6,,v733338
+2025,"Peterborough, Ontario",2.7,,v42135253
+2025,"Québec, Quebec",2.6,,v733339
+2025,"Regina, Saskatchewan",2.7,,v733340
+2025,"St. Catharines-Niagara, Ontario",3.5,,v733341
+2025,"St. John's, Newfoundland and Labrador",1.6,,v733343
+2025,"Saguenay, Quebec",2.6,,v733348
+2025,"Saint John, New Brunswick",1.5,,v733342
+2025,"Saskatoon, Saskatchewan",3.2,,v733344
+2025,"Sherbrooke, Quebec",2.5,,v733345
+2025,"Thunder Bay, Ontario",4.3,,v733347
+2025,"Toronto, Ontario",3.0,,v733349
+2025,"Trois-Rivières, Quebec",2.7,,v733350
+2025,"Vancouver, British Columbia",3.7,,v733351
+2025,"Victoria, British Columbia",3.1,,v733352
+2025,"Windsor, Ontario",3.6,,v733353
+2025,"Winnipeg, Manitoba",2.8,,v733354

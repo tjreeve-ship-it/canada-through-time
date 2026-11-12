@@ -160,7 +160,7 @@ def events(reg):
 
 def registry(reg):
     keep = ("title", "publisher", "table_id", "doi", "landing_url", "reporting_period", "retrieved", "licence", "attribution",
-            "quality_class", "methodology_notes", "limitations", "sha256", "units")
+            "quality_class", "methodology_notes", "limitations", "sha256", "units", "coverage", "licence_url", "release_in_file")
     dump("registry.json", {k: {f: v[f] for f in keep if f in v} for k, v in reg.items()})
 
 
