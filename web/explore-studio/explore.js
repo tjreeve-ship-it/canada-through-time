@@ -1182,7 +1182,7 @@ function update() {
   reading(m); renderPanel(); timelineCtx(state.y); writeHash(); placeCtl();
   document.body.classList.toggle('story-on', state.story != null);
   { const c = document.querySelector('.storycard'); if (c && !isPhone()) c.style.maxHeight = Math.max(170, innerHeight - c.getBoundingClientRect().top - 124) + 'px'; }
-  if (isPhone() && !userMoved) { const f = fitView(); if (Math.abs(f.zoom - view.zoom) > 0.01 || Math.abs(f.target[1] - view.target[1]) > 5 || Math.abs(f.rotationX - view.rotationX) > 1) { view = { ...view, ...f }; theDeck.setProps({ viewState: view }); } }
+  if (!STUDIO && isPhone() && !userMoved) { const f = fitView(); if (Math.abs(f.zoom - view.zoom) > 0.01 || Math.abs(f.target[1] - view.target[1]) > 5 || Math.abs(f.rotationX - view.rotationX) > 1) { view = { ...view, ...f }; theDeck.setProps({ viewState: view }); } }
 }
 drawEras();
 setSheet(Q.get('sheet') ? +Q.get('sheet') : 0);
