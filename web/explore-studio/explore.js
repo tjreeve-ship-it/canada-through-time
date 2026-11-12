@@ -6,7 +6,14 @@ const { Deck, OrbitView, GeoJsonLayer, ColumnLayer, TextLayer, ArcLayer, PathLay
 const CART = COORDINATE_SYSTEM.CARTESIAN;
 const Q = new URLSearchParams(location.search);
 const STUDIO = Q.get('studio');   // Timelapse Studio: a base64 JSON configuration turns the explorer into a frame-exact stage
+const STUDIO_CFG = STUDIO ? JSON.parse(decodeURIComponent(escape(atob(STUDIO.replace(/-/g, '+').replace(/_/g, '/'))))) : null;
+const VERT = STUDIO_CFG?.format === '9x16';   // vertical 1080 × 1920 (Shorts, X): laid out at 720 × 1280 and rendered at 1.5×
 if (STUDIO) document.body.classList.add('studio');
+if (VERT) document.body.classList.add('st-vert');
+if (VERT && Q.get('render') == null && innerWidth !== 720) {   // preview: show the exact 720 × 1280 stage, scaled to fit the window
+  const k = Math.min(innerHeight / 1280, innerWidth / 720, 1), f = document.createElement('iframe');
+  f.src = location.href; f.style.cssText = `position:fixed;left:50%;top:0;width:720px;height:1280px;border:0;transform-origin:top center;transform:translateX(-50%) scale(${k});box-shadow:0 0 0 1px rgba(0,0,0,.2)`;
+  document.body.innerHTML = ''; document.body.style.background = '#1c1c1c'; document.body.appendChild(f); await new Promise(() => {}); }
 const V = 's';                                 // composition: Night Lanterns
 // Palettes: the visitor picks one (map-control button); the choice is kept in the link (?p=) and remembered on this device.
 const RELEASE = 2;   // the first two are the proposed public themes; the rest stay in review builds for comparison
@@ -259,7 +266,8 @@ function fitView() {
   // region of the map container the country should fill, per composition
   let r;
   const rb = phone ? (document.getElementById('reading')?.getBoundingClientRect().bottom || 290) + 6 : 0;
-  if (V === 's') r = phone ? [0, w, Math.min(rb, h * 0.55), h - Math.min(window.__sheetH || PEEK, h * 0.5)] : STUDIO ? [430, w - 44, 64, h - 118] : [420, w - 410, 230, h - 120];
+  if (VERT) r = [14, w - 14, 492, h - 408];
+  else if (V === 's') r = phone ? [0, w, Math.min(rb, h * 0.55), h - Math.min(window.__sheetH || PEEK, h * 0.5)] : STUDIO ? [430, w - 44, 64, h - 118] : [420, w - 410, 230, h - 120];
   else r = phone ? [6, w - 6, 10, h - 20] : [10, w - 300, 20, h - 10];
   const [x0, x1, y0, y1] = [r[0], Math.max(r[1], r[0] + 240), r[2], Math.max(r[3], r[2] + 200)];
   // phones open close to top-down (rotationX 90 = straight down here): at 390 px wide a tilted map loses half its height
@@ -1220,7 +1228,7 @@ function defaultAnnotations(m, a, b) { const out = [];
   return out.sort((x, y) => x.year - y.year); }
 function studioConfig(over = {}) { const m = M[over.layer || state.m], [a, b] = m.years, place = 'place' in over ? over.place : state.p;
   return { version: 1, id: `${m.id}${place ? '-' + enc(place) : ''}-${a}-${b}`, title: m.label, subtitle: m.q, layer: m.id, place: place || null, from: a, to: b, fps: 30, intro: 2.5, perYear: 0.6, outro: 5,
-    camera: 'push', theme: PAL, surface: TX, annotations: defaultAnnotations(m, a, b), credit: 'The Canadian Data Project', ...over }; }
+    camera: 'push', format: '16x9', theme: PAL, surface: TX, annotations: defaultAnnotations(m, a, b), credit: 'The Canadian Data Project', ...over }; }
 document.addEventListener('click', e => { if (!e.target.closest('[data-studio-open]')) return; const c = studioConfig(), m = M[c.layer]; let d = document.getElementById('studiodlg');
   if (!d) { d = document.createElement('dialog'); d.id = 'studiodlg'; document.getElementById('app').appendChild(d); }
   d.innerHTML = `<form method="dialog" class="sform"><h2>Make a timelapse</h2><p class="fine">${m.label}${c.place ? ' · ' + NAMES[c.place] : ' · all of Canada'}. The preview and the exported video are drawn from the same configuration, so an export can be reproduced exactly.</p>
@@ -1228,14 +1236,15 @@ document.addEventListener('click', e => { if (!e.target.closest('[data-studio-op
     <div class="two"><label>From<input name="from" type="number" min="${m.years[0]}" max="${m.years[1]}" value="${c.from}"></label><label>To<input name="to" type="number" min="${m.years[0]}" max="${m.years[1]}" value="${c.to}"></label></div>
     <div class="two"><label>Seconds per year<select name="perYear"><option value="0.4">0.4 (fast)</option><option value="0.6" selected>0.6</option><option value="1">1.0 (slow)</option></select></label>
       <label>Camera<select name="camera"><option value="push">Slow push-in</option><option value="static">Still</option><option value="pan">Pan west to east</option><option value="orbit">Gentle turn</option></select></label></div>
+    <label>Format<select name="format"><option value="16x9">Landscape 1920 × 1080 (YouTube, X)</option><option value="9x16">Vertical 1080 × 1920 (Shorts, X, Reels)</option></select></label>
     <label>Notes on screen, one per line as “year: text”<textarea name="ann" rows="5">${c.annotations.map(a => `${a.year}: ${a.text}`).join('\n')}</textarea></label>
     <p class="fine" id="studio-len"></p>
     <div class="acts"><button type="button" data-studio="preview" class="pri">Preview</button><button type="button" data-studio="save">Download configuration</button><button value="cancel">Close</button></div>
-    <p class="fine">To export a 1080p video from a saved configuration: <code>python3 render/timelapse.py &lt;configuration&gt;.json</code>. Only years with a published value are shown; nothing is interpolated between them.</p></form>`;
+    <p class="fine">To export the video from a saved configuration: <code>python3 render/timelapse.py &lt;configuration&gt;.json</code>. Only years with a published value are shown; nothing is interpolated between them.</p></form>`;
   const read = () => { const f = new FormData(d.querySelector('form')), from = Math.max(m.years[0], Math.min(m.years[1], +f.get('from'))), to = Math.max(from, Math.min(m.years[1], +f.get('to')));
     const ann = String(f.get('ann')).split('\n').map(l => l.match(/^\s*(\d{4})\s*:\s*(.+)$/)).filter(Boolean).map(x => ({ year: +x[1], text: x[2].trim() })).filter(a => a.year >= from && a.year <= to);
-    return studioConfig({ layer: m.id, place: c.place, title: f.get('title'), subtitle: f.get('subtitle'), from, to, perYear: +f.get('perYear'), camera: f.get('camera'), annotations: ann, id: `${m.id}${c.place ? '-' + enc(c.place) : ''}-${from}-${to}` }); };
-  const len = () => { const k = read(); let n = 0; for (let y = k.from; y <= k.to; y++) if (!m.only || m.only.includes(y)) n++; d.querySelector('#studio-len').textContent = `${n} dates · about ${Math.round(k.intro + n * k.perYear + k.outro)} seconds at 30 frames per second, 1920 × 1080.`; };
+    return studioConfig({ layer: m.id, place: c.place, title: f.get('title'), subtitle: f.get('subtitle'), from, to, perYear: +f.get('perYear'), camera: f.get('camera'), format: f.get('format'), annotations: ann, id: `${m.id}${c.place ? '-' + enc(c.place) : ''}-${from}-${to}${f.get('format') === '9x16' ? '-vertical' : ''}` }); };
+  const len = () => { const k = read(); let n = 0; for (let y = k.from; y <= k.to; y++) if (!m.only || m.only.includes(y)) n++; d.querySelector('#studio-len').textContent = `${n} dates · about ${Math.round(k.intro + n * k.perYear + k.outro)} seconds at 30 frames per second, ${k.format === '9x16' ? '1080 × 1920' : '1920 × 1080'}.`; };
   d.oninput = len; len();
   d.onclick = ev => { const a = ev.target.closest('[data-studio]')?.dataset.studio; if (!a) return; const k = read();
     if (a === 'preview') window.open(`${location.pathname}?studio=${b64e(k)}&p=${k.theme}&tx=${k.surface}`, '_blank');
@@ -1247,7 +1256,7 @@ if (STUDIO) { const SC = b64d(STUDIO), m = M[SC.layer]; state.m = SC.layer; stat
   const stage = document.createElement('div'); stage.id = 'stage';
   const srcLine = m.src.map(x => registry[x]).map(r => `${r.publisher}${r.table_id ? ', table ' + r.table_id : ''}`).filter((x, i, a) => a.indexOf(x) === i).join(' · ');
   stage.innerHTML = `<div id="st-sub"></div><div id="st-ann"></div><div id="st-foot"><span>Source: ${srcLine}. Annual published values; nothing is interpolated.</span><b>${SC.credit || ''}</b></div>
-    <div id="st-bar"><i></i>${years.filter(y => y % 10 === 0 || y === years[0] || y === years.at(-1)).map(y => `<span style="left:${(years.indexOf(y) + 0.5) / years.length * 100}%">${y}</span>`).join('')}</div>
+    <div id="st-bar"><i></i>${years.filter(y => (y % 10 === 0 && years.at(-1) - y >= (VERT ? 8 : 4) && y - years[0] >= 4) || y === years[0] || y === years.at(-1)).map(y => `<span style="left:${(years.indexOf(y) + 0.5) / years.length * 100}%">${y}</span>`).join('')}</div>
     <div id="st-out"><h3>Sources and method</h3>${m.src.map(x => registry[x]).map(r => `<p><b>${r.publisher}</b>${r.table_id ? ' · table ' + r.table_id : ''} · ${r.title}<br><small>${r.licence} · retrieved ${r.retrieved}</small></p>`).join('')}<p class="cv">${m.q}${m.cover ? ' ' + m.cover + '.' : ''} Shown as published for each year${isPrelim(m, years.at(-1)) ? `; ${years.at(-1)} is preliminary` : ''}. This video describes the data; it does not explain causes.</p></div>`;
   document.getElementById('app').appendChild(stage); document.getElementById('st-sub').textContent = SC.subtitle || '';
   const ease = t => t * t * (3 - 2 * t); let base = null, lastY = null, relY = null;
@@ -1269,7 +1278,7 @@ if (STUDIO) { const SC = b64d(STUDIO), m = M[SC.layer]; state.m = SC.layer; stat
     return { frame: f, year: y, phase: intro ? 'intro' : out ? 'outro' : 'run', title: SC.title, finding: document.getElementById('finding').innerText, annotation: a && !intro && !out ? a.text : '' }; };
   window.CTT = { get ready() { return window.READY === true && (TX !== 'relief' || !!RELIEF.img); }, frameCount: N, fps, renderFrame, config: SC, years };
   if (Q.get('render') == null) { // preview: plays in real time, with a scrubber
-    const ctl = document.createElement('div'); ctl.id = 'st-ctl'; ctl.innerHTML = `<button aria-label="Play or pause">❚❚</button><input type="range" min="0" max="${N - 1}" value="0" aria-label="Position"><span></span><em>Preview · ${Math.round(N / fps)} s · export with render/timelapse.py</em>`;
+    const ctl = document.createElement('div'); ctl.id = 'st-ctl'; ctl.innerHTML = `<button aria-label="Play or pause">❚❚</button><input type="range" min="0" max="${N - 1}" value="0" aria-label="Position"><span></span><em>Preview · ${Math.round(N / fps)} s${VERT ? '' : ' · export with render/timelapse.py'}</em>`;
     document.getElementById('app').appendChild(ctl); const rng = ctl.querySelector('input'), btn = ctl.querySelector('button'), lab = ctl.querySelector('span'); let playing = true, f0 = 0, t0 = performance.now();
     const show = f => { const info = renderFrame(f); rng.value = f; lab.textContent = `${info.year} · ${(f / fps).toFixed(1)} s`; };
     const loop = () => { if (playing && CTT.ready) { let f = f0 + (performance.now() - t0) / 1000 * fps; if (f >= N - 1) { f = N - 1; playing = false; btn.textContent = '▶'; } show(f); } else if (!CTT.ready) t0 = performance.now(); requestAnimationFrame(loop); };

@@ -1,4 +1,4 @@
-"""Timelapse Studio export: one configuration file in, one reproducible 1080p video package out.
+"""Timelapse Studio export: one configuration file in, one reproducible video package out (1920x1080, or 1080x1920 when the configuration says format 9x16).
 
   python3 render/timelapse.py timelapses/people-1971-2026.json            # full export
   python3 render/timelapse.py timelapses/people-1971-2026.json --stills 0,300,1200
@@ -26,7 +26,8 @@ def main() -> None:
     cfg = json.loads(Path(a.config).read_text()); out_dir = ROOT / "exports" / "timelapses" / cfg["id"]; out_dir.mkdir(parents=True, exist_ok=True)
     token = base64.urlsafe_b64encode(json.dumps(cfg, ensure_ascii=False).encode()).decode().rstrip("=")
     srv = http.server.ThreadingHTTPServer(("127.0.0.1", 0), functools.partial(Quiet, directory=str(ROOT / "web"))); threading.Thread(target=srv.serve_forever, daemon=True).start()
-    cw = a.css_width; ch = cw * 9 // 16; scale = 1920 / cw
+    vert = cfg.get("format") == "9x16"
+    cw, ch, ow, oh = (720, 1280, 1080, 1920) if vert else (a.css_width, a.css_width * 9 // 16, 1920, 1080); scale = ow / cw
     url = f"http://127.0.0.1:{srv.server_address[1]}/{a.build}/index.html?studio={token}&render=1&p={cfg.get('theme', 'ember')}&tx={cfg.get('surface', 'relief')}"
     with sync_playwright() as p:
         b = p.chromium.launch(executable_path="/usr/bin/google-chrome", args=CHROME)
@@ -44,8 +45,8 @@ def main() -> None:
         if a.log_only:
             log = [page.evaluate(f"CTT.renderFrame({fr})") for fr in range(n)]
         else:
-            out = out_dir / f"{cfg['id']}_1080p.mp4"; tmp = out.with_suffix(".partial.mp4")
-            ff = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "image2pipe", "-framerate", str(fps), "-c:v", "mjpeg", "-i", "-", "-vf", "scale=1920:1080:flags=lanczos",
+            out = out_dir / f"{cfg['id']}_{'1080x1920' if vert else '1080p'}.mp4"; tmp = out.with_suffix(".partial.mp4")
+            ff = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "image2pipe", "-framerate", str(fps), "-c:v", "mjpeg", "-i", "-", "-vf", f"scale={ow}:{oh}:flags=lanczos",
                                    "-c:v", "libx264", "-preset", "medium", "-crf", str(a.crf), "-pix_fmt", "yuv420p", "-movflags", "+faststart", "-r", str(fps), str(tmp)], stdin=subprocess.PIPE)
             t0 = time.time()
             for fr in range(n):
@@ -63,7 +64,7 @@ def main() -> None:
     sha = lambda f: hashlib.sha256((ROOT / f).read_bytes()).hexdigest()
     rev = subprocess.run(["git", "rev-parse", "HEAD"], capture_output=True, text=True, cwd=ROOT).stdout.strip()
     dirty = bool(subprocess.run(["git", "status", "--porcelain", f"web/{a.build}", "web/data"], capture_output=True, text=True, cwd=ROOT).stdout.strip())
-    (out_dir / "sources.json").write_text(json.dumps({"timelapse": cfg["id"], "build": a.build, "code_revision": rev, "uncommitted_changes_in_build_or_data": dirty, "frames": n, "fps": fps,
+    (out_dir / "sources.json").write_text(json.dumps({"timelapse": cfg["id"], "build": a.build, "code_revision": rev, "uncommitted_changes_in_build_or_data": dirty, "frames": n, "fps": fps, "format": cfg.get("format", "16x9"), "pixels": [ow, oh],
         "build_files": {f: sha(f"web/{a.build}/{f}") for f in ("explore.js", "explore.css", "index.html")},
         "sources": {s: {k: reg[s].get(k) for k in ("title", "publisher", "table_id", "landing_url", "licence", "retrieved", "sha256", "limitations")} for s in srcs},
         "method": "Each frame shows the published value for one year. No values are interpolated between years. Camera movement is the only continuous motion."}, indent=1, ensure_ascii=False))
