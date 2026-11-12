@@ -1,6 +1,6 @@
 # Release acceptance checklist
 
-Status as of 2026-11-12, for `web/explore-studio/`. "Checked" means run or viewed in this project, with how. "Not checked" means nobody has verified it yet. Nothing here is assumed.
+Status as of 2026-11-12 (updated after the vertical format and the age and urban layers), for `web/explore-studio/`. "Checked" means run or viewed in this project, with how. "Not checked" means nobody has verified it yet. Nothing here is assumed.
 
 Legend: ✅ checked and passing · ⚠️ checked, has a known limit · ⬜ not checked yet
 
@@ -24,7 +24,7 @@ Legend: ✅ checked and passing · ⚠️ checked, has a known limit · ⬜ not 
 ## Layer accuracy
 | Item | Status | Evidence |
 |---|---|---|
-| Every displayed value equals its raw source | ✅ | Independent audit, about 19,900 values, 0 discrepancies (`docs/DATA_INTEGRITY_AUDIT.md`) |
+| Every displayed value equals its raw source | ✅ | Independent audit, about 22,500 values including the five age and urban layers, 0 discrepancies (`docs/DATA_INTEGRITY_AUDIT.md`) |
 | No interpolated or filled values | ✅ | Audit, both directions |
 | Election seats complete (343 in 2025) and ties shown as ties | ✅ | 5 data tests + browser checks |
 | Sources unchanged since retrieval (2026-11-11) | ⬜ | Re-check before each publication |
@@ -48,8 +48,9 @@ Legend: ✅ checked and passing · ⚠️ checked, has a known limit · ⬜ not 
 ## Story
 | Item | Status | Evidence |
 |---|---|---|
-| Ten chapters, each with a caveat; numbers generated from data | ✅ | Browser checks; chapter 1 compared with the raw file |
-| Urban concentration and age structure | ⬜ | Not built; needs new tables |
+| Twelve chapters, each with a caveat; numbers generated from data | ✅ | Browser checks; chapters 1, 10 and 11 compared with the raw files |
+| Urban concentration and age structure | ✅ | Chapters 10 and 11; five layers; audited |
+| Map of individual cities' populations | ⬜ | Not built (data is in the file; the city map still shows rent and vacancy only) |
 | Story on phone | ⚠️ | Viewed chapter 1 at 390 × 844: works, but the card leaves a small, crowded map |
 
 ## Export
@@ -59,7 +60,9 @@ Legend: ✅ checked and passing · ⚠️ checked, has a known limit · ⬜ not 
 | Frames reproducible; on-screen figure equals raw file | ✅ | Browser checks |
 | Export package has configuration, per-frame text log, sources and code revision | ✅ | Files present in the export folder |
 | Video watched start to finish by a person | ⬜ | I inspected sampled frames only. **Please watch it.** |
-| Vertical (Shorts) and square formats | ⬜ | Not built |
+| Vertical 1080 × 1920 export | ✅ | `people-1971-2026-vertical` rendered; sampled frames inspected |
+| Vertical safe areas on the real apps (Shorts, X) | ⬜ | Laid out to keep the bottom 15% clear; not tested by uploading |
+| Square format | ⬜ | Not built |
 | Export from a button, without the command line | ⬜ | Not built |
 
 ## Accessibility and readability
