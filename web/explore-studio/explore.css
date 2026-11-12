@@ -584,3 +584,8 @@ body.st-outro #st-out { opacity: 1; } #st-out h3 { margin: 0 0 6px; font: 600 18
 
 body.studio.st-intro #r-meta, body.studio.st-intro #legend { visibility: hidden; }
 #st-sub { top: 236px; }
+
+/* while a story chapter is open the card carries the narrative, so the reading block keeps only title, year, date and the scale */
+body.story-on #finding, body.story-on #legend .note:not(.keep), body.story-on #r-meta .chip.studio-open { display: none !important; }
+body.story-on .storycard { margin-top: 12px; max-height: calc(100vh - 560px); min-height: 190px; overflow: auto; }
+@media (max-width: 1100px) { body.story-on .storycard { max-height: none; } }

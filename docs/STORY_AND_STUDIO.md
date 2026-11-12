@@ -68,3 +68,11 @@ Build: `web/explore-studio/` (copy of the corrected `explore-release`; earlier b
 ## 3. First export
 
 `timelapses/people-1971-2026.json` → "Where Canadians live", People layer, all of Canada, 1971–2026, slow push-in, 56 years at 0.6 s each, about 41 seconds.
+
+**Result:** `exports/timelapses/people-1971-2026/people-1971-2026_1080p.mp4` — 1920 × 1080, 30 fps, 1,233 frames, 41.1 seconds, H.264, 20.6 MB. Rendered from commit `042e76e` (the build-file hashes in the export's `sources.json` match that commit; the "uncommitted" flag in that file is true because the commit was made straight after the render).
+
+The first render was discarded: it showed the explorer's red history pins on the map with no explanation, and the intro subtitle overlapped the date. Both were fixed and the video was rendered again.
+
+**Inspected:** frames sampled at 1, 9, 27, 33 and 39 seconds, plus the per-frame text log (all six notes appear; every frame's year and finding recorded). The video has not been watched in motion by anyone yet.
+
+**After the render** one change was made to the build: while a story chapter is open, the reading block hides the long legend notes so the card no longer runs into the timeline on desktop. It does not affect video frames.

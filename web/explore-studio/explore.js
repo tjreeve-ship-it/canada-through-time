@@ -1143,6 +1143,7 @@ function update() {
   drawNav(); document.querySelectorAll('.opt').forEach(b => b.classList.toggle('on', b.dataset.m === state.m));
   theDeck.setProps({ layers: layers() });
   reading(m); renderPanel(); timelineCtx(state.y); writeHash(); placeCtl();
+  document.body.classList.toggle('story-on', state.story != null);
   if (isPhone() && !userMoved) { const f = fitView(); if (Math.abs(f.zoom - view.zoom) > 0.01 || Math.abs(f.target[1] - view.target[1]) > 5 || Math.abs(f.rotationX - view.rotationX) > 1) { view = { ...view, ...f }; theDeck.setProps({ viewState: view }); } }
 }
 drawEras();

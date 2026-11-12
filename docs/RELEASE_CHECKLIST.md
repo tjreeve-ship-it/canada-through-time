@@ -50,7 +50,7 @@ Legend: ✅ checked and passing · ⚠️ checked, has a known limit · ⬜ not 
 |---|---|---|
 | Ten chapters, each with a caveat; numbers generated from data | ✅ | Browser checks; chapter 1 compared with the raw file |
 | Urban concentration and age structure | ⬜ | Not built; needs new tables |
-| Story on phone | ⬜ | Not viewed |
+| Story on phone | ⚠️ | Viewed chapter 1 at 390 × 844: works, but the card leaves a small, crowded map |
 
 ## Export
 | Item | Status | Evidence |
@@ -74,4 +74,4 @@ Legend: ✅ checked and passing · ⚠️ checked, has a known limit · ⬜ not 
 | Item | Status | Evidence |
 |---|---|---|
 | Single-file build opens from disk with data, fonts, relief | ✅ | Opened from `file://` with no errors |
-| Timelapse preview from the single-file build | ⬜ | Not tested from `file://` |
+| Timelapse preview from the single-file build | ✅ | Opened from `file://`; preview played with no errors |
