@@ -1,0 +1,44 @@
+{
+ "version": 1,
+ "id": "people-1971-2026",
+ "title": "Where Canadians live",
+ "subtitle": "Population of each province and territory on July 1 of every year, 1971 to 2026. Column height shows the number of people.",
+ "layer": "pop",
+ "place": null,
+ "from": 1971,
+ "to": 2026,
+ "fps": 30,
+ "intro": 2.5,
+ "perYear": 0.6,
+ "outro": 5,
+ "camera": "push",
+ "theme": "ember",
+ "surface": "relief",
+ "annotations": [
+  {
+   "year": 1982,
+   "text": "Canada passes 25 million people (July 1 estimate)"
+  },
+  {
+   "year": 1991,
+   "text": "Northwest Territories and Nunavut are shown separately from 1991"
+  },
+  {
+   "year": 1998,
+   "text": "Canada passes 30 million people (July 1 estimate)"
+  },
+  {
+   "year": 2013,
+   "text": "Canada passes 35 million people (July 1 estimate)"
+  },
+  {
+   "year": 2023,
+   "text": "Canada passes 40 million people (July 1 estimate)"
+  },
+  {
+   "year": 2026,
+   "text": "2026 is a preliminary estimate"
+  }
+ ],
+ "credit": "The Canadian Data Project"
+}

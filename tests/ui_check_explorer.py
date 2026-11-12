@@ -2,6 +2,8 @@
 
   python3 tests/ui_check_explorer.py            # prints PASS/FAIL per check, exits 1 on any failure
 """
+from pathlib import Path as _P
+ROOT = _P(__file__).resolve().parents[1]
 import functools, http.server, sys, threading
 from pathlib import Path
 from playwright.sync_api import sync_playwright
@@ -190,7 +192,7 @@ def main():
         pt.goto(base + "#chg-2026-on"); pt.wait_for_function("window.READY === true", timeout=60000); pt.wait_for_timeout(800)
         check("tablet 820 px renders without errors", not errs and pt.evaluate("isFinite(CTX.getView().zoom)"), "; ".join(errs[:1]))
         pt.close()
-        if "release" in PAGE:   # corrections from docs/DATA_INTEGRITY_AUDIT.md
+        if "release" in PAGE or "studio" in PAGE:   # corrections from docs/DATA_INTEGRITY_AUDIT.md
             pr = b.new_page(viewport={"width": 1440, "height": 900})
             pr.goto(base + "#fed-2025-bc"); pr.wait_for_function("window.READY === true", timeout=60000); pr.wait_for_timeout(600)
             v = pr.evaluate("CTX.M.fed.value('BC', 2025)"); t = pr.locator("#reading").inner_text()
@@ -211,7 +213,44 @@ def main():
             pr.evaluate("CTX.state.y=2026; CTX.update()"); t26 = pr.locator("#r-meta").inner_text()
             check("C7: 2021–2025 population is marked as subject to revision; 2026 preliminary; earlier years unmarked", "will be revised" in t24 and "will be revised" not in t19 and "Preliminary" in t26 and "will be revised" not in t26, f"{t24!r} {t19!r} {t26!r}")
             pr.close()
-        if any(k in PAGE for k in ("final", "atlas", "signoff", "release")):
+        if "studio" in PAGE:   # flagship story and Timelapse Studio
+            import json as _json, base64 as _b64, zipfile as _zip, csv as _csv, io as _io
+            ps = b.new_page(viewport={"width": 1440, "height": 900}); errs = []; ps.on("pageerror", lambda e: errs.append(str(e)[:160]))
+            ps.goto(base + "#pop-2026"); ps.wait_for_function("window.READY === true", timeout=60000)
+            raw = {}
+            z = _zip.ZipFile(ROOT / "data/raw/statcan/17100009-eng.zip"); nm = [x for x in z.namelist() if "MetaData" not in x][0]
+            for r in _csv.DictReader(_io.TextIOWrapper(z.open(nm), encoding="utf-8-sig")):
+                if r["GEO"] == "Canada" and r["REF_DATE"] in ("1971-07-01", "2026-07-01"): raw[r["REF_DATE"][:4]] = float(r["VALUE"])
+            n = ps.evaluate("CTX.STORY.chapters.length"); texts = []
+            for i in range(n):
+                ps.evaluate(f"CTX.openStory({i})"); ps.wait_for_timeout(120); texts.append(ps.locator("#pathcard").inner_text())
+            bad = [t[:60] for t in texts if any(k in t for k in ("NaN", "undefined", "null", "Infinity"))]
+            check("story: ten chapters, each with text, a caveat and no broken numbers", n == 10 and not bad and all("Keep in mind" in t for t in texts), str(bad))
+            a71, a26 = f"{raw['1971'] / 1e6:.1f} million", f"{raw['2026'] / 1e6:.1f} million"
+            check("story: chapter 1 figures equal the raw Statistics Canada file", a71 in texts[0] and a26 in texts[0], f"{a71}, {a26} | {texts[0][80:260]}")
+            check("story: each chapter switches the map to its own layer", ps.evaluate("(() => { const out = []; for (let i = 0; i < CTX.STORY.chapters.length; i++) { CTX.openStory(i); out.push(CTX.state.m === CTX.STORY.chapters[i].m); } return out.every(Boolean); })()"))
+            ps.evaluate("CTX.openStory(1); CTX.state.m = 'rent'; CTX.update()")
+            check("story: picking another layer leaves the story", ps.evaluate("CTX.state.story == null") and "Keep in mind" not in ps.locator("#pathcard").inner_text())
+            ps.evaluate("CTX.state.m='pop'; CTX.state.y=2026; CTX.state.p=null; CTX.update()"); ps.locator("[data-studio-open]").click(); ps.wait_for_timeout(200)
+            check("studio: the dialog opens with period, camera and notes controls", ps.locator("#studiodlg [name=from]").count() == 1 and ps.locator("#studiodlg [name=camera] option").count() == 4 and "1998: Canada passes 30 million" in ps.locator("#studiodlg textarea").input_value())
+            cfg = ps.evaluate("CTX.studioConfig({layer:'chn', place:null})")
+            check("studio: a census layer gets only its census dates and no invented years", cfg["from"] == 2016 and cfg["to"] == 2021)
+            tok = _b64.urlsafe_b64encode(_json.dumps(cfg).encode()).decode().rstrip("=")
+            pv = b.new_page(viewport={"width": 1280, "height": 720}); pv.goto(base.replace("index.html", "index.html?render=1&studio=" + tok)); pv.wait_for_function("window.CTT && CTT.ready === true", timeout=60000)
+            yrs = pv.evaluate("CTT.years"); f0 = pv.evaluate("CTT.renderFrame(0)"); fl = pv.evaluate("CTT.renderFrame(CTT.frameCount - 1)")
+            check("studio: frames step through published dates only (2016, 2021) and report what is on screen", yrs == [2016, 2021] and f0["year"] == 2016 and fl["year"] == 2021 and fl["phase"] == "outro" and "Sources and method" in pv.locator("#st-out").inner_text(), str(yrs))
+            pv.close()
+            cfg2 = _json.loads((ROOT / "timelapses/people-1971-2026.json").read_text()); tok2 = _b64.urlsafe_b64encode(_json.dumps(cfg2, ensure_ascii=False).encode()).decode().rstrip("=")
+            pv = b.new_page(viewport={"width": 1280, "height": 720}); pv.goto(base.replace("index.html", "index.html?render=1&studio=" + tok2)); pv.wait_for_function("window.CTT && CTT.ready === true", timeout=60000)
+            a = pv.evaluate("CTT.renderFrame(700)"); a2 = pv.evaluate("CTT.renderFrame(700)"); v1 = pv.evaluate("JSON.stringify(CTX.getView())"); pv.evaluate("CTT.renderFrame(40)"); pv.evaluate("CTT.renderFrame(700)"); v2 = pv.evaluate("JSON.stringify(CTX.getView())")
+            raw_y = None
+            for r in _csv.DictReader(_io.TextIOWrapper(z.open(nm), encoding="utf-8-sig")):
+                if r["GEO"] == "Canada" and r["REF_DATE"] == f"{a['year']}-07-01": raw_y = int(float(r["VALUE"]))
+            check("studio: a frame is reproducible (same frame number gives the same camera and text)", a == a2 and v1 == v2)
+            check("studio: the figure on a rendered frame equals the raw file for that year", f"{raw_y:,}" in a["finding"], f"{a['year']}: {raw_y:,} | {a['finding'][:70]}")
+            check("studio/story pages raised no script errors", not errs, str(errs[:2]))
+            pv.close(); ps.close()
+        if any(k in PAGE for k in ("final", "atlas", "signoff", "release", "studio")):
             ph = b.new_page(viewport={"width": 390, "height": 844}, is_mobile=True, has_touch=True)
             ph.goto(base.replace(PAGE, PAGE + "?city=Toronto") + "#rent-2025"); ph.wait_for_function("window.READY === true", timeout=60000); ph.wait_for_timeout(800)
             box = """(() => { const v = CTX.getView(), vp = new deck.OrbitView({orbitAxis:'Z', fovy:38}).makeViewport({width: innerWidth, height: innerHeight, viewState: v});
