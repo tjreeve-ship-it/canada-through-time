@@ -83,6 +83,7 @@ const [pop, comp, flows, area, politics, evData, provinces, ntnu, countries, lak
   J('../data/provinces.geojson').then(toKm), J('../data/ntnu_combined.geojson').then(toKm), J('../data/context_countries.geojson').then(toKm), J('../data/lakes.geojson').then(toKm),
   J('../data/explorer/registry.json')]);
 const [HC, HH, HCPI, HINC, HCITY, HCHN] = await Promise.all(['construction', 'households', 'cpi', 'income', 'cities', 'core_need'].map(n => J(`../data/housing/${n}.json`)));
+const [DAGE, DMETRO, DURB] = await Promise.all([J('../data/demography/age.json'), J('../data/demography/metro.json'), J('../data/demography/urban_census.json')]);
 await Promise.all([`600 16px "${UI_FONT}"`, `400 16px "${UI_FONT}"`, `500 16px "${UI_FONT}"`].map(f => document.fonts.load(f)));
 
 const S = pop.series, D = pop.dates;
@@ -91,7 +92,7 @@ const PRELIM = { pop: (() => { const n = (pop.notes || []).find(x => /preliminar
 // Postcensal estimates (after the last census base, before the preliminary ones) are final for now but will be revised
 // once the next census is processed. The start year is read from the source table's own note.
 const POSTCENSAL_FROM = (() => { const n = (pop.notes || []).find(x => /final postcensal/i.test(x)); const m = n && n.match(/final postcensal [A-Z][a-z]+ \d+, (\d{4})/i); return m ? +m[1] : null; })();
-const isPostcensal = (m, y) => ['pop', 'chg', 'rate', 'dens', 'share'].includes(m.id) && POSTCENSAL_FROM != null && y >= POSTCENSAL_FROM && !isPrelim(m, y);
+const isPostcensal = (m, y) => ['pop', 'chg', 'rate', 'dens', 'share', 'age', 'o65', 'u15', 'metro'].includes(m.id) && POSTCENSAL_FROM != null && y >= POSTCENSAL_FROM && !isPrelim(m, y);
 const GRADE = { C: 'good', D: 'acceptable', E: 'use with caution' };
 const isPrelim = (m, y) => m.prelim ? m.prelim(y) : (m.comp || m.kind === 'arcs') ? y - 1 >= PRELIM.compPeriodStart : m.kind === 'party' ? false : !!PRELIM.pop && `${y}-07-01` >= PRELIM.pop;
 const YMIN = 1971, YMAX = +D.at(-1).slice(0, 4);
@@ -229,8 +230,29 @@ MEASURES.push(
     years: [1976, 2024], split: y => y >= 1991, value: (g, y) => inc(g, y), fmt: v => '$' + fmtInt(v), unit: '2024 dollars', color: v => magnitude(v, 40000, 90000, false), rng: [40000, 90000],
     cover: 'Territories from 2018 only', legend: { kind: 'mag', ticks: [[0, '$40K'], [0.4, '$60K'], [0.8, '$80K'], [1, '$90K+']], cap: 'Median after-tax income, 2024 dollars', nodata: true }, when: y => `Calendar year ${y}`, prelim: () => false },
 );
+// ---- Age and cities (tables 17-10-0005, 17-10-0148, 17-10-0118). Shares are published counts ÷ published totals of the same table and year.
+const ageAt = (g, y) => DAGE.data[g]?.[y] ?? null, metroAt = (g, y) => DMETRO.data[g]?.[y] ?? null;
+const AGE_YEARS = [1971, Math.max(...Object.keys(DAGE.data.CAN).map(Number))], agePrelim = y => DAGE.prelim_from != null && y >= DAGE.prelim_from;
+MEASURES.push(
+  { id: 'age', group: 'Age and cities', label: 'Median age', q: 'The age that splits the population in half: half are older, half are younger.', kind: 'fill', src: ['statcan_17100005'], tag: 'Official statistic',
+    years: AGE_YEARS, split: y => y >= 1991, value: (g, y) => ageAt(g, y)?.median ?? null, fmt: v => v.toFixed(1), unit: 'years', color: v => magnitude(v, 22, 48, false), rng: [22, 48],
+    legend: { kind: 'mag', ticks: [[0, '22'], [0.31, '30'], [0.69, '40'], [1, '48']], cap: 'Median age in years' }, when: y => `July 1, ${y}`, prelim: agePrelim },
+  { id: 'o65', group: 'Age and cities', label: 'Aged 65 and over', q: 'Share of residents who are 65 or older.', kind: 'fill', src: ['statcan_17100005'], tag: 'Derived',
+    years: AGE_YEARS, split: y => y >= 1991, value: (g, y) => { const a = ageAt(g, y); return a?.o65 != null ? a.o65 / a.total * 100 : null; }, fmt: v => v.toFixed(1) + '%', unit: 'of residents', color: v => magnitude(v, 3, 25, false), rng: [3, 25],
+    legend: { kind: 'mag', ticks: [[0, '3%'], [0.32, '10%'], [0.68, '18%'], [1, '25%']], cap: 'Residents aged 65 and over, % of all residents' }, when: y => `July 1, ${y}`, prelim: agePrelim },
+  { id: 'u15', group: 'Age and cities', label: 'Under 15', q: 'Share of residents who are 14 or younger.', kind: 'fill', src: ['statcan_17100005'], tag: 'Derived',
+    years: AGE_YEARS, split: y => y >= 1991, value: (g, y) => { const a = ageAt(g, y); return a?.u15 != null ? a.u15 / a.total * 100 : null; }, fmt: v => v.toFixed(1) + '%', unit: 'of residents', color: v => magnitude(v, 12, 40, false), rng: [12, 40],
+    legend: { kind: 'mag', ticks: [[0, '12%'], [0.29, '20%'], [0.64, '30%'], [1, '40%']], cap: 'Residents under 15, % of all residents' }, when: y => `July 1, ${y}`, prelim: agePrelim },
+  { id: 'metro', group: 'Age and cities', label: 'Living in metropolitan areas', q: 'Share of residents living in a census metropolitan area: a city of 100,000 or more with its surrounding municipalities. Today’s boundaries are used for every year.', kind: 'fill', src: ['statcan_17100148'], tag: 'Derived',
+    years: DMETRO.years, split: () => true, value: (g, y) => { const a = metroAt(g, y); return a?.cma != null ? a.cma / a.total * 100 : null; }, fmt: v => v.toFixed(1) + '%', unit: 'of residents', color: v => magnitude(v, 30, 90, false), rng: [30, 90],
+    cover: 'From 2001 · 2021 boundaries', legend: { kind: 'mag', ticks: [[0, '30%'], [0.333, '50%'], [0.667, '70%'], [1, '90%']], cap: 'Residents in census metropolitan areas, % of all residents', nodata: true },
+    when: y => `July 1, ${y}`, prelim: y => DMETRO.prelim_from != null && y >= DMETRO.prelim_from },
+  { id: 'urb', group: 'Age and cities', label: 'Urban share (census)', q: 'Share of people counted in an urban area at each census from 1971 to 2006: a built-up place of 1,000 or more people. The series ends in 2006.', kind: 'fill', src: ['statcan_17100118'], tag: 'Official statistic',
+    years: [DURB.years[0], DURB.years.at(-1)], only: DURB.years, split: y => y >= 2001, value: (g, y) => DURB.data[g]?.[y] ?? null, fmt: v => v.toFixed(1) + '%', unit: 'of people counted', color: v => magnitude(v, 30, 90, false), rng: [30, 90],
+    cover: 'Census years 1971–2006 only · small towns count as urban', legend: { kind: 'mag', ticks: [[0, '30%'], [0.333, '50%'], [0.667, '70%'], [1, '90%']], cap: 'Urban population, % of total (census definition to 2006)', nodata: true }, when: y => `${y} Census`, prelim: () => false },
+);
 const DIFF = { pop: 'level', dens: 'level', inc: 'level', rent: 'level', starts: 'abs', comp: 'abs', nat: 'abs', imm: 'abs', npr: 'abs', emi: 'abs', ipm: 'abs', flow: 'abs',
-  chg: 'pp', rate: 'pp', share: 'pp', hhg: 'pp', rentrel: 'pp', vac: 'pp', chn: 'pp', fed: 'none' };
+  chg: 'pp', rate: 'pp', share: 'pp', hhg: 'pp', rentrel: 'pp', vac: 'pp', chn: 'pp', fed: 'none', age: 'abs', o65: 'pp', u15: 'pp', metro: 'pp', urb: 'pp' };
 const BREAKS = { inc: [[1993, 'survey change 1993'], [2012, 'survey change 2012']] };
 MEASURES.forEach(m => { m.diff = DIFF[m.id]; m.breaks = BREAKS[m.id] || []; });
 const M = Object.fromEntries(MEASURES.map(m => [m.id, m]));
@@ -903,7 +925,9 @@ function whyMissing(m, g, y) {
   if (['starts', 'comp'].includes(m.id) && !PROV10.includes(g) && g !== 'CAN') return 'no territorial data in this table';
   if (m.id === 'comp' && y > 2022) return 'series ends in 2022';
   if (m.id === 'inc' && ['YT', 'NT', 'NU'].includes(g) && y < 2018) return 'territories published from 2018 only';
-  if (m.id === 'chn' && !m.only.includes(y)) return 'census years only';
+  if (m.only && !m.only.includes(y)) return 'census years only';
+  if (m.id === 'metro' && DMETRO.no_cma.includes(g)) return 'there is no census metropolitan area here';
+  if (m.id === 'metro' && y < DMETRO.years[0]) return 'this series starts in 2001';
   return 'no published value';
 }
 function cmpRow(m, g, y) {
@@ -915,7 +939,7 @@ function cmpRow(m, g, y) {
 function diffText(m, a, b) {
   if (a.v == null || b.v == null || m.diff === 'none') return '';
   const d = a.v - b.v;
-  if (m.diff === 'pp') { const pp = d * ({ vac: 1, chn: 1 }[m.id] ?? 100); return `${NAMES[a.g]} is <b>${Math.abs(pp).toFixed(1)} percentage points</b> ${d >= 0 ? 'higher' : 'lower'}.`; }
+  if (m.diff === 'pp') { const pp = d * ({ vac: 1, chn: 1, o65: 1, u15: 1, metro: 1, urb: 1 }[m.id] ?? 100); return `${NAMES[a.g]} is <b>${Math.abs(pp).toFixed(1)} percentage points</b> ${d >= 0 ? 'higher' : 'lower'}.`; }
   if (m.diff === 'abs') return `Difference: <b>${(d >= 0 ? '+' : '−') + Math.abs(d).toFixed(1)}</b> ${m.unit} (${NAMES[a.g]} minus ${NAMES[b.g]}).`;
   if (b.v === 0) return '';
   const rel = a.v / b.v - 1;
@@ -960,7 +984,7 @@ function timeBlock(m, label, valueAt, y, geoAt) {
   else if (brk.length) diff = `No difference shown: ${brk.map(([by, lab]) => lab.includes(String(by)) ? `the ${lab}` : `the ${lab} (${by})`).join(', ')} falls between these dates, so the two values are not directly comparable.`;
   else if (geoChange) diff = 'No difference shown: the area covered changes between these dates.';
   else if (m.diff !== 'none') { const d = B.v - A.v;
-    diff = m.diff === 'pp' ? `From ${ya} to ${yb}: <b>${d >= 0 ? '+' : '−'}${Math.abs(d * ({ vac: 1, chn: 1 }[m.id] ?? 100)).toFixed(1)} percentage points</b>.`
+    diff = m.diff === 'pp' ? `From ${ya} to ${yb}: <b>${d >= 0 ? '+' : '−'}${Math.abs(d * ({ vac: 1, chn: 1, o65: 1, u15: 1, metro: 1, urb: 1 }[m.id] ?? 100)).toFixed(1)} percentage points</b>.`
       : m.diff === 'abs' ? `From ${ya} to ${yb}: <b>${d >= 0 ? '+' : '−'}${Math.abs(d).toFixed(1)}</b> ${m.unit}.`
       : A.v ? `From ${ya} to ${yb}: <b>${d >= 0 ? '+' : '−'}${m.fmt(Math.abs(d)).replace(/^[+−-]/, '')}</b> (${pct(B.v / A.v - 1)}).` : '';
     if (/current dollars/i.test(m.unit + ' ' + (m.q || ''))) diff += ' Current dollars: not adjusted for inflation.'; }
@@ -990,7 +1014,7 @@ function renderPanel() {
   let g = state.p || 'CAN';
   if ((g === 'NT' || g === 'NU') && !m.split(y)) g = 'NT+NU';
   const v = m.kind === 'party' ? null : m.value(g, y);
-  let big = '<span class="np">Not published</span>', sub = m.kind === 'points' && g === 'CAN' ? 'Published for metropolitan areas only; there is no national or provincial figure in this table.'
+  let big = m.id === 'metro' && DMETRO.no_cma.includes(g) ? '<span class="np">No metropolitan area</span>' : '<span class="np">Not published</span>', sub = m.kind === 'points' && g === 'CAN' ? 'Published for metropolitan areas only; there is no national or provincial figure in this table.'
     : `No value for ${NAMES[g]} for ${whenOf(m, y).replace(/^C/, 'c')}: ${whyMissing(m, g, y)}. Nothing is estimated or filled in.`;
   if (m.kind === 'party') { const e = electionAt(y); const s = e && (g === 'CAN' ? e.seats_total : e.seats_by_province[g === 'NT+NU' ? 'NT' : g]);
     const top = topSeats(s); if (top && top[0] === 'TIE') { big = 'Tied'; sub = `${top[2].map(partyShort).join(' and ')} each won <b>${top[1]}</b> of ${Object.values(s).reduce((a, b) => a + b, 0)} seats`; } else if (top) { big = partyShort(top[0]); sub = `won the most seats: <b>${top[1]}</b> of ${Object.values(s).reduce((a, b) => a + b, 0)}`; } }
@@ -1152,6 +1176,7 @@ function update() {
   theDeck.setProps({ layers: layers() });
   reading(m); renderPanel(); timelineCtx(state.y); writeHash(); placeCtl();
   document.body.classList.toggle('story-on', state.story != null);
+  { const c = document.querySelector('.storycard'); if (c && !isPhone()) c.style.maxHeight = Math.max(170, innerHeight - c.getBoundingClientRect().top - 124) + 'px'; }
   if (isPhone() && !userMoved) { const f = fitView(); if (Math.abs(f.zoom - view.zoom) > 0.01 || Math.abs(f.target[1] - view.target[1]) > 5 || Math.abs(f.rotationX - view.rotationX) > 1) { view = { ...view, ...f }; theDeck.setProps({ viewState: view }); } }
 }
 drawEras();
@@ -1203,9 +1228,17 @@ const STORY = { id: 'population-1971-' + YMAX, title: `How Canada’s population
     text: () => { const s = canSeries('nat'), neg = PROV10.filter(g => M.nat.value(g, YMAX) < 0), per = y => `${y - 1}/${String(y).slice(2)}`;
       return `In ${per(s[0][0])}, births exceeded deaths by <b>${s[0][1].toFixed(1)}</b> per 1,000 residents across Canada. In ${per(s.at(-1)[0])} the figure was <b>${signed(s.at(-1)[1])}</b>. ${neg.length ? `In ${neg.length} of the ten provinces, deaths outnumbered births that year: ${neg.map(g => NAMES[g]).join(', ')}.` : 'In every province births still outnumbered deaths that year.'}`; },
     limit: () => 'Natural increase only; it leaves out all migration. The latest year is preliminary.' },
-  { m: 'pop', y: () => YMAX, t: () => 'What this story does not cover yet',
-    text: () => `Two parts of the picture are not in the explorer yet: how much of the population lives in metropolitan areas, and how its age structure changed. Both need tables that have not been added and audited. Everything shown in this story comes from Statistics Canada tables 17-10-0009, 17-10-0008 and 17-10-0045, and 2021 Census land areas.`,
-    limit: () => 'Open “Source & method” on any layer for the table, licence, retrieval date and limitations. The story describes what changed; it does not explain why.' },
+  { m: 'metro', y: () => DMETRO.years[1], t: () => 'More people in the big metropolitan areas',
+    text: () => { const [a, b] = DMETRO.years, sh = y => DMETRO.data.CAN[y].cma / DMETRO.data.CAN[y].total * 100, top = Object.entries(DMETRO.cmas).map(([n, c]) => [n, c.pop[b]]).sort((x, y) => y[1] - x[1]).slice(0, 3), t3 = top.reduce((q, x) => q + x[1], 0);
+      return `In ${a}, <b>${sh(a).toFixed(1)}%</b> of people in Canada lived in a census metropolitan area. In ${b}, <b>${sh(b).toFixed(1)}%</b> did. The three largest (${top.map(x => x[0]).join(', ')}) together had <b>${mil(t3)}</b> residents in ${b}, ${(t3 / DMETRO.data.CAN[b].total * 100).toFixed(1)}% of the country. An older census measure, with a different definition, put the urban share at ${DURB.data.CAN[DURB.years[0]]}% in ${DURB.years[0]} and ${DURB.data.CAN[DURB.years.at(-1)]}% in ${DURB.years.at(-1)}.`; },
+    limit: () => `A metropolitan area includes suburbs and some rural land, and today’s boundaries are applied to every year back to ${DMETRO.years[0]}, so this shows growth inside fixed areas, not the areas spreading. ${DMETRO.years[1]} is preliminary. The two measures in this card should not be joined into one line.` },
+  { m: 'age', y: () => AGE_YEARS[1], t: () => 'An older population',
+    text: () => { const [a, b] = AGE_YEARS, A = ageAt('CAN', a), B = ageAt('CAN', b), r = PROV10.map(g => [g, ageAt(g, b).median]).sort((x, y) => y[1] - x[1]), pc = (v, k) => (v[k] / v.total * 100).toFixed(1);
+      return `Half of Canadians were younger than <b>${A.median}</b> in ${a}. In ${b} the median age was <b>${B.median}</b>. People 65 and over went from ${pc(A, 'o65')}% of the population to <b>${pc(B, 'o65')}%</b>; children under 15 went from ${pc(A, 'u15')}% to <b>${pc(B, 'u15')}%</b>. Among the provinces, ${NAMES[r[0][0]]} had the highest median age in ${b} (${r[0][1]}) and ${NAMES[r.at(-1)[0]]} the lowest (${r.at(-1)[1]}).`; },
+    limit: () => `Annual estimates for July 1. ${AGE_YEARS[1]} is preliminary and ${POSTCENSAL_FROM}–${AGE_YEARS[1] - 1} will be revised after the 2026 Census. The territories are younger than every province; choose one on the map to see it.` },
+  { m: 'pop', y: () => YMAX, t: () => 'What this story leaves out',
+    text: () => `This story describes how many people there are, where they live, how they arrived and how old they are. It does not explain why any of it happened, and it stops at the provincial level: it has no map of individual cities’ populations and nothing on language, origin or Indigenous identity. Everything shown comes from Statistics Canada tables 17-10-0009, 17-10-0008, 17-10-0045, 17-10-0005, 17-10-0148 and 17-10-0118, and 2021 Census land areas.`,
+    limit: () => 'Open “Source & method” on any layer for the table, licence, retrieval date and limitations.' },
 ] };
 function openStory(i) { const n = STORY.chapters.length; if (i < 0 || i >= n) return; const ch = STORY.chapters[i]; state.story = i; state.q = null; state.navQ = false; state.m = ch.m;
   state.y = clampYear(M[ch.m], ch.y ? ch.y() : YMAX); state.p = ch.p ? ch.p() : null; state.city = null; state.cmp = null; state.cmpY = null; document.getElementById('layer-sheet').classList.remove('open'); update(); }

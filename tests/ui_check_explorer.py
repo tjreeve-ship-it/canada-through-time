@@ -225,9 +225,31 @@ def main():
             for i in range(n):
                 ps.evaluate(f"CTX.openStory({i})"); ps.wait_for_timeout(120); texts.append(ps.locator("#pathcard").inner_text())
             bad = [t[:60] for t in texts if any(k in t for k in ("NaN", "undefined", "null", "Infinity"))]
-            check("story: ten chapters, each with text, a caveat and no broken numbers", n == 10 and not bad and all("Keep in mind" in t for t in texts), str(bad))
+            check("story: twelve chapters, each with text, a caveat and no broken numbers", n == 12 and not bad and all("Keep in mind" in t for t in texts), str(bad))
             a71, a26 = f"{raw['1971'] / 1e6:.1f} million", f"{raw['2026'] / 1e6:.1f} million"
             check("story: chapter 1 figures equal the raw Statistics Canada file", a71 in texts[0] and a26 in texts[0], f"{a71}, {a26} | {texts[0][80:260]}")
+            ra = {}
+            za = _zip.ZipFile(ROOT / "data/raw/statcan/17100005-eng.zip")
+            for r in _csv.DictReader(_io.TextIOWrapper(za.open("17100005.csv"), encoding="utf-8-sig")):
+                if r["GEO"] == "Canada" and r["Gender"] == "Total - gender" and r["REF_DATE"] in ("1971", "2026") and r["Age group"] in ("Median age", "All ages", "65 years and older"): ra[(r["REF_DATE"], r["Age group"])] = float(r["VALUE"])
+            o65 = f"{ra[('2026', '65 years and older')] / ra[('2026', 'All ages')] * 100:.1f}%"
+            check("story: the age chapter's figures equal the raw age table", str(ra[("1971", "Median age")]) in texts[10] and str(ra[("2026", "Median age")]) in texts[10] and o65 in texts[10], f"{ra[('1971', 'Median age')]}, {ra[('2026', 'Median age')]}, {o65}")
+            rm = {}
+            zm = _zip.ZipFile(ROOT / "data/raw/statcan/17100148-eng.zip")
+            for r in _csv.DictReader(_io.TextIOWrapper(zm.open("17100148.csv"), encoding="utf-8-sig")):
+                if r["Gender"] == "Total - gender" and r["Age group"] == "All ages" and r["REF_DATE"] in ("2001", "2025") and r["GEO"] in ("Canada", "All census metropolitan areas, Canada", "Toronto (CMA), Ontario", "Montréal (CMA), Quebec", "Vancouver (CMA), British Columbia"): rm[(r["REF_DATE"], r["GEO"])] = float(r["VALUE"])
+            s01 = f"{rm[('2001', 'All census metropolitan areas, Canada')] / rm[('2001', 'Canada')] * 100:.1f}%"; s25 = f"{rm[('2025', 'All census metropolitan areas, Canada')] / rm[('2025', 'Canada')] * 100:.1f}%"
+            t3 = sum(v for (y, g), v in rm.items() if y == "2025" and "(CMA)" in g)
+            check("story: the metropolitan chapter's figures equal the raw table", s01 in texts[9] and s25 in texts[9] and f"{t3 / 1e6:.1f} million" in texts[9] and "Toronto, Montréal, Vancouver" in texts[9], f"{s01}, {s25}, {t3 / 1e6:.1f} million")
+            ps.evaluate("CTX.state.story=null; CTX.state.m='metro'; CTX.state.y=2025; CTX.state.p='PE'; CTX.update()")
+            t = ps.locator("#sheet-body").inner_text()
+            check("metro: a province with no metropolitan area shows no value and says why (not 0%)", ps.evaluate("CTX.M.metro.value('PE', 2025) === null && CTX.M.metro.value('NU', 2010) === null") and "No metropolitan area" in t and "no census metropolitan area" in t)
+            check("metro: the series starts in 2001 and is not extended back", ps.evaluate("CTX.M.metro.years[0] === 2001 && CTX.M.metro.value('ON', 2000) === null"))
+            ps.evaluate("CTX.state.m='urb'; CTX.state.p=null; CTX.state.y=2026; CTX.update()")
+            check("urban census share: census years only, ends in 2006, combined territories to 1996", ps.evaluate("CTX.state.y === 2006 && CTX.M.urb.value('CAN', 2003) == null && CTX.M.urb.value('NT+NU', 1996) != null && CTX.M.urb.value('NU', 1996) == null && CTX.M.urb.value('NU', 2001) != null"))
+            ps.evaluate("CTX.state.m='age'; CTX.state.y=1985; CTX.state.p=null; CTX.update()")
+            check("age: before 1991 the territories are one combined region, as in the source", ps.evaluate("CTX.M.age.value('NT+NU', 1985) != null && CTX.M.age.value('NU', 1985) == null && CTX.M.age.value('NU', 1991) != null"))
+            check("age and metro layers carry preliminary and postcensal markers", ps.evaluate("(() => { const out = []; CTX.state.m='age'; CTX.state.y=2026; CTX.update(); out.push(document.getElementById('r-meta').innerText.includes('Preliminary')); CTX.state.y=2023; CTX.update(); out.push(document.getElementById('r-meta').innerText.includes('will be revised')); CTX.state.m='metro'; CTX.state.y=2025; CTX.update(); out.push(document.getElementById('r-meta').innerText.includes('Preliminary')); return out.every(Boolean); })()"))
             check("story: each chapter switches the map to its own layer", ps.evaluate("(() => { const out = []; for (let i = 0; i < CTX.STORY.chapters.length; i++) { CTX.openStory(i); out.push(CTX.state.m === CTX.STORY.chapters[i].m); } return out.every(Boolean); })()"))
             ps.evaluate("CTX.openStory(1); CTX.state.m = 'rent'; CTX.update()")
             check("story: picking another layer leaves the story", ps.evaluate("CTX.state.story == null") and "Keep in mind" not in ps.locator("#pathcard").inner_text())

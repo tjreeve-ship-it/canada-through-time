@@ -88,6 +88,28 @@ for r in rows("39100048"):
             if r["REF_DATE"] in ("2016", "2021"): E["chn"][f"{AB[r['GEO']]}|{r['REF_DATE']}"] = num(r["VALUE"])
 facts["core_need_years_in_raw"] = dict(chn_years)
 
+# ---- raw: age structure, metropolitan share, census urban share
+_a = collections.defaultdict(dict)
+for r in rows("17100005"):
+    if r["GEO"] in AB and r["Gender"] == "Total - gender" and r["Age group"] in ("All ages", "0 to 14 years", "65 years and older", "Median age") and num(r["VALUE"]) is not None:
+        _a[(AB[r["GEO"]], r["REF_DATE"])][r["Age group"]] = num(r["VALUE"])
+for (g, y), v in _a.items():
+    if "Median age" in v: E["age"][f"{g}|{y}"] = v["Median age"]
+    if "All ages" in v and "65 years and older" in v: E["o65"][f"{g}|{y}"] = v["65 years and older"] / v["All ages"] * 100
+    if "All ages" in v and "0 to 14 years" in v: E["u15"][f"{g}|{y}"] = v["0 to 14 years"] / v["All ages"] * 100
+_m = collections.defaultdict(dict)
+for r in rows("17100148"):
+    if r["Gender"] == "Total - gender" and r["Age group"] == "All ages" and num(r["VALUE"]) is not None: _m[r["GEO"]][r["REF_DATE"]] = num(r["VALUE"])
+for y, v in _m["All census metropolitan areas, Canada"].items(): E["metro"][f"CAN|{y}"] = v / _m["Canada"][y] * 100
+for name, g in AB.items():
+    cma = _m.get(f"All census metropolitan areas, {name}")
+    if not cma or g == "CAN": continue
+    for y, v in cma.items():
+        tot = _m[f"All census metropolitan areas and census agglomerations, {name}"][y] + _m[f"Area outside census metropolitan areas and census agglomerations, {name}"][y]
+        E["metro"][f"{g}|{y}"] = v / tot * 100
+for r in rows("17100118"):
+    if r["GEO"] in AB and r["Population characteristics"] == "Urban population as a share of total population" and num(r["VALUE"]) is not None: E["urb"][f"{AB[r['GEO']]}|{r['REF_DATE']}"] = num(r["VALUE"])
+
 # ---- raw: city vacancy and rent
 vac = {}; cma_avg = {}
 for r in rows("34100127"):

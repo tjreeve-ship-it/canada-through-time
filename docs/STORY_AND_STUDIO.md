@@ -76,3 +76,10 @@ The first render was discarded: it showed the explorer's red history pins on the
 **Inspected:** frames sampled at 1, 9, 27, 33 and 39 seconds, plus the per-frame text log (all six notes appear; every frame's year and finding recorded). The video has not been watched in motion by anyone yet.
 
 **After the render** one change was made to the build: while a story chapter is open, the reading block hides the long legend notes so the card no longer runs into the timeline on desktop. It does not affect video frames.
+
+
+## Update 2026-11-12 — vertical format, urban and age chapters
+
+**Vertical video.** The Studio has a Format choice: landscape 1920 × 1080 or vertical 1080 × 1920. Vertical uses its own layout (title, large year and finding on top; map in the middle; timeline, source and credit under it; notes below that). The bottom 15% and the lower right edge are kept free for platform captions and buttons. Vertical preview in the browser shows the exact stage scaled to the window. Same rules: published annual values only, source on every frame, sources card at the end.
+
+**Story.** Now twelve chapters. New: "More people in the big metropolitan areas" (chapter 10) and "An older population" (chapter 11). The last chapter now lists what the story leaves out. New layer group "Age and cities": Median age, Aged 65 and over, Under 15, Living in metropolitan areas, Urban share (census).

@@ -154,3 +154,29 @@ The sign-off build and its data files are unchanged. Corrections live in a new b
 | C7 | Population layers from July 2021 to 2025 carry "Postcensal · will be revised", with an explanation; 2026 stays "Preliminary". Read from the source table's own note. | Browser check on 2019, 2024, 2026. |
 
 Still open: R1 (core housing need 2006 and 2011) and R2 (re-check sources before each publication). C7 is applied to the five population layers only; per-1,000 rates that use population as a denominator are not separately marked.
+
+## Added 2026-11-12 — age structure and urban concentration
+
+Three tables were added through the registry (retrieved 2026-11-12, fingerprinted) and audited the same way as the rest: every displayed value recomputed from the raw file by `tools/audit_layers.py`.
+
+| Layer | Table | Period | Values compared | Mismatches | Shown but not in source | In source, not shown |
+|---|---|---|---|---|---|---|
+| Median age | [17-10-0005-01](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710000501) | July 1, 1971–2026 | 764 | 0 | 0 | 0 |
+| Aged 65 and over | same | same | 764 | 0 | 0 | 0 |
+| Under 15 | same | same | 764 | 0 | 0 | 0 |
+| Living in metropolitan areas | [17-10-0148-01](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710014801) | July 1, 2001–2025 | 250 | 0 | 0 | 0 |
+| Urban share (census) | [17-10-0118-01](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710011801) | censuses 1971–2006 | 106 | 0 | 0 | 0 |
+
+**Age (17-10-0005-01).** Annual July 1 estimates by age, Canada, provinces, territories (Northwest Territories and Nunavut combined before 1991). Median age is shown as published. The two shares are the published count for the age group divided by the published all-ages count. Cross-check: the all-ages totals equal table 17-10-0009-01 for every place and year (test). 2026 preliminary; 2021–2025 postcensal; both marked.
+
+**Metropolitan share (17-10-0148-01).** People in census metropolitan areas divided by the province's total, both from this table. Things a reader should know, all stated in the product:
+- Starts in 2001. Nothing earlier is shown.
+- Today's (2021) boundaries are applied to every year, so it measures growth inside fixed areas, not areas spreading outward.
+- A metropolitan area includes suburbs and some rural land; it is not "urban".
+- Prince Edward Island and the three territories have no census metropolitan area. They show "No metropolitan area", not 0%.
+- The table was released in January 2026, before the newest provincial estimates, so its Canada total for 2025 (41,651,653) differs from table 17-10-0009-01 (41,608,982). Shares are calculated inside this table only, and the layer is never mixed with the population layers.
+- Provinces sum exactly to Canada in every year (test).
+
+**Urban share at each census (17-10-0118-01).** Published percentages for eight censuses, 1971–2006. The series ends in 2006 (Statistics Canada then replaced "urban area" with "population centre") and is not extended. "Urban" here means a built-up place of 1,000 or more people, so small towns count. It is not comparable with the metropolitan share; the story says so and does not join the two.
+
+**Not built:** a map of individual cities' populations. The 41 metropolitan areas' populations are in the data file and the story names the three largest, but the city map layer still shows only rent and vacancy.

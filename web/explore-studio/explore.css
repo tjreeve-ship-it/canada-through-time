@@ -608,3 +608,5 @@ body.st-vert #st-ctl { top: 4px; padding: 3px 10px; } body.st-vert #st-ctl input
 body.st-vert #st-out { top: 300px; box-shadow: 0 0 0 1px var(--hairline); }
 body.studio.st-vert.st-outro #finding, body.studio.st-vert.st-outro #r-meta, body.studio.st-vert.st-outro #legend { visibility: hidden; }
 body.st-vert #st-bar { bottom: 384px; } body.st-vert #st-ann { bottom: 420px; } body.st-vert #st-foot { bottom: 290px; }
+/* vertical: the note sits under the source line (still above the bottom 15% that platforms cover), so it never hides the map */
+body.st-vert #st-ann { bottom: 206px; right: 110px; }

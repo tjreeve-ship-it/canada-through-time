@@ -351,6 +351,76 @@ sources:
       - "A cartographic hillshade generalised for 1:50m; Natural Earth embossed small islands by hand. Not suitable for measuring elevation."
       - "Resampled to a 3 km grid in the map projection and clipped to the province outlines (pipeline/build_relief.py). Resampling adds no detail: the source cell is 2 arc-minutes (about 3.7 km north–south and roughly 1.3–2.4 km east–west across Canada), and it was itself downsampled and generalised by Natural Earth."
 
+  statcan_17100005:
+    title: "Population estimates on July 1, by age and gender"
+    publisher: "Statistics Canada"
+    table_id: "17-10-0005-01"
+    doi: "https://doi.org/10.25318/1710000501-eng"
+    landing_url: "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710000501"
+    download_url: "https://www150.statcan.gc.ca/n1/tbl/csv/17100005-eng.zip"
+    raw_file: "data/raw/statcan/17100005-eng.zip"
+    sha256: "fe0199629d63a98b410d8a2a9300a1a94fe7f575d55f7dd99f27d49993ad45b9"
+    retrieved: "2026-11-12"
+    release_in_file: "Released 2026-09-23; covers July 1, 1971 to July 1, 2026"
+    reporting_period: "Annual, July 1"
+    coverage: "Canada, provinces and territories. Northwest Territories and Nunavut separately from 1991; combined before"
+    units: "Persons; median age in years"
+    licence: "Statistics Canada Open Licence"
+    licence_url: "https://www.statcan.gc.ca/en/reference/licence"
+    attribution: "Source: Statistics Canada. Table 17-10-0005-01 Population estimates on July 1, by age and gender."
+    quality_class: official_statistics
+    limitations:
+      - "Annual estimates, not census counts. Final intercensal to 2020; postcensal from 2021 (to be revised after the 2026 Census); 2026 is preliminary."
+      - "Shares by age are calculated here from the published counts (age group divided by all ages)."
+      - "Median age is taken as published; it is not recalculated."
+
+  statcan_17100148:
+    title: "Population estimates, July 1, by census metropolitan area and census agglomeration, 2021 boundaries"
+    publisher: "Statistics Canada"
+    table_id: "17-10-0148-01"
+    doi: "https://doi.org/10.25318/1710014801-eng"
+    landing_url: "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710014801"
+    download_url: "https://www150.statcan.gc.ca/n1/tbl/csv/17100148-eng.zip"
+    raw_file: "data/raw/statcan/17100148-eng.zip"
+    sha256: "7b007a0ff50bb1bad6a041093c3c71502c095f2516d20c961d9c26ed55b327d5"
+    retrieved: "2026-11-12"
+    release_in_file: "Released 2026-01-14; covers July 1, 2001 to July 1, 2025"
+    reporting_period: "Annual, July 1"
+    coverage: "41 census metropolitan areas and all census agglomerations, on 2021 boundaries for every year. Prince Edward Island and the three territories have no census metropolitan area"
+    units: "Persons"
+    licence: "Statistics Canada Open Licence"
+    licence_url: "https://www.statcan.gc.ca/en/reference/licence"
+    attribution: "Source: Statistics Canada. Table 17-10-0148-01 Population estimates, July 1, by census metropolitan area and census agglomeration, 2021 boundaries."
+    quality_class: official_statistics
+    limitations:
+      - "A census metropolitan area is a core of at least 50,000 people plus surrounding municipalities, 100,000 or more in total. It includes suburbs and some rural land, so it is not the same as 'urban'."
+      - "Today's (2021) boundaries are applied to every year back to 2001, so growth here is growth inside a fixed area, not the spread of the area."
+      - "Released in January 2026, before the latest provincial estimates, so its provincial totals differ slightly from table 17-10-0009-01. Shares are calculated within this table only."
+      - "Final intercensal to 2020; postcensal from 2021; 2025 is preliminary. Starts in 2001."
+
+  statcan_17100118:
+    title: "Selected population characteristics, Canada, provinces and territories"
+    publisher: "Statistics Canada"
+    table_id: "17-10-0118-01"
+    doi: "https://doi.org/10.25318/1710011801-eng"
+    landing_url: "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710011801"
+    download_url: "https://www150.statcan.gc.ca/n1/tbl/csv/17100118-eng.zip"
+    raw_file: "data/raw/statcan/17100118-eng.zip"
+    sha256: "953284712b9d953e13a825f7916978fb306493e6c27a5644137b334d3167265b"
+    retrieved: "2026-11-12"
+    release_in_file: "Released 2009-12-15; census years 1971 to 2006"
+    reporting_period: "Every five years (census)"
+    coverage: "Canada, provinces and territories. Northwest Territories and Nunavut combined to 1996, separate for 2001 and 2006"
+    units: "Percent of total population"
+    licence: "Statistics Canada Open Licence"
+    licence_url: "https://www.statcan.gc.ca/en/reference/licence"
+    attribution: "Source: Statistics Canada. Table 17-10-0118-01 Selected population characteristics, Canada, provinces and territories."
+    quality_class: official_statistics
+    limitations:
+      - "Census counts for eight census years; the series ends in 2006 and is not extended. From 2011 Statistics Canada replaced 'urban area' with 'population centre'."
+      - "Urban area: a continuously built-up area of 1,000 or more people at 400 or more per square kilometre, based on the previous census. Small towns count as urban."
+      - "Not comparable with the census-metropolitan-area share (table 17-10-0148-01), which uses a different definition."
+
   statcan_39100048:
     title: "Population in core housing need by selected sociocultural characteristics, economic family structure and gender"
     publisher: "Statistics Canada"
