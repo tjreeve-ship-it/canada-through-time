@@ -1,0 +1,13 @@
+{
+ "applies_to": "parlinfo_elected",
+ "election_date": "2025-04-28",
+ "problem": "The Library of Parliament elected-candidates file retrieved 2026-11-11 lists 341 of the 343 members elected at the 45th general election. Vancouver Quadra (British Columbia) and Fundy Royal (New Brunswick) are absent.",
+ "resolution": "The two members are added from Elections Canada's Official Voting Results (Table 11). The raw Library of Parliament file is not edited.",
+ "source_id": "elections_canada_ovr45",
+ "verified": "2026-11-11",
+ "check": "After the addition, British Columbia is Liberal 20, Conservative 19, NDP 3, Green 1 (43) and New Brunswick is Liberal 6, Conservative 4 (10), matching Table 11.",
+ "additions": [
+  {"province": "BC", "constituency": "Vancouver Quadra", "member": "Wade Grant", "party": "Liberal Party of Canada"},
+  {"province": "NB", "constituency": "Fundy Royal", "member": "Rob Moore", "party": "Conservative Party of Canada"}
+ ]
+}

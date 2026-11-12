@@ -4,7 +4,9 @@ usage: python3 tools/audit_layers.py   → audit/layer_audit.json + printed summ
 import zipfile, csv, io, json, collections, xml.etree.ElementTree as ET
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
-D = json.loads((ROOT / "audit/displayed.json").read_text())
+import os as _os
+D = json.loads((ROOT / _os.environ.get("DISPLAYED", "audit/displayed.json")).read_text())
+OUTFILE = _os.environ.get("AUDIT_OUT", "audit/layer_audit.json")
 AB = {"Canada": "CAN", "Newfoundland and Labrador": "NL", "Prince Edward Island": "PE", "Nova Scotia": "NS", "New Brunswick": "NB", "Quebec": "QC", "Ontario": "ON", "Manitoba": "MB",
       "Saskatchewan": "SK", "Alberta": "AB", "British Columbia": "BC", "Yukon": "YT", "Northwest Territories": "NT", "Nunavut": "NU", "Northwest Territories including Nunavut": "NT+NU"}
 def rows(t):
@@ -147,7 +149,11 @@ root = ET.parse(ROOT / "data/raw/parlinfo/elected_candidates.xml").getroot(); cn
 for c in root.findall("ElectionCandidateForWeb"):
     d = c.findtext("ElectionDate")[:10]
     if c.findtext("IsGeneral") == "true" and d >= "1972": cnt[(d, AB.get(c.findtext("ProvinceEn"), c.findtext("ProvinceEn")), c.findtext("PartyNameEn"))] += 1
-POL = json.loads((ROOT / "web/data/explorer/politics.json").read_text())
+import os
+POL = json.loads((ROOT / os.environ.get("POLITICS", "web/data/explorer/politics.json")).read_text())
+if "release" in os.environ.get("POLITICS", ""):   # the release file applies the documented Elections Canada reconciliation
+    _rec = json.loads((ROOT / "registry/reconciliations/parlinfo_2025_missing_members.json").read_text())
+    for a in _rec["additions"]: cnt[(_rec["election_date"], a["province"], a["party"])] += 1
 shown = {f"{e['date']}|{p}|{party}": n for e in POL["elections"] for p, s in e["seats_by_province"].items() for party, n in s.items()}
 res.append(cmp("fed (seats by province and party)", shown, {f"{d}|{p}|{party}": n for (d, p, party), n in cnt.items()}))
 HOUSE = {"1972": 264, "1974": 264, "1979": 282, "1980": 282, "1984": 282, "1988": 295, "1993": 295, "1997": 301, "2000": 301, "2004": 308, "2006": 308, "2008": 308, "2011": 308, "2015": 338, "2019": 338, "2021": 338, "2025": 343}
@@ -159,7 +165,7 @@ for e in POL["elections"]:
         if len(v) > 1 and v[0] == v[1]: ties.append([e["date"], p, {k: n for k, n in s.items() if n == v[0]}])
 facts["elections_province_ties_for_most_seats"] = ties
 facts["population_last_date_in_raw"] = max(popdates); facts["components_periods_in_raw"] = [min(comp["CAN"]), max(comp["CAN"])]
-(ROOT / "audit/layer_audit.json").write_text(json.dumps({"results": res, "facts": facts}, indent=1, default=str))
+(ROOT / OUTFILE).write_text(json.dumps({"results": res, "facts": facts}, indent=1, default=str))
 for r in res: print(f"{r['layer']:36s} compared {r['compared']:6d}  mismatch {r['mismatch']:4d}  max diff {r['max_abs_diff']:.3g}  shown-not-raw {r['shown_but_not_in_raw']:4d}  raw-not-shown {r['in_raw_but_not_shown']:4d}")
 for r in res:
     for k in ("examples_mismatch", "examples_shown_not_raw", "examples_raw_not_shown"):

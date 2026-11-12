@@ -1,0 +1,358 @@
+{
+ "results": [
+  {
+   "layer": "pop",
+   "compared": 765,
+   "mismatch": 0,
+   "max_abs_diff": 0.0,
+   "shown_but_not_in_raw": 0,
+   "in_raw_but_not_shown": 0,
+   "examples_mismatch": [],
+   "examples_shown_not_raw": [],
+   "examples_raw_not_shown": []
+  },
+  {
+   "layer": "chg",
+   "compared": 752,
+   "mismatch": 0,
+   "max_abs_diff": 0.0,
+   "shown_but_not_in_raw": 0,
+   "in_raw_but_not_shown": 0,
+   "examples_mismatch": [],
+   "examples_shown_not_raw": [],
+   "examples_raw_not_shown": []
+  },
+  {
+   "layer": "rate",
+   "compared": 750,
+   "mismatch": 0,
+   "max_abs_diff": 0.0,
+   "shown_but_not_in_raw": 0,
+   "in_raw_but_not_shown": 0,
+   "examples_mismatch": [],
+   "examples_shown_not_raw": [],
+   "examples_raw_not_shown": []
+  },
+  {
+   "layer": "dens",
+   "compared": 765,
+   "mismatch": 0,
+   "max_abs_diff": 0.0,
+   "shown_but_not_in_raw": 0,
+   "in_raw_but_not_shown": 0,
+   "examples_mismatch": [],
+   "examples_shown_not_raw": [],
+   "examples_raw_not_shown": []
+  },
+  {
+   "layer": "share",
+   "compared": 765,
+   "mismatch": 0,
+   "max_abs_diff": 0.0,
+   "shown_but_not_in_raw": 0,
+   "in_raw_but_not_shown": 0,
+   "examples_mismatch": [],
+   "examples_shown_not_raw": [],
+   "examples_raw_not_shown": []
+  },
+  {
+   "layer": "nat",
+   "compared": 750,
+   "mismatch": 0,
+   "max_abs_diff": 0.0,
+   "shown_but_not_in_raw": 0,
+   "in_raw_but_not_shown": 0,
+   "examples_mismatch": [],
+   "examples_shown_not_raw": [],
+   "examples_raw_not_shown": []
+  },
+  {
+   "layer": "imm",
+   "compared": 750,
+   "mismatch": 0,
+   "max_abs_diff": 0.0,
+   "shown_but_not_in_raw": 0,
+   "in_raw_but_not_shown": 0,
+   "examples_mismatch": [],
+   "examples_shown_not_raw": [],
+   "examples_raw_not_shown": []
+  },
+  {
+   "layer": "npr",
+   "compared": 750,
+   "mismatch": 0,
+   "max_abs_diff": 0.0,
+   "shown_but_not_in_raw": 0,
+   "in_raw_but_not_shown": 0,
+   "examples_mismatch": [],
+   "examples_shown_not_raw": [],
+   "examples_raw_not_shown": []
+  },
+  {
+   "layer": "emi",
+   "compared": 750,
+   "mismatch": 0,
+   "max_abs_diff": 0.0,
+   "shown_but_not_in_raw": 0,
+   "in_raw_but_not_shown": 0,
+   "examples_mismatch": [],
+   "examples_shown_not_raw": [],
+   "examples_raw_not_shown": []
+  },
+  {
+   "layer": "ipm",
+   "compared": 723,
+   "mismatch": 0,
+   "max_abs_diff": 0.0,
+   "shown_but_not_in_raw": 0,
+   "in_raw_but_not_shown": 0,
+   "examples_mismatch": [],
+   "examples_shown_not_raw": [],
+   "examples_raw_not_shown": []
+  },
+  {
+   "layer": "flow",
+   "compared": 723,
+   "mismatch": 0,
+   "max_abs_diff": 0.0,
+   "shown_but_not_in_raw": 0,
+   "in_raw_but_not_shown": 0,
+   "examples_mismatch": [],
+   "examples_shown_not_raw": [],
+   "examples_raw_not_shown": []
+  },
+  {
+   "layer": "starts",
+   "compared": 594,
+   "mismatch": 0,
+   "max_abs_diff": 0.0,
+   "shown_but_not_in_raw": 0,
+   "in_raw_but_not_shown": 0,
+   "examples_mismatch": [],
+   "examples_shown_not_raw": [],
+   "examples_raw_not_shown": []
+  },
+  {
+   "layer": "comp",
+   "compared": 561,
+   "mismatch": 0,
+   "max_abs_diff": 0.0,
+   "shown_but_not_in_raw": 0,
+   "in_raw_but_not_shown": 0,
+   "examples_mismatch": [],
+   "examples_shown_not_raw": [],
+   "examples_raw_not_shown": []
+  },
+  {
+   "layer": "hhg",
+   "compared": 266,
+   "mismatch": 0,
+   "max_abs_diff": 0.0,
+   "shown_but_not_in_raw": 0,
+   "in_raw_but_not_shown": 0,
+   "examples_mismatch": [],
+   "examples_shown_not_raw": [],
+   "examples_raw_not_shown": []
+  },
+  {
+   "layer": "vac",
+   "compared": 54,
+   "mismatch": 0,
+   "max_abs_diff": 0.0,
+   "shown_but_not_in_raw": 0,
+   "in_raw_but_not_shown": 0,
+   "examples_mismatch": [],
+   "examples_shown_not_raw": [],
+   "examples_raw_not_shown": []
+  },
+  {
+   "layer": "rentrel",
+   "compared": 66,
+   "mismatch": 0,
+   "max_abs_diff": 0.0,
+   "shown_but_not_in_raw": 0,
+   "in_raw_but_not_shown": 0,
+   "examples_mismatch": [],
+   "examples_shown_not_raw": [],
+   "examples_raw_not_shown": []
+  },
+  {
+   "layer": "chn",
+   "compared": 28,
+   "mismatch": 0,
+   "max_abs_diff": 0.0,
+   "shown_but_not_in_raw": 0,
+   "in_raw_but_not_shown": 0,
+   "examples_mismatch": [],
+   "examples_shown_not_raw": [],
+   "examples_raw_not_shown": []
+  },
+  {
+   "layer": "inc",
+   "compared": 560,
+   "mismatch": 0,
+   "max_abs_diff": 0.0,
+   "shown_but_not_in_raw": 0,
+   "in_raw_but_not_shown": 0,
+   "examples_mismatch": [],
+   "examples_shown_not_raw": [],
+   "examples_raw_not_shown": []
+  },
+  {
+   "layer": "vac (cities)",
+   "compared": 1554,
+   "mismatch": 0,
+   "max_abs_diff": 0.0,
+   "shown_but_not_in_raw": 0,
+   "in_raw_but_not_shown": 0,
+   "examples_mismatch": [],
+   "examples_shown_not_raw": [],
+   "examples_raw_not_shown": []
+  },
+  {
+   "layer": "rent (cities)",
+   "compared": 1122,
+   "mismatch": 0,
+   "max_abs_diff": 0.0,
+   "shown_but_not_in_raw": 0,
+   "in_raw_but_not_shown": 0,
+   "examples_mismatch": [],
+   "examples_shown_not_raw": [],
+   "examples_raw_not_shown": []
+  },
+  {
+   "layer": "flow (origin\u2013destination moves)",
+   "compared": 8075,
+   "mismatch": 0,
+   "max_abs_diff": 0.0,
+   "shown_but_not_in_raw": 0,
+   "in_raw_but_not_shown": 0,
+   "examples_mismatch": [],
+   "examples_shown_not_raw": [],
+   "examples_raw_not_shown": []
+  },
+  {
+   "layer": "fed (seats by province and party)",
+   "compared": 473,
+   "mismatch": 0,
+   "max_abs_diff": 0.0,
+   "shown_but_not_in_raw": 0,
+   "in_raw_but_not_shown": 0,
+   "examples_mismatch": [],
+   "examples_shown_not_raw": [],
+   "examples_raw_not_shown": []
+  }
+ ],
+ "facts": {
+  "last_year_in_raw": {
+   "starts": 2025,
+   "comp": 2022
+  },
+  "income_quality_flags": {
+   "": 187,
+   "A": 290,
+   "B": 80,
+   "C": 3
+  },
+  "core_need_years_in_raw": {
+   "2006": 14,
+   "2011": 14,
+   "2016": 14,
+   "2021": 14
+  },
+  "rent_suppressed_F_in_raw": 0,
+  "rent_suppressed_flagged_in_explorer": 0,
+  "rent_suppressed_shown_as_value": 0,
+  "raw_cmas_not_in_explorer": [
+   "Montr\u00e9al excluding Saint-J\u00e9r\u00f4me, Quebec",
+   "Ottawa-Gatineau, Ontario part, Ontario/Quebec",
+   "Ottawa-Gatineau, Quebec part, Ontario/Quebec"
+  ],
+  "flow_periods_shown": [
+   1971,
+   2025
+  ],
+  "flow_incomplete_periods_in_raw": [],
+  "flow_incomplete_period_shown": [],
+  "elections_seats_recorded_vs_house_size": {},
+  "elections_province_ties_for_most_seats": [
+   [
+    "1972-10-30",
+    "NB",
+    {
+     "Liberal Party of Canada": 5,
+     "Progressive Conservative Party": 5
+    }
+   ],
+   [
+    "1979-05-22",
+    "NT",
+    {
+     "New Democratic Party": 1,
+     "Progressive Conservative Party": 1
+    }
+   ],
+   [
+    "1980-02-18",
+    "SK",
+    {
+     "New Democratic Party": 7,
+     "Progressive Conservative Party": 7
+    }
+   ],
+   [
+    "1980-02-18",
+    "PE",
+    {
+     "Liberal Party of Canada": 2,
+     "Progressive Conservative Party": 2
+    }
+   ],
+   [
+    "1980-02-18",
+    "NT",
+    {
+     "New Democratic Party": 1,
+     "Progressive Conservative Party": 1
+    }
+   ],
+   [
+    "1988-11-21",
+    "NB",
+    {
+     "Liberal Party of Canada": 5,
+     "Progressive Conservative Party": 5
+    }
+   ],
+   [
+    "1993-10-25",
+    "SK",
+    {
+     "Liberal Party of Canada": 5,
+     "New Democratic Party": 5
+    }
+   ],
+   [
+    "2000-11-27",
+    "NS",
+    {
+     "Liberal Party of Canada": 4,
+     "Progressive Conservative Party": 4
+    }
+   ],
+   [
+    "2011-05-02",
+    "NS",
+    {
+     "Conservative Party of Canada": 4,
+     "Liberal Party of Canada": 4
+    }
+   ]
+  ],
+  "population_last_date_in_raw": "2026-07-01",
+  "components_periods_in_raw": [
+   1971,
+   2025
+  ]
+ }
+}

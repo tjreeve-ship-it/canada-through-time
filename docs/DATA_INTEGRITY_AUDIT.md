@@ -52,7 +52,7 @@ Ten province-elections have two parties tied for most seats (e.g. New Brunswick 
 For Canada the code substitutes 0 when the source has no net interprovincial value. The panel already says moves "cancel out for Canada as a whole" and shows no number, but the underlying value should be "not applicable", not 0.
 
 **C4 — Income: Statistics Canada's quality grades are not shown. (Minor.)**
-The source grades each estimate A–F. In the series used, 290 are A, 80 are B, 3 are C (Nunavut 2020 and 2021, Northwest Territories 2021), 187 ungraded, none suppressed. The three C-grade values should carry a "use with caution" mark.
+The source grades each estimate by sampling variability: A excellent, B very good, C good, D acceptable, E use with caution, F too unreliable to publish. In the series used, 290 are A, 80 are B, 3 are C (Nunavut 2020 and 2021, Northwest Territories 2021), 187 ungraded, and none are D, E or F. Nothing shown is unreliable, but the grade should be visible where it is below B.
 
 **C5 — City rent: the legend lists "suppressed", but no value in this series is suppressed. (Minor.)**
 For the 33 metropolitan areas and the unit type used, the source has no F-flagged values (missing years are "not available"). The suppressed marker should only appear when it applies.
@@ -138,3 +138,19 @@ Common to all Statistics Canada layers: licence is the Statistics Canada Open Li
 ## Causation and comparison language
 
 Checked in the build: "does not show that one caused another" on the housing path; "a difference is an observation, not an explanation" on both comparison tools; starts vs households "not a measure of shortage"; rent vs prices "not an affordability ratio". No causal claims found in layer text.
+
+## Corrections applied — `web/explore-release/` (2026-11-11)
+
+The sign-off build and its data files are unchanged. Corrections live in a new build and two new data files (`web/data/release/`), produced by `pipeline/build_release_patches.py`.
+
+| Finding | What changed | How it is verified |
+|---|---|---|
+| C1 | Vancouver Quadra (Liberal) and Fundy Royal (Conservative) added for 2025 from Elections Canada's Official Voting Results, Table 11. Recorded in `registry/reconciliations/parlinfo_2025_missing_members.json`; the Library of Parliament file is not edited. British Columbia now reads Liberal 20, Conservative 19; national Liberal 169, Conservative 144, of 343. The layer shows "343 seats · 2 from Elections Canada" with an explanation, and the timeline entry is rebuilt from the same counts. | Tests: every election equals the size of the House; only 2025 differs from the source file; raw file hash unchanged. Audit re-run: 0 discrepancies. |
+| C2 | A tie for most seats is drawn in neutral grey, labelled "Tied 7–7", named in the legend, finding and panel. Nine province-elections are ties after C1 (British Columbia 2025 is no longer one). | Browser check on Saskatchewan 1980. |
+| C3 | Canada's net interprovincial figure is shown only where the source publishes it (0 from 1998/99 on; nothing earlier). No substituted zeros. | Audit re-run: 0 shown-but-not-in-source. |
+| C4 | Income panel shows Statistics Canada's quality grade where it is below B (three values, all grade C, "good"). | Test + browser check on Nunavut 2021. |
+| C5 | The rent legend shows "suppressed" only when a value in view is suppressed. | Browser check. |
+| C6 | Migration flows cites both tables it uses. | Browser check. |
+| C7 | Population layers from July 2021 to 2025 carry "Postcensal · will be revised", with an explanation; 2026 stays "Preliminary". Read from the source table's own note. | Browser check on 2019, 2024, 2026. |
+
+Still open: R1 (core housing need 2006 and 2011) and R2 (re-check sources before each publication). C7 is applied to the five population layers only; per-1,000 rates that use population as a denominator are not separately marked.

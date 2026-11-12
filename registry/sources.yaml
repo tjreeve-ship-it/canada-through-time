@@ -141,6 +141,17 @@ sources:
     limitations:
       - "Seats are not votes; popular vote shares are a separate dataset (Elections Canada) still to be added."
 
+  elections_canada_ovr45:
+    title: "Official Voting Results, 45th general election (2025), Table 11: voting results by electoral district"
+    publisher: "Elections Canada"
+    landing_url: "https://elections.ca/res/rep/off/ovrGE45/62/table11E.html"
+    retrieved: "2026-11-11"
+    licence: "Elections Canada terms of use; reproduction permitted with attribution"
+    attribution: "Two 2025 members reconciled against Elections Canada, Official Voting Results."
+    quality_class: official_statistics
+    limitations:
+      - "Used only to add the two members missing from the Library of Parliament file for 2025 (registry/reconciliations/parlinfo_2025_missing_members.json). No file is stored; the two rows were read from the published table."
+
   parlinfo_prime_ministers:
     title: "Prime Ministers of Canada"
     publisher: "Library of Parliament"
