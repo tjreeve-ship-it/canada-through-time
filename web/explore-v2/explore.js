@@ -1507,7 +1507,7 @@ function openHome(focusSearch = false) {
     return `<button class="hcard" data-card="${i}"><span class="hsec">${c.sec}</span><span class="hq">${c.q}</span><span class="hbig">${big[0]}</span><span class="hsub">${big[1]}</span>${sp}</button>`; }).join('');
   homeEl.innerHTML = `<div class="hin"><div class="hhead"><div class="hkick">Canada Through Time</div><h1>${YMAX - 1971} years of Canada, mapped from official data</h1>
     <p>Every number traces back to its source: Statistics Canada, Immigration Canada and Elections Canada.</p></div>
-    <div class="hsearch"><input id="q-search" type="search" placeholder="Search a place, a topic or a year (try “Alberta unemployment 2010”)" autocomplete="off" aria-label="Search"><div id="q-results" role="listbox"></div></div>
+    <div class="hsearch"><input id="q-search" type="search" placeholder="${isPhone() ? "Search a place, topic or year" : "Search a place, a topic or a year (try “Alberta unemployment 2010”)"}" autocomplete="off" aria-label="Search"><div id="q-results" role="listbox"></div></div>
     <div class="hgrid">${cards}</div>
     <div class="hfoot"><button class="hgo" data-close>Explore the map freely →</button><button class="linkish" data-story="0">Or read the story: ${STORY.title}</button></div></div>`;
   homeEl.hidden = false; document.body.classList.add('home-on');
