@@ -1,0 +1,217 @@
+{
+ "id": "short-canada-getting-older",
+ "format": "9x16",
+ "fps": 30,
+ "theme": "ember",
+ "title": "Canada is getting older",
+ "kicker": "Canada is getting older",
+ "years": [
+  1971,
+  2026
+ ],
+ "preliminary": [
+  2026
+ ],
+ "intro": 4.0,
+ "perYear": 0.4,
+ "endHold": 0.6,
+ "outro": 7.0,
+ "hook": [
+  "In 2016, Canadians aged <em>65+</em> outnumbered children under 15.",
+  "Median age: 26.2 in 1971. 40.9 in 2026."
+ ],
+ "hookNote": "July 1 estimates, 1971 to 2026; 2026 is preliminary. First year of the crossover in this series, which starts in 1971.",
+ "introFocus": [
+  "NL",
+  "PE",
+  "NS",
+  "NB",
+  "QC",
+  "ON",
+  "MB",
+  "SK",
+  "AB",
+  "BC"
+ ],
+ "introCam": "westwide",
+ "beats": [
+  {
+   "year": 2009,
+   "hold": 2.3,
+   "kicker": "2009",
+   "cam": "east",
+   "focus": [
+    "NS",
+    "NB"
+   ],
+   "text": "Nova Scotia and New Brunswick: the first provinces where people 65+ outnumbered children under 15."
+  },
+  {
+   "year": 2016,
+   "hold": 2.6,
+   "kicker": "2016",
+   "cam": "wide",
+   "focus": [
+    "NL",
+    "PE",
+    "NS",
+    "NB",
+    "QC",
+    "ON",
+    "MB",
+    "SK",
+    "AB",
+    "BC"
+   ],
+   "text": "Canada: 5,919,685 people aged 65+, 5,868,008 under 15. The first year with more seniors."
+  },
+  {
+   "year": 2026,
+   "hold": 2.6,
+   "kicker": "2026 (preliminary)",
+   "cam": "nl",
+   "focus": [
+    "NL"
+   ],
+   "cardWidth": 330,
+   "cardTop": 330,
+   "text": "Newfoundland and Labrador: median age 20.9 in 1971, the youngest province. 47.8 now, the oldest."
+  }
+ ],
+ "summary": {
+  "seconds": 6.5,
+  "title": "1971 to 2026",
+  "focus": [
+   "NL",
+   "PE",
+   "NS",
+   "NB",
+   "QC",
+   "ON",
+   "MB",
+   "SK",
+   "AB",
+   "BC"
+  ],
+  "items": [
+   {
+    "dir": "up",
+    "big": "26.2 → 40.9",
+    "place": "Median age, Canada",
+    "text": "2026 is preliminary."
+   },
+   {
+    "dir": "up",
+    "big": "8% → 20%",
+    "place": "Share aged 65 and over",
+    "text": "Under 15: 29% → 15%."
+   },
+   {
+    "dir": "up",
+    "big": "20.9 → 47.8",
+    "place": "Newfoundland and Labrador",
+    "text": "Youngest province in 1971, oldest now."
+   }
+  ]
+ },
+ "outro_card": {
+  "title": "Sources and method",
+  "lines": [
+   {
+    "cls": "src",
+    "text": "Statistics Canada, Table 17-10-0005-01: population estimates on July 1, by age and gender. Statistics Canada Open Licence."
+   },
+   {
+    "text": "Columns show the share of each province aged 65+ (red) and under 15 (grey); province colour and the bars show median age. Every figure shown is a published value or a share of published counts; movement between years is animation. 2026 is preliminary."
+   },
+   {
+    "cls": "lim",
+    "text": "This video shows how the age of the population changed, not why."
+   }
+  ]
+ },
+ "raceTitle": "Provinces: median age",
+ "credit": "The Canadian Data Project",
+ "sourceLine": "Source: Statistics Canada, Table 17-10-0005-01. Movement between years is animation.",
+ "callouts": {
+  "NB": [
+   7380,
+   1330
+  ],
+  "NS": [
+   8300,
+   1000
+  ],
+  "PE": [
+   8330,
+   2120
+  ]
+ },
+ "relief": {
+  "b": [
+   3660,
+   630,
+   9040,
+   5270
+  ],
+  "opacity": 0.22
+ },
+ "medRange": [
+  20,
+  48
+ ],
+ "kmPerPoint": 38,
+ "columnRadius": 34,
+ "cameras": {
+  "wide": {
+   "t": [
+    6420,
+    2350
+   ],
+   "z": -3.06,
+   "x": 58,
+   "o": -4
+  },
+  "westwide": {
+   "t": [
+    6200,
+    2700
+   ],
+   "z": -2.95,
+   "x": 58,
+   "o": -6
+  },
+  "end": {
+   "t": [
+    6420,
+    2300
+   ],
+   "z": -3.1,
+   "x": 60,
+   "o": -2
+  },
+  "east": {
+   "t": [
+    7650,
+    2150
+   ],
+   "z": -2.55,
+   "x": 56,
+   "o": 6
+  },
+  "nl": {
+   "t": [
+    7750,
+    2500
+   ],
+   "z": -2.6,
+   "x": 56,
+   "o": 4
+  }
+ },
+ "sources": [
+  "statcan_17100005"
+ ],
+ "method": "Printed figures are published Statistics Canada July 1 estimates for the year on screen (median age; counts aged 65+ and under 15). Column heights are shares of published counts. Heights, province tints and bar lengths move linearly between consecutive years as animation only; in-between states are never printed. 2026 is preliminary.",
+ "figures_sha256": "fe0199629d63a98b410d8a2a9300a1a94fe7f575d55f7dd99f27d49993ad45b9"
+}
