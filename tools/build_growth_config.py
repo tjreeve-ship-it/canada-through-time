@@ -24,8 +24,8 @@ cfg = dict(id="short-where-growth-came-from", format="9x16", fps=30, theme="embe
          text=f"Net non-permanent residents: {sgn(pr['net_npr'])}, the largest outflow in this series since 1971.")],
   summary=dict(seconds=6.5, title=f"{a['period']} to {b['period']}", focus=ALL, items=[
     dict(dir="up", big=f"{round(a['intl_share'])}% → {sh1}%", place="Share of growth from international migration", text=f"{a['period']} vs {b['period']}."),
-    dict(dir="up", big=f"+{T['net_international'] / 1e6:.1f}M", place="International migration, net", text=f"vs +{T['natural'] / 1e6:.1f}M from births minus deaths, {a['period']} to {b['period']}."),
-    dict(dir="up", big=sgn(pk["net_npr"]), place="Net non-permanent residents", text=f"{pk['period']}, the peak year.")]),
+    dict(dir="up", big=f"+{T['net_international'] / 1e6:.1f}M", place="International migration, net", text=f"vs +{T['natural'] / 1e6:.1f}M births minus deaths, same years."),
+    dict(dir="up", big=sgn(pk["net_npr"]), place="Net non-permanent residents", text=f"{pk['period']}, peak year.")]),
   outro_card=dict(title="Sources and method", lines=[
     dict(cls="src", text="Statistics Canada, Table 17-10-0008-01: estimates of the components of demographic growth, annual (July to June). Statistics Canada Open Licence."),
     dict(text="Births minus deaths vs net international migration (immigrants − net emigration + net non-permanent residents); shares exclude the published residual (to 2020–21). Components plus residual match population change in every period. 2025–26 is preliminary. Movement between years is animation."),
