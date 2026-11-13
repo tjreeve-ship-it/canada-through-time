@@ -1062,3 +1062,24 @@ body.has-shell #ab { top: var(--shell-h); }
 .ab details { margin-top: 8px; font-size: 12.5px; color: var(--ink-2); } .ab summary { cursor: pointer; color: var(--ink-3); } .ab details ul { margin: 6px 0 0; padding-left: 18px; line-height: 1.45; }
 @media (max-width: 1180px) { #shell .about { display: none; } }
 @media (max-width: 900px) { .ab h2 { font-size: 24px; } .ab p.big { font-size: 18px; } .ab p { font-size: 15px; } }
+/* views on phones and tablets: a scrolling row of view buttons above the bottom sheet; the view fills the space above it */
+@media (max-width: 1100px) {
+  #viewbar { display: flex; position: absolute; left: 50%; transform: translateX(-50%); right: auto; bottom: 182px; max-width: calc(100% - 16px); overflow-x: auto; z-index: 7; }
+  #toolview { left: 8px; right: 8px; top: 8px; bottom: 232px; padding: 12px 12px 10px; border-radius: 14px; }
+  body.tool-on #mapctl { visibility: hidden; }
+}
+@media (max-width: 900px) {
+  #viewbar { bottom: calc(var(--sheet-h, 168px) + 62px); } #viewbar button { padding: 7px 9px; font-size: 12.5px; }   /* above the map buttons */
+  #toolview { bottom: calc(var(--sheet-h, 168px) + 108px); }
+  .rr { grid-template-columns: 18px minmax(70px, 34%) 1fr 62px; font-size: 12px; gap: 6px; }
+  .chg .gr { grid-template-columns: minmax(64px, 28%) 1fr 58px; font-size: 12px; gap: 6px; } .chg .gr > :nth-child(4) { display: none; }
+  .cr { grid-template-columns: minmax(0, 1fr) 27% 27%; gap: 6px; font-size: 12px; padding: 4px 2px; } .cr > * { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+  #viewbar button { white-space: nowrap; }
+  #toolview header b { font-size: 16px; } #toolview select { max-width: 46vw; font-size: 12.5px; }
+}
+/* sheet: a soft fade at the bottom shows there is more to scroll */
+.v-s #sheet-body { -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 28px), transparent); mask-image: linear-gradient(to bottom, #000 calc(100% - 28px), transparent); padding-bottom: 24px; }
+/* phone home cards: long titles wrap instead of spilling out */
+@media (max-width: 900px) { .hworld .wt { font-size: 19px; overflow-wrap: anywhere; hyphens: auto; } .hworld { min-height: 0; } }
+#shell .worlds button { white-space: nowrap; }
+@media (max-width: 1280px) and (min-width: 901px) { #shell .worlds .lg { display: none; } #shell .worlds .sm { display: inline; } }

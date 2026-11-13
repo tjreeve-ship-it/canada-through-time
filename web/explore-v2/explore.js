@@ -5,6 +5,7 @@
 const { Deck, OrbitView, GeoJsonLayer, ColumnLayer, TextLayer, ArcLayer, PathLayer, ScatterplotLayer, LineLayer, LightingEffect, AmbientLight, DirectionalLight, COORDINATE_SYSTEM } = deck;
 const CART = COORDINATE_SYSTEM.CARTESIAN;
 const Q = new URLSearchParams(location.search);
+const CREATOR = new URLSearchParams(location.search).has('creator');   // the timelapse maker is for making the channel's videos, not for visitors
 const FIRST_HASH = location.hash.slice(1);
 const STUDIO = Q.get('studio');   // Timelapse Studio: a base64 JSON configuration turns the explorer into a frame-exact stage
 const STUDIO_CFG = STUDIO ? JSON.parse(decodeURIComponent(escape(atob(STUDIO.replace(/-/g, '+').replace(/_/g, '/'))))) : null;
@@ -829,7 +830,7 @@ function reading(m) {
   if (m.cover) chips.push(`<button class="chip cover" data-why="cover">${m.cover}</button>`);
   { const e = m.id === 'fed' && electionAt(state.y); if (e?.reconciled) chips.push(`<button class="chip" data-why="seats">${e.seats_recorded} seats · ${e.reconciled.additions.length} from Elections Canada</button>`); }
   chips.push(`<button class="chip src" data-why="src">${m.tag === 'Derived' ? 'Derived · ' : ''}${m.src.map(s => registry[s].table_id ? 'StatCan ' + registry[s].table_id : (registry[s].publisher.match(/\(([A-Z]{2,})\)/)?.[1] || registry[s].publisher.split(',')[0])).join(' + ')}</button>`);
-  if (!STUDIO && !isPhone()) chips.push(`<button class="chip studio-open" data-studio-open>Make a timelapse</button>`);
+  if (!STUDIO && !isPhone() && CREATOR) chips.push(`<button class="chip studio-open" data-studio-open>Make a timelapse</button>`);
   document.getElementById('r-meta').innerHTML = `<span>${whenOf(m, state.y)}</span>` + chips.join('');
   // editorial layer: big year, one computed finding sentence, numbered notes (survey plate)
   document.getElementById('yearhero').textContent = state.y;
@@ -1600,10 +1601,11 @@ function niceTicks(lo, hi, n = 5) { if (!(hi > lo)) { hi = lo + 1; } const step0
 function drawViewbar() { vbar.innerHTML = VIEWS.map(([k, l]) => `<button role="tab" data-view="${k}" class="${state.view === k ? 'on' : ''}" aria-selected="${state.view === k}">${l}</button>`).join(''); }
 vbar.addEventListener('click', e => { const b = e.target.closest('[data-view]'); if (!b) return; state.view = b.dataset.view; update(); });
 
-function placeTool() { const L = document.getElementById('layers').getBoundingClientRect(); tool.style.top = Math.max(150, Math.round(L.bottom + 16)) + 'px'; }
+function placeTool() { if (narrow()) { tool.style.top = ''; return; } const L = document.getElementById('layers').getBoundingClientRect(); tool.style.top = Math.max(150, Math.round(L.bottom + 16)) + 'px'; }
+const narrow = () => innerWidth <= 1100;   // phones and tablets: the view sits above the bottom sheet (CSS)
 function drawTool() {
-  drawViewbar(); document.body.classList.toggle('tool-on', state.view !== 'map' && !isPhone());
-  if (state.view === 'map' || isPhone()) { tool.hidden = true; return; }
+  drawViewbar(); document.body.classList.toggle('tool-on', state.view !== 'map');
+  if (state.view === 'map') { tool.hidden = true; return; }
   tool.hidden = false; placeTool();
   const m = M[state.m], y = state.y;
   if (!numericM(m) && state.view !== 'compare') { tool.innerHTML = `<div class="tnote">“${m.label}” is not a numeric layer, so this view can’t show it. Pick a layer such as People, Median age or Unemployment rate.</div>`; return; }
