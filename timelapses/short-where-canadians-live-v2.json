@@ -1,0 +1,179 @@
+{
+ "id": "short-where-canadians-live-v2",
+ "format": "9x16",
+ "fps": 30,
+ "theme": "ember",
+ "title": "Where Canadians live",
+ "kicker": "Where Canadians live",
+ "years": [
+  1971,
+  2026
+ ],
+ "preliminary": [
+  2026
+ ],
+ "intro": 4.0,
+ "perYear": 0.4,
+ "endHold": 1.2,
+ "outro": 7.0,
+ "hook": [
+  "Canada has added <em>19.8 million</em> people since 1971.",
+  "Three provinces account for 77% of the increase."
+ ],
+ "hookNote": "Population on July 1 of each year, 1971 to 2026. 2026 is a preliminary estimate.",
+ "introFocus": [
+  "ON",
+  "BC",
+  "AB"
+ ],
+ "introCam": "westwide",
+ "beats": [
+  {
+   "year": 1981,
+   "hold": 2.3,
+   "kicker": "1980–81",
+   "cam": "west",
+   "focus": [
+    "AB"
+   ],
+   "text": "Alberta: +100,075 people in one year (+4.6%)."
+  },
+  {
+   "year": 2024,
+   "hold": 2.6,
+   "kicker": "2023–24",
+   "cam": "centre",
+   "focus": [
+    "ON",
+    "AB"
+   ],
+   "text": "Ontario: +472,089 in one year, the largest one-year increase by a province since 1971. Alberta: +4.6% again."
+  }
+ ],
+ "summary": {
+  "seconds": 6.5,
+  "title": "1971 to 2026",
+  "focus": [
+   "ON",
+   "BC",
+   "AB"
+  ],
+  "items": [
+   {
+    "dir": "up",
+    "big": "+19.8M",
+    "place": "Since 1971",
+    "text": "Canada, up 90% (2026 preliminary). Ontario, B.C. and Alberta: 77% of the increase."
+   },
+   {
+    "dir": "up",
+    "big": "+472,089",
+    "place": "Largest one-year increase",
+    "text": "Ontario, July 2023 to July 2024 (+3.0%)."
+   },
+   {
+    "dir": "up",
+    "big": "~+4.6%",
+    "place": "Fastest one-year growth",
+    "text": "Alberta, twice: 1980–81 and 2023–24."
+   }
+  ]
+ },
+ "outro_card": {
+  "title": "Sources and method",
+  "lines": [
+   {
+    "cls": "src",
+    "text": "Statistics Canada, Table 17-10-0009-01: population estimates, quarterly (July 1 estimates). Statistics Canada Open Licence."
+   },
+   {
+    "text": "Column height shows population. Province colour shows growth from the year before. Every figure shown is a published value; movement between years is animation. 2026 is a preliminary estimate."
+   },
+   {
+    "cls": "lim",
+    "text": "This video shows where population changed, not why."
+   }
+  ]
+ },
+ "raceTitle": "Provinces: population on July 1",
+ "credit": "The Canadian Data Project",
+ "sourceLine": "Source: Statistics Canada, Table 17-10-0009-01. Movement between years is animation.",
+ "callouts": {
+  "NB": [
+   7380,
+   1330
+  ],
+  "NS": [
+   8300,
+   1000
+  ],
+  "PE": [
+   8330,
+   2120
+  ]
+ },
+ "relief": {
+  "b": [
+   3660,
+   630,
+   9040,
+   5270
+  ],
+  "opacity": 0.22
+ },
+ "pctScale": 3.0,
+ "kmPerMillion": 105,
+ "columnRadius": 40,
+ "cameras": {
+  "wide": {
+   "t": [
+    6420,
+    2350
+   ],
+   "z": -3.06,
+   "x": 58,
+   "o": -4
+  },
+  "westwide": {
+   "t": [
+    5500,
+    2750
+   ],
+   "z": -2.75,
+   "x": 58,
+   "o": -8
+  },
+  "end": {
+   "t": [
+    6420,
+    2300
+   ],
+   "z": -3.1,
+   "x": 60,
+   "o": -2
+  },
+  "west": {
+   "t": [
+    4950,
+    2950
+   ],
+   "z": -2.4,
+   "x": 55,
+   "o": -12
+  },
+  "centre": {
+   "t": [
+    6000,
+    2800
+   ],
+   "z": -2.72,
+   "x": 56,
+   "o": -6
+  }
+ },
+ "sources": [
+  "statcan_17100009"
+ ],
+ "method": "Printed figures are published Statistics Canada July 1 population estimates for the year on screen. Column heights, province tints (growth from the previous July 1) and bar lengths move linearly between consecutive years as animation only; in-between states are never printed. 2026 is preliminary.",
+ "figures_sha256": "b50bf05150e42edf3771ceb1d6868581fb6747b5886e0d1450b8b3437958bd0b"
+}
