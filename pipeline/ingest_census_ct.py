@@ -28,7 +28,8 @@ FIELDS = [
     ("indig", 1403, "Indigenous identity", "r"),
     ("own", 1415, "Owner", "r"), ("rent", 1416, "Renter", "r"),
     ("shelter30", 1467, "Spending 30% or more of income on shelter costs", "r"), ("homeval", 1488, "Median value of dwellings ($)", "n"),
-    ("imm", 1529, "Immigrants", "r"), ("npr", 1537, "Non-permanent residents", "r"),
+    ("ph", 1527, "Total - Immigrant status and period of immigration for the population in private households", "n"),
+    ("imm", 1529, "Immigrants", "r"), ("imm_new", 1536, "2016 to 2021", "r"), ("npr", 1537, "Non-permanent residents", "r"),
     ("vm", 1684, "Total visible minority population", "r"), ("vm_sa", 1685, "South Asian", "r"), ("vm_cn", 1686, "Chinese", "r"),
     ("vm_bl", 1687, "Black", "r"), ("vm_fi", 1688, "Filipino", "r"), ("vm_ar", 1689, "Arab", "r"), ("vm_la", 1690, "Latin American", "r"),
     ("vm_sea", 1691, "Southeast Asian", "r"), ("vm_wa", 1692, "West Asian", "r"), ("vm_ko", 1693, "Korean", "r"), ("vm_ja", 1694, "Japanese", "r"),
@@ -82,9 +83,13 @@ def main():
                 a["v"][FIELDS.index(want[cid])] = cnt if which == "n" else rate
             if cid in POB:
                 pob_names[cid] = name
-                if cnt:
+                if cnt is not None:   # a published zero is kept as 0; suppressed stays absent
                     a["pob"][cid] = int(cnt)
-    out = dict(source_id="statcan_98401X2021007", year=2021, fields=[f[0] for f in FIELDS], field_names=names_seen,
+    pob_ids = sorted(pob_names)
+    for a in areas.values():   # compact: one list per area in pob_ids order (None = suppressed), omitted when all are suppressed
+        row = [a["pob"].get(k) for k in pob_ids]
+        a["pob"] = row if any(v is not None for v in row) else None
+    out = dict(pob_ids=[str(k) for k in pob_ids], source_id="statcan_98401X2021007", year=2021, fields=[f[0] for f in FIELDS], field_names=names_seen,
                pob_names={str(k): v for k, v in sorted(pob_names.items())},
                notes=["2021 Census of Population. Income is for 2020 (pandemic benefits included). Most measures are from the 25% long-form sample; Statistics Canada rounds counts randomly.",
                       "Suppressed or unavailable values are kept as missing, never zero. Data-quality flag and global non-response rates (short form, long form) are kept per area.",
@@ -92,6 +97,8 @@ def main():
                areas=areas)
     dst = ROOT / "web/data/cities/ct_profile.json"; dst.parent.mkdir(parents=True, exist_ok=True)
     dst.write_text(json.dumps(out, separators=(",", ":"), ensure_ascii=False))
+    idx = {g[-3:]: [a["name"], a["v"][0]] for g, a in areas.items() if a["level"] != "Census tract"}   # small index for search
+    (ROOT / "web/data/cities/cma_index.json").write_text(json.dumps(dict(source_id="statcan_98401X2021007", cities=idx, pob_names={str(k): v for k, v in sorted(pob_names.items())}), ensure_ascii=False))
     lv = {}
     for a in areas.values(): lv[a["level"]] = lv.get(a["level"], 0) + 1
     print(dst.relative_to(ROOT), round(dst.stat().st_size / 1e6, 1), "MB", lv)

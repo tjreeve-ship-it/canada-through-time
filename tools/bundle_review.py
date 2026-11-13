@@ -25,7 +25,9 @@ def main():
         b64 = base64.b64encode((WEB / "fonts" / f).read_bytes()).decode()
         css = css.replace(f"url(../fonts/{f})", f"url(data:font/woff2;base64,{b64})")
     js = (SRC / "explore.js").read_text()
-    paths = set(re.findall(r"J\('(\.\./data/[^']+)'\)", js))
+    extra = SRC / "cities.js"   # neighbourhood view (second module)
+    cjs = extra.read_text() if extra.exists() and "cities.js" in html else ""
+    paths = set(re.findall(r"J\('(\.\./data/[^']+)'\)", js + cjs))
     paths |= {f"../data/housing/{n}.json" for n in re.findall(r"\[('construction'[^\]]+)\]\.map\(n => J", js)[0].replace("'", "").split(", ")}
     if "../data/more/" in js:   # loaded by a template literal: include every file in that folder
         paths |= {f"../data/more/{f.name}" for f in (WEB / "data/more").glob("*.json")}
@@ -37,7 +39,9 @@ def main():
     html = html.replace('<link rel="stylesheet" href="explore.css">', f"<style>\n{css}\n</style>")
     html = html.replace('<script src="../vendor/deck.min.js"></script>', f"<script>{deck}</script>\n<script>window.__DATA = {json.dumps(data, separators=(',', ':')).replace("</", "<\\/")};</script>")
     html = html.replace('<script type="module" src="explore.js"></script>', f'<script type="module">\n{js}\n</script>')
-    assert "src=\"explore.js\"" not in html and "../vendor" not in html
+    if cjs:
+        html = html.replace('<script type="module" src="cities.js"></script>', f'<script type="module">\n{cjs.replace("</script", "<\\/script")}\n</script>')
+    assert "src=\"explore.js\"" not in html and "src=\"cities.js\"" not in html and "../vendor" not in html
     OUT.parent.mkdir(exist_ok=True)
     OUT.write_text(html)
     print(f"{OUT.relative_to(ROOT)}: {OUT.stat().st_size / 1e6:.1f} MB · {len(data)} data files · {len(used)} fonts")

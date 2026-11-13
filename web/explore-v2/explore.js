@@ -343,11 +343,12 @@ const whenOf = (m, y) => m.comp || m.kind === 'arcs' ? compWhen(y) : m.when(y);
 // ---------------------------------------------------------------- state
 const state = { m: 'pop', y: YMAX, p: null, cmp: null, cmpY: null, city: Q.get('city') || null, cmpCity: Q.get('vs') || null, hoverCity: null, q: null, playing: false, speed: 0.8 };
 const enc = g => g === 'NT+NU' ? 'ntnu' : g.toLowerCase(), dec = t => t === 'ntnu' ? 'NT+NU' : (t || '').toUpperCase();
-function applyHash() { const [h0, then] = location.hash.slice(1).split('@'); state.cmpY = +then || null; const [main, vs] = h0.split('-vs-'); const [m, y, p] = main.split('-'); if (M[m]) state.m = m; if (+y >= YMIN && +y <= YMAX) state.y = +y;
+function applyHash() { if (location.hash.startsWith('#nb=')) return; const [h0, then] = location.hash.slice(1).split('@'); state.cmpY = +then || null; const [main, vs] = h0.split('-vs-'); const [m, y, p] = main.split('-'); if (M[m]) state.m = m; if (+y >= YMIN && +y <= YMAX) state.y = +y;
   state.p = NAMES[dec(p)] && dec(p) !== 'CAN' ? dec(p) : null; state.cmp = vs && NAMES[dec(vs)] ? dec(vs) : null; }
 applyHash();
-const writeHash = () => { const t = `#${state.m}-${state.y}${state.p ? '-' + enc(state.p) : ''}${state.p && state.cmp ? '-vs-' + enc(state.cmp) : ''}${state.cmpY ? '@' + state.cmpY : ''}`; if (location.hash !== t) history.replaceState(null, '', t); };
-addEventListener('hashchange', () => { applyHash(); update(); });
+const writeHash = () => { if (location.hash.startsWith('#nb=') || document.body.classList.contains('nb-on')) return; const t = `#${state.m}-${state.y}${state.p ? '-' + enc(state.p) : ''}${state.p && state.cmp ? '-vs-' + enc(state.cmp) : ''}${state.cmpY ? '@' + state.cmpY : ''}`; if (location.hash !== t) history.replaceState(null, '', t); };
+addEventListener('hashchange', () => { if (location.hash.startsWith('#nb=')) { window.CITIES?.open(); return; } applyHash(); update(); });
+addEventListener('nb-close', () => { writeHash(); });
 const clampYear = (m, y) => { y = Math.max(m.years[0], Math.min(m.years[1], y)); return m.only ? m.only.reduce((b, o) => Math.abs(o - y) < Math.abs(b - y) ? o : b) : y; };
 const isPhone = () => innerWidth <= 1100;   // phones and tablets share the bottom-sheet layout
 
@@ -695,7 +696,7 @@ const GROUPS = ['Questions', ...SECTIONS.map(s => s[0])];
 const TABNAME = g => g === 'Questions' ? 'Start here' : g;
 const GROUP_SHORT = { 'Where growth came from': 'Where growth came from', 'Housing and cost of living': 'Housing', 'Age and cities': 'Age & cities', 'Economy and jobs': 'Economy & jobs', 'Immigration and language': 'Immigration & language' };
 function drawNav() { requestAnimationFrame(fitReading); const cur = state.navQ ? 'Questions' : SEC_OF[M[state.m].group];
-  const tabs = `<div class="tabs">${GROUPS.map(g => `<button class="tab ${g === cur ? 'on' : ''}" data-g="${g}">${TABNAME(g)}</button>`).join('')}<button class="tab tools-tab" data-home>☰ All questions</button></div>`;
+  const tabs = `<div class="tabs">${GROUPS.map(g => `<button class="tab ${g === cur ? 'on' : ''}" data-g="${g}">${TABNAME(g)}</button>`).join('')}<button class="tab nb-tab" data-nbopen>Neighbourhoods</button><button class="tab tools-tab" data-home>☰ All questions</button></div>`;
   if (cur === 'Questions') { document.getElementById('layers').innerHTML = tabs + `
     <div class="plates"><button class="opt qopt story ${state.story != null ? 'on' : ''}" data-story="0">The story: ${STORY.title}</button>${PATHS.map(p => `<button class="opt qopt ${state.q === p.id ? 'on' : ''}" data-q="${p.id}">${p.q}</button>`).join('')}</div>`; return; }
   const groups = SECTIONS.find(s => s[0] === cur)[1], g0 = M[state.m].group;
@@ -704,6 +705,7 @@ function drawNav() { requestAnimationFrame(fitReading); const cur = state.navQ ?
 document.getElementById('layers').addEventListener('click', e => {
   if (e.target.closest('[data-story]')) { openStory(0); return; }
   if (e.target.closest('[data-home]')) { openHome(); return; }
+  if (e.target.closest('[data-nbopen]')) { window.CITIES?.open(); return; }
   const qb = e.target.closest('[data-q]'); if (qb) { openPath(qb.dataset.q); return; }
   const sb = e.target.closest('[data-sub]'); if (sb) { const m = MEASURES.find(x => x.group === sb.dataset.sub); state.navQ = false; state.m = m.id; state.y = clampYear(m, state.y); update(); return; }
   const t = e.target.closest('.tab'); if (!t) return;
@@ -1508,7 +1510,7 @@ function openHome(focusSearch = false) {
   homeEl.innerHTML = `<div class="hin"><div class="hhead"><div class="hkick">Canada Through Time</div><h1>${YMAX - 1971} years of Canada, mapped from official data</h1>
     <p>Every number traces back to its source: Statistics Canada, Immigration Canada and Elections Canada.</p></div>
     <div class="hsearch"><input id="q-search" type="search" placeholder="${isPhone() ? "Search a place, topic or year" : "Search a place, a topic or a year (try “Alberta unemployment 2010”)"}" autocomplete="off" aria-label="Search"><div id="q-results" role="listbox"></div></div>
-    <div class="hgrid">${cards}</div>
+    <div class="hgrid">${cards}<button class="hcard hnb" data-nbhome><span class="hsec">Cities</span><span class="hq">Who lives where in your city?</span><span class="hbig">6,247</span><span class="hsub">neighbourhoods in 50 cities: income, rent, age, origins, language</span></button></div>
     <div class="hfoot"><button class="hgo" data-close>Explore the map freely →</button><button class="linkish" data-story="0">Or read the story: ${STORY.title}</button></div></div>`;
   homeEl.hidden = false; document.body.classList.add('home-on');
   const inp = document.getElementById('q-search'); inp.addEventListener('input', () => drawResults(inp.value)); inp.addEventListener('keydown', e => { if (e.key === 'Enter') { const r = searchAll(inp.value)[0]; if (r) { r.go(); closeHome(); } } if (e.key === 'Escape') closeHome(); });
@@ -1518,6 +1520,7 @@ function closeHome() { homeEl.hidden = true; document.body.classList.remove('hom
 homeEl.addEventListener('click', e => {
   if (e.target === homeEl || e.target.closest('[data-close]')) { closeHome(); return; }
   if (e.target.closest('[data-story]')) { closeHome(); openStory(0); return; }
+  if (e.target.closest('[data-nbhome]')) { closeHome(); window.CITIES?.open(); return; }
   const c = e.target.closest('[data-card]'); if (c) { const d = HOME_CARDS[+c.dataset.card]; state.navQ = false; state.story = null; state.q = null; state.m = d.m; state.y = clampYear(M[d.m], lastYear(M[d.m])); state.p = d.place && d.place !== 'CAN' ? d.place : null; state.city = null; state.cmp = null; closeHome(); update();
     if (d.open) setTimeout(() => { const det = [...document.querySelectorAll('details.path')].find(x => x.querySelector('summary').textContent.includes(d.open)); if (det) { det.open = true; } }, 50); return; }
   const r = e.target.closest('[data-res]'); if (r) { LAST_RESULTS[+r.dataset.res].go(); closeHome(); } });
@@ -1528,8 +1531,23 @@ const norm = t => t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').repla
 const PLACE_ALIASES = { CAN: ['canada'], NL: ['newfoundland', 'labrador', 'nfld'], PE: ['pei', 'p.e.i.', 'prince edward'], NS: ['nova scotia'], NB: ['new brunswick'], QC: ['quebec'], ON: ['ontario'], MB: ['manitoba'], SK: ['saskatchewan', 'sask'], AB: ['alberta'], BC: ['british columbia', 'b.c.'], YT: ['yukon'], NT: ['northwest territories', 'nwt'], NU: ['nunavut'] };
 const SYN = { jobs: 'unemployment employment', job: 'unemployment employment', money: 'federal spending collected', tax: 'collected revenue spent', taxes: 'collected revenue spent', immigration: 'immigrants permanent residents', immigrants: 'immigrants permanent', rent: 'rent rental', housing: 'housing starts rent', age: 'median age older', old: 'median age aged 65', kids: 'under 15', french: 'french mother tongue', language: 'mother tongue french', economy: 'gdp', health: 'health transfer', debt: 'interest debt', election: 'federal election seats', vote: 'election seats', moved: 'moves between provinces migration flows', growth: 'growth population', people: 'people population' };
 let LAST_RESULTS = [];
+const CMA_J = await J('../data/cities/cma_index.json'), CMA_IDX = CMA_J.cities, CMA_POB = CMA_J.pob_names;
+const CITY_AL = Object.entries(CMA_IDX).map(([code, [n]]) => [code, n.replace(' / Grand Sudbury', '').replace(/ - /g, '–'), n.split(/ - | \/ /).map(x => norm(x).trim())]);
+// neighbourhood results: a city name (any of its parts) or words like "neighbourhood" open the census-tract view
+function nbResults(t) {
+  const has = a => new RegExp(`(^| )${a}( |$)`).test(t), city = CITY_AL.filter(([, , al]) => al.some(has)).sort((a, b) => CMA_IDX[b[0]][1] - CMA_IDX[a[0]][1])[0];
+  const generic = /neighbo|tract|census|district|city|cities/.test(t); if (!city && !generic) return [];
+  const words = t.split(' ').filter(w => w.length > 2 && !/neighbo|tract|census|district|^city|^cities/.test(w) && !(city && city[2].some(a => a.includes(w)))), MS = window.CITIES?.MS || [];
+  // a visible minority group or a country of birth named in the query picks that layer
+  const vm = (window.CITIES?.VM_SUB || []).slice(1).find(([, n]) => words.some(w => norm(n).split(' ').includes(w)));
+  const pob = Object.entries(CMA_POB).find(([, n]) => !/^other|americas|europe|africa|asia|oceania/i.test(n) && words.some(w => w.length > 3 && norm(n).split(' ').includes(w)));
+  const m = vm ? MS.find(x => x.k === 'vm') : pob ? MS.find(x => x.k === 'born') : MS.map(x => [x, words.filter(w => norm(x.l + ' ' + x.k + ' ' + x.q).includes(w)).length]).filter(r => r[1]).sort((a, b) => b[1] - a[1])[0]?.[0];
+  const what = vm ? vm[1] : pob ? 'born in ' + pob[1] : m ? m.l.toLowerCase() : '';
+  return [{ t: `Neighbourhoods${city ? ' in ' + city[1] : ''}${what ? ': ' + what : ''}`, s: `Census tracts, 2021${city ? '' : ' · 50 cities'}`, nb: true, go: () => window.CITIES?.open({ city: city ? city[0] : null, m: m?.k, sub: vm ? vm[0] : pob ? pob[0] : null }) }];
+}
 function searchAll(raw) {
   const t = norm(raw).trim(); if (!t) return [];
+  const nb = nbResults(t);
   const yr = (t.match(/\b(19[7-9]\d|20[0-4]\d)\b/) || [])[1]; let rest = t.replace(/\b(19|20)\d\d\b/, ' ');
   let place = null; for (const [g, al] of Object.entries(PLACE_ALIASES)) for (const a of [...al, g.toLowerCase()]) { const re = new RegExp(`(^| )${a.replace('.', '\\.')}( |$)`); if (re.test(rest)) { place = g; rest = rest.replace(re, ' '); break; } }
   const words = rest.split(' ').filter(w => w.length > 1).flatMap(w => (SYN[w] || w).split(' '));
@@ -1540,6 +1558,7 @@ function searchAll(raw) {
   if (place && !ms.length) out.push({ t: NAMES[place], s: `${M[state.m].label}${yr ? ' · ' + yr : ''}`, go: go(null, place, yr) });
   if (yr && !ms.length && !place) out.push({ t: `Jump to ${yr}`, s: M[state.m].label, go: go(null, state.p, yr) });
   for (const p of PATHS) if (words.some(w => norm(p.q).includes(w))) out.push({ t: p.q, s: 'Question', go: () => openPath(p.id) });
+  if (nb.length) { const cityHit = !nb[0].t.endsWith('Neighbourhoods') && nb[0].t.includes(' in '); if (cityHit && !place) out.unshift(...nb); else out.push(...nb); }
   return out.slice(0, 8);
 }
 function drawResults(v) { LAST_RESULTS = searchAll(v); document.getElementById('q-results').innerHTML = LAST_RESULTS.map((r, i) => `<button data-res="${i}" class="${i ? '' : 'first'}"><b>${r.t}</b><span>${r.s}</span></button>`).join('') || (v.trim() ? '<div class="none">No match. Try a province, a topic like “rent” or “jobs”, or a year.</div>' : ''); }
