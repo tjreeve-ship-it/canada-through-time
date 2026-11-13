@@ -1016,3 +1016,7 @@ body.has-shell #home { top: var(--shell-h); background: color-mix(in srgb, var(-
 #nb .kick, #cl .kick { color: var(--accent-ink, var(--accent)); }
 #nb-h, #cl .nbx-title h1 { font-size: 32px; letter-spacing: -.01em; }
 #cl-modes button.on, .nb-g button.on, .scale button.on { background: var(--ink-1); }
+/* worlds fade in when opened */
+@keyframes worldIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+#nb:not([hidden]), #cl:not([hidden]), #mn:not([hidden]), #home:not([hidden]) { animation: worldIn .22s ease-out; }
+@media (prefers-reduced-motion: reduce) { #nb, #cl, #mn, #home { animation: none !important; } }
