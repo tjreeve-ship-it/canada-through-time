@@ -1022,7 +1022,7 @@ body.has-shell #home { top: var(--shell-h); background: color-mix(in srgb, var(-
 @media (prefers-reduced-motion: reduce) { #nb, #cl, #mn, #home { animation: none !important; } }
 
 /* ================================================================== TOUR — how to use each page */
-#shell .qhelp { flex: none; width: 34px; height: 34px; border-radius: 50%; font: 700 15px var(--font-ui); box-shadow: inset 0 0 0 1.5px color-mix(in oklab, var(--page) 40%, transparent); }
+#shell .qhelp { display: grid; place-items: center; text-align: center; padding: 0; flex: none; width: 34px; height: 34px; border-radius: 50%; font: 700 15px var(--font-ui); box-shadow: inset 0 0 0 1.5px color-mix(in oklab, var(--page) 40%, transparent); }
 #shell .qhelp:hover { background: var(--accent); box-shadow: none; }
 #tour { position: fixed; inset: 0; z-index: 200; }
 #tour[hidden] { display: none; }
@@ -1039,3 +1039,26 @@ body.has-shell #home { top: var(--shell-h); background: color-mix(in srgb, var(-
 @media (max-width: 900px) { #shell .qhelp { width: 30px; height: 30px; font-size: 13px; } #tour .t-card { padding: 14px 16px 12px; } #tour h3 { font-size: 19px; } #tour p { font-size: 14px; } }
 @media (prefers-reduced-motion: reduce) { #tour .t-spot, #tour .t-card { transition: none; animation: none; } }
 #tour.dim { background: rgba(12, 12, 8, .58); }
+
+/* ================================================================== ABOUT AND SOURCES */
+#shell .about { flex: none; font-size: 13.5px; font-weight: 500; opacity: .75; padding: 6px 8px; }
+#shell .about:hover, #shell .about.on { opacity: 1; } #shell .about.on { box-shadow: inset 0 -2px 0 var(--accent); }
+body.has-shell #ab { top: var(--shell-h); }
+.ab { max-width: 880px; margin: 0 auto; }
+.ab-s { padding: 8px 0 34px; border-bottom: 1px solid var(--hairline); margin-bottom: 26px; scroll-margin-top: 16px; }
+.ab-s:last-child { border-bottom: 0; }
+.ab h2 { font: 500 30px/1.15 var(--font-display); margin: 0 0 14px; }
+.ab h3 { font: 600 15px var(--font-ui); margin: 26px 0 10px; } .ab h3 small { color: var(--ink-3); font-weight: 400; margin-left: 6px; }
+.ab p { font-size: 16px; line-height: 1.6; color: var(--ink-2); margin: 0 0 12px; } .ab p b { color: var(--ink-1); }
+.ab p.big { font: 400 22px/1.45 var(--font-display); color: var(--ink-1); }
+.ab p.muted { font-size: 13.5px; color: var(--ink-3); }
+.ab a { color: var(--accent-ink, var(--accent)); text-underline-offset: 2px; }
+.ab .rules { padding-left: 22px; margin: 0; } .ab .rules li { font-size: 15.5px; line-height: 1.55; color: var(--ink-2); margin-bottom: 12px; padding-left: 4px; } .ab .rules li b { color: var(--ink-1); }
+.ab .slist { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.ab .srow { background: var(--panel); border-radius: 12px; padding: 14px 16px; box-shadow: inset 0 0 0 1px var(--hairline); }
+.ab .st b { font-size: 14.5px; } .ab .tid { font: 600 11.5px var(--font-ui); color: var(--ink-3); margin-left: 6px; white-space: nowrap; }
+.ab .smeta { font-size: 12.5px; color: var(--ink-3); margin-top: 3px; } .ab .sa { font-size: 13px; color: var(--ink-2); margin-top: 6px; line-height: 1.45; }
+.ab .sl { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12.5px; color: var(--ink-3); margin-top: 8px; }
+.ab details { margin-top: 8px; font-size: 12.5px; color: var(--ink-2); } .ab summary { cursor: pointer; color: var(--ink-3); } .ab details ul { margin: 6px 0 0; padding-left: 18px; line-height: 1.45; }
+@media (max-width: 1180px) { #shell .about { display: none; } }
+@media (max-width: 900px) { .ab h2 { font-size: 24px; } .ab p.big { font-size: 18px; } .ab p { font-size: 15px; } }

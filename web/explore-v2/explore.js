@@ -343,11 +343,11 @@ const whenOf = (m, y) => m.comp || m.kind === 'arcs' ? compWhen(y) : m.when(y);
 // ---------------------------------------------------------------- state
 const state = { m: 'pop', y: YMAX, p: null, cmp: null, cmpY: null, city: Q.get('city') || null, cmpCity: Q.get('vs') || null, hoverCity: null, q: null, playing: false, speed: 0.8 };
 const enc = g => g === 'NT+NU' ? 'ntnu' : g.toLowerCase(), dec = t => t === 'ntnu' ? 'NT+NU' : (t || '').toUpperCase();
-function applyHash() { if (/^#(nb|cl)=/.test(location.hash)) return; const [h0, then] = location.hash.slice(1).split('@'); state.cmpY = +then || null; const [main, vs] = h0.split('-vs-'); const [m, y, p] = main.split('-'); if (M[m]) state.m = m; if (+y >= YMIN && +y <= YMAX) state.y = +y;
+function applyHash() { if (/^#(nb|cl|mn)=|^#about/.test(location.hash)) return; const [h0, then] = location.hash.slice(1).split('@'); state.cmpY = +then || null; const [main, vs] = h0.split('-vs-'); const [m, y, p] = main.split('-'); if (M[m]) state.m = m; if (+y >= YMIN && +y <= YMAX) state.y = +y;
   state.p = NAMES[dec(p)] && dec(p) !== 'CAN' ? dec(p) : null; state.cmp = vs && NAMES[dec(vs)] ? dec(vs) : null; }
 applyHash();
-const writeHash = () => { if (/^#(nb|cl)=/.test(location.hash) || document.body.classList.contains('nb-on')) return; const t = `#${state.m}-${state.y}${state.p ? '-' + enc(state.p) : ''}${state.p && state.cmp ? '-vs-' + enc(state.cmp) : ''}${state.cmpY ? '@' + state.cmpY : ''}`; if (location.hash !== t) history.replaceState(null, '', t); };
-addEventListener('hashchange', () => { if (location.hash.startsWith('#nb=')) { window.CITIES?.open(); return; } if (location.hash.startsWith('#cl=')) { window.CLIMATE?.open(); return; } applyHash(); update(); });
+const writeHash = () => { if (/^#(nb|cl|mn)=|^#about/.test(location.hash) || document.body.classList.contains('nb-on')) return; const t = `#${state.m}-${state.y}${state.p ? '-' + enc(state.p) : ''}${state.p && state.cmp ? '-vs-' + enc(state.cmp) : ''}${state.cmpY ? '@' + state.cmpY : ''}`; if (location.hash !== t) history.replaceState(null, '', t); };
+addEventListener('hashchange', () => { if (location.hash.startsWith('#nb=')) { window.CITIES?.open(); return; } if (location.hash.startsWith('#cl=')) { window.CLIMATE?.open(); return; } if (location.hash.startsWith('#mn=')) { window.MONEY?.open(); return; } if (location.hash === '#about') { window.ABOUT?.open(); return; } applyHash(); update(); });
 addEventListener('nb-close', () => { writeHash(); });
 const clampYear = (m, y) => { y = Math.max(m.years[0], Math.min(m.years[1], y)); return m.only ? m.only.reduce((b, o) => Math.abs(o - y) < Math.abs(b - y) ? o : b) : y; };
 const isPhone = () => innerWidth <= 1100;   // phones and tablets share the bottom-sheet layout
@@ -1521,7 +1521,7 @@ function openHome(focusSearch = false) {
     <div class="hworlds">${W.map(([k, t, d, f, ic]) => `<button class="hworld w-${k}" data-goworld="${k}"><svg viewBox="0 0 24 24" aria-hidden="true">${ICON[ic]}</svg><span class="wt">${t}</span><span class="wd">${d}</span><span class="wf">${f}</span><span class="wgo">Open →</span></button>`).join('')}</div>
     <h2 class="hq2">Questions to start with</h2>
     <div class="hgrid">${cards}</div>
-    <div class="hfoot"><button class="hgo" data-close>Explore the map freely →</button><button class="linkish" data-story="0">Or read the story: ${STORY.title}</button></div></div>`;
+    <div class="hfoot"><button class="hgo" data-close>Explore the map freely →</button><button class="linkish" data-story="0">Or read the story: ${STORY.title}</button><button class="linkish" data-goworld="ab">About and sources</button></div></div>`;
   homeEl.hidden = false; document.body.classList.add('home-on');
   const inp = document.getElementById('q-search'); inp.addEventListener('input', () => drawResults(inp.value)); inp.addEventListener('keydown', e => { if (e.key === 'Enter') { const r = searchAll(inp.value)[0]; if (r) { r.go(); closeHome(); } } if (e.key === 'Escape') closeHome(); });
   if (focusSearch) setTimeout(() => inp.focus(), 30);
