@@ -1526,7 +1526,7 @@ function openHome(focusSearch = false) {
   const inp = document.getElementById('q-search'); inp.addEventListener('input', () => drawResults(inp.value)); inp.addEventListener('keydown', e => { if (e.key === 'Enter') { const r = searchAll(inp.value)[0]; if (r) { r.go(); closeHome(); } } if (e.key === 'Escape') closeHome(); });
   if (focusSearch) setTimeout(() => inp.focus(), 30);
 }
-function closeHome() { homeEl.hidden = true; document.body.classList.remove('home-on'); try { localStorage.setItem('ctt-home-seen', '1'); } catch (e) { } }
+function closeHome() { const was = !homeEl.hidden; homeEl.hidden = true; document.body.classList.remove('home-on'); try { localStorage.setItem('ctt-home-seen', '1'); } catch (e) { } if (was) setTimeout(() => dispatchEvent(new Event('home-close')), 0); }
 homeEl.addEventListener('click', e => {
   if (e.target === homeEl || e.target.closest('[data-close]')) { closeHome(); return; }
   if (e.target.closest('[data-story]')) { closeHome(); openStory(0); return; }

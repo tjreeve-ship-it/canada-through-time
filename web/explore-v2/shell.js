@@ -11,12 +11,13 @@ const bar = document.createElement('header');
 bar.id = 'shell';
 bar.innerHTML = `<button class="brand" data-shell-home aria-label="Home"><span class="glyph" aria-hidden="true"><i></i><i></i><i></i></span><span class="bt">Canada <em>Through Time</em></span></button>
   <nav class="worlds" aria-label="Sections">${WORLDS.map(([k, l, s, ic]) => `<button data-world="${k}" aria-label="${l}"><svg viewBox="0 0 24 24" aria-hidden="true">${ic}</svg><span class="lg">${l}</span><span class="sm">${s}</span></button>`).join('')}</nav>
-  <button class="find" data-shell-search aria-label="Search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><span>Search places, topics, years</span><kbd>/</kbd></button>`;
+  <button class="find" data-shell-search aria-label="Search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><span>Search places, topics, years</span><kbd>/</kbd></button>
+  <button class="qhelp" data-shell-help aria-label="How to use this page" title="How to use this page">?</button>`;
 document.body.prepend(bar);
 document.body.classList.add('has-shell');
 
 let current = 'map';
-function mark(k) { current = k; bar.querySelectorAll('[data-world]').forEach(b => { const on = b.dataset.world === k; b.classList.toggle('on', on); b.setAttribute('aria-current', on ? 'page' : 'false'); }); }
+function mark(k) { if (k !== current && k !== 'map') window.TOUR?.maybe(k); current = k; bar.querySelectorAll('[data-world]').forEach(b => { const on = b.dataset.world === k; b.classList.toggle('on', on); b.setAttribute('aria-current', on ? 'page' : 'false'); }); }
 function closeAll(except) { for (const [k, api] of Object.entries(API)) { if (k === except) continue; const a = api(), node = document.getElementById(k); try { if (a && node && !node.hidden) a.close(); } catch (e) { console.warn(e); } } }
 async function go(k, opts) {
   window.CTX2?.closeHome?.();
@@ -26,6 +27,7 @@ async function go(k, opts) {
 }
 bar.addEventListener('click', e => {
   const w = e.target.closest('[data-world]'); if (w) { go(w.dataset.world); return; }
+  if (e.target.closest('[data-shell-help]')) { window.CTX2?.closeHome?.(); window.TOUR?.start(current); return; }
   if (e.target.closest('[data-shell-search]')) { closeAll(); mark('map'); window.CTX2?.openHome?.(true); return; }
   if (e.target.closest('[data-shell-home]')) { closeAll(); mark('map'); window.CTX2?.openHome?.(); }
 });
@@ -36,4 +38,7 @@ addEventListener('nb-close', () => setTimeout(syncFromHash, 0));
 new MutationObserver(() => { const open = ['nb', 'cl', 'mn'].find(k => { const x = document.getElementById(k); return x && !x.hidden; }); if ((open || 'map') !== current) mark(open || 'map'); })
   .observe(document.body, { subtree: true, attributes: true, attributeFilter: ['hidden'], childList: true });
 syncFromHash();
+// first visit straight to a page (a shared link): offer the tour for that page once it has drawn
+setTimeout(() => { if (current !== 'map') window.TOUR?.maybe(current); else if (!document.body.classList.contains('home-on')) window.TOUR?.maybe('map'); }, 1500);
+addEventListener('home-close', () => { if (current === 'map') window.TOUR?.maybe('map'); });
 window.SHELL = { go, mark };
