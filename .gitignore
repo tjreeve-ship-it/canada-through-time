@@ -7,3 +7,5 @@ dist/
 checkpoints/*.tar.gz
 # 2021 Census place-of-birth table is 152 MB (over GitHub's 100 MB limit). Re-download from the registry URL; the pipeline checks its SHA-256.
 data/raw/statcan/98100302-eng.zip
+# 2021 census tract profile (250 MB zip). Re-download from the registry URL; the pipeline checks its SHA-256.
+data/raw/census2021/98-401-X2021007_eng_CSV.zip

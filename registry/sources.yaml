@@ -685,3 +685,48 @@ sources:
       - "1951–2006 from long-form questionnaires; 2011–2021 from short-form (note 1)."
     limitations:
       - "Census years only; no values between censuses."
+
+  statcan_98401X2021007:
+    title: "Census Profile, 2021 Census of Population - Census metropolitan areas, tracted census agglomerations and census tracts"
+    publisher: "Statistics Canada"
+    table_id: "98-401-X2021007"
+    landing_url: "https://open.canada.ca/data/en/dataset/750e6035-adf8-4426-966f-4c25b12a999e"
+    download_url: "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/download-telecharger/comp/getFile.cfm?LANG=E&GEONO=007&FILETYPE=CSV"
+    raw_file: "data/raw/census2021/98-401-X2021007_eng_CSV.zip"
+    sha256: "5d29811e5c3171cb16c9564bfbce0a08da45d1584810be2bd74764cbd2329ffc"
+    retrieved: "2026-11-13"
+    retrieved_via: "Downloaded by Tyson in his browser (the census site shows a bot check to scripts)"
+    reporting_period: "Census day, May 11, 2021 (income: calendar year 2020)"
+    coverage: "Census metropolitan areas, tracted census agglomerations and their census tracts"
+    units: "Persons, households, dollars, %"
+    licence: "Statistics Canada Open Licence"
+    licence_url: "https://www.statcan.gc.ca/en/reference/licence"
+    attribution: "Source: Statistics Canada, Census Profile, 2021 Census of Population (98-401-X2021007)."
+    quality_class: official_statistics
+    methodology_notes:
+      - "Most characteristics come from the 25% long-form sample; counts are randomly rounded and small or low-response areas are suppressed."
+      - "Income refers to 2020 and includes temporary pandemic benefits."
+    limitations:
+      - "One census year; census tracts are about 2,500 to 8,000 people and boundaries can change between censuses."
+
+  statcan_lct_000b21a:
+    title: "Census Tract Boundary File, 2021 Census (digital boundary file, shapefile)"
+    publisher: "Statistics Canada"
+    table_id: "92-168-X2021001"
+    landing_url: "https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/index2021-eng.cfm?Year=21"
+    download_url: "https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/files-fichiers/lct_000b21a_e.zip"
+    raw_file: "data/raw/census2021/lct_000b21a_e.zip"
+    sha256: "a645733a547cb01593c4a009ef870a5bec87957e789ddc100c7ac39a17a74726"
+    retrieved: "2026-11-13"
+    retrieved_via: "Downloaded by Tyson in his browser"
+    reporting_period: "2021 Census geography"
+    coverage: "All census tracts"
+    units: "Polygons, Statistics Canada Lambert (EPSG:3347)"
+    licence: "Statistics Canada Open Licence"
+    licence_url: "https://www.statcan.gc.ca/en/reference/licence"
+    attribution: "Source: Statistics Canada, 2021 Census Tract Boundary File."
+    quality_class: official_statistics
+    methodology_notes:
+      - "Digital boundary file: boundaries extend into water bodies. Simplified for display; never used to compute areas (land area comes from the census profile)."
+    limitations:
+      - "Not the cartographic (shoreline) version; coastlines and lakes show tract edges over water."
