@@ -80,6 +80,11 @@ function renderFrame(f) {
   ['NT', 'NU'].forEach(g => { const p = $('p-' + g); if (p) p.setAttribute('stroke-width', '0.8'); });
   $('mapwrap').style.opacity = $('key').style.opacity = mainA.toFixed(3);
   $('mapwrap').style.transform = `translateY(${((1 - mainA) * 20).toFixed(1)}px)`;
+  // camera: tilt in during the hook, slow drift through the middle, back to the opening tilt for a seamless loop
+  const fLoop = SEG.find(x => x.kind === 'loop').f0, A = SC.tilt || [52, 22];
+  const tt = f < fHook ? ease(f / fHook) : inLoop ? 1 - ease((f - s.f0) / s.n) : 1;
+  const drift = f >= fHook && f < fLoop ? Math.sin(Math.PI * (f - fHook) / (fLoop - fHook)) : 0;
+  svg.style.transform = `rotateX(${lerp(A[0], A[1], tt).toFixed(2)}deg) scale(${(lerp(0.9, 1, tt) + 0.05 * drift).toFixed(4)}) rotateZ(${(-2.5 * drift).toFixed(2)}deg)`;
   $('year').textContent = y; $('yearbox').style.opacity = (mainA * (1 - fa)).toFixed(3);
   lead.querySelector('.n').textContent = `since ${YR[0]}`; lead.querySelector('.v').textContent = SC.leadSub;
   $('head').style.opacity = (mainA * (1 - fa)).toFixed(3);
