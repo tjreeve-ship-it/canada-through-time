@@ -621,3 +621,6 @@ body.st-vert #st-ann { bottom: 206px; right: 110px; }
 body.st-vert #st-hook { left: 40px; right: 40px; top: 292px; width: auto; } body.st-vert #st-hook p { font-size: 35px; line-height: 1.16; margin-bottom: 12px; }
 body.st-vert #st-sum { left: 40px; right: 40px; top: 284px; width: auto; } body.st-vert #st-sum .row { padding: 10px 0; gap: 16px; }
 body.st-vert #st-sum b { min-width: 236px; font-size: 40px; } body.st-vert #st-sum span { font-size: 16.5px; } body.st-vert #st-sum i { font-size: 12.5px; padding: 4px 7px; margin-bottom: 5px; }
+
+/* vertical, revised: the note sits between the scale and the map (out of the bottom strip platforms cover); the map keeps clear of the right-hand button column */
+body.st-vert #st-ann { top: 428px; bottom: auto; left: 40px; right: auto; max-width: 600px; font-size: 19px; padding: 9px 14px; }

@@ -288,7 +288,7 @@ function fitView() {
   // region of the map container the country should fill, per composition
   let r;
   const rb = phone ? (document.getElementById('reading')?.getBoundingClientRect().bottom || 290) + 6 : 0;
-  if (VERT) r = [14, w - 14, 492, h - 408];
+  if (VERT) r = [10, w - 104, 492, h - 408];
   else if (V === 's') r = phone ? [0, w, Math.min(rb, h * 0.55), h - Math.min(window.__sheetH || PEEK, h * 0.5)] : STUDIO ? [430, w - 44, 64, h - 118] : [420, w - 410, 230, h - 120];
   else r = phone ? [6, w - 6, 10, h - 20] : [10, w - 300, 20, h - 10];
   const [x0, x1, y0, y1] = [r[0], Math.max(r[1], r[0] + 240), r[2], Math.max(r[3], r[2] + 200)];
@@ -1291,7 +1291,7 @@ document.addEventListener('click', e => { if (!e.target.closest('[data-studio-op
   d.showModal(); });
 if (STUDIO) { const SC = b64d(STUDIO), m = M[SC.layer]; state.m = SC.layer; state.p = SC.place || null; state.story = null; state.q = null; state.city = null;
   const years = []; for (let y = SC.from; y <= SC.to; y++) if (!m.only || m.only.includes(y)) years.push(y);
-  const fps = SC.fps || 30, nI = Math.round(SC.intro * fps), per = Math.max(1, Math.round(SC.perYear * fps)), nO = Math.round(SC.outro * fps), nS = SC.summary ? Math.round((SC.summary.seconds || 6) * fps) : 0, N = nI + years.length * per + nS + nO, fS = N - nO - nS;
+  const fps = SC.fps || 30, nI = Math.round(SC.intro * fps), per = Math.max(1, Math.round(SC.perYear * fps)), nO = Math.round(SC.outro * fps), nS = SC.summary ? Math.round((SC.summary.seconds || 6) * fps) : 0, nH = Math.round((SC.hold || 0) * fps), N = nI + years.length * per + nH + nS + nO, fS = N - nO - nS;   // hold: the last year stays on screen before the summary
   const stage = document.createElement('div'); stage.id = 'stage';
   const srcLine = m.src.map(x => registry[x]).map(r => `${r.publisher}${r.table_id ? ', table ' + r.table_id : ''}`).filter((x, i, a) => a.indexOf(x) === i).join(' · ');
   stage.innerHTML = `<div id="st-hook"></div><div id="st-sum"></div><div id="st-sub"></div><div id="st-ann"></div><div id="st-foot"><span>Source: ${srcLine}. ${SC.motion === 'stepped' ? 'Annual published values; nothing is interpolated.' : 'Every figure shown is a published annual value. Movement between years is animation.'}</span><b>${SC.credit || ''}</b></div>
@@ -1317,7 +1317,8 @@ if (STUDIO) { const SC = b64d(STUDIO), m = M[SC.layer]; state.m = SC.layer; stat
     if (smooth) { const u = Math.max(0, Math.min(years.length - 1, c - 0.5)), j = Math.min(years.length - 2, Math.floor(u)); TW = years.length > 1 ? { ya: years[j], yb: years[j + 1], k: u - j } : null; }
     view = cam(N > 1 ? f / (N - 1) : 0); theDeck.setProps({ viewState: view, controller: false, useDevicePixels: +Q.get('ss') || Math.max(2, devicePixelRatio) });   // supersample the map for video
     if (y !== lastY) { state.y = y; lastY = y; state.m = SC.layer; state.p = SC.place || null; update(); document.getElementById('r-title').textContent = SC.title; }
-    theDeck.redraw('studio'); theDeck.setProps({ layers: layers() }); theDeck.redraw('studio');
+    // one draw per frame: deck applies new layers on its next animation frame, so explicit redraws only repeat work (the old path is kept behind ?draws=2 for comparison)
+    const dr = +Q.get('draws') || 0; if (dr >= 2) theDeck.redraw('studio'); theDeck.setProps({ layers: layers() }); if (dr >= 1) theDeck.redraw('studio');   // default: deck draws once on the next animation frame, which the renderer waits for
     // text fades are tied to the frame number (never to a clock), so a frame always looks the same
     const A = annWin.filter(a => f >= a.f0 && f < a.f1).at(-1), aEl = document.getElementById('st-ann');
     if (A) aEl.textContent = A.text; aEl.style.opacity = A ? clamp01(Math.min(f - A.f0 + 1, A.f1 - f) / FADE) : 0;

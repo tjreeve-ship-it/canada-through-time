@@ -43,6 +43,7 @@
  "credit": "The Canadian Data Project",
  "format": "9x16",
  "motion": "smooth",
+ "hold": 1.5,
  "hook": [
   "Canada has added 19.8 million people since 1971.",
   "Three provinces account for 77% of the increase."

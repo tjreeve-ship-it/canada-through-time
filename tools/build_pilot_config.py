@@ -14,7 +14,7 @@ mil = lambda n: f"{n / 1e6:.1f} million"
 yrs = lambda j: (int(j["period"][8:12]), int(j["period"][-4:]))
 span = lambda j: f"{yrs(j)[0]}–{str(yrs(j)[1])[2:]}"
 base = json.loads((ROOT / "timelapses/people-1971-2026-vertical.json").read_text())
-cfg = dict(base, id="short-where-canadians-live", motion="smooth", intro=3.5, perYear=0.5, outro=6.5,
+cfg = dict(base, id="short-where-canadians-live", motion="smooth", intro=3.5, perYear=0.5, hold=1.5, outro=6.5,
   hook=[f"Canada has added {mil(c['change'])} people since 1971.", f"Three provinces account for {share3:.0f}% of the increase."],
   summary=dict(seconds=6.5, items=[
     dict(scope="period", big=f"+{mil(c['change'])}", kicker="Since 1971", text=f"Canada, 1971 to 2026: up {c['pct']:.0f}%. {', '.join(top3[:2])} and {top3[2]}: {share3:.0f}% of the increase."),
