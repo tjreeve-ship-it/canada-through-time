@@ -37,12 +37,14 @@ cfg = dict(id="short-who-moved-where", format="9x16", fps=30, theme="ember", tit
     dict(text="Each period runs July 1 to June 30 (four quarters summed). Net = moved in from other provinces minus moved out. Arc width shows how many people moved; dots show direction. Movement between years is animation; figures are published values."),
     dict(text="July 2025 to June 2026 is not shown: it is partly preliminary and based on a new data source."),
     dict(cls="lim", text="This video shows where people moved, not why.")]),
-  raceTitle="Net gain or loss since July 1971", raceNote="Moved in from other provinces minus moved out. Territories not shown.",
-  credit="The Canadian Data Project", sourceLine="Source: Statistics Canada, Table 17-10-0045-01. Net = moved in minus moved out. Territories not in bars. Movement between years is animation.",
-  callouts={"NB": [7380, 1330], "NS": [8460, 1060], "PE": [8330, 2120]},
+  raceTitle="Provinces: net gain or loss since July 1971", raceNote="Moved in from other provinces minus moved out. Territories not shown.",
+  credit="The Canadian Data Project", sourceLine="Source: Statistics Canada, Table 17-10-0045-01. Movement between years is animation.",
+  callouts={"NB": [7380, 1330], "NS": [8300, 1000], "PE": [8330, 2120]},
   relief=dict(b=[3660, 630, 9040, 5270], opacity=0.22), netScale=45000, minFlow=700, peoplePerDot=1500,
-  cameras={"wide": dict(t=[6280, 2350], z=-2.98, x=58, o=-4), "westwide": dict(t=[5500, 2750], z=-2.75, x=58, o=-8), "end": dict(t=[6280, 2300], z=-3.02, x=60, o=-2),
+  cameras={"wide": dict(t=[6420, 2350], z=-3.06, x=58, o=-4), "westwide": dict(t=[5500, 2750], z=-2.75, x=58, o=-8), "end": dict(t=[6420, 2300], z=-3.1, x=60, o=-2),
            "west": dict(t=[4900, 2500], z=-2.3, x=55, o=-12), "east": dict(t=[7250, 2150], z=-2.35, x=56, o=6), "centre": dict(t=[5800, 2300], z=-2.6, x=56, o=-6)},
+  sources=["statcan_17100045"],
+  method="Printed figures are published Statistics Canada values for each July-June period (four quarters summed) or sums of them. Arc widths, dots, province tints and bar lengths move linearly between consecutive periods as animation only; in-between states are never printed. July 2025 to June 2026 is excluded (partly preliminary; new data source).",
   figures_sha256=F["raw_sha256"])
 out = ROOT / "timelapses/short-who-moved-where.json"; out.write_text(json.dumps(cfg, indent=1, ensure_ascii=False))
 print(json.dumps({k: cfg[k] for k in ("hook", "hookNote", "beats", "summary")}, indent=1, ensure_ascii=False))

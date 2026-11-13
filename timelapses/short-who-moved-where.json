@@ -114,18 +114,18 @@
    }
   ]
  },
- "raceTitle": "Net gain or loss since July 1971",
+ "raceTitle": "Provinces: net gain or loss since July 1971",
  "raceNote": "Moved in from other provinces minus moved out. Territories not shown.",
  "credit": "The Canadian Data Project",
- "sourceLine": "Source: Statistics Canada, Table 17-10-0045-01. Net = moved in minus moved out. Territories not in bars. Movement between years is animation.",
+ "sourceLine": "Source: Statistics Canada, Table 17-10-0045-01. Movement between years is animation.",
  "callouts": {
   "NB": [
    7380,
    1330
   ],
   "NS": [
-   8460,
-   1060
+   8300,
+   1000
   ],
   "PE": [
    8330,
@@ -147,10 +147,10 @@
  "cameras": {
   "wide": {
    "t": [
-    6280,
+    6420,
     2350
    ],
-   "z": -2.98,
+   "z": -3.06,
    "x": 58,
    "o": -4
   },
@@ -165,10 +165,10 @@
   },
   "end": {
    "t": [
-    6280,
+    6420,
     2300
    ],
-   "z": -3.02,
+   "z": -3.1,
    "x": 60,
    "o": -2
   },
@@ -200,5 +200,9 @@
    "o": -6
   }
  },
+ "sources": [
+  "statcan_17100045"
+ ],
+ "method": "Printed figures are published Statistics Canada values for each July-June period (four quarters summed) or sums of them. Arc widths, dots, province tints and bar lengths move linearly between consecutive periods as animation only; in-between states are never printed. July 2025 to June 2026 is excluded (partly preliminary; new data source).",
  "figures_sha256": "38058dbf758082ef8c99b8af0dd6cd1dea62fbaa1b4432e90f02b1ef38f042ca"
 }

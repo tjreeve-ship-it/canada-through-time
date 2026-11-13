@@ -74,7 +74,7 @@ def main() -> None:
                 lst.unlink(); b = p.chromium.launch(executable_path="/usr/bin/google-chrome", args=CHROME); page = b.new_page(viewport={"width": cw, "height": ch}, device_scale_factor=scale); page.goto(url); page.wait_for_function("window.CTT && window.CTT.ready === true", timeout=120_000)
             fin = out.with_suffix(".fs.mp4"); subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(tmp), "-c", "copy", "-movflags", "+faststart", str(fin)], check=True); tmp.unlink(); fin.replace(out)
             print(f"wrote {out.relative_to(ROOT)} ({n} frames, {time.time() - t0:.0f}s, {w} worker{'s' if w > 1 else ''})")
-        srcs = page.evaluate("CTX.M[CTT.config.layer].src"); b.close()
+        srcs = cfg.get("sources") or page.evaluate("CTX.M[CTT.config.layer].src"); b.close()   # a standalone Short names its sources in the configuration
     if errors: print("WARNING page errors during render:\n" + "\n".join(errors[:5]))
     (out_dir / f"{cfg['id']}.frames.json").write_text(json.dumps(log))
     (out_dir / "config.json").write_text(json.dumps(cfg, indent=1, ensure_ascii=False))
@@ -85,7 +85,7 @@ def main() -> None:
     (out_dir / "sources.json").write_text(json.dumps({"timelapse": cfg["id"], "build": a.build, "code_revision": rev, "uncommitted_changes_in_build_or_data": dirty, "frames": n, "fps": fps, "format": cfg.get("format", "16x9"), "pixels": [ow, oh],
         "build_files": {f: sha(f"web/{a.build}/{f}") for f in ("explore.js", "explore.css", "index.html")},
         "sources": {s: {k: reg[s].get(k) for k in ("title", "publisher", "table_id", "landing_url", "licence", "retrieved", "sha256", "limitations")} for s in srcs},
-        "method": ("Each frame shows the published value for one year. No values are interpolated between years. Camera movement is the only continuous motion." if cfg.get("motion") == "stepped" else "Every printed figure (labels, sentence, year) is the published value for the year on screen. Column heights and fill colours move linearly between consecutive published years as animation only; each published value is reached exactly at the middle of its year's time slot. In-between positions are not estimates and are never printed. The frames log records which two years each frame sits between.")}, indent=1, ensure_ascii=False))
+        "method": cfg.get("method") or ("Each frame shows the published value for one year. No values are interpolated between years. Camera movement is the only continuous motion." if cfg.get("motion") == "stepped" else "Every printed figure (labels, sentence, year) is the published value for the year on screen. Column heights and fill colours move linearly between consecutive published years as animation only; each published value is reached exactly at the middle of its year's time slot. In-between positions are not estimates and are never printed. The frames log records which two years each frame sits between.")}, indent=1, ensure_ascii=False))
     print("package:", out_dir.relative_to(ROOT))
 
 if __name__ == "__main__":

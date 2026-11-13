@@ -148,7 +148,7 @@ function finding(k) { const r = PROV.map(g => [g, net[g][k]]).sort((a, b) => b[1
 let lastK = -1;
 
 // cumulative race: rows ordered by a soft rank so bars slide past each other instead of jumping
-const svg = $('race-svg'), RW = 600, AX = 300, BW = 238, RH = 16.5, CMAX = Math.max(...PROV.map(g => Math.max(...cum[g].map(Math.abs))));
+const svg = $('race-svg'), RW = 600, AX = 262, BW = 196, RH = 16.5, CMAX = Math.max(...PROV.map(g => Math.max(...cum[g].map(Math.abs))));
 function race(u, k, foc) {
   const v = Object.fromEntries(PROV.map(g => [g, at(cum[g], u)]));
   // order at the two neighbouring periods; rows slide between them as the bars grow, so a swap never jumps
