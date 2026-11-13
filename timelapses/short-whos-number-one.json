@@ -1,0 +1,140 @@
+{
+ "id": "short-whos-number-one",
+ "format": "9x16",
+ "fps": 30,
+ "title": "Where Canada's new permanent residents come from",
+ "years": [
+  2007,
+  2025
+ ],
+ "top": 8,
+ "exclude": [
+  "Country not stated"
+ ],
+ "kicker": "New permanent residents · by country of citizenship",
+ "hook": {
+  "seconds": 3.2,
+  "question": "Where do most of Canada’s <em>new permanent residents</em> come from?"
+ },
+ "colors": {
+  "India": "#B8472F",
+  "Philippines": "#3F6E8C",
+  "China, People's Republic of": "#C9962E"
+ },
+ "otherColor": "#ABA592",
+ "short": {
+  "China, People's Republic of": "China",
+  "United States of America": "United States",
+  "United Kingdom and Overseas Territories": "United Kingdom",
+  "Korea, Republic of": "South Korea"
+ },
+ "plan": [
+  {
+   "kind": "run",
+   "to": 1.4,
+   "s": 3.2,
+   "ease": "linear"
+  },
+  {
+   "kind": "run",
+   "to": 9,
+   "s": 8.6,
+   "ease": "linear"
+  },
+  {
+   "kind": "beat",
+   "s": 2.6,
+   "kicker": "2007–2016",
+   "big": "4×",
+   "line": "the #1 spot changed hands between <em>China</em>, <em>India</em> and the <em>Philippines</em>",
+   "focus": [
+    "India",
+    "Philippines",
+    "China, People's Republic of"
+   ],
+   "cardTop": 740
+  },
+  {
+   "kind": "run",
+   "to": 16,
+   "s": 7.2,
+   "ease": "inout",
+   "riser": true
+  },
+  {
+   "kind": "beat",
+   "s": 3.2,
+   "kicker": "2023 · the peak",
+   "big": "139,790",
+   "line": "from <em>India</em>: 4.4× the next country (China, 31,785)",
+   "focus": [
+    "India"
+   ],
+   "sfx": "hit",
+   "cardTop": 560
+  },
+  {
+   "kind": "run",
+   "to": 18,
+   "s": 2.0,
+   "ease": "out"
+  },
+  {
+   "kind": "summary",
+   "s": 4.6
+  },
+  {
+   "kind": "loop",
+   "s": 0.8
+  }
+ ],
+ "summary": {
+  "country": "India",
+  "chartCaption": "New permanent residents from India, 2007–2025",
+  "kicker": "2025",
+  "big": "25%",
+  "line": "of Canada’s new permanent residents were citizens of <em>India</em>",
+  "sub": "#1 every year since 2017. Source: IRCC open data."
+ },
+ "note": "<b>Source:</b> IRCC open data, permanent resident admissions by country of citizenship, 2007–2025 (2007–2014 from IRCC Facts and Figures 2016). From 2015 IRCC rounds to the nearest 5. Bars glide between years as animation; every number shown is a published value.",
+ "sources": [
+  "ircc_pr_citizenship",
+  "ircc_facts_2016_source_country"
+ ],
+ "method": "Numbers on screen are IRCC's published calendar-year admissions for the year shown. Bar lengths and positions move between consecutive years as animation only. Ranks use published values; suppressed values (0-5) are treated as not published, never zero. The share is India's admissions divided by IRCC's published total for the year.",
+ "figures": {
+  "lead_changes_2007_2016": 4,
+  "leaders": {
+   "2007": "India",
+   "2008": "China, People's Republic of",
+   "2009": "China, People's Republic of",
+   "2010": "Philippines",
+   "2011": "Philippines",
+   "2012": "Philippines",
+   "2013": "China, People's Republic of",
+   "2014": "Philippines",
+   "2015": "Philippines",
+   "2016": "Philippines",
+   "2017": "India",
+   "2018": "India",
+   "2019": "India",
+   "2020": "India",
+   "2021": "India",
+   "2022": "India",
+   "2023": "India",
+   "2024": "India",
+   "2025": "India"
+  },
+  "peak_year": 2023,
+  "peak_india": 139790,
+  "peak_second": [
+   "China, People's Republic of",
+   31785
+  ],
+  "ratio": 4.4,
+  "latest_year": 2025,
+  "latest_share_pct": 25.1,
+  "latest_india": 98830,
+  "latest_total": 393780
+ }
+}

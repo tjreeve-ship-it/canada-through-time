@@ -27,6 +27,8 @@ def main():
     js = (SRC / "explore.js").read_text()
     paths = set(re.findall(r"J\('(\.\./data/[^']+)'\)", js))
     paths |= {f"../data/housing/{n}.json" for n in re.findall(r"\[('construction'[^\]]+)\]\.map\(n => J", js)[0].replace("'", "").split(", ")}
+    if "../data/more/" in js:   # loaded by a template literal: include every file in that folder
+        paths |= {f"../data/more/{f.name}" for f in (WEB / "data/more").glob("*.json")}
     data = {p: json.loads((SRC / p).resolve().read_text()) for p in sorted(paths)}
     for img in re.findall(r"'(\.\./data/[^']+\.png)'", js):   # images (shaded relief) go in as data URIs
         data[img] = "data:image/png;base64," + base64.b64encode((SRC / img).resolve().read_bytes()).decode()
