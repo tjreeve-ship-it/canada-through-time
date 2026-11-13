@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>thumb</title>
+<style>
+@font-face { font-family: "Source Serif 4"; font-weight: 700; src: url(../fonts/source-serif-4-latin-700-normal.woff2) format("woff2"); }
+@font-face { font-family: "Public Sans"; font-weight: 600; src: url(../fonts/public-sans-latin-600-normal.woff2) format("woff2"); }
+@font-face { font-family: "Public Sans"; font-weight: 500; src: url(../fonts/public-sans-latin-500-normal.woff2) format("woff2"); }
+* { box-sizing: border-box; } html, body { margin: 0; background: #EFEADB; }
+#t { position: relative; overflow: hidden; background: #EFEADB; }
+#t img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+#t .wash { position: absolute; inset: 0; }
+#t .txt { position: absolute; left: 0; right: 0; }
+.k { font: 600 var(--k) / 1 "Public Sans"; letter-spacing: .14em; text-transform: uppercase; color: #B8472F; display: flex; align-items: center; gap: .6em; }
+.k:before { content: ""; width: 1.8em; height: .22em; background: #B8472F; }
+.big { font: 700 var(--big) / .92 "Source Serif 4"; color: #B8472F; letter-spacing: -0.02em; margin-top: .18em; }
+.line { font: 700 var(--line) / 1.1 "Source Serif 4"; color: #1F1D14; margin-top: .35em; }
+.brand { position: absolute; font: 600 var(--brand) / 1 "Public Sans"; color: #4A4636; display: flex; align-items: center; gap: .5em; }
+.brand:before { content: ""; width: .7em; height: .7em; background: #B8472F; border-radius: 50%; }
+/* vertical 1080x1920: text in the upper band, clear of top 135 px; map below */
+.v #t { width: 1080px; height: 1920px; --k: 30px; --big: 220px; --line: 64px; --brand: 28px; }
+.v #t img { top: 330px; height: 1590px; object-position: 50% 30%; }
+.v #t .wash { background: linear-gradient(180deg, #EFEADB 0%, #EFEADB 36%, rgba(239,234,219,.0) 56%, rgba(239,234,219,0) 78%, #EFEADB 98%); }
+.v #t .txt { top: 200px; padding: 0 70px; }
+.v #t .brand { left: 70px; bottom: 470px; }
+/* landscape 1280x720: text left, map right */
+.h #t { width: 1280px; height: 720px; --k: 20px; --big: 150px; --line: 42px; --brand: 20px; }
+.h #t img { left: 560px; width: 820px; height: 820px; top: -40px; object-fit: cover; object-position: 50% 32%; }
+.h #t .wash { background: linear-gradient(90deg, #EFEADB 0%, #EFEADB 38%, rgba(239,234,219,0) 66%); }
+.h #t .txt { top: 120px; padding: 0 60px; width: 640px; }
+.h #t .brand { left: 60px; bottom: 50px; }
+</style></head><body>
+<div id="t"><img id="bg"><div class="wash"></div><div class="txt"><div class="k" id="k"></div><div class="big" id="big"></div><div class="line" id="line"></div></div><div class="brand">The Canadian Data Project</div></div>
+<script>
+const Q = new URLSearchParams(location.search), T = JSON.parse(decodeURIComponent(Q.get('t')));
+document.body.className = Q.get('f') === 'h' ? 'h' : 'v';
+document.getElementById('bg').src = T.bg; document.getElementById('k').textContent = T.kicker; document.getElementById('big').innerHTML = T.big; document.getElementById('line').innerHTML = T.line;
+Promise.all([document.fonts.ready, new Promise(r => { const i = document.getElementById('bg'); i.complete ? r() : (i.onload = r, i.onerror = r); })]).then(() => { window.READY = true; });
+</script></body></html>
