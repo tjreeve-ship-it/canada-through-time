@@ -1,0 +1,178 @@
+{
+ "id": "short-ottawa-collected-vs-spent",
+ "format": "9x16",
+ "fps": 30,
+ "title": "Federal money collected vs spent, by province",
+ "years": [
+  2007,
+  2025
+ ],
+ "kicker": "Federal money · 2007–2025",
+ "leadLabel": "Running total",
+ "leadSub": "collected − spent, current $",
+ "hook": {
+  "seconds": 3.0,
+  "question": "Where does Ottawa collect <em>more than it spends</em>?"
+ },
+ "labels": {
+  "PE": [
+   -6,
+   -58,
+   1
+  ],
+  "NS": [
+   34,
+   50,
+   1
+  ],
+  "NB": [
+   -36,
+   52,
+   1
+  ],
+  "NL": [
+   6,
+   -6,
+   0
+  ],
+  "YT": [
+   0,
+   6,
+   0
+  ],
+  "BC": [
+   -14,
+   4,
+   0
+  ],
+  "AB": [
+   6,
+   14,
+   0
+  ],
+  "SK": [
+   -4,
+   30,
+   0
+  ],
+  "MB": [
+   10,
+   0,
+   0
+  ]
+ },
+ "colourScale": 200000,
+ "names": {
+  "NL": "Newfoundland & Lab.",
+  "PE": "P.E.I.",
+  "NS": "Nova Scotia",
+  "NB": "New Brunswick",
+  "QC": "Quebec",
+  "ON": "Ontario",
+  "MB": "Manitoba",
+  "SK": "Saskatchewan",
+  "AB": "Alberta",
+  "BC": "British Columbia",
+  "YT": "Yukon",
+  "NT": "N.W.T.",
+  "NU": "Nunavut"
+ },
+ "plan": [
+  {
+   "kind": "run",
+   "to": 1.0,
+   "s": 3.0,
+   "ease": "linear"
+  },
+  {
+   "kind": "run",
+   "to": 18,
+   "s": 13.5,
+   "ease": "inout",
+   "riser": true
+  },
+  {
+   "kind": "beat",
+   "s": 2.8,
+   "kicker": "2007–2025",
+   "big": "3 of 13",
+   "line": "provinces and territories where Ottawa collected <em>more</em> than it spent: Alberta, Ontario, B.C.",
+   "focus": [
+    "AB",
+    "ON",
+    "BC"
+   ],
+   "tone": "pos",
+   "sfx": "tick"
+  },
+  {
+   "kind": "beat",
+   "s": 3.4,
+   "kicker": "Alberta · 2007–2025",
+   "big": "+$314B",
+   "line": "more collected than spent there; every year was positive except 2020",
+   "focus": [
+    "AB"
+   ],
+   "tone": "pos",
+   "sfx": "hit"
+  },
+  {
+   "kind": "beat",
+   "s": 2.8,
+   "kicker": "Quebec · 2007–2025",
+   "big": "−$374B",
+   "line": "the largest gap the other way: more spent than collected",
+   "focus": [
+    "QC"
+   ],
+   "tone": "neg",
+   "sfx": "tick"
+  },
+  {
+   "kind": "summary",
+   "s": 5.6
+  },
+  {
+   "kind": "loop",
+   "s": 0.8
+  }
+ ],
+ "summary": {
+  "kicker": "Collected − spent, 2007–2025",
+  "line": "Federal money by province",
+  "sub": "Across Canada, Ottawa spent $555 billion more than it collected over these years (deficits), so most places show more spent than collected.<br>Source: Statistics Canada, Table 36-10-0450-01."
+ },
+ "note": "<b>Source:</b> Statistics Canada, Table 36-10-0450-01 (federal general government revenue minus expenditure, allocated to provinces by Statistics Canada). Calendar years, current dollars, not adjusted for inflation. Totals are sums of published yearly values; colours glide between years as animation.",
+ "sources": [
+  "statcan_36100450"
+ ],
+ "method": "For each province and territory: sum over calendar years of Statistics Canada's published federal 'surplus or deficit' (revenue minus expenditure) in the provincial economic accounts. Current dollars, not inflation-adjusted. Federal activity outside Canada is excluded from the map. Map colour moves between consecutive years as animation; printed totals are sums of published values through the year on screen.",
+ "figures": {
+  "totals_millions": {
+   "NL": -43797.0,
+   "PE": -28426.0,
+   "NS": -151719.0,
+   "NB": -109068.0,
+   "QC": -373664.0,
+   "ON": 113028.0,
+   "MB": -124358.0,
+   "SK": -29752.0,
+   "AB": 314232.0,
+   "BC": 93624.0,
+   "YT": -24801.0,
+   "NT": -30514.0,
+   "NU": -32326.0,
+   "CAN": -554632.0,
+   "OUT": -127088.0
+  },
+  "positive": [
+   "AB",
+   "ON",
+   "BC"
+  ],
+  "alberta_non_positive_years": [
+   2020
+  ]
+ }
+}
