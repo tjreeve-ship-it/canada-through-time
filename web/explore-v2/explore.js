@@ -1319,7 +1319,7 @@ function update() {
   document.body.classList.toggle('k-party', m.kind === 'party');
   drawNav(); document.querySelectorAll('.opt').forEach(b => b.classList.toggle('on', b.dataset.m === state.m));
   theDeck.setProps({ layers: layers() });
-  reading(m); renderPanel(); timelineCtx(state.y); writeHash(); placeCtl();
+  reading(m); renderPanel(); timelineCtx(state.y); writeHash(); placeCtl(); if (typeof drawTool === 'function' && window.__toolReady) drawTool();
   document.body.classList.toggle('story-on', state.story != null);
   { const c = document.querySelector('.storycard'); if (c && !isPhone()) c.style.maxHeight = Math.max(170, innerHeight - c.getBoundingClientRect().top - 124) + 'px'; }
   if (!STUDIO && isPhone() && !userMoved) { const f = fitView(); if (Math.abs(f.zoom - view.zoom) > 0.01 || Math.abs(f.target[1] - view.target[1]) > 5 || Math.abs(f.rotationX - view.rotationX) > 1) { view = { ...view, ...f }; theDeck.setProps({ viewState: view }); } }
@@ -1545,6 +1545,119 @@ function searchAll(raw) {
 function drawResults(v) { LAST_RESULTS = searchAll(v); document.getElementById('q-results').innerHTML = LAST_RESULTS.map((r, i) => `<button data-res="${i}" class="${i ? '' : 'first'}"><b>${r.t}</b><span>${r.s}</span></button>`).join('') || (v.trim() ? '<div class="none">No match. Try a province, a topic like “rent” or “jobs”, or a year.</div>' : ''); }
 if (!STUDIO && !FIRST_HASH && (() => { try { return !localStorage.getItem('ctt-home-seen'); } catch (e) { return true; } })()) openHome();
 
+
+// ================================================================ v2 views: race · scatter · trends · compare · change
+// Every view reads the same published values as the map (m.value), for the year on the timeline. Nothing is estimated:
+// a missing value is drawn as missing. Scatter plots show association only.
+const VIEWS = [['map', 'Map'], ['race', 'Ranking'], ['scatter', 'X vs Y'], ['trends', 'Trends'], ['compare', 'Compare'], ['change', 'Change']];
+state.view = 'map'; state.y2m = 'gdppc'; state.cA = 'AB'; state.cB = 'ON'; state.y0 = null; state.trails = false;
+const numericM = m => ['fill', 'spike'].includes(m.kind) && typeof m.value === 'function';
+const vbar = document.createElement('div'); vbar.id = 'viewbar'; if (STUDIO) vbar.style.display = 'none'; vbar.setAttribute('role', 'tablist'); document.getElementById('app').appendChild(vbar);
+const tool = document.createElement('section'); tool.id = 'toolview'; tool.hidden = true; document.getElementById('app').appendChild(tool);
+const colorOfM = (m, v) => { try { const c = m.color?.(v); return Array.isArray(c) ? cssc(c) : 'var(--accent)'; } catch (e) { return 'var(--accent)'; } };
+const geoList = (m, y) => geosFor(m.split ? m.split(y) : true);
+const shortName = g => ({ 'NT+NU': 'N.W.T. + Nunavut', NL: 'Newfoundland & Lab.', PE: 'P.E.I.', NT: 'N.W.T.', BC: 'British Columbia' })[g] || NAMES[g];
+const fmtM = (m, v) => v == null ? '—' : m.fmt(v);
+function niceTicks(lo, hi, n = 5) { if (!(hi > lo)) { hi = lo + 1; } const step0 = (hi - lo) / n, mag = 10 ** Math.floor(Math.log10(step0)), st = [1, 2, 2.5, 5, 10].map(k => k * mag).find(k => k >= step0);
+  const a = Math.floor(lo / st) * st, out = []; for (let v = a; v <= hi + st * 0.001; v += st) out.push(+v.toFixed(10)); return out; }
+function drawViewbar() { vbar.innerHTML = VIEWS.map(([k, l]) => `<button role="tab" data-view="${k}" class="${state.view === k ? 'on' : ''}" aria-selected="${state.view === k}">${l}</button>`).join(''); }
+vbar.addEventListener('click', e => { const b = e.target.closest('[data-view]'); if (!b) return; state.view = b.dataset.view; update(); });
+
+function placeTool() { const L = document.getElementById('layers').getBoundingClientRect(); tool.style.top = Math.max(150, Math.round(L.bottom + 16)) + 'px'; }
+function drawTool() {
+  drawViewbar(); document.body.classList.toggle('tool-on', state.view !== 'map' && !isPhone());
+  if (state.view === 'map' || isPhone()) { tool.hidden = true; return; }
+  tool.hidden = false; placeTool();
+  const m = M[state.m], y = state.y;
+  if (!numericM(m) && state.view !== 'compare') { tool.innerHTML = `<div class="tnote">“${m.label}” is not a numeric layer, so this view can’t show it. Pick a layer such as People, Median age or Unemployment rate.</div>`; return; }
+  try { tool.innerHTML = ({ race: viewRace, scatter: viewScatter, trends: viewTrends, compare: viewCompare, change: viewChange })[state.view](m, y); }
+  catch (e) { console.error(e); tool.innerHTML = `<div class="tnote">This view couldn’t be drawn for “${m.label}”.</div>`; }
+}
+
+// ---- Ranking: bars sorted by value for the year on the timeline (moves when you press play)
+function viewRace(m, y) {
+  const rows = geoList(m, y).map(g => [g, m.value(g, y)]), have = rows.filter(r => r[1] != null).sort((a, b) => b[1] - a[1]), miss = rows.filter(r => r[1] == null);
+  const lo = Math.min(0, ...have.map(r => r[1])), hi = Math.max(0, ...have.map(r => r[1])), W = 100, X = v => (v - lo) / (hi - lo || 1) * W, z = X(0);
+  const can = m.value('CAN', y);
+  return `<header><b>${m.label}</b><span>${whenOf(m, y)} · ranked</span></header><div class="race">${have.map(([g, v], i) => {
+      const a = Math.min(X(v), z), w = Math.abs(X(v) - z);
+      return `<div class="rr ${state.p === g ? 'sel' : ''}" data-place="${g}"><span class="rn">${i + 1}</span><span class="rl">${shortName(g)}</span><span class="rt"><i style="left:${a.toFixed(2)}%;width:${Math.max(0.4, w).toFixed(2)}%;background:${colorOfM(m, v)}"></i>${can != null ? `<u style="left:${X(can).toFixed(2)}%"></u>` : ''}</span><span class="rv">${m.fmt(v)}</span></div>`; }).join('')}
+    ${miss.length ? `<div class="rmiss">No published value: ${miss.map(r => shortName(r[0])).join(', ')}</div>` : ''}</div>
+    <footer>${can != null ? `<span class="key"><u></u> Canada: ${m.fmt(can)}</span>` : ''}<span>Press ▶ to watch the ranking change year by year.</span></footer>`;
+}
+
+// ---- X vs Y: provinces as dots, x = the map's layer, y = a second layer; trails show the path through time
+function viewScatter(mx, y) {
+  const my = M[state.y2m] && state.y2m !== mx.id ? M[state.y2m] : M[mx.id === 'gdppc' ? 'ur' : 'gdppc'];
+  const opts = MEASURES.filter(q => numericM(q) && q.id !== mx.id).map(q => `<option value="${q.id}" ${q.id === my.id ? 'selected' : ''}>${q.label}</option>`).join('');
+  const yrsBoth = []; for (let t = Math.max(mx.years[0], my.years[0]); t <= Math.min(mx.years[1], my.years[1]); t++) if (geoList(mx, t).some(g => mx.value(g, t) != null && my.value(g, t) != null)) yrsBoth.push(t);
+  const head = `<header><b>${mx.label}</b><span>vs</span><select data-y2m aria-label="Second layer">${opts}</select><label class="tr"><input type="checkbox" data-trails ${state.trails ? 'checked' : ''}> trails for all</label></header>`;
+  if (!yrsBoth.length) return head + `<div class="tnote">These two layers have no years in common.</div>`;
+  const t = yrsBoth.includes(y) ? y : yrsBoth.reduce((b, o) => Math.abs(o - y) < Math.abs(b - y) ? o : b);
+  const geos = PROV.filter(g => yrsBoth.some(u => mx.value(g, u) != null && my.value(g, u) != null));
+  const all = []; for (const g of geos) for (const u of yrsBoth) { const a = mx.value(g, u), b = my.value(g, u); if (a != null && b != null) all.push([a, b]); }
+  const W = 560, H = 380, L = 84, R = 18, T = 14, B = 44, xs = all.map(d => d[0]), ys = all.map(d => d[1]);
+  const xt = niceTicks(Math.min(...xs), Math.max(...xs)), yt = niceTicks(Math.min(...ys), Math.max(...ys));
+  const X = v => L + (v - xt[0]) / (xt.at(-1) - xt[0]) * (W - L - R), Y = v => H - B - (v - yt[0]) / (yt.at(-1) - yt[0]) * (H - T - B);
+  let g = `<g class="ax">${xt.map(v => `<line x1="${X(v)}" x2="${X(v)}" y1="${T}" y2="${H - B}"/><text x="${X(v)}" y="${H - B + 16}" text-anchor="middle">${mx.fmt(v)}</text>`).join('')}${yt.map(v => `<line x1="${L}" x2="${W - R}" y1="${Y(v)}" y2="${Y(v)}"/><text x="${L - 8}" y="${Y(v) + 4}" text-anchor="end">${my.fmt(v)}</text>`).join('')}</g>`;
+  g += `<text class="axl" x="${(L + W - R) / 2}" y="${H - 6}" text-anchor="middle">${mx.label} →</text><text class="axl" transform="translate(14 ${(T + H - B) / 2}) rotate(-90)" text-anchor="middle">${my.label} →</text>`;
+  const pop = gg => popAt(gg, t) || popAt(gg, YMAX) || 1e5, rad = gg => 4 + Math.sqrt(pop(gg) / 16e6) * 16;
+  for (const gg of geos) {
+    if (state.trails || state.p === gg) { const pts = yrsBoth.filter(u => u <= t).map(u => [mx.value(gg, u), my.value(gg, u)]).filter(d => d[0] != null && d[1] != null);
+      if (pts.length > 1) g += `<path class="trail ${state.p === gg ? 'sel' : ''}" d="${pts.map((d, i) => (i ? 'L' : 'M') + X(d[0]).toFixed(1) + ',' + Y(d[1]).toFixed(1)).join('')}"/>`; }
+  }
+  for (const gg of geos) { const a = mx.value(gg, t), b = my.value(gg, t); if (a == null || b == null) continue;
+    g += `<g class="dot ${state.p === gg ? 'sel' : ''}" data-place="${gg}"><circle cx="${X(a).toFixed(1)}" cy="${Y(b).toFixed(1)}" r="${rad(gg).toFixed(1)}" fill="${colorOfM(mx, a)}"/><text x="${(X(a) + rad(gg) + 4).toFixed(1)}" y="${(Y(b) + 4).toFixed(1)}">${gg}</text><title>${NAMES[gg]}: ${mx.fmt(a)} · ${my.fmt(b)} (${t})</title></g>`; }
+  return head + `<svg class="sc" viewBox="0 0 ${W} ${H}">${g}</svg><footer><span>${t}${t !== y ? ` (nearest year with both; map shows ${y})` : ''} · dot size = population · colour = ${mx.label}</span><span>Click a dot to follow one place through time.</span><span class="assoc">Shows association only, not cause and effect.</span></footer>`;
+}
+
+// ---- Trends: one small chart per province on a shared scale, Canada as a grey reference line
+function viewTrends(m, y) {
+  const geos = PROV.filter(g => { for (let t = m.years[0]; t <= m.years[1]; t++) if (m.value(g, t) != null) return true; return false; });
+  const vals = []; for (const g of [...geos, 'CAN']) for (let t = m.years[0]; t <= m.years[1]; t++) { const v = m.value(g, t); if (v != null) vals.push(v); }
+  const lo = Math.min(...vals), hi = Math.max(...vals), W = 150, H = 70, X = t => (t - m.years[0]) / (m.years[1] - m.years[0] || 1) * W, Y = v => H - 4 - (v - lo) / (hi - lo || 1) * (H - 10);
+  const line = g => { let d = '', pen = false; for (let t = m.years[0]; t <= m.years[1]; t++) { const v = m.value(g, t); if (v == null) { pen = false; continue; } d += (pen ? 'L' : 'M') + X(t).toFixed(1) + ',' + Y(v).toFixed(1); pen = true; } return d; };
+  const can = line('CAN'), cx = X(Math.max(m.years[0], Math.min(m.years[1], y)));
+  return `<header><b>${m.label}</b><span>${m.years[0]}–${m.years[1]} · same scale in every chart · grey = Canada</span></header><div class="sm">${geos.map(g => { const v = m.value(g, y);
+    return `<div class="smc ${state.p === g ? 'sel' : ''}" data-place="${g}"><div class="smh"><b>${shortName(g)}</b><span>${v == null ? '—' : m.fmt(v)}</span></div><svg viewBox="0 0 ${W} ${H}">${can ? `<path d="${can}" class="cn"/>` : ''}<path d="${line(g)}" class="pv"/><line x1="${cx}" x2="${cx}" y1="0" y2="${H}" class="cur"/></svg></div>`; }).join('')}</div>
+    <footer><span>Scale ${m.fmt(lo)} to ${m.fmt(hi)}. Line breaks mark years with no published value.</span></footer>`;
+}
+
+// ---- Compare: two places across every numeric layer for one year
+function viewCompare(m, y) {
+  const opt = sel => PROV.concat('CAN').map(g => `<option value="${g}" ${g === sel ? 'selected' : ''}>${NAMES[g]}</option>`).join('');
+  const A = state.cA, B = state.cB;
+  const rows = MEASURES.filter(numericM).map(q => { const t = clampYear(q, y), a = q.value(A, t), b = q.value(B, t); return { q, t, a, b }; }).filter(r => r.a != null || r.b != null);
+  const bySec = {}; for (const r of rows) (bySec[SEC_OF[r.q.group]] ||= []).push(r);
+  const bar = (v, mx) => v == null ? '' : `<i style="width:${Math.min(100, Math.abs(v) / (mx || 1) * 100).toFixed(1)}%"></i>`;
+  return `<header><select data-ca aria-label="First place">${opt(A)}</select><span>vs</span><select data-cb aria-label="Second place">${opt(B)}</select><span>${y} (or the nearest published year)</span></header>
+    <div class="cmp">${Object.entries(bySec).map(([sec, rs]) => `<div class="cs"><div class="csh">${sec}</div>${rs.map(({ q, t, a, b }) => { const mx = Math.max(Math.abs(a ?? 0), Math.abs(b ?? 0));
+      return `<div class="cr ${q.id === state.m ? 'on' : ''}" data-m="${q.id}"><span class="cl">${q.label}${t !== y ? ` <em>${t}</em>` : ''}</span><span class="ca ${a != null && b != null && a > b ? 'hi' : ''}">${fmtM(q, a)}<b>${bar(a, mx)}</b></span><span class="cb ${a != null && b != null && b > a ? 'hi' : ''}">${fmtM(q, b)}<b>${bar(b, mx)}</b></span></div>`; }).join('')}</div>`).join('')}</div>
+    <footer><span>Bold = the higher value; higher is not always better. Click a row to show that layer on the map.</span></footer>`;
+}
+
+// ---- Change: how much each place changed between two years (published values at both ends)
+function viewChange(m, y) {
+  const span = []; for (let t = m.years[0]; t <= m.years[1]; t++) if (geoList(m, t).some(g => m.value(g, t) != null)) span.push(t);
+  let y0 = state.y0 && span.includes(state.y0) && state.y0 < y ? state.y0 : span.find(t => t < y);
+  if (y0 == null) return `<header><b>${m.label}</b></header><div class="tnote">Pick a later year on the timeline: there is no earlier published year to compare with.</div>`;
+  const rel = DIFF[m.id] === 'level';
+  const rows = PROV.concat('CAN').map(g => { const a = m.value(g, y0), b = m.value(g, y); return [g, a, b, a == null || b == null ? null : rel ? (b / a - 1) * 100 : b - a]; });
+  const have = rows.filter(r => r[3] != null && r[0] !== 'CAN').sort((a, b) => b[3] - a[3]), miss = rows.filter(r => r[3] == null && r[0] !== 'CAN'), can = rows.find(r => r[0] === 'CAN');
+  const mx = Math.max(...have.map(r => Math.abs(r[3])), 1e-9);
+  const d = v => rel ? signed(v, 1) + '%' : (m.absFmt ? m.absFmt(v) : signed(v, Math.abs(v) < 10 ? 1 : 0) + (['pp'].includes(DIFF[m.id]) ? ' pts' : ''));
+  const yrs = span.filter(t => t < y).map(t => `<option ${t === y0 ? 'selected' : ''}>${t}</option>`).join('');
+  return `<header><b>${m.label}</b><span>change from</span><select data-y0 aria-label="Start year">${yrs}</select><span>to ${y}${rel ? ' (percent change)' : ''}</span></header>
+    <div class="chg">${have.map(([g, a, b, v]) => `<div class="gr ${state.p === g ? 'sel' : ''}" data-place="${g}"><span class="rl">${shortName(g)}</span><span class="gt"><i class="${v >= 0 ? 'up' : 'dn'}" style="width:${(Math.abs(v) / mx * 50).toFixed(2)}%"></i></span><span class="rv">${d(v)}</span><span class="ft">${m.fmt(a)} → ${m.fmt(b)}</span></div>`).join('')}
+    ${miss.length ? `<div class="rmiss">Not comparable (missing a year): ${miss.map(r => shortName(r[0])).join(', ')}</div>` : ''}</div>
+    <footer>${can?.[3] != null ? `<span>Canada: ${d(can[3])} (${m.fmt(can[1])} → ${m.fmt(can[2])})</span>` : ''}<span>Both ends are published values; nothing in between is estimated.</span></footer>`;
+}
+tool.addEventListener('change', e => { const t = e.target;
+  if (t.matches('[data-y2m]')) state.y2m = t.value; if (t.matches('[data-trails]')) state.trails = t.checked; if (t.matches('[data-ca]')) state.cA = t.value; if (t.matches('[data-cb]')) state.cB = t.value; if (t.matches('[data-y0]')) state.y0 = +t.value; drawTool(); });
+tool.addEventListener('click', e => { const r = e.target.closest('[data-m]'); if (r && state.view === 'compare') { state.m = r.dataset.m; state.y = clampYear(M[state.m], state.y); state.view = 'map'; update(); return; }
+  const p = e.target.closest('[data-place]'); if (p) { state.p = p.dataset.place === 'CAN' ? null : p.dataset.place; state.city = null; update(); } });
+
+window.__toolReady = true; drawTool();
 window.CTX2 = { searchAll, openHome, closeHome, HOME_CARDS };
 window.CTX = { STORY, openStory, studioConfig,  over, overList, MEASURES, YMIN, YMAX, FIT, FIT_PTS, measureFit, state, update, M, setSheet, getView: () => view, fitView, boundView, deck: theDeck, clampYear, CITIES, MAPPED, PATHS, openPath, cmpRow, diffText };
 window.READY = true;
