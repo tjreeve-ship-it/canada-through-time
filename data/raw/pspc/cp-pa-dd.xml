@@ -1,0 +1,2031 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/dd/dd.xsl"?>
+<!-- Public Accounts data dictionary -->
+<data_dictionary xsi:noNamespaceSchemaLocation="https://donnees-data.tpsgc-pwgsc.gc.ca/dd/spac-pspc-dd.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" dd_version="1.0">
+    <headings>
+       <heading id="h01b">
+            <label>Amount_Montant</label> <!-- 00105 (1 file), 00110 (1 file), 00117 (1 file), x00151 (FY files), x00152 (FY files), 00153 (FY files), previously used Amount-Montant -->
+			<description xml:lang="en">Amount in the identified currency of the dataset.  If the values displayed are in thousands or millions than the "Amt-units_Mnt-unite" column will indicate the units used</description>
+            <description xml:lang="fr">Montant dans la devise du jeu de données. Si les valeurs affichées sont en milliers ou en millions, la colonne « Amt-units_Mnt-unite » indiquera les unités utilisées</description>
+            <data_pattern>^(-?\d+)?|Amount withheld|Montant retenu$</data_pattern>
+        </heading>
+		<heading id="h01c">
+            <label>Amt-units_Mnt-unite</label> <!-- 00073 (3 files); 1 file: 00069, 00070, 00071, 00119, 00122, 00154, 00107; FY files: 00118, 00123 | 1 file: 00072, 00074, 00108, 00110, 00111), 00117, 00124, 00125; FY files: 00120, 00121, 00135, 00182; 00112 (not published -->
+            <description xml:lang="en">Indicates if the amounts in the data file have been rounded and displayed in a different monetary unit then single dollars. For example: x1000 (values are in thousands of dollars) or x1000000 (values are in millions of dollars)</description>
+            <description xml:lang="fr">Indique si les montants du fichier de données ont été arrondis et affichés dans une unité monétaire autre que le dollar. Par exemple : x1000 (valeurs en milliers de dollars) ou x1000000 (valeurs en millions de dollars)</description>
+            <data_pattern>^x1000|x1000000$</data_pattern>
+        </heading>
+
+        <heading id="FY">
+            <label>Fscl-yr_Ex-fin</label> <!-- was previously FSCL_YR, then Fiscal-year_Exercice-financier -->
+            <description xml:lang="en">A fiscal year for the Government of Canada starts on 1 April and ends on 31 March.  So a value of "2020/2021" would relate to 1 April 2020 until 31 March 2021. If the fiscal year values include the suffix "-COMP" (ex: "2020/2021-COMP") then the row provides a recalculation of the figures from that year (reclassified or restated in a way that allows for more direct comparison to the subsequent year's values)</description>
+            <description xml:lang="fr">L'exercice financier du gouvernement du Canada commence le 1er avril et se termine le 31 mars. Ainsi, la valeur « 2020/2021 » correspond à la période du 1er avril 2020 au 31 mars 2021. Si les valeurs de l'exercice financier incluent le suffixe « -COMP » (p. ex. : « 2020/2021-COMP »), la ligne présente un recalcul des chiffres de cet exercice (reclassés ou retraités d'un manière qui permettre une comparaison plus directe avec les valeurs de l'année suivante)</description>
+            <data_pattern>^\d{4}[-\/]\d{4}(-COMP){0,1}$</data_pattern>
+        </heading>
+        <heading id="FYC">
+            <label>COMP</label> <!-- only 00115 (1 file) -->
+            <description xml:lang="en">This column presents comparative figures from the prior year that may have been reclassified and/or restated to conform to the presentation of the current year and consists of the most up-to-date information. Note that the Government of Canada’s fiscal year starts April 1 and ends March 31.</description>
+            <description xml:lang="fr">Cette colonne présente les montants comparatifs de l’exercice précédent qui peuvent être reclassés et/ou redressés afin d’être conformes à la présentation de l’année courante et comporte les informations les plus récentes. Notez que l’année financière du gouvernement du Canada commence le 1er avril et prend fin le 31 mars.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d+$</data_pattern>
+        </heading>
+        <!-- entry "2002/2003" removed as it was an orphan, not used in 00062 - ten year comparison --> 
+        <heading id="FY04">
+            <label>2003/2004</label> <!-- only 00062, 2013 CSV files -->
+            <description xml:lang="en">Government of Canada fiscal year 2003–2004 starts April 1, 2003, and ends March 31, 2004.</description>
+            <description xml:lang="fr">Exercice financier 2003-2004 du gouvernement du Canada, commence le 1er avril 2003 et prend fin le 31 mars 2004.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY04C">
+            <label>2003/2004-COMP</label> <!-- 00065 (FY files) & 00066 (1 file), 2005 CSV files -->
+            <description xml:lang="en">Government of Canada fiscal year 2003–2004 starts April 1, 2003, and ends March 31, 2004--includes certain comparative figures that have been reclassified and/or restated to conform to the 2004–2005 presentation.</description>
+            <description xml:lang="fr">L’exercice financier 2003-2004 du Gouvernement du Canada commence le 1er avril 2003 et prend fin le 31 mars 2004--comprend certains chiffres comparatifs qui ont été reclassés et/ou redressés afin de les rendre conformes à la présentation adoptée pour 2004-2005.</description>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY05">
+            <label>2004/2005</label> <!-- 00062, 2013 & 2014 CSV files; 00065 (FY files), 00066 (1 file), 00111 (1 file) -->
+            <description xml:lang="en">Government of Canada fiscal year 2004–2005 starts April 1, 2004, and ends March 31, 2005.</description>
+            <description xml:lang="fr">Exercice financier 2004-2005 du gouvernement du Canada, commence le 1er avril 2004 et prend fin le 31 mars 2005.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY05C">
+            <label>2004/2005-COMP</label>
+            <description xml:lang="en">Government of Canada fiscal year 2004–2005 starts April 1, 2004, and ends March 31, 2005--includes certain comparative figures that have been reclassified and/or restated to conform to the 2005–2006 presentation.</description>
+            <description xml:lang="fr">L’exercice financier 2004-2005 du Gouvernement du Canada commence le 1er avril 2004 et prend fin le 31 mars 2005--comprend certains chiffres comparatifs qui ont été reclassés et/ou redressés afin de les rendre conformes à la présentation adoptée pour 2005-2006.</description>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY06">
+            <label>2005/2006</label>
+            <description xml:lang="en">Government of Canada fiscal year 2005–2006 starts April 1, 2005, and ends March 31, 2006.</description>
+            <description xml:lang="fr">Exercice financier 2005-2006 du gouvernement du Canada, commence le 1er avril 2005 et prend fin le 31 mars 2006.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY06C">
+            <label>2005/2006-COMP</label>
+            <description xml:lang="en">Government of Canada fiscal year 2005–2006 starts April 1, 2005, and ends March 31, 2006--includes certain comparative figures that have been reclassified and/or restated to conform to the 2006–2007 presentation.</description>
+            <description xml:lang="fr">L’exercice financier 2005-2006 du Gouvernement du Canada commence le 1er avril 2005 et prend fin le 31 mars 2006--comprend certains chiffres comparatifs qui ont été reclassés et/ou redressés afin de les rendre conformes à la présentation adoptée pour 2006-2007.</description>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY07">
+            <label>2006/2007</label>
+            <description xml:lang="en">Government of Canada fiscal year 2006–2007 starts April 1, 2006, and ends March 31, 2007.</description>
+            <description xml:lang="fr">Exercice financier 2006-2007 du gouvernement du Canada, commence le 1er avril 2006 et prend fin le 31 mars 2007.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY07C">
+            <label>2006/2007-COMP</label>
+            <description xml:lang="en">Government of Canada fiscal year 2006–2007 starts April 1, 2006, and ends March 31, 2007--includes certain comparative figures that have been reclassified and/or restated to conform to the 2007–2008 presentation.</description>
+            <description xml:lang="fr">L’exercice financier 2006-2007 du Gouvernement du Canada commence le 1er avril 2006 et prend fin le 31 mars 2007--comprend certains chiffres comparatifs qui ont été reclassés et/ou redressés afin de les rendre conformes à la présentation adoptée pour 2007-2008.</description>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY08">
+            <label>2007/2008</label>
+            <description xml:lang="en">Government of Canada fiscal year 2007–2008 starts April 1, 2007, and ends March 31, 2008.</description>
+            <description xml:lang="fr">Exercice financier 2007-2008 du gouvernement du Canada, commence le 1er avril 2007 et prend fin le 31 mars 2008.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY08C">
+            <label>2007/2008-COMP</label>
+            <description xml:lang="en">Government of Canada fiscal year 2007–2008 starts April 1, 2007, and ends March 31, 2008--includes certain comparative figures that have been reclassified and/or restated to conform to the 2008–2009 presentation.</description>
+            <description xml:lang="fr">L’exercice financier 2007-2008 du Gouvernement du Canada commence le 1er avril 2007 et prend fin le 31 mars 2008--comprend certains chiffres comparatifs qui ont été reclassés et/ou redressés afin de les rendre conformes à la présentation adoptée pour 2008-2009.</description>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY09">
+            <label>2008/2009</label>
+            <description xml:lang="en">Government of Canada fiscal year 2008–2009 starts April 1, 2008, and ends March 31, 2009.</description>
+            <description xml:lang="fr">Exercice financier 2008-2009 du gouvernement du Canada, commence le 1er avril 2008 et prend fin le 31 mars 2009.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY09C">
+            <label>2008/2009-COMP</label>
+            <description xml:lang="en">Government of Canada fiscal year 2008–2009 starts April 1, 2008, and ends March 31, 2009--includes certain comparative figures that have been reclassified and/or restated to conform to the 2009–2010 presentation.</description>
+            <description xml:lang="fr">L’exercice financier 2008-2009 du Gouvernement du Canada commence le 1er avril 2008 et prend fin le 31 mars 2009--comprend certains chiffres comparatifs qui ont été reclassés et/ou redressés afin de les rendre conformes à la présentation adoptée pour 2009-2010.</description>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY10">
+            <label>2009/2010</label>
+            <description xml:lang="en">Government of Canada fiscal year 2009–2010 starts April 1, 2009, and ends March 31, 2010.</description>
+            <description xml:lang="fr">Exercice financier 2009-2010 du gouvernement du Canada, commence le 1er avril 2009 et prend fin le 31 mars 2010.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY10C">
+            <label>2009/2010-COMP</label>
+            <description xml:lang="en">Government of Canada fiscal year 2009–2010 starts April 1, 2009, and ends March 31, 2010--includes certain comparative figures that have been reclassified and/or restated to conform to the 2010–2011 presentation.</description>
+            <description xml:lang="fr">L’exercice financier 2009-2010 du Gouvernement du Canada commence le 1er avril 2009 et prend fin le 31 mars 2010--comprend certains chiffres comparatifs qui ont été reclassés et/ou redressés afin de les rendre conformes à la présentation adoptée pour 2010-2011.</description>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY11">
+            <label>2010/2011</label>
+            <description xml:lang="en">Government of Canada fiscal year 2010–2011 starts April 1, 2010, and ends March 31, 2011.</description>
+            <description xml:lang="fr">Exercice financier 2010-2011 du gouvernement du Canada, commence le 1er avril 2010 et prend fin le 31 mars 2011.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY11C">
+            <label>2010/2011-COMP</label>
+            <description xml:lang="en">Government of Canada fiscal year 2010–2011 starts April 1, 2010, and ends March 31, 2011--includes certain comparative figures that have been reclassified and/or restated to conform to the 2011–2012 presentation.</description>
+            <description xml:lang="fr">L’exercice financier 2010-2011 du Gouvernement du Canada commence le 1er avril 2010 et prend fin le 31 mars 2011--comprend certains chiffres comparatifs qui ont été reclassés et/ou redressés afin de les rendre conformes à la présentation adoptée pour 2011-2012.</description>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY12">
+            <label>2011/2012</label>
+            <description xml:lang="en">Government of Canada fiscal year 2011–2012 starts April 1, 2011, and ends March 31, 2012.</description>
+            <description xml:lang="fr">Exercice financier 2011-2012 du gouvernement du Canada, commence le 1er avril 2011 et prend fin le 31 mars 2012.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY12C">
+            <label>2011/2012-COMP</label>
+            <description xml:lang="en">Government of Canada fiscal year 2011–2012 starts April 1, 2011, and ends March 31, 2012--includes certain comparative figures that have been reclassified and/or restated to conform to the 2012–2013 presentation.</description>
+            <description xml:lang="fr">L’exercice financier 2011-2012 du Gouvernement du Canada commence le 1er avril 2011 et prend fin le 31 mars 2012--comprend certains chiffres comparatifs qui ont été reclassés et/ou redressés afin de les rendre conformes à la présentation adoptée pour 2012-2013.</description>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY13">
+            <label>2012/2013</label>
+            <description xml:lang="en">Government of Canada fiscal year 2012–2013 starts April 1, 2012, and ends March 31, 2013.</description>
+            <description xml:lang="fr">Exercice financier 2012-2013 du gouvernement du Canada, commence le 1er avril 2012 et prend fin le 31 mars 2013.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY13C">
+            <label>2012/2013-COMP</label>
+            <description xml:lang="en">Government of Canada fiscal year 2012–2013 starts April 1, 2012, and ends March 31, 2013--includes certain comparative figures that have been reclassified and/or restated to conform to the 2013–2014 presentation.</description>
+            <description xml:lang="fr">L’exercice financier 2012-2013 du Gouvernement du Canada commence le 1er avril 2012 et prend fin le 31 mars 2013--comprend certains chiffres comparatifs qui ont été reclassés et/ou redressés afin de les rendre conformes à la présentation adoptée pour 2013-2014.</description>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY14">
+            <label>2013/2014</label>
+            <description xml:lang="en">Government of Canada fiscal year 2013–2014 starts April 1, 2013, and ends March 31, 2014.</description>
+            <description xml:lang="fr">Exercice financier 2013-2014 du gouvernement du Canada, commence le 1er avril 2013 et prend fin le 31 mars 2014.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY14C">
+            <label>2013/2014-COMP</label>
+            <description xml:lang="en">Government of Canada fiscal year 2013–2014 starts April 1, 2013, and ends March 31, 2014--includes certain comparative figures that have been reclassified and/or restated to conform to the 2014–2015 presentation.</description>
+            <description xml:lang="fr">L’exercice financier 2013-2014 du Gouvernement du Canada commence le 1er avril 2013 et prend fin le 31 mars 2014--comprend certains chiffres comparatifs qui ont été reclassés et/ou redressés afin de les rendre conformes à la présentation adoptée pour 2014-2015.</description>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY15">
+            <label>2014/2015</label>
+            <description xml:lang="en">Government of Canada fiscal year 2014–2015 starts April 1, 2014, and ends March 31, 2015.</description>
+            <description xml:lang="fr">Exercice financier 2014-2015 du gouvernement du Canada, commence le 1er avril 2014 et prend fin le 31 mars 2015.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY15C">
+            <label>2014/2015-COMP</label>
+            <description xml:lang="en">Government of Canada fiscal year 2014–2015 starts April 1, 2014, and ends March 31, 2015--includes certain comparative figures that have been reclassified and/or restated to conform to the 2015–2016 presentation.</description>
+            <description xml:lang="fr">L’exercice financier 2014-2015 du Gouvernement du Canada commence le 1er avril 2014 et prend fin le 31 mars 2015--comprend certains chiffres comparatifs qui ont été reclassés et/ou redressés afin de les rendre conformes à la présentation adoptée pour 2015-2016.</description>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY16">
+            <label>2015/2016</label>
+            <description xml:lang="en">Government of Canada fiscal year 2015–2016 starts April 1, 2015, and ends March 31, 2016.</description>
+            <description xml:lang="fr">Exercice financier 2015-2016 du gouvernement du Canada, commence le 1er avril 2015 et prend fin le 31 mars 2016.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?(\.\d*)?$</data_pattern>
+        </heading>
+        <heading id="FY16C">
+            <label>2015/2016-COMP</label>
+            <description xml:lang="en">Government of Canada fiscal year 2015–2016 starts April 1, 2015, and ends March 31, 2016--includes certain comparative figures that have been reclassified and/or restated to conform to the 2016–2017 presentation.</description>
+            <description xml:lang="fr">L’exercice financier 2015-2016 du Gouvernement du Canada commence le 1er avril 2015 et prend fin le 31 mars 2016--comprend certains chiffres comparatifs qui ont été reclassés et/ou redressés afin de les rendre conformes à la présentation adoptée pour 2016-2017.</description>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY17">
+            <label>2016/2017</label>
+            <description xml:lang="en">Government of Canada fiscal year 2016–2017 starts April 1, 2016, and ends March 31, 2017.</description>
+            <description xml:lang="fr">Exercice financier 2016-2017 du gouvernement du Canada, commence le 1er avril 2016 et prend fin le 31 mars 2017.</description>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY17C">
+            <label>2016/2017-COMP</label>
+            <description xml:lang="en">Government of Canada fiscal year 2016–2017 starts April 1, 2016, and ends March 31, 2017--includes certain comparative figures that have been reclassified and/or restated to conform to the 2017–2018 presentation.</description>
+            <description xml:lang="fr">L’exercice financier 2016-2017 du Gouvernement du Canada commence le 1er avril 2016 et prend fin le 31 mars 2017--comprend certains chiffres comparatifs qui ont été reclassés et/ou redressés afin de les rendre conformes à la présentation adoptée pour 2017-2018.</description>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY18">
+            <label>2017/2018</label>
+            <description xml:lang="en">Government of Canada fiscal year 2017–2018 starts April 1, 2017, and ends March 31, 2018.</description>
+            <description xml:lang="fr">Exercice financier 2017-2018 du gouvernement du Canada, commence le 1er avril 2017 et prend fin le 31 mars 2018.</description>
+            <data_pattern>^(-?\d+)?(\.\d*)?$</data_pattern>
+        </heading>
+        <heading id="FY18C">
+            <label>2017/2018-COMP</label>
+            <description xml:lang="en">Government of Canada fiscal year 2017–2018 starts April 1, 2017, and ends March 31, 2018--includes certain comparative figures that have been reclassified and/or restated to conform to the 2018–2019 presentation.</description>
+            <description xml:lang="fr">L’exercice financier 2017-2018 du Gouvernement du Canada commence le 1er avril 2017 et prend fin le 31 mars 2018--comprend certains chiffres comparatifs qui ont été reclassés et/ou redressés afin de les rendre conformes à la présentation adoptée pour 2018-2019.</description>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY19">
+            <label>2018/2019</label>
+            <description xml:lang="en">Government of Canada fiscal year 2018–2019 starts April 1, 2018, and ends March 31, 2019.</description>
+            <description xml:lang="fr">Exercice financier 2018-2019 du gouvernement du Canada, commence le 1er avril 2018 et prend fin le 31 mars 2019.</description>
+            <data_pattern>^(-?\d+)?(\.\d*)?$</data_pattern>
+        </heading>
+        <heading id="FY19C">
+            <label>2018/2019-COMP</label> <!-- 00064, 00065, 00066, 00068, 00077, 00092 -->
+            <description xml:lang="en">Government of Canada fiscal year 2018–2019 starts April 1, 2018, and ends March 31, 2019--includes certain comparative figures that have been reclassified and/or restated to conform to the 2019–2020 presentation.</description>
+            <description xml:lang="fr">L’exercice financier 2018-2019 du Gouvernement du Canada commence le 1er avril 2018 et prend fin le 31 mars 2019--comprend certains chiffres comparatifs qui ont été reclassés et/ou redressés afin de les rendre conformes à la présentation adoptée pour 2019-2020.</description>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY20">
+            <label>2019/2020</label>
+            <description xml:lang="en">Government of Canada fiscal year 2019–2020 starts April 1, 2019, and ends March 31, 2020.</description>
+            <description xml:lang="fr">Exercice financier 2019-2020 du gouvernement du Canada, commence le 1er avril 2019 et prend fin le 31 mars 2020.</description>
+            <data_pattern>^(-?\d+)?(\.\d*)?$</data_pattern>
+        </heading>
+        <heading id="FY20C">
+            <label>2019/2020-COMP</label>
+            <description xml:lang="en">Government of Canada fiscal year 2019–2020 starts April 1, 2019, and ends March 31, 2020--includes certain comparative figures that have been reclassified and/or restated to conform to the 2020–2021 presentation.</description>
+            <description xml:lang="fr">L’exercice financier 2019-2020 du Gouvernement du Canada commence le 1er avril 2019 et prend fin le 31 mars 2020--comprend certains chiffres comparatifs qui ont été reclassés et/ou redressés afin de les rendre conformes à la présentation adoptée pour 2020-2021.</description>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY21">
+            <label>2020/2021</label>
+            <description xml:lang="en">Government of Canada fiscal year 2020–2021 starts April 1, 2020, and ends March 31, 2021.</description>
+            <description xml:lang="fr">Exercice financier 2020-2021 du gouvernement du Canada, commence le 1er avril 2020 et prend fin le 31 mars 2021.</description>
+            <data_pattern>^(-?\d+)?(\.\d*)?$</data_pattern>
+        </heading>
+        <heading id="FY21C">
+            <label>2020/2021-COMP</label>
+            <description xml:lang="en">Government of Canada fiscal year 2020–2021 starts April 1, 2020, and ends March 31, 2021--includes certain comparative figures that have been reclassified and/or restated to conform to the 2021–2022 presentation.</description>
+            <description xml:lang="fr">L’exercice financier 2020-2021 du Gouvernement du Canada commence le 1er avril 2020 et prend fin le 31 mars 2021--comprend certains chiffres comparatifs qui ont été reclassés et/ou redressés afin de les rendre conformes à la présentation adoptée pour 2021-2022.</description>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY22">
+            <label>2021/2022</label>
+            <description xml:lang="en">Government of Canada fiscal year 2021–2022 starts April 1, 2021, and ends March 31, 2022.</description>
+            <description xml:lang="fr">Exercice financier 2021-2022 du gouvernement du Canada, commence le 1er avril 2021 et prend fin le 31 mars 2022.</description>
+            <data_pattern>^(-?\d+)?(\.\d*)?$</data_pattern>
+        </heading>
+        <heading id="FY22C">
+            <label>2021/2022-COMP</label>
+            <description xml:lang="en">Government of Canada fiscal year 2021–2022 starts April 1, 2021, and ends March 31, 2022--includes certain comparative figures that have been reclassified and/or restated to conform to the 2022–2023 presentation.</description>
+            <description xml:lang="fr">L’exercice financier 2021-2022 du Gouvernement du Canada commence le 1er avril 2021 et prend fin le 31 mars 2022--comprend certains chiffres comparatifs qui ont été reclassés et/ou redressés afin de les rendre conformes à la présentation adoptée pour 2022-2023.</description>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="FY23">
+            <label>2022/2023</label>
+            <description xml:lang="en">Government of Canada fiscal year 2022–2023 starts April 1, 2022, and ends March 31, 2023.</description>
+            <description xml:lang="fr">Exercice financier 2022-2023 du gouvernement du Canada, commence le 1er avril 2022 et prend fin le 31 mars 2023.</description>
+            <data_pattern>^(-?\d+)?(\.\d*)?$</data_pattern>
+        </heading>
+        <heading id="FY23C">
+            <label>2022/2023-COMP</label>
+            <description xml:lang="en">Government of Canada fiscal year 2022–2023 starts April 1, 2022, and ends March 31, 2023--includes certain comparative figures that have been reclassified and/or restated to conform to the 2023–2024 presentation.</description>
+            <description xml:lang="fr">L’exercice financier 2022-2023 du Gouvernement du Canada commence le 1er avril 2022 et prend fin le 31 mars 2023--comprend certains chiffres comparatifs qui ont été reclassés et/ou redressés afin de les rendre conformes à la présentation adoptée pour 2023-2024.</description>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+         <heading id="FY24">
+            <label>2023/2024</label>
+            <description xml:lang="en">Government of Canada fiscal year 2023–2024 starts April 1, 2023, and ends March 31, 2024.</description>
+            <description xml:lang="fr">Exercice financier 2023-2024 du gouvernement du Canada, commence le 1er avril 2023 et prend fin le 31 mars 2024.</description>
+            <data_pattern>^(-?\d+)?(\.\d*)?$</data_pattern>
+        </heading>
+        <heading id="FY24C">
+            <label>2023/2024-COMP</label>
+            <description xml:lang="en">Government of Canada fiscal year 2023–2024 starts April 1, 2023, and ends March 31, 2024--includes certain comparative figures that have been reclassified and/or restated to conform to the 2024–2025 presentation.</description>
+            <description xml:lang="fr">L’exercice financier 2023-2024 du Gouvernement du Canada commence le 1er avril 2023 et prend fin le 31 mars 2024--comprend certains chiffres comparatifs qui ont été reclassés et/ou redressés afin de les rendre conformes à la présentation adoptée pour 2024-2025.</description>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+         <heading id="FY25">
+            <label>2024/2025</label>
+            <description xml:lang="en">Government of Canada fiscal year 2024–2025 starts April 1, 2024, and ends March 31, 2025.</description>
+            <description xml:lang="fr">Exercice financier 2024-2025 du gouvernement du Canada, commence le 1er avril 2024 et prend fin le 31 mars 2025.</description>
+            <data_pattern>^(-?\d+)?(\.\d*)?$</data_pattern>
+        </heading>
+         <heading id="FY25C">
+            <label>2024/2025-COMP</label>
+            <description xml:lang="en">Government of Canada fiscal year 2024–2025 starts April 1, 2024, and ends March 31, 2025--includes certain comparative figures that have been reclassified and/or restated to conform to the 2025–2026 presentation.</description>
+            <description xml:lang="fr">Exercice financier 2024-2025 du gouvernement du Canada, commence le 1er avril 2024 et prend fin le 31 mars 2025--comprend certains chiffres comparatifs qui ont été reclassés et/ou redressés afin de les rendre conformes à la présentation adoptée pour 2025-2026.</description>
+            <data_pattern>^(-?\d+)?(\.\d*)?$</data_pattern>
+        </heading>        
+        <heading id="FY26">
+            <label>2025/2026</label>
+            <description xml:lang="en">Government of Canada fiscal year 2025–2026 starts April 1, 2025, and ends March 31, 2026.</description>
+            <description xml:lang="fr">Exercice financier 2025-2026 du gouvernement du Canada, commence le 1er avril 2025 et prend fin le 31 mars 2026.</description>
+            <data_pattern>^(-?\d+)?(\.\d*)?$</data_pattern>
+        </heading>
+		<heading id="org1b">
+            <label>Dept-nbr_No-min</label> <!-- was previously DepartmentNumber-Numéro-de-Ministère, then Department-number_Numero-de-ministere -->
+            <description xml:lang="en">Department or agency number, as per the Chart of Accounts</description>
+            <description xml:lang="fr">Numéro du ministère ou de l’organisme, selon le plan comptable</description>
+            <data_pattern>^\d{3}[abc]{1}$|^\d{3}$|^$</data_pattern>
+        </heading>
+        <heading id="org2b">
+            <label xml:lang="en">Dept-name_Nom-min_eng</label> <!-- was previously DEPT_EN_DESC | DEPT_FR_DESC -->
+            <label xml:lang="fr">Dept-name_Nom-min_fra</label>
+            <description xml:lang="en">Name of the department or agency of the Government of Canada</description>
+            <description xml:lang="fr">Nom du ministère ou de l’organisme du gouvernement du Canada</description>
+            <data_type>https://schema.org/GovernmentOrganization</data_type>
+        </heading>
+		
+        <heading id="org3b">
+            <label>Min-code</label> <!-- was previously MINC; NOTE: missing from 00075 (1 file), 00077 (1 file), 00109 (FY files), 00111 (1 file), 00118 (FY files >> 1 file), 00120 (FY files >> 1 file), 00121 (FY files >> 1 file), but they have MINE and MINF -->
+            <description xml:lang="en">Ministrerial portfolio code</description>
+            <description xml:lang="fr">Code du portefeuille ministériel</description>
+            <data_pattern>^\d{2}$|^ *$</data_pattern>
+        </heading>
+        <heading id="org4b">
+            <label xml:lang="en">Min-portfolio_Portefeuille-min_eng</label> <!-- was previously MINE | MINF -->
+            <label xml:lang="fr">Min-portfolio_Portefeuille-min_fra</label>
+            <description xml:lang="en">Ministerial portfolio of the Government of Canada</description>
+            <description xml:lang="fr">Portefeuille ministériel du gouvernement du Canada</description>
+            <data_type>https://schema.org/GovernmentOrganization</data_type>
+            <data_pattern>^.*$</data_pattern>
+        </heading>
+
+        <heading id="sec1b">
+            <label xml:lang="en">Section-lvl1_niv1_eng</label>  <!-- 00062 (FY files), 1 file: 00069, 00070, 00071, 00075, 00077, 00101, 00102, 00103, 00105, 00107, 00110, 00117, 00119, 00122, 00270, previously SECTION | SECTION_FR -->
+            <label xml:lang="fr">Section-lvl1_niv1_fra</label>  
+            <description xml:lang="en">The first level of detail of financial information</description>
+            <description xml:lang="fr">Le premier niveau de détail de l’information financière</description>
+        </heading>
+         <heading id="sec2b">
+            <label xml:lang="en">Section-lvl2_niv2_eng</label> <!-- 00062 (FY files), 1 file: 00069, 00070, 00071, 00077, 00101, 00102, 00103, 00105, 00107, 00117, 00119, 00122, previously SUB-SECTION | SOUS-SECTION -->
+            <label xml:lang="fr">Section-lvl2_niv2_fra</label>
+            <description xml:lang="en">The second level of detail of financial information</description>
+            <description xml:lang="fr">Le deuxième niveau de détail de l’information financière</description>
+        </heading>
+        <heading id="sec3b">
+            <label xml:lang="en">Section-lvl3_niv3_eng</label> <!-- 00062 (FY files), 1 file: 00069, 00070, 00071, 00077, 00103, 00105, 00107, 00117, 00119, 00122, previously SUB-SUB-SECTION | SOUS-SOUS-SECTION -->
+            <label xml:lang="fr">Section-lvl3_niv3_fra</label>
+            <description xml:lang="en">The third level of detail of financial information</description>
+            <description xml:lang="fr">Le troisième niveau de détail de l’information financière</description>
+        </heading>
+        <heading id="sec4b">
+            <label xml:lang="en">Section-lvl4_niv4_eng</label> <!-- 00062 (FY files), 1 file: 0117, 00119, 00122, previously SUB-SUB-SUB-SECTION | SOUS-SOUS-SOUS-SECTION -->
+            <label xml:lang="fr">Section-lvl4_niv4_fra</label>
+            <description xml:lang="en">The fourth level of detail of financial information</description>
+            <description xml:lang="fr">Le quatrième niveau de détail de l’information financière</description>
+        </heading>
+        <heading id="sec5b">
+            <label xml:lang="en">Section-lvl5_niv5_eng</label> <!-- 00117 (1 file), previously SUB-SUB-SUB-SUB-SECTION | SOUS-SOUS-SOUS-SOUS-SECTION -->
+            <label xml:lang="fr">Section-lvl5_niv5_fra</label>
+            <description xml:lang="en">The fifth level of detail of financial information</description>
+            <description xml:lang="fr">Le cinquième niveau de détail de l’information financière</description>
+        </heading>
+
+
+        <heading id="h21b">
+            <label xml:lang="en">Org-type_Type-org_eng</label> <!-- 00073 (3 files); 00065 (FY files), 1 file: 00070, 00074, 00107, previously GOCC | OGSE -->
+            <label xml:lang="fr">Org-type_Type-org_fra</label>
+            <description xml:lang="en">Government organization type: Crown corporations; Consolidated Crown corporations; Other entities; or Enterprise Crown corporations and other government business enterprises</description>
+            <description xml:lang="fr">Type d'organisation gouvernementale: Sociétés d’État; Sociétés d’État consolidées; Autres entités, ou Sociétés d’État entreprises et autres entreprises publiques</description>
+        </heading>
+        <heading id="h117">
+            <label xml:lang="en">Entity-type_Type-entite_eng</label> <!-- 00073 (3 files); 1 file: 00072, 00074, previously Agent_Non-agent | Mandataires_Non-mandataires -->
+            <label xml:lang="fr">Entity-type_Type-entite_fra</label>
+            <description xml:lang="en">Refers to the agent and non-agent Crown corporations and other entities of the Crown.</description>
+            <description xml:lang="fr">Désigne les sociétés d'États et autres entités mandataires et non-mandataires de Sa Majesté.</description>
+        </heading>
+        <heading id="h15b">
+            <label xml:lang="en">Entity_Entite_eng</label> <!-- 00073 (3 files); 00068 (FY files), 1 file: 00069, 00070, 00071, 00072, 00074, 00077, 00093, 00105, 00107, 00114, 00270, previously Entity | Entité -->
+            <label xml:lang="fr">Entity_Entite_fra</label>
+            <description xml:lang="en">Refers to any organization which is part of the Government of Canada, including a department, an agency, a Crown corporation or any other organization or the adjustments related to those organizations in English</description>
+            <description xml:lang="fr">Organisation qui fait partie du gouvernement du Canada, tel qu’un ministère, une agence, une société d’État ou autres ou les ajustements relatifs à ces organisations en français</description>
+        </heading>
+
+        <heading id="h24b"> 
+            <label xml:lang="en">Provision_eng</label> <!-- only 00120 (FY files), previously Provision (past year), then Provision_EN | Provision_FR (2024) -->
+            <label xml:lang="fr">Provision_fra</label>
+            <description xml:lang="en">Provision for valuation and other items</description>
+            <description xml:lang="fr">Provision pour évaluation et autres éléments</description>
+        </heading>
+
+         <heading id="h25b">
+            <label xml:lang="en">Xpns-type_Type-dep_eng</label> <!-- 00073 (3 files); FY files: 00120, 00182, previously Description, then Description_EN | Description_FR -->
+            <label xml:lang="fr">Xpns-type_Type-dep_fra</label>
+            <description xml:lang="en">Type of expense</description>
+            <description xml:lang="fr">Catégorie de charge</description>
+        </heading>		
+		
+		<heading id="h26b">
+            <label>Ttl-min-net-exp_Ttl-dep-min-nettes</label> <!-- remove from 00118 (FY files, duplicate Total column, sum of other column values); used validly in 00119 (1 file), 00120 (FY files), 00182 (FY files), previously Total-ministerial-net-expenditures | Total-des-dépenses-ministérielles-nettes, then Ttl-min-net-exp_Ttl-dép-min-nettes -->
+            <description xml:lang="en">Total ministerial net expenditures</description>
+            <description xml:lang="fr">Total des dépenses ministérielles nettes</description>
+            <data_type>https://schema.org/Float</data_type>
+            <data_pattern>^-?\d+(\.\d+)?$</data_pattern>
+        </heading>
+		
+        <heading id="h27b">
+            <label>Cons-special-accnts_Cmpts-determinees-cons</label> <!-- 00119 (1 file), 00120 (FY files), 00182 (FY files), previously Consolidated-specified-purpose-accounts-expenditures | Comptes-à-fins-déterminées-consolidés-dépenses, then Cons-spec-purpose-accnts_Cmpts-fins-dét-cons -->
+            <description xml:lang="en">Expenditures of consolidated specified purpose accounts</description>
+            <description xml:lang="fr">Les dépenses des comptes à fins déterminées consolidés</description>
+            <data_type>https://schema.org/Float</data_type>
+            <data_pattern>^-?\d+(\.\d+)?$</data_pattern>
+        </heading>
+
+        <heading id="h28">
+            <label>Accrual-and-other-adjs_Redressements-courus-et-autres</label> <!-- 00119 (1 file), 00120 (FY files), 00122 (1 file), 00182 (FY files) (2024 files forward), was previously Accrual-and-other-adjustments | Redressements-courus-et-autres -->
+            <description xml:lang="en">Accrual and other adjustments</description>
+            <description xml:lang="fr">Courus et autres redressements</description>
+            <data_type>https://schema.org/Float</data_type>
+            <data_pattern>^-?\d+(\.\d+)?$</data_pattern>
+        </heading>
+
+        <heading id="h34b">
+            <label>Xpns-CC-other-ents_Dep-SE-autres-ents</label> <!-- 00119 (1 file), 00120 (FY files), 00182 (FY files) (2024 files forward) was previously Consolidated-Crown-corporations-and-other-entities | Sociétés-d'État-et-autres-entités-consolidées, then Cons-Crown-corps-and-other-ents_Socs-d'État-et-autres-ents-cons -->
+            <description xml:lang="en">Expenses of Consolidated Crown corporations and other entities</description>
+            <description xml:lang="fr">Dépenses des Sociétés d'État et autres entités consolidées</description>
+            <data_type>https://schema.org/Float</data_type>
+            <data_pattern>^-?\d+(\.\d+)?$</data_pattern>
+        </heading>
+
+        <heading id="h32">
+            <label>Tax-credits-and-repay_Credits-et-rembours-fiscaux</label> <!-- used in 00119 (1 file), 00120 (FY files), 00122 (1 file), 00182 (FY files) (2024 files forward), previously  Tax-credits-and-repayments_Crédits-et-remboursements-fiscaux, Tax-credits-and-repayments | Crédits-et-remboursements-fiscaux for unilingual files -->
+            <description xml:lang="en">Tax credits and repayments.</description>
+            <description xml:lang="fr">Crédits et remboursements fiscaux.</description>
+            <data_type>https://schema.org/Float</data_type>
+            <data_pattern>^-?\d+(\.\d+)?$</data_pattern>
+        </heading>
+ 
+		<heading id="h30">
+            <label>Internal-expenses_Charges-internes</label> <!-- 00119 (1 file), 00120 (FY files), 00182 (FY files) (2024 files forward), was Internal-expenses | Charges-internes for unilingual files -->
+            <description xml:lang="en">Elimination of internal expenses.</description>
+            <description xml:lang="fr">L'élimination des charges internes.</description>
+            <data_type>https://schema.org/Float</data_type>
+            <data_pattern>^-?\d+(\.\d+)?$</data_pattern>
+        </heading>
+		
+        <heading id="h107a">
+            <label>Int-rev-against-exps_Rev-int-affectes-aux-charges</label> <!-- only 00182 (FY files, 2024 file), previously Int-rev-netted-against-exps_Rev-int-affectés-aux-charges, and Internal-revenues-netted-against-expenses | Revenus-internes-affectés-aux-charges for unilingual files -->
+            <description xml:lang="en">Internal revenues netted against expenditures consist of amounts of internal revenue that are eligible for credit to the vote by organizations that have this authority.</description>
+            <description xml:lang="fr">Les revenus internes affectés aux dépenses consistent en des montants de revenu interne admissibles à valoir sur le crédit par les organisations ayant cette autorisation.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+
+        <heading id="h29">
+			<label>Xpns-cons-CC_Dep-SE-cons</label> <!-- only 00120 (FY files), previously Consolidated-Crown-corporations | Sociétés-d'État-consolidées -->
+            <description xml:lang="en">Expenses of consolidated Crown corporations</description>
+            <description xml:lang="fr">Dépenses des sociétés d'État consolidées</description>
+            <data_type>https://schema.org/Float</data_type>
+            <data_pattern>^-?\d+(\.\d+)?$</data_pattern>
+        </heading>
+        <heading id="h31">
+			<label>Rev-netted-vs-exps_Rev-affectes-aux-charges</label> <!-- only 00120 (FY files), previously Rev-netted-vs-exps_Rev-affectés-aux-charges, Revenues-netted-against-expenses | Revenus-affectés-aux-charges -->
+            <description xml:lang="en">Revenues netted against expenses.</description>
+            <description xml:lang="fr">Revenus affectés aux charges.</description>
+            <data_type>https://schema.org/Float</data_type>
+            <data_pattern>^-?\d+(\.\d+)?$</data_pattern>
+        </heading>
+        <heading id="h33">
+			<label>Rev-cons-CC_Rev-SE-cons</label> <!-- only 00120 (FY files), previuosly Revenues-of-consolidated-Crown-corporations | Revenus-des-sociétés-d'État-consolidées -->
+            <description xml:lang="en">Revenues of consolidated Crown corporations.</description>
+            <description xml:lang="fr">Revenus des sociétés d'État consolidées.</description>
+            <data_type>https://schema.org/Float</data_type>
+            <data_pattern>^-?\d+(\.\d+)?$</data_pattern>
+        </heading>
+		
+		
+        <heading id="h36">
+			<label xml:lang="en">Cntrl-oblig_Oblig-contl_eng</label> <!-- 00109 (FY files), 00113 (1 file), previuosly CNTRCTL_TYP_EN_NM | CNTRCTL_TYP_FR_NM -->
+            <label xml:lang="fr">Cntrl-oblig_Oblig-contl_fra</label>
+            <description xml:lang="en">Contractual Obligation Type.</description>
+            <description xml:lang="fr">Type d'obligations contractuelles.</description>
+            <data_pattern>^.+$</data_pattern>
+        </heading>
+        <heading id="h37">
+            <label xml:lang="en">Contr-desc_Desc-entrp_eng</label> <!-- 00109 (FY files), 00113 (1 file), previuosly CNTRCT_EN_DESC | CNTRCT_FR_DESC -->
+            <label xml:lang="fr">Contr-desc_Desc-entrp_fra</label>
+            <description xml:lang="en">Contract Description differs by contractual obligation type, characteristics by contractual obligation type are presented below
+                If Capital Assets: a brief description and the main location of the project and/or the description for the main contractor If Future Capital Leases: a description of asset and/or the location of asset
+                If Operating Leases: a description of asset and/or the location of asset
+                If Purchases: a description of purchase and/or the program under which the purchase or project belongs
+                If Transfer payment agreements: the description or purpose of transfer payment and/or the program, project or agreement type under which the grants or contributions belong</description>
+            <description xml:lang="fr">Description du contrat est différente selon le type d'obligation contractuelle alors les caractéristiques par type d'obligation contractuelle sont expliquées ci-dessous Si Immobilisations: une brève description et l'emplacement principal du projet et/ou la description du contrat accordé à l'entrepreneur principal Si Contrats de location-acquisition ultérieurs: la description de l'actif et/ou le lieu où se trouve l'actif Si contrats de location-exploitation: la description de l'actif et/ou le lieu où se trouve l'actif Si Achats: la description de l'achat et/ou le programme sous lequel l'achat ou le projet est classé. Si Accord de paiements de transfert: une description ou l'objectif du paiement de transfert et/ou le programme, projet ou type d’entente en vertu duquel les subventions ou contributions ont été accordées.</description>
+        </heading>
+        <heading id="h38">
+            <label xml:lang="en">Contr-name_Nom-entrp_eng</label> <!--00109 (FY files), 00113 (1 file), 00115 (1 file), previously CNTRCTR_EN_NM | CNTRCTR_FR_NM -->
+            <label xml:lang="fr">Contr-name_Nom-entrp_fra</label>
+            <description xml:lang="en">Name of Contractor differs by contractual obligation type, characteristics by contractual obligation type are presented below
+                If Capital Assets: the name of the main contractor or the supplier in the case of outright purchases of assets
+                If Future Capital Leases: the name of lessor
+                If Operating Leases: the name of lessor
+                If Purchases: the name of the seller
+                If Transfer payment agreements: the recipient or type of recipient</description>
+            <description xml:lang="fr">Nom de l'entrepreneur est différent selon le type d'obligation contractuelle alors les caractéristiques par type d'obligation contractuelle sont expliquées ci-dessous
+                Si Immobilisations: le nom de l'entrepreneur principal ou le fournisseur, dans les cas où l'actif est définitivement acquis
+                Si Contrats de location-acquisition ultérieurs: le nom du bailleur
+                Si contrats de location-exploitation: le nom du bailleur
+                Si Achats: le nom du vendeur
+                Si Accord de paiements de transfert: le destinataire ou le catégorie de destinataire</description>
+        </heading>
+        <heading id="h39">
+            <label>Total-est-cost_Cout-est-total</label> <!-- only 00109 (FY files), previously ESTMTD_CST_TOT_AMT -->
+            <description xml:lang="en">Total estimated cost of the contractual obligation over the life of the contract.</description>
+            <description xml:lang="fr">Coût total estimatif de l'obligation contractuelle au cours de la durée du contrat.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d*$</data_pattern>  <!-- OD-2016-00109, 2014 datafiles contain blanks -->
+        </heading>
+        <heading id="h40">
+            <label>Contract-amt_Mnt-contrat</label> <!-- 00109 (FY files), 00147 (FY files), previously CNTRCT_AMT -->
+            <description xml:lang="en">The amount contracted (the estimated total cost of the contract as of March 31, current year).</description>
+            <description xml:lang="fr">Le montant du contrat (le coût estimatif total du contrat au 31 mars de l'exercice en cours).</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d*$</data_pattern>  <!-- OD-2016-00109, 2014 datafiles contain blanks -->
+        </heading>
+        <heading id="h41">
+            <label>Cumltv-pymts_Paimts-cumltv</label> <!-- only 00109 (FY files), previously XPND_AMT -->
+            <description xml:lang="en">The portion of the contract(s) that has been fulfilled, in other words, cumulative payment from the beginning of the project up to March 31.</description>
+            <description xml:lang="fr">La partie du contrat qui a été exécutée, en d’autres mots, les paiements cumulatifs depuis le début du projet jusqu’au 31 mars.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d*$</data_pattern>
+        </heading>
+        <heading id="h42">
+            <label>Amt-remaining_Mnt-non-execute</label> <!-- 00109 (FY files), 00113 (1 file), previously C_OS_OBLGN_AMT -->
+            <description xml:lang="en">The total outstanding amount of contractual obligation still to be discharged at March 31st.</description>
+            <description xml:lang="fr">Le montant des obligations contractuelles non exécutées au 31 mars qui n'ont pas encore été imputées aux dépenses.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d*$</data_pattern> <!-- updated to allow blank values as found in the 00109/2004 data file -->
+        </heading>
+
+        <heading id="pay1">
+            <label>FY1-oblg_EF1-oblg</label> <!-- 00109 (FY files), previously PYMT_DUE_FY_1_AMT -->
+            <description xml:lang="en">Portion of the total outstanding obligation to be disbursed in fiscal year 1.</description>
+            <description xml:lang="fr">Partie du total de l'obligation contractuelle à être déboursée dans l'exercice 1.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d*$</data_pattern>
+        </heading>
+        <heading id="pay2">
+            <label>FY2-oblg_EF2-oblg</label> <!-- 00109 (FY files), previously PYMT_DUE_FY_2_AMT -->
+            <description xml:lang="en">Portion of the total outstanding obligation to be disbursed in fiscal year 2.</description>
+            <description xml:lang="fr">Partie du total de l'obligation contractuelle à être déboursée dans l'exercice 2.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d*$</data_pattern>
+        </heading>
+        <heading id="pay3">
+            <label>FY3-oblg_EF3-oblg</label> <!-- 00109 (FY files), previously PYMT_DUE_FY_3_AMT -->
+            <description xml:lang="en">Portion of the total outstanding obligation to be disbursed in fiscal year 3.</description>
+            <description xml:lang="fr">Partie du total de l'obligation contractuelle à être déboursée dans l'exercice 3.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d*$</data_pattern>
+        </heading>
+        <heading id="pay4">
+            <label>FY4-oblg_EF4-oblg</label> <!-- 00109 (FY files), previously PYMT_DUE_FY_4_AMT -->
+            <description xml:lang="en">Portion of the total outstanding obligation to be disbursed in fiscal year 4.</description>
+            <description xml:lang="fr">Partie du total de l'obligation contractuelle à être déboursée dans l'exercice 4.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d*$</data_pattern>
+        </heading>
+        <heading id="pay5">
+            <label>FY5-oblg_EF5-oblg</label> <!-- 00109 (FY files), previously PYMT_DUE_FY_5_AMT -->
+            <description xml:lang="en">Portion of the total outstanding obligation to be disbursed in fiscal year 5.</description>
+            <description xml:lang="fr">Partie du total de l'obligation contractuelle à être déboursée dans l'exercice 5.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d*$</data_pattern>
+        </heading>
+        <heading id="pay6s">
+            <label>FYs-oblg_EFs-oblg</label> <!-- 00109 (FY files), previously PYMT_DUE_FY_6S_AMT -->
+            <description xml:lang="en">Portion of the total outstanding obligation to be disbursed in fiscal year 6 and after.</description>
+            <description xml:lang="fr">Partie du total de l'obligation contractuelle à être déboursée dans l'exercice 6 et suivants.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^-?\d*$</data_pattern>  <!-- OD-2016-00109, 2008 datafiles contains negative numbers -->
+        </heading>
+
+        <heading id="h49">
+            <label>Old-age-benefits_Prestations-vieillesse</label> <!-- only 00118 (FY files), previously Old-age-security-benefits | Prestations-de-sécurité-de-la-vieillesse -->
+            <description xml:lang="en">Old age security benefits - Type of ministerial expenditure.</description>
+            <description xml:lang="fr">Prestations de sécurité de la vieillesse - Catégorie de dépense ministérielle.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="h50">
+            <label>Health-xfr_Trnsf-sante</label> <!-- only 00118 (FY files), previously Canada-health-transfer | Transfert-canadien-en-matière-de-santé -->
+            <description xml:lang="en">Canada health transfer - Type of ministerial expenditure.</description>
+            <description xml:lang="fr">Transfert canadien en matière de santé - catégorie de dépense ministérielle.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="h51">
+            <label>Social-xfr_Trnsf-sociaux</label> <!-- only 00118 (FY files), previously Canada-social-transfer | Transfert-canadien-en-matière-de-programmes-sociaux -->
+            <description xml:lang="en">Canada social transfer - Type of ministerial expenditure.</description>
+            <description xml:lang="fr">Transfert canadien en matière de programmes sociaux - catégorie de dépense ministérielle.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="h52">
+            <label>Fiscal-arrangements_Accords-fiscaux</label> <!-- only 00118 (FY files), previously Fiscal-arrangements | Accords-fiscaux -->
+            <description xml:lang="en">Fiscal arrangements - Type of ministerial expenditure.</description>
+            <description xml:lang="fr">Accords fiscaux - catégorie de dépense ministérielle.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="h53">
+            <label>QC-abatement_Abattement-QC</label> <!-- only 00118 (FY files), previously Quebec-abatement | Abattement-du-Québec -->
+            <description xml:lang="en">Quebec abatement - Type of ministerial expenditure.</description>
+            <description xml:lang="fr">Abattement du Québec - Catégorie de dépense ministérielle.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="h54">
+            <label>Other_Autres</label> <!-- only 00118 (FY files), previously Other | Autres -->
+            <description xml:lang="en">Other - Type of ministerial expenditure.</description>
+            <description xml:lang="fr">Autres - Catégorie de dépense ministérielle.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="h55">
+            <label>Other-prog-xpend_Autres-depenses-prog</label> <!-- only 00118 (FY files), previously Other-program-expenditures | Autres-dépenses-de-programmes -->
+            <description xml:lang="en">Other program expenditures - Type of ministerial expenditure.</description>
+            <description xml:lang="fr">Autres dépenses de programmes - Catégorie de dépense ministérielle.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="h56">
+            <label>Public-debt-charges_Frais-dette-publique</label> <!-- 00118 (FY files), previously Public-debt-charges | Frais-de-la-dette-publique -->
+            <description xml:lang="en">Public debt charges - Type of ministerial expenditure.</description>
+            <description xml:lang="fr">Frais de la dette publique - Catégorie de dépense ministérielle.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="h57">
+            <label>Alt-pymts-stnd-prog_Paiemts-rempl-prog-perm</label>  <!-- only 00118 (past year files, 2011 and prior), previously Alternative-payments-for-standing-programs | Paiements-de-remplacement-pour-programmes-permanents -->
+            <description xml:lang="en">Alternative payments for standing programs - Type of ministerial expenditure.</description>
+            <description xml:lang="fr">Paiements de remplacement pour programmes permanents - Catégorie de dépense ministérielle.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="h58">
+            <label>Health-social-xfr_Trnsf-sante-sociaux</label> <!-- only 00118 (past year files, 2009 and prior), previously Canada-health-and-social-transfer | Transfert-canadien-en-matière-de-santé-et-de-services-sociaux -->
+            <description xml:lang="en">Canada health and social transfer - Type of ministerial expenditure.</description>
+            <description xml:lang="fr">Transfert canadien en matière de santé et de services sociaux - catégorie de dépense ministérielle.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+
+
+        <heading id="so1">
+            <label>Std-obj1_Art-crnt1</label> <!-- 00121 (FY files), 00159-A, 00275 (non-PAC), previously SO1 -->
+            <description xml:lang="en">Standard object code for personnel expenditures</description>
+            <description xml:lang="fr">Code de l'article courant des dépenses de personnel</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="so2">
+            <label>Std-obj2_Art-crnt2</label> <!-- 00121 (FY files), 00159-A, 00275 (non-PAC), previously SO1 -->
+            <description xml:lang="en">Standard object code for transportation and communications expenditures</description>
+            <description xml:lang="fr">Code de l'article courant des dépenses de transports et des communications</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="so3">
+            <label>Std-obj3_Art-crnt3</label> <!-- 00121 (FY files), 00159-A, 00275 (non-PAC), previously SO1 -->
+            <description xml:lang="en">Standard object code for information expenditures</description>
+            <description xml:lang="fr">Code de l'article courant des dépenses d'information</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="so4">
+            <label>Std-obj4_Art-crnt4</label> <!-- 00121 (FY files), 00159-A, 00275 (non-PAC), previously SO1 -->
+            <description xml:lang="en">Standard object code for professional and special services expenditures</description>
+            <description xml:lang="fr">Code de l'article courant des dépenses de services professionnels et spéciaux</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="so5">
+            <label>Std-obj5_Art-crnt5</label> <!-- 00121 (FY files), 00159-A, 00275 (non-PAC), previously SO1 -->
+            <description xml:lang="en">Standard object code for rentals expenditures</description>
+            <description xml:lang="fr">Code de l'article courant des dépenses de location</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="so6">
+            <label>Std-obj6_Art-crnt6</label> <!-- 00121 (FY files), 00159-A, 00275 (non-PAC), previously SO1 -->
+            <description xml:lang="en">Standard object code for repair and maintenance expenditures</description>
+            <description xml:lang="fr">Code de l'article courant des dépenses de réparation et entretien</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="so7">
+            <label>Std-obj7_Art-crnt7</label> <!-- 00121 (FY files), 00159-A, 00275 (non-PAC), previously SO1 -->
+            <description xml:lang="en">Standard object code for utilities, materials and supplies expenditures</description>
+            <description xml:lang="fr">Code de l'article courant des dépenses de services publics, fournitures et approvisionnements</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="so8">
+            <label>Std-obj8_Art-crnt8</label> <!-- 00121 (FY files), 00159-A, 00275 (non-PAC), previously SO1 -->
+            <description xml:lang="en">Standard object code for acquisition of land, buildings and works expenditures</description>
+            <description xml:lang="fr">Code de l'article courant des dépenses d'acquisition de terrains, bâtiments et ouvrages</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="so9">
+            <label>Std-obj9_Art-crnt9</label> <!-- 00121 (FY files), 00159-A, 00275 (non-PAC), previously SO1 -->
+            <description xml:lang="en">Standard object code for acquisition of machinery and equipment expenditures</description>
+            <description xml:lang="fr">Code de l'article courant des dépenses d'acquisition de matériel et d'outillage</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="so10">
+            <label>Std-obj10_Art-crnt10</label> <!-- 00121 only -->
+            <description xml:lang="en">Standard object code for transfer payment expenditures</description>
+            <description xml:lang="fr">Code de l'article courant des dépenses de paiements de transfert</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="so11">
+            <label>Std-obj11_Art-crnt11</label> <!-- 00121 only -->
+            <description xml:lang="en">Standard object code for public debt charge expenditures</description>
+            <description xml:lang="fr">Code de l'article courant des dépenses de frais de la dette publique</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\-?\d*$</data_pattern>
+        </heading>
+        <heading id="so12">
+            <label>Std-obj12_Art-crnt12</label> <!-- 00121 (FY files), 00159-A, 00275 (non-PAC), previously SO1 -->
+            <description xml:lang="en">Standard object code for other subsidies and payments expenditures</description>
+            <description xml:lang="fr">Code de l'article courant des autres dépenses de subventions et paiements</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+
+        <heading id="h71">
+            <label>External-revenues_Revenus-externes</label> <!-- only 00121 (FY files), previously External-revenues| Revenus-externes -->
+            <description xml:lang="en">External revenues.</description>
+            <description xml:lang="fr">Revenus externes.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="od135a1">
+            <label>Tax-revenues_Revenus-fiscaux</label> <!-- only 00135 (FY files) -->
+            <description xml:lang="en">Tax revenues - Source of ministerial revenues.</description>
+            <description xml:lang="fr">Revenus fiscaux - Source de revenus ministériels.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="od135b1">
+            <label>Return-on-investments_Revenus-de-placements</label> <!-- only 00135 (FY files) -->
+            <description xml:lang="en">Return on investments - Source of ministerial revenues.</description>
+            <description xml:lang="fr">Revenus de placements - Source de revenus ministériels.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="od135c1">
+            <label>Refunds-prev-yrs-exp_Recouv-deps-exs-ant</label> <!-- used in 00135 (FY files), previously Refunds-prev-yrs-exp_Recouv-déps-d'exs-ant -->
+            <description xml:lang="en">Refunds of previous years expenditures - Source of ministerial revenues.</description>
+            <description xml:lang="fr">Recouvrements de dépenses d'exercices antérieurs - Source de revenus ministériels.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="od135d1">
+            <label>Sales-goods-svcs_Ventes-biens-srvs</label> <!-- used in 00135 (FY files) -->
+            <description xml:lang="en">Sales of goods and services - Source of ministerial revenues.</description>
+            <description xml:lang="fr">Ventes de biens et de services - Source de revenus ministériels.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="od135e1">
+            <label>Proceeds-disp-surplus-assets_Prods-vente-biens-excdnt</label> <!-- used in 00130 (1 file), 00135 (FY files), previously Proceeds-disposal-surplus-Crown-assets_Produits-vente-biens-excédentaires-État -->
+            <description xml:lang="en">Proceeds from the disposal of surplus Crown assets - Source of ministerial revenues.</description>
+            <description xml:lang="fr">Produits de la vente de biens excédentaires de l'État - Source de revenus ministériels.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="od135f1">
+            <label>Miscellaneous_Divers</label> <!-- used in 00135 (FY files) -->
+            <description xml:lang="en">Miscellaneous - Source of ministerial revenues.</description>
+            <description xml:lang="fr">Divers - Source de revenus ministériels.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+
+
+        <heading id="h78b">
+            <label xml:lang="en">Segment_Secteur_eng</label> <!-- 00065 (FY files), 00105, previously SEGMENT | SECTEUR, only 00106-A, was previuosly SEGMENT_ECCO | SECTEUR_ECCO --> 
+            <label xml:lang="fr">Segment_Secteur_fra</label>
+            <description xml:lang="en">Segment of business</description>
+            <description xml:lang="fr">Le secteur d'affaire</description>
+        </heading>
+        <heading id="h81">
+            <label xml:lang="en">Rcpt-class_Cat-bnfcrs_eng</label> <!-- only 00149 (FY files) -->
+            <label xml:lang="fr">Rcpt-class_Cat-bnfcrs_fra</label>
+            <description xml:lang="en">Recipient class</description>
+            <description xml:lang="fr">Catégorie de bénéficiaires.</description>
+        </heading>
+        <heading id="h82">
+            <label xml:lang="en">Rcpt-nm-locn_Nm-lieu-bnfcrs_eng</label> <!-- only 00149 (FY files) -->
+            <label xml:lang="fr">Rcpt-nm-locn_Nm-lieu-bnfcrs_fra</label>
+            <description xml:lang="en">Recipient name and location.</description>
+            <description xml:lang="fr">Nom et lieu du bénéficiaire.</description>
+        </heading>
+        <heading id="type1b">
+            <label xml:lang="en">Type-detail_eng</label> <!-- FY files: 00062, 00064, 00065, 00066, 00068, 00092; 1 file: 00072, 00074, 00075, 00076, 00077, 00093, 00096, 00105, 00114, previously TYPE_EN | TYPE_FR -->
+            <label xml:lang="fr">Type-detail_fra</label> <!-- SEE what was the #h25a, Description_EN | Description_FR columns too... lots of overlap -->
+            <description xml:lang="en">Type of operating activity and opening balance</description>
+            <description xml:lang="fr">Type d'activités de fonctionnement et solde d’ouverture</description>
+        </heading>
+        <heading id="type2b">
+            <label xml:lang="en">Type-detail2_eng</label> <!-- FY files: 00064, 00065, 00092; 1 file: 00075, 00076, 00077, 00096, 00105, 00114, previously SUB-TYPE | SOUS-TYPE -->
+            <label xml:lang="fr">Type-detail2_fra</label>
+            <description xml:lang="en">Second level of operating activity type</description>
+            <description xml:lang="fr">Deuxième niveau du type d’activités de fonctionnement</description>
+        </heading>
+        <heading id="type3b">
+            <label xml:lang="en">Type-detail3_eng</label> <!-- FY files: 00064, 00065, 00092; 1 file: 00076, 00096, 00114, previously SUB-SUB-TYPE | SOUS-SOUS-TYPE -->
+            <label xml:lang="fr">Type-detail3_fra</label>
+            <description xml:lang="en">Third level of operating activity type</description>
+            <description xml:lang="fr">Troisième niveau du type d'activités de fonctionnement</description>
+        </heading>
+        <heading id="type4b">
+            <label xml:lang="en">Type-detail4_eng</label> <!-- 00064 (FY files), previously SUB-SUB-SUB-TYPE | SOUS-SOUS-SOUS-TYPE -->
+            <label xml:lang="fr">Type-detail4_fra</label>
+            <description xml:lang="en">Fourth level of operating activity type</description>
+            <description xml:lang="fr">Quatrième niveau du type d’activités de fonctionnement</description>
+        </heading>
+		<heading id="type5b">
+            <label xml:lang="en">Type-detail5_eng</label> <!-- only 00064, previously TYPE-DETAIL | TYPE-DÉTAIL -->
+            <label xml:lang="fr">Type-detail5_fra</label> 
+            <description xml:lang="en">Additional details related to the type or final sub-level of the operating activity type.</description>
+            <description xml:lang="fr">Précisions supplémentaires connexes au type ou au dernier sous-niveau du type d’activité de fonctionnement.</description>
+        </heading>
+
+
+        <heading id="h86b">
+            <label xml:lang="en">Contractor-details_Details-entrepr_eng</label> <!-- 00146, 00147 (FY files), previously CNTRCT_NML_EN_DESC | CNTRCT_NML_FR_DESC -->
+            <label xml:lang="fr">Contractor-details_Details-entrepr_fra</label>
+            <description xml:lang="en">Contractor Name and Location (for files before 2026), only the contractor name afterwards.</description>
+            <description xml:lang="fr">Nom et lieu de l'entrepreneur (pour les fichiers avant 2026), seulement le nom de l'entrepreneur ensuite.</description>
+        </heading>
+		
+		 <heading id="h86b1">
+            <label xml:lang="en">Contractor-city_Ville-entrepr_eng</label> <!-- 00146, 00147 (FY files) -->
+            <label xml:lang="fr">Contractor-city_Ville-entrepr_fra</label>
+            <description xml:lang="en">Contractor city</description>
+            <description xml:lang="fr">Ville de l'entrepreneur</description>
+        </heading>
+
+        <heading id="h86b2">
+            <label xml:lang="en">Contractor-province_Province-entrepr_eng</label> <!-- 00146, 00147 (FY files) -->
+            <label xml:lang="fr">Contractor-province_Province-entrepr_fra</label>
+            <description xml:lang="en">Contractor province</description>
+            <description xml:lang="fr">Province de l'entrepreneur</description>
+        </heading>
+
+        <heading id="h86b3">
+            <label xml:lang="en">Contractor-country_Pays-entrepr_eng</label> <!-- 00146, 00147 (FY files) -->
+            <label xml:lang="fr">Contractor-country_Pays-entrepr_fra</label>
+            <description xml:lang="en">Contractor country (if outside Canada)</description>
+            <description xml:lang="fr">Pays de l'entrepreneur (si à l'extérieur du Canada)</description>
+        </heading>
+
+
+        <heading id="h87b">
+            <label xml:lang="en">Proj-desc_eng</label> <!-- FY files: Only 00147, previously PRJCT_EN_DESC | PRJCT_FR_DESC -->
+            <label xml:lang="fr">Proj-desc_fra</label>
+            <description xml:lang="en">Project description and location (for files before 2026), only the contractor name afterwards.</description>
+            <description xml:lang="fr">Description et province du projet (pour les fichiers avant 2026), seulement le nom de l'entrepreneur ensuite.</description>
+        </heading>
+			 <heading id="h87b1">
+            <label xml:lang="en">Proj-city_Ville-proj_eng</label> <!-- FY files: Only 00147, previously PRJCT_EN_DESC | PRJCT_FR_DESC -->
+            <label xml:lang="fr">Proj-city_Ville-proj_fra</label>
+            <description xml:lang="en">Project city</description>
+            <description xml:lang="fr">Ville du projet</description>
+        </heading>
+
+        <heading id="h87b2">
+            <label xml:lang="en">Proj-province_Province-proj_eng</label> <!-- FY files: Only 00147, previously PRJCT_EN_DESC | PRJCT_FR_DESC -->
+            <label xml:lang="fr">Proj-province_Province-proj_fra</label>
+            <description xml:lang="en">Project province</description>
+            <description xml:lang="fr">Province du projet</description>
+        </heading>
+
+        <heading id="h87b3">
+            <label xml:lang="en">Proj-country_Pays-proj_eng</label> <!-- FY files: Only 00147, previously PRJCT_EN_DESC | PRJCT_FR_DESC -->
+            <label xml:lang="fr">Proj-country_Pays-proj_fra</label>
+            <description xml:lang="en">Project country (if outside Canada)</description>
+            <description xml:lang="fr">Pays du projet (si à l'extérieur du Canada)</description>
+        </heading>	
+
+        <heading id="h88b">
+            <label>Xpnd-current-yr_Dep-ex-courant</label> <!-- FY files: 00146, 00147, 00149, previously TOT_CY_XPND_AMT -->
+            <description xml:lang="en">Total Amount Spent in Current Fiscal Year</description>
+            <description xml:lang="fr">Montant total dépensé dans l'exercice courant</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+		
+        <heading id="h89b">
+            <label>Xpnd-to-date_Dep-a-jour</label>  <!-- only 00147 (FY files), previously XPND_TDT_AMT -->
+            <description xml:lang="en">Expenditures To-Date</description>
+            <description xml:lang="fr">Dépenses à ce jour</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+		
+        <heading id="h90b">
+            <label>Object-code_Code-article</label> <!-- only 00148 (FY files), previously OBJ_CD -->
+            <description xml:lang="en">Economic, source and class objects as per the Government-wide Chart of Accounts</description>
+            <description xml:lang="fr">Codes des articles économiques selon le Plan comptable à l'échelle de l'administration fédérale</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d{4}$</data_pattern>
+        </heading>
+		
+        <heading id="h91b1">
+            <label xml:lang="en">Object-desc_Desc-article_eng</label>  <!-- only 00148 (FY files), previously OBJ_EN_NM | OBJ_FR_NM -->
+            <label xml:lang="fr">Object-desc_Desc-article_fra</label>
+            <description xml:lang="en">Economic, source and class objects description as per the Government-wide Chart of Accounts</description>
+            <description xml:lang="fr">Description des articles économiques, de la source et de la catégorie selon le Plan comptable à l'échelle de l'administration fédérale</description>
+        </heading>
+		
+        <heading id="h91b2"> 
+            <label xml:lang="en">Eqpmt-type_Type-eqpmt_eng</label> <!-- only 00148 (FY files), previously EQPMT_TYPE_EN | TYPE_EQPMT_FR -->
+            <label xml:lang="fr">Eqpmt-type_Type-eqpmt_fra</label>
+            <description xml:lang="en">Main category of machinery and equipment expenditures as per the Government-wide Chart of Accounts</description>
+            <description xml:lang="fr">Catégorie principale de dépenses en machinerie et matériel selon le Plan comptable à l'échelle de l'administration fédérale</description>
+        </heading>
+		
+        <heading id="h92b">
+            <label>Aggregate-payments_Versements-totalisant</label> <!-- FY files: 00146, 00148 00149, previously AGRG_PYMT_AMT -->
+            <description xml:lang="en">Aggregate Payments (renamed for better readability and bilingualism)</description>
+            <description xml:lang="fr">Versements totalisant (renommé pour une meilleure lisibilité et un meilleur bilinguisme)</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^-?\d+(\.\d+)?$</data_pattern>
+        </heading>
+		
+        <heading id="h93">
+            <label>Rpt-obj_Art-rppt</label> <!-- only 00146 (FY files), previously ROBJ_CD -->
+            <description xml:lang="en">Reporting object code</description>
+            <description xml:lang="fr">Code de l’article de rapport</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d+$</data_pattern>
+        </heading>
+        <heading id="h94">
+            <label xml:lang="en">Rpt-obj_Art-rppt_eng</label> <!-- only 00146 (FY files), previously ROBJ_EN_NM | ROBJ_FR_NM -->
+            <label xml:lang="fr">Rpt-obj_Art-rppt_fra</label>
+            <description xml:lang="en">Reporting object name.</description>
+            <description xml:lang="fr">Nom de l'article de rapport.</description>
+        </heading>
+		
+        <heading id="h95b">
+            <label xml:lang="en">Claim-type_Type-reclamation_eng</label> <!-- FY files: 00151, 00152, previously PYMNT_TYP_ENG_TXT | PYMNT_TYP_FR_TXT -->
+            <label xml:lang="fr">Claim-type_Type-reclamation_fra</label>
+            <description xml:lang="en">Description of the payment of claim against the Crown</description>
+            <description xml:lang="fr">Description du paiement de réclamation contre l’État</description>
+        </heading>
+
+        <heading id="h96b">
+            <label xml:lang="en">Holder-in-trust_Detenteur-en-fiducie_eng</label> <!-- FY files: 00151, 00152, 00153, previously HLDR_TRST_ENG_NM | HLDR_TRST_FR_NM -->
+            <label xml:lang="fr">Holder-in-trust_Detenteur-en-fiducie_fra</label>
+            <description xml:lang="en">Third party who received the payment</description>
+            <description xml:lang="fr">Tiers ayant reçu le paiement</description>
+        </heading>
+		
+        <heading id="h97b">
+            <label xml:lang="en">Payee_Beneficiaire_eng</label>  <!-- FY files: 00151, 00152, 00153, previously PAYEE_ENG_NM | PAYEE_FR_NM -->
+            <label xml:lang="fr">Payee_Beneficiaire_fra</label>
+            <description xml:lang="en">Name of individual or company. In some instances the names have been withheld, in accordance with terms of settlement, either by withholding a single payee’s name or by providing an amalgamation of payments at a certain rate</description>
+            <description xml:lang="fr">Nom de l’individu ou de la compagnie. Dans certains cas, les noms ont été retenus, en conformité avec les conditions de règlement, soit en retenant le nom d’un seul bénéficiaire ou en regroupant les paiements similaires</description>
+        </heading>
+		
+        <heading id="h98">
+            <label xml:lang="en">Incdnt-desc_Desc-incdnt_eng</label> <!-- 00141-A, 00142-A, 00144-A, 00308 (1 file), previously INCDNT_EN_DESC | INCDNT_FR_DESC -->
+            <label xml:lang="fr">Incdnt-desc_Desc-incdnt_fra</label>
+            <description xml:lang="en">Brief description of incidents of losses</description>
+            <description xml:lang="fr">Brève description des incidents des pertes</description>
+        </heading>
+		<!-- INCDNT_TYPE_EN_DESC | INCDNT_TYPE_FR_DESC removed as it was an orphaned entry -->
+        <heading id="h100">
+            <label>Loss-nbr_Nbr-pertes</label> <!-- 00141-A, 00142-A, 00144-A, 00308 (1 file), previously TOT_INCDNT_NO -->
+            <description xml:lang="en">Total number of incidents of losses</description>
+            <description xml:lang="fr">Nombre total des incidents des pertes</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d+$|^$</data_pattern>
+        </heading>
+        <heading id="h101">
+            <label>Loss-amt_Mnt-pertes</label> <!-- 00141-A, 00142-A, 00144-A, 00308 (1 file), previously TOT_LOSS_AMT -->
+            <description xml:lang="en">Total amount of the losses</description>
+            <description xml:lang="fr">Montant total des pertes</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d+$</data_pattern>
+        </heading>
+        <heading id="h102">
+            <label>Loss-amt-recvrd_Mnt-pertes-recouvre</label> <!-- 00141-A, 00142-A, 00144-A, 00308 (1 file), previously TOT_CY_RCVRD_AMT -->
+            <description xml:lang="en">Total amount of loss recovered in current year.</description>
+            <description xml:lang="fr">Montant de perte recouvré dans l’année courante.</description>
+            <data_type>https://schema.org/Integer</data_type>
+        </heading>
+        <heading id="h103">
+            <label>Loss-recvry-not-expctd_Perte-recvrmt-non-prevu</label> <!-- 00141-A, 00142-A, 00144-A, 00308 (1 file), previously NOT_XPTD_RCVRD_AMT -->
+            <description xml:lang="en">Amount of loss not expected to be recovered.</description>
+            <description xml:lang="fr">Montant de perte du recouvrement non prévu.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d*$</data_pattern>
+        </heading>
+        <heading id="h104">
+            <label>Loss-recvry-expctd_Perte-recvrmt-prevu</label> <!-- 00141-A, 00142-A, 00144-A, 00308 (1 file), previously C_XPTD_SY_RCVR_AMT -->
+            <description xml:lang="en">Amount of loss expected to be recovered in subsequent years.</description>
+            <description xml:lang="fr">Montant de perte du recouvrement prévu dans les exercices ultérieurs.</description>
+            <data_type>https://schema.org/Integer</data_type>
+        </heading>
+		<heading id="h105">
+            <label>Loss-ID_ID-perte</label> <!-- 00308 (1 file) -->
+            <description xml:lang="en">An identifier assigned arbitrarily to each loss the first time it is reported within the Public Accounts of Canada.  New records added in the Public Accounts 2026 will start with "2026-". The final four digits are incremented by 1 for each subsequent loss reported, starting from "0001". All subsequent updates to that same loss will share the same original loss identifier for ease of associating related records.</description>
+            <description xml:lang="fr">Un identificateur attribué arbitrairement à chaque perte la première fois qu’elle est déclarée dans les Comptes publics du Canada.  Les nouveaux enregistrements ajoutés dans les Comptes publics de 2026 commenceront par « 2026- ». Les quatre derniers chiffres sont incrémentés de 1 pour chaque perte subséquente déclarée, à partir de « 0001 ». Toutes les mises à jour ultérieures de ce même sinistre partageront le même identificateur de sinistre d’origine pour faciliter l’association des enregistrements connexes.</description>
+            <data_pattern>^\d{4}[-\/]\d{4}$</data_pattern>
+		</heading>
+
+        <heading id="h106">
+            <label xml:lang="en">Adjusts_Rajusts_eng</label> <!-- 00066 (FY files), previously ADJ_EN | ADJ_FR -->
+            <label xml:lang="fr">Adjusts_Rajusts_fra</label>
+            <description xml:lang="en">Accrual and other adjustments or tax credits and repayments.</description>
+            <description xml:lang="fr">Redressements courus et autres ou crédits et remboursements fiscaux.</description>
+        </heading>
+
+
+        <heading id="h108a">
+            <label>Rights-and-privs_Droits-et-privs</label>  <!-- 00123 (FY files), previously Rights-and-privileges | Droits-et-privilèges -->
+            <description xml:lang="en">Internal and external revenues from licences, permits, patents, copyrights, etc.</description>
+            <description xml:lang="fr">Revenus internes et externes de licences, permis, brevets, droits d'auteur, etc.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="h109a"> <!-- 00123 (FY files), previously Lease-and-use-of-public-property | Location-et-utilisation-de-biens-publics -->
+            <label>Lease-and-use-public-property_Location-et-util-biens-publics</label>
+            <description xml:lang="en">Internal and external revenues from lease and use of public property.</description>
+            <description xml:lang="fr">Revenus internes et externes de location et d’utilisation de biens publics.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="h110a">
+            <label>Svcs-reg-nature_Srvcs-nature-regle</label> <!-- 00123 (FY files), previously Services-of-a-regulatory-nature | Services-de-nature-réglémentaire, then Svcs-reg-nature_Srvcs-nature-réglé -->
+            <description xml:lang="en">Internal and external revenues from services provided in accordance with regulations where the government is the only unity providing the service.</description>
+            <description xml:lang="fr">Revenus internes et externes de services fournis en vertu des règlements où le gouvernement est la seule entité offrant le service.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="h111a">
+            <label>Svcs-non-reg-nature_Srvcs-nature-non-regle</label> <!-- 00123 (FY files), previously Services-of-a-non-regulatory-nature | Services-de-nature-non-réglémentaire, then Svcs-non-reg-nature_Srvcs-nature-non-réglé -->
+            <description xml:lang="en">Internal and external revenues from those services that are available on the "free market".</description>
+            <description xml:lang="fr">Revenus internes et externes des services qui sont disponibles sur le « marché libre ».</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="h112a">
+            <label>Sales-goods-info-products_Vente-biens-produits-info</label> <!-- 00123 (FY files), previously Sales-of-goods-and-information-products | Vente-de-biens-et-de-produits-d'information, then Sales-goods-info-products_Vente-biens-produits-d'info -->
+            <description xml:lang="en">Internal and external revenues from sales of goods and information products.</description>
+            <description xml:lang="fr">Revenus internes et externes de la vente de biens et de produits d’information.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="h113a">
+            <label>Other-fees-and-charges_Autres-frais-et-droits</label> <!-- 00123 (FY files), previously Other-fees-and-charges | Autres-frais-et-droits -->
+            <description xml:lang="en">Internal and external revenues from other fees and charges.</description>
+            <description xml:lang="fr">Revenus internes et externes des autres frais et droits.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+		
+		
+        <heading id="h114">
+            <label xml:lang="en">Fin-stmt_Etat-consolide_eng</label> <!-- 00062 (FY files), 00103 (1 file), previously CONSOLIDATED-STATEMENT | ÉTAT-CONSOLIDÉ-->
+            <label xml:lang="fr">Fin-stmt_Etat-consolide_fra</label>
+            <description xml:lang="en">Financial Statement from the comparative Financial Information as per Volume 1 of the Public Accounts of Canada.</description>
+            <description xml:lang="fr">L'état consolidé de la comparaison d’informations financières selon volume 1 des Comptes Publics du Canada.</description>
+        </heading>
+        <heading id="h115b">
+            <label xml:lang="en">Account_Compte_eng</label> <!-- FY files: 00064, 00092; 1 file: 00075, 00093, 00096, previously ACCOUNT | COMPTE -->
+            <label xml:lang="fr">Account_Compte_fra</label>
+            <description xml:lang="en">A unit for classifying and registering assets, liabilities, equity, revenues or expenses</description>
+            <description xml:lang="fr">Une unité de classement et d’enregistrement des éléments d’actif, de passif, de l’avoir, des revenus ou des charges</description>
+        </heading>
+
+        <heading id="h116">
+            <label xml:lang="en">Tang-cptl-assts_Immob-corp_eng</label> <!-- 00110 (1 file), 00111 (1 file), previously Tangible-Capital-Assets | Immobilisations-corporelles -->
+            <label xml:lang="fr">Tang-cptl-assts_Immob-corp_fra</label>
+            <description xml:lang="en">The main categories of tangible capital assets.</description>
+            <description xml:lang="fr">Les principales catégories d’immobilisation.</description>
+        </heading>
+        <heading id="h118">
+            <label xml:lang="en">Category_Categorie_eng</label> <!-- 1 file: 00072, 00093, 00096, 00101, 00102, 00104, 00108, 00110, 00113, 00114, 00115, previously CATEGORY | CATÉGORIE -->
+            <label xml:lang="fr">Category_Categorie_fra</label>
+            <description xml:lang="en">A group of people, accounting instruments or adjustments that are similar in nature.</description>
+            <description xml:lang="fr">Un groupe de personnes, d’instruments financiers ou d'ajustements qui ont des caractéristiques communes.</description>
+        </heading>
+
+        <heading id="h119b">
+            <label xml:lang="en">Court_Cours_eng</label> <!-- only 00153 (FY files), previously COURT_EN_NM | COURT_FR_NM -->
+            <label xml:lang="fr">Court_Cours_fra</label>
+            <description xml:lang="en">Court name that gave the authority to pay</description>
+            <description xml:lang="fr">Nom de la cour qui a donné l'authorisation de paiement</description>
+            <data_type>https://schema.org/Integer</data_type>
+        </heading>
+        <heading id="h120b">
+            <label>Judgment-nbr_No-jugement</label>  <!-- only 00153 (FY files), previously JUDG_NO -->
+            <description xml:lang="en">Judgment number</description>
+            <description xml:lang="fr">Numéro du jugement</description>
+        </heading>
+        <heading id="h121b">
+            <label xml:lang="en">Award-desc_Desc-attribution_eng</label>  <!-- only 00153 (FY files), previously AWARD_EN_DESC | AWARD_FR_DESC --> 
+            <label xml:lang="fr">Award-desc_Desc-attribution_fra</label>
+            <description xml:lang="en">Award description</description>
+            <description xml:lang="fr">Description du montant adjugé</description>
+        </heading>
+
+
+        <heading id="od157a1">
+            <label>Nbr-employees_Nbr-employes</label> <!-- only 00157 (1 file), previously Number-of-employees | Nombre-d'employés, then Number-of-employees_Nombre-d'employés -->
+            <description xml:lang="en">The total number of employees that participated in long-term education activities.</description>
+            <description xml:lang="fr">Le nombre total d'employés qui ont participé à des activités éducationnelles de longue durée.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d+$</data_pattern>
+        </heading>
+        <heading id="od157b1">
+            <label>Salaries_Salaires</label> <!-- only 00157 (1 file), previously Salaries | Salaires -->
+            <description xml:lang="en">The salaries paid in relation to education activities Including allowances in lieu of pay.</description>
+            <description xml:lang="fr">Le montant versé en salaire pour les activités éducationnelles incluant les indemnités tenant lieu de traitements.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d+$</data_pattern>
+        </heading>
+        <heading id="od157d1">
+            <label>Tuition-fees_Frais-scolarite</label> <!--used in 00157 (1 file), previously Tuition-fees | Frais-de-scolarité, then Tuition-fees_Frais-de-scolarité -->
+            <description xml:lang="en">The tuition fees paid in relation to education activities Including book allowances.</description>
+            <description xml:lang="fr">Le montant total des frais de scolarité incluant les indemnités pour livres.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d+$</data_pattern>
+        </heading>
+        <heading id="od157e1">
+            <label>Other-xpnd_Autres-dep</label> <!--used in 00157 (1 file), previously Other-expenses | Autres-dépenses, then Other-expenses_Autres-dépenses -->
+            <description xml:lang="en">Other expenses paid in relation to education activities.</description>
+            <description xml:lang="fr">Le montant pour toutes autres dépenses reliées à l'activité éducationnelle.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d+$</data_pattern>
+        </heading>
+
+        <heading id="h131">
+            <label xml:lang="en">Incdt-type_Type-incdt_eng</label> <!-- 00142-A, 00144-A, 00308 (1 file), previously INCDNT_TYPE_EN | INCDNT_TYPE_FR -->
+            <label xml:lang="fr">Incdt-type_Type-incdt_fra</label>
+            <description xml:lang="en">Type of incident that caused a loss</description>
+            <description xml:lang="fr">Type d'incident qui a causé une perte</description>
+        </heading>
+
+		<heading id="h133a">
+            <label>Tax-and-revenues_Recettes-et-revenus</label> <!-- Used in 00122 (1 file), previuosly Total-ministerial-revenues | Total-des-revenus-ministériels, then Ttl-ministerial-revenues_Ttl-des-revenus-ministériels -->
+            <description xml:lang="en">Represents tax and other revenues from both external and internal sources.</description>
+            <description xml:lang="fr">Représente les recettes fiscales et autres revenus provenant de sources externes et internes.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d*)?$</data_pattern>
+        </heading>
+		
+		<heading id="h134a">
+            <label>Rev-CC-other-ents_Rev-SE-autres-ents</label> <!-- Used in 00122 (1 file), previously Crown-corporations-and-other-entities-revenues | Sociétés-d'État-et-autres-entités-revenus, then Crown-corps-and-other-ents-rvns_Socs-d'État-et-autres-ents-rvns -->
+            <description xml:lang="en">Revenues of Crown corporations and other entities.</description>
+            <description xml:lang="fr">Revenus des Sociétés d'État et autres entités.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d*)?$</data_pattern>
+        </heading>
+		
+		<heading id="h135a">
+            <label>Internal-revenues_Revenus-internes</label> <!-- Used in 00122, 00121 replaces 135b -->
+            <description xml:lang="en">Internal revenues.</description>
+            <description xml:lang="fr">Revenus interne.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d*)?$</data_pattern>
+        </heading>
+		
+		<heading id="h136a">
+            <label>Cons-spec-purpose-revenues_Revenus-fins-det-cons</label> <!-- Used in 00122 (1 file), previously Consolidated-specified-purpose-accounts-revenues | Comptes-à-fins-déterminées-consolidés-revenus, then Cons-spec-purpose-accts-rvns_Cmpts-fins-dét-cons-rvns -->
+            <description xml:lang="en">Revenues of consolidated specified purpose accounts.</description>
+            <description xml:lang="fr">Revenus des comptes à fins déterminées consolidés.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d*)?$</data_pattern>
+        </heading>
+
+		
+        <heading id="h151">
+            <label xml:lang="en">Asset-account_Compte-actif_eng</label> <!-- only 00158 (1 file), previously ASST_ACCT_EN_NM | ASST_ACCT_FR_NM -->
+            <label xml:lang="fr">Asset-account_Compte-actif_fra</label> 
+            <description xml:lang="en">Asset account name</description>
+            <description xml:lang="fr">Le nom de compte d'actif</description>
+        </heading>
+        <heading id="h152">
+            <label xml:lang="en">Asset-category_Categorie-actif_eng</label> <!-- only 00158 (1 file), previously ASST_CTGRY_EN_NM -->
+            <label xml:lang="fr">Asset-category_Categorie-actif_fra</label> 
+            <description xml:lang="en">Asset category - this field is only used for the "LOANS, INVESTMENTS AND ADVANCES" asset account</description>
+            <description xml:lang="fr">La catégorie d'actif - ce champ est utilisé seulement pour le « PRÊTS, PLACEMENTS ET AVANCES » comte d'actif</description>
+        </heading>
+        <heading id="h153">
+            <label xml:lang="en">Asset-subcategory_Sous-categorie-actif_eng</label> <!-- only 00158 (single file, was previuosly ASST_SBCTGRY_EN_NM -->
+            <label xml:lang="fr">Asset-subcategory_Sous-categorie-actif_fra</label> 
+            <description xml:lang="en">Asset sub-category. This field is used to provided additional information related to the "Asset Category" (for example, province name for "Provincial and territorial governments")</description>
+            <description xml:lang="fr">La sous-catégorie d'actif. Ce champ est utilisé pour ajouter d'information supplémentaire à la « Catégorie d'actif » (p. ex : l'ajout du nom de la province pour les « Administrations provinciales et territoriales »)</description>
+        </heading>
+        <heading id="h154">
+            <label xml:lang="en">Asset-detail_Detail-actif-eng</label> <!-- only 00158 (1 file), previously ASST_DTL_EN_NM -->
+            <label xml:lang="fr">Asset-detail_Detail-actif-fra</label>
+            <description xml:lang="en">Asset detail. This field is used to provide extra details on return on investmet.</description>
+            <description xml:lang="fr">Les détails de l'actif. Ce champ est utilisé pour fournir des détails supplémentaires sur le revenus de placements.</description>
+        </heading>
+        <heading id="h155">
+            <label>ROI-interest_Interet-RDP</label> <!-- only 00158 (1 file), previously INTRST_AMT -->
+            <description xml:lang="en">Amount of return on investment - Interest</description>
+            <description xml:lang="fr">Le montant de reveus de placement - intérêt</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="h156">
+            <label>ROI-profits-surpluses_Benefices-excedent-RDP</label> <!-- only 00158 (1 file), previously TRNSFER_PRFT_AMT -->
+            <description xml:lang="en">Amount of return on investment - Transfer of profits and surpluses</description>
+            <description xml:lang="fr">Le montant de reveus de placement - virement des bénéfices et de l'excédent</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="h157">
+            <label>ROI-dividends_Dividendes-RDP</label> <!-- only 00158 (1 file), previously DVDND_AMT -->
+            <description xml:lang="en">Amount of return on investment - Dividends</description>
+            <description xml:lang="fr">Le montant de reveus de placement - dividendes</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d+$</data_pattern>
+        </heading>
+        <heading id="h158">
+            <label>ROI-other_Autres-RDP</label> <!-- only 00158 (1 file), previously OTHR_AMTS -->
+            <description xml:lang="en">Amount of return on investment - Other</description>
+            <description xml:lang="fr">Le montant de reveus de placement - autres</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d+$</data_pattern>
+        </heading>
+
+
+        <heading id="h160b">
+            <label>Vote-nbr_No-credit</label> <!-- 00128, 00129, 00136, 00160, previously VOTE_NO; 00308 (1 file), previously CHRGD_CY_VT_NO -->
+            <description xml:lang="en">Vote Numbers are specific parliamentary authorities for government spending, with different votes covering various purposes like general operating expenditures, capital expenditures, and specific central votes managed by the Treasury Board for initiatives like compensation adjustments or operating budget carry-forwards</description>
+            <description xml:lang="fr">Les numéros de crédit sont des autorisations parlementaires précises pour les dépenses gouvernementales, avec différents crédits couvrant diverses fins comme les dépenses générales de fonctionnement, les dépenses en capital, et des crédits centraux particuliers gérés par le Conseil du Trésor pour des initiatives telles que les rajustements de rémunération ou les reports du budget de fonctionnement</description>
+        </heading>
+        <heading id="h238">
+            <label xml:lang="en">Vote-nbr_No-credit_eng</label> <!-- only 00136, previously VOTE_EN_DESC | VOTE_FR_DESC -->
+            <label xml:lang="fr">Vote-nbr_No-credit_fra</label>
+            <description xml:lang="en">Vote description</description>
+            <description xml:lang="fr">Description du crédit</description>
+        </heading>
+
+
+        <heading id="h161">
+            <label xml:lang="en">Legislation_eng</label> <!-- 00138 (1 file), 00139 (1 file), previously PARL_ACT_EN_NM | PARL_ACT_FR_NM -->
+            <label xml:lang="fr">Legislation_fra</label>
+            <description xml:lang="en">Applicable legislation and pertaining section number providing the approval authority for the write-off, forgiveness, remission or waiver.</description>
+            <description xml:lang="fr">Les lois et le numéro de l'article pertinents autorisant la radiation, renonciation, remise ou dispense.</description>
+        </heading>
+        <heading id="h162">
+            <label xml:lang="en">Approv-code_Code-approb_eng</label> <!-- only 00139 (1 file), previously CODE_EN_DESC | CODE_FR_DESC -->
+            <label xml:lang="fr">Approv-code_Code-approb_fra</label>
+            <description xml:lang="en">Code identifying the type of approval</description>
+            <description xml:lang="fr">Le code approprié identifiant le type d'approbation</description>
+        </heading>
+        <heading id="h163">
+            <label>Nbr-min-approv_Nbr-approb-min</label> <!-- only 00139 (1 file), previously MNSTRY_APPRVL_NO -->
+            <description xml:lang="en">Total number of cases approved by an appropriate Minister</description>
+            <description xml:lang="fr">Le nombre total tel qu'approuvé par le ministre concerné</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d*$</data_pattern>
+        </heading>
+        <heading id="h164">
+            <label>Amt-min-approv_Mnt-approb-min</label> <!-- only 00139 (1 file), previously MNSTRY_APPRVL_AMT -->
+            <description xml:lang="en">Total amount approved by a Minister</description>
+            <description xml:lang="fr">Le montant tel qu'approuvé par le ministre concerné</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d*$</data_pattern>
+        </heading>
+        <heading id="h165">
+            <label>Nbr-parl-approv_Nbr-approb-parl</label> <!-- only 00139 (1 file), previously TB_APPRVL_NO -->
+            <description xml:lang="en">Total number of cases authorized by Parliament</description>
+            <description xml:lang="fr">Le nombre total tels qu'autorisés par le Parlement</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d*$</data_pattern>
+        </heading>
+        <heading id="h166">
+            <label>Amt-parl-approv_Mnt-approb-parl</label> <!-- only 00139 (1 file), previously TB_APPRVL_AMT -->
+            <description xml:lang="en">Total amount authorized by Parliament</description>
+            <description xml:lang="fr">Le montant tels qu'autorisés par le Parlement</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^-?\d+$</data_pattern>
+        </heading>
+        <heading id="h167">
+            <label>Vote-nbr-act_No-credit-loi</label> <!-- only 00139 (1 file), previously CY_VT_ACT_DESC -->
+            <description xml:lang="en">The budgetary vote number or the name and section of the Act</description>
+            <description xml:lang="fr">Le numéro du crédit budgétaire ou le nom et l'article de la loi</description>
+        </heading>
+        <heading id="h168">
+            <label>Nbr-GIC-approv_Nbr-approb-GEC</label> <!-- only 00139 (1 file), previously GIC_PARL_ATHRTY_NO -->
+            <description xml:lang="en">Total number of cases approved by Governor in Council and Parliamentary authority</description>
+            <description xml:lang="fr">Le nombre total tel qu'autorisé par le gouverneur en conseil et autorité parlementaire</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d*$</data_pattern>
+        </heading>
+        <heading id="h169">
+            <label>Amt-GIC-approv_Mnt-approb-GEC</label> <!-- only 00139 (1 file), previously GIC_PARL_ATH_AMT -->
+            <description xml:lang="en">Total amount approved by Governor in Council and Parliamentary authority</description>
+            <description xml:lang="fr">Le montant total tel qu'autorisé par le gouverneur en conseil et autorité parlementaire</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d*$</data_pattern>
+        </heading>
+
+
+        <heading id="h170">
+            <label>Mmbr-name_nom</label> <!--used in 00156 (1 file), previously Commission-memb-name_EN | Commission-memb-nom_FR, then Commission-memb-name_nom -->
+            <description xml:lang="en">The name of a commission's member (Lastname, Firstname or Lastname, Initial)</description>
+            <description xml:lang="fr">Le nom d'un membre de la commission (Nom, Prénom ou Nom, Initiale)</description>
+        </heading>
+        <heading id="h171">
+            <label xml:lang="en">Mmbr-title_titre_eng</label> <!-- only 00156 (1 file), previously Commission-memb-titre_EN | Commission-memb-titre_FR -->
+            <label xml:lang="fr">Mmbr-title_titre_fra</label> 
+            <description xml:lang="en">The title of a commission's member</description>
+            <description xml:lang="fr">Le titre d'une membre de la commission</description>
+        </heading>
+        <heading id="h172">
+            <label xml:lang="en">Mmbr-role_eng</label> <!-- only 00156 (1 file), previously Comm-memb-role_EN | Comm-memb-role_FR -->
+            <label xml:lang="fr">Mmbr-role_fra</label> 
+            <description xml:lang="en">The role of a commission's member</description>
+            <description xml:lang="fr">Le role d'un membre de la commission</description>
+        </heading>
+        <heading id="h173">
+            <label xml:lang="en">Commission-name_nom_eng</label> <!-- 00155 (1 file) and 00156 (1 file), previously Commission-name_EN | Commission-nom_FR -->
+            <label xml:lang="fr">Commission-name_nom_fra</label> 
+            <description xml:lang="en">Name of commission</description>
+            <description xml:lang="fr">Le nom de la commission</description>
+        </heading>
+        <heading id="h174">
+            <label xml:lang="en">Commission-desc_eng</label> <!-- only 00155 (1 file), previously Commission-desc_EN | Commission-desc_FR -->
+            <label xml:lang="fr">Commission-desc_fra</label>
+            <description xml:lang="en">Description of each commission, including how it was established, its objective(s) and its term</description>
+            <description xml:lang="fr">Une description de la commission, indiquant comment elle a été établie, son ou ses objectifs et la durée de son mandat</description>
+        </heading>
+        <heading id="h175">
+            <label>Travel-living-exp_Frais-deplace-sejour</label> <!-- only 00155 (1 file) was previously TRVL_LVNG_EXP_AMT; 00156 (1 file), previously Commission-memb-total-amt; 00157 (1 file), previously Travel-and-living-costs | Frais-de-déplacement-et-de-séjour, then Travel-and-living-costs_Frais-de-déplacement-et-de-séjour -->
+            <description xml:lang="en">Total travel and living expenses incurred</description>
+            <description xml:lang="fr">Le total des frais de déplacement et de séjour pour chaque membre de la commission</description>
+            <data_pattern>^\d*$</data_pattern>
+        </heading>
+		
+        <heading id="h176"> 
+            <label>Mbr-salary-amt_Mnt-salaire-mbr</label> <!-- only 00155 (1 file), previously Mbr-salary-amt_Mnt_salaire_mbr -->
+            <description xml:lang="en">Total salaries paid to commission members (bilingual version of the label)</description>
+            <description xml:lang="fr">Le total des salaires pour l'exercice des membres de la commission (version bilingue de l'étiquette)</description>
+        </heading>
+
+        <heading id="h177"> 
+            <label>Other-salary-amt_Mnt-salaire-autre</label> <!-- only 00155 (1 file), previously Other-salary-amt_Mnt_salaire_autre -->
+            <description xml:lang="en">Total other salaries paid in relation to commission (bilingual version of the label)</description>
+            <description xml:lang="fr">Le total des autres salaires payés en relation avec la commission (version bilingue de l'étiquette)</description>
+        </heading>
+
+        <heading id="h179">
+            <label>Other-exp-amt_Mnt-autre-dpns</label> <!-- only 00155 (1 file), previously OTHR_XPND_AMT -->
+            <description xml:lang="en">Total other expenses paid in relation to commission</description>
+            <description xml:lang="fr">Le total des autres dépenses payées en relation avec la commission</description>
+        </heading>
+		
+        <heading id="h180">
+            <label xml:lang="en">Minister-title_Titre-ministre_eng</label> <!-- 00159-A, 00275 (non-PAC), 00160 (1 file), 00268, previously MNSTR_MNSTT_EN_TTL | MNSTR_MNSTT_FR_TTL -->
+            <label xml:lang="fr">Minister-title_Titre-ministre_fra</label>
+            <description xml:lang="en">The title given to the Minister or Parliamentary Secretary</description>
+            <description xml:lang="fr">Le titre du ministre, ministre d'État ou secrétaire parlementaire</description>
+        </heading>
+        <heading id="h181">
+            <label xml:lang="en">Minister-name_Nom-ministre_eng</label> <!-- 00159-A, 00275 (non-PAC), 00160 (1 file), 00268 (1 file), previously MNSTR_MNSTT_EN_NM | MNSTR_MNSTT_FR_NM -->
+            <label xml:lang="fr">Minister-name_Nom-ministre_fra</label>
+            <description xml:lang="en">The name of the Minister or Parliamentary Secretary</description>
+            <description xml:lang="fr">Le nom du ministre ou de secrétaire parlementaire</description>
+        </heading>
+		
+        <heading id="h182">
+            <label>Travel-expenses_Dep-frais-deplace</label> <!-- only 00160 (1 file), previously TRVL_DMT_INT_XPND_AMT -->
+            <description xml:lang="en">Travel expenditures of minister's office, whether domestic or international, charged to the ministers' office budget or any other fund centre within the minister's department or agency</description>
+            <description xml:lang="fr">Frais de déplacement des ministres et secrétaires parlementaires, soit nationaux ou internationaux, pour lesquelles ont été imputées au budget du cabinet du ministre ou n'importe quel autre centre financier au sein du ministère ou de l'organisme</description>
+            <data_pattern>^\d*$</data_pattern>
+        </heading>
+        <heading id="h183">
+            <label>Travel-int-exp_Dep-deplace-int</label> <!-- only 00268 (1 file), previously TRVL_INT_XPND_AMT -->
+            <description xml:lang="en">International travel expenditures of ministers, parliamentary secretaries, and ministers' staff charged to departmental budget (not charged to the ministers' office budget)</description>
+            <description xml:lang="fr">Dépenses de déplacements internationaux des ministres, des secrétaires parlementaires et du personnel des ministres déclarées imputées au budget du ministère (non imputées au budget du cabinet du ministre</description>
+            <data_pattern>^\d*$</data_pattern>
+        </heading>
+        <!-- Maturity | Echeance entry removed as orphaned, 00108 uses h272 instead --> 
+        <heading id="h188"> <!-- only 00101 (1 file), previously CASH_AND_ACCOUNTS_RECEIVABLE_TYPE | TYPE_DE_TRÉSORERIE_ET_DE_CRÉANCES -->
+            <label xml:lang="en">Cash-acct-rcv-type_Type-tres-creances_eng</label>
+            <label xml:lang="fr">Cash-acct-rcv-type_Type-tres-creances_fra</label>
+            <description xml:lang="en">Type of Cash and accounts receivable reported on the Consolidated Statement of Financial Position</description>
+            <description xml:lang="fr">Type de trésorerie et de créances présentés dans l’état consolidé de la situation financière</description>
+        </heading>
+        <heading id="h189"> <!-- only 00101 (1 file), previously CASH_AND_ACCOUNTS_RECEIVABLE_SUB_TYPE | SOUS_TYPE_DE_TRÉSORERIE_ET_DE_CRÉANCES -->
+            <label xml:lang="en">Cash-acct-rcv-type2_Type2-tres-creances_eng</label>
+            <label xml:lang="fr">Cash-acct-rcv-type2_Type2-tres-creances_fra</label>
+            <description xml:lang="en">Sub-type of Cash and accounts receivable reported on the Consolidated Statement of Financial Position</description>
+            <description xml:lang="fr">Sous-type de trésorerie et de créances présentés dans l’état consolidé de la situation financière</description>
+        </heading>
+
+
+        <heading id="h283">
+            <label>Currency_Devise</label> <!-- 00104 (1 file), 00108 (1 file), previously Currency (00104) and Currency-Devise (00108) -->
+            <description xml:lang="en">A 3-character code that identifies the currency, based on the ISO standard 4217</description>
+            <description xml:lang="fr">Un code à trois caractères qui désigne la devise, selon le standard ISO 4217</description>
+            <data_pattern>^$|^[A-Z]{3}|Other currencies|Autres devises$</data_pattern>
+        </heading>
+        <heading id="h236">
+            <label xml:lang="en">Currency-desc_Desc-devise_eng</label> <!-- only 00104 (1 file), previously Currency_description | Description_Devise -->
+            <label xml:lang="fr">Currency-desc_Desc-devise_fra</label>
+            <description xml:lang="en">Text description of the currency in English, as published in the Public Accounts of Canada.</description>
+            <description xml:lang="fr">Description texte de la devise en français, tel que publié dans les comptes publics du Canada.</description>
+        </heading>
+
+
+        <heading id="h191">
+            <label>Date-tabled_Date-de-depot</label> <!-- 00269 PAC DRR, previously Date-tabled-in-the-House-of-Commons_date-de-dépôt-à-la-Chambre-des-communes -->
+            <description xml:lang="en">The date the Public Accounts were tabled in the House of Commons</description>
+            <description xml:lang="fr">La date des comptes publics ont été déposés à la Chambre des communes</description>
+            <data_pattern>^\d{4}-\d{2}-\d{2}$</data_pattern>
+        </heading>
+        <heading id="h196">
+            <label>Date-published_Date-publies</label> <!-- 00269 PAC DRR, previously Date-published-on-website_date-de-publication-sur-le-site-web -->
+            <description xml:lang="en">The date the Public Accounts were published on the website</description>
+            <description xml:lang="fr">La date des comptes publics ont été publiés sur le site</description>
+            <data_pattern>^\d{4}-\d{2}-\d{2}$</data_pattern>
+        </heading>
+        <heading id="h197">
+            <label xml:lang="en">URL_eng</label> <!-- 00269 PAC DRR, previously URL_EN | URL_FR -->
+            <label xml:lang="fr">URL_fra</label>
+            <description xml:lang="en">URL of first English page of the Public Accounts on the website</description>
+            <description xml:lang="fr">URL de la première page en français des comptes publics sur le site</description>
+        </heading>
+
+
+        <heading id="h192">
+            <label>Avail-auth-prev-FY_Aut-disp-EF-prec</label> <!-- 00124 (1 file), 00125, 00130, 00133, previously AVLBL_PREV_YR_AMT -->
+            <description xml:lang="en">Spending authorities allowed to be brought forward from the previous year</description>
+            <description xml:lang="fr">Autorisations de dépenses reportées de l'exercice précédent</description>
+            <data_pattern>^[-+]?\d*$</data_pattern>
+        </heading>
+        <heading id="h193">
+            <label>Avail-auth-subs-FY_Aut-disp-EF-ult</label> <!-- 00124 (1 file), 00125, 00130, 00133, 00136, previously AVLBL_SBSQT_YR_AMT -->
+            <description xml:lang="en">Unused spending authorities which have not lapsed and which are carried forward and available for use in a subsequent year.</description>
+            <description xml:lang="fr">Autorisations de dépenses non employées qui ne sont pas annulées et qui sont reportées et disponibles pour utilisation à un exercice ultérieur.</description>
+            <data_pattern>^[-+]?\d*$</data_pattern>
+        </heading>
+        <heading id="h194">
+            <label>Var-amt_Mnt-ecart</label> <!-- 00124 (1 file), 00125, 00130, 00136, previously C_LPSD_OVREXP_AMT -->
+            <description xml:lang="en">Lapsed (variance under): The amount of the lapse is the total authority available for use in the current year less the total of (a) amount used in the current year and (b) the amount available for use in subsequent years. Overexpended (variance over): Excess of spending over authorities granted.</description>
+            <description xml:lang="fr">Annulées (écart positif): le montant des autorisations annulées correspond au total des autorisations disponibles pour l'emploi au cours de l'exercice moins le total (a) des autorisations employées au cours de l'exercice et (b) des autorisations disponibles pour emploi dans les exercices ultérieurs. Dépassées (écart négatif): excédent des dépenses sur les autorisations accordées.</description>
+            <data_pattern>^$|^(-?\d+)$</data_pattern>
+        </heading>
+		
+        <heading id="h195">
+            <label>Net-exp-curr-yr_Dep-nettes-ex-en-cours</label> <!-- 00124 (1 file), 00125, 00130, 00133, 00136, previously CRNT_YR_USED_AMT -->
+            <description xml:lang="en">Amounts spent in the current year (net of actual revenues and receipts available for spending).</description>
+            <description xml:lang="fr">Montants dépensés dans l'exercice en cours (après avoir déduit les revenus et rentrées réels disponibles pour être dépensés).</description>
+            <data_pattern>^-{0,1}\d*$</data_pattern>
+        </heading>
+        <heading id="h198">
+            <label xml:lang="en">Stat-auth_Aut-leg_eng</label> <!-- 00068 (FY files), previously STAT_AUTH_EN | STAT_AUTH_FR -->
+            <label xml:lang="fr">Stat-auth_Aut-leg_fra</label>
+            <description xml:lang="en">Statutory authorities.</description>
+            <description xml:lang="fr">Autorisations législatives.</description>
+        </heading>
+        <heading id="h200">
+            <label xml:lang="en">Terms_Termes_eng</label> <!-- 00105 (1 file), previousl Terms | Termes -->
+            <label xml:lang="fr">Terms_Termes_fra</label>
+            <description xml:lang="en">Terms and conditions of repayments</description>
+            <description xml:lang="fr">Termes et conditions de remboursements</description>
+        </heading>
+        <heading id="h202">
+            <label xml:lang="en">Country_Pays_eng</label> <!-- only 00105 (1 file), 00149 (FY files), previously CNTRY_EN_NM | CNTRY_FR_NM -->
+            <label xml:lang="fr">Country_Pays_fra</label>
+            <description xml:lang="en">The name of the specific country in English.</description>
+            <description xml:lang="fr">Le nom du pays spécifique en français.</description>
+        </heading>
+        <heading id="h204">
+            <label xml:lang="en">City_Ville_eng</label> <!-- only 00149 (FY files), previously CTY_EN_NM | CTY_FR_NM -->
+            <label xml:lang="fr">City_Ville_fra</label>
+            <description xml:lang="en">The name of the specific city in English.</description>
+            <description xml:lang="fr">Le nom de la ville spécifique en français.</description>
+        </heading>
+        <heading id="h205">
+            <label>Auth-type_Type-aut</label> <!-- 1 files: 00124, 00128, 00129, 00134, previously ATHRTY_TYPE -->
+            <description xml:lang="en">Authority type (e.g., budgetary, non-bugetary)</description>
+            <description xml:lang="fr">Type de l'autorisation (e.g., budgétaire, non budgétaire)</description>
+            <data_pattern>^Budgetary-Budgétaire$|^Non-Budgetary-Non budgétaire$</data_pattern>
+        </heading>
+        <heading id="h206">
+            <label>Adj-wrnts-xfrs_Rdrs-mndts-vrmts</label> <!-- 00124 (1 file), 00125, previously C_ADJ_WRT_TRN_AMT -->
+            <description xml:lang="en">Adjustments, warrants and transfers</description>
+            <description xml:lang="fr">Redressements, mandats et virements</description>
+            <data_pattern>^-{0,1}\d*$</data_pattern>
+        </heading>
+        <heading id="h207">
+            <label>Auth-requested_Dep-demandees</label> <!-- 00124 (1 file), 00125, 00133, previuosly MAIN_ESTMT_AMT -->
+            <description xml:lang="en">Spending authorities requested in the Main Estimates</description>
+            <description xml:lang="fr">Les autorisations de dépenses demandées dans les Budgets principal des dépenses</description>
+            <data_pattern>^-{0,1}\d*$</data_pattern>
+        </heading>
+        <heading id="h208">
+            <label>Net-exp-prev-yr_Dep-nettes-ex-prec</label> <!-- 1 file: 00124, 00125, 00133, previously NET_XPND_PY_AMT -->
+            <description xml:lang="en">Amounts spent in the previous year (net of actual revenues and receipts available for spending).</description>
+            <description xml:lang="fr">Montants dépensés dans l'exercice précédent (après avoir déduit les revenus et rentrées réels disponibles pour être dépensés).</description>
+            <data_pattern>^-{0,1}\d*$</data_pattern>
+        </heading>
+        <heading id="h209">
+            <label>Supl-amt-reqstd_Mnt-supl-demandee</label> <!-- 00124, 00125, 00133, previously SPLMTRY_ESTMT_AMT -->
+            <description xml:lang="en">Spending authorities requested in the Supplementary Estimates</description>
+            <description xml:lang="fr">Les autorisations de dépenses demandées dans les Budgets supplémentaires des dépense</description>
+            <data_pattern>^-{0,1}\d*$</data_pattern>
+        </heading>
+        <heading id="h210">
+            <label xml:lang="en">Auth-desc_Desc-aut_eng</label> <!-- 00128, 00129, previously ATHRT_EN_DESC | ATHRT_FR_DESC -->
+            <label xml:lang="fr">Auth-desc_Desc-aut_fra</label>
+            <description xml:lang="en">Full wording of authorities in English.</description>
+            <description xml:lang="fr">Les libellés complets des autorisations en français.</description>
+        </heading>
+        <heading id="h211">
+            <label>Start-date_Date_debut</label> <!-- 00159-A, 00275(non-PAC), previously STRT_DT-DT_DÉBUT -->
+            <description xml:lang="en">Start date</description>
+            <description xml:lang="fr">Date du début</description>
+            <data_type>https://schema.org/Date</data_type>
+            <data_pattern>^\d{4}-\d{2}-\d{2}$|^\s*$</data_pattern>
+        </heading>
+        <heading id="h212">
+            <label>End-date_Date-fin</label>  <!-- 00159-A, 00275(non-PAC), previously END_DT-DT_FIN -->
+            <description xml:lang="en">End date</description>
+            <description xml:lang="fr">Date de fin</description>
+            <data_type>https://schema.org/Date</data_type>
+            <data_pattern>^\d{4}-\d{2}-\d{2}$|^\s*$</data_pattern>
+        </heading>
+
+       <heading id="rev0">
+            <label>Ttl-rev-outstnd_Ttl-rev-a-gagner</label> <!-- only 00270 (1 file), previously OUTST_REV -->
+            <description xml:lang="en">Total outstanding revenue to be earned</description>
+            <description xml:lang="fr">Total du revenu non gagné à être reçu</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d+$</data_pattern>
+        </heading>
+        <heading id="rev1">
+            <label>FY1-rev-outstnd_EF1-rev-a-gagner</label> <!-- only 00270 (1 file), previously REV_DUE_FY_1 -->
+            <description xml:lang="en">Portion of the total outstanding revenue to be earned in fiscal year 1.</description>
+            <description xml:lang="fr">Partie du total du revenu non gagné à être reçue dans l'exercice 1.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d+$</data_pattern>
+        </heading>
+        <heading id="rev2">
+            <label>FY2-rev-outstnd_EF2-rev-a-gagner</label> <!-- only 00270 (1 file), previously REV_DUE_FY_2 -->
+            <description xml:lang="en">Portion of the total outstanding revenue to be earned in fiscal year 2.</description>
+            <description xml:lang="fr">Partie du total du revenu non gagné à être reçue dans l'exercice 2.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d+$</data_pattern>
+        </heading>
+        <heading id="rev3">
+            <label>FY3-rev-outstnd_EF3-rev-a-gagner</label> <!-- only 00270 (1 file), previously REV_DUE_FY_3 -->
+            <description xml:lang="en">Portion of the total outstanding revenue to be earned in fiscal year 3.</description>
+            <description xml:lang="fr">Partie du total du revenu non gagné à être reçue dans l'exercice 3.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d+$</data_pattern>
+        </heading>
+        <heading id="rev4">
+            <label>FY4-rev-outstnd_EF4-rev-a-gagner</label> <!-- only 00270 (1 file), previously REV_DUE_FY_4 -->
+            <description xml:lang="en">Portion of the total outstanding revenue to be earned in fiscal year 4.</description>
+            <description xml:lang="fr">Partie du total du revenu non gagné à être reçue dans l'exercice 4.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d+$</data_pattern>
+        </heading>
+        <heading id="rev5">
+            <label>FY5-rev-outstnd_EF5-rev-a-gagner</label> <!-- only 00270 (1 file), previously REV_DUE_FY_5 -->
+            <description xml:lang="en">Portion of the total outstanding revenue to be earned in fiscal year 5.</description>
+            <description xml:lang="fr">Partie du total du revenu non gagné à être reçue dans l'exercice 5.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d+$</data_pattern>
+        </heading>
+        <heading id="rev6">
+            <label>FYs-rev-outstnd_EFs-rev-a-gagner</label> <!-- 00270, previously REV_DUE_FY_6S -->
+            <description xml:lang="en">Portion of the total outstanding revenue to be earned in fiscal year 6 and after.</description>
+            <description xml:lang="fr">Partie du total du revenu non gagné à être reçue dans l'exercice 6 et suivant.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d+$</data_pattern>
+        </heading>
+
+
+        <heading id="h223">
+            <label>Yr-loss-rptd_Ex-fin-perte-rppt</label> <!-- 00141-A, 00142-A, 00144-A, 00308 (1 file), previously YR_LOSS_RPTD --> 
+            <description xml:lang="en">The fiscal year the original loss was reported</description>
+            <description xml:lang="fr">L'exercice financier que la perte initiale a été rapportée</description>
+            <data_pattern>^\d{4}/\d{4}$|^$</data_pattern>
+        </heading>
+        <heading id="h224">
+            <label>Xpnd-type_Type-dep</label> <!-- only 00125, previously ATH_CTGRY_XPND_IND -->
+            <description xml:lang="en">Type of budgetary and non-budgetary authorities (e.g., voted or statutory)</description>
+            <description xml:lang="fr">Genre des autorisations budgétaires et non budgétaires (e.g., votées ou législatives)</description>
+        </heading>
+        <heading id="h225">
+            <label xml:lang="en">PC-nbr_No-CP_eng</label> <!-- only 00138 (1 file), previously PCO_NO | NO_BCP -->
+            <label xml:lang="fr">PC-nbr_No-CP_fra</label>
+            <description xml:lang="en">Orders-in-Council were assigned consecutive numbers according to their order of presentation to Cabinet during a calendar year</description>
+            <description xml:lang="fr">Les décrets ont été attribués à des numéros consécutifs conformément à leur ordre de présentation au Cabinet au cours d’une année civile</description>
+        </heading>
+        <heading id="h226">
+            <label>Order-date_Date-decret</label> <!-- only 00138 (1 file), previously ORDR_DT-DT_DÉCR -->
+            <description xml:lang="en">Order in council date</description>
+            <description xml:lang="fr">Date du décret</description>
+            <data_type>https://schema.org/Date</data_type>
+            <data_pattern>^$|^\d{4}-\d{2}-\d{2}$</data_pattern>
+        </heading>
+        <heading id="h227">
+            <label xml:lang="en">Remission-order_Ordonnance-remise_eng</label> <!-- only 00138 (1 file) ORDR_EN_DESC | ORDR_FR_DESC -->
+            <label xml:lang="fr">Remission-order_Ordonnance-remise_fra</label>
+            <description xml:lang="en">A remission order is a remedy available under subsection 23(2) of the Financial Administration Act that provides the Governor in Council the power to grant relief from tax, or penalty (including any interest) where the collection of the tax or the enforcement of the penalty is unreasonable, unjust or contrary to public interest</description>
+            <description xml:lang="fr">Une ordonnance de remise est une réparation disponible en vertu de la sous-section 23(2) de la Loi sur la gestion financièrequi donne au gouverneur en conseil le pouvoir d’accorder un allégement de l’impôt, ou une pénalité (y compris tout intérêt) lorsque la perception de la taxe ou l’exécution de la pénalité est déraisonnable, injuste ou contraire à l’intérêt public</description>
+        </heading>
+        <heading id="h228">
+            <label>Amt-grnt-remission_Mnt-accorde-remise</label> <!-- 00138 (1 file), previously TOT_CY_RMSN_AMT -->
+            <description xml:lang="en">Amount of current year granted remission of fees paid</description>
+            <description xml:lang="fr">Montant de l'année en cours a accordé une remise des frais payés</description>
+        </heading>
+        <heading id="h229">
+            <label>Nbr-adv-outstd-Mar31_Nbr-avc-circ-mar31</label> <!-- only 00140 (1 file), previously ADVN_OS_MR31_NO -->
+            <description xml:lang="en">Number of advances outstanding as at March 31 (March 31 is the end of the fiscal year)</description>
+            <description xml:lang="fr">Nombre d'avances en circulation au 31 mars (Le 31 mars est la fin de l'exercice)</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d*$</data_pattern>
+        </heading>
+        <heading id="h230">
+            <label>Amt-adv-outstd-Mar31_Mnt-avc-circ-mar31</label> <!-- only 00140 (1 file), previously ADVN_OS_MR31_AMT -->
+            <description xml:lang="en">Amount of advances outstanding as at March 31 (March 31 is the end of the fiscal year)</description>
+            <description xml:lang="fr">Montant d'avances en circulation au 31 mars (Le 31 mars est la fin de l'exercice)</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^-?\d*$</data_pattern>
+        </heading>
+        <heading id="h231">
+            <label>Nbr-adv-stld-Apr_Nbr-avc-regl-avr</label> <!-- only 00140 (1 file), previously ADVN_STLD_APR_NO -->
+            <description xml:lang="en">Number of advances settled in April (April 1st is the beginning of the fiscal year)</description>
+            <description xml:lang="fr">Nombre d'avances réglées en avril (Le 1er avril est le début de l'exercice)</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d*$</data_pattern>
+        </heading>
+        <heading id="h232">
+            <label>Amt-adv-stld-Apr_Mnt-avc-regl-avr</label> <!-- only 00140 (1 file), previously ADVN_STLD_APR_AMT -->
+            <description xml:lang="en">Amount of advances settled in April (April 1st is the beginning of the fiscal year)</description>
+            <description xml:lang="fr">Montant d'avances réglées en avril (Le 1er avril est le début de l'exercice)</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d*$</data_pattern>
+        </heading>
+        <heading id="h233">
+            <label>Nbr-adv-outstd-Apr30_Nbr-avc-circ-avr30</label> <!-- only only 00140 (1 file), previously C_ADVN_OS_APR30_NO -->
+            <description xml:lang="en">Number of advances outstanding as at April 30</description>
+            <description xml:lang="fr">Nombre d'avances en circulation au 30 avril</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d*$</data_pattern>
+        </heading>
+        <heading id="h234">
+            <label>Amt-adv-outstd-Apr30_Mnt-avc-circ-avr30</label> <!-- only 00140 (1 file), previously C_ADV_OS_APR30_AMT -->
+            <description xml:lang="en">Amount of advances outstanding as at April 30</description>
+            <description xml:lang="fr">Montant d'avances en circulation au 30 avril</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d*$</data_pattern>
+        </heading>
+
+
+        <heading id="h239">
+            <label xml:lang="en">Budget-desc_Desc-budget_eng</label> <!-- only 00136 (1 file), previously BUD_EN_DESC | BUD_FR_DESC -->
+            <label xml:lang="fr">Budget-desc_Desc-budget_fra</label>
+            <description xml:lang="en">Budgetary description</description>
+            <description xml:lang="fr">Description budgétaire</description>
+        </heading>
+        <heading id="h240">
+            <label>Amt-Allot_Mnt-affecte</label> <!-- only 00136 (1 file), previously ALLOT_AFFECT -->
+            <description xml:lang="en">Amounts allotted by TBS, equivalent to budgetary authorities available for use in the Ministry Summary report available in Volume II of the Public Accounts of Canada</description>
+            <description xml:lang="fr">Montants affectés par le SCT, équivalents aux autorisations budgétaires disponibles pour emploi au rapport du sommaire du portefeuille ministériel disponible au volume II des Comptes publics du Canada</description>
+        </heading>
+       <heading id="h244">
+            <label xml:lang="en">Core-resp_Resp-essentielle_eng</label> <!-- 1 files: 00132, 00134, previously CR_EN_NM | CR_FR_NM--> 
+            <label xml:lang="fr">Core-resp_Resp-essentielle_fra</label>
+            <description xml:lang="en">Core responsibility</description>
+            <description xml:lang="fr">La responsabilité essentielle</description>
+        </heading>
+        <heading id="h246">
+            <label xml:lang="en">Respend-details_Details-disp_eng</label> <!-- 00134 (1 file), previously RESPND_DTL_EN_DESC | RESPND_DTL_FR_DESC -->
+            <label xml:lang="fr">Respend-details_Details-disp_fra</label>
+            <description xml:lang="en">Details of respendable amounts</description>
+            <description xml:lang="fr">Détail des montants disponibles pour être dépensés</description>
+        </heading>
+        <heading id="h248">
+            <label>Auth-avail_Aut-disp</label> <!-- 00134 (1 file), previously ATHRY_AVLBL_CY_AMT -->
+            <description xml:lang="en">Authorities available for use in the current year</description>
+            <description xml:lang="fr">Autorisations disponibles pour emploi au cours de l'exercice</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)$</data_pattern> <!-- edited to allow for negative numbers for 00134 2024/2025 values -->
+        </heading>
+        <heading id="h249">
+            <label>Auth-used_Aut-empl</label> <!-- 00134 (1 file), previously ATHRTY_USD_CY_AMT -->
+            <description xml:lang="en">Authorities used in the current year</description>
+            <description xml:lang="fr">Autorisations employées au cours de l'exercice</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)$</data_pattern>
+        </heading>
+        <heading id="h250">
+            <label xml:lang="en">Fed-prov-prog_Prog-fed-prov_eng</label> <!-- only 00154 (1 file), previously FED_PROV_PGM_EN_NM | FED_PROV_PGM_FR_NM -->
+            <label xml:lang="fr">Fed-prov-prog_Prog-fed-prov_fra</label> 
+            <description xml:lang="en">Federal-provincial shared-cost program name</description>
+            <description xml:lang="fr">Nom du programme fédéral-provincial à frais partagés</description>
+        </heading>
+        <heading id="h252">
+            <label>Prev-yr-xpnd_Dpns-ex-prec</label> <!-- only 00154 (1 file), previously PY_XPND_AMT -->
+            <description xml:lang="en">Previous year expenditures</description>
+            <description xml:lang="fr">Les dépenses de l'exercice précédent</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+        <heading id="h253">
+            <label>Expend-from-incept_Dpns-depuis-inaug</label> <!-- only 00154 (1 file), previously INCP_AMT-DPSN_INAU -->
+            <description xml:lang="en">The expenditures from inception of the program</description>
+            <description xml:lang="fr">Les dépenses encourues depuis l'inauguration du programme</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^(-?\d+)?$</data_pattern>
+        </heading>
+
+        <heading id="h254b">
+            <label xml:lang="en">Prov-Terr_eng</label> <!-- 00066, 00105, 00149, 00154 (1 file), previously PROVTER_EN | PROVTER_FR -->
+            <label xml:lang="fr">Prov-Terr_fra</label>
+            <description xml:lang="en">Province and Territory</description>
+            <description xml:lang="fr">Province et Territoire</description>
+        </heading>
+
+        <heading id="h255">
+            <label>Prncpl-outstnd_Prncpl-non-rmbrse</label> <!-- only 00114 (1 file), previously PRINC_AMT_OS -->
+            <description xml:lang="en">Principal amount outstanding – Principal amount of the guarantee outstanding.</description>
+            <description xml:lang="fr">Principal non remboursé – Montant du principal de la garantie non remboursé.</description>
+            <data_pattern>^$|^\d+$</data_pattern>
+        </heading>
+        <heading id="h256">
+            <label>Auth-limit_Limite-aut</label> <!-- only 00114 (1 file), previously AUTH_LIM -->
+            <description xml:lang="en">Represents the aggregate total of various types of authorities of government bodies as stipulated in legislation, legal agreements or other documents that may be in force at any one time.</description>
+            <description xml:lang="fr">Limite autorisée – représente le montant total des diverses catégories d’autorisations utilisées par des organismes gouvernementaux, tel que stipulé dans la loi, des ententes légales ou d’autre documents, qui peuvent être en vigueur à n’importe quel moment.</description>
+            <data_pattern>^$|^\d+$</data_pattern>
+        </heading>
+        <heading id="h260">
+            <label>Op-xpnd-avail_Dep-fonc-disp</label> <!-- only 00132 (1 file), previously OP_ATH_AVLBL_AMT -->
+            <description xml:lang="en">Budgetary amount - Operating expenditures - Total authorities available for use</description>
+            <description xml:lang="fr">Montant budgétaire - Dépenses de fonctionnement - Total des autorisation disponibles pour emploi</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d+$</data_pattern>
+        </heading>
+        <heading id="h261">
+            <label>Op-auth-used_Dep-fonc-empl</label> <!-- only 00132 (1 file), previously OP_ATHRTY_CY_AMT -->
+            <description xml:lang="en">Budgetary amount - Operating expenditures - Authorities used in the current year</description>
+            <description xml:lang="fr">Montant budgétaire - Dépenses de fonctionnement - Autorisations employées au cours de l'exercice</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d+$</data_pattern>
+        </heading>
+        <heading id="h262">
+            <label>Cptl-xpnd-avail_Dep-cptl-disp</label> <!-- only 00132 (1 file), previously CP_ATH_AVLBL_AMT -->
+            <description xml:lang="en">Budgetary amount - Capital expenditures - Total authorities available for use</description>
+            <description xml:lang="fr">Montant budgétaire - Dépenses en capital - Total des autorisation disponibles pour emploi</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d+$</data_pattern>
+        </heading>
+        <heading id="h263">
+            <label>Cptl-auth-used_Dep-cptl-empl</label> <!-- only 00132 (1 file), previously CP_ATHRTY_CY_AMT -->
+            <description xml:lang="en">Budgetary amount - Capital expenditures - Authorities used in the current year</description>
+            <description xml:lang="fr">Montant budgétaire - Dépenses en capital -  Autorisations employées au cours de l'exercice</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d+$</data_pattern>
+        </heading>
+        <heading id="h264">
+            <label>Xfr-pymts-avail_Paimts-xfr-disp</label> <!-- only 00132 (1 file), previously TP_ATH_AVLBL_AMT -->
+            <description xml:lang="en">Budgetary amount - Transfer payments - Total authorities available for use</description>
+            <description xml:lang="fr">Montant budgétaire - Paiements de transfert - Total des autorisation disponibles pour emploi</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^-?\d+$</data_pattern>
+        </heading>
+        <heading id="h265">
+            <label>Xfr-pymts-used_Paimts-xfr-empl</label> <!-- only 00132 (1 file), previously TP_ATHRTY_CY_AMT -->
+            <description xml:lang="en">Budgetary amount - Transfer payments - Authorities used in the current year</description>
+            <description xml:lang="fr">Montant budgétaire - Paiements de transfert - Autorisations employées au cours de l'exercice</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^-?\d+$</data_pattern>
+        </heading>
+        <heading id="h266">
+            <label>Rev-vs-xpnd-avail_Rev-aux-dep-disp</label> <!-- only 00132 (1 file), previously RVN_ATH_AVLBL_AMT -->
+            <description xml:lang="en">Budgetary amount - Revenues netted againsts expenditures - Total authorities available for use</description>
+            <description xml:lang="fr">Montant budgétaire - Renenus affectés aux dépenses - Total des autorisation disponibles pour emploi</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d+$</data_pattern>
+        </heading>
+        <heading id="h267">
+            <label>Rev-vs-xpnd-used_Rev-aux-dep-empl</label> <!-- only 00132 (1 file), previously RVN_ATHRTY_CY_AMT -->
+            <description xml:lang="en">Budgetary amount - Revenues netted againsts expenditures - Authorities used in the current year</description>
+            <description xml:lang="fr">Montant budgétaire - Renenus affectés aux dépenses - Autorisations employées au cours de l'exercice</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^\d+$</data_pattern>
+        </heading>
+        <heading id="h268">
+            <label>Non-bdgt-avail_Non-bdgt-disp</label> <!-- only 00132 (1 file), previously NB_ATH_AVLBL_AMT -->
+            <description xml:lang="en">Non-budgetary amount - Total authorities available for use</description>
+            <description xml:lang="fr">Montant non budgétaire - Total des autorisation disponibles pour emploi</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^-?\d+$</data_pattern>
+        </heading>
+        <heading id="h269">
+            <label>Non-bdgt-used_Non-bdgt-empl</label> <!-- only 00132 (1 file), previously NB_ATHRTY_CY_AMT -->
+            <description xml:lang="en">Non-budgetary amount - Authorities used in the current year</description>
+            <description xml:lang="fr">Montant non budgétaire - Autorisations employées au cours de l'exercice</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^-?\d+$</data_pattern>
+        </heading>
+        <heading id="h272">
+            <label>Maturity_Echeance</label> <!-- only 00108 (1 file), previously Maturity-Échéance -->
+            <description xml:lang="en">The time (date, period, fiscal year) when a loan or a bond or an unsecure bond comes due and is to be paid off</description>
+            <description xml:lang="fr">Le moment (date, période, exercice financier) où un emprunt, une obligation ou une obligation non garantie est exigible et doit être remboursé</description>
+        </heading>
+
+        <heading id="debt">
+            <label xml:lang="en">Debt_Dette_eng</label> <!-- only 00150 (1 file), previously Debt-Description_Description-dette-ENG | Debt-Description_Description-dette-FRA -->
+            <label xml:lang="fr">Debt_Dette_fra</label>
+            <description xml:lang="en">Name or description of debt.</description>
+            <description xml:lang="fr">Nom ou description de la dette.</description>
+        </heading>
+       <heading id="debt1">
+            <label xml:lang="en">Debt-type1_Type1-dette_eng</label> <!-- only 00150 (1 file), previously Debt-type_Type-de-dette-ENG | Debt-type_Type-de-dette-FRA -->
+            <label xml:lang="fr">Debt-type1_Type1-dette_fra</label>
+            <description xml:lang="en">Type of debt.</description>
+            <description xml:lang="fr">Type de dette.</description>
+        </heading>
+        <heading id="debt2">
+            <label xml:lang="en">Debt-type2_Type2-dette_eng</label> <!-- only 00150 (1 file), previously Debt-sub-type_Sous-type-de-dette-ENG | Debt-sub-type_Sous-type-de-dette-FRA -->
+            <label xml:lang="fr">Debt-type2_Type2-dette_fra</label>
+            <description xml:lang="en">Sub-type of debt.</description>
+            <description xml:lang="fr">Sous-type de dette.</description>
+        </heading>
+        <heading id="debt3">
+            <label xml:lang="en">Debt-type3_Type3-dette_eng</label> <!-- only 00150 (1 file), previously Debt-sub-sub-type_Sous-sous-type-de-dette-ENG | Debt-sub-sub-type_Sous-sous-type-de-dette-FRA -->
+            <label xml:lang="fr">Debt-type3_Type3-dette_fra</label>
+            <description xml:lang="en">Third level type of debt.</description>
+            <description xml:lang="fr">Troisième niveau de type de dette.</description>
+        </heading>
+          <heading id="debt4">
+            <label xml:lang="en">Debt-type4_Type4-dette_eng</label> <!-- only 00150 (1 file), previously Debt-sub-sub-sub-type_Sous-sous-sous-type-de-dette-ENG | Debt-sub-sub-sub-type_Sous-sous-sous-type-de-dette-FRA -->
+            <label xml:lang="fr">Debt-type4_Type4-dette_fra</label>
+            <description xml:lang="en">Fourth level type of debt.</description>
+            <description xml:lang="fr">Quatrième niveau de type de dette.</description>
+        </heading>
+
+        <heading id="h281">
+            <label xml:lang="en">Adjustments_Redressments_eng</label> <!-- only 00150 (1 file), previously Adjustments_Redressement-ENG | Adjustments_Redressement-FRA -->
+            <label xml:lang="fr">Adjustments_Redressments_fra</label>
+            <description xml:lang="en">Description of adjustments.</description>
+            <description xml:lang="fr">Description des redressements.</description>
+        </heading>
+        <heading id="h284">
+            <label>Interest-rate_Taux-interet</label> <!-- only 00150 (1 file), previously Interest-Rate_Taux-d'intérêt -->
+            <description xml:lang="en">Interest rate amount.</description>
+            <description xml:lang="fr">Taux d'intérêt.</description>
+        </heading>
+        <heading id="h285">
+            <label>Principal-amt_Mnt-capital</label> <!-- only 00150 (1 file), previously Principal-amount_Montant-de-capital -->
+            <description xml:lang="en">Principal amount of the debt.</description>
+            <description xml:lang="fr">Montant de capital de la dette.</description>
+            <data_type>https://schema.org/Float</data_type>
+            <data_pattern>^-?\d+(\.\d+)?$</data_pattern>
+        </heading>
+        <heading id="h286">
+            <label>Interest-amt_Mnt-interet</label> <!-- only 00150 (1 file), previously Amount-charged_Montant-des-frais -->
+            <description xml:lang="en">The amount of interest charged.</description>
+            <description xml:lang="fr">Montant des frais d'intérêt.</description>
+            <data_type>https://schema.org/Float</data_type>
+            <data_pattern>^-?\d+(\.\d+)?$</data_pattern>
+        </heading>
+        <heading id="h287">
+            <label xml:lang="en">Pymt-desc_Desc-paimt_eng</label> <!-- only 00133 (1 file), previously PYMT_DTL_EN_DESC | PYMT_DTL_FR_DESC -->
+            <label xml:lang="fr">Pymt-desc_Desc-paimt_fra</label>
+            <description xml:lang="en">Payment type description</description>
+            <description xml:lang="fr">Description des types de paiements</description>
+        </heading>
+		<!-- SEQ_NO removed as it was an orphaned entry -->
+        <heading id="h290">
+            <label>Adj-amt_Mnt-redress</label> <!-- only 00133 (1 file), previously ADJ_AMT -->
+            <description xml:lang="en">Adjustments amount </description>
+            <description xml:lang="fr">Montants des redressements</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^-?\d+$</data_pattern>
+        </heading>
+        <heading id="h291">
+            <label>Wrnt-amt_Mnt-mndt</label> <!-- only 00133 (1 file), previously WRNT_AMT -->
+            <description xml:lang="en">Warrants amounts</description>
+            <description xml:lang="fr"> Montant des mandats</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^-?\d+$</data_pattern>
+        </heading>
+        <heading id="h292">
+            <label>Xfr-amt_Mnt-vrmt</label> <!-- only 00133 (1 file), previously TRNFR_AMT -->
+            <description xml:lang="en">Transfers amounts</description>
+            <description xml:lang="fr">Montant des virements</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^-?\d+$</data_pattern>
+        </heading>
+        <!-- C_TTL_AVL_USE_AMT removed as it was orphaned -->
+        <heading id="h294">
+            <label xml:lang="en">Xfr-pymt_Paimt-trnsf_eng</label> <!-- only 00133 (1 file), previously TP_EN_DESC | TP_FR_DESC -->
+            <label xml:lang="fr">Xfr-pymt_Paimt-trnsf_fra</label>
+            <description xml:lang="en">Description of transfer payment</description>
+            <description xml:lang="fr">Description des paiements de transferts</description>
+        </heading>
+        <heading id="h296">
+            <label xml:lang="en">Xfr-pymt-desc_Desc-paimt-trnsf_eng</label> <!-- only 00133 (1 file), previously TP_DTL_EN_DESC | TP_DTL_FR_DESC -->
+            <label xml:lang="fr">Xfr-pymt-desc_Desc-paimt-trnsf_fra</label>
+            <description xml:lang="en">Additional details of the description of transfer payment</description>
+            <description xml:lang="fr">Renseignements supplémentaires de la description des paiements de transferts</description>
+        </heading>
+        <heading id="h298">
+            <label>Curr-var-amt_Mnt-ecart-crnt</label> <!-- only 00133 (1 file), previously C_VRNC_AMT (similar to h194 but different description) -->
+            <description xml:lang="en">Variance between available amounts for use and the current year used amounts</description>
+            <description xml:lang="fr">Écart entre les montants disponibles à être dépensé et les montants utilisés dans l'année courante.</description>
+            <data_type>https://schema.org/Integer</data_type>
+            <data_pattern>^-?\d+$</data_pattern>
+        </heading>		
+        <heading id="h305">
+            <label xml:lang="en">Loss-type_Type-perte_eng</label> <!-- 00308 (1 file), previouly LOSS_TYPE_EN | TYPE_DE_PERTE_FR -->
+            <label xml:lang="fr">Loss-type_Type-perte_fra</label>
+            <description xml:lang="en">The type of loss incurred, related to one of the three "losses" tables in the Public Accounts of Canada: either Losses of revenues due to fraud or willful misrepresentation; Losses of public money due to an offence, illegal act or accident; or, Losses of public property due to an offence or other illegal act.</description>
+            <description xml:lang="fr">Le type de perte subie, liée à l'un des trois tableaux de « pertes » des Comptes publics du Canada: soit les Pertes de revenus suite à une fraude ou à une fausse déclaration intentionnelle; les Pertes de fonds publics attribuables à une infraction, un acte illégal ou un accident; ou les Pertes de biens publics attribuables à une infraction ou autre acte illégal.</description>
+        </heading>
+        <heading id="h306">
+            <label>Balance-open_Solde-ouvert</label> <!-- 00103 (1 file), previously OPENING-BALANCE_SOLDE-D'OUVERTURE -->
+            <description xml:lang="en">The opening balance for the specified asset or liability, as of 1 April of that fiscal year.</description>
+            <description xml:lang="fr">Le solde d'ouverture de l'actif ou du passif spécifié, au 1er avril de cet exercice.</description>
+            <data_type>https://schema.org/Number</data_type>
+        </heading>
+        <heading id="h307">
+            <label>Paymts-chrgs_Paiemts-dbts</label>  <!-- 00103 (1 file), previously PAYMENTS-AND-CHARGES_PAIEMENTS-ET-DEBITS -->
+            <description xml:lang="en">The total of all payments and charges applied to the specified asset or liability.  Note this value increases the balance of an asset and decreases the balance of a liability.</description>
+            <description xml:lang="fr">Le total de tous les paiements et charges appliqués à l’actif ou au passif spécifié. Notez que cette valeur augmente le solde d'un actif et diminue le solde d'un passif.</description>
+            <data_type>https://schema.org/Number</data_type>
+        </heading>
+        <heading id="h308">
+            <label>Receipts-crdts_Recettes-crdts</label>  <!-- 00103 (1 file), previously RECEIPTS-AND-CREDITS_RENTREES-ET-CREDITS -->
+            <description xml:lang="en">The total of all receipts and credits applied to the specified asset or liability.  Note this value decreases the balance of an asset and increases the balance of a liability.</description>
+            <description xml:lang="fr">Le total de toutes les recettes et crédits appliqués à l’actif ou au passif spécifié. Notez que cette valeur diminue le solde d’un actif et augmente le solde d’un passif.</description>
+            <data_type>https://schema.org/Number</data_type>
+        </heading>
+		<heading id="h309">
+            <label>Volume</label>
+            <description xml:lang="en">The Public Accounts of Canada is produced in three volumes: Volume I, II, or III</description>
+            <description xml:lang="fr">Les Comptes publics du Canada sont produits en trois volumes : Volume I, II ou III</description>
+			<data_pattern>^$|^I$|^II$|^III$</data_pattern>
+        </heading>
+		<heading id="h310">
+            <label>PAC_Section_CPC</label>
+            <description xml:lang="en">Sections within the three volumes that make up the Public Accounts of Canada</description>
+            <description xml:lang="fr">Sections des trois volumes qui composent les Comptes publics du Canada</description>
+			<data_type>https://schema.org/Integer</data_type>
+        </heading>
+		<heading id="h311">
+            <label>Table_Tableau</label>
+            <description xml:lang="en">Table number of each table in the Public Accounts of Canada</description>
+            <description xml:lang="fr">Numéro de chaque tableau des Comptes publics du Canada</description>
+        </heading>
+		<heading id="h312">
+            <label xml:lang="en">Comment_Commentaire_eng</label><!-- 00309 Mapping, previously Comment_Commentaire-eng | Comment_Commentaire-fra -->
+			<label xml:lang="fr">Comment_Commentaire_fra</label>
+            <description xml:lang="en">Additional information</description>
+            <description xml:lang="fr">Informations complémentaires</description>
+        </heading>
+		<heading id="h313">
+            <label xml:lang="en">Table-name_Nom-tableau_eng</label><!-- 00309 Mapping, previously Table-name_Nom-tableau-eng | Table-name_Nom-tableau-fra -->
+            <label xml:lang="fr">Table-name_Nom-tableau_fra</label>
+            <description xml:lang="en">Name of each table in the Public Accounts of Canada</description>
+            <description xml:lang="fr">Nom de chaque tableau des Comptes publics du Canada</description>
+        </heading>
+		<heading id="h314">
+            <label xml:lang="en">Table_URL_Tableau_eng</label><!-- 00309 Mapping, previously Table-URL-Tableau-eng | Table-URL-Tableau-fra -->
+            <label xml:lang="fr">Table_URL_Tableau_fra</label>
+            <description xml:lang="en">URL to each table in the Public Accounts of Canada</description>
+            <description xml:lang="fr">URL de chaque tableau des Comptes publics du Canada</description>
+        </heading>
+		<heading id="h315">
+            <label xml:lang="en">Dataset_Jeu-de-donnees_eng</label><!-- 00309 Mapping, previously Dataset-name_Nom-jeu-de-données-eng | Dataset-name_Nom-jeu-de-données-fra -->
+            <label xml:lang="fr">Dataset_Jeu-de-donnees_fra</label>
+            <description xml:lang="en">Name of the dataset on the Open Government Portal that corresponds to a particular table or tables in the Public Accounts of Canada</description>
+            <description xml:lang="fr">Nom du jeu de données sur le Portail du gouvernement ouvert qui correspond à un ou plusieurs tableaux particuliers des Comptes publics du Canada</description>
+        </heading>
+		<heading id="h316">
+            <label xml:lang="en">Portal_URL_Portail_eng</label><!-- 00309 Mapping, previously Portal-URL-Portail-eng | Portal-URL-Portail-fra -->
+            <label xml:lang="fr">Portal_URL_Portail_fra</label>
+            <description xml:lang="en">URL to the Open Government Portal for the dataset that corresponds to a particular table or tables in the Public Accounts of Canada</description>
+            <description xml:lang="fr">URL vers le portail du gouvernement ouvert pour le jeu de données qui correspond à un ou plusieurs tableaux particuliers des Comptes publics du Canada</description>
+        </heading>
+		<heading id="h317">
+            <label xml:lang="en">Resource_Ressource_eng</label><!-- 00309 Mapping, previously Resource-name_Nom-ressource-eng | Resource-name_Nom-ressource-fra -->
+            <label xml:lang="fr">Resource_Ressource_fra</label>
+            <description xml:lang="en">Name of the datafile within a dataset that corresponds to a particular table or tables in the Public Accounts of Canada</description>
+            <description xml:lang="fr">Nom du fichier de données dans un jeu de données qui correspond à un ou plusieurs tableaux particuliers des Comptes publics du Canada</description>
+        </heading>
+		<heading id="h318">
+            <label xml:lang="en">Resource_URL_Ressource_eng</label><!-- 00309 Mapping, previously Datafile-CSV-URL-Fichier-de-données-eng | Datafile-CSV-URL-Fichier-de-données-fra -->
+            <label xml:lang="fr">Resource_URL_Ressource_fra</label>
+            <description xml:lang="en">URL to download the datafile that corresponds to a particular table or tables in the Public Accounts of Canada</description>
+            <description xml:lang="fr">URL pour télécharger le fichier de données qui correspond à un ou plusieurs tableaux particuliers des Comptes publics du Canada</description>
+        </heading>
+	</headings>
+</data_dictionary>

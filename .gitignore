@@ -11,3 +11,6 @@ data/raw/statcan/98100302-eng.zip
 data/raw/census2021/98-401-X2021007_eng_CSV.zip
 # WGMS Fluctuations of Glaciers database (39 MB zip). Re-download from the registry URL; the pipeline checks its SHA-256.
 data/raw/wgms/DOI-WGMS-FoG-2026-02-10.zip
+# Proactive disclosure files (2.4 GB grants, 655 MB contracts). Re-download from the registry URLs; the pipeline checks SHA-256.
+data/raw/tbs/grants.csv
+data/raw/tbs/contracts.csv

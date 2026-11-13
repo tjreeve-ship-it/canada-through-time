@@ -1,0 +1,3488 @@
+{
+  "dataset_type": "contracts",
+  "title": {
+    "en": "Proactive Publication - Contracts over $10,000",
+    "fr": "Publication proactive - Contrats attribués de plus de 10 000 $"
+  },
+  "notes": {
+    "en": "Access, upload and modify the Contracts over 10K reports for your organization",
+    "fr": "Accès, téléversement et modification des rapports  sur les contrats attribués de plus de 10 000 $ pour votre organisation"
+  },
+  "front_matter": {
+    "en": "# Timelines\n1. Organizations are required to publicly disclose quarterly, within one month after the close of each quarter, contracts entered into over $10K, and positive and negative amendments over $10K.\n2. Organizations are required to provide information on contracts entered into and amendments valued from -$10K to $10K to Public Services and Procurement Canada (PSPC). Such contracts and amendments are to be reported annually by March 1st of the following calendar year. For example, a contract entered into in calendar year 2017 is to be reported by March 1, 2018.\n3. Organizations are required to publicly disclose, on a calendar year basis, a separate report on the volume and cumulative dollar value of each commodity type for contracts valued $10K and under, and amendments from -$10K to $10K. For example, the report for calendar year 2017 is to be publicly disclosed by March 1, 2018. In addition, organizations are to disclose the volume and cumulative dollar value of all acquisition card transactions, regardless of dollar value. Refer to the *Centralized Publishing System for Proactive Disclosure – Data Element Profile: Annual Contracts Template (from -$10K to $10K)* document for further information.\n\n# General Requirements\n1. The Quarterly Contracts template must include contracts entered into over $10K, and positive and negative amendments over $10K. This includes contracts with amended contract values over $10K.\n2. Contracts entered into $10K and under, and amendments from -$10K to $10K are to be reported in a separate Quarterly Contracts template to PSPC via email at [ncr.gwprs@gc.ca](mailto:ncr.gwprs@gc.ca). This information will be used for the purpose of enabling PSPC to monitor standing offer and supply arrangement usage and other government reporting obligations.\n3. Acquisition card transactions for contracts entered into over $10K, and positive and negative amendments over $10K, should be reported in the Quarterly Contracts template. The volume and cumulative value of all acquisition card transactions regardless of dollar threshold should be reported in the Annual Contracts template. Organizations requiring assistance in determining the volume and cumulative value may contact Treasury Board Secretariat via the Proactive Disclosure of Contracts email inbox at [ZZPDCDC@tbs-sct.gc.ca](mailto:ZZPDCDC@tbs-sct.gc.ca).\n4. Organizations should not report any contract or non-financial amendment with a $0 value, except when it is in the public interest to do so (for example, the cancellation of a large military procurement) or when disclosing a standing offer agreement or supply arrangement agreement.\n5. A standing offer agreement and a supply arrangement agreement are not procurement contracts but are to be disclosed for the purpose of transparency by the department establishing the agreement. When a department publicly discloses information about a standing offer agreement or a supply arrangement agreement on a separate website, the department may omit this agreement from its report.\n6. The government commitment is to disclose contracts or amendments with only limited very limited exceptions, such as national security. A department may withhold information regarding the following:\n    a) Memoranda of understanding with other levels of government and foreign governments;\n    b) Service level agreements between federal departments or with Crown corporations;\n    c) Information about contracts whose proactive disclosure would compromise criminal investigations, litigation, national security or public safety; and,\n    d) Third party information as described in any of the paragraphs 20(1)(a) to (d) of the Access to Information Act. For example, a contractor’s confidential pricing information.\n7. When a department determines that information about a contract is exempt from disclosure, the department is encouraged to disclose the contract or amendment once the information is unclassified.\n8. A contract or amendment not reported in the reporting period in which it was awarded should be included for that reporting period, as soon as practicable. Any contract or amendment included in a reporting period after its publication should be clearly indicated within the comments data field (refer to Appendix B of the Guidelines on the Proactive Disclosure of Contracts).\n9. Information posted in one reporting period can be modified for that reporting period only when a material error was made in the data originally reported. This should be clearly indicated as such within the comments data field (refer to Appendix B of the Guidelines on the Proactive Disclosure of Contracts).\n10. The use of accurate economic object codes is important for maintaining the integrity of the Public Accounts of Canada. Departments are to ensure that all expenditures are coded appropriately in accordance with the [Directive on Recording Financial Transactions in the Accounts of Canada](http://tbs-sct.gc.ca/pol/doc-eng.aspx?id=15793). A list of economic object codes and their descriptions can be found on the PSPC [Government-wide Chart of Accounts website](http://www.tpsgc-pwgsc.gc.ca/recgen/pceaf-gwcoa/index-eng.html).\n11. When PSPC, SSC or another department or Crown corporation issues a contract on a department’s behalf, the client department should report the contract. PSPC will assist client departments by providing any information it has on such contracts through the Open Government Portal. SSC and any other contracting department will assist the client department in meeting its reporting obligations by providing any information it has on such contracts, as appropriate. In addition, the PSPC and SSC contracting authority is to provide a copy of each contract or amendment to the client department at time of award.\n12. When more than one department is funding the contract, each department may disclose its portion of the contract. For a standing offer agreement or supply arrangement agreement, it is recommended that the agreement be reported by the department that authorizes the agreement.\n13. When the above posting dates fall on a weekend or statutory holiday, departments may post information by the last business day before the weekend or holiday in question.\n14. Departments are to provide a nil report for any quarter in which no contract or amendment is disclosed.  Departments are to populate the ‘Reporting Period’ and ‘Nil Report’ data elements within the Nil Reporting template.\n",
+    "fr": "# Calendrier\n1. Les organisations sont tenues de rendre publics dans le mois suivant la fin de chaque trimestre les marchés conclus d’un montant supérieur à 10 000 dollars et les modifications positives et négatives de plus de 10 000 dollars.\n2. Les organisations sont tenues de fournir à Services publics et Approvisionnement Canada (SPAC) des informations sur les marchés conclus et les modifications d’une valeur comprise entre -10 000 $ et 10 000 $. Elles doivent rendre compte annuellement de ces marchés et modifications au plus tard le 1er mars de l’année civile suivante. Par exemple, un marché conclu au cours de l’année civile 2017 doit faire l’objet d’un rapport au plus tard le 1er mars 2018.\n3. Les organisations sont tenues de rendre public chaque année civile un rapport distinct sur le volume et la valeur cumulative en dollars de chaque type de produit pour les marchés de 10 000 $ et moins et les modifications de -10 000 $ à 10 000 $. Par exemple, le rapport pour l’année civile 2017 doit être rendu public au plus tard le 1er mars 2018. De plus, les organisations doivent déclarer le volume et la valeur monétaire cumulative de toutes les opérations effectuées par carte d’achat, quelle que soit leur valeur monétaire. Se reporter au document *Système de publication centralisée pour la divulgation proactive - Profil des éléments de données : modèle des marchés annuels (de -10 000 $ à 10 000 $)* pour obtenir d’autres renseignements.\n# Exigences générales\n1. Le modèle des marchés trimestriels doit comprendre les marchés conclus de plus de 10 000 $ et les modifications positives et négatives de plus de 10 000 $, y compris les marchés dont la valeur des modifications est supérieure à 10 000 dollars.\n2. Les marchés de 10 000 $ et moins et les modifications de -10 000 $ à 10 000 $ doivent être déclarés à SPAC dans un modèle des marchés trimestriels distinct par courriel à l’adresse [ncr.gwprs@gc.ca](mailto:ncr.gwprs@gc.ca). Ces informations permettront à SPAC de surveiller l’utilisation des offres à commandes et des arrangements en matière d’approvisionnement et seront utilisées pour satisfaire à d’autres obligations de déclaration du gouvernement.\n3. Les opérations par carte d’achat pour les marchés de plus de 10 000 $ et les modifications positives et négatives de plus de 10 000 $ doivent être déclarées dans le modèle des marchés trimestriels. Le volume et la valeur cumulative de toutes les opérations par carte d’achat, peu importe le seuil en dollars, doivent être déclarés dans le modèle des marchés annuels. Les organisations qui ont besoin d’aide pour déterminer le volume et la valeur cumulative peuvent contacter le Secrétariat du Conseil du Trésor en envoyant un courriel à la boîte de réception électronique de la divulgation proactive des marchés à [ZZPDCDC@tbs-sct.gc.ca](mailto:ZZPDCDC@tbs-sct.gc.ca).\n4. Les organisations ne doivent pas déclarer les marchés ni les modifications non financières d’une valeur de 0 $, sauf s’il est dans l’intérêt public de le faire (par exemple, annulation d’un important achat militaire) ou lorsqu’elles divulguent une convention d’offre à commandes ou d’un arrangement en matière d’approvisionnement.\n5. Une convention d’offre à commandes et un arrangement en matière d’approvisionnement ne sont pas des marchés d’approvisionnement, mais doivent être déclarés à des fins de transparence par le ministère qui l’établit. Lorsqu’un ministère rend publiques des informations sur une convention d’offre à commandes ou un arrangement en matière d’approvisionnement sur un site Web distinct, il n’est pas tenu de faire état de la convention ou de l’arrangement dans son rapport.\n6. L’engagement du gouvernement est de divulguer tous les marchés ou les modifications, à quelques exceptions près, par exemple ceux liés à la sécurité nationale. Un ministère n’est pas tenu de publier des informations concernant les éléments suivants :\n    a) les protocoles d’entente avec d’autres ordres de gouvernement et des gouvernements étrangers;\n    b) les ententes sur les niveaux de service entre les ministères fédéraux ou avec les sociétés d’État;\n    c) les informations sur les marchés dont la divulgation proactive compromettrait les enquêtes criminelles, les litiges, la sécurité nationale ou la sécurité publique;\n    d) les informations de tiers au sens de l’un ou l’autre des alinéas 20(1)a) à d) de la Loi sur l’accès à l’information, par exemple les informations confidentielles sur les prix d’un entrepreneur.\n7. Lorsqu’un ministère détermine que les informations relatives à un marché sont dispensées de l’obligation de divulgation, il devrait divulguer le marché ou la modification une fois que les informations ne sont plus classifiées.\n8. Un marché ou une modification qui n’a pas été déclaré au cours de la période de référence dans laquelle il a été attribué doit être ajouté à cette période de référence, dès que possible. Il faut indiquer clairement dans le champ de commentaires tout marché ou modification ajouté à une période de référence après sa publication (voir l’annexe B des Lignes directrices sur la divulgation proactive des marchés).\n9. Les informations publiées au cours d’une période de référence donnée ne peuvent être modifiées pour cette période de référence que si une erreur importante a été commise dans les données initialement déclarées. Cela doit être clairement indiqué comme tel dans le champ de données des commentaires (voir l’annexe B des Lignes directrices sur la divulgation proactive des marchés).\n10. L’utilisation de codes d’article économique précis est importante pour maintenir l’intégrité des Comptes publics du Canada. Les ministères doivent s’assurer que toutes les dépenses sont codées de manière appropriée conformément à la [Directive sur l’inscription des opérations financières dans les comptes du Canada](https://www.tbs-sct.gc.ca/pol/doc-fra.aspx?id=15793). Une liste des codes d’article économique accompagnés d’une description se trouve sur le site du Plan comptable à l’échelle de l’administration fédérale (https://www.tpsgc-pwgsc.gc.ca/recgen/pceaf-gwcoa/index-fra.html).\n11. Lorsque SPAC, Services partagés Canada (SPC) ou un autre ministère ou société d’État passe un marché au nom d’un ministère, c’est le ministère client qui doit déclarer le marché. SPAC aidera les ministères clients en leur fournissant toutes les informations dont il dispose sur ces marchés par l’entremise du Portail du gouvernement ouvert. SPC et tout autre ministère contractant aideront le ministère client à remplir ses obligations en matière de rapports en lui fournissant toute information dont ils disposent sur ces marchés, s’il y a lieu. De plus, l’autorité contractante de SPAC et de SPC doit fournir une copie de chaque marché ou modification au ministère client au moment de l’attribution.\n12. Lorsque plus d’un ministère finance le marché, chaque ministère peut divulguer sa part du marché. Dans le cas d’une convention d’offre à commandes ou d’un arrangement en matière d’approvisionnement, il est recommandé que le ministère qui autorise la convention ou l’arrangement en fasse rapport.\n13. Lorsque les dates d’affichage ci-dessus coïncident avec un jour de fin de semaine ou un jour férié, les ministères peuvent afficher l’information au plus tard le dernier jour ouvrable avant la fin de semaine ou le jour férié en question.\n14. Les ministères doivent fournir un rapport « rien à signaler » nul pour tout trimestre au cours duquel aucun marché ou modification n’est divulgué.  Les ministères doivent remplir les champs « période de référence » et « rien à signaler » dans le modèle de rapport « rien à signaler ».\n"
+  },
+  "resources": [
+    {
+      "resource_name": "contracts",
+      "title": {
+        "en": "Proactive Publication - Contracts over $10,000",
+        "fr": "Publication proactive - Contrats attribués de plus de 10 000 $"
+      },
+      "fields": [
+        {
+          "id": "reference_number",
+          "obligation": {
+            "en": "Mandatory",
+            "fr": "Obligatoire"
+          },
+          "label": {
+            "en": "Reference Number",
+            "fr": "Numéro de référence"
+          },
+          "description": {
+            "en": "It is a unique identifier given to each line item in the spreadsheet. Having a unique identifier for each item will allow users to locate a specific item should they need to modify or delete.",
+            "fr": "Un identificateur unique est attribué à chaque article d’exécution du gabarit de rapport."
+          },
+          "datastore_type": "text"
+        },
+        {
+          "id": "procurement_id",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditionnel"
+          },
+          "label": {
+            "en": "Procurement Identification Number",
+            "fr": "Numéro d’identification d’approvisionnement"
+          },
+          "description": {
+            "en": "It is recommended that the procurement identification number be the contract number. Alternatively, the procurement identification number may be the commitment number or requisition number if this is the standard practice in the department.",
+            "fr": "Il est recommandé que le numéro d’identification de l’approvisionnement corresponde au numéro du marché. Sinon, le numéro d’identification de l’approvisionnement peut correspondre au numéro d’engagement ou au numéro de la demande d’achat, s’il s’agit de la pratique courante du ministère."
+          },
+          "validation": {
+            "en": "Mandatory for contracts after 2019-01-01",
+            "fr": "Obligatoire pour les marchés conclus après le 2019-01-01"
+          },
+          "datastore_type": "text"
+        },
+        {
+          "id": "vendor_name",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditionnel"
+          },
+          "label": {
+            "en": "Vendor Name",
+            "fr": "Nom du fournisseur"
+          },
+          "description": {
+            "en": "It is recommended that the vendor name be the legal name of the contractor, as indicated on the contract. Alternatively, the vendor name may be the name in the financial system if this is the standard practice in the department.",
+            "fr": "Il est recommandé que le nom du fournisseur corresponde à la dénomination sociale de l’entrepreneur, telle qu’elle est indiquée dans le marché. Sinon, le nom du fournisseur peut correspondre au nom indiqué dans le système financier, s’il s’agit de la pratique courante du ministère."
+          },
+          "validation": {
+            "en": "Mandatory for contracts after 2019-01-01",
+            "fr": "Obligatoire pour les marchés conclus après le 2019-01-01"
+          },
+          "datastore_type": "text"
+        },
+        {
+          "id": "vendor_postal_code",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditionnel"
+          },
+          "label": {
+            "en": "Vendor Postal Code",
+            "fr": "Code postal du fournisseur"
+          },
+          "description": {
+            "en": "i. It is recommended that this field be populated with the first three digits of the postal code for the vendor identified in the contract.\nii. Alternatively, the vendor postal code may be the first three digits of the postal code identified in the procurement or financial system if this is the standard practice in the department.\niii. This field is to be populated with “NA” if the vendor is located outside of Canada, as the value “NA” for this field indicates not applicable.\n",
+            "fr": "i. Il est recommandé de saisir dans ce champ les trois premiers chiffres du code postal du fournisseur indiqué dans le marché.\nii. Sinon, le code postal du fournisseur peut être les trois premiers chiffres du code postal inscrits dans le système financier ou d’approvisionnement s’il s’agit de la pratique courante du ministère.\niii. Il faut indiquer « NA » dans ce champ si le fournisseur se trouve à l’étranger, car la valeur « NA » dans ce champ indique qu’il ne s’applique pas.\n"
+          },
+          "validation": {
+            "en": "Mandatory for contracts after 2022-01-01\nThis field must contain the first three digits of a postal code in A1A format or the value “NA”\n",
+            "fr": "Obligatoire pour les marchés conclus après le 2022-01-01\nCe champ doit contenir les trois premiers chiffres d’un code postal dans le format A1A ou la valeur « NA »\n"
+          },
+          "datastore_type": "text"
+        },
+        {
+          "id": "buyer_name",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditionnel"
+          },
+          "label": {
+            "en": "Buyer Name",
+            "fr": "Nom de l’acheteur"
+          },
+          "description": {
+            "en": "i. It is recommended that the field be populated with the name of the buyer, as indicated on the original contract or, alternatively, the individual responsible for the procurement at the department.\nii. For the establishment of a standing offer or supply arrangement agreement, it is recommended that this field be populated with the name of the buyer that issued the original standing offer or supply arrangement agreement.\niii. For a call-up contract against a standing offer or supply arrangement, this field should be the name of the buyer identified in the original call-up contract.\niv. For a contract with task authorizations, this field may be populated with the name of the buyer indicated in the original contract or in the individual task authorization.\nv. For amendments, it is recommended that this field be populated with the value “NA,” as the value “NA” for this field indicates not applicable.\nvi. For contracts awarded by PSPC or Shared Services Canada (SSC) on behalf of the client department, it is recommended that this field be populated with the name of the PSPC or SSC contracting authority. If this is not available, indicate the values, “PSPC-SPAC” or “SSC-SPC” as applicable.\n",
+            "fr": "i. Il est recommandé de saisir dans ce champ le nom de l’acheteur, comme il est indiqué dans le marché initial, sinon il faut saisir celui de la personne responsable de l’approvisionnement au ministère.\nii. Dans le cas de l’établissement d’une offre à commandes ou d’un arrangement en matière d’approvisionnement, il est recommandé de saisir dans ce champ le nom de l’acheteur qui a émis l’offre à commandes ou l’arrangement en matière d’approvisionnement initial.\niii. Dans le cas d’une commande subséquente à une offre à commandes ou à un arrangement en matière d’approvisionnement, ce champ devrait indiquer le nom de l’acheteur mentionné dans le marché ou la commande subséquente initial.\niv. Dans le cas d’un marché comportant des autorisations de tâches, ce champ peut comprendre le nom de l’acheteur indiqué dans le marché initial ou dans chaque autorisation de tâches.\nv. Pour les modifications de marché, il est recommandé que ce champ soit rempli avec la valeur « NA », car la valeur « NA » pour ce champ indique qu’il ne s’applique pas.\nvi. Pour les marchés attribués par SPAC ou SPC pour le compte du ministère client, il est recommandé de saisir le nom de l’autorité contractante de SPAC ou de SPC dans ce champ. S’il n’est pas disponible, il faut indiquer la valeur «  PSPC-SPAC  » ou «  SSC-SPC  », selon le cas.\n"
+          },
+          "validation": {
+            "en": "Mandatory for contracts after 2022-01-01\nThis field must be populated with an NA if an amendment is reported under Instrument Type.\n",
+            "fr": "Obligatoire pour les marchés conclus après le 2022-01-01\nCe champ doit contenir NA si une modification est déclarée sous l’élément Type d’instrument.\n"
+          },
+          "datastore_type": "text"
+        },
+        {
+          "id": "contract_date",
+          "obligation": {
+            "en": "Mandatory",
+            "fr": "Obligatoire"
+          },
+          "label": {
+            "en": "Contract Date",
+            "fr": "Date du contrat"
+          },
+          "description": {
+            "en": "i. It is recommended that the contract date be the date the contract is awarded by the government. Alternatively, the contract date may be the hard commitment date (the date that the financial commitment is recorded in the departmental financial system) if this is the standard practice in the department.\nii. It is recommended that the contract date for a contract with task authorizations be the date that the contract is awarded (or the hard commitment date) for the contract. When the full value of the contract with task authorizations is likely not to be used, the contract date for each task authorization may be the date that each task authorization is issued (or the hard commitment date).\niii. It is recommended that the contract date for an amended contract or the exercising of an option be the date that the contract is awarded (or the hard commitment date).\niv. It is recommended that the contract date for a confirming order be the date of the verbal contract for goods, services or an amendment. If the date of the verbal contract cannot be determined, the contract date may be the date that the confirming order is issued.\n",
+            "fr": "i. Il est recommandé que la date du marché corresponde à la date à laquelle le marché a été attribué par le gouvernement. Sinon, il peut s’agir de la date de l’engagement ferme (la date à laquelle l’engagement financier est consigné dans le système financier ministériel) s’il s’agit de la pratique courante du ministère.\nii. Il est recommandé que la date d’un marché qui comprend des autorisations de tâches corresponde à la date d’adjudication du marché (ou à la date de l’engagement ferme) du marché. S’il est probable que le montant du marché comprenant des autorisations de tâches ne sera pas utilisé en totalité, la date du marché pour chaque autorisation de tâche peut être la date à laquelle chaque autorisation de tâche a été accordée (ou la date de l’engagement ferme).\niii. Il est recommandé que la date du marché pour un marché modifié ou l’exercice d’une option corresponde à la date d’adjudication du marché (ou à la date de l’engagement ferme).\niv. Il est recommandé que la date du marché pour une commande de confirmation corresponde à la date du marché verbal de biens ou de services ou d’une modification de marché. Si la date du marché verbal ne peut pas être déterminée, la date du marché peut être la date de la commande de confirmation.\n"
+          },
+          "datastore_type": "date"
+        },
+        {
+          "id": "economic_object_code",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditionnel"
+          },
+          "label": {
+            "en": "Economic Object Code",
+            "fr": "Code d’article économique"
+          },
+          "description": {
+            "en": "i. It is recommended that this field be populated with the contract’s numeric economic object code. Economic object codes are listed in the government-wide chart of accounts. The use of accurate economic object codes is important for maintaining the integrity of the Public Accounts of Canada. Departments are to ensure that all expenditures are coded appropriately in accordance with the Directive on Accounting Standards: GC 5000 Recording Financial Transactions in the Accounts of Canada.\nii. For standing offers and supply arrangement agreements, this field may be populated with the data value “NA” as the value “NA” for this field means not applicable.\niii. When a contract involves more than one economic object, it is recommended that the economic object associated with the largest dollar value be used. A department may use a different approach if this is the standard practice in the department.\n",
+            "fr": "i.  Il est recommandé de saisir dans ce champ les chiffres du code d’article économique du marché. Les codes d’article économique sont indiqués dans le plan comptable à l’échelle de l’administration fédérale. Il est important d’utiliser les bons codes d’article économique pour préserver l’intégrité des Comptes publics du Canada. Il y aurait lieu pour les ministères de s’assurer que toutes les dépenses sont codées de manière appropriée, conformément à la Directive sur les normes comptables : GC 5000 Inscription des opérations financières dans les comptes du Canada.\nii. Pour les offres à commandes et les arrangements en matière d’approvisionnement, il est recommandé que ce champ soit rempli avec la valeur « NA », car la valeur « NA » pour ce champ indique qu’il ne s’applique pas.\niii. Quand un marché porte sur plus d’un article économique, il est recommandé d’utiliser celui qui correspond à la valeur monétaire la plus élevée. Un ministère peut employer une approche différente si elle correspond à sa pratique courante.\n"
+          },
+          "validation": {
+            "en": "Mandatory for contracts after 2019-01-01\nThis field is limited to only 3 or 4 digits.\nIf NA, then Instrument Type must be identified as a standing offer/supply arrangement (SOSA).\n",
+            "fr": "Obligatoire pour les marchés conclus après le 2019-01-01\nCe champ est limité à 3 ou 4 caractères.\nSi NA, alors le Type d’instrument doit être identifié comme étant une offre à commandes ou un arrangement en matière d’approvisionnement (SOSA).\n"
+          },
+          "datastore_type": "text"
+        },
+        {
+          "id": "description_en",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditionnel"
+          },
+          "label": {
+            "en": "Description of Work English",
+            "fr": "Description du travail Anglais"
+          },
+          "description": {
+            "en": "It is recommended that this field be populated with the economic object code’s text description as listed in the government-wide chart of accounts ( http://www.tpsgc-pwgsc.gc.ca/recgen/pceaf-gwcoa/index-eng.html ). For standing offers and supply arrangement agreements, this field may be populated with the commodity code’s text description used by the federal government for procurement activities.",
+            "fr": "Il est recommandé de saisir dans ce champ le texte de description du code d’article économique figurant dans le plan comptable à l’échelle de l’administration fédérale ( http://www.tpsgc-pwgsc.gc.ca/recgen/pceaf-gwcoa/index-fra.html ). Pour les offres à commande et les arrangements en matière d’approvisionnement, ce champ peut comprendre une description du code de produit utilisée par le gouvernement fédéral pour les activités relatives à l’approvisionnement."
+          },
+          "validation": {
+            "en": "Mandatory for contracts after 2019-01-01",
+            "fr": "Obligatoire pour les marchés conclus après le 2019-01-01"
+          },
+          "datastore_type": "text"
+        },
+        {
+          "id": "description_fr",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditionnel"
+          },
+          "label": {
+            "en": "Description of Work French",
+            "fr": "Description du travail Français"
+          },
+          "description": {
+            "en": "It is recommended that this field be populated with the economic object code’s text description as listed in the government-wide chart of accounts ( http://www.tpsgc-pwgsc.gc.ca/recgen/pceaf-gwcoa/index-eng.html ). For standing offers and supply arrangement agreements, this field may be populated with the commodity code’s text description used by the federal government for procurement activities.\n",
+            "fr": "Il est recommandé de saisir dans ce champ le texte de description du code d’article économique figurant dans le plan comptable à l’échelle de l’administration fédérale ( http://www.tpsgc-pwgsc.gc.ca/recgen/pceaf-gwcoa/index-fra.html ). Pour les offres à commande et les arrangements en matière d’approvisionnement, ce champ peut comprendre une description du code de produit utilisée par le gouvernement fédéral pour les activités relatives à l’approvisionnement.\n"
+          },
+          "validation": {
+            "en": "Mandatory for contracts after 2019-01-01",
+            "fr": "Obligatoire pour les marchés conclus après le 2019-01-01"
+          },
+          "datastore_type": "text"
+        },
+        {
+          "id": "contract_period_start",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditionnel"
+          },
+          "label": {
+            "en": "Contract Period Start Date",
+            "fr": "Date de début du contrat"
+          },
+          "description": {
+            "en": "i. For a services or construction services contract, it is recommended that the contract period start date be the starting date for the period of time over which the services are provided.\nii. For a standing or supply arrangement, it is recommended that this field be populated with the starting date for the period of time over which a call-up may be entered into.\niii. For a contract with task authorizations, it is recommended that this field be populated with the starting date for the period of time over the entire contract. For a contract with task authorizations where the full value of a contract with task authorizations is likely not to be used, it is recommended for this field be populated with the starting date for each task authorization.\n",
+            "fr": "i. Pour un marché de services ou de services de construction, il est recommandé que la date de début du marché corresponde à la date de début de la période au cours de laquelle les services sont fournis.\nii. Pour une offre à commandes ou un arrangement en matière d’approvisionnement, il est recommandé de saisir dans ce champ la date de début de la période au cours de laquelle une commande subséquente est passée.\niii. Pour un marché comprenant des autorisations de tâches, il est recommandé de saisir dans ce champ la date de début de la période correspondant à l’ensemble du marché. Pour un marché comportant des autorisations de tâches et pour lequel il est probable que le montant ne soit pas utilisé au complet, il est recommandé de saisir dans ce champ la date de début de chaque autorisation de tâches.\n"
+          },
+          "validation": {
+            "en": "Mandatory for contracts after 2019-01-01\nIf Commodity Type is a Service (S) or Construction (C) this field must not be empty and must be a valid date.\n",
+            "fr": "Obligatoire pour les marchés conclus après le 2019-01-01\nSi le Type de produit est un service (S) ou une construction (C), ce champ ne doit pas être vide et doit contenir une date valide.\n"
+          },
+          "datastore_type": "date"
+        },
+        {
+          "id": "delivery_date",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditionnel"
+          },
+          "label": {
+            "en": "Contract Period End Date or Delivery Date",
+            "fr": "Date de clôture du contrat ou Date de livraison"
+          },
+          "description": {
+            "en": "i. For a goods contract, it is recommended that this field be the date when goods are to be delivered, which may be the contract period end date. The department may use the last delivery date if the contract involves multiple items on multiple dates.\nii. For a services or construction services contract, it is recommended that this field be the end date for the period of time over which the services are provided.\niii. For a standing offer or supply arrangement, it is recommended that this field be the end date for the period of time over which a call-up may be entered into.\niv. For a contract with task authorizations, it is recommended that this field be populated with the end date for the period of time over the entire contract. For a contract with task authorizations where the full value of a contract with task authorization is likely not to be used, it is recommended for this field to be populated with the end date for each task authorization.\n",
+            "fr": "i. Pour un marché de biens, il est recommandé de saisir dans ce champ la date à laquelle les biens seront livrés, ce qui peut correspondre à la date de fin de la période du marché. Le ministère peut utiliser la dernière date de livraison, si le marché prévoit différentes dates pour différents articles.\nii. Pour un marché de services ou de services de construction, il est recommandé de saisir dans ce champ la date de fin de la période au cours de laquelle les services sont fournis.\niii. Pour une offre à commandes ou un arrangement en matière d’approvisionnement, il est recommandé de saisir dans ce champ la date de fin de la période au cours de laquelle une commande subséquente est passée.\niv. Pour un marché comportant des autorisations de tâches, il est recommandé de saisir dans ce champ la date de fin de la période correspondant à l’ensemble du marché. Pour un marché comportant des autorisations de tâches et pour lequel il est probable que le montant ne soit pas utilisé au complet, il est recommandé de saisir dans ce champ la date de fin de chaque autorisation de tâches.\n"
+          },
+          "validation": {
+            "en": "Mandatory for contracts after 2019-01-01",
+            "fr": "Obligatoire pour les marchés conclus après le 2019-01-01"
+          },
+          "datastore_type": "date"
+        },
+        {
+          "id": "contract_value",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditional"
+          },
+          "label": {
+            "en": "Total Contract Value",
+            "fr": "Valeur totale du contrat"
+          },
+          "description": {
+            "en": "i. It is recommended that the total contract value be the amount of the hard commitment recorded in the departmental financial system for all contracts and all subsequent amendments regardless of dollar value. It is recommended for this field be in Canadian currency and for it to include all applicable taxes.\nii. For a multi-year contract, it is recommended for this field to be the total amount of the contract for all years.\niii. For a contract amendment, it is recommended for this field to be the amended contract value.\niv. For a contract with task authorizations, the full potential value of the contract may be reported upon contract award unless the full value is not expected to be used. In the latter situation, each task authorization may be reported individually or cumulatively. When a contract includes a fixed deliverable and another deliverable that requires a task authorization, the department may report the contract and task authorizations in any manner that is transparent.\nv. The value of this field for the reporting of a standing offer agreement or supply arrangement agreement is $0.\n",
+            "fr": "i. Il est recommandé que la valeur totale du marché corresponde au montant de l’engagement ferme consigné dans le système financier ministériel pour le marché et toutes les modifications subséquentes, peu importe la valeur en dollars. Il est recommandé d’inscrire dans ce champ les montants en dollars canadiens et d’y ajouter toutes les taxes applicables.\nii. Pour un marché pluriannuel, il est recommandé, de fournir dans ce champ le montant total du marché pour toutes les années.\niii. Pour une modification d’un marché, il est recommandé de saisir dans ce champ la valeur modifiée du marché.\niv. Dans le cas d’un marché comportant des autorisations de tâches, la valeur totale éventuelle du marché peut être déclarée à la date d’adjudication du marché, sauf s’il n’est pas prévu d’utiliser la valeur totale du marché. Dans ce dernier cas, les autorisations de tâches peuvent être déclarées séparément ou en bloc. Si le marché comporte un produit livrable fixe et un autre qui doit être accompagné d’une autorisation de tâches, le ministère peut déclarér le marché et les autorisations de tâches de n’importe quelle façon jugée transparente.\nv. La valeur inscrite dans ce champ pour la déclaration d’une offre à commandes ou d’un arrangement en matière d’approvisionnement doit être de 0 $.\n"
+          },
+          "validation": {
+            "en": "Mandatory for contracts after 2019-01-01",
+            "fr": "Mandatory for contracts after 2019-01-01"
+          },
+          "datastore_type": "money"
+        },
+        {
+          "id": "original_value",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditionnel"
+          },
+          "label": {
+            "en": "Original Contract Value",
+            "fr": "Valeur d'origine du contrat"
+          },
+          "description": {
+            "en": "i. It is recommended that the original contract value be the amount of the hard commitment recorded in the departmental financial system at the time of contract award for a contract or amended contract. It is recommended for this field be in Canadian currency and for it to include all applicable taxes.\nii. For a multi-year contract, it is recommended for this field to be the amount at the time of contract award for the multi-year contract period.\niii. For a contract option, it is recommended for this field to be excluded from the original contract value and for it to be reported at a later date as an amendment when the contract option is exercised. Alternatively, the full value of a contract, including options, may be reported at the time of contract award.\niv. For a contract with task authorizations, it is recommended that the original contract value be for the full amount of the contract rather than the amount specified within the minimum work guarantee clause. The full potential value of the contract may be reported in the original contract value unless the full value is not expected to be used. In the latter situation, each task authorization may be reported individually or cumulatively. When a contract includes a fixed deliverable and another deliverable that requires a task authorization, the department may report the contract and task authorizations in any manner that is transparent.\nv. The value of this field for the reporting of a standing offer agreement or supply arrangement agreement should be $0.\n",
+            "fr": "i. Il est recommandé que la valeur d’origine du marché corresponde au montant de l’engagement ferme consigné dans le système financier ministériel au moment de l’attribution du marché pour un marché ou un marché modifié. Il est recommandé d’inscrire dans ce champs les montants en dollars canadiens et d’y ajouter toutes les taxes applicables.\nii. Pour un marché pluriannuel, il est recommandé d’inscrire dans ce champ la valeur correspondant au montant au moment de l’attribution du marché pour la période du marché pluriannuel.\niii. Pour une option de marché, il est recommandé pour ce champ d’exclure le montant de l’option de l’élément de données « valeur d’origine du marché » pour le déclarer à une date ultérieure à titre de modification lorsqu’elle est exercée. Sinon, la valeur totale du marché, y compris les options, peut être déclarée à la date d’adjudication du marché.\niv. Dans le cas d’un marché comportant des autorisations de tâches, il est recommandé de déclarer dans ce champ la valeur d’origine du marché au lieu du montant précisé dans la clause de garantie des travaux minimums. La valeur totale éventuelle du marché peut être déclarée dans l’élément de données « valeur d’origine du marché », à moins qu’il ne soit par prévu d’utiliser la valeur totale du marché. Dans ce dernier cas, les autorisations de tâches peuvent être déclarées séparément ou en bloc. Si le marché comporte un produit livrable fixe et un autre qui doit être accompagné d’une autorisation de tâches, le ministère peut déclarer le marché et les autorisations de tâches de n’importe quelle façon jugée transparente.\nv. La valeur inscrite dans ce champ pour la déclaration d’une offre à commandes ou d’un arrangement en matière d’approvisionnement devrait être de 0 $.\n"
+          },
+          "validation": {
+            "en": "Mandatory for contracts after 2019-01-01",
+            "fr": "Obligatoire pour les marchés conclus après le 2019-01-01"
+          },
+          "datastore_type": "money"
+        },
+        {
+          "id": "amendment_value",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditionnel"
+          },
+          "label": {
+            "en": "Contract Amendment Value",
+            "fr": "Valeur de modification"
+          },
+          "description": {
+            "en": "i. For an amendment, it is recommended that the contract amendment value be the value of the contract amendment. Negative amendments should include a minus sign in front of the value. It is recommended for this field to be in Canadian currency and for it to include all applicable taxes.\nii. Multiple amendment(s) to a contract that take place in the same fiscal quarter may be reported either individually or combined. Positive or negative amendments over $10,000 are to be reported quarterly in accordance with Appendix A. Positive or negative amendments of $10,000 and under are to be reported annually via email to PSPC in accordance with Appendix A, and to be reported annually on the Open Government Portal in accordance with Appendix B. An amendment should be reported either quarterly or annually. Reporting an amendment both quarterly and annually would result in double counting of the amendment’s value when calculating the total contracting activity of an organization.\niii. When a contract is entered into and subsequently amended in the same fiscal quarter, the two transactions should be reported separately. Entry into the contract should be reported as a separate entry with the value at contract entry in the original contract value and should not include the value of the contract amendment. The contract amendment should also be reported as a separate entry with the value of the amendment in the contract amendment value and the contract entry value in the original contract value.\niv. For a contract with task authorizations, when the full value is likely not to be used, the value of any subsequent task authorization may be reported as an amendment with its value reported in the contract amendment value.\nv. A “0” value should be included if there are no amendments associated with the contract.\n",
+            "fr": "i. Pour une modification, il est recommandé que l’élément de données « valeur de modification » corresponde à la valeur de la modification. Les modifications de marché négatives doivent inclure un signe négatif devant la valeur. Il est recommandé d’inscrire dans ce champ les montants en dollars canadiens et d’y ajouter toutes les taxes applicables.\nii. Les modifications multiples apportées à un marché au cours du même trimestre de l’exercice financier peuvent être déclarée séparément ou en bloc. Les modifications de marché positives ou négatives de plus de 10 000 $ sont à déclarer tous les trois mois, conformément à l’annexe A. Les modifications positives et négatives de 10 000 $ ou moins sont à déclarer une fois par an au moyen d’un courriel à SPAC, conformément à l’annexe A, et elles doivent être déclarée une fois par an dans le Portail du gouvernement ouvert, conformément à l’annexe B. Une modification de marché doit être déclarée tous les trois mois ou une fois par an. La déclaration d’une modification de marché de façon trimestrielle et annuelle donnerait lieu à un double dénombrement de la valeur de la modification au moment de calculer le total de l’activité contractuelle d’une organisation.\niii. Lorsqu’un marché est conclu, puis modifié au cours du même trimestre d’exercice, les deux opérations doivent être déclarées séparément. La signature du marché doit être saisie comme une entrée séparée, et la valeur au moment de la signature du marché doit être consignée dans l’élément de données « valeur d’origine du marché », sans la valeur de modification. La valeur de modification sera également déclarée dans une entrée distincte qui comprend la valeur de la modification figurant dans le champ de la « valeur de la modification du marché », et la valeur au moment de la signature du marché sera saisie dans l’élément de données « valeur d’origine du marché ».\niv. Dans le cas d’un marché comportant des autorisations de tâches, lorsqu’il est improbable que la valeur totale soit utilisée, la valeur de toute autorisation de tâche ultérieure peut être déclarée en tant que modification, sa valeur étant comprise dans la valeur de la modification.\nv. Il faut inscrire « 0 » s’il n’y a pas de modification de marché.\n"
+          },
+          "validation": {
+            "en": "This field must be populated if Amendment (A) was selected as the Instrument Type",
+            "fr": "Ce champ doit être rempli si Modification (A) a été sélectionné comme Type d’instrument"
+          },
+          "datastore_type": "money"
+        },
+        {
+          "id": "comments_en",
+          "obligation": {
+            "en": "Optional",
+            "fr": "Facultatif"
+          },
+          "label": {
+            "en": "Comments English",
+            "fr": "Commentaires en anglais"
+          },
+          "description": {
+            "en": "i. Standardized comments are recommended to be used (refer to Appendix C). Avoid the use of acronyms within this field.\nii. Departments are encouraged to provide a brief description of each contract.\niii. When a contract involves an economic object code specified in Appendix D, departments are to fulfill the reporting requirements specified in Appendix D.\n",
+            "fr": "i. Il est recommandé d’utiliser les commentaires normalisés (consultez l’annexe C). Il faut éviter d’utiliser des acronymes dans ce champ.\nii. Les ministères sont invités à fournir une brève description de chaque marché.\niii. Lorsqu’un marché comprend un code d’article économique précisé à l’annexe D, les ministères doivent satisfaire aux exigences en matière de déclaration précisées à l’annexe D.\n"
+          },
+          "datastore_type": "text"
+        },
+        {
+          "id": "comments_fr",
+          "obligation": {
+            "en": "Optional",
+            "fr": "Facultatif"
+          },
+          "label": {
+            "en": "Comments French",
+            "fr": "Commentaires en français"
+          },
+          "description": {
+            "en": "i. Standardized comments are recommended to be used (refer to Appendix C). Avoid the use of acronyms within this field.\nii. Departments are encouraged to provide a brief description of each contract.\niii. When a contract involves an economic object code specified in Appendix D, departments are to fulfill the reporting requirements specified in Appendix D.\n",
+            "fr": "i. Il est recommandé d’utiliser les commentaires normalisés (consultez l’annexe C). Évitez d’utiliser des acronymes dans ce champ.\nii. Les ministères sont invités à fournir une brève description de chaque marché.\niii. Lorsqu’un marché comprend un code d’article économique précisé à l’annexe D, les ministères doivent satisfaire aux exigences en matière de déclaration précisées à l’annexe D.\n"
+          },
+          "datastore_type": "text"
+        },
+        {
+          "id": "additional_comments_en",
+          "obligation": {
+            "en": "Optional",
+            "fr": "Facultatif"
+          },
+          "label": {
+            "en": "Additional Comments English",
+            "fr": "Commentaires additionnels en anglais"
+          },
+          "description": {
+            "en": "The additional comments English field may be populated with additional comments when an organization needs additional capacity to fulfill the reporting requirements under the comments English data field.",
+            "fr": "Ce champ sert à consigner tout commentaire additionnel lorsqu’une organisation a besoin d’une capacité additionnelle pour répondre aux exigences de déclaration dans le champ « commentaires en anglais »."
+          },
+          "datastore_type": "text"
+        },
+        {
+          "id": "additional_comments_fr",
+          "obligation": {
+            "en": "Optional",
+            "fr": "Facultatif"
+          },
+          "label": {
+            "en": "Additional Comments French",
+            "fr": "Commentaires additionnels en français"
+          },
+          "description": {
+            "en": "The additional comments French field may be populated with additional comments when an organization needs additional capacity to fulfill the reporting requirements under the comments French data field.",
+            "fr": "Ce champ sert à consigner tout commentaire additionnel lorsqu’une organisation a besoin d’une capacité additionnelle pour répondre aux exigences de déclaration dans le champ « commentaires en   français »."
+          },
+          "datastore_type": "text"
+        },
+        {
+          "id": "agreement_type_code",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditionnel"
+          },
+          "label": {
+            "en": "Agreement Type",
+            "fr": "Type d’accord"
+          },
+          "description": {
+            "en": "This data field is archived and replaced by the Appendix A data fields for Trade Agreement, Comprehensive Land Claims Agreement and Procurement Strategy for Indigenous Business.",
+            "fr": "Ce champ de données est archivé et remplacé par les champs de données de l’annexe A pour l’Accord de libre-échange, l’entente sur les revendications territoriales globales et la Stratégie d’approvisionnement auprès des entreprises autochtones."
+          },
+          "validation": {
+            "en": "Mandatory for contracts after 2019-01-01, unless Trade Agreement specified.\n\nThis field must be blank if the Trade Agreement field Type is not blank.\n",
+            "fr": "Obligatoire pour les marchés conclus après le 2019-01-01, sauf si on précise un accord commercial.\n\nCe champ doit être vide si le champ Accord commercial n’est pas vide.\n"
+          },
+          "datastore_type": "text",
+          "choices": {
+            "0": {
+              "lookup": [
+                "NONE"
+              ],
+              "en": "None",
+              "fr": "Aucun"
+            },
+            "A": {
+              "lookup": [
+                "ABSA"
+              ],
+              "en": "ABSA",
+              "fr": "MREA"
+            },
+            "C": {
+              "conditional_lookup": [
+                {
+                  "column": "contract_date",
+                  "less_than": "2018-01-01",
+                  "lookup": [
+                    "NAFTA",
+                    "AIT"
+                  ]
+                },
+                {
+                  "lookup": [
+                    "NAFTA",
+                    "CFTA"
+                  ]
+                }
+              ],
+              "en": "NAFTA / CFTA",
+              "fr": "ALENA / ALEC"
+            },
+            "D": {
+              "conditional_lookup": [
+                {
+                  "column": "contract_date",
+                  "less_than": "2021-04-01",
+                  "lookup": [
+                    "CETA",
+                    "CFTA"
+                  ]
+                },
+                {
+                  "lookup": [
+                    "CETA",
+                    "TCA",
+                    "CFTA"
+                  ]
+                }
+              ],
+              "en": "CETA / TCA / CFTA",
+              "fr": "AECG / ACC / ALEC"
+            },
+            "E": {
+              "conditional_lookup": [
+                {
+                  "column": "contract_date",
+                  "less_than": "2021-04-01",
+                  "lookup": [
+                    "CETA",
+                    "WTO-AGP",
+                    "CFTA",
+                    "CCFTA",
+                    "CCoFTA",
+                    "CHFTA",
+                    "CPaFTA",
+                    "CPFTA",
+                    "CKFTA"
+                  ]
+                },
+                {
+                  "lookup": [
+                    "CETA",
+                    "TCA",
+                    "WTO-AGP",
+                    "CFTA",
+                    "CCFTA",
+                    "CCoFTA",
+                    "CHFTA",
+                    "CPaFTA",
+                    "CPFTA",
+                    "CKFTA"
+                  ]
+                }
+              ],
+              "en": "CETA / TCA / WTO-AGP / CFTA / CCFTA / CCoFTA / CHFTA / CPaFTA / CPFTA / CKFTA",
+              "fr": "AECG / ACC / AMP-OMC / ALEC / ALECC / ALECCo / ALECH / ALECPa / ALECP / ALECCS"
+            },
+            "F": {
+              "conditional_lookup": [
+                {
+                  "column": "contract_date",
+                  "less_than": "2021-04-01",
+                  "lookup": [
+                    "CETA",
+                    "WTO-AGP",
+                    "NAFTA",
+                    "CFTA",
+                    "CCFTA",
+                    "CCoFTA",
+                    "CHFTA",
+                    "CPaFTA",
+                    "CPFTA",
+                    "CKFTA"
+                  ]
+                },
+                {
+                  "lookup": [
+                    "CETA",
+                    "TCA",
+                    "WTO-AGP",
+                    "NAFTA",
+                    "CFTA",
+                    "CCFTA",
+                    "CCoFTA",
+                    "CHFTA",
+                    "CPaFTA",
+                    "CPFTA",
+                    "CKFTA"
+                  ]
+                }
+              ],
+              "en": "CETA / TCA / WTO-AGP / NAFTA / CFTA / CCFTA / CCoFTA / CHFTA / CPaFTA / CPFTA / CKFTA",
+              "fr": "AECG / ACC / AMP-OMC / ALENA / ALEC / ALECC / ALECCo / ALECH / ALECPa / ALECP / ALECCS"
+            },
+            "I": {
+              "conditional_lookup": [
+                {
+                  "column": "contract_date",
+                  "less_than": "2018-01-01",
+                  "lookup": [
+                    "AIT"
+                  ]
+                },
+                {
+                  "lookup": [
+                    "CFTA"
+                  ]
+                }
+              ],
+              "en": "CFTA",
+              "fr": "ALEC"
+            },
+            "R": {
+              "lookup": [
+                "LCSA"
+              ],
+              "en": "LCSA",
+              "fr": "MRERT"
+            },
+            "S": {
+              "conditional_lookup": [
+                {
+                  "column": "contract_date",
+                  "less_than": "2018-01-01",
+                  "lookup": [
+                    "NAFTA",
+                    "AIT",
+                    "CCFTA",
+                    "CCoFTA",
+                    "CHFTA",
+                    "CPaFTA",
+                    "CKFTA"
+                  ]
+                },
+                {
+                  "lookup": [
+                    "NAFTA",
+                    "CFTA",
+                    "CCFTA",
+                    "CCoFTA",
+                    "CHFTA",
+                    "CPaFTA",
+                    "CKFTA"
+                  ]
+                }
+              ],
+              "en": "NAFTA / CFTA / CCFTA / CCoFTA / CHFTA / CPaFTA / CKFTA",
+              "fr": "ALENA / ALEC / ALECC / ALECCo / ALECH / ALECPa / ALECCS"
+            },
+            "T": {
+              "conditional_lookup": [
+                {
+                  "column": "contract_date",
+                  "less_than": "2018-01-01",
+                  "lookup": [
+                    "NAFTA",
+                    "AIT",
+                    "CCFTA",
+                    "CCoFTA",
+                    "CHFTA",
+                    "CPaFTA",
+                    "CPFTA",
+                    "CKFTA"
+                  ]
+                },
+                {
+                  "lookup": [
+                    "NAFTA",
+                    "CFTA",
+                    "CCFTA",
+                    "CCoFTA",
+                    "CHFTA",
+                    "CPaFTA",
+                    "CPFTA",
+                    "CKFTA"
+                  ]
+                }
+              ],
+              "en": "NAFTA / CFTA / CCFTA / CCoFTA / CHFTA / CPaFTA / CPFTA / CKFTA",
+              "fr": "ALENA / ALEC / ALECC / ALECCo / ALECH / ALECPa / ALECP / ALECCS"
+            },
+            "V": {
+              "conditional_lookup": [
+                {
+                  "column": "contract_date",
+                  "less_than": "2018-01-01",
+                  "lookup": [
+                    "AIT",
+                    "CCFTA",
+                    "CKFTA"
+                  ]
+                },
+                {
+                  "lookup": [
+                    "CFTA",
+                    "CCFTA",
+                    "CKFTA"
+                  ]
+                }
+              ],
+              "en": "CFTA / CCFTA / CKFTA",
+              "fr": "ALEC / ALECC / ALECCS"
+            },
+            "W": {
+              "conditional_lookup": [
+                {
+                  "column": "contract_date",
+                  "less_than": "2018-01-01",
+                  "lookup": [
+                    "WTO-AGP",
+                    "AIT",
+                    "CCFTA",
+                    "CCoFTA",
+                    "CHFTA",
+                    "CPaFTA",
+                    "CPFTA",
+                    "CKFTA"
+                  ]
+                },
+                {
+                  "lookup": [
+                    "WTO-AGP",
+                    "CFTA",
+                    "CCFTA",
+                    "CCoFTA",
+                    "CHFTA",
+                    "CPaFTA",
+                    "CPFTA",
+                    "CKFTA"
+                  ]
+                }
+              ],
+              "en": "WTO-AGP / CFTA / CCFTA / CCoFTA / CHFTA / CPaFTA / CPFTA / CKFTA",
+              "fr": "AMP-OMC / ALEC / ALECC / ALECCo / ALECH / ALECPa / ALECP / ALECCS"
+            },
+            "X": {
+              "conditional_lookup": [
+                {
+                  "column": "contract_date",
+                  "less_than": "2018-01-01",
+                  "lookup": [
+                    "WTO-AGP",
+                    "AIT",
+                    "CCFTA",
+                    "CKFTA"
+                  ]
+                },
+                {
+                  "lookup": [
+                    "WTO-AGP",
+                    "CFTA",
+                    "CCFTA",
+                    "CKFTA"
+                  ]
+                }
+              ],
+              "en": "WTO-AGP / CFTA / CCFTA / CKFTA",
+              "fr": "AMP-OMC / ALEC / ALECC / ALECCS"
+            },
+            "Y": {
+              "conditional_lookup": [
+                {
+                  "column": "contract_date",
+                  "less_than": "2018-01-01",
+                  "lookup": [
+                    "WTO-AGP",
+                    "NAFTA",
+                    "AIT",
+                    "CCFTA",
+                    "CCoFTA",
+                    "CHFTA",
+                    "CPaFTA",
+                    "CPFTA",
+                    "CKFTA"
+                  ]
+                },
+                {
+                  "lookup": [
+                    "WTO-AGP",
+                    "NAFTA",
+                    "CFTA",
+                    "CCFTA",
+                    "CCoFTA",
+                    "CHFTA",
+                    "CPaFTA",
+                    "CPFTA",
+                    "CKFTA"
+                  ]
+                }
+              ],
+              "en": "WTO-AGP / NAFTA / CFTA / CCFTA / CCoFTA / CHFTA / CPaFTA / CPFTA / CKFTA",
+              "fr": "AMP-OMC / ALENA / ALEC / ALECC / ALECCo / ALECH / ALECPa / ALECP / ALECCS"
+            },
+            "Z": {
+              "lookup": [
+                "WTO-AGP",
+                "NAFTA"
+              ],
+              "en": "WTO-AGP / NAFTA",
+              "fr": "AMP-OMC / ALENA"
+            },
+            "AB": {
+              "lookup": [
+                "CFTA",
+                "CCFTA",
+                "CCoFTA",
+                "CHFTA",
+                "CPaFTA",
+                "CKFTA"
+              ],
+              "en": "CFTA / CCFTA / CCoFTA / CHFTA / CPaFTA / CKFTA",
+              "fr": "ALEC / ALECC / ALECCo / ALECH / ALECPa / ALECCS"
+            },
+            "AC": {
+              "lookup": [
+                "CFTA",
+                "CCFTA",
+                "CCoFTA",
+                "CHFTA",
+                "CPaFTA",
+                "CPFTA",
+                "CKFTA"
+              ],
+              "en": "CFTA / CCFTA / CCoFTA / CHFTA / CPaFTA / CPFTA / CKFTA",
+              "fr": "ALEC / ALECC / ALECCo / ALECH / ALECPa / ALECP / ALECCS"
+            },
+            "AD": {
+              "conditional_lookup": [
+                {
+                  "column": "contract_date",
+                  "less_than": "2021-04-01",
+                  "lookup": [
+                    "CETA",
+                    "WTO-AGP",
+                    "CFTA",
+                    "CCFTA",
+                    "CKFTA"
+                  ]
+                },
+                {
+                  "lookup": [
+                    "CETA",
+                    "TCA",
+                    "WTO-AGP",
+                    "CFTA",
+                    "CCFTA",
+                    "CKFTA"
+                  ]
+                }
+              ],
+              "en": "CETA / TCA / WTO-AGP / CFTA / CCFTA / CKFTA",
+              "fr": "AECG / ACC / AMP-OMC / ALEC / ALECC / ALECCS"
+            },
+            "AF": {
+              "lookup": [
+                "CFTA",
+                "CHFTA"
+              ],
+              "en": "CFTA / CHFTA",
+              "fr": "ALEC / ALECH"
+            },
+            "AG": {
+              "conditional_lookup": [
+                {
+                  "column": "contract_date",
+                  "less_than": "2021-04-01",
+                  "lookup": [
+                    "CETA",
+                    "CFTA",
+                    "CHFTA"
+                  ]
+                },
+                {
+                  "lookup": [
+                    "CETA",
+                    "TCA",
+                    "CFTA",
+                    "CHFTA"
+                  ]
+                }
+              ],
+              "en": "CETA / TCA / CFTA / CHFTA",
+              "fr": "AECG / ACC / ALEC / ALECH"
+            },
+            "AH": {
+              "lookup": [
+                "CKFTA"
+              ],
+              "en": "CKFTA",
+              "fr": "ALECCS"
+            },
+            "AI": {
+              "lookup": [
+                "CFTA",
+                "CKFTA"
+              ],
+              "en": "CFTA / CKFTA",
+              "fr": "ALEC / ALECCS"
+            },
+            "AJ": {
+              "lookup": [
+                "CFTA",
+                "NAFTA",
+                "CKFTA"
+              ],
+              "en": "CFTA / NAFTA / CKFTA",
+              "fr": "ALEC / ALENA / ALECCS"
+            },
+            "AK": {
+              "lookup": [
+                "CPTPP"
+              ],
+              "en": "CPTPP",
+              "fr": "PTPGP"
+            },
+            "AN": {
+              "conditional_lookup": [
+                {
+                  "column": "contract_date",
+                  "less_than": "2021-04-01",
+                  "lookup": [
+                    "CFTA",
+                    "CHFTA",
+                    "CETA",
+                    "CPTPP"
+                  ]
+                },
+                {
+                  "lookup": [
+                    "CFTA",
+                    "CHFTA",
+                    "CETA",
+                    "TCA",
+                    "CPTPP"
+                  ]
+                }
+              ],
+              "en": "CFTA / CHFTA / CETA / TCA / CPTPP",
+              "fr": "ALEC / ALECH / AECG / ACC / PTPGP"
+            },
+            "AO": {
+              "lookup": [
+                "CFTA",
+                "CCFTA",
+                "CKFTA",
+                "WTO-AGP",
+                "CPTPP"
+              ],
+              "en": "CFTA / CCFTA / CKFTA / WTO-AGP / CPTPP",
+              "fr": "ALEC / ALECC / ALECCS / AMP-OMC / PTPGP"
+            },
+            "AP": {
+              "conditional_lookup": [
+                {
+                  "column": "contract_date",
+                  "less_than": "2021-04-01",
+                  "lookup": [
+                    "CFTA",
+                    "NAFTA",
+                    "CCFTA",
+                    "CCoFTA",
+                    "CHFTA",
+                    "CPaFTA",
+                    "CPFTA",
+                    "CKFTA",
+                    "WTO-AGP",
+                    "CETA",
+                    "CPTPP"
+                  ]
+                },
+                {
+                  "lookup": [
+                    "CFTA",
+                    "NAFTA",
+                    "CCFTA",
+                    "CCoFTA",
+                    "CHFTA",
+                    "CPaFTA",
+                    "CPFTA",
+                    "CKFTA",
+                    "WTO-AGP",
+                    "CETA",
+                    "TCA",
+                    "CPTPP"
+                  ]
+                }
+              ],
+              "en": "CFTA / NAFTA / CCFTA / CCoFTA / CHFTA / CPaFTA / CPFTA / CKFTA / WTO-AGP / CETA / TCA / CPTPP",
+              "fr": "ALEC / ALENA / ALECC / ALECCo / ALECH / ALECPa / ALECP / ALECCS / AMP-OMC / AECG / ACC / PTPGP"
+            },
+            "AQ": {
+              "conditional_lookup": [
+                {
+                  "column": "contract_date",
+                  "less_than": "2021-04-01",
+                  "lookup": [
+                    "CFTA",
+                    "CCFTA",
+                    "CCoFTA",
+                    "CHFTA",
+                    "CPaFTA",
+                    "CPFTA",
+                    "CKFTA",
+                    "WTO-AGP",
+                    "CETA",
+                    "CPTPP"
+                  ]
+                },
+                {
+                  "lookup": [
+                    "CFTA",
+                    "CCFTA",
+                    "CCoFTA",
+                    "CHFTA",
+                    "CPaFTA",
+                    "CPFTA",
+                    "CKFTA",
+                    "WTO-AGP",
+                    "CETA",
+                    "TCA",
+                    "CPTPP"
+                  ]
+                }
+              ],
+              "en": "CFTA / CCFTA / CCoFTA / CHFTA / CPaFTA / CPFTA / CKFTA / WTO-AGP / CETA / TCA / CPTPP",
+              "fr": "ALEC / ALECC / ALECCo / ALECH / ALECPa / ALECP / ALECCS / AMP-OMC / AECG / ACC / PTPGP"
+            },
+            "AR": {
+              "lookup": [
+                "CFTA",
+                "NAFTA",
+                "CCFTA",
+                "CCoFTA",
+                "CHFTA",
+                "CPaFTA",
+                "CPFTA",
+                "CKFTA",
+                "WTO-AGP",
+                "CPTPP"
+              ],
+              "en": "CFTA / NAFTA / CCFTA / CCoFTA / CHFTA / CPaFTA / CPFTA / CKFTA / WTO-AGP / CPTPP",
+              "fr": "ALEC / ALENA / ALECC / ALECCo / ALECH / ALECPa / ALECP / ALECCS / AMP-OMC / PTPGP"
+            },
+            "AS": {
+              "lookup": [
+                "CFTA",
+                "CCFTA",
+                "CCoFTA",
+                "CHFTA",
+                "CPaFTA",
+                "CPFTA",
+                "CKFTA",
+                "WTO-AGP",
+                "CPTPP"
+              ],
+              "en": "CFTA / CCFTA / CCoFTA / CHFTA / CPaFTA / CPFTA / CKFTA / WTO-AGP / CPTPP",
+              "fr": "ALEC / ALECC / ALECCo / ALECH / ALECPa / ALECP / ALECCS / AMP-OMC / PTPGP"
+            },
+            "AT": {
+              "lookup": [
+                "CFTA",
+                "CCFTA",
+                "CKFTA"
+              ],
+              "en": "CFTA / CCFTA / CKFTA",
+              "fr": "ALEC / ALECC / ALECCS"
+            },
+            "AU": {
+              "conditional_lookup": [
+                {
+                  "column": "contract_date",
+                  "less_than": "2021-04-01",
+                  "lookup": [
+                    "CFTA",
+                    "CCFTA",
+                    "CKFTA",
+                    "WTO-AGP",
+                    "CETA",
+                    "CPTPP"
+                  ]
+                },
+                {
+                  "lookup": [
+                    "CFTA",
+                    "CCFTA",
+                    "CKFTA",
+                    "WTO-AGP",
+                    "CETA",
+                    "TCA",
+                    "CPTPP"
+                  ]
+                }
+              ],
+              "en": "CFTA / CCFTA / CKFTA / WTO-AGP / CETA / TCA / CPTPP",
+              "fr": "ALEC / ALECC / ALECCS / AMP-OMC / AECG / ACC / PTPGP"
+            },
+            "AV": {
+              "lookup": [
+                "CFTA",
+                "CCFTA"
+              ],
+              "en": "CFTA / CCFTA",
+              "fr": "ALEC / ALECC"
+            },
+            "AW": {
+              "lookup": [
+                "CFTA",
+                "CCFTA",
+                "CPTPP"
+              ],
+              "en": "CFTA / CCFTA / CPTPP",
+              "fr": "ALEC / ALECC / PTPGP"
+            },
+            "AX": {
+              "conditional_lookup": [
+                {
+                  "column": "contract_date",
+                  "less_than": "2021-04-01",
+                  "lookup": [
+                    "CFTA",
+                    "CKFTA",
+                    "WTO-AGP",
+                    "CETA"
+                  ]
+                },
+                {
+                  "lookup": [
+                    "CFTA",
+                    "CKFTA",
+                    "WTO-AGP",
+                    "CETA",
+                    "TCA"
+                  ]
+                }
+              ],
+              "en": "CFTA / CKFTA / WTO-AGP / CETA / TCA",
+              "fr": "ALEC / ALECCS / AMP-OMC / AECG / ACC"
+            },
+            "AY": {
+              "conditional_lookup": [
+                {
+                  "column": "contract_date",
+                  "less_than": "2021-04-01",
+                  "lookup": [
+                    "CFTA",
+                    "CKFTA",
+                    "WTO-AGP",
+                    "CETA",
+                    "CPTPP"
+                  ]
+                },
+                {
+                  "lookup": [
+                    "CFTA",
+                    "CKFTA",
+                    "WTO-AGP",
+                    "CETA",
+                    "TCA",
+                    "CPTPP"
+                  ]
+                }
+              ],
+              "en": "CFTA / CKFTA / WTO-AGP / CETA / TCA / CPTPP",
+              "fr": "ALEC / ALECCS / AMP-OMC / AECG / ACC / PTPGP"
+            },
+            "AZ": {
+              "lookup": [
+                "CFTA",
+                "CKFTA",
+                "WTO-AGP",
+                "CPTPP"
+              ],
+              "en": "CFTA / CKFTA / WTO-AGP / CPTPP",
+              "fr": "ALEC / ALECCS / AMP-OMC / PTPGP"
+            },
+            "BA": {
+              "lookup": [
+                "ABSA",
+                "LCSA"
+              ],
+              "en": "ABSA / LCSA",
+              "fr": "MREA / MRERT"
+            },
+            "N": {
+              "lookup": [
+                "NAFTA",
+                "CCFTA",
+                "CCoFTA",
+                "CHFTA",
+                "CPaFTA"
+              ],
+              "en": "(discontinued) NAFTA / CCFTA / CCoFTA / CHFTA / CPaFTA",
+              "fr": "(discontinué) ALENA / ALECC / ALECCo / ALECH / ALECPa",
+              "discontinued": true
+            },
+            "P": {
+              "conditional_lookup": [
+                {
+                  "column": "contract_date",
+                  "less_than": "2018-01-01",
+                  "lookup": [
+                    "NAFTA",
+                    "AIT",
+                    "CCFTA",
+                    "CCoFTA",
+                    "CHFTA",
+                    "CPaFTA"
+                  ]
+                },
+                {
+                  "lookup": [
+                    "NAFTA",
+                    "CFTA",
+                    "CCFTA",
+                    "CCoFTA",
+                    "CHFTA",
+                    "CPaFTA"
+                  ]
+                }
+              ],
+              "en": "(discontinued) NAFTA / CFTA / CCFTA / CCoFTA / CHFTA / CPaFTA",
+              "fr": "(discontinué) ALENA / ALEC / ALECC / ALECCo / ALECH / ALECPa",
+              "discontinued": true
+            },
+            "U": {
+              "lookup": [
+                "CCFTA"
+              ],
+              "en": "(discontinued) CCFTA",
+              "fr": "(discontinué) ALECC",
+              "discontinued": true
+            },
+            "AA": {
+              "lookup": [
+                "CCFTA",
+                "CCoFTA",
+                "CHFTA",
+                "CPaFTA"
+              ],
+              "en": "(discontinued) CCFTA / CCoFTA / CHFTA / CPaFTA",
+              "fr": "(discontinué) ALECC / ALECCo / ALECH / ALECPa",
+              "discontinued": true
+            },
+            "AE": {
+              "lookup": [
+                "CHFTA"
+              ],
+              "en": "(discontinued) CHFTA",
+              "fr": "(discontinué) ALECH",
+              "discontinued": true
+            },
+            "AL": {
+              "lookup": [
+                "CFTA",
+                "CPTPP"
+              ],
+              "en": "(discontinued) CFTA / CPTPP",
+              "fr": "(discontinué) ALEC / PTPGP",
+              "discontinued": true
+            },
+            "AM": {
+              "conditional_lookup": [
+                {
+                  "column": "contract_date",
+                  "less_than": "2021-04-01",
+                  "lookup": [
+                    "CFTA",
+                    "CETA",
+                    "CPTPP"
+                  ]
+                },
+                {
+                  "lookup": [
+                    "CFTA",
+                    "CETA",
+                    "TCA",
+                    "CPTPP"
+                  ]
+                }
+              ],
+              "en": "(discontinued) CFTA / CETA / TCA / CPTPP",
+              "fr": "(discontinué) ALEC / AECG / ACC / PTPGP",
+              "discontinued": true
+            }
+          }
+        },
+        {
+          "id": "trade_agreement",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditionnel"
+          },
+          "label": {
+            "en": "Trade Agreement",
+            "fr": "Accord commercial"
+          },
+          "description": {
+            "en": "i. It is recommended that this field indicate whether the procurement is covered by each of the applicable trade agreements.\nii. It is recommended that this field be populated with one or more of the following alphabetic characters. Report the alphabetic characters only. All text after the alphabetic characters, including the colon, is for information purposes only. For example, a procurement covered by the Canadian Free Trade Agreement and the Comprehensive Economic Free Trade Agreement is reported as CA, EU.\n",
+            "fr": "i. Il est recommandé d’indiquer dans ce champ si l’approvisionnement est visé par chacun des accords commerciaux applicables.\nii. Il est recommandé de remplir ce champ avec un ou plusieurs des caractères alphabétiques suivants. Il faut indiquer uniquement les caractères alphabétiques. Tout le texte après les caractères alphabétiques, y compris les deux-points, est fourni à titre informatif uniquement. À titre d’exemple, un approvisionnement visé par l’Accord de libre-échange canadien et l’Accord économique et commercial global entre le Canada et l’Union européenne est déclaré sous le code CA, EU.\n"
+          },
+          "validation": {
+            "en": "Mandatory for contracts after 2022-01-01\n\nIf the value XX (none) is entered, then no other value can be entered in this field.\n\nThis field must be blank if the Agreement Type field is not blank.\n",
+            "fr": "Obligatoire pour les marchés conclus après le 2022-01-01\n\nSi la valeur XX (aucun) est inscrite, alors aucune autre valeur ne peut être inscrite dans ce champ.\n\nCe champ doit être vide si le champ Type d’accord n’est pas vide.\n"
+          },
+          "datastore_type": "_text",
+          "choices": {
+            "CA": {
+              "en": "Canadian Free Trade Agreement",
+              "fr": "Accord de libre-échange Canadien"
+            },
+            "CL": {
+              "en": "Canada-Chile Free Trade Agreement",
+              "fr": "Accord de libre-échange Canada-Chili"
+            },
+            "CO": {
+              "en": "Canada-Colombia Free Trade Agreement",
+              "fr": "Accord de libre-échange Canada-Colombie"
+            },
+            "EU": {
+              "en": "Comprehensive Economic Free Trade Agreement",
+              "fr": "Accord économique et commercial global"
+            },
+            "GP": {
+              "en": "World Trade Organization – Agreement on Government Procurement",
+              "fr": "Accord sur les marchés publics de l’Organisation mondiale du commerce"
+            },
+            "HN": {
+              "en": "Canada-Honduras Free Trade Agreement",
+              "fr": "Accord de libre-échange Canada-Honduras"
+            },
+            "KR": {
+              "en": "Canada-Korea Free Trade Agreement",
+              "fr": "Accord de libre-échange Canada-Corée du Sud"
+            },
+            "NA": {
+              "en": "North American Free Trade Agreement",
+              "fr": "Accord de libre-échange nord-américain"
+            },
+            "PA": {
+              "en": "Canada-Panama Free Trade Agreement",
+              "fr": "Accord de libre-échange Canada-Panama"
+            },
+            "PE": {
+              "en": "Canada-Peru Free Trade Agreement",
+              "fr": "Accord de libre-échange Canada-Pérou"
+            },
+            "TP": {
+              "en": "Comprehensive and Progressive Agreement for Trans-Pacific Partnership",
+              "fr": "Accord de Partenariat transpacifique global et progressiste"
+            },
+            "UA": {
+              "en": "Canada-Ukraine Free Trade Agreement",
+              "fr": "Accord de libre-échange Canada-Ukraine"
+            },
+            "UK": {
+              "en": "Canada-United Kingdom Trade Continuity Agreement",
+              "fr": "Accord de continuité commerciale Canada Royaume-Uni"
+            },
+            "XX": {
+              "en": "None",
+              "fr": "Aucune valeur"
+            }
+          }
+        },
+        {
+          "id": "land_claims",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditionnel"
+          },
+          "label": {
+            "en": "Comprehensive Land Claims Agreement",
+            "fr": "Entente sur les revendications territoriales globales"
+          },
+          "description": {
+            "en": "It is recommended that this field indicate whether the procurement is for goods, services or construction services to be delivered to an area that is within one or more of the Comprehensive Land Claims Agreements.",
+            "fr": "Il est recommandé d’indiquer dans ce champ si l’approvisionnement concerne des biens, des services ou des services de construction qui doivent être fournis dans une région visée par l’une des ententes sur les revendications territoriales globales."
+          },
+          "validation": {
+            "en": "Mandatory for contracts after 2022-01-01.\n\nIf the value NA (not applicable) is entered, then no other value can be entered in this field.\n",
+            "fr": "Obligatoire pour les marchés conclus après le 2022-01-01.\n\nSi la valeur NA (sans objet) est inscrite, alors aucune autre valeur ne peut être inscrite dans ce champ.\n"
+          },
+          "datastore_type": "_text",
+          "choices": {
+            "CH": {
+              "en": "Champagne and Aishihik First Nations Final Agreement",
+              "fr": "Entente définitive des Premières Nations de Champagne et de Aishihik"
+            },
+            "CT": {
+              "en": "Carcross/Tagish First Nation Final Agreement",
+              "fr": "Entente définitive de la Première Nation de Carcross-Tagish"
+            },
+            "EM": {
+              "en": "Eeyou Marine Region Land Claims Agreement",
+              "fr": "Accord sur les revendications territoriales concernant la région marine d’Eeyou"
+            },
+            "FN": {
+              "en": "First Nation of Nacho Nyak Dun Final Agreement",
+              "fr": "Entente définitive de la Première nation des Nacho Nyak Dun"
+            },
+            "GW": {
+              "en": "Gwich'in Comprehensive Land Claim Agreement",
+              "fr": "Entente sur la revendication territoriale globale des Gwich’in"
+            },
+            "IF": {
+              "en": "Inuvialuit Final Agreement",
+              "fr": "Convention définitive des Inuvialuits"
+            },
+            "JN": {
+              "en": "James Bay and Northern Quebec Agreement",
+              "fr": "Convention de la Baie James et du Nord québécois"
+            },
+            "KD": {
+              "en": "Kwanlin Dun First Nation Final Agreement",
+              "fr": "Entente définitive de la Première nation des Kwanlin Dun"
+            },
+            "KF": {
+              "en": "Kluane First Nation Final Agreement",
+              "fr": "Entente définitive avec la Première nation de Kluane"
+            },
+            "LI": {
+              "en": "Labrador Inuit Land Claim Agreement",
+              "fr": "Accord sur les revendications territoriales des Inuit du Labrador"
+            },
+            "LS": {
+              "en": "Little Salmon/Carmacks First Nation Final Agreement",
+              "fr": "Entente définitive de la Première nation de Little Salmon/Carmacks"
+            },
+            "MF": {
+              "en": "Maa-nulth First Nations Final Agreement",
+              "fr": "Accord définitif des premières nations maa-nulthes"
+            },
+            "NA": {
+              "en": "Not Applicable",
+              "fr": "Sans objet"
+            },
+            "NF": {
+              "en": "Nisga'a Final Agreement",
+              "fr": "Accord définitif Nisga’a"
+            },
+            "NI": {
+              "en": "Nunavik Inuit Land Claims Agreement",
+              "fr": "Accord sur les revendications territoriales des Inuit du Nunavik"
+            },
+            "NQ": {
+              "en": "Northeastern Quebec Agreement",
+              "fr": "Convention du Nord-Est québécois"
+            },
+            "NU": {
+              "en": "Nunavut Agreement (Agreement between the Inuit of the Nunavut Settlement Area and Her Majesty the Queen in right of Canada)",
+              "fr": "Accord du Nunavut (Accord entre les Inuit de la région du Nunavut et Sa Majesté la Reine du chef du Canada)"
+            },
+            "SD": {
+              "en": "Sahtu Dene and Metis Comprehensive Land Claim Agreement",
+              "fr": "Entente sur la revendication territoriale globale des Dénés et des Métis du Sahtu"
+            },
+            "SF": {
+              "en": "Selkirk First Nation Final Agreement",
+              "fr": "Entente définitive de la Première nation de Selkirk"
+            },
+            "TA": {
+              "en": "Tlicho Agreement",
+              "fr": "Accord tlicho"
+            },
+            "TF": {
+              "en": "Tsawwassen First Nation Final Agreement",
+              "fr": "Accord définitif de la Première Nation de Tsawwassen"
+            },
+            "TH": {
+              "en": "Tr'ondëk Hwëch'in Final Agreement",
+              "fr": "Entente définitive des Tr’ondëk Hwëch’in"
+            },
+            "TK": {
+              "en": "Ta'an Kwach'an Council Final Agreement",
+              "fr": "Entente définitive du conseil des Ta’an Kwach’an"
+            },
+            "TL": {
+              "en": "Tla'amin Final Agreement",
+              "fr": "Accord définitif des Tla’amins"
+            },
+            "TT": {
+              "en": "Teslin Tlingit Council Final Agreement",
+              "fr": "Entente définitive du Conseil des Tlingits de Teslin"
+            },
+            "VG": {
+              "en": "Vuntut Gwitchin First Nation Final Agreement",
+              "fr": "Entente définitive de la Première nation des Gwitchin Vuntut"
+            },
+            "YA": {
+              "en": "Yale First Nations Final Agreement",
+              "fr": "Accord définitif de la Première Nation de Yale"
+            }
+          }
+        },
+        {
+          "id": "commodity_type",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditionnel"
+          },
+          "label": {
+            "en": "Commodity Type",
+            "fr": "Type de produit"
+          },
+          "description": {
+            "en": "It is recommended that the commodity type be populated with the one of the three commodity types (Good, Service or Construction). When a contract involves more than one commodity type, the commodity type associated with the largest dollar value should be used. A department may use a different approach if this is the standard practice in the department.",
+            "fr": "Il est recommandé de saisir dans ce champ l’un des trois types de produits (bien, service ou construction). Lorsqu’un marché comprend plus d’un type de produit, il faut utiliser celui qui correspond à la valeur monétaire la plus élevée. Un ministère peut employer une approche différente si elle correspond à sa pratique courante."
+          },
+          "validation": {
+            "en": "Mandatory for contracts after 2019-01-01",
+            "fr": "Obligatoire pour les marchés conclus après le 2019-01-01"
+          },
+          "datastore_type": "text",
+          "choices": {
+            "C": {
+              "en": "Construction",
+              "fr": "Construction"
+            },
+            "G": {
+              "en": "Good",
+              "fr": "Biens"
+            },
+            "S": {
+              "en": "Service",
+              "fr": "Services"
+            }
+          }
+        },
+        {
+          "id": "commodity_code",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditionnel"
+          },
+          "label": {
+            "en": "Commodity Code",
+            "fr": "Code de produit"
+          },
+          "description": {
+            "en": "i. It is recommended that the commodity code be populated with the generic product descriptions used by the federal government for procurement activities.\nii. When using the Goods and Services Identification Number (GSIN), only those GSINs published by PSPC may be used. The commodity code for goods must use a minimum of four numeric characters. The commodity code for services must use either a minimum of one alphabetic character and three numeric characters or, two alphabetic characters and two numeric characters. The commodity code for construction must use a minimum of “51” and one or two numeric characters.\niii. When a contract involves more than one commodity code, the commodity code associated with the largest dollar value should be used. A department may use a different approach if this is the standard practice in the department.\n",
+            "fr": "i. Il est recommandé de saisir dans ce champ les descriptions de produits génériques utilisées par le gouvernement fédéral pour les activités relatives à l’approvisionnement.\nii. Lorsqu’il s’agit d’utiliser le numéro d’identification des biens et services (NIBS), seulement les NIBS publiés par SPAC peuvent être utilisés. Le code de produit pour les biens doit comprendre un minimum de quatre caractères numériques. Le code de produit pour les services doit comprendre au minimum un caractère alphabétique et trois caractères numériques ou deux caractères alphabétiques et deux caractères numériques. Le code de produit pour la construction doit comprendre au minimum « 51 », suivi d’un ou de deux caractères numériques.\niii. Lorsqu’un marché comprend plus qu’un code de produit, il faut utiliser celui qui correspond à la valeur monétaire la plus élevée. Un ministère peut employer une approche différente si elle correspond à sa pratique courante.\n"
+          },
+          "validation": {
+            "en": "Mandatory for contracts after 2019-01-01\nThe field is limited to eight alpha-numeric digits or less.\n",
+            "fr": "Obligatoire pour les marchés conclus après le 2019-01-01 Ce champ est limité à 8 caractères alphanumériques."
+          },
+          "datastore_type": "text"
+        },
+        {
+          "id": "country_of_vendor",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditionnel"
+          },
+          "label": {
+            "en": "Country of Vendor",
+            "fr": "Pays du fournisseur"
+          },
+          "description": {
+            "en": "i. It is recommended that this data field be populated with the country of the vendor’s address identified in the contract.\nii. Alternatively, the country of the vendor may be the country of the vendor’s address identified in the procurement or financial system if this is the standard practice in the department.\niii. The country of vendor must be alphabetic characters listed in the International Organization for Standardization (ISO) 3166 Country Codes.\n",
+            "fr": "i. Il est recommandé de remplir ce champ de données en indiquant le pays indiqué dans l’adresse du fournisseur qui figure dans le marché.\nii. Par ailleurs, le pays du fournisseur peut être le pays indiqué dans l’adresse du fournisseur qui figure dans le système financier ou d’approvisionnement s’il s’agit de la pratique courante au sein du ministère.\niii. Le pays du fournisseur doit comprendre les caractères alphabétiques répertoriés dans les Codes des nom des pays - 3166 de l’Organisation internationale de normalisation (ISO).\n"
+          },
+          "validation": {
+            "en": "Mandatory for contracts after 2019-01-01",
+            "fr": "Obligatoire pour les marchés conclus après le 2019-01-01"
+          },
+          "datastore_type": "text",
+          "choices": {
+            "AD": {
+              "en": "Andorra",
+              "fr": "Andorre"
+            },
+            "AE": {
+              "en": "United Arab Emirates",
+              "fr": "Émirats arabes unis"
+            },
+            "AF": {
+              "en": "Afghanistan",
+              "fr": "Afghanistan"
+            },
+            "AG": {
+              "en": "Antigua and Barbuda",
+              "fr": "Antigua-et-Barbuda"
+            },
+            "AI": {
+              "en": "Anguilla",
+              "fr": "Anguilla"
+            },
+            "AL": {
+              "en": "Albania",
+              "fr": "Albanie"
+            },
+            "AM": {
+              "en": "Armenia",
+              "fr": "Arménie"
+            },
+            "AO": {
+              "en": "Angola",
+              "fr": "Angola"
+            },
+            "AQ": {
+              "en": "Antarctica",
+              "fr": "Antarctique"
+            },
+            "AR": {
+              "en": "Argentina",
+              "fr": "Argentine"
+            },
+            "AS": {
+              "en": "American Samoa",
+              "fr": "Samoa américaines"
+            },
+            "AT": {
+              "en": "Austria",
+              "fr": "Autriche"
+            },
+            "AU": {
+              "en": "Australia",
+              "fr": "Australie"
+            },
+            "AW": {
+              "en": "Aruba",
+              "fr": "Aruba"
+            },
+            "AX": {
+              "en": "Åland Islands",
+              "fr": "Îles d’Åland"
+            },
+            "AZ": {
+              "en": "Azerbaijan",
+              "fr": "Azerbaïdjan"
+            },
+            "BA": {
+              "en": "Bosnia and Herzegovina",
+              "fr": "Bosnie-Herzégovine"
+            },
+            "BB": {
+              "en": "Barbados",
+              "fr": "Barbade"
+            },
+            "BD": {
+              "en": "Bangladesh",
+              "fr": "Bangladesh"
+            },
+            "BE": {
+              "en": "Belgium",
+              "fr": "Belgique"
+            },
+            "BF": {
+              "en": "Burkina Faso",
+              "fr": "Burkina Faso"
+            },
+            "BG": {
+              "en": "Bulgaria",
+              "fr": "Bulgarie"
+            },
+            "BH": {
+              "en": "Bahrain",
+              "fr": "Bahreïn"
+            },
+            "BI": {
+              "en": "Burundi",
+              "fr": "Burundi"
+            },
+            "BJ": {
+              "en": "Benin",
+              "fr": "Bénin"
+            },
+            "BL": {
+              "en": "Saint Barthélemy",
+              "fr": "Saint-Barthélemy"
+            },
+            "BM": {
+              "en": "Bermuda",
+              "fr": "Bermudes"
+            },
+            "BN": {
+              "en": "Brunei Darussalam",
+              "fr": "Brunéi Darussalam"
+            },
+            "BO": {
+              "en": "Bolivia (Plurinational State of)",
+              "fr": "Bolivie (État plurinational de)"
+            },
+            "BQ": {
+              "en": "Bonaire, Sint Eustatius and Saba",
+              "fr": "Bonaire, Saint-Eustache et Saba"
+            },
+            "BR": {
+              "en": "Brazil",
+              "fr": "Brésil"
+            },
+            "BS": {
+              "en": "Bahamas",
+              "fr": "Bahamas"
+            },
+            "BT": {
+              "en": "Bhutan",
+              "fr": "Bhoutan"
+            },
+            "BV": {
+              "en": "Bouvet Island",
+              "fr": "Île Bouvet"
+            },
+            "BW": {
+              "en": "Botswana",
+              "fr": "Botswana"
+            },
+            "BY": {
+              "en": "Belarus",
+              "fr": "Bélarus"
+            },
+            "BZ": {
+              "en": "Belize",
+              "fr": "Belize"
+            },
+            "CA": {
+              "en": "Canada",
+              "fr": "Canada"
+            },
+            "CC": {
+              "en": "Cocos (Keeling) Islands",
+              "fr": "Îles des Cocos (Keeling)"
+            },
+            "CD": {
+              "en": "Democratic Republic of the Congo",
+              "fr": "République démocratique du Congo"
+            },
+            "CF": {
+              "en": "Central African Republic",
+              "fr": "République centrafricaine"
+            },
+            "CG": {
+              "en": "Congo",
+              "fr": "Congo"
+            },
+            "CH": {
+              "en": "Switzerland",
+              "fr": "Suisse"
+            },
+            "CI": {
+              "en": "Ivory Coast",
+              "fr": "Côte d’Ivoire"
+            },
+            "CK": {
+              "en": "Cook Islands",
+              "fr": "Îles Cook"
+            },
+            "CL": {
+              "en": "Chile",
+              "fr": "Chili"
+            },
+            "CM": {
+              "en": "Cameroon",
+              "fr": "Cameroun"
+            },
+            "CN": {
+              "en": "China",
+              "fr": "Chine"
+            },
+            "CO": {
+              "en": "Colombia",
+              "fr": "Colombie"
+            },
+            "CR": {
+              "en": "Costa Rica",
+              "fr": "Costa Rica"
+            },
+            "CU": {
+              "en": "Cuba",
+              "fr": "Cuba"
+            },
+            "CV": {
+              "en": "Cabo Verde",
+              "fr": "Cabo Verde"
+            },
+            "CW": {
+              "en": "Curaçao",
+              "fr": "Curaçao"
+            },
+            "CX": {
+              "en": "Christmas Island",
+              "fr": "Île Christmas"
+            },
+            "CY": {
+              "en": "Cyprus",
+              "fr": "Chypre"
+            },
+            "CZ": {
+              "en": "Czechia",
+              "fr": "Tchéquie"
+            },
+            "DE": {
+              "en": "Germany",
+              "fr": "Allemagne"
+            },
+            "DJ": {
+              "en": "Djibouti",
+              "fr": "Djibouti"
+            },
+            "DK": {
+              "en": "Denmark",
+              "fr": "Danemark"
+            },
+            "DM": {
+              "en": "Dominica",
+              "fr": "Dominique"
+            },
+            "DO": {
+              "en": "Dominican Republic",
+              "fr": "République dominicaine"
+            },
+            "DZ": {
+              "en": "Algeria",
+              "fr": "Algérie"
+            },
+            "EC": {
+              "en": "Ecuador",
+              "fr": "Équateur"
+            },
+            "EE": {
+              "en": "Estonia",
+              "fr": "Estonie"
+            },
+            "EG": {
+              "en": "Egypt",
+              "fr": "Égypte"
+            },
+            "EH": {
+              "en": "Western Sahara",
+              "fr": "Sahara occidental"
+            },
+            "ER": {
+              "en": "Eritrea",
+              "fr": "Érythrée"
+            },
+            "ES": {
+              "en": "Spain",
+              "fr": "Espagne"
+            },
+            "ET": {
+              "en": "Ethiopia",
+              "fr": "Éthiopie"
+            },
+            "FI": {
+              "en": "Finland",
+              "fr": "Finlande"
+            },
+            "FJ": {
+              "en": "Fiji",
+              "fr": "Fidji"
+            },
+            "FK": {
+              "en": "Falkland Islands",
+              "fr": "Îles Falkland (Malvinas)"
+            },
+            "FM": {
+              "en": "Micronesia (Federated States of)",
+              "fr": "Micronésie (États fédérés de)"
+            },
+            "FO": {
+              "en": "Faroe Islands",
+              "fr": "Îles Féroé"
+            },
+            "FR": {
+              "en": "France",
+              "fr": "France"
+            },
+            "GA": {
+              "en": "Gabon",
+              "fr": "Gabon"
+            },
+            "GB": {
+              "en": "United Kingdom of Great Britain and Northern Ireland",
+              "fr": "Royaume-Uni de Grande-Bretagne et d’Irlande du Nord"
+            },
+            "GD": {
+              "en": "Grenada",
+              "fr": "Grenade"
+            },
+            "GE": {
+              "en": "Georgia",
+              "fr": "Géorgie"
+            },
+            "GF": {
+              "en": "French Guiana",
+              "fr": "Guyane française"
+            },
+            "GG": {
+              "en": "Guernsey",
+              "fr": "Guernesey"
+            },
+            "GH": {
+              "en": "Ghana",
+              "fr": "Ghana"
+            },
+            "GI": {
+              "en": "Gibraltar",
+              "fr": "Gibraltar"
+            },
+            "GL": {
+              "en": "Greenland",
+              "fr": "Groenland"
+            },
+            "GM": {
+              "en": "Gambia",
+              "fr": "Gambie"
+            },
+            "GN": {
+              "en": "Guinea",
+              "fr": "Guinée"
+            },
+            "GP": {
+              "en": "Guadeloupe",
+              "fr": "Guadeloupe"
+            },
+            "GQ": {
+              "en": "Equatorial Guinea",
+              "fr": "Guinée équatoriale"
+            },
+            "GR": {
+              "en": "Greece",
+              "fr": "Grèce"
+            },
+            "GS": {
+              "en": "South Georgia and the South Sandwich Islands",
+              "fr": "Géorgie du Sud-et-les Îles Sandwich du Sud"
+            },
+            "GT": {
+              "en": "Guatemala",
+              "fr": "Guatemala"
+            },
+            "GU": {
+              "en": "Guam",
+              "fr": "Guam"
+            },
+            "GW": {
+              "en": "Guinea-Bissau",
+              "fr": "Guinée-Bissau"
+            },
+            "GY": {
+              "en": "Guyana",
+              "fr": "Guyana"
+            },
+            "HK": {
+              "en": "China, Hong Kong Special Administrative Region",
+              "fr": "Chine, région administrative spéciale de Hong Kong"
+            },
+            "HM": {
+              "en": "Heard Island and McDonald Islands",
+              "fr": "Île Heard-et-Îles MacDonald"
+            },
+            "HN": {
+              "en": "Honduras",
+              "fr": "Honduras"
+            },
+            "HR": {
+              "en": "Croatia",
+              "fr": "Croatie"
+            },
+            "HT": {
+              "en": "Haiti",
+              "fr": "Haïti"
+            },
+            "HU": {
+              "en": "Hungary",
+              "fr": "Hongrie"
+            },
+            "ID": {
+              "en": "Indonesia",
+              "fr": "Indonésie"
+            },
+            "IE": {
+              "en": "Ireland",
+              "fr": "Irlande"
+            },
+            "IL": {
+              "en": "Israel",
+              "fr": "Israël"
+            },
+            "IM": {
+              "en": "Isle of Man",
+              "fr": "Île de Man"
+            },
+            "IN": {
+              "en": "India",
+              "fr": "Inde"
+            },
+            "IO": {
+              "en": "British Indian Ocean Territory",
+              "fr": "Territoire britannique de l'océan Indien"
+            },
+            "IQ": {
+              "en": "Iraq",
+              "fr": "Iraq"
+            },
+            "IR": {
+              "en": "Iran (Islamic Republic of)",
+              "fr": "Iran (République islamique d’)"
+            },
+            "IS": {
+              "en": "Iceland",
+              "fr": "Islande"
+            },
+            "IT": {
+              "en": "Italy",
+              "fr": "Italie"
+            },
+            "JE": {
+              "en": "Jersey",
+              "fr": "Jersey"
+            },
+            "JM": {
+              "en": "Jamaica",
+              "fr": "Jamaïque"
+            },
+            "JO": {
+              "en": "Jordan",
+              "fr": "Jordanie"
+            },
+            "JP": {
+              "en": "Japan",
+              "fr": "Japon"
+            },
+            "KE": {
+              "en": "Kenya",
+              "fr": "Kenya"
+            },
+            "KG": {
+              "en": "Kyrgyzstan",
+              "fr": "Kirghizistan"
+            },
+            "KH": {
+              "en": "Cambodia",
+              "fr": "Cambodge"
+            },
+            "KI": {
+              "en": "Kiribati",
+              "fr": "Kiribati"
+            },
+            "KM": {
+              "en": "Comoros",
+              "fr": "Comores"
+            },
+            "KN": {
+              "en": "Saint Kitts and Nevis",
+              "fr": "Saint-Kitts-et-Nevis"
+            },
+            "KP": {
+              "en": "Democratic People's Republic of Korea",
+              "fr": "République populaire démocratique de Corée"
+            },
+            "KR": {
+              "en": "Republic of Korea",
+              "fr": "République de Corée"
+            },
+            "KW": {
+              "en": "Kuwait",
+              "fr": "Koweït"
+            },
+            "KY": {
+              "en": "Cayman Islands",
+              "fr": "Îles Caïmanes"
+            },
+            "KZ": {
+              "en": "Kazakhstan",
+              "fr": "Kazakhstan"
+            },
+            "LA": {
+              "en": "Lao People's Democratic Republic",
+              "fr": "République démocratique populaire lao"
+            },
+            "LB": {
+              "en": "Lebanon",
+              "fr": "Liban"
+            },
+            "LC": {
+              "en": "Saint Lucia",
+              "fr": "Sainte-Lucie"
+            },
+            "LI": {
+              "en": "Liechtenstein",
+              "fr": "Liechtenstein"
+            },
+            "LK": {
+              "en": "Sri Lanka",
+              "fr": "Sri Lanka"
+            },
+            "LR": {
+              "en": "Liberia",
+              "fr": "Libéria"
+            },
+            "LS": {
+              "en": "Lesotho",
+              "fr": "Lesotho"
+            },
+            "LT": {
+              "en": "Lithuania",
+              "fr": "Lituanie"
+            },
+            "LU": {
+              "en": "Luxembourg",
+              "fr": "Luxembourg"
+            },
+            "LV": {
+              "en": "Latvia",
+              "fr": "Lettonie"
+            },
+            "LY": {
+              "en": "Libya",
+              "fr": "Libye"
+            },
+            "MA": {
+              "en": "Morocco",
+              "fr": "Maroc"
+            },
+            "MC": {
+              "en": "Monaco",
+              "fr": "Monaco"
+            },
+            "MD": {
+              "en": "Republic of Moldova",
+              "fr": "République de Moldova"
+            },
+            "ME": {
+              "en": "Montenegro",
+              "fr": "Monténégro"
+            },
+            "MF": {
+              "en": "Saint Martin (French Part)",
+              "fr": "Saint-Martin (partie française)"
+            },
+            "MG": {
+              "en": "Madagascar",
+              "fr": "Madagascar"
+            },
+            "MH": {
+              "en": "Marshall Islands",
+              "fr": "Îles Marshall"
+            },
+            "MK": {
+              "en": "North Macedonia",
+              "fr": "Macédoine du Nord"
+            },
+            "ML": {
+              "en": "Mali",
+              "fr": "Mali"
+            },
+            "MM": {
+              "en": "Myanmar",
+              "fr": "Myanmar"
+            },
+            "MN": {
+              "en": "Mongolia",
+              "fr": "Mongolie"
+            },
+            "MO": {
+              "en": "China, Macao Special Administrative Region",
+              "fr": "Chine, région administrative spéciale de Macao"
+            },
+            "MP": {
+              "en": "Northern Mariana Islands",
+              "fr": "Îles Mariannes du Nord"
+            },
+            "MQ": {
+              "en": "Martinique",
+              "fr": "Martinique"
+            },
+            "MR": {
+              "en": "Mauritania",
+              "fr": "Mauritanie"
+            },
+            "MS": {
+              "en": "Montserrat",
+              "fr": "Montserrat"
+            },
+            "MT": {
+              "en": "Malta",
+              "fr": "Malte"
+            },
+            "MU": {
+              "en": "Mauritius",
+              "fr": "Maurice"
+            },
+            "MV": {
+              "en": "Maldives",
+              "fr": "Maldives"
+            },
+            "MW": {
+              "en": "Malawi",
+              "fr": "Malawi"
+            },
+            "MX": {
+              "en": "Mexico",
+              "fr": "Mexique"
+            },
+            "MY": {
+              "en": "Malaysia",
+              "fr": "Malaisie"
+            },
+            "MZ": {
+              "en": "Mozambique",
+              "fr": "Mozambique"
+            },
+            "NA": {
+              "en": "Namibia",
+              "fr": "Namibie"
+            },
+            "NC": {
+              "en": "New Caledonia",
+              "fr": "Nouvelle-Calédonie"
+            },
+            "NE": {
+              "en": "Niger",
+              "fr": "Niger"
+            },
+            "NF": {
+              "en": "Norfolk Island",
+              "fr": "Île Norfolk"
+            },
+            "NG": {
+              "en": "Nigeria",
+              "fr": "Nigéria"
+            },
+            "NI": {
+              "en": "Nicaragua",
+              "fr": "Nicaragua"
+            },
+            "NL": {
+              "en": "Netherlands",
+              "fr": "Pays-Bas (Royaume des)"
+            },
+            "NO": {
+              "en": "Norway",
+              "fr": "Norvège"
+            },
+            "NP": {
+              "en": "Nepal",
+              "fr": "Népal"
+            },
+            "NR": {
+              "en": "Nauru",
+              "fr": "Nauru"
+            },
+            "NU": {
+              "en": "Niue",
+              "fr": "Nioué"
+            },
+            "NZ": {
+              "en": "New Zealand",
+              "fr": "Nouvelle-Zélande"
+            },
+            "OM": {
+              "en": "Oman",
+              "fr": "Oman"
+            },
+            "PA": {
+              "en": "Panama",
+              "fr": "Panama"
+            },
+            "PE": {
+              "en": "Peru",
+              "fr": "Pérou"
+            },
+            "PF": {
+              "en": "French Polynesia",
+              "fr": "Polynésie française"
+            },
+            "PG": {
+              "en": "Papua New Guinea",
+              "fr": "Papouasie-Nouvelle-Guinée"
+            },
+            "PH": {
+              "en": "Philippines",
+              "fr": "Philippines"
+            },
+            "PK": {
+              "en": "Pakistan",
+              "fr": "Pakistan"
+            },
+            "PL": {
+              "en": "Poland",
+              "fr": "Pologne"
+            },
+            "PM": {
+              "en": "Saint Pierre and Miquelon",
+              "fr": "Saint-Pierre-et-Miquelon"
+            },
+            "PN": {
+              "en": "Pitcairn",
+              "fr": "Pitcairn"
+            },
+            "PR": {
+              "en": "Puerto Rico",
+              "fr": "Porto Rico"
+            },
+            "PS": {
+              "en": "State of Palestine",
+              "fr": "État de Palestine"
+            },
+            "PT": {
+              "en": "Portugal",
+              "fr": "Portugal"
+            },
+            "PW": {
+              "en": "Palau",
+              "fr": "Palaos"
+            },
+            "PY": {
+              "en": "Paraguay",
+              "fr": "Paraguay"
+            },
+            "QA": {
+              "en": "Qatar",
+              "fr": "Qatar"
+            },
+            "RE": {
+              "en": "Réunion",
+              "fr": "Réunion"
+            },
+            "RO": {
+              "en": "Romania",
+              "fr": "Roumanie"
+            },
+            "RS": {
+              "en": "Serbia",
+              "fr": "Serbie"
+            },
+            "RU": {
+              "en": "Russian Federation",
+              "fr": "Fédération de Russie"
+            },
+            "RW": {
+              "en": "Rwanda",
+              "fr": "Rwanda"
+            },
+            "SA": {
+              "en": "Saudi Arabia",
+              "fr": "Arabie saoudite"
+            },
+            "SB": {
+              "en": "Solomon Islands",
+              "fr": "Îles Salomon"
+            },
+            "SC": {
+              "en": "Seychelles",
+              "fr": "Seychelles"
+            },
+            "SD": {
+              "en": "Sudan",
+              "fr": "Soudan"
+            },
+            "SE": {
+              "en": "Sweden",
+              "fr": "Suède"
+            },
+            "SG": {
+              "en": "Singapore",
+              "fr": "Singapour"
+            },
+            "SH": {
+              "en": "Saint Helena",
+              "fr": "Sainte-Hélène"
+            },
+            "SI": {
+              "en": "Slovenia",
+              "fr": "Slovénie"
+            },
+            "SJ": {
+              "en": "Svalbard and Jan Mayen Islands",
+              "fr": "Îles Svalbard-et-Jan Mayen"
+            },
+            "SK": {
+              "en": "Slovakia",
+              "fr": "Slovaquie"
+            },
+            "SL": {
+              "en": "Sierra Leone",
+              "fr": "Sierra Leone"
+            },
+            "SM": {
+              "en": "San Marino",
+              "fr": "Saint-Marin"
+            },
+            "SN": {
+              "en": "Senegal",
+              "fr": "Sénégal"
+            },
+            "SO": {
+              "en": "Somalia",
+              "fr": "Somalie"
+            },
+            "SR": {
+              "en": "Suriname",
+              "fr": "Suriname"
+            },
+            "SS": {
+              "en": "South Sudan",
+              "fr": "Soudan du Sud"
+            },
+            "ST": {
+              "en": "Sao Tome and Principe",
+              "fr": "Sao Tomé-et-Principe"
+            },
+            "SV": {
+              "en": "El Salvador",
+              "fr": "El Salvador"
+            },
+            "SX": {
+              "en": "Sint Maarten (Dutch part)",
+              "fr": "Saint-Martin (partie néerlandaise)"
+            },
+            "SY": {
+              "en": "Syrian Arab Republic",
+              "fr": "République arabe syrienne"
+            },
+            "SZ": {
+              "en": "Eswatini",
+              "fr": "Eswatini"
+            },
+            "TC": {
+              "en": "Turks and Caicos Islands",
+              "fr": "Îles Turques-et-Caïques"
+            },
+            "TD": {
+              "en": "Chad",
+              "fr": "Tchad"
+            },
+            "TF": {
+              "en": "French Southern Territories",
+              "fr": "Terres australes françaises"
+            },
+            "TG": {
+              "en": "Togo",
+              "fr": "Togo"
+            },
+            "TH": {
+              "en": "Thailand",
+              "fr": "Thaïlande"
+            },
+            "TJ": {
+              "en": "Tajikistan",
+              "fr": "Tadjikistan"
+            },
+            "TK": {
+              "en": "Tokelau",
+              "fr": "Tokélaou"
+            },
+            "TL": {
+              "en": "Timor-Leste",
+              "fr": "Timor-Leste"
+            },
+            "TM": {
+              "en": "Turkmenistan",
+              "fr": "Turkménistan"
+            },
+            "TN": {
+              "en": "Tunisia",
+              "fr": "Tunisie"
+            },
+            "TO": {
+              "en": "Tonga",
+              "fr": "Tonga"
+            },
+            "TR": {
+              "en": "Turkey",
+              "fr": "Türkiye"
+            },
+            "TT": {
+              "en": "Trinidad and Tobago",
+              "fr": "Trinité-et-Tobago"
+            },
+            "TV": {
+              "en": "Tuvalu",
+              "fr": "Tuvalu"
+            },
+            "TW": {
+              "en": "Taiwan",
+              "fr": "Taïwan"
+            },
+            "TZ": {
+              "en": "United Republic of Tanzania",
+              "fr": "République-Unie de Tanzanie"
+            },
+            "UA": {
+              "en": "Ukraine",
+              "fr": "Ukraine"
+            },
+            "UG": {
+              "en": "Uganda",
+              "fr": "Ouganda"
+            },
+            "UM": {
+              "en": "United States Minor Outlying Islands",
+              "fr": "Îles mineures éloignées des États-Unis"
+            },
+            "US": {
+              "en": "United States of America",
+              "fr": "États-Unis d’Amérique"
+            },
+            "UY": {
+              "en": "Uruguay",
+              "fr": "Uruguay"
+            },
+            "UZ": {
+              "en": "Uzbekistan",
+              "fr": "Ouzbékistan"
+            },
+            "VA": {
+              "en": "Holy See",
+              "fr": "Saint-Siège"
+            },
+            "VC": {
+              "en": "Saint Vincent and the Grenadines",
+              "fr": "Saint-Vincent-et-les Grenadines"
+            },
+            "VE": {
+              "en": "Venezuela (Bolivarian Republic of)",
+              "fr": "Venezuela (République bolivarienne du)"
+            },
+            "VG": {
+              "en": "British Virgin Islands",
+              "fr": "Îles Vierges britanniques"
+            },
+            "VI": {
+              "en": "United States Virgin Islands",
+              "fr": "Îles Vierges américaines"
+            },
+            "VN": {
+              "en": "Viet Nam",
+              "fr": "Viet Nam"
+            },
+            "VU": {
+              "en": "Vanuatu",
+              "fr": "Vanuatu"
+            },
+            "WF": {
+              "en": "Wallis and Futuna Islands",
+              "fr": "Îles Wallis-et-Futuna"
+            },
+            "WS": {
+              "en": "Samoa",
+              "fr": "Samoa"
+            },
+            "XK": {
+              "en": "Kosovo",
+              "fr": "Kosovo"
+            },
+            "YE": {
+              "en": "Yemen",
+              "fr": "Yémen"
+            },
+            "YT": {
+              "en": "Mayotte",
+              "fr": "Mayotte"
+            },
+            "ZA": {
+              "en": "South Africa",
+              "fr": "Afrique du Sud"
+            },
+            "ZM": {
+              "en": "Zambia",
+              "fr": "Zambie"
+            },
+            "ZW": {
+              "en": "Zimbabwe",
+              "fr": "Zimbabwe"
+            }
+          }
+        },
+        {
+          "id": "solicitation_procedure",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditionnel"
+          },
+          "label": {
+            "en": "Solicitation Procedure",
+            "fr": "Méthode d’invitation à soumissionner"
+          },
+          "description": {
+            "en": "It is recommended that this field be populated with one of the five solicitation procedures listed below:\n  •\tAC: Advance Contract Award Notice (ACAN) refers to a contract awarded to a supplier identified under an ACAN process where it was determined that there were no other statements of capabilities that could successfully meet the government’s requirements.\n  • OB: Competitive – Open Bidding (Government Electronic Tendering System (GETS)) refers to a competitive contract where bids were solicited via GETS.\n  •\tTC: Competitive – Traditional refers to a competitive contract where bids were not solicited via GETS, but through another medium, such as soliciting bids directly from suppliers by email or phone.\n  •\tST: Competitive – Selective Tendering refers to a solicitation procedure permitted under Canada’s trade agreements where qualified suppliers are selected from a source list (including single-use or multi-use lists) under the selective tendering procedural rules in Canada’s trade agreements.\n  •\tTN: Non-competitive refers to a contract awarded to a supplier without soliciting bids.\n",
+            "fr": "Il est recommandé de saisir dans ce champ l’une des cinq méthodes d’invitation à soumissionner énumérées ci-dessous.\n  •\tAC: Préavis d’adjudication de contrat (PAC) fait référence à un contrat attribué à un fournisseur dans le cadre du processus de PAC lorsqu’il a été déterminé qu’aucun autre énoncé de capacités ne répondait aux exigences du gouvernement.\n  •\tOB: Concurrentielle – Invitation ouverte à soumissionner (Service électronique d’appels d’offres – SEAO) fait référence à un marché concurrentiel pour lequel l’appel d’offres a été fait par le biais du SEAO.\n  •\tTC: Concurrentielle – Traditionnelle fait référence à un marché concurrentiel l’appel d’offres n’a pas été fait par le biais du SEAO, mais par un autre moyen, comme la demande de soumissions directement auprès des fournisseurs par courriel ou par téléphone.\n  •\tST: Concurrentielle – Appel d’offres sélectif fait référence à une procédure de sollicitation autorisée en vertu des accords commerciaux du Canada selon laquelle les fournisseurs qualifiés sont sélectionnés à partir d’une liste de sources (y compris des listes à usage unique ou à usage multiple) en vertu des règles procédurales d’appel d’offres sélectif des accords commerciaux du Canada.\n  •\tTN: Non concurrentielle fait référence à un marché attribué à un fournisseur sans appel d’offres.\n"
+          },
+          "validation": {
+            "en": "Mandatory for contracts after 2022-01-01\n\nIf “TC” (Competitive - Traditional), “TN” (Non-Competitive) or “AC” (Advanced Contract Award Notice) is selected and trade agreement with a value other than “XX” (None) is selected, limited tendering cannot have a value of “0” or “00” (None), for contracts after 2022-01-01.\n",
+            "fr": "Obligatoire pour les marchés conclus après le 2022-01-01\n\nSi les options « TC » (Concurrentielle - Traditionnelle), « TN » (non concurrentielle) ou « AC » (préavis d’attribution de contrat) sont sélectionnées et qu’une entente de marché ayant une valeur autre que « XX » (nulle) est sélectionnée, le champ Appel d’offres restreint ne peut avoir la valeur « 0 » ou « 00 » (nulle), pour les marchés conclus après le 2022-01-01.\n"
+          },
+          "datastore_type": "text",
+          "choices": {
+            "AC": {
+              "en": "Advance Contract Award Notice",
+              "fr": "Préavis d’adjudication de contrat"
+            },
+            "OB": {
+              "en": "Competitive – Open Bidding (GETS)",
+              "fr": "Concurrentielle – Invitation ouverte à soumissionner (SEAOG)"
+            },
+            "ST": {
+              "en": "Competitive – Selective Tendering",
+              "fr": "Concurrentielle – Appel d’offres sélectif"
+            },
+            "TC": {
+              "en": "Competitive – Traditional",
+              "fr": "Concurrentielle – Traditionnelle"
+            },
+            "TN": {
+              "en": "Non-Competitive",
+              "fr": "Non concurrentielle"
+            }
+          }
+        },
+        {
+          "id": "limited_tendering_reason",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditionnel"
+          },
+          "label": {
+            "en": "Limited Tendering Reason",
+            "fr": "Raisons justifiant le recours à l’appel d’offres limité"
+          },
+          "description": {
+            "en": "It is recommended that this field be populated with one or more of the limited tendering reasons listed below.",
+            "fr": "Il est recommandé de saisir dans ce champ une ou plusieurs raisons justifiant le recours à l’appel d’offres limité énumérées ci-dessous."
+          },
+          "validation": {
+            "en": "Mandatory for contracts after 2022-01-01.\n\nIf the value 00 (none) is entered, then no other value can be entered in this field.\n\nIf TC, TN or AC is selected in the Solicitation Procedure data field with a value other than XX (None) selected in the Trade Agreement data field, then a Limited Tendering value other than 00 (none) must be entered, for contracts after 2022-01-01.\n",
+            "fr": "Obligatoire pour les marchés conclus après le 2022-01-01.\n\nSi la valeur 00 (aucune) est inscrite, alors aucune autre valeur ne peut être inscrite dans ce champ.\n\nSi TC, TN ou AC est sélectionné dans le champ de données Méthode d’invitation à soumissioner avec une valeur autre que XX (Aucune) sélectionnée dans le champ de données Accord commercial, une valeur d'offre limitée autre que 0 (aucune) doit être entrée, pour les marchés conclus après le 2022-01-01.\n"
+          },
+          "datastore_type": "_text",
+          "choices": {
+            "00": {
+              "en": "None",
+              "fr": "Aucune"
+            },
+            "05": {
+              "en": "No response to bid solicitation",
+              "fr": "Aucune réponse à une invitation à soumissionner"
+            },
+            "20": {
+              "en": "Goods purchased on a commodity market",
+              "fr": "Biens achetés conformément à un marché de produits de base"
+            },
+            "21": {
+              "en": "Purchases made under exceptionally advantageous conditions",
+              "fr": "Achats effectués selon des conditions exceptionnellement avantageuses"
+            },
+            "22": {
+              "en": "Winner of an architectural design contest",
+              "fr": "Lauréat d’un concours de conception architecturale"
+            },
+            "23": {
+              "en": "Consulting services regarding matters of a confidential nature (for contracts not covered by CETA, TCA ,WTO-GPA, CPTPP, CKFTA and CUFTA)",
+              "fr": "Services confidentiels d’experts-conseils (pour les marchés non visés par l’AECG, l’ACC, l’AMP-OMC, le PTPGP, l’ALECC et l’ALECU)"
+            },
+            "30": {
+              "en": "Work on a property by a contractor according to a warranty or guarantee (for contracts that are only covered by the CFTA)",
+              "fr": "Travaux exécutés sur un bien par un entrepreneur conformément à une garantie (pour les marchés qui sont visés par l’ALEC seulement)"
+            },
+            "31": {
+              "en": "Work on a leased building or related property performed only by the lessor (for contracts that are only covered by the CFTA)",
+              "fr": "Travaux exécutés sur un édifice loué ou un bien connexe qui sont réalisés par le locateur seulement (pour les marchés qui sont visés par l’ALEC seulement)"
+            },
+            "32": {
+              "en": "Subscriptions to newspapers, magazines, or other periodicals (for contracts that are only covered by the CFTA)",
+              "fr": "Abonnements à des journaux, des magazines ou d’autres périodiques (pour les marchés qui sont visés par l’ALEC seulement)"
+            },
+            "33": {
+              "en": "Goods regarding matters of a confidential or privileged nature (for contracts that are only covered by the CFTA)",
+              "fr": "Biens concernant des questions de nature confidentielle ou privilégiée (pour les marchés qui sont visés par l’ALEC seulement)"
+            },
+            "71": {
+              "en": "Exclusive rights",
+              "fr": "Droits exclusifs"
+            },
+            "72": {
+              "en": "Prototype purchase",
+              "fr": "Achat de prototype"
+            },
+            "74": {
+              "en": "Additional deliveries (formerly Interchangeable Parts)",
+              "fr": "Livraisons supplémentaires (anciennement Pièces interchangeables)"
+            },
+            "81": {
+              "en": "Extreme urgency",
+              "fr": "Urgence extrême"
+            },
+            "24": {
+              "en": "Additional construction services (discontinued as of 2022-01-01)",
+              "fr": "Services de construction supplémentaire (discontinué à partir de 2022-01-01)",
+              "discontinued": true
+            },
+            "25": {
+              "en": "New construction services (discontinued as of 2022-01-01)",
+              "fr": "Nouveaux services de construction (discontinué à partir de 2022-01-01)",
+              "discontinued": true
+            },
+            "85": {
+              "en": "Low dollar-value (discontinued as of 2022-01-01)",
+              "fr": "Faible valeur (discontinué à partir de 2022-01-01)",
+              "discontinued": true
+            },
+            "86": {
+              "en": "Prices and/or sources fixed by government regulations (discontinued as of 2022-01-01)",
+              "fr": "Prix ou fournisseurs déterminés par des règlements gouvernementaux (discontinué à partir de 2022-01-01)",
+              "discontinued": true
+            },
+            "87": {
+              "en": "Government objectives representing best interests/value (discontinued as of 2022-01-01)",
+              "fr": "Objectifs gouvernementaux représentant les meilleurs (discontinué à partir de 2022-01-01)",
+              "discontinued": true
+            },
+            "90": {
+              "en": "Protection of human, animal, or plant Life or health (discontinued as of 2022-01-01)",
+              "fr": "Protection de la vie ou de la santé des personnes, animaux, plantes (discontinué à partir de 2022-01-01)",
+              "discontinued": true
+            }
+          }
+        },
+        {
+          "id": "trade_agreement_exceptions",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditionnel"
+          },
+          "label": {
+            "en": "Trade Agreement Exceptions and Exclusions",
+            "fr": "Exceptions et exclusions applicables aux accords commerciaux"
+          },
+          "description": {
+            "en": "It is recommended that this field to be populated with one or more of the exceptions or exclusions listed below.",
+            "fr": "Il est recommandé de saisir dans ce champ une ou plusieurs des exceptions ou exclusions énumérées ci-dessous."
+          },
+          "validation": {
+            "en": "Mandatory for contracts after 2019-01-01\n\nIf the value 00 (none) is entered, then no other value can be entered in this field.\n",
+            "fr": "Obligatoire pour les marchés conclus après le 2019-01-01\n\nSi la valeur 00 (aucune) est inscrite, alors aucune autre valeur ne peut être inscrite dans ce champ.\n"
+          },
+          "datastore_type": "_text",
+          "choices": {
+            "00": {
+              "en": "None",
+              "fr": "Aucune"
+            },
+            "01": {
+              "en": "Shipbuilding and repair (applies to all agreements except the CFTA)",
+              "fr": "Contrats de construction et réparation de navires (s’applique à tous les accords sauf l’ALEC)"
+            },
+            "02": {
+              "en": "Urban rail and urban transportation equipment systems, components and materials (applies to all agreements except CFTA, CETA, TCA and CPTPP)",
+              "fr": "Marchés portant sur du matériel et des systèmes de transport ferroviaire urbain et de transport en commun urbain, les éléments et matériaux servant à leur fabrication, ainsi que tous les matériaux de fer ou d’acier reliés à ces projets (s’applique à tous les accords sauf l’ALEC, l’AECG, l’ACC et le PTPGP)"
+            },
+            "03": {
+              "en": "Contracts respecting FSC 58 (communications, detection and coherent radiation equipment) (applies to all agreements except CFTA, CETA, TCA and CPTPP)",
+              "fr": "Marchés relevant de la Classification fédérale des approvisionnements (CFA) 58 (matériel de communications, de détection et de rayonnement cohérent) (s’applique à tous les accords sauf l’ALEC, l’AECG, l’ACC et le PTPGP)"
+            },
+            "04": {
+              "en": "Set-asides for small and minority businesses (discontinued as of 2022-01-01)",
+              "fr": "Marchés réservés aux petites entreprises et aux entreprises minoritaires (discontinué à partir de 2022-01-01)"
+            },
+            "05": {
+              "en": "Agricultural products made in furtherance of agricultural support programs or human feeding programs (applies to all agreements except for CFTA)",
+              "fr": "Achats de produits agricoles effectués dans le cadre de programmes de soutien à l’agriculture ou de programmes d’aide alimentaire (s’applique à tous les accords sauf l’ALEC)"
+            },
+            "06": {
+              "en": "The Depts. of Transport, Communications and Fisheries & Oceans respecting FSC 70, 74, 36 (applies to all agreements except CFTA, CKFTA, WTO-AGP, CUFTA, CETA, TCA and CPTPP)",
+              "fr": "Marchés de Transports Canada, du ministère des Communications et de Pêches et Océans dans les catégories FSC 70, 74, 36 (s’applique à tous les accords sauf l’ALEC, l’ALECC, l’AMP-OMC, l’ALECU, l’AECG, l’ACC et le PTPGC)"
+            },
+            "07": {
+              "en": "Any measures for Indigenous peoples and businesses, including set asides for Indigenous businesses (applies to all agreements)",
+              "fr": "Toute mesure en faveur des peuples et des entreprises autochtones, y compris les marchés réservés aux entreprises autochtones (s’applique à tous les accords)"
+            },
+            "08": {
+              "en": "Set-asides for small businesses other than Indigenous businesses (applies to all agreements except for CETA and TCA)",
+              "fr": "Marchés réservés aux petites entreprises (autres que des entreprises autochtones) (s’applique à tous les accords sauf l’AECG et l’ACC)"
+            },
+            "09": {
+              "en": "Measures necessary to protect public morals, order or safety (applies to all agreements)",
+              "fr": "Mesures nécessaires à la protection de la moralité publique, de l’ordre public ou de la sécurité publique (s’applique à tous les accords)"
+            },
+            "10": {
+              "en": "Measures necessary to protect human, animal or plant life or health (applies to all agreements)",
+              "fr": "Mesures nécessaires à la protection de la santé et de la vie des personnes et des animaux ou à la préservation des végétaux (s’applique à tous les accords)"
+            },
+            "11": {
+              "en": "Measures necessary to protect intellectual property (applies to all agreements)",
+              "fr": "Mesures nécessaires à la protection de la propriété intellectuelle (s’applique à tous les accords)"
+            },
+            "12": {
+              "en": "Measures relating to goods or services of persons with disabilities, philanthropic institutions or prison labour (applies to all agreements)",
+              "fr": "Mesures concernant des biens ou des services fournis par des personnes handicapées ou des organismes philanthropiques, ou encore dans le cadre du travail en milieu carcéral (s’applique à tous les accords)"
+            },
+            "13": {
+              "en": "Services procured in support of military forces located overseas (applies to all agreements)",
+              "fr": "Services obtenus à l’appui des forces militaires stationnées à l’étranger (s’applique à tous les accords)"
+            },
+            "14": {
+              "en": "Research and development services (applies to all trade agreements except for CFTA)",
+              "fr": "Services de recherche et de développement (s’applique à tous les accords commerciaux autres que l’ALEC)"
+            }
+          }
+        },
+        {
+          "id": "indigenous_business",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditionnel"
+          },
+          "label": {
+            "en": "Procurement Strategy for Indigenous Business",
+            "fr": "Stratégie d’approvisionnement auprès des entreprises autochtones"
+          },
+          "description": {
+            "en": "It is recommended that this field indicate whether the Procurement Strategy for Indigenous Business mandatory or voluntary set-aside applies to the procurement transaction.",
+            "fr": "Il est recommandé que ce champ indique si un marché réservé aux entreprises autochtones, obligatoire ou facultatif dans le cadre de la Stratégie d’approvisionnement auprès des entreprises autochtones, s’applique à l’opération liée à l’approvisionnement."
+          },
+          "validation": {
+            "en": "Mandatory for contracts after 2022-01-01\n",
+            "fr": "Obligatoire pour les marchés conclus après le 2022-01-01\n"
+          },
+          "datastore_type": "text",
+          "choices": {
+            "MS": {
+              "en": "Mandatory Set-Aside",
+              "fr": "Contrat réservé obligatoire"
+            },
+            "NA": {
+              "en": "None",
+              "fr": "Aucune valeur"
+            },
+            "VS": {
+              "en": "Voluntary Set-Aside",
+              "fr": "Contrat réservé facultatif"
+            }
+          }
+        },
+        {
+          "id": "indigenous_business_excluding_psib",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditionnel"
+          },
+          "label": {
+            "en": "Indigenous Business excluding PSIB (formerly PSAB incidental indicator)",
+            "fr": "Entreprises autochtones excluant le marché réservé en vertu de la SAEA (anciennement Indicateur d’incidence de la SAEA)"
+          },
+          "description": {
+            "en": "i. It is recommended that this field indicate whether a contract was awarded to an Indigenous business.\nii. Any contract awarded to an Indigenous business where the procurement is subject to a mandatory or voluntary set-aside under the Procurement Strategy for Indigenous Business should be reported as “No” under this data field as such contracts are already reported under the Procurement Strategy for Indigenous Business data field.\n",
+            "fr": "i. Il est recommandé que ce champ indique si un marché a été attribué à une entreprise autochtone.\nii. Tout marché attribué à une entreprise autochtone lorsque l’approvisionnement est assujetti aux exigences relatives aux marchés réservés obligatoirement ou volontairement en vertu de la Stratégie d’approvisionnement auprès des entreprises autochtones devrait être déclaré comme étant « Non » dans ce champ, puisque de tels marchés sont déjà déclarés dans le champ de données « Stratégie d’approvisionnement auprès des entreprises autochtones ».\n"
+          },
+          "validation": {
+            "en": "Mandatory for contracts after 2019-01-01\n\nThis field must be N, No or Non if the Procurement Strategy for Indigenous Business field is MS or VS.\n",
+            "fr": "Obligatoire pour les marchés conclus après le 2019-01-01\n\nCe champ doit être N, No ou Non, si le champ Stratégie d’approvisionnement auprès des entreprises autochtones contient MS ou VS.\n"
+          },
+          "datastore_type": "text",
+          "choices": {
+            "N": {
+              "en": "No",
+              "fr": "Non"
+            },
+            "Y": {
+              "en": "Yes",
+              "fr": "Oui"
+            }
+          }
+        },
+        {
+          "id": "intellectual_property",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditionnel"
+          },
+          "label": {
+            "en": "Intellectual Property Indicator",
+            "fr": "Indicateur de propriété intellectuelle"
+          },
+          "description": {
+            "en": "It is recommended that this field identify whether there are terms and conditions in the contract related to intellectual property and whether those terms would result in Crown or contractor ownership of the rights to the intellectual property.",
+            "fr": "Il est recommandé d’indiquer dans ce champ si le marché comporte des modalités se rapportant à la propriété intellectuelle et si, selon ces modalités, les droits de propriété intellectuelle appartiendront à l’État ou à l’entrepreneur."
+          },
+          "validation": {
+            "en": "Mandatory for contracts after 2019-01-01",
+            "fr": "Obligatoire pour les marchés conclus après le 2019-01-01"
+          },
+          "datastore_type": "text",
+          "choices": {
+            "A2": {
+              "en": "Crown owned – exception 2",
+              "fr": "Droits appartenant à l'État exception 2"
+            },
+            "A3": {
+              "en": "Crown owned – exception 3",
+              "fr": "Droits appartenant à l'État exception 3"
+            },
+            "A41": {
+              "en": "Crown owned – exception 4.1",
+              "fr": "Droits appartenant à l'État exception 4.1"
+            },
+            "A42": {
+              "en": "Crown owned – exception 4.2",
+              "fr": "Droits appartenant à l'État exception 4.2"
+            },
+            "A43": {
+              "en": "Crown owned – exception 4.3",
+              "fr": "Droits appartenant à l'État exception 4.3"
+            },
+            "A5": {
+              "en": "Crown owned – exception 5",
+              "fr": "Droits appartenant à l'État exception 5"
+            },
+            "A8": {
+              "en": "Crown owned – exemption 8 (note: must have received approval of the Treasury Board via a Treasury Board submission)",
+              "fr": "Droits appartenant à l'État exemption 8 (nota : doit avoir reçu l’approbation du Conseil du Trésor par le \\ biais d’une présentation)"
+            },
+            "B": {
+              "en": "Contractor Owned",
+              "fr": "Droits appartenant à l'entrepreneur"
+            },
+            "C": {
+              "en": "No IP Terms in Contract",
+              "fr": "Aucune modalité sur les DPI indiquée au contrat"
+            },
+            "A1": {
+              "en": "Crown owned – exception 1 (discontinued as of 2022-01-01)",
+              "fr": "Droits appartenant à l'État exception 1 (discontinué à partir de 2022-01-01)",
+              "discontinued": true
+            },
+            "A65": {
+              "en": "Crown owned – exception 6.5 (discontinued as of 2017-01-01)",
+              "fr": "Droits appartenant à l'État exception 6.5 (discontinué à partir de 2017-01-01)",
+              "discontinued": true
+            },
+            "D": {
+              "en": "Organization Not Subject to IP Policy (discontinued as of 2017-01-01)",
+              "fr": "Organisation non assujettie à la Politique sur le titre de propriété intellectuel (discontinué à partir de 2017-01-01)",
+              "discontinued": true
+            },
+            "NA": {
+              "en": "Not Applicable (discontinued as of 2022-01-01)",
+              "fr": "Sans objet (discontinué à partir de 2022-01-01)",
+              "discontinued": true
+            }
+          }
+        },
+        {
+          "id": "potential_commercial_exploitation",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditionnel"
+          },
+          "label": {
+            "en": "Potential for Commercial Exploitation",
+            "fr": "Potentiel d'exploitation commerciale"
+          },
+          "description": {
+            "en": "It is recommended that this field identify whether intellectual property generated under the contract has the potential for commercial exploitation.",
+            "fr": "Il est recommandé d’indiquer dans ce champ si la propriété intellectuelle produite en vertu du marché présente un potentiel d’exploitation commerciale."
+          },
+          "validation": {
+            "en": "This field must not be empty when the Intellectual Property data field is one of the following values (A2, A3, A41, A42, A43, A5, A8 or B). This field may be left empty if none of the Intellectual Property data field values apply. Valid formats include: Yes or No.\n",
+            "fr": "Ce champ ne doit pas être vide lorsque le champ Propriété intellectuelle contient l’une des valeurs suivantes : A2, A3, A41, A42, A43, A5, A8 ou B. Ce champ peut demeurer vide si aucune des valeurs de Propriété intellectuelle ne s’applique. Les formats valides incluent : Oui ou Non.\n"
+          },
+          "datastore_type": "text",
+          "choices": {
+            "N": {
+              "en": "No",
+              "fr": "Non"
+            },
+            "Y": {
+              "en": "Yes",
+              "fr": "Oui"
+            }
+          }
+        },
+        {
+          "id": "former_public_servant",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditionnel"
+          },
+          "label": {
+            "en": "Former Public Servant in receipt of a PSSA pension",
+            "fr": "Ancien fonctionnaire recevant une pension en vertu de la LPFP"
+          },
+          "description": {
+            "en": "It is recommended that this field identify whether the contractor is a former public servant in receipt of a pension under the Public Service Superannuation Act (PSSA).",
+            "fr": "Il est recommandé pour ce champ d’indiquer si l’entrepreneur est un ancien fonctionnaire touchant une pension en vertu de la Loi sur la pension de la fonction publique (LPFP)."
+          },
+          "validation": {
+            "en": "Mandatory for contracts after 2019-01-01",
+            "fr": "Obligatoire pour les marchés conclus après le 2019-01-01"
+          },
+          "datastore_type": "text",
+          "choices": {
+            "N": {
+              "en": "No",
+              "fr": "Non"
+            },
+            "Y": {
+              "en": "Yes",
+              "fr": "Oui"
+            }
+          }
+        },
+        {
+          "id": "contracting_entity",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditionnel"
+          },
+          "label": {
+            "en": "Contracting Entity",
+            "fr": "Entité contractante"
+          },
+          "description": {
+            "en": "i. It is recommended that this field identify whether the procurement is a contract awarded by the client department, PSPC, SSC or another departmental entity or a call-up contract against a standing offer agreement or supply arrangement agreement established by PSPC, SSC or the department.\nii. If PSPC awards a contract against a PSPC SOSA on behalf of a client department, it is recommended that the contract be reported as “PWC” for this field.\niii. If SSC awards a contract against a SSC SOSA on behalf of a client department, it is recommended that the contract be reported as “SSCC” for this field.\niv. If a department awards a contract against a PSPC or SSC SOSA, it is recommended that the contract be reported as “PWSOSA” or “SSCSOSA” as applicable.\n",
+            "fr": "i. Il est recommandé d’indiquer dans ce champ si l’approvisionnement est visé par un marché attribué par le ministère client, SPAC, SPC ou une autre entité ministérielle, ou bien une commande subséquente à une offre à commandes ou à un arrangement en matière d’approvisionnement établi par SPAC, SPC ou le ministère.\nii. Si SPAC attribue un marché dans le cadre d’une OCAMA de SPAC au nom d’un ministère client, il est recommandé que le marché soit déclaré comme « PWC » pour ce champ.\niii. Si SPC attribue un marché dans le cadre d’une OCAMA des SPC au nom d’un ministère client, il est recommandé que le marché soit déclaré comme « SSCC » pour ce champ.\niv. Si un ministère attribue un marché dans le cadre d’une OCAMA de SPAC ou de SPC, il est recommandé que le marché soit déclaré comme « PWSOSA » ou « SSCSOSA », selon le cas.\n"
+          },
+          "validation": {
+            "en": "Mandatory for contracts after 2022-01-01",
+            "fr": "Obligatoire pour les marchés conclus après le 2022-01-01"
+          },
+          "datastore_type": "text",
+          "choices": {
+            "DC": {
+              "en": "Contract awarded by the department.",
+              "fr": "Marché attribué par le ministère"
+            },
+            "DSOSA": {
+              "en": "Call-up or Contract Against a Standing Offer or Supply Arrangement Agreement established by the department",
+              "fr": "Commande subséquente ou marché à une offre à commandes ou arrangements en matière d’approvisionnement conclu par le ministère."
+            },
+            "OGDC": {
+              "en": "Contract awarded by another department on behalf of the client department.",
+              "fr": "Marché attribué par un autre ministère au nom du ministère client."
+            },
+            "PWC": {
+              "en": "Contract or Call-up awarded by PSPC on behalf of the client department.",
+              "fr": "Marché ou commande subséquente attribué par SPAC au nom du ministère client."
+            },
+            "PWSOSA": {
+              "en": "Call-up or Contract awarded by client department against a Standing Offer or Supply Arrangement Agreement established by Public Services and Procurement Canada",
+              "fr": "Commande subséquente ou marché attribué par le ministère client par rapport à une l’offre à commandes ou arrangements en matière d’approvisionnement conclu par SPAC."
+            },
+            "SSCC": {
+              "en": "Contract awarded or Call-up by SSC on behalf of the client department.",
+              "fr": "Marché ou commande subséquente attribué par SPC au nom du ministère client."
+            },
+            "SSCSOSA": {
+              "en": "Call-up or Contract awarded by client department against a Standing Offer or Supply Arrangement Agreement established by Shared Services Canada",
+              "fr": "Commande subséquente ou marché attribué par le ministère client par rapport à une l’offre à commandes ou arrangements en matière d’approvisionnement conclu par SPC."
+            }
+          }
+        },
+        {
+          "id": "standing_offer_number",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditionnel"
+          },
+          "label": {
+            "en": "Standing Offer or Supply Arrangement Number",
+            "fr": "Numéro de l’offre à commandes"
+          },
+          "description": {
+            "en": "It is recommended that this field be populated with the Standing Offer or Supply Arrangement Number applicable to this contract. This field should be left blank if there is no standing offer or supply arrangement established by PSPC or SSC associated with this contract.",
+            "fr": "Il est recommandé de saisir dans ce champ le numéro de l’offre à commandes ou de l’arrangement en matière d’approvisionnement qui s’applique au marché. Ce champ demeure vide en l’absence d’une offre à commandes ou d’un arrangement en matière d’approvisionnement établi par SPAC ou SPC relativement à ce marché."
+          },
+          "validation": {
+            "en": "This field must be populated if a Call-up against a standing offer or supply arrangement was identified as PWSOSA or SSCSOSA\nIf this field is populated, the Contracting Entity data field must be populated.\n",
+            "fr": "Ce champ doit être rempli si une commande subséquente à une offre à commandes ou un arrangement en matière d’approvisionnement a été identifié comme PWSOSA ou SSCSOSA\nSi ce champ est rempli, le champ Entité contractante doit être rempli.\n"
+          },
+          "datastore_type": "text"
+        },
+        {
+          "id": "instrument_type",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditionnel"
+          },
+          "label": {
+            "en": "Instrument Type",
+            "fr": "Type d’instrument"
+          },
+          "description": {
+            "en": "i. It is recommended that the instrument type identify whether the transaction being reported is a contract, contract amendment, or a standing offer or supply arrangement agreement.\nii. The instrument type for:\n  -\tA contract is “C”;\n  -\tAn amendment is “A”;\n  -\tA standing offer agreement or supply arrangement agreement is “SOSA”;\n  -\tIssuing a call-up against a standing offer or supply arrangement is “C”; and\n  -\tAn amendment to a call-up is “A” for this field.\niii. When a contract is entered into and subsequently amended in the same fiscal quarter, the two transactions should be reported separately. Entry into the contract should be reported as one entry and should be identified as a contract by entering “C” for this field. The contract amendment should be reported as a separate entry and be identified as an amendment by entering “A” for this field.\niv. When a standing offer or supply arrangement agreement is amended, it should continue to be identified as an “SOSA” for this field.\n",
+            "fr": "i. Il est recommandé d’indiquer dans ce champ si l’opération déclarée est un marché, une modification de marché, une offre à commandes ou un arrangement en matière d’approvisionnement.\nii. Voici le type d’instrument :\n  -\tun marché est « C »;\n  -\tune modification est « A »;\n  -\tune offre à commandes ou un arrangement en matière d’approvisionnement est « SOSA »;\n  -\tl’émission d’une commande subséquente à une offre à commandes ou à un arrangement en matière d’approvisionnement est « C »;\n  -\tune modification d’une commande subséquente est « A » pour ce champ.\niii. Lorsqu’un marché est conclu, puis modifié au cours du même trimestre de l’exercice, les deux opérations doivent être déclarées séparément. La signature du marché sera déclarée comme une seule entrée et devrait être indiquée comme étant un marché, soit « C », dans ce champ. Une modification de marché sera déclarée comme une entrée séparée et indiquée comme telle, en inscrivant « A » dans ce champ.\niv. Lorsqu’une offre à commandes ou un arrangement en matière d’approvisionnement est modifié, il convient de saisir le code « SOSA » dans ce champ.\n"
+          },
+          "validation": {
+            "en": "Mandatory for contracts after 2019-01-01",
+            "fr": "Obligatoire pour les marchés conclus après le 2019-01-01"
+          },
+          "datastore_type": "text",
+          "choices": {
+            "A": {
+              "en": "Amendment",
+              "fr": "Modification"
+            },
+            "C": {
+              "en": "Contract",
+              "fr": "Marché"
+            },
+            "SOSA": {
+              "en": "Standing Offer or Supply Arrangement Agreement",
+              "fr": "Offre à commandes ou Arrangement en matière d’approvisionnement"
+            }
+          }
+        },
+        {
+          "id": "ministers_office",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditionnel"
+          },
+          "label": {
+            "en": "Minister's Office Contracts",
+            "fr": "Marchés du cabinet du ministre"
+          },
+          "description": {
+            "en": "It is recommended that this field indicate whether the transaction is for the Minister’s office. Ministers’ offices contracts are any contracts for goods and services entered into by a minister or their exempt staff. In accordance with the Policies for Ministers’ Offices, such contracts should be charged to either a Minister’s other operating budget or to the Parliamentary Secretary’s Assistant/Advisor operating budget. Please refer to the Policies for Ministers’ Offices for more information on the Minister’s office budgets. This data field should be entered for contracts and amendments awarded effective June 21, 2019, or, alternatively, for the contracts and amendments awarded within the month of this effective date.",
+            "fr": "Dans ce champ, il est recommandé d’indiquer si l’opération concerne le cabinet d’un ministre. Les marchés des cabinets de ministre sont des marchés de biens et de services qui sont conclus par un ministre ou son personnel exonéré. Conformément aux Politiques à l’intention des cabinets des ministres, les dépenses liées à ces marchés doivent être imputées aux autres budgets de fonctionnement d’un ministre ou au budget de fonctionnement de l’adjoint ou du conseiller du secrétaire parlementaire. Se reporter aux Politiques à l’intention des cabinets des ministres pour obtenir de plus amples renseignements sur les budgets des cabinets de ministre. Les données dans ce champ doivent être saisies dans le cas des marchés et des modifications de marché entrés en vigueur le 21 juin 2019 ou dans le cas des marchés attribués et des modifications de marché acceptées dans le mois de cette date d’entrée en vigueur."
+          },
+          "validation": {
+            "en": "Mandatory for contracts after 2019-06-21",
+            "fr": "Obligatoire pour les marchés conclus après le 2019-06-21"
+          },
+          "datastore_type": "text",
+          "choices": {
+            "N": {
+              "en": "No",
+              "fr": "Non"
+            },
+            "Y": {
+              "en": "Yes",
+              "fr": "Oui"
+            }
+          }
+        },
+        {
+          "id": "number_of_bids",
+          "obligation": {
+            "en": "Optional",
+            "fr": "Facultatif"
+          },
+          "label": {
+            "en": "Number of Bids",
+            "fr": "Nombre do soumissions"
+          },
+          "description": {
+            "en": "It is recommended that this field be populated with the total number of compliant and non-compliant bids received in the procurement.\ni. For a competitive contract, it is recommended for this field to be the number of bids received pursuant to a bid solicitation.\nii. For a call-up contract against a standing offer agreement established under a competitive process, it is recommended that a value of “0” be entered for this field. In this instance, the value of “0” represents not applicable.\niii. For a contract with task authorizations, the number of bids of the contract may be reported if this value is known when the task authorization is issued. If the number of bids is unknown, the department may input a value of 0 to indicate it is not applicable.\niv. If the contract was awarded using an Advance Contract Award Notice (ACAN) and it was determined that there were no statements of capabilities that met the ACAN requirements, it is recommended that a value of “1” be entered for this field.\niv. For non-competitive contract, it is recommended that a value of “1” be entered for this field.\nvi. For the establishment of a standing offer or supply arrangement agreement, it is recommended for this field to be the number of standing offer or supply arrangement bids received. If the standing offer was established under a non-competitive or an ACAN procurement process where it was determined that there were no statements of capabilities that meet the ACAN requirements, it is recommended that a value of “1” be entered for this field for subsequent contracts awarded under the standing offer.\nvii. For a competitive contract awarded by PSPC, SSC or another department on behalf of the client department, a value of “0” may be entered if the information is not available within the reporting period for which the contract was awarded. Once the information is available, the contract record is to be updated at the next subsequent reporting period, or as soon as practicable.\n",
+            "fr": "Il est recommandé de saisir dans ce champ le nombre total de soumissions conformes et non conformes qui ont été reçues dans le cadre du processus d’approvisionnement.\ni. Pour un marché concurrentiel, il est recommandé que ce champ indique le nombre de soumissions reçues conformément à une invitation à soumissionner.\nii. Dans le cas d’une commande subséquente à une offre à commandes établie dans le cadre d’un processus concurrentiel, il est recommandé de saisir la valeur « 0 » dans ce champ. En pareil cas, la valeur « 0 » signifie sans objet.\niii. Pour un marché comprenant des autorisations de tâches, le nombre de soumissions pour le marché peut être déclaré si cette donnée est connue au moment de donner l’autorisation de tâches. Si le nombre de soumissions est inconnu, le ministère peut saisir la valeur « 0 ». En pareil cas, la valeur « 0 » signifie sans objet.\niv. Si le marché a été attribué au moyen d’un préavis d’adjudication de contrat (PAC) et qu’il a été déterminé qu’aucun énoncé de capacités ne répondait aux exigences du PAC, il est recommandé de saisir la valeur « 1 » dans ce champ.\nv. Dans le cas d’un marché non concurrentiel, il est recommandé de saisir la valeur « 1 » dans ce champ.\nvi. Dans le cas de l’établissement d’une offre à commandes ou d’un arrangement en matière d’approvisionnement, il est recommandé d’indiquer dans ce champ le nombre de soumissions reçues relativement à l’offre à commandes ou à l’arrangement en matière d’approvisionnement. Si l’offre à commandes a été établie dans le cadre d’un processus d’approvisionnement non concurrentiel ou d’un PAC et qu’il a été déterminé qu’il n’y avait pas d’énoncés de capacités qui répondent aux exigences du PAC, il est recommandé qu’une valeur de « 1 » soit inscrite dans ce champ pour les marches subséquents attribués en fonction de l’offre à commandes.\nvii. Dans le cas d’un marché concurrentiel attribué par SPAC, SPC ou un autre ministère au nom du ministère client, il faut saisir la valeur « 0 » si les renseignements ne sont pas disponibles au cours de la période de déclaration au cours de laquelle le marché a été attribué. Une fois que les renseignements sont disponibles, le dossier contractuel doit être mis à jour au cours de la période de déclaration suivante, ou dès que cela est possible.\n"
+          },
+          "validation": {
+            "en": "This field must be populated with a “1” if the solicitation procedure is identified as non-competitive (TN) or Advance Contract Award Notice (ACAN).\n",
+            "fr": "Ce champ doit contenir un « 1 » si la méthode d’invitation à soumissionner est identifiée comme étant non concurrentielle (TN) ou un préavis d’attribution de contrat (AC).\n"
+          },
+          "datastore_type": "int"
+        },
+        {
+          "id": "article_6_exceptions",
+          "obligation": {
+            "en": "Optional",
+            "fr": "Facultatif"
+          },
+          "label": {
+            "en": "Section 6 Government Contracts Regulations Exceptions",
+            "fr": "Article 6 – Exceptions au Règlement concernant les marches de l’État"
+          },
+          "description": {
+            "en": "i. The Government Contracts Regulations requires the solicitation of bids unless one of the s.6 exceptions to the Government Contracts Regulations applies to the contract.\nii. It is recommended that this field be populated with one of the s.6 exceptions to solicit bids if bids have not been solicited for the contract.\niii. It is recommended that this field be populated with one of the s.6 exceptions to solicit bids if the contract was awarded using an Advance Contract Award Notice (ACAN) and it was determined that there were no statements of capabilities that met the ACAN requirements.\niv. For contracts whereby bids have been solicited or if the procurement is not a contract subject to the Government Contracts Regulations, the value of “0” should be entered. For this data value, the value of “0” represents not applicable.\n",
+            "fr": "i. Le Règlement sur les marchés de l’État exige le recours à un appel d’offres, à moins que l’une des exceptions prévues à l’article 6 dudit règlement ne s’applique au marché.\nii. Il est recommandé de saisir dans ce champ l’une des exceptions à l’appel d’offres prévues à l’article 6 si aucun appel d’offres n’a été lancé à l’égard du marché.\niii. Il est recommandé de saisir dans ce champ l’une des exceptions à l’appel d’offres prévues à l’article 6 si le marché a été attribué au moyen d’un préavis d’adjudication de contrat (PAC) et qu’il a été déterminé qu’aucun énoncé de capacités ne répondait aux exigences du PAC.\niv. Dans le cas des marchés pour lesquels un appel d’offres a été lancé, ou si l’approvisionnement n’est pas visé par un marché assujetti au Règlement sur les marchés de l’État, il faut saisir la valeur « 0 ». Pour cette valeur de données, la valeur « 0 » signifie sans objet.\"\n"
+          },
+          "validation": {
+            "en": "This field may only be populated with “0” if the procurement was identified as competitive (open bidding (OB), traditional competitive (TC) or selective tendering (ST)).\n",
+            "fr": "Ce champ peut seulement contenir « 0 » si l’acquisition a été identifiée comme étant concurrentielle (invitation ouverte à soumissionner (OB) ou concurrentielle - traditionnelle (TC) ou Concurrentielle – Appel d’offres sélectif (ST)).\n"
+          },
+          "datastore_type": "text",
+          "choices": {
+            "0": {
+              "en": "Not applicable",
+              "fr": "Sans objet"
+            },
+            "1": {
+              "en": "Pressing emergency in which delay would be injurious to the public interest",
+              "fr": "Extrême urgence où un retard serait préjudiciable à l’intérêt public."
+            },
+            "2": {
+              "en": "Does not exceed s.6 (b) Government Contracts Regulations prescribed dollar limits.",
+              "fr": "N’excède pas la limite financière prescrite à l’alinéa 6 b) du Règlement sur les marchés de l’État."
+            },
+            "3": {
+              "en": "Not in the public interest to solicit bids",
+              "fr": "Situation dans laquelle un appel d’offres ne servirait pas l’intérêt public."
+            },
+            "4": {
+              "en": "Only one person is capable of performing the contract",
+              "fr": "Une seule personne est en mesure d’exécuter le marché."
+            }
+          }
+        },
+        {
+          "id": "award_criteria",
+          "obligation": {
+            "en": "Optional",
+            "fr": "Facultatif"
+          },
+          "label": {
+            "en": "Award Criteria",
+            "fr": "Critères d’attribution"
+          },
+          "description": {
+            "en": "It is recommended that this field be populated with one of the bid evaluation methodologies below if bids have been solicited for the contract:\ni. If bids have not been solicited, the value of “0” is to be selected.\nii. For ACANs whereby it was determined that there were no statements of capabilities that met the ACAN requirements, the value of “0” should be entered.\niii. For amendments, select the value of “0” of this field.\niv. For a competitive contract awarded by PSPC, SSC or another department on behalf of the client department, a value of “0” may be entered if the information is not available within the reporting period for which the contract was awarded. Once information is available, the contract record is to be updated at the next subsequent reporting period, or as soon as practicable.\n",
+            "fr": "Il est recommandé de saisir dans ce champ l’une des méthodes d’évaluation des soumissions indiquées ci-dessous, si un appel d’offres a été lancé à l’égard du marché :\ni. S’il n’y a pas eu d’appel d’offres, il faut choisir la valeur « 0 ».\nii. Dans le cas d’un PAC à l’égard duquel il a été déterminé qu’aucun énoncé de capacités ne répondait aux exigences du PAC, il faut saisir la valeur « 0 ».\niii. S’il s’agit d’une modification, il faut choisir la valeur « 0 » pour ce champ.\niv. Dans le cas d’un marché concurrentiel attribué par SPAC, SPC ou un autre ministère au nom du ministère client, il faut saisir la valeur « 0 » si les renseignements ne sont pas disponibles au cours de la période de déclaration au cours de laquelle le marché a été attribué. Une fois que les renseignements sont disponibles, le dossier contractuel doit être mis à jour au cours de la période de déclaration suivante, ou dès que cela est possible.\n"
+          },
+          "validation": {
+            "en": "If this field is populated, it must be with a “0” if the procurement was identified\nas non-competitive (TN) or advance contract award notice (AC) in the solicitation procedure data field or was\nidentified as an Amendment (A) in the Instrument type data field.\n",
+            "fr": "Si ce champ est rempli, il doit contenir un « 0 » si l’acquisition a été identifiée\ncomme étant non concurrentielle (TN) ou un préavis d’attribution de contrat\n(AC) ou si l’acquisition a été identifiée comme un modification (A) dans le\nchamp Type d’instrument.\n"
+          },
+          "datastore_type": "text",
+          "choices": {
+            "0": {
+              "en": "Not applicable",
+              "fr": "Sans objet"
+            },
+            "1": {
+              "en": "Lowest Price",
+              "fr": "Prix le plus bas"
+            },
+            "2": {
+              "en": "Lowest Cost-per-Point",
+              "fr": "Coût par point le plus bas"
+            },
+            "3": {
+              "en": "Highest Combined Rating of Technical Merit and Price",
+              "fr": "Cote combinée la plus élevée pour les qualités techniques et le meilleur prix"
+            },
+            "4": {
+              "en": "Highest Technical Merit within a Stipulated Maximum Budget",
+              "fr": "Cote la plus élevée pour les qualités techniques dans le cadre d’un budget maximal imparti"
+            },
+            "5": {
+              "en": "Variations or combinations of the above methods",
+              "fr": "Variations ou combinaisons des méthodes ci-dessus"
+            }
+          }
+        },
+        {
+          "id": "socioeconomic_indicator",
+          "obligation": {
+            "en": "Optional",
+            "fr": "Facultatif"
+          },
+          "label": {
+            "en": "Socio-Economic Indicator",
+            "fr": "Indicateur socioéconomique"
+          },
+          "description": {
+            "en": "It is recommended for this field to indicate whether the procurement is subject to one or more of the applicable Socio-economic indicators.",
+            "fr": "Il est recommandé d’indiquer dans ce champ si l’approvisionnement est relié à au moins un des indicateurs socioéconomiques applicables."
+          },
+          "datastore_type": "text",
+          "choices": {
+            "FP": {
+              "en": "Federal Contractors Program for Employment Equity",
+              "fr": "Programme de contrats fédéraux pour l’équité en matière d’emploi"
+            },
+            "NA": {
+              "en": "None",
+              "fr": "Aucune valeur"
+            }
+          }
+        },
+        {
+          "id": "reporting_period",
+          "obligation": {
+            "en": "Conditional",
+            "fr": "Conditionnel"
+          },
+          "label": {
+            "en": "Reporting Period",
+            "fr": "Periode de déclaration"
+          },
+          "description": {
+            "en": "It is recommended that this field be populated in the standard format described below.\nWhen published on the Open Government portal, this field will contain the fiscal quarter this particular contract entry was reported to the public. For example if a contract is being amended on May 3, 2017, and reported in the first fiscal quarter of 2017-–2018, the entry should be 2017-2018-Q1.\n",
+            "fr": "Il est recommandé de remplir ce champ dans le format standard décrit ci-dessous.\nLorsqu’il est publié sur le portail du Gouvernement Ouvert, ce champ contiendra le quartier fiscal dont cette donné était déclarée. Par exemple, si un marché est modifié le 3 mai 2017, et la modification est déclarée au cours du premier trimestre de l’exercice 2017-2018, il convient d’indiquer : 2017 à 2018-Q1).\n"
+          },
+          "validation": {
+            "en": "Mandatory for contracts after 2019-01-01",
+            "fr": "Obligatoire pour les marchés conclus après le 2019-01-01"
+          },
+          "datastore_type": "text",
+          "choices": {
+            "1995-1996-Q1": "1995-1996-Q1",
+            "1995-1996-Q2": "1995-1996-Q2",
+            "1995-1996-Q3": "1995-1996-Q3",
+            "1995-1996-Q4": "1995-1996-Q4",
+            "1996-1997-Q1": "1996-1997-Q1",
+            "1996-1997-Q2": "1996-1997-Q2",
+            "1996-1997-Q3": "1996-1997-Q3",
+            "1996-1997-Q4": "1996-1997-Q4",
+            "1997-1998-Q1": "1997-1998-Q1",
+            "1997-1998-Q2": "1997-1998-Q2",
+            "1997-1998-Q3": "1997-1998-Q3",
+            "1997-1998-Q4": "1997-1998-Q4",
+            "1998-1999-Q1": "1998-1999-Q1",
+            "1998-1999-Q2": "1998-1999-Q2",
+            "1998-1999-Q3": "1998-1999-Q3",
+            "1998-1999-Q4": "1998-1999-Q4",
+            "1999-2000-Q1": "1999-2000-Q1",
+            "1999-2000-Q2": "1999-2000-Q2",
+            "1999-2000-Q3": "1999-2000-Q3",
+            "1999-2000-Q4": "1999-2000-Q4",
+            "2000-2001-Q1": "2000-2001-Q1",
+            "2000-2001-Q2": "2000-2001-Q2",
+            "2000-2001-Q3": "2000-2001-Q3",
+            "2000-2001-Q4": "2000-2001-Q4",
+            "2001-2002-Q1": "2001-2002-Q1",
+            "2001-2002-Q2": "2001-2002-Q2",
+            "2001-2002-Q3": "2001-2002-Q3",
+            "2001-2002-Q4": "2001-2002-Q4",
+            "2002-2003-Q1": "2002-2003-Q1",
+            "2002-2003-Q2": "2002-2003-Q2",
+            "2002-2003-Q3": "2002-2003-Q3",
+            "2002-2003-Q4": "2002-2003-Q4",
+            "2003-2004-Q1": "2003-2004-Q1",
+            "2003-2004-Q2": "2003-2004-Q2",
+            "2003-2004-Q3": "2003-2004-Q3",
+            "2003-2004-Q4": "2003-2004-Q4",
+            "2004-2005-Q1": "2004-2005-Q1",
+            "2004-2005-Q2": "2004-2005-Q2",
+            "2004-2005-Q3": "2004-2005-Q3",
+            "2004-2005-Q4": "2004-2005-Q4",
+            "2005-2006-Q1": "2005-2006-Q1",
+            "2005-2006-Q2": "2005-2006-Q2",
+            "2005-2006-Q3": "2005-2006-Q3",
+            "2005-2006-Q4": "2005-2006-Q4",
+            "2006-2007-Q1": "2006-2007-Q1",
+            "2006-2007-Q2": "2006-2007-Q2",
+            "2006-2007-Q3": "2006-2007-Q3",
+            "2006-2007-Q4": "2006-2007-Q4",
+            "2007-2008-Q1": "2007-2008-Q1",
+            "2007-2008-Q2": "2007-2008-Q2",
+            "2007-2008-Q3": "2007-2008-Q3",
+            "2007-2008-Q4": "2007-2008-Q4",
+            "2008-2009-Q1": "2008-2009-Q1",
+            "2008-2009-Q2": "2008-2009-Q2",
+            "2008-2009-Q3": "2008-2009-Q3",
+            "2008-2009-Q4": "2008-2009-Q4",
+            "2009-2010-Q1": "2009-2010-Q1",
+            "2009-2010-Q2": "2009-2010-Q2",
+            "2009-2010-Q3": "2009-2010-Q3",
+            "2009-2010-Q4": "2009-2010-Q4",
+            "2010-2011-Q1": "2010-2011-Q1",
+            "2010-2011-Q2": "2010-2011-Q2",
+            "2010-2011-Q3": "2010-2011-Q3",
+            "2010-2011-Q4": "2010-2011-Q4",
+            "2011-2012-Q1": "2011-2012-Q1",
+            "2011-2012-Q2": "2011-2012-Q2",
+            "2011-2012-Q3": "2011-2012-Q3",
+            "2011-2012-Q4": "2011-2012-Q4",
+            "2012-2013-Q1": "2012-2013-Q1",
+            "2012-2013-Q2": "2012-2013-Q2",
+            "2012-2013-Q3": "2012-2013-Q3",
+            "2012-2013-Q4": "2012-2013-Q4",
+            "2013-2014-Q1": "2013-2014-Q1",
+            "2013-2014-Q2": "2013-2014-Q2",
+            "2013-2014-Q3": "2013-2014-Q3",
+            "2013-2014-Q4": "2013-2014-Q4",
+            "2014-2015-Q1": "2014-2015-Q1",
+            "2014-2015-Q2": "2014-2015-Q2",
+            "2014-2015-Q3": "2014-2015-Q3",
+            "2014-2015-Q4": "2014-2015-Q4",
+            "2015-2016-Q1": "2015-2016-Q1",
+            "2015-2016-Q2": "2015-2016-Q2",
+            "2015-2016-Q3": "2015-2016-Q3",
+            "2015-2016-Q4": "2015-2016-Q4",
+            "2016-2017-Q1": "2016-2017-Q1",
+            "2016-2017-Q2": "2016-2017-Q2",
+            "2016-2017-Q3": "2016-2017-Q3",
+            "2016-2017-Q4": "2016-2017-Q4",
+            "2017-2018-Q1": "2017-2018-Q1",
+            "2017-2018-Q2": "2017-2018-Q2",
+            "2017-2018-Q3": "2017-2018-Q3",
+            "2017-2018-Q4": "2017-2018-Q4",
+            "2018-2019-Q1": "2018-2019-Q1",
+            "2018-2019-Q2": "2018-2019-Q2",
+            "2018-2019-Q3": "2018-2019-Q3",
+            "2018-2019-Q4": "2018-2019-Q4",
+            "2019-2020-Q1": "2019-2020-Q1",
+            "2019-2020-Q2": "2019-2020-Q2",
+            "2019-2020-Q3": "2019-2020-Q3",
+            "2019-2020-Q4": "2019-2020-Q4",
+            "2020-2021-Q1": "2020-2021-Q1",
+            "2020-2021-Q2": "2020-2021-Q2",
+            "2020-2021-Q3": "2020-2021-Q3",
+            "2020-2021-Q4": "2020-2021-Q4",
+            "2021-2022-Q1": "2021-2022-Q1",
+            "2021-2022-Q2": "2021-2022-Q2",
+            "2021-2022-Q3": "2021-2022-Q3",
+            "2021-2022-Q4": "2021-2022-Q4",
+            "2022-2023-Q1": "2022-2023-Q1",
+            "2022-2023-Q2": "2022-2023-Q2",
+            "2022-2023-Q3": "2022-2023-Q3",
+            "2022-2023-Q4": "2022-2023-Q4",
+            "2023-2024-Q1": "2023-2024-Q1",
+            "2023-2024-Q2": "2023-2024-Q2",
+            "2023-2024-Q3": "2023-2024-Q3",
+            "2023-2024-Q4": "2023-2024-Q4",
+            "2024-2025-Q1": "2024-2025-Q1",
+            "2024-2025-Q2": "2024-2025-Q2",
+            "2024-2025-Q3": "2024-2025-Q3",
+            "2024-2025-Q4": "2024-2025-Q4",
+            "2025-2026-Q1": "2025-2026-Q1",
+            "2025-2026-Q2": "2025-2026-Q2",
+            "2025-2026-Q3": "2025-2026-Q3",
+            "2025-2026-Q4": "2025-2026-Q4",
+            "2026-2027-Q1": "2026-2027-Q1",
+            "2026-2027-Q2": "2026-2027-Q2",
+            "2026-2027-Q3": "2026-2027-Q3",
+            "2026-2027-Q4": "2026-2027-Q4"
+          }
+        }
+      ]
+    },
+    {
+      "resource_name": "contracts-nil",
+      "title": {
+        "en": "Proactive Publication - Contracts Nothing to Report",
+        "fr": "Publication proactive - Contrats (Rien à signaler)"
+      },
+      "fields": [
+        {
+          "id": "reporting_period",
+          "obligation": {
+            "en": "Mandatory",
+            "fr": "Obligatoire"
+          },
+          "label": {
+            "en": "Reporting Period",
+            "fr": "Periode de declaration"
+          },
+          "datastore_type": "text",
+          "choices": {
+            "1995-1996-Q1": "1995-1996-Q1",
+            "1995-1996-Q2": "1995-1996-Q2",
+            "1995-1996-Q3": "1995-1996-Q3",
+            "1995-1996-Q4": "1995-1996-Q4",
+            "1996-1997-Q1": "1996-1997-Q1",
+            "1996-1997-Q2": "1996-1997-Q2",
+            "1996-1997-Q3": "1996-1997-Q3",
+            "1996-1997-Q4": "1996-1997-Q4",
+            "1997-1998-Q1": "1997-1998-Q1",
+            "1997-1998-Q2": "1997-1998-Q2",
+            "1997-1998-Q3": "1997-1998-Q3",
+            "1997-1998-Q4": "1997-1998-Q4",
+            "1998-1999-Q1": "1998-1999-Q1",
+            "1998-1999-Q2": "1998-1999-Q2",
+            "1998-1999-Q3": "1998-1999-Q3",
+            "1998-1999-Q4": "1998-1999-Q4",
+            "1999-2000-Q1": "1999-2000-Q1",
+            "1999-2000-Q2": "1999-2000-Q2",
+            "1999-2000-Q3": "1999-2000-Q3",
+            "1999-2000-Q4": "1999-2000-Q4",
+            "2000-2001-Q1": "2000-2001-Q1",
+            "2000-2001-Q2": "2000-2001-Q2",
+            "2000-2001-Q3": "2000-2001-Q3",
+            "2000-2001-Q4": "2000-2001-Q4",
+            "2001-2002-Q1": "2001-2002-Q1",
+            "2001-2002-Q2": "2001-2002-Q2",
+            "2001-2002-Q3": "2001-2002-Q3",
+            "2001-2002-Q4": "2001-2002-Q4",
+            "2002-2003-Q1": "2002-2003-Q1",
+            "2002-2003-Q2": "2002-2003-Q2",
+            "2002-2003-Q3": "2002-2003-Q3",
+            "2002-2003-Q4": "2002-2003-Q4",
+            "2003-2004-Q1": "2003-2004-Q1",
+            "2003-2004-Q2": "2003-2004-Q2",
+            "2003-2004-Q3": "2003-2004-Q3",
+            "2003-2004-Q4": "2003-2004-Q4",
+            "2004-2005-Q1": "2004-2005-Q1",
+            "2004-2005-Q2": "2004-2005-Q2",
+            "2004-2005-Q3": "2004-2005-Q3",
+            "2004-2005-Q4": "2004-2005-Q4",
+            "2005-2006-Q1": "2005-2006-Q1",
+            "2005-2006-Q2": "2005-2006-Q2",
+            "2005-2006-Q3": "2005-2006-Q3",
+            "2005-2006-Q4": "2005-2006-Q4",
+            "2006-2007-Q1": "2006-2007-Q1",
+            "2006-2007-Q2": "2006-2007-Q2",
+            "2006-2007-Q3": "2006-2007-Q3",
+            "2006-2007-Q4": "2006-2007-Q4",
+            "2007-2008-Q1": "2007-2008-Q1",
+            "2007-2008-Q2": "2007-2008-Q2",
+            "2007-2008-Q3": "2007-2008-Q3",
+            "2007-2008-Q4": "2007-2008-Q4",
+            "2008-2009-Q1": "2008-2009-Q1",
+            "2008-2009-Q2": "2008-2009-Q2",
+            "2008-2009-Q3": "2008-2009-Q3",
+            "2008-2009-Q4": "2008-2009-Q4",
+            "2009-2010-Q1": "2009-2010-Q1",
+            "2009-2010-Q2": "2009-2010-Q2",
+            "2009-2010-Q3": "2009-2010-Q3",
+            "2009-2010-Q4": "2009-2010-Q4",
+            "2010-2011-Q1": "2010-2011-Q1",
+            "2010-2011-Q2": "2010-2011-Q2",
+            "2010-2011-Q3": "2010-2011-Q3",
+            "2010-2011-Q4": "2010-2011-Q4",
+            "2011-2012-Q1": "2011-2012-Q1",
+            "2011-2012-Q2": "2011-2012-Q2",
+            "2011-2012-Q3": "2011-2012-Q3",
+            "2011-2012-Q4": "2011-2012-Q4",
+            "2012-2013-Q1": "2012-2013-Q1",
+            "2012-2013-Q2": "2012-2013-Q2",
+            "2012-2013-Q3": "2012-2013-Q3",
+            "2012-2013-Q4": "2012-2013-Q4",
+            "2013-2014-Q1": "2013-2014-Q1",
+            "2013-2014-Q2": "2013-2014-Q2",
+            "2013-2014-Q3": "2013-2014-Q3",
+            "2013-2014-Q4": "2013-2014-Q4",
+            "2014-2015-Q1": "2014-2015-Q1",
+            "2014-2015-Q2": "2014-2015-Q2",
+            "2014-2015-Q3": "2014-2015-Q3",
+            "2014-2015-Q4": "2014-2015-Q4",
+            "2015-2016-Q1": "2015-2016-Q1",
+            "2015-2016-Q2": "2015-2016-Q2",
+            "2015-2016-Q3": "2015-2016-Q3",
+            "2015-2016-Q4": "2015-2016-Q4",
+            "2016-2017-Q1": "2016-2017-Q1",
+            "2016-2017-Q2": "2016-2017-Q2",
+            "2016-2017-Q3": "2016-2017-Q3",
+            "2016-2017-Q4": "2016-2017-Q4",
+            "2017-2018-Q1": "2017-2018-Q1",
+            "2017-2018-Q2": "2017-2018-Q2",
+            "2017-2018-Q3": "2017-2018-Q3",
+            "2017-2018-Q4": "2017-2018-Q4",
+            "2018-2019-Q1": "2018-2019-Q1",
+            "2018-2019-Q2": "2018-2019-Q2",
+            "2018-2019-Q3": "2018-2019-Q3",
+            "2018-2019-Q4": "2018-2019-Q4",
+            "2019-2020-Q1": "2019-2020-Q1",
+            "2019-2020-Q2": "2019-2020-Q2",
+            "2019-2020-Q3": "2019-2020-Q3",
+            "2019-2020-Q4": "2019-2020-Q4",
+            "2020-2021-Q1": "2020-2021-Q1",
+            "2020-2021-Q2": "2020-2021-Q2",
+            "2020-2021-Q3": "2020-2021-Q3",
+            "2020-2021-Q4": "2020-2021-Q4",
+            "2021-2022-Q1": "2021-2022-Q1",
+            "2021-2022-Q2": "2021-2022-Q2",
+            "2021-2022-Q3": "2021-2022-Q3",
+            "2021-2022-Q4": "2021-2022-Q4",
+            "2022-2023-Q1": "2022-2023-Q1",
+            "2022-2023-Q2": "2022-2023-Q2",
+            "2022-2023-Q3": "2022-2023-Q3",
+            "2022-2023-Q4": "2022-2023-Q4",
+            "2023-2024-Q1": "2023-2024-Q1",
+            "2023-2024-Q2": "2023-2024-Q2",
+            "2023-2024-Q3": "2023-2024-Q3",
+            "2023-2024-Q4": "2023-2024-Q4",
+            "2024-2025-Q1": "2024-2025-Q1",
+            "2024-2025-Q2": "2024-2025-Q2",
+            "2024-2025-Q3": "2024-2025-Q3",
+            "2024-2025-Q4": "2024-2025-Q4",
+            "2025-2026-Q1": "2025-2026-Q1",
+            "2025-2026-Q2": "2025-2026-Q2",
+            "2025-2026-Q3": "2025-2026-Q3",
+            "2025-2026-Q4": "2025-2026-Q4",
+            "2026-2027-Q1": "2026-2027-Q1",
+            "2026-2027-Q2": "2026-2027-Q2",
+            "2026-2027-Q3": "2026-2027-Q3",
+            "2026-2027-Q4": "2026-2027-Q4"
+          }
+        }
+      ]
+    }
+  ]
+}

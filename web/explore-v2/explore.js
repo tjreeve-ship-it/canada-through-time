@@ -696,15 +696,16 @@ const GROUPS = ['Questions', ...SECTIONS.map(s => s[0])];
 const TABNAME = g => g === 'Questions' ? 'Start here' : g;
 const GROUP_SHORT = { 'Where growth came from': 'Where growth came from', 'Housing and cost of living': 'Housing', 'Age and cities': 'Age & cities', 'Economy and jobs': 'Economy & jobs', 'Immigration and language': 'Immigration & language' };
 function drawNav() { requestAnimationFrame(fitReading); const cur = state.navQ ? 'Questions' : SEC_OF[M[state.m].group];
-  const tabs = `<div class="tabs">${GROUPS.map(g => `<button class="tab ${g === cur ? 'on' : ''}" data-g="${g}">${TABNAME(g)}</button>`).join('')}<button class="tab nb-tab" data-nbopen>Neighbourhoods</button><button class="tab nb-tab" data-clopen>Climate</button><button class="tab tools-tab" data-home>☰ All questions</button></div>`;
+  const tabs = `<div class="tabs">${GROUPS.map(g => `<button class="tab ${g === cur ? 'on' : ''}" data-g="${g}">${TABNAME(g)}</button>`).join('')}</div>`;
   if (cur === 'Questions') { document.getElementById('layers').innerHTML = tabs + `
     <div class="plates"><button class="opt qopt story ${state.story != null ? 'on' : ''}" data-story="0">The story: ${STORY.title}</button>${PATHS.map(p => `<button class="opt qopt ${state.q === p.id ? 'on' : ''}" data-q="${p.id}">${p.q}</button>`).join('')}</div>`; return; }
   const groups = SECTIONS.find(s => s[0] === cur)[1], g0 = M[state.m].group;
   document.getElementById('layers').innerHTML = tabs + (groups.length > 1 ? `<div class="subtabs">${groups.map(g => `<button class="sub ${g === g0 ? 'on' : ''}" data-sub="${g}">${GROUP_SHORT[g] || g}</button>`).join('')}</div>` : '')
-    + `<div class="plates">${MEASURES.filter(m => m.group === g0).map(m => `<button class="opt ${m.id === state.m ? 'on' : ''}" data-m="${m.id}">${m.label}</button>`).join('')}</div>`; }
+    + `<div class="plates">${MEASURES.filter(m => m.group === g0).map(m => `<button class="opt ${m.id === state.m ? 'on' : ''}" data-m="${m.id}">${m.label}</button>`).join('')}${cur === 'Money' ? '<button class="opt goworld" data-goworld="mn">Departments, grants and contracts →</button>' : ''}</div>`; }
 document.getElementById('layers').addEventListener('click', e => {
   if (e.target.closest('[data-story]')) { openStory(0); return; }
   if (e.target.closest('[data-home]')) { openHome(); return; }
+  { const gw = e.target.closest('[data-goworld]'); if (gw) { window.SHELL?.go(gw.dataset.goworld); return; } }
   if (e.target.closest('[data-nbopen]')) { window.CITIES?.open(); return; }
   if (e.target.closest('[data-clopen]')) { window.CLIMATE?.open(); return; }
   const qb = e.target.closest('[data-q]'); if (qb) { openPath(qb.dataset.q); return; }
@@ -1508,10 +1509,18 @@ const homeEl = document.createElement('div'); homeEl.id = 'home'; homeEl.hidden 
 function openHome(focusSearch = false) {
   const cards = HOME_CARDS.filter(c => M[c.m]).map((c, i) => { let big = ['', ''], sp = ''; try { big = c.big(); sp = sparkSvg(c.spark()); } catch (e) { console.warn('home card', c.q, e); }
     return `<button class="hcard" data-card="${i}"><span class="hsec">${c.sec}</span><span class="hq">${c.q}</span><span class="hbig">${big[0]}</span><span class="hsub">${big[1]}</span>${sp}</button>`; }).join('');
-  homeEl.innerHTML = `<div class="hin"><div class="hhead"><div class="hkick">Canada Through Time</div><h1>${YMAX - 1971} years of Canada, mapped from official data</h1>
-    <p>Every number traces back to its source: Statistics Canada, Immigration Canada and Elections Canada.</p></div>
-    <div class="hsearch"><input id="q-search" type="search" placeholder="${isPhone() ? "Search a place, topic or year" : "Search a place, a topic or a year (try “Alberta unemployment 2010”)"}" autocomplete="off" aria-label="Search"><div id="q-results" role="listbox"></div></div>
-    <div class="hgrid">${cards}<button class="hcard hnb" data-nbhome><span class="hsec">Cities</span><span class="hq">Who lives where in your city?</span><span class="hbig">6,247</span><span class="hsub">neighbourhoods in 50 cities: income, rent, age, origins, language</span></button><button class="hcard hnb" data-clhome><span class="hsec">Climate</span><span class="hq">How has Canada’s climate changed?</span><span class="hbig">1,072</span><span class="hsub">weather stations back to the 1800s, and the glaciers measured every year</span></button></div>
+  const popNow = (() => { try { const y = lastYear(M.pop); return [(M.pop.value('CAN', y) / 1e6).toFixed(1) + 'M', y]; } catch (e) { return null; } })();
+  const W = [['map', 'Canada over time', `${YMAX - 1971} years of provinces and territories: people, jobs, housing, government money and elections, on one timeline.`, popNow ? `${popNow[0]} people on July 1, ${popNow[1]}` : '', 'map'],
+    ['nb', 'Neighbourhoods', `Every census tract in ${Object.keys(CMA_IDX).length} cities: income, rent, age, where people were born, language.`, '2021 Census', 'nb'],
+    ['cl', 'Climate', 'Weather stations back to the 1800s, warming at each one, and the glaciers measured every year.', 'Environment Canada · WGMS', 'cl'],
+    ['mn', 'Follow the dollar', 'Where federal money goes, who gets grants and contributions, and who wins contracts.', 'Public Accounts · proactive disclosure', 'mn']];
+  const ICON = { map: '<path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2z M9 4v14 M15 6v14"/>', nb: '<path d="M3 21V9l5-3 5 3v12 M13 21V5l4-2 4 2v16 M6 12h4 M6 16h4 M16 9h2 M16 13h2 M16 17h2"/>', cl: '<path d="M12 3a2 2 0 0 0-2 2v9.3a4 4 0 1 0 4 0V5a2 2 0 0 0-2-2z M12 10v7"/>', mn: '<path d="M12 2v20 M17 6.5c-1-1.5-2.8-2.5-5-2.5-2.8 0-5 1.6-5 3.8 0 5 10 2.6 10 7.8 0 2.2-2.2 3.9-5 3.9-2.4 0-4.4-1.1-5.3-2.8"/>' };
+  homeEl.innerHTML = `<div class="hin"><div class="hhead"><div class="hkick">Canada Through Time</div><h1>Canada, measured.</h1>
+    <p>People, places, money and climate from ${YMAX - 1971} years of official data. Every number links back to the table it came from.</p></div>
+    <div class="hsearch"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="q-search" type="search" placeholder="${isPhone() ? "Search a place, topic or year" : "Try “Alberta unemployment 2010”, “toronto rent”, “glaciers”"}" autocomplete="off" aria-label="Search"><div id="q-results" role="listbox"></div></div>
+    <div class="hworlds">${W.map(([k, t, d, f, ic]) => `<button class="hworld w-${k}" data-goworld="${k}"><svg viewBox="0 0 24 24" aria-hidden="true">${ICON[ic]}</svg><span class="wt">${t}</span><span class="wd">${d}</span><span class="wf">${f}</span><span class="wgo">Open →</span></button>`).join('')}</div>
+    <h2 class="hq2">Questions to start with</h2>
+    <div class="hgrid">${cards}</div>
     <div class="hfoot"><button class="hgo" data-close>Explore the map freely →</button><button class="linkish" data-story="0">Or read the story: ${STORY.title}</button></div></div>`;
   homeEl.hidden = false; document.body.classList.add('home-on');
   const inp = document.getElementById('q-search'); inp.addEventListener('input', () => drawResults(inp.value)); inp.addEventListener('keydown', e => { if (e.key === 'Enter') { const r = searchAll(inp.value)[0]; if (r) { r.go(); closeHome(); } } if (e.key === 'Escape') closeHome(); });
@@ -1521,6 +1530,7 @@ function closeHome() { homeEl.hidden = true; document.body.classList.remove('hom
 homeEl.addEventListener('click', e => {
   if (e.target === homeEl || e.target.closest('[data-close]')) { closeHome(); return; }
   if (e.target.closest('[data-story]')) { closeHome(); openStory(0); return; }
+  const gw = e.target.closest('[data-goworld]'); if (gw) { closeHome(); window.SHELL?.go(gw.dataset.goworld); return; }
   if (e.target.closest('[data-nbhome]')) { closeHome(); window.CITIES?.open(); return; }
   if (e.target.closest('[data-clhome]')) { closeHome(); window.CLIMATE?.open(); return; }
   const c = e.target.closest('[data-card]'); if (c) { const d = HOME_CARDS[+c.dataset.card]; state.navQ = false; state.story = null; state.q = null; state.m = d.m; state.y = clampYear(M[d.m], lastYear(M[d.m])); state.p = d.place && d.place !== 'CAN' ? d.place : null; state.city = null; state.cmp = null; closeHome(); update();
@@ -1545,13 +1555,13 @@ function nbResults(t) {
   const pob = Object.entries(CMA_POB).find(([, n]) => !/^other|americas|europe|africa|asia|oceania/i.test(n) && words.some(w => w.length > 3 && norm(n).split(' ').includes(w)));
   const m = vm ? MS.find(x => x.k === 'vm') : pob ? MS.find(x => x.k === 'born') : MS.map(x => [x, words.filter(w => norm(x.l + ' ' + x.k + ' ' + x.q).includes(w)).length]).filter(r => r[1]).sort((a, b) => b[1] - a[1])[0]?.[0];
   const what = vm ? vm[1] : pob ? 'born in ' + pob[1] : m ? m.l.toLowerCase() : '';
-  return [{ t: `Neighbourhoods${city ? ' in ' + city[1] : ''}${what ? ': ' + what : ''}`, s: `Census tracts, 2021${city ? '' : ' · 50 cities'}`, nb: true, go: () => window.CITIES?.open({ city: city ? city[0] : null, m: m?.k, sub: vm ? vm[0] : pob ? pob[0] : null }) }];
+  return [{ t: `Neighbourhoods${city ? ' in ' + city[1] : ''}${what ? ': ' + what : ''}`, s: `Census tracts, 2021${city ? '' : ' · 50 cities'}`, nb: true, go: () => (window.SHELL ? window.SHELL.go('nb', { city: city ? city[0] : null, m: m?.k, sub: vm ? vm[0] : pob ? pob[0] : null }) : window.CITIES?.open({ city: city ? city[0] : null, m: m?.k, sub: vm ? vm[0] : pob ? pob[0] : null })) }];
 }
 function searchAll(raw) {
   const t = norm(raw).trim(); if (!t) return [];
   const nb = nbResults(t);
   const clw = t.split(' ').find(w => /^(climate|temperature|temperatures|warming|warmer|hotter|heat|weather|glacier|glaciers|ice|precipitation|rain|rainfall|drought|drier|wetter)$/.test(w));
-  const cl = clw ? [{ t: /glacier|ice/.test(clw) ? 'Glaciers losing ice' : /precip|rain|drought|drier|wetter/.test(clw) ? 'Precipitation vs. 1961–1990' : 'Temperature vs. 1961–1990', s: 'Climate · weather stations and glaciers', go: () => window.CLIMATE?.open({ mode: /glacier|ice/.test(clw) ? 'ice' : /precip|rain|drought|drier|wetter/.test(clw) ? 'precip' : 'temp' }) }] : [];
+  const cl = clw ? [{ t: /glacier|ice/.test(clw) ? 'Glaciers losing ice' : /precip|rain|drought|drier|wetter/.test(clw) ? 'Precipitation vs. 1961–1990' : 'Temperature vs. 1961–1990', s: 'Climate · weather stations and glaciers', go: () => window.SHELL ? window.SHELL.go('cl', { mode: /glacier|ice/.test(clw) ? 'ice' : /precip|rain|drought|drier|wetter/.test(clw) ? 'precip' : 'temp' }) : window.CLIMATE?.open({ mode: /glacier|ice/.test(clw) ? 'ice' : /precip|rain|drought|drier|wetter/.test(clw) ? 'precip' : 'temp' }) }] : [];
   const yr = (t.match(/\b(19[7-9]\d|20[0-4]\d)\b/) || [])[1]; let rest = t.replace(/\b(19|20)\d\d\b/, ' ');
   let place = null; for (const [g, al] of Object.entries(PLACE_ALIASES)) for (const a of [...al, g.toLowerCase()]) { const re = new RegExp(`(^| )${a.replace('.', '\\.')}( |$)`); if (re.test(rest)) { place = g; rest = rest.replace(re, ' '); break; } }
   const words = rest.split(' ').filter(w => w.length > 1).flatMap(w => (SYN[w] || w).split(' '));
@@ -1564,6 +1574,9 @@ function searchAll(raw) {
   for (const p of PATHS) if (words.some(w => norm(p.q).includes(w))) out.push({ t: p.q, s: 'Question', go: () => openPath(p.id) });
   if (nb.length) { const cityHit = !nb[0].t.endsWith('Neighbourhoods') && nb[0].t.includes(' in '); if (cityHit && !place) out.unshift(...nb); else out.push(...nb); }
   if (cl.length) out.unshift(...cl);
+  const mw = t.split(' ').find(w => /^(grant|grants|contribution|contributions|contract|contracts|contractor|vendor|vendors|spending|spend|spent|budget|dollar|dollars|subsidy|subsidies|procurement|department|departments|ministry)$/.test(w));
+  if (mw) { const tab = /^contract|vendor|procure/.test(mw) ? 'contracts' : /^grant|contrib|subsid/.test(mw) ? 'grants' : 'spend';
+    out.unshift({ t: { spend: 'Where Ottawa’s money goes', grants: 'Grants and contributions', contracts: 'Federal contracts' }[tab], s: 'Follow the dollar · Public Accounts and proactive disclosure', go: () => window.SHELL ? window.SHELL.go('mn', { tab }) : window.MONEY?.open({ tab }) }); }
   return out.slice(0, 8);
 }
 function drawResults(v) { LAST_RESULTS = searchAll(v); document.getElementById('q-results').innerHTML = LAST_RESULTS.map((r, i) => `<button data-res="${i}" class="${i ? '' : 'first'}"><b>${r.t}</b><span>${r.s}</span></button>`).join('') || (v.trim() ? '<div class="none">No match. Try a province, a topic like “rent” or “jobs”, or a year.</div>' : ''); }
