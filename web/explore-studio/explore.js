@@ -1291,13 +1291,17 @@ document.addEventListener('click', e => { if (!e.target.closest('[data-studio-op
   d.showModal(); });
 if (STUDIO) { const SC = b64d(STUDIO), m = M[SC.layer]; state.m = SC.layer; state.p = SC.place || null; state.story = null; state.q = null; state.city = null;
   const years = []; for (let y = SC.from; y <= SC.to; y++) if (!m.only || m.only.includes(y)) years.push(y);
-  const fps = SC.fps || 30, nI = Math.round(SC.intro * fps), per = Math.max(1, Math.round(SC.perYear * fps)), nO = Math.round(SC.outro * fps), N = nI + years.length * per + nO;
+  const fps = SC.fps || 30, nI = Math.round(SC.intro * fps), per = Math.max(1, Math.round(SC.perYear * fps)), nO = Math.round(SC.outro * fps), nS = SC.summary ? Math.round((SC.summary.seconds || 6) * fps) : 0, N = nI + years.length * per + nS + nO, fS = N - nO - nS;
   const stage = document.createElement('div'); stage.id = 'stage';
   const srcLine = m.src.map(x => registry[x]).map(r => `${r.publisher}${r.table_id ? ', table ' + r.table_id : ''}`).filter((x, i, a) => a.indexOf(x) === i).join(' · ');
-  stage.innerHTML = `<div id="st-sub"></div><div id="st-ann"></div><div id="st-foot"><span>Source: ${srcLine}. ${SC.motion === 'stepped' ? 'Annual published values; nothing is interpolated.' : 'Every figure shown is a published annual value. Movement between years is animation.'}</span><b>${SC.credit || ''}</b></div>
+  stage.innerHTML = `<div id="st-hook"></div><div id="st-sum"></div><div id="st-sub"></div><div id="st-ann"></div><div id="st-foot"><span>Source: ${srcLine}. ${SC.motion === 'stepped' ? 'Annual published values; nothing is interpolated.' : 'Every figure shown is a published annual value. Movement between years is animation.'}</span><b>${SC.credit || ''}</b></div>
     <div id="st-bar"><i></i>${years.filter(y => (y % 10 === 0 && years.at(-1) - y >= (VERT ? 8 : 4) && y - years[0] >= 4) || y === years[0] || y === years.at(-1)).map(y => `<span style="left:${(years.indexOf(y) + 0.5) / years.length * 100}%">${y}</span>`).join('')}</div>
-    <div id="st-out"><h3>Sources and method</h3>${m.src.map(x => registry[x]).map(r => `<p><b>${r.publisher}</b>${r.table_id ? ' · table ' + r.table_id : ''} · ${r.title}<br><small>${r.licence} · retrieved ${r.retrieved}</small></p>`).join('')}<p class="cv">${m.q}${m.cover ? ' ' + m.cover + '.' : ''} Every figure is the published value for its year${isPrelim(m, years.at(-1)) ? `; ${years.at(-1)} is preliminary` : ''}.${SC.motion === 'stepped' ? '' : ' Columns and colours glide between years as animation; in-between positions are not estimates.'} This video describes the data; it does not explain causes.</p></div>`;
-  document.getElementById('app').appendChild(stage); document.getElementById('st-sub').textContent = SC.subtitle || '';
+    <div id="st-out"><h3>Sources and method</h3>${m.src.map(x => registry[x]).map(r => `<p><b>${r.publisher}</b>${r.table_id ? ' · table ' + r.table_id : ''} · ${r.title}<br><small>${r.licence} · retrieved ${r.retrieved}</small></p>`).join('')}<p class="cv">${m.q}${m.cover ? ' ' + m.cover + '.' : ''} Every figure is the published value for its year${isPrelim(m, years.at(-1)) ? `; ${years.at(-1)} is preliminary` : ''}.${SC.motion === 'stepped' ? '' : ' Columns and colours glide between years as animation; in-between positions are not estimates.'} ${SC.limit || 'This video describes the data; it does not explain causes.'}</p></div>`;
+  document.getElementById('app').appendChild(stage); document.getElementById('st-sub').textContent = SC.hook ? '' : SC.subtitle || '';
+  // hook and summary text come from the configuration, which tools/build_pilot_config.py writes from the computed figures
+  const esc = t => String(t).replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
+  document.getElementById('st-hook').innerHTML = (SC.hook ? [].concat(SC.hook) : []).map((t, i) => `<p class="h${i}">${esc(t)}</p>`).join('');
+  document.getElementById('st-sum').innerHTML = SC.summary ? SC.summary.items.map(it => `<div class="row ${it.scope === 'period' ? 'period' : 'year'}"><b>${esc(it.big)}</b><span><i>${esc(it.kicker)}</i>${esc(it.text)}</span></div>`).join('') : '';
   const ease = t => t * t * (3 - 2 * t); let base = null, lastY = null, relY = null;
   const cam = t => { const e = ease(t), v = { ...base, target: [...base.target] };
     if (SC.camera === 'push') { v.zoom = base.zoom - 0.17 + 0.15 * e; v.rotationOrbit = -11 + 8 * e; v.rotationX = base.rotationX + 3 - 5 * e; }
@@ -1305,10 +1309,10 @@ if (STUDIO) { const SC = b64d(STUDIO), m = M[SC.layer]; state.m = SC.layer; stat
     else if (SC.camera === 'orbit') { v.rotationOrbit = -15 + 22 * e; }
     return v; };
   const smooth = SC.motion !== 'stepped', clamp01 = x => Math.max(0, Math.min(1, x)), FADE = 9;
-  const annWin = (SC.annotations || []).map(a => { const i = years.findIndex(y => y >= a.year); if (i < 0) return null; const hold = a.hold || Math.max(2, Math.round(2.4 / SC.perYear)); return { text: a.text, f0: nI + i * per, f1: Math.min(N - nO, nI + (i + hold) * per) }; }).filter(Boolean);
+  const annWin = (SC.annotations || []).map(a => { const i = years.findIndex(y => y >= a.year); if (i < 0) return null; const hold = a.hold || Math.max(2, Math.round(2.4 / SC.perYear)); return { text: a.text, f0: nI + i * per, f1: Math.min(fS, nI + (i + hold) * per) }; }).filter(Boolean);
   annWin.forEach((a, k) => { const nx = annWin[k + 1]; if (nx && a.f1 > nx.f0) a.f1 = nx.f0; });   // a note fades out before the next one starts
   const renderFrame = f => { f = Math.max(0, Math.min(N - 1, Math.round(f))); if (!base) base = fitView();
-    const c = (f - nI) / per, i = f < nI ? 0 : Math.min(years.length - 1, Math.floor(c)), y = years[i], out = f >= N - nO, intro = f < nI;
+    const c = (f - nI) / per, i = f < nI ? 0 : Math.min(years.length - 1, Math.floor(c)), y = years[i], out = f >= N - nO, intro = f < nI, sum = nS > 0 && f >= fS && !out;
     // playhead: each year's published value sits at the middle of that year's time slot; marks glide linearly between neighbours
     if (smooth) { const u = Math.max(0, Math.min(years.length - 1, c - 0.5)), j = Math.min(years.length - 2, Math.floor(u)); TW = years.length > 1 ? { ya: years[j], yb: years[j + 1], k: u - j } : null; }
     view = cam(N > 1 ? f / (N - 1) : 0); theDeck.setProps({ viewState: view, controller: false, useDevicePixels: +Q.get('ss') || Math.max(2, devicePixelRatio) });   // supersample the map for video
@@ -1317,12 +1321,13 @@ if (STUDIO) { const SC = b64d(STUDIO), m = M[SC.layer]; state.m = SC.layer; stat
     // text fades are tied to the frame number (never to a clock), so a frame always looks the same
     const A = annWin.filter(a => f >= a.f0 && f < a.f1).at(-1), aEl = document.getElementById('st-ann');
     if (A) aEl.textContent = A.text; aEl.style.opacity = A ? clamp01(Math.min(f - A.f0 + 1, A.f1 - f) / FADE) : 0;
-    const kin = clamp01((f - nI + 1) / FADE), kintro = clamp01((nI - f) / FADE), kout = clamp01((f - (N - nO) + 1) / (FADE * 1.5));
+    const kin = clamp01((f - nI + 1) / FADE), kintro = clamp01((nI - f) / FADE), kout = clamp01((f - (N - nO) + 1) / (FADE * 1.5)), kend = clamp01((f - fS + 1) / (FADE * 1.5)), ksum = nS ? clamp01(Math.min(f - fS + 1, N - nO - f) / FADE) : 0;
+    document.getElementById('st-hook').style.opacity = kintro; document.getElementById('st-sum').style.opacity = ksum;
     document.getElementById('st-sub').style.opacity = kintro; document.getElementById('st-out').style.opacity = kout;
-    for (const id of ['finding', 'r-meta', 'legend']) { const el = document.getElementById(id); el.style.visibility = 'visible'; el.style.opacity = VERT ? Math.min(kin, 1 - kout) : (id === 'finding' || !VERT) ? kin : 1; }
+    for (const id of ['finding', 'r-meta', 'legend']) { const el = document.getElementById(id); el.style.visibility = 'visible'; el.style.opacity = VERT ? Math.min(kin, 1 - kend) : (id === 'finding' || !VERT) ? kin : 1; }
     document.body.classList.toggle('st-intro', intro); document.body.classList.toggle('st-outro', out);
     stage.querySelector('#st-bar i').style.width = (clamp01((f - nI + 1) / (years.length * per)) * 100) + '%';
-    return { frame: f, year: y, phase: intro ? 'intro' : out ? 'outro' : 'run', title: SC.title, finding: intro ? '' : document.getElementById('finding').innerText, annotation: A && aEl.style.opacity > 0.5 ? A.text : '', between: smooth && TW ? [TW.ya, TW.yb, +TW.k.toFixed(3)] : null }; };
+    return { frame: f, year: y, phase: intro ? 'intro' : out ? 'outro' : sum ? 'summary' : 'run', title: SC.title, finding: intro ? '' : document.getElementById('finding').innerText, annotation: A && aEl.style.opacity > 0.5 ? A.text : '', between: smooth && TW ? [TW.ya, TW.yb, +TW.k.toFixed(3)] : null }; };
   window.CTT = { get ready() { return window.READY === true && (TX !== 'relief' || !!RELIEF.img); }, frameCount: N, fps, renderFrame, config: SC, years };
   if (Q.get('render') == null) { // preview: plays in real time, with a scrubber
     const ctl = document.createElement('div'); ctl.id = 'st-ctl'; ctl.innerHTML = `<button aria-label="Play or pause">❚❚</button><input type="range" min="0" max="${N - 1}" value="0" aria-label="Position"><span></span><em>Preview · ${Math.round(N / fps)} s${VERT ? '' : ' · export with render/timelapse.py'}</em>`;

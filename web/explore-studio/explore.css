@@ -610,3 +610,14 @@ body.st-vert #st-out { top: 300px; box-shadow: 0 0 0 1px var(--hairline); }
 body.st-vert #st-bar { bottom: 384px; } body.st-vert #st-ann { bottom: 420px; } body.st-vert #st-foot { bottom: 290px; }
 /* vertical: the note sits under the source line (still above the bottom 15% that platforms cover), so it never hides the map */
 body.st-vert #st-ann { bottom: 206px; right: 110px; }
+
+/* Short: hook (intro) and takeaways (before the source card). Both sit between the year and the map, so no map label is covered. */
+#st-hook, #st-sum { position: absolute; left: 48px; top: 232px; width: 390px; opacity: 0; }
+#st-hook p { margin: 0 0 10px; font: 600 22px/1.2 var(--font-display); color: var(--ink-1); } #st-hook p.h1 { color: var(--ink-2); font-weight: 500; }
+#st-sum .row { display: flex; align-items: center; gap: 14px; padding: 9px 0; border-top: 1px solid var(--hairline); } #st-sum .row:first-child { border-top: 0; }
+#st-sum b { flex: 0 0 auto; min-width: 150px; font: 600 26px/1 var(--font-display); color: var(--ink-1); font-variant-numeric: tabular-nums; }
+#st-sum span { font: 400 13px/1.3 var(--font-ui); color: var(--ink-2); } #st-sum i { display: table; font: 600 10.5px/1 var(--font-ui); font-style: normal; letter-spacing: .06em; text-transform: uppercase; padding: 3px 6px; border-radius: 3px; margin-bottom: 4px; }
+#st-sum .period i { background: var(--ink-1); color: var(--bg, #EFEADF); } #st-sum .year i { box-shadow: inset 0 0 0 1.5px var(--accent); color: var(--ink-1); }
+body.st-vert #st-hook { left: 40px; right: 40px; top: 292px; width: auto; } body.st-vert #st-hook p { font-size: 35px; line-height: 1.16; margin-bottom: 12px; }
+body.st-vert #st-sum { left: 40px; right: 40px; top: 284px; width: auto; } body.st-vert #st-sum .row { padding: 10px 0; gap: 16px; }
+body.st-vert #st-sum b { min-width: 236px; font-size: 40px; } body.st-vert #st-sum span { font-size: 16.5px; } body.st-vert #st-sum i { font-size: 12.5px; padding: 4px 7px; margin-bottom: 5px; }
