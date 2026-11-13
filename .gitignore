@@ -15,3 +15,6 @@ data/raw/wgms/DOI-WGMS-FoG-2026-02-10.zip
 data/raw/tbs/grants.csv
 data/raw/tbs/contracts.csv
 site/
+
+# AHCCD annual (116 MB API export). Re-download with the URL in the registry; the pipeline checks its SHA-256.
+data/raw/eccc/ahccd_annual.json
