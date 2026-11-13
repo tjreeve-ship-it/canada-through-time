@@ -30,7 +30,7 @@
 </style></head><body>
 <div id="t"><img id="bg"><div class="wash"></div><div class="txt"><div class="k" id="k"></div><div class="big" id="big"></div><div class="line" id="line"></div></div><div class="brand">The Canadian Data Project</div></div>
 <script>
-const Q = new URLSearchParams(location.search), T = JSON.parse(decodeURIComponent(Q.get('t')));
+const Q = new URLSearchParams(location.search), T = JSON.parse(Q.get('t'));
 document.body.className = Q.get('f') === 'h' ? 'h' : 'v';
 document.getElementById('bg').src = T.bg; document.getElementById('k').textContent = T.kicker; document.getElementById('big').innerHTML = T.big; document.getElementById('line').innerHTML = T.line;
 Promise.all([document.fonts.ready, new Promise(r => { const i = document.getElementById('bg'); i.complete ? r() : (i.onload = r, i.onerror = r); })]).then(() => { window.READY = true; });
