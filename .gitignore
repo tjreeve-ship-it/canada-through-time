@@ -9,3 +9,5 @@ checkpoints/*.tar.gz
 data/raw/statcan/98100302-eng.zip
 # 2021 census tract profile (250 MB zip). Re-download from the registry URL; the pipeline checks its SHA-256.
 data/raw/census2021/98-401-X2021007_eng_CSV.zip
+# WGMS Fluctuations of Glaciers database (39 MB zip). Re-download from the registry URL; the pipeline checks its SHA-256.
+data/raw/wgms/DOI-WGMS-FoG-2026-02-10.zip
