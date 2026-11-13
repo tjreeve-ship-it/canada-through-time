@@ -1,0 +1,204 @@
+{
+ "id": "short-who-moved-where",
+ "format": "9x16",
+ "fps": 30,
+ "theme": "ember",
+ "title": "Who moved where in Canada",
+ "kicker": "Moves between provinces",
+ "periods": [
+  1971,
+  2024
+ ],
+ "intro": 4.0,
+ "perPeriod": 0.42,
+ "endHold": 1.0,
+ "outro": 7.0,
+ "hook": [
+  "Since 1971, B.C. and Alberta have each gained <em>700,000+</em> people from other provinces.",
+  "Quebec has lost 650,000+."
+ ],
+ "hookNote": "Net: people who moved in from other provinces minus people who moved out, July 1971 to June 2025.",
+ "introFocus": [
+  "BC",
+  "AB",
+  "QC"
+ ],
+ "introCam": "westwide",
+ "beats": [
+  {
+   "period": 1977,
+   "hold": 2.2,
+   "kicker": "1977–78",
+   "cam": "east",
+   "focus": [
+    "QC",
+    "ON"
+   ],
+   "flow": [
+    "QC",
+    "ON"
+   ],
+   "text": "Quebec to Ontario: 46,453 people. The largest one-year flow between two provinces since 1971."
+  },
+  {
+   "period": 1983,
+   "hold": 2.2,
+   "kicker": "1983–84",
+   "cam": "west",
+   "focus": [
+    "AB"
+   ],
+   "text": "Alberta: +44,250 net in 1980–81, then −31,986 in 1983–84."
+  },
+  {
+   "period": 2023,
+   "hold": 2.4,
+   "kicker": "2023–24",
+   "cam": "centre",
+   "focus": [
+    "AB",
+    "ON"
+   ],
+   "flow": [
+    "ON",
+    "AB"
+   ],
+   "text": "Alberta: +48,394 net, its largest gain since 1971. Ontario: −42,689."
+  }
+ ],
+ "summary": {
+  "seconds": 6.5,
+  "title": "Net, July 1971 to June 2025",
+  "focus": [
+   "BC",
+   "AB",
+   "QC"
+  ],
+  "items": [
+   {
+    "dir": "up",
+    "big": "+718,665",
+    "place": "British Columbia",
+    "text": "gained from other provinces"
+   },
+   {
+    "dir": "up",
+    "big": "+713,526",
+    "place": "Alberta",
+    "text": "gained from other provinces"
+   },
+   {
+    "dir": "down",
+    "big": "−652,072",
+    "place": "Quebec",
+    "text": "lost to other provinces"
+   }
+  ]
+ },
+ "outro_card": {
+  "title": "Sources and method",
+  "lines": [
+   {
+    "cls": "src",
+    "text": "Statistics Canada, Table 17-10-0045-01: interprovincial migrants by province of origin and destination, quarterly. Statistics Canada Open Licence."
+   },
+   {
+    "text": "Each period runs July 1 to June 30 (four quarters summed). Net = moved in from other provinces minus moved out. Arc width shows how many people moved; dots show direction. Movement between years is animation; figures are published values."
+   },
+   {
+    "text": "July 2025 to June 2026 is not shown: it is partly preliminary and based on a new data source."
+   },
+   {
+    "cls": "lim",
+    "text": "This video shows where people moved, not why."
+   }
+  ]
+ },
+ "raceTitle": "Net gain or loss since July 1971",
+ "raceNote": "Moved in from other provinces minus moved out. Territories not shown.",
+ "credit": "The Canadian Data Project",
+ "sourceLine": "Source: Statistics Canada, Table 17-10-0045-01. Net = moved in minus moved out. Territories not in bars. Movement between years is animation.",
+ "callouts": {
+  "NB": [
+   7380,
+   1330
+  ],
+  "NS": [
+   8460,
+   1060
+  ],
+  "PE": [
+   8330,
+   2120
+  ]
+ },
+ "relief": {
+  "b": [
+   3660,
+   630,
+   9040,
+   5270
+  ],
+  "opacity": 0.22
+ },
+ "netScale": 45000,
+ "minFlow": 700,
+ "peoplePerDot": 1500,
+ "cameras": {
+  "wide": {
+   "t": [
+    6280,
+    2350
+   ],
+   "z": -2.98,
+   "x": 58,
+   "o": -4
+  },
+  "westwide": {
+   "t": [
+    5500,
+    2750
+   ],
+   "z": -2.75,
+   "x": 58,
+   "o": -8
+  },
+  "end": {
+   "t": [
+    6280,
+    2300
+   ],
+   "z": -3.02,
+   "x": 60,
+   "o": -2
+  },
+  "west": {
+   "t": [
+    4900,
+    2500
+   ],
+   "z": -2.3,
+   "x": 55,
+   "o": -12
+  },
+  "east": {
+   "t": [
+    7250,
+    2150
+   ],
+   "z": -2.35,
+   "x": 56,
+   "o": 6
+  },
+  "centre": {
+   "t": [
+    5800,
+    2300
+   ],
+   "z": -2.6,
+   "x": 56,
+   "o": -6
+  }
+ },
+ "figures_sha256": "38058dbf758082ef8c99b8af0dd6cd1dea62fbaa1b4432e90f02b1ef38f042ca"
+}
