@@ -449,3 +449,239 @@ sources:
       - "2021 Census income refers to 2020, when temporary pandemic income supports lowered the share of income spent on housing; Statistics Canada attributes much of the 2016→2021 decline to these supports (The Daily, 2023-01-23)."
       - "On-reserve households are not examined, which matters most where many people live on reserve."
       - "2011 values come from the voluntary National Household Survey and are not shown."
+
+  # ------------------------------------------------------------------ immigration, economy, language bundle (retrieved 2026-11-13)
+  ircc_pr_citizenship:
+    title: "Canada – Admissions of Permanent Residents by Country of Citizenship"
+    publisher: "Immigration, Refugees and Citizenship Canada (IRCC)"
+    landing_url: "https://open.canada.ca/data/en/dataset/f7e5498e-0ad8-4417-85c9-9b8aff9b9eda"
+    download_url: "https://www.ircc.canada.ca/opendata-donneesouvertes/data/EN_ODP-PR-Citz.xlsx"
+    raw_file: "data/raw/ircc/EN_ODP-PR-Citz.xlsx"
+    sha256: "6a8d3964a0680d2fa47a24f9567525194508a77224e6a31ccbf4687e28065680"
+    retrieved: "2026-11-13"
+    release_in_file: "Source: IRCC, August 31, 2026; covers January 2015 to August 2026"
+    reporting_period: "Monthly, with quarterly and calendar-year totals"
+    coverage: "Canada only (no province split in this file)"
+    units: "Persons admitted as permanent residents"
+    licence: "Open Government Licence – Canada"
+    licence_url: "https://open.canada.ca/en/open-government-licence-canada"
+    attribution: "Source: Immigration, Refugees and Citizenship Canada, Admissions of Permanent Residents by Country of Citizenship (open data). Contains information licensed under the Open Government Licence – Canada."
+    quality_class: official_statistics
+    methodology_notes:
+      - "Counts are admissions (people who became permanent residents in the period), by country of citizenship, not country of birth."
+      - "IRCC publishes values 0–5 as '--' and rounds all other values to the nearest 5; country rows may not add exactly to the published Total. This platform keeps '--' as suppressed (no value), never zero, and uses the published Total for shares of all admissions."
+      - "IRCC marks the data as preliminary and subject to change."
+      - "2026 covers January to August only and is not compared with full years."
+    limitations:
+      - "Admissions are not Statistics Canada's immigrant count in table 17-10-0008-01 (July–June years, different timing of record)."
+      - "Temporary residents (work and study permit holders, asylum claimants) are not in this file until they become permanent residents."
+
+  ircc_pr_citizenship_category:
+    title: "Canada - Admissions of Permanent Residents by Country of Citizenship and Immigration Category"
+    publisher: "Immigration, Refugees and Citizenship Canada (IRCC)"
+    landing_url: "https://open.canada.ca/data/en/dataset/f7e5498e-0ad8-4417-85c9-9b8aff9b9eda"
+    download_url: "https://www.ircc.canada.ca/opendata-donneesouvertes/data/EN_ODP-PR-CitzImmCat.xlsx"
+    raw_file: "data/raw/ircc/EN_ODP-PR-CitzImmCat.xlsx"
+    sha256: "f7ad67846269e1674b99166138ca982cf0307f5a5e2870b4ebf44199b4ae4544"
+    retrieved: "2026-11-13"
+    release_in_file: "Source: IRCC, August 31, 2026; covers January 2015 to August 2026"
+    reporting_period: "Calendar-year totals"
+    coverage: "Canada only"
+    units: "Persons admitted as permanent residents"
+    licence: "Open Government Licence – Canada"
+    licence_url: "https://open.canada.ca/en/open-government-licence-canada"
+    attribution: "Source: Immigration, Refugees and Citizenship Canada, Admissions of Permanent Residents by Country of Citizenship and Immigration Category (open data). Contains information licensed under the Open Government Licence – Canada."
+    quality_class: official_statistics
+    methodology_notes:
+      - "Category totals used: Economic, Sponsored Family, Resettled Refugee & Protected Person in Canada, All Other Immigration (IRCC's own subtotal rows)."
+      - "Same rounding and suppression as the country file: 0-5 shown as '--' (kept as no value), others rounded to 5."
+    limitations:
+      - "Admissions, not residents; preliminary."
+
+  ircc_pr_province_category:
+    title: "Canada - Admissions of Permanent Residents by Province/Territory of Intended Destination and Immigration Category"
+    publisher: "Immigration, Refugees and Citizenship Canada (IRCC)"
+    landing_url: "https://open.canada.ca/data/en/dataset/f7e5498e-0ad8-4417-85c9-9b8aff9b9eda"
+    download_url: "https://www.ircc.canada.ca/opendata-donneesouvertes/data/EN_ODP-PR-ProvImmCat.xlsx"
+    raw_file: "data/raw/ircc/EN_ODP-PR-ProvImmCat.xlsx"
+    sha256: "bf00250d2df17f4847483ffbef1b343a01d46e16cef310c0c30ede868dad4f84"
+    retrieved: "2026-11-13"
+    release_in_file: "Source: IRCC, August 31, 2026; covers January 2015 to August 2026"
+    reporting_period: "Calendar-year totals"
+    coverage: "Provinces and territories of intended destination"
+    units: "Persons admitted as permanent residents"
+    licence: "Open Government Licence – Canada"
+    licence_url: "https://open.canada.ca/en/open-government-licence-canada"
+    attribution: "Source: Immigration, Refugees and Citizenship Canada, Admissions of Permanent Residents by Province/Territory of Intended Destination and Immigration Category (open data). Contains information licensed under the Open Government Licence – Canada."
+    quality_class: official_statistics
+    methodology_notes:
+      - "Province is the intended destination at admission, not where the person later lives."
+      - "Same rounding and suppression as the country file."
+    limitations:
+      - "Admissions, not residents; preliminary."
+
+  ircc_facts_2016_source_country:
+    title: "Facts and Figures 2016: Immigration Overview - Canada – Permanent residents by source country, 2007 - 2016"
+    publisher: "Immigration, Refugees and Citizenship Canada (IRCC)"
+    landing_url: "https://open.canada.ca/data/en/dataset/1d3963d6-eea9-4a4b-8e4a-5c7f2deb7f29"
+    download_url: "https://www.ircc.canada.ca/opendata-donneesouvertes/data/IRCC_FF_PR_2016_15_E.xls"
+    raw_file: "data/raw/ircc/IRCC_FF_PR_2016_15_E.xls"
+    sha256: "fde13081470c357ba5965be99b08a94ae68ba1d8fdf39f9de298cfb871d2ecec"
+    retrieved: "2026-11-13"
+    release_in_file: "Workbook saved 2018-04-13; covers 2007-2016"
+    reporting_period: "Calendar year"
+    coverage: "Canada only"
+    units: "Persons admitted as permanent residents"
+    licence: "Open Government Licence – Canada"
+    licence_url: "https://open.canada.ca/en/open-government-licence-canada"
+    attribution: "Source: Immigration, Refugees and Citizenship Canada, Facts and Figures 2016: Permanent residents by source country, 2007-2016 (open data). Contains information licensed under the Open Government Licence – Canada."
+    quality_class: official_statistics
+    methodology_notes:
+      - "Source country is based on country of citizenship (note in file)."
+      - "Used for 2007-2014 only. For 2015-2016 the newer monthly file is used; the two vintages differ slightly (e.g. 2015 total 271,816 here vs 271,840 in the monthly file)."
+    limitations:
+      - "Earlier data vintage; not rounded; not updated since 2018."
+
+  statcan_98100302:
+    title: "Immigrant status and period of immigration by place of birth and citizenship: Canada, provinces and territories and census metropolitan areas with parts"
+    publisher: "Statistics Canada"
+    table_id: "98-10-0302-01"
+    doi: "https://doi.org/10.25318/9810030201-eng"
+    landing_url: "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=9810030201"
+    download_url: "https://www150.statcan.gc.ca/n1/tbl/csv/98100302-eng.zip"
+    raw_file: "data/raw/statcan/98100302-eng.zip"
+    sha256: "5fceed4d0f50e33aace212fe63691cc416425025cdda21775abbfa0f19bd5ed0"
+    retrieved: "2026-11-13"
+    release_in_file: "File dated 2022-10-20; 2021 Census"
+    reporting_period: "Census day, May 11, 2021"
+    coverage: "Canada, provinces and territories, census metropolitan areas"
+    units: "Persons"
+    licence: "Statistics Canada Open Licence"
+    licence_url: "https://www.statcan.gc.ca/en/reference/licence"
+    attribution: "Source: Statistics Canada. Table 98-10-0302-01 Immigrant status and period of immigration by place of birth and citizenship."
+    quality_class: official_statistics
+    methodology_notes:
+      - "2021 Census long-form (25% sample) data for the population in private households; counts are randomly rounded by Statistics Canada."
+      - "Place of birth is the country of birth, which can differ from citizenship."
+    limitations:
+      - "One census year only in this table; it describes immigrants living in Canada in 2021, not yearly arrivals."
+
+  statcan_17100121:
+    title: "Estimates of the number of non-permanent residents by type, quarterly"
+    publisher: "Statistics Canada"
+    table_id: "17-10-0121-01"
+    doi: "https://doi.org/10.25318/1710012101-eng"
+    landing_url: "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710012101"
+    download_url: "https://www150.statcan.gc.ca/n1/tbl/csv/17100121-eng.zip"
+    raw_file: "data/raw/statcan/17100121-eng.zip"
+    sha256: "bcea73c950611f9160a625258e46f4e73de5a1504d6b0db79e2a5468332aa9fc"
+    retrieved: "2026-11-13"
+    release_in_file: "File dated 2026-09-23; covers 2021-07-01 to 2026-07-01"
+    reporting_period: "Quarterly (Jan 1, Apr 1, Jul 1, Oct 1)"
+    coverage: "Canada, 10 provinces, 3 territories"
+    units: "Persons"
+    licence: "Statistics Canada Open Licence"
+    licence_url: "https://www.statcan.gc.ca/en/reference/licence"
+    attribution: "Source: Statistics Canada. Table 17-10-0121-01 Estimates of the number of non-permanent residents by type, quarterly."
+    quality_class: official_statistics
+    methodology_notes:
+      - "Final up to July 1, 2023; updated from October 1, 2023 to April 1, 2026; preliminary from July 1, 2026 (table note 1)."
+      - "Types are mutually exclusive: asylum claimants, protected persons and related groups are classified first, then permit holders (note 5). 'Other' is mainly family members of permit holders (note 6)."
+    limitations:
+      - "Starts July 1, 2021, after a method change; not comparable with earlier published counts (note 3)."
+
+  statcan_36100222:
+    title: "Gross domestic product, expenditure-based, provincial and territorial, annual"
+    publisher: "Statistics Canada"
+    table_id: "36-10-0222-01"
+    doi: "https://doi.org/10.25318/3610022201-eng"
+    landing_url: "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3610022201"
+    download_url: "https://www150.statcan.gc.ca/n1/tbl/csv/36100222-eng.zip"
+    raw_file: "data/raw/statcan/36100222-eng.zip"
+    sha256: "fc1af9b0de0ba21ba5de85beaba358f3ffad710a3361188887ec7497da66edf8"
+    retrieved: "2026-11-13"
+    release_in_file: "File dated 2026-11-05; covers 1981–2025"
+    reporting_period: "Calendar year"
+    coverage: "Canada, provinces and territories (Northwest Territories including Nunavut before 1999)"
+    units: "Dollars, millions"
+    licence: "Statistics Canada Open Licence"
+    licence_url: "https://www.statcan.gc.ca/en/reference/licence"
+    attribution: "Source: Statistics Canada. Table 36-10-0222-01 Gross domestic product, expenditure-based, provincial and territorial, annual."
+    quality_class: official_statistics
+    methodology_notes:
+      - "Current prices are nominal dollars of each year. Chained (2017) dollars remove price change; chained values are not additive across provinces."
+    limitations:
+      - "The most recent years are revised in later releases."
+
+  statcan_14100327:
+    title: "Labour force characteristics by gender and detailed age group, annual"
+    publisher: "Statistics Canada"
+    table_id: "14-10-0327-01"
+    doi: "https://doi.org/10.25318/1410032701-eng"
+    landing_url: "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410032701"
+    download_url: "https://www150.statcan.gc.ca/n1/tbl/csv/14100327-eng.zip"
+    raw_file: "data/raw/statcan/14100327-eng.zip"
+    sha256: "6c13ce1dd34c507ad84c37dbea52dabb38c72f2db893260e0966e4b789b4445f"
+    retrieved: "2026-11-13"
+    release_in_file: "File dated 2026-01-09; covers 1976–2025"
+    reporting_period: "Calendar-year average of the monthly Labour Force Survey"
+    coverage: "Canada and the 10 provinces; the territories are not in this table (note 13)"
+    units: "Persons (thousands) and rates (%)"
+    licence: "Statistics Canada Open Licence"
+    licence_url: "https://www.statcan.gc.ca/en/reference/licence"
+    attribution: "Source: Statistics Canada. Table 14-10-0327-01 Labour force characteristics by gender and detailed age group, annual."
+    quality_class: official_statistics
+    methodology_notes:
+      - "Civilian, non-institutional population aged 15 and over (notes 1–2). Rates rounded to one decimal by Statistics Canada."
+      - "Use caution comparing before and after 2006 (processing change, note 17); small level shift Dec 2000–Jan 2001 from population rebasing (note 12)."
+    limitations:
+      - "Survey estimates with sampling error; small provinces and groups are less precise."
+
+  statcan_36100450:
+    title: "Revenue, expenditure and budgetary balance - General governments, provincial and territorial economic accounts"
+    publisher: "Statistics Canada"
+    table_id: "36-10-0450-01"
+    doi: "https://doi.org/10.25318/3610045001-eng"
+    landing_url: "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3610045001"
+    download_url: "https://www150.statcan.gc.ca/n1/tbl/csv/36100450-eng.zip"
+    raw_file: "data/raw/statcan/36100450-eng.zip"
+    sha256: "25c125f17deb636f8985597653dc38303105e0c72fd32e04663297516b9914ef"
+    retrieved: "2026-11-13"
+    release_in_file: "File dated 2026-11-05; covers 2007–2025"
+    reporting_period: "Calendar year (national accounts basis, not government fiscal years)"
+    coverage: "Canada, provinces and territories, plus 'Outside Canada'"
+    units: "Dollars, millions (current prices)"
+    licence: "Statistics Canada Open Licence"
+    licence_url: "https://www.statcan.gc.ca/en/reference/licence"
+    attribution: "Source: Statistics Canada. Table 36-10-0450-01 Revenue, expenditure and budgetary balance - General governments, provincial and territorial economic accounts."
+    quality_class: official_statistics
+    methodology_notes:
+      - "National-accounts measures; they differ from the governments' own Public Accounts (fiscal years ending March 31, different accounting)."
+      - "Federal revenue and spending are allocated to provinces by Statistics Canada in the provincial economic accounts."
+    limitations:
+      - "Starts 2007 in this table."
+
+  statcan_15100031:
+    title: "Population by mother tongue and geography, 1951 to 2021"
+    publisher: "Statistics Canada"
+    table_id: "15-10-0031-01"
+    doi: "https://doi.org/10.25318/1510003101-eng"
+    landing_url: "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1510003101"
+    download_url: "https://www150.statcan.gc.ca/n1/tbl/csv/15100031-eng.zip"
+    raw_file: "data/raw/statcan/15100031-eng.zip"
+    sha256: "642ddf1620412b62df67be64abe701eba2bc3a2c2a4aef8fa5a9dd2ee2578b17"
+    retrieved: "2026-11-13"
+    release_in_file: "File dated 2023-08-02; census years 1951, 1961, 1971, 1981, 1991, 1996, 2001, 2006, 2011, 2016, 2021"
+    reporting_period: "Census years only"
+    coverage: "Canada, provinces and territories (Northwest Territories including Nunavut before 2001)"
+    units: "Persons and %"
+    licence: "Statistics Canada Open Licence"
+    licence_url: "https://www.statcan.gc.ca/en/reference/licence"
+    attribution: "Source: Statistics Canada. Table 15-10-0031-01 Population by mother tongue and geography, 1951 to 2021."
+    quality_class: official_statistics
+    methodology_notes:
+      - "Mother tongue: first language learned at home in childhood and still understood (note 4)."
+      - "This platform uses the 'Distributed' series: people reporting more than one mother tongue are allocated equally among those languages (note 5), so English + French + non-official = total."
+      - "1951–2006 from long-form questionnaires; 2011–2021 from short-form (note 1)."
+    limitations:
+      - "Census years only; no values between censuses."

@@ -12,6 +12,7 @@ WEB = Path(__file__).resolve().parent.parent / "web"
 import os
 PAGE = os.environ.get("PAGE", "explore-qa/index.html")
 LAYERS = ["pop", "chg", "rate", "dens", "share", "nat", "imm", "npr", "emi", "ipm", "flow", "fed",
+          *(os.environ.get("EXTRA_LAYERS", "").split(",") if os.environ.get("EXTRA_LAYERS") else []),
           "starts", "comp", "hhg", "vac", "rent", "rentrel", "chn", "inc"]
 results = []
 

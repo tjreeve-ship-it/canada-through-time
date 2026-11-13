@@ -5,3 +5,5 @@ __pycache__/
 *.partial.mp4
 dist/
 checkpoints/*.tar.gz
+# 2021 Census place-of-birth table is 152 MB (over GitHub's 100 MB limit). Re-download from the registry URL; the pipeline checks its SHA-256.
+data/raw/statcan/98100302-eng.zip
