@@ -1,0 +1,13 @@
+{
+ "source": "statcan_11100190",
+ "meaning": "Statistics Canada data-quality indicator based on the coefficient of variation: A excellent, B very good, C good, D acceptable, E use with caution. Only C\u2013E are listed.",
+ "data": {
+  "NU": {
+   "2020": "C",
+   "2021": "C"
+  },
+  "NT": {
+   "2021": "C"
+  }
+ }
+}

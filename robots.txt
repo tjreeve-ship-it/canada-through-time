@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tjreeve-ship-it.github.io/canada-through-time/sitemap.xml
