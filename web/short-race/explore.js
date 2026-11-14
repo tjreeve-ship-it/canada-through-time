@@ -6,7 +6,16 @@
 const Q = new URLSearchParams(location.search);
 const SC = JSON.parse(new TextDecoder().decode(Uint8Array.from(atob((Q.get('studio') || '').replace(/-/g, '+').replace(/_/g, '/')), c => c.charCodeAt(0))));
 const J = u => fetch(u).then(r => { if (!r.ok) throw new Error(u); return r.json(); });
-const D = await J('../data/explorer/pr_citizenship.json');
+// Optional data source from the configuration: { kind: 'lfs', file, field, names } reads provincial Labour Force Survey
+// annual rates (web/data/more/lfs.json); default is the IRCC permanent-resident file used by Short #6.
+const DS = SC.data || null;
+const D = await (async () => {
+  if (!DS) return J('../data/explorer/pr_citizenship.json');
+  const raw = await J(DS.file), countries = {};
+  for (const [code, name] of Object.entries(DS.names)) { const ser = raw.data[code]; if (!ser) throw new Error('no series ' + code);
+    countries[name] = Object.fromEntries(Object.entries(ser).map(([y, r]) => [y, r[DS.field] ?? null])); }
+  return { countries, total: null };
+})();
 await Promise.all(['600 20px "Public Sans"', '500 20px "Public Sans"', '700 20px "Source Serif 4"', '600 20px "Source Serif 4"'].map(f => document.fonts.load(f)));
 const $ = id => document.getElementById(id);
 
@@ -16,12 +25,15 @@ const K = YR.length, TOP = SC.top || 8;
 const EXCLUDE = new Set(SC.exclude || []);
 const NAMES = Object.keys(D.countries).filter(c => !EXCLUDE.has(c));
 const V = Object.fromEntries(NAMES.map(c => [c, YR.map(y => D.countries[c][y] ?? null)]));   // null = suppressed or not published
-const TOT = YR.map(y => { const t = D.total[y]; if (t == null) throw new Error('no total ' + y); return t; });
-const RANK = YR.map((y, k) => { const r = {}; NAMES.filter(c => V[c][k] != null).sort((a, b) => V[b][k] - V[a][k] || a.localeCompare(b)).forEach((c, i) => r[c] = i); return r; });
+const TOT = D.total ? YR.map(y => { const t = D.total[y]; if (t == null) throw new Error('no total ' + y); return t; }) : null;
+const ASC = SC.order === 'asc';   // asc: the lowest value ranks #1
+const RANK = YR.map((y, k) => { const r = {}; NAMES.filter(c => V[c][k] != null).sort((a, b) => (ASC ? V[a][k] - V[b][k] : V[b][k] - V[a][k]) || a.localeCompare(b)).forEach((c, i) => r[c] = i); return r; });
 const SHOW = new Set(); RANK.forEach(r => Object.entries(r).forEach(([c, i]) => i < TOP && SHOW.add(c)));
 const LEADER = RANK.map(r => Object.keys(r).find(c => r[c] === 0));
+// ties for #1 are shown as shared, never broken alphabetically on screen
+const LEADS = LEADER.map((L, k) => NAMES.filter(c => V[c][k] != null && V[c][k] === V[L][k]).sort((a, b) => RANK[k][a] - RANK[k][b]));
 const short = c => (SC.short || {})[c] || c.replace(/, (People's |Federal |Islamic |Democratic )?Republic of$/, '').replace(/ SAR$/, '');
-const fmt = n => n.toLocaleString('en-CA');
+const fmt = SC.valueFormat === 'pct1' ? n => n.toFixed(1) + '%' : n => n.toLocaleString('en-CA');
 const lerp = (a, b, t) => a + (b - a) * t, clamp01 = x => Math.max(0, Math.min(1, x)), ease = t => t * t * (3 - 2 * t);
 
 // ---------------------------------------------------------------- timeline (steps from the configuration)
@@ -41,9 +53,9 @@ function where(f) {
 }
 
 // ---------------------------------------------------------------- bars
-const barsEl = $('bars'), ROW = 68, MAXW = 500;
+const barsEl = $('bars'), ROW = SC.row || 68, MAXW = 500;
 const els = {};
-for (const c of SHOW) { const d = document.createElement('div'); d.className = 'bar'; d.innerHTML = '<span class="rk"></span><i></i><span class="nm"></span><span class="val"></span>'; barsEl.appendChild(d); els[c] = d; }
+for (const c of SHOW) { const d = document.createElement('div'); d.className = 'bar'; d.innerHTML = '<span class="rk"></span><i></i><span class="nm"></span><span class="val"></span>'; if (SC.row) d.style.height = (SC.row - 8) + 'px'; barsEl.appendChild(d); els[c] = d; }
 const colorOf = c => (SC.colors || {})[c] || SC.otherColor || '#A39D8A';
 const measure = document.createElement('canvas').getContext('2d'); measure.font = '600 24px "Public Sans"';
 const valAt = (c, uu) => { const i = Math.max(0, Math.min(K - 1, Math.floor(uu))), j = Math.min(K - 1, i + 1), t = clamp01(uu - i), a = V[c][i] ?? 0, b = V[c][j] ?? 0; return lerp(a, b, t); };
@@ -84,7 +96,7 @@ function cueAt(f) {
   if (a.s !== b.s && a.s.kind === 'summary') return 'hit';
   if (a.s.kind === 'run' && a.s.riser && a.s.f1 - f === Math.round(1.6 * fps)) return 'riser';
   const ka = Math.round(a.u), kb = Math.round(b.u);
-  if (a.s.kind === 'run' && ka !== kb && LEADER[ka] !== LEADER[kb]) return 'tick';
+  if (a.s.kind === 'run' && ka !== kb && LEADS[ka].join() !== LEADS[kb].join()) return 'tick';
   return '';
 }
 function renderFrame(f) {
@@ -99,7 +111,7 @@ function renderFrame(f) {
   const barsA = inSum ? 1 - tIn(12) : inLoop ? ease(clamp01(((f - s.f0) / s.n - 0.3) / 0.7)) : 1;
   drawBars(w.u, barsA, focus && Math.min(tIn(8), tOut(8)) > 0.5 ? focus : null);
   $('year').textContent = y; $('year').parentElement.style.opacity = barsA.toFixed(3);
-  const L = LEADER[k]; $('lead').querySelector('.n').textContent = short(L); $('lead').querySelector('.v').textContent = fmt(V[L][k]);
+  const L = LEADER[k]; { const nn = $('lead').querySelector('.n'); nn.textContent = LEADS[k].map(short).join(' & '); nn.style.fontSize = LEADS[k].length > 1 ? '26px' : ''; } $('lead').querySelector('.v').textContent = fmt(V[L][k]);
   $('head').style.opacity = (inSum ? 1 - tIn(12) : inLoop ? barsA : 1).toFixed(3);
   const bt = $('beat');
   if (inBeat) { const a = Math.min(tIn(9), tOut(9)); bt.querySelector('.kick').textContent = s.kicker; bt.querySelector('.big').textContent = s.big; bt.querySelector('.line').innerHTML = s.line;
@@ -112,10 +124,10 @@ function renderFrame(f) {
   const cue = cueAt(f);
   $('flash').style.opacity = 0;
   for (let d = 0; d < 6; d++) { const c = cueAt(f - d); if (c === 'hit') { $('flash').style.opacity = (0.35 * (1 - d / 6)).toFixed(3); break; } }
-  return { frame: f, year: String(y), phase: f < fHook ? 'intro' : s.kind, title: SC.title, leader: short(L), leader_value: V[L][k],
+  return { frame: f, year: String(y), phase: f < fHook ? 'intro' : s.kind, title: SC.title, leader: LEADS[k].map(short).join(' & '), leader_value: V[L][k],
     annotation: inBeat ? `${s.kicker}: ${s.big}. ${s.line.replace(/<[^>]+>/g, '')}` : inSum ? `${SC.summary.big} ${SC.summary.line.replace(/<[^>]+>/g, '')}` : '', cue };
 }
 window.CTT = { ready: false, frameCount: N, fps, renderFrame, config: SC, years: YR.map(String) };
-window.CTX = { V, RANK, LEADER, TOT, YR, SEG, where };
+window.CTX = { V, RANK, LEADER, LEADS, TOT, YR, SEG, where };
 renderFrame(0);
 setTimeout(() => { window.CTT.ready = true; }, 300);

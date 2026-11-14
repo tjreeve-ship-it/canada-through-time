@@ -1,0 +1,225 @@
+{
+ "id": "short-glaciers",
+ "format": "9x16",
+ "fps": 30,
+ "title": "How much ice have Canada's glaciers lost?",
+ "years": [
+  1960,
+  2025
+ ],
+ "yRange": [
+  -74,
+  4
+ ],
+ "gridStep": 10,
+ "xTicks": [
+  1960,
+  1980,
+  2000,
+  2020
+ ],
+ "kicker": "Glacier mass balance · running total · WGMS",
+ "between": "Between cards, the year counts up and each glacier’s line extends to its running total for that year, labelled with the published-years sum.",
+ "hook": {
+  "seconds": 3.2,
+  "question": "How much ice have Canada’s <em>glaciers</em> lost?"
+ },
+ "yearSub": "Running total, metres of water equivalent, from each glacier’s first measured year",
+ "glaciers": [
+  {
+   "name": "Helm",
+   "label": "Helm",
+   "color": "#B8472F",
+   "region": "mountain"
+  },
+  {
+   "name": "Place",
+   "label": "Place",
+   "color": "#D9822B",
+   "region": "mountain"
+  },
+  {
+   "name": "Peyto",
+   "label": "Peyto",
+   "color": "#C9962E",
+   "region": "mountain"
+  },
+  {
+   "name": "Melville South Ice Cap",
+   "label": "Melville S.",
+   "color": "#2F5D7C",
+   "region": "arctic"
+  },
+  {
+   "name": "White",
+   "label": "White",
+   "color": "#3F6E8C",
+   "region": "arctic"
+  },
+  {
+   "name": "Meighen Ice Cap",
+   "label": "Meighen",
+   "color": "#5F8FAE",
+   "region": "arctic"
+  },
+  {
+   "name": "Devon Ice Cap NW",
+   "label": "Devon NW",
+   "color": "#8DB0C8",
+   "region": "arctic"
+  }
+ ],
+ "plan": [
+  {
+   "kind": "run",
+   "to": 3,
+   "s": 3.2,
+   "ease": "linear"
+  },
+  {
+   "kind": "run",
+   "to": 62,
+   "s": 14.0,
+   "ease": "linear",
+   "riser": true
+  },
+  {
+   "kind": "run",
+   "to": 63,
+   "s": 1.2,
+   "ease": "out"
+  },
+  {
+   "kind": "beat",
+   "s": 3.4,
+   "kicker": "2023 · one year",
+   "big": "−4.4 m",
+   "line": "<em>Helm</em>’s biggest one-year loss measured since 1975. The biggest ever measured at <em>Place</em> and <em>Peyto</em> too",
+   "focus": [
+    "Helm",
+    "Place",
+    "Peyto"
+   ],
+   "sfx": "hit",
+   "cardTop": 300
+  },
+  {
+   "kind": "run",
+   "to": 65,
+   "s": 1.4,
+   "ease": "out"
+  },
+  {
+   "kind": "beat",
+   "s": 3.4,
+   "kicker": "Peyto · since 1966",
+   "big": "−48.5 m",
+   "line": "like a 48.5-metre-deep layer of water taken off the whole glacier",
+   "focus": [
+    "Peyto"
+   ],
+   "cardTop": 300
+  },
+  {
+   "kind": "summary",
+   "s": 5.0
+  },
+  {
+   "kind": "loop",
+   "s": 0.8
+  }
+ ],
+ "summary": {
+  "kicker": "Measured 40+ years",
+  "big": "7 of 7",
+  "line": "Canadian glaciers measured for 40+ years have <em>lost ice</em> overall",
+  "sub": "Mountain glaciers in B.C. and Alberta lost the most. Source: World Glacier Monitoring Service."
+ },
+ "note": "<b>Source:</b> World Glacier Monitoring Service, Fluctuations of Glaciers database (2026-02-10 release), glacier-wide annual mass balance. Running total = sum of published years; missing years (White 1980, 1981, 1982; Place 2014; Helm 1981, 2014) are gaps, not zero. Recent years may be revised. Lines grow between years as animation.",
+ "sources": [
+  "wgms_fog_2026_02_10"
+ ],
+ "method": "Each line is the running sum of a glacier's published annual glacier-wide mass balance (m w.e.) from its first measured year. Missing years add nothing and break the line. Glaciers shown: every Canadian glacier in the WGMS release with 40 or more published years. No causes are claimed.",
+ "figures": {
+  "glaciers": {
+   "Meighen Ice Cap": {
+    "first": 1960,
+    "last": 2025,
+    "total": -13.666,
+    "worst_year": 2011,
+    "worst_value": -1.31,
+    "missing": [],
+    "published_years": 66
+   },
+   "Devon Ice Cap NW": {
+    "first": 1961,
+    "last": 2025,
+    "total": -10.57,
+    "worst_year": 2011,
+    "worst_value": -0.683,
+    "missing": [],
+    "published_years": 65
+   },
+   "Melville South Ice Cap": {
+    "first": 1963,
+    "last": 2025,
+    "total": -20.408,
+    "worst_year": 2012,
+    "worst_value": -1.556,
+    "missing": [],
+    "published_years": 63
+   },
+   "White": {
+    "first": 1960,
+    "last": 2025,
+    "total": -14.551,
+    "worst_year": 2011,
+    "worst_value": -0.987,
+    "missing": [
+     1980,
+     1981,
+     1982
+    ],
+    "published_years": 63
+   },
+   "Peyto": {
+    "first": 1966,
+    "last": 2025,
+    "total": -48.528,
+    "worst_year": 2023,
+    "worst_value": -2.76,
+    "missing": [],
+    "published_years": 60
+   },
+   "Place": {
+    "first": 1965,
+    "last": 2025,
+    "total": -61.093,
+    "worst_year": 2023,
+    "worst_value": -3.721,
+    "missing": [
+     2014
+    ],
+    "published_years": 60
+   },
+   "Helm": {
+    "first": 1975,
+    "last": 2025,
+    "total": -69.763,
+    "worst_year": 2023,
+    "worst_value": -4.359,
+    "missing": [
+     1981,
+     2014
+    ],
+    "published_years": 49
+   }
+  },
+  "negative": 7,
+  "count": 7,
+  "arctic_range": [
+   -10.57,
+   -20.41
+  ]
+ }
+}

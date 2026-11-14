@@ -37,6 +37,29 @@ def riser(sec=1.6):
     return (out * 0.9 + sine) * (x ** 1.6) * 0.7
 
 
+def soft_tick():
+    # a low, short woodblock-like knock instead of a bright ding
+    n = int(0.12 * SR); t = np.arange(n) / SR
+    return (np.sin(2 * np.pi * 520 * t) * 0.6 + np.sin(2 * np.pi * 780 * t) * 0.2) * env(n, 0.001, 0.025) * 0.4
+
+
+def swell(sec=1.6):
+    # a quiet airy swell (low-passed noise, no rising pitch)
+    n = int(sec * SR); x = np.arange(n) / n; noise = rng.normal(0, 1, n); out = np.zeros(n); y = 0.0
+    for i in range(n):
+        y += (0.004 + 0.04 * x[i] ** 2) * (noise[i] - y); out[i] = y
+    return out * x ** 2
+
+
+def soft_hit():
+    # a warm low bloom: soft thump + a quiet low chord, no shimmer or bright notes
+    n = int(2.0 * SR); t = np.arange(n) / SR
+    f = 70 * np.exp(-t / 0.06) + 48
+    thump = np.sin(2 * np.pi * np.cumsum(f) / SR) * env(n, 0.006, 0.28)
+    chord = sum(np.sin(2 * np.pi * fr * t) for fr in (146.8, 220.0, 293.7)) / 3 * env(n, 0.05, 0.9) * 0.35
+    return thump * 0.8 + chord
+
+
 def hit():
     n = int(1.8 * SR); t = np.arange(n) / SR
     f = 110 * np.exp(-t / 0.08) + 46
@@ -57,6 +80,6 @@ def write(path, x, width=0.25):
 
 if __name__ == "__main__":
     out = Path(sys.argv[1]); out.mkdir(parents=True, exist_ok=True)
-    for name, fn in (("tick", tick), ("riser", riser), ("hit", hit)):
+    for name, fn in (("tick", tick), ("riser", riser), ("hit", hit), ("soft_tick", soft_tick), ("swell", swell), ("soft_hit", soft_hit)):
         write(out / f"{name}.wav", fn())
     print("wrote", ", ".join(f"{n}.wav" for n in ("tick", "riser", "hit")))

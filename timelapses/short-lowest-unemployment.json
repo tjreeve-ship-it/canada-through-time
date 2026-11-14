@@ -1,0 +1,348 @@
+{
+ "id": "short-lowest-unemployment",
+ "format": "9x16",
+ "fps": 30,
+ "title": "Which province has Canada's lowest unemployment rate?",
+ "years": [
+  1976,
+  2025
+ ],
+ "top": 10,
+ "row": 54,
+ "order": "asc",
+ "valueFormat": "pct1",
+ "noun": "province",
+ "data": {
+  "kind": "lfs",
+  "file": "../data/more/lfs.json",
+  "field": "ur",
+  "names": {
+   "NL": "Newfoundland and Labrador",
+   "PE": "Prince Edward Island",
+   "NS": "Nova Scotia",
+   "NB": "New Brunswick",
+   "QC": "Quebec",
+   "ON": "Ontario",
+   "MB": "Manitoba",
+   "SK": "Saskatchewan",
+   "AB": "Alberta",
+   "BC": "British Columbia"
+  }
+ },
+ "kicker": "Unemployment rate · 10 provinces · lowest ranked #1",
+ "hook": {
+  "seconds": 3.2,
+  "question": "Which province has had Canada’s <em>lowest</em> unemployment rate?"
+ },
+ "colors": {
+  "Quebec": "#3F6E8C",
+  "Alberta": "#C9962E",
+  "Saskatchewan": "#5E7F3A",
+  "Newfoundland and Labrador": "#B8472F"
+ },
+ "otherColor": "#ABA592",
+ "short": {
+  "Newfoundland and Labrador": "Newfoundland",
+  "Prince Edward Island": "P.E.I.",
+  "British Columbia": "B.C.",
+  "Nova Scotia": "Nova Scotia",
+  "New Brunswick": "New Brunswick"
+ },
+ "plan": [
+  {
+   "kind": "run",
+   "to": 1.0,
+   "s": 3.2,
+   "ease": "linear"
+  },
+  {
+   "kind": "run",
+   "to": 7,
+   "s": 4.6,
+   "ease": "linear"
+  },
+  {
+   "kind": "beat",
+   "s": 2.8,
+   "kicker": "1983",
+   "big": "14.2%",
+   "line": "<em>Quebec</em>: the 3rd-highest rate of the 10 provinces",
+   "focus": [
+    "Quebec"
+   ],
+   "cardTop": 450
+  },
+  {
+   "kind": "run",
+   "to": 43,
+   "s": 9.0,
+   "ease": "inout",
+   "riser": true
+  },
+  {
+   "kind": "run",
+   "to": 44,
+   "s": 1.0,
+   "ease": "out"
+  },
+  {
+   "kind": "beat",
+   "s": 2.8,
+   "kicker": "2020",
+   "big": "11.4%",
+   "line": "<em>Alberta</em>: from 6.9% the year before to the 2nd-highest rate in Canada",
+   "focus": [
+    "Alberta"
+   ],
+   "sfx": "hit",
+   "cardTop": 450
+  },
+  {
+   "kind": "run",
+   "to": 48,
+   "s": 3.0,
+   "ease": "inout"
+  },
+  {
+   "kind": "beat",
+   "s": 2.8,
+   "kicker": "2021–2024",
+   "big": "4 years",
+   "line": "in a row, <em>Quebec</em> had the lowest rate of any province",
+   "focus": [
+    "Quebec"
+   ],
+   "cardTop": 700
+  },
+  {
+   "kind": "run",
+   "to": 49,
+   "s": 1.2,
+   "ease": "out"
+  },
+  {
+   "kind": "summary",
+   "s": 4.6
+  },
+  {
+   "kind": "loop",
+   "s": 0.8
+  }
+ ],
+ "summary": {
+  "country": "Quebec",
+  "chartCaption": "Quebec’s unemployment rate, 1976–2025",
+  "kicker": "1976–2025",
+  "big": "6",
+  "line": "different provinces have had Canada’s <em>lowest</em> unemployment rate",
+  "sub": "Newfoundland and Labrador had the highest rate in all 50 years. Source: Statistics Canada."
+ },
+ "note": "<b>Source:</b> Statistics Canada, Labour Force Survey, table 14-10-0327-01, annual averages, people 15+, 1976–2025. Territories are not in this table. Use caution comparing before and after 2006 (processing change). Ties share #1. Bars glide between years as animation; every number shown is a published value.",
+ "sources": [
+  "statcan_14100327"
+ ],
+ "method": "Rates are Statistics Canada's published annual-average unemployment rates for the year shown. Provinces are ranked lowest first; equal published rates share the rank. Bar lengths and positions move between consecutive years as animation only. No causes are claimed.",
+ "figures": {
+  "ever_lowest": [
+   "Alberta",
+   "British Columbia",
+   "Manitoba",
+   "Ontario",
+   "Quebec",
+   "Saskatchewan"
+  ],
+  "lowest_by_year": {
+   "1976": [
+    "Saskatchewan"
+   ],
+   "1977": [
+    "Saskatchewan"
+   ],
+   "1978": [
+    "Alberta",
+    "Saskatchewan"
+   ],
+   "1979": [
+    "Alberta"
+   ],
+   "1980": [
+    "Alberta"
+   ],
+   "1981": [
+    "Alberta"
+   ],
+   "1982": [
+    "Saskatchewan"
+   ],
+   "1983": [
+    "Saskatchewan"
+   ],
+   "1984": [
+    "Saskatchewan"
+   ],
+   "1985": [
+    "Ontario"
+   ],
+   "1986": [
+    "Ontario"
+   ],
+   "1987": [
+    "Ontario"
+   ],
+   "1988": [
+    "Ontario"
+   ],
+   "1989": [
+    "Ontario"
+   ],
+   "1990": [
+    "Ontario"
+   ],
+   "1991": [
+    "Saskatchewan"
+   ],
+   "1992": [
+    "Saskatchewan"
+   ],
+   "1993": [
+    "Saskatchewan"
+   ],
+   "1994": [
+    "Saskatchewan"
+   ],
+   "1995": [
+    "Saskatchewan"
+   ],
+   "1996": [
+    "Saskatchewan"
+   ],
+   "1997": [
+    "Alberta",
+    "Saskatchewan"
+   ],
+   "1998": [
+    "Manitoba"
+   ],
+   "1999": [
+    "Manitoba"
+   ],
+   "2000": [
+    "Alberta",
+    "Manitoba"
+   ],
+   "2001": [
+    "Alberta"
+   ],
+   "2002": [
+    "Manitoba"
+   ],
+   "2003": [
+    "Manitoba"
+   ],
+   "2004": [
+    "Alberta"
+   ],
+   "2005": [
+    "Alberta"
+   ],
+   "2006": [
+    "Alberta"
+   ],
+   "2007": [
+    "Alberta"
+   ],
+   "2008": [
+    "Alberta"
+   ],
+   "2009": [
+    "Saskatchewan"
+   ],
+   "2010": [
+    "Saskatchewan"
+   ],
+   "2011": [
+    "Saskatchewan"
+   ],
+   "2012": [
+    "Alberta"
+   ],
+   "2013": [
+    "Saskatchewan"
+   ],
+   "2014": [
+    "Saskatchewan"
+   ],
+   "2015": [
+    "Saskatchewan"
+   ],
+   "2016": [
+    "British Columbia",
+    "Manitoba"
+   ],
+   "2017": [
+    "British Columbia",
+    "Manitoba"
+   ],
+   "2018": [
+    "British Columbia"
+   ],
+   "2019": [
+    "British Columbia"
+   ],
+   "2020": [
+    "Manitoba"
+   ],
+   "2021": [
+    "Quebec"
+   ],
+   "2022": [
+    "Quebec"
+   ],
+   "2023": [
+    "Quebec"
+   ],
+   "2024": [
+    "Quebec"
+   ],
+   "2025": [
+    "Saskatchewan"
+   ]
+  },
+  "lead_changes": 19,
+  "years_at_or_sharing_lowest": {
+   "Alberta": 13,
+   "British Columbia": 4,
+   "Manitoba": 8,
+   "Ontario": 6,
+   "Quebec": 4,
+   "Saskatchewan": 20
+  },
+  "nl_highest_every_year": true,
+  "quebec_lowest_years": [
+   2021,
+   2022,
+   2023,
+   2024
+  ],
+  "quebec_1983": [
+   14.2,
+   3
+  ],
+  "alberta_2019": [
+   6.9,
+   5
+  ],
+  "alberta_2020": [
+   11.4,
+   2
+  ],
+  "latest": {
+   "year": 2025,
+   "lowest": [
+    "Saskatchewan"
+   ],
+   "rate": 5.2,
+   "canada": 6.8
+  }
+ }
+}
