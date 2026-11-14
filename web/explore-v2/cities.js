@@ -1,7 +1,7 @@
 // Neighbourhoods: every census tract in Canada's 50 tracted cities (41 CMAs + 9 tracted CAs), 2021 Census of Population.
 // Values are Statistics Canada's published figures (98-401-X2021007). Missing or suppressed values are drawn as missing, never zero.
 // A few measures are simple ratios of two published figures from the same table (stated in the panel where they are used).
-const { Deck, OrthographicView, GeoJsonLayer } = window.deck;
+const { Deck, OrthographicView, GeoJsonLayer, TextLayer, CollisionFilterExtension } = window.deck;
 const BASE = document.documentElement.dataset.base || '..';
 const J = u => window.__DATA?.[u] ? Promise.resolve(window.__DATA[u]) : fetch(u.replace(/^\.\.\//, BASE + '/')).then(r => { if (!r.ok) throw new Error(u); return r.json(); });
 
@@ -61,7 +61,7 @@ const PROFILE_ROWS = ['hhinc', 'lim', 'rent', 'shelter30', 'homeval', 'dens', 'g
 
 // ---------------------------------------------------------------- state
 const S = { cma: null, m: 'hhinc', vm: 'vm_sa', pob: null, scale: 'city', tract: null, hover: null };
-let CITIES = [], TRACTS = {}, FEATS = {}, BBOX = {}, CORE = {}, deckI = null, ready = null, el = null;
+let PLACES = {}, ZOOM = { z: 0, fit: 0 }, CITIES = [], TRACTS = {}, FEATS = {}, BBOX = {}, CORE = {}, deckI = null, ready = null, el = null;
 const subOf = m => m.sub === 'vm' ? S.vm : m.sub === 'pob' ? S.pob : null;
 const subName = m => m.sub === 'vm' ? VM_SUB.find(x => x[0] === S.vm)[1] : m.sub === 'pob' ? P.pob_names[S.pob] : '';
 const mLabel = m => m.sub === 'pob' ? 'Born in ' + subName(m) : m.sub === 'vm' ? subName(m) : m.l;
@@ -69,7 +69,8 @@ const value = (m, a) => { const v = m.get(a, subOf(m)); return v == null || !isF
 const cityName = c => c.name.replace(' / Grand Sudbury', '').replace(/ - /g, '–');
 
 async function load() {
-  const [p, shapes] = await Promise.all([J('../data/cities/ct_profile.json'), J('../data/cities/ct_shapes.geojson')]);
+  const [p, shapes, pl] = await Promise.all([J('../data/cities/ct_profile.json'), J('../data/cities/ct_shapes.geojson'), J('../data/cities/places.json').catch(() => ({ places: {} }))]);
+  PLACES = pl.places || {};
   P = p; P.fields.forEach((f, i) => X[f] = i);
   for (const a of Object.values(P.areas)) { const o = {}; (a.pob || []).forEach((v, i) => { if (v != null) o[P.pob_ids[i]] = v; }); a.pob = o; }   // expand compact lists
   CITIES = Object.entries(P.areas).filter(([, a]) => a.level !== 'Census tract').map(([id, a]) => ({ id, code: id.slice(-3), ...a })).sort((a, b) => b.v[X.pop] - a.v[X.pop]);
@@ -101,7 +102,7 @@ const lerp = (a, b, t) => a.map((x, i) => Math.round(x + (b[i] - x) * t));
 const rampAt = (st, t) => { t = Math.max(0, Math.min(1, t)) * (st.length - 1); const i = Math.min(st.length - 2, Math.floor(t)); return lerp(st[i], st[i + 1], t - i); };
 let PAL = null;
 function pal() { PAL = { seq: [1, 2, 3, 4, 5].map(i => hex(css('--seq-' + i))), dec: [1, 2, 3].map(i => hex(css('--dec-' + i))), neu: hex(css('--neutral')),
-  miss: hex(css('--land-dim')), line: hex(css('--page')), sel: hex(css('--select')), page: css('--page') }; }
+  miss: hex(css('--land-dim')), line: hex(css('--page')), sel: hex(css('--select')), page: css('--page'), ink: hex(css('--ink-1')), ink2: hex(css('--ink-2')), halo: hex(css('--halo') || css('--page')) }; }
 const quant = (xs, q) => { if (!xs.length) return null; const s = xs[Math.floor((xs.length - 1) * q)]; return s; };
 // Colour domain: 2nd–98th percentile of tract values, in this city or across all 50 cities, so one extreme tract can't wash out the rest.
 function domain(m) {
@@ -155,6 +156,7 @@ function setCity(id) { S.cma = id; S.tract = null; render(); fit(); }
 function fit() {
   const b = CORE[S.cma], B = BBOX[S.cma], box = el.querySelector('#nb-map').getBoundingClientRect(); if (!b || !deckI) return;
   const zf = k => Math.log2(Math.min(box.width / (k[2] - k[0]), box.height / (k[3] - k[1])) * 0.9), z = zf(b), zAll = zf(B);
+  ZOOM.fit = z; ZOOM.z = z;
   deckI.setProps({ initialViewState: { target: [(b[0] + b[2]) / 2, (b[1] + b[3]) / 2, 0], zoom: z, minZoom: zAll - 1, maxZoom: z + 5, transitionDuration: 0 } });
 }
 function flyTo(id) {
@@ -163,6 +165,7 @@ function flyTo(id) {
   const box = el.querySelector('#nb-map').getBoundingClientRect(), zf = k => Math.log2(Math.min(box.width / (k[2] - k[0]), box.height / (k[3] - k[1])) * 0.9);
   const z0 = zf(CORE[S.cma]), z = Math.min(z0 + 3, Math.log2(Math.min(box.width / (b[2] - b[0] + 0.5), box.height / (b[3] - b[1] + 0.5)) * 0.35));
   deckI.setProps({ initialViewState: { target: [(b[0] + b[2]) / 2, (b[1] + b[3]) / 2, 0], zoom: Math.max(z, z0), minZoom: zf(BBOX[S.cma]) - 1, maxZoom: z0 + 5, transitionDuration: 600 } });
+  ZOOM.z = Math.max(z, z0); requestAnimationFrame(() => drawMap(MK[S.m], domain(MK[S.m])));
 }
 
 // ---------------------------------------------------------------- render
@@ -188,7 +191,7 @@ function render() {
     ${hist(m, vals, d, cv)}
     <div class="scale" role="group" aria-label="Colour scale"><span>Colours fit</span><button data-scale="city" class="${S.scale === 'city' ? 'on' : ''}">this city</button><button data-scale="all" class="${S.scale === 'all' ? 'on' : ''}">all 50 cities</button></div>
     <p class="def">${esc(m.def)}</p>
-    <p class="src">Source: Statistics Canada, 2021 Census of Population, Census Profile 98-401-X2021007 (census metropolitan areas, tracted agglomerations and census tracts). Boundaries: 2021 census tract digital boundary file (simplified; water areas inside tracts are not cut out).</p>`;
+    <p class="src">Source: Statistics Canada, 2021 Census of Population, Census Profile 98-401-X2021007 (census metropolitan areas, tracted agglomerations and census tracts). Boundaries: 2021 census tract digital boundary file (simplified; water areas inside tracts are not cut out). Place names: Natural Resources Canada, Canadian Geographical Names Database (official names; more appear as you zoom in).</p>`;
   el.querySelector('#nb-rank').innerHTML = `<h4>All 50 cities · ${esc(mLabel(m))}</h4><div class="nb-rank">${rank.map(([id, v], i) => { const x = CITIES.find(y => y.id === id), w = rank[0][1] > 0 ? Math.max(0, v) / Math.max(...rank.map(r => r[1])) * 100 : 0;
       return `<button data-nbc="${id}" class="${id === S.cma ? 'on' : ''}"><i>${i + 1}</i><span>${esc(cityName(x))}</span><em style="--w:${m.div ? 50 + v / Math.max(...rank.map(r => Math.abs(r[1]))) * 50 : w}%"></em><b>${m.f(v)}</b></button>`; }).join('')}</div>`;
   el.querySelector('#nb-legend').innerHTML = legend(m, d);
@@ -246,7 +249,14 @@ function drawMap(m, d) {
     autoHighlight: true, highlightColor: [...PAL.sel, 90], updateTriggers: { getFillColor: key, getLineColor: key } });
   const selF = S.tract ? fs.filter(f => f.properties.DGUID === S.tract) : [];
   const sel = new GeoJsonLayer({ id: 'sel', data: selF, stroked: true, filled: false, getLineColor: [...PAL.sel, 255], lineWidthUnits: 'pixels', getLineWidth: 2.5, updateTriggers: { getLineColor: key } });
-  deckI.setProps({ layers: [tracts, sel] });
+  // place names (official names from Natural Resources Canada): cities and towns always, villages and named communities once zoomed in
+  const zin = ZOOM.z - ZOOM.fit, names = (PLACES[S.cma] || []).filter(p => p[3] <= (zin > 1.4 ? 4 : zin > 0.6 ? 3 : 2));
+  const labels = new TextLayer({ id: 'places', data: names, getPosition: p => [p[1], p[2]], getText: p => p[0], sizeUnits: 'pixels',
+    getSize: p => p[3] === 1 ? 14 : p[3] === 2 ? 12.5 : 11.5, getColor: p => p[3] >= 4 ? [...PAL.ink2, 230] : [...PAL.ink, 255],
+    fontFamily: css('--font-ui') || 'sans-serif', fontWeight: 600, outlineWidth: 5, outlineColor: [...PAL.halo, 235], fontSettings: { sdf: true }, characterSet: 'auto',
+    getTextAnchor: 'middle', getAlignmentBaseline: 'center', extensions: CollisionFilterExtension ? [new CollisionFilterExtension()] : [],
+    getCollisionPriority: p => -p[3], collisionTestProps: { sizeScale: 1.6 }, updateTriggers: { getColor: key }, parameters: { depthTest: false } });
+  deckI.setProps({ layers: [tracts, sel, labels] });
   el.querySelector('#nb-map').style.background = PAL.page;
 }
 function tip({ object, x, y }) {
@@ -278,6 +288,7 @@ async function open(opts = {}) {
   if (!deckI) deckI = new Deck({ parent: el.querySelector('#nb-map'), views: new OrthographicView({ flipY: false }), controller: { doubleClickZoom: true, inertia: true },
     initialViewState: { target: [0, 0, 0], zoom: 0 }, getCursor: ({ isHovering }) => isHovering ? 'pointer' : 'grab',
     onHover: tip, onClick: ({ object }) => { if (!object) return; S.tract = object.properties.DGUID; render(); },
+    onViewStateChange: ({ viewState }) => { const band = v => (v - ZOOM.fit > 1.4 ? 2 : v - ZOOM.fit > 0.6 ? 1 : 0), was = band(ZOOM.z); ZOOM.z = viewState.zoom; if (band(ZOOM.z) !== was) requestAnimationFrame(() => drawMap(MK[S.m], domain(MK[S.m]))); },
     style: { position: 'absolute', inset: 0 } });
   (window.__decks ||= {}).nb = deckI;
   render(); requestAnimationFrame(fit);

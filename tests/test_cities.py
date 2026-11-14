@@ -67,3 +67,13 @@ def test_first_city_matches_raw_file_cell_by_cell():
     assert a["v"][X["vm_sa"]] == float(want[1685][1])
     assert a["v"][X["ph"]] == float(want[1527][0])
     assert a["pob"]["1599"] == int(want[1599][0])
+
+
+def test_place_names_are_official_and_inside_their_city():
+    import pyproj
+    pl = json.loads((ROOT / "web/data/cities/places.json").read_text())["places"]
+    assert set(pl) <= set(CITIES) and len(pl) == 50
+    names = {c: {p[0] for p in v} for c, v in pl.items()}
+    assert {"Mississauga", "Brampton", "Markham"} <= names["2021S0503535"]
+    assert {"St. Albert", "Spruce Grove"} <= names["2021S0503835"]
+    assert not any(n.endswith(" County") for v in names.values() for n in v)
