@@ -21,7 +21,11 @@ const STEPS = {
     { t: 'Click a neighbourhood', b: 'Its full profile appears, next to the city average. Grey areas have no published value: Statistics Canada suppresses small or low-response areas.', sel: phone() ? '#nb-detail' : '#nb-dt' },
     phone() ? null : { t: 'Compare cities', b: 'The same measure for all 50 cities. Click one to jump there.', sel: '#nb-rank' },
   ].filter(Boolean),
-  cl: () => [
+  cl: () => location.hash.startsWith('#cl=ice') ? [
+    { t: 'Every circle is a glacier', b: 'Glaciers measured for 10 or more years. A bigger circle means more years of measurement. The panel shows each one’s running total.', sel: '#cl-map', pad: -40 },
+    { t: 'Click a glacier', b: 'See every year it was measured: how much ice it gained or lost, in metres of water spread over the whole glacier.', sel: '#cl-detail' },
+    { t: 'Four views', b: 'Temperature, precipitation, each station’s long-term warming trend, and the glaciers measured every year.', sel: '#cl-modes' },
+  ] : [
     { t: 'Every dot is a weather station', b: 'Colour shows how much warmer or colder it was than that station’s own 1961–1990 average. Hollow dots had no reading for that period.', sel: '#cl-map', pad: -40 },
     { t: 'Play the years', b: 'Press play to run from 1900 to 2020. The 10-year average smooths out single odd years.', sel: '#cl-time' },
     { t: 'Four views', b: 'Temperature, precipitation, each station’s long-term warming trend, and the glaciers measured every year.', sel: '#cl-modes' },
