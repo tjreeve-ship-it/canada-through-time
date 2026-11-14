@@ -1083,3 +1083,19 @@ body.has-shell #ab { top: var(--shell-h); }
 @media (max-width: 900px) { .hworld .wt { font-size: 19px; overflow-wrap: anywhere; hyphens: auto; } .hworld { min-height: 0; } }
 #shell .worlds button { white-space: nowrap; }
 @media (max-width: 1280px) and (min-width: 901px) { #shell .worlds .lg { display: none; } #shell .worlds .sm { display: inline; } }
+
+/* ================================================================== SHARE */
+#shell .sharebtn { flex: none; display: flex; align-items: center; gap: 6px; font-size: 13.5px; font-weight: 600; padding: 7px 12px; border-radius: 999px; background: var(--accent); color: #fff; }
+#shell .sharebtn:hover { filter: brightness(1.08); }
+#sharepop { position: fixed; z-index: 95; width: min(380px, calc(100vw - 16px)); background: var(--panel); color: var(--ink-1); border-radius: 14px; padding: 14px 16px; box-shadow: 0 18px 50px rgba(0,0,0,.28), inset 0 0 0 1px var(--hairline); font-family: var(--font-ui); animation: worldIn .18s ease-out; }
+#sharepop[hidden] { display: none; }
+#sharepop .sp-h { display: flex; justify-content: space-between; align-items: center; } #sharepop .sp-h b { font-size: 15px; }
+#sharepop .sp-h button { background: none; border: 0; font-size: 22px; color: var(--ink-3); cursor: pointer; }
+#sharepop .sp-t { font: 500 16px/1.35 var(--font-display); margin: 6px 0 10px; }
+#sharepop .sp-link { display: flex; gap: 6px; } #sharepop input { flex: 1; min-width: 0; font: 13px var(--font-ui); padding: 8px 10px; border-radius: 8px; border: 1px solid var(--hairline); background: var(--page); color: var(--ink-2); }
+#sharepop button, #sharepop .sp-b { font: 600 13px var(--font-ui); border: 0; border-radius: 8px; padding: 8px 12px; cursor: pointer; text-decoration: none; }
+#sharepop [data-spcopy] { background: var(--ink-1); color: var(--page); }
+#sharepop .sp-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; } #sharepop .sp-b { background: var(--panel-2); color: var(--ink-1); box-shadow: inset 0 0 0 1px var(--hairline); }
+#sharepop .sp-note { font-size: 12px; color: var(--ink-3); margin: 10px 0 0; } #sharepop .sp-msg { font-size: 12.5px; color: var(--accent-ink, var(--accent)); min-height: 16px; margin-top: 4px; }
+@media (max-width: 1180px) { #shell .sharebtn span { display: none; } #shell .sharebtn { padding: 8px; } }
+@media (max-width: 900px) { #shell .sharebtn { width: 34px; height: 34px; justify-content: center; padding: 0; } }

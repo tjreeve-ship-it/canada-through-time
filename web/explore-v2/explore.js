@@ -348,7 +348,8 @@ function applyHash() { if (/^#(nb|cl|mn)=|^#about/.test(location.hash)) return; 
   state.p = NAMES[dec(p)] && dec(p) !== 'CAN' ? dec(p) : null; state.cmp = vs && NAMES[dec(vs)] ? dec(vs) : null; }
 applyHash();
 const writeHash = () => { if (/^#(nb|cl|mn)=|^#about/.test(location.hash) || document.body.classList.contains('nb-on')) return; const t = `#${state.m}-${state.y}${state.p ? '-' + enc(state.p) : ''}${state.p && state.cmp ? '-vs-' + enc(state.cmp) : ''}${state.cmpY ? '@' + state.cmpY : ''}`; if (location.hash !== t) history.replaceState(null, '', t); };
-addEventListener('hashchange', () => { if (location.hash.startsWith('#nb=')) { window.CITIES?.open(); return; } if (location.hash.startsWith('#cl=')) { window.CLIMATE?.open(); return; } if (location.hash.startsWith('#mn=')) { window.MONEY?.open(); return; } if (location.hash === '#about') { window.ABOUT?.open(); return; } applyHash(); update(); });
+// the sections' own addresses (#nb= #cl= #mn= #about) are routed by shell.js
+addEventListener('hashchange', () => { if (/^#(nb|cl|mn)=|^#about/.test(location.hash)) return; applyHash(); update(); });
 addEventListener('nb-close', () => { writeHash(); });
 const clampYear = (m, y) => { y = Math.max(m.years[0], Math.min(m.years[1], y)); return m.only ? m.only.reduce((b, o) => Math.abs(o - y) < Math.abs(b - y) ? o : b) : y; };
 const isPhone = () => innerWidth <= 1100;   // phones and tablets share the bottom-sheet layout
@@ -422,6 +423,7 @@ const theDeck = new Deck({
   getCursor: ({ isHovering, isDragging }) => isDragging ? 'grabbing' : isHovering ? 'pointer' : 'grab',
   onHover: info => tooltip(info), onClick: info => click(info),
 });
+(window.__decks ||= {}).map = theDeck;   // for the share button's picture
 
 const tt = document.getElementById('tooltip');
 function tooltip(info) {

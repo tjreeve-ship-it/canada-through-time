@@ -279,6 +279,7 @@ async function open(opts = {}) {
     initialViewState: { target: [0, 0, 0], zoom: 0 }, getCursor: ({ isHovering }) => isHovering ? 'pointer' : 'grab',
     onHover: tip, onClick: ({ object }) => { if (!object) return; S.tract = object.properties.DGUID; render(); },
     style: { position: 'absolute', inset: 0 } });
+  (window.__decks ||= {}).nb = deckI;
   render(); requestAnimationFrame(fit);
 }
 function close() { el.hidden = true; document.body.classList.remove('nb-on'); history.replaceState(null, '', prevHash || location.pathname + location.search); dispatchEvent(new Event('nb-close')); }

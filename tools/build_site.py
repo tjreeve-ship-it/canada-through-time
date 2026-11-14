@@ -8,6 +8,7 @@ so the address is short and shareable.
 Every data file the code references is copied (and must exist); nothing else from web/ is published.
 """
 import json
+import os
 import re
 import shutil
 import sys
@@ -17,7 +18,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "web/explore-v2"
 WEB = ROOT / "web"
 OUT = ROOT / "site"
-SITE_URL = "https://canadathroughtime.ca/"   # placeholder until the domain is chosen; only used in share-preview tags
+SITE_URL = os.environ.get("SITE_URL", "https://tjreeve-ship-it.github.io/canada-through-time/")   # where the site is served (share previews, sitemap)
 TITLE = "Canada Through Time"
 DESC = "People, places, money and climate: 55 years of official Canadian data on one map. Every number links back to its source."
 
@@ -72,9 +73,12 @@ def main():
     (OUT / ".nojekyll").write_text("")   # GitHub Pages: serve files as they are
     if (ROOT / "dist/share.png").exists():
         shutil.copy2(ROOT / "dist/share.png", OUT / "share.png")
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import build_pages
+    pages = build_pages.build(OUT, SITE_URL)
     size = sum(p.stat().st_size for p in OUT.rglob("*") if p.is_file())
     first = sum((OUT / r[3:]).stat().st_size for r in refs if not re.search(r"/(cities|climate|money)/", r))
-    print(f"site/: {len(refs)} data files, {size / 1e6:.1f} MB in all; national view loads about {first / 1e6:.1f} MB of data, sections load theirs when opened")
+    print(f"site/: {len(refs)} data files, {size / 1e6:.1f} MB in all; national view loads about {first / 1e6:.1f} MB of data, sections load theirs when opened; {pages} search pages")
 
 
 if __name__ == "__main__":

@@ -35,7 +35,14 @@ bar.addEventListener('click', e => {
 });
 // keep the highlight right when a world is opened another way (search result, home card, link)
 const syncFromHash = () => { const h = location.hash; mark(h.startsWith('#nb=') ? 'nb' : h.startsWith('#cl=') ? 'cl' : h.startsWith('#mn=') ? 'mn' : h === '#about' ? 'ab' : 'map'); };
-addEventListener('hashchange', syncFromHash);
+// following a link inside the page (or Back/Forward) switches section cleanly: close whatever else is open
+addEventListener('hashchange', async () => { const h = location.hash, k = h.startsWith('#nb=') ? 'nb' : h.startsWith('#cl=') ? 'cl' : h.startsWith('#mn=') ? 'mn' : h === '#about' ? 'ab' : 'map';
+  const openNow = ['nb', 'cl', 'mn', 'ab'].filter(x => { const e = document.getElementById(x); return e && !e.hidden; });
+  closeAll(k);                                                     // closing a section puts back the address it came from…
+  if (location.hash !== h) history.replaceState(null, '', h);      // …so restore the one the person asked for
+  mark(k);
+  if (k !== 'map') await API[k]()?.open();   // (re)reads the address, so Back/Forward inside a section works too
+  if (k === 'map') dispatchEvent(new Event('shell-map')); });
 addEventListener('nb-close', () => setTimeout(syncFromHash, 0));
 new MutationObserver(() => { const open = ['nb', 'cl', 'mn', 'ab'].find(k => { const x = document.getElementById(k); return x && !x.hidden; }); if ((open || 'map') !== current) mark(open || 'map'); })
   .observe(document.body, { subtree: true, attributes: true, attributeFilter: ['hidden'], childList: true });

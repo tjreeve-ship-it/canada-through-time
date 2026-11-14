@@ -250,6 +250,7 @@ async function open(opts = {}) {
   if (!deckI) deckI = new Deck({ parent: el.querySelector('#cl-map'), views: new OrthographicView({ flipY: false }), controller: { doubleClickZoom: true }, initialViewState: { target: [6400, 2400, 0], zoom: -3 },
     getCursor: ({ isHovering }) => isHovering ? 'pointer' : 'grab', onHover: tip,
     onClick: ({ object }) => { if (!object) return; if (object.b) S.gl = object.id; else S.st = object.s.id; render(); }, style: { position: 'absolute', inset: 0 } });
+  (window.__decks ||= {}).cl = deckI;
   render(); requestAnimationFrame(fit);
 }
 function close() { S.playing = false; clearInterval(timer); el.hidden = true; document.body.classList.remove('nb-on'); history.replaceState(null, '', prevHash || location.pathname + location.search); dispatchEvent(new Event('nb-close')); }
